@@ -20,6 +20,10 @@ const path = require("path");
 const fs = require("fs");
 
 const A = (f) => path.join(__dirname, f);
+const IM = require("./inline_math");
+let JSZip;
+try { JSZip = require("jszip"); }
+catch (e) { JSZip = require(path.join(path.dirname(require.resolve("pptxgenjs")), "..", "node_modules", "jszip")); }
 
 const TEAL_DEEP = "0E4F4C", TEAL = "1E8F89", TEAL_BRIGHT = "3EB8B2";
 const TEAL_TINT = "E7F5F4", TEAL_TINT2 = "CFEBE8", MAROON = "8A1B17";
@@ -32,7 +36,10 @@ const DEPT_W = 1.7, DEPT_H = DEPT_W * (154 / 500), SCH = 0.72, LOGO_Y = 0.32;
 const DEPT = A("dept_logo.png"), SCHOOL = A("school_logo.png");
 const DEPT_W_LOGO = A("dept_logo_white.png"), SCHOOL_W_LOGO = A("school_logo_white.png");
 const BG_LIGHT = A("bg_light.jpg"), BG_DARK = A("bg_dark.jpg");
-const QR = A("geogebra_qr_placeholder.png");
+const COGNIA = A("cognia_badge.png");
+// Branding (9 Sep 2026): Cognia badge top-centre on the title slide; the school
+// motto centred in the footer of every slide.
+const MOTTO = "FAITH,  RIGHTEOUSNESS  AND  WISDOM";
 
 function build(cfg) {
   const MATH = JSON.parse(fs.readFileSync(A(cfg.mathIndex), "utf8"));
@@ -45,6 +52,9 @@ function build(cfg) {
   }
   if (!cfg.objectives.length) throw new Error("objectives are required, verbatim from the map");
   if (!cfg.essentialQuestion) throw new Error("essential question is required, verbatim");
+  // House rule: maths is typeset, never typed as code. Every prose string must
+  // carry its maths inside $...$ — the build stops otherwise.
+  IM.lint(cfg);
 
   const pres = new pptxgen();
   pres.defineLayout({ name: "WIDE", width: SW, height: SH });
@@ -55,18 +65,24 @@ function build(cfg) {
   // ---------------------------------------------------------------- helpers
   function base(dark, codes) {
     const s = pres.addSlide();
+    // every text box on every slide renders $...$ as typeset maths
+    const addText = s.addText.bind(s);
+    s.addText = (t, o) => addText(IM.expandPpt(t), o);
     s.background = { path: dark ? BG_DARK : BG_LIGHT };
     s.addImage({ path: dark ? DEPT_W_LOGO : DEPT, x: MX, y: LOGO_Y, w: DEPT_W, h: DEPT_H,
       altText: "Mathematics Department logo" });
     s.addImage({ path: dark ? SCHOOL_W_LOGO : SCHOOL, x: SW - MX - SCH, y: LOGO_Y, w: SCH, h: SCH,
       altText: "Dar Alfikr Schools logo" });
-    s.addText(cfg.footerLeft, { x: MX, y: SH - 0.4, w: 5.6, h: 0.3, fontFace: BODY, fontSize: 9,
+    s.addText(cfg.footerLeft, { x: MX, y: SH - 0.4, w: 4.3, h: 0.3, fontFace: BODY, fontSize: 9,
       color: dark ? "BFD9D7" : MUTED, isTextBox: true, margin: 0 });
-    // house rule 2 — codes only, bottom corner
+    s.addText(MOTTO, { x: SW / 2 - 1.75, y: SH - 0.4, w: 3.5, h: 0.3, fontFace: HEAD, fontSize: 8,
+      bold: true, charSpacing: 1.2, color: dark ? "BFD9D7" : "1F3864", align: "center",
+      isTextBox: true, margin: 0 });
+    // house rule 2 — codes only, bottom corner (two lines allowed for the full list)
     const c = codes && codes.length ? codes : null;
-    s.addText(c ? c.join("  ·  ") : "Faith · Righteousness · Wisdom", {
-      x: SW - MX - 5.6, y: SH - 0.4, w: 5.6, h: 0.3, fontFace: BODY, fontSize: 9,
-      color: dark ? "BFD9D7" : MUTED, align: "right", isTextBox: true, margin: 0 });
+    if (c) s.addText(c.join("  ·  "), {
+      x: SW - MX - 4.3, y: SH - 0.52, w: 4.3, h: 0.42, fontFace: BODY, fontSize: 8,
+      color: dark ? "BFD9D7" : MUTED, align: "right", valign: "bottom", isTextBox: true, margin: 0 });
     return s;
   }
 
@@ -141,6 +157,8 @@ function build(cfg) {
   // ============================================================ 1 TITLE
   {
     const s = base(true);
+    s.addImage({ path: COGNIA, x: SW / 2 - 0.55, y: 0.22, w: 1.1, h: 0.825,
+      altText: "Cognia School of Distinction 2024" });
     s.addShape("ellipse", { x: 9.6, y: -2.3, w: 6.2, h: 6.2, fill: { color: TEAL, transparency: 62 }, line: { type: "none" } });
     s.addShape("ellipse", { x: -2.1, y: 4.9, w: 5.2, h: 5.2, fill: { color: MAROON, transparency: 76 }, line: { type: "none" } });
     s.addText(cfg.topicLine, { x: MX, y: 2.3, w: 11.0, h: 0.34, fontFace: BODY, fontSize: 12,
@@ -158,7 +176,7 @@ function build(cfg) {
       { text: `   |   ${cfg.grade}   |   ${cfg.week}   |   ${total} minutes`, options: { color: "CFE8E6" } },
     ], { x: MX + 0.28, y: 5.86, w: 8.0, h: 0.72, fontFace: BODY, fontSize: 12,
       valign: "middle", isTextBox: true, margin: 0 });
-    s.addNotes(`FIKR ${total}-minute lesson: ${T.t1} + ${T.t2} + ${T.t3} + ${T.t4} + ${T.t5} + ${T.t6} = ${total} including transitions. Standards for this lesson, from the curriculum map: ${ALL.join(", ")}. ${cfg.notes.cover || ""}`);
+    s.addNotes(`FIKR ${total}-minute lesson: $${T.t1}+${T.t2}+${T.t3}+${T.t4}+${T.t5}+${T.t6}=${total}$ minutes including transitions. Standards for this lesson, from the curriculum map: ${ALL.join(", ")}. ${cfg.notes.cover || ""}`);
   }
 
   // ============================================================ 2 OBJECTIVES
@@ -431,18 +449,30 @@ function build(cfg) {
     const s = base(false, ALL.slice(0, 2));
     phaseTag(s, "4", "PRODUCTION — EXPLORE", `within ${T.t4} min`, false);
     title(s, "Test Your Thinking in GeoGebra", cfg.geogebra.sub);
-    s.addShape("roundRect", { x: MX, y: 2.42, w: 7.5, h: 3.9, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
-    s.addText("GEOGEBRA APPLET\nEMBED AREA", { x: MX, y: 2.42, w: 7.5, h: 3.2, align: "center", valign: "middle", fontFace: BODY, italic: true, fontSize: 15, color: MUTED, isTextBox: true, margin: 0 });
-    s.addText("Insert → Add-ins → GeoGebra Graphing Calculator, or paste the activity's share link here.", { x: MX + 0.3, y: 5.7, w: 6.9, h: 0.5, fontFace: BODY, italic: true, fontSize: 10.5, color: MUTED, isTextBox: true, margin: 0, valign: "top" });
-    s.addImage({ path: QR, x: 8.3, y: 2.42, w: 1.45, h: 1.45, altText: "QR code placeholder linking to the GeoGebra activity" });
-    s.addText("Scan to open the\ninteractive activity", { x: 9.93, y: 2.42, w: 1.95, h: 1.45, valign: "middle", fontFace: BODY, fontSize: 11, color: CHARCOAL, isTextBox: true, margin: 0 });
-    s.addShape("roundRect", { x: 8.3, y: 4.1, w: 4.58, h: 0.58, rectRadius: 0.08, fill: { color: TEAL_DEEP }, line: { type: "none" } });
-    s.addText("geogebra.org/m/PLACEHOLDER", { x: 8.3, y: 4.1, w: 4.58, h: 0.58, align: "center", valign: "middle", fontFace: BODY, fontSize: 12, color: WHITE, isTextBox: true, margin: 0 });
-    s.addShape("roundRect", { x: 8.3, y: 4.86, w: 4.58, h: 1.46, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
+    // Left panel. Either the lesson's embedded GeoGebra clip (added AFTER
+    // animate_deck.py by embed_geogebra.py, which needs this area empty) or a
+    // still of the construction students are about to build. Never an
+    // "EMBED AREA" placeholder, a fake QR square or a placeholder link — those
+    // reached six live decks once (§23/§24).
+    const g = cfg.geogebra;
+    if (!g.clip) {
+      if (!g.graph) throw new Error("geogebra: give either clip (embedded later) or graph (a still)");
+      s.addShape("roundRect", { x: MX, y: 2.42, w: 7.5, h: 3.9, rectRadius: 0.1, fill: { color: WHITE }, line: { color: LINE, width: 1 } });
+      const gm = GRAPH[g.graph];
+      const gh = 3.6, gw = Math.min(7.2, gh * gm.aspect);
+      img(s, g.graph, { cx: MX + 3.75, y: 2.57, w: gw, alt: g.graphAlt });
+    }
+    s.addShape("roundRect", { x: 8.3, y: 2.42, w: 4.58, h: 1.5, rectRadius: 0.1, fill: { color: TEAL_DEEP }, line: { type: "none" } });
+    s.addText([
+      { text: "ON YOUR OWN DEVICE", options: { bold: true, fontSize: 11, charSpacing: 1.4, color: TEAL_BRIGHT, breakLine: true } },
+      { text: "geogebra.org/graphing", options: { bold: true, fontSize: 20, color: WHITE, breakLine: true } },
+      { text: "Open it and explore — no account needed.", options: { fontSize: 11, color: "CFE8E6" } },
+    ], { x: 8.55, y: 2.42, w: 4.1, h: 1.5, valign: "middle", fontFace: BODY, isTextBox: true, margin: 0, paraSpaceAfter: 3 });
+    s.addShape("roundRect", { x: 8.3, y: 4.1, w: 4.58, h: 2.22, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
     s.addText([
       { text: "Explore: ", options: { bold: true, color: MAROON } },
-      { text: cfg.geogebra.explore, options: { color: CHARCOAL } },
-    ], { x: 8.55, y: 4.86, w: 4.1, h: 1.46, valign: "middle", fontFace: BODY, fontSize: 11.5, isTextBox: true, margin: 0 });
+      { text: g.explore, options: { color: CHARCOAL } },
+    ], { x: 8.55, y: 4.1, w: 4.1, h: 2.22, valign: "middle", fontFace: BODY, fontSize: 11.5, isTextBox: true, margin: 0 });
     s.addNotes(cfg.notes.geogebra);
   }
 
@@ -503,7 +533,9 @@ function build(cfg) {
     // and backward-compatible — older decks without it render as before).
     const hasQ = cfg.exams.some((e) => e.question);
     const hasSteps = cfg.exams.some((e) => e.steps && e.steps.length);
-    const cardH = hasSteps ? 5.0 : (hasQ ? 4.02 : 3.6);
+    // With worked steps the card must still end above the exam bar and the
+    // footer (it used to run to 7.4 in and push the bar off the slide).
+    const cardH = hasSteps ? 4.02 : (hasQ ? 4.02 : 3.6);
     const cardBottom = 2.4 + cardH;
     cfg.exams.forEach((e, i) => {
       const cw = 3.95, cx = MX + i * (cw + 0.28);
@@ -534,7 +566,7 @@ function build(cfg) {
           body.push({ text: `${si + 1}. ${st}`, options: { breakLine: si < e.steps.length - 1, fontSize: 9.5 } });
         });
       }
-      s.addText(body, { x: cx + 0.26, y: 3.46, w: cw - 0.52, h: cardH - 0.6, fontFace: BODY, fontSize: hasSteps ? 9.5 : (hasQ ? 10 : 11), color: CHARCOAL, isTextBox: true, margin: 0, valign: "top", paraSpaceAfter: hasSteps ? 1.5 : (hasQ ? 2 : 3) });
+      s.addText(body, { x: cx + 0.26, y: 3.46, w: cw - 0.52, h: cardH - 1.16, fontFace: BODY, fontSize: hasSteps ? 9.5 : (hasQ ? 10 : 11), color: CHARCOAL, isTextBox: true, margin: 0, valign: "top", paraSpaceAfter: hasSteps ? 1.5 : (hasQ ? 2 : 3) });
     });
     if (cfg.examBar) {
       if (hasQ) bar(s, cfg.examBar[0], cfg.examBar[1], { y: cardBottom + 0.14, h: 0.46, fs: 10.5 });
@@ -568,8 +600,25 @@ function build(cfg) {
     s.addNotes("Close by naming one thing a student said today that changed how someone else was thinking.");
   }
 
-  return pres.writeFile({ fileName: A(cfg.out) })
-    .then(() => console.log("wrote", cfg.out, `(${total} min)`));
+  // pptxgenjs writes each slide's notes as one plain run; rewrite them so the
+  // worked answers in the notes are typeset exactly like the slides.
+  return pres.write({ outputType: "nodebuffer" })
+    .then((buf) => JSZip.loadAsync(buf))
+    .then(async (zip) => {
+      const names = Object.keys(zip.files).filter((n) => /^ppt\/notesSlides\/notesSlide\d+\.xml$/.test(n));
+      for (const n of names) {
+        let xml = await zip.file(n).async("string");
+        xml = xml.replace(/<a:r><a:rPr lang="en-US" dirty="0"\/><a:t>([\s\S]*?)<\/a:t><\/a:r>/g, (m, t) => {
+          const raw = t.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"')
+            .replace(/&apos;/g, "'").replace(/&amp;/g, "&");
+          return raw.indexOf("$") < 0 ? m : IM.notesRunsXml(raw);
+        });
+        zip.file(n, xml);
+      }
+      const out = await zip.generateAsync({ type: "nodebuffer", compression: "DEFLATE" });
+      fs.writeFileSync(A(cfg.out), out);
+      console.log("wrote", cfg.out, `(${total} min)`);
+    });
 }
 
 module.exports = { build };

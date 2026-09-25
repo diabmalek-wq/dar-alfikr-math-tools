@@ -5,12 +5,23 @@
 // Branding, standards codes, name/date block and house rules enforced here.
 // ---------------------------------------------------------------------------
 const {
-  Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
+  Document, Packer, Paragraph: DocxParagraph, TextRun: DocxTextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, BorderStyle, ShadingType, Header, Footer,
-  ImageRun, VerticalAlign, PageOrientation,
+  ImageRun, VerticalAlign, PageOrientation, PageNumber,
 } = require("docx");
 const fs = require("fs");
 const path = require("path");
+const IM = require("./inline_math");
+
+// House rule: maths is typeset, never typed as code. Every text run in these
+// documents goes through the inline-maths renderer, so "$\log_2(x)+5$" in a
+// config prints with a real subscript, italic variables and a true minus.
+// TextRun may therefore return SEVERAL runs; Paragraph flattens them.
+function TextRun(o) { return typeof o === "object" && !Array.isArray(o) ? IM.docxRuns(DocxTextRun, o) : [new DocxTextRun(o)]; }
+function Paragraph(o) {
+  if (o && Array.isArray(o.children)) o = { ...o, children: o.children.flat() };
+  return new DocxParagraph(o);
+}
 
 const A = (f) => path.join(__dirname, f);
 
@@ -39,6 +50,7 @@ let PBL_EXTRA = {};
 try { PBL_EXTRA = JSON.parse(fs.readFileSync(A("pbl_extra.json"), "utf8")); } catch (e) {}
 
 function makeEngine(cfg) {
+  IM.lint(cfg);
   const MATH = JSON.parse(fs.readFileSync(A(cfg.mathDocIndex), "utf8"));
   const GRAPH = cfg.graphIndex ? JSON.parse(fs.readFileSync(A(cfg.graphIndex), "utf8")) : {};
   const CODES = cfg.codes.concat(cfg.mps);
@@ -109,15 +121,26 @@ function makeEngine(cfg) {
       new Paragraph({ spacing: { after: 40 }, children: [] }),
     ] });
   }
-  const codesFooter = () => new Footer({ children: [
-    new Paragraph({
-      alignment: AlignmentType.CENTER, spacing: { before: 60, after: 20 },
-      children: [new TextRun({ text: "FAITH,  RIGHTEOUSNESS  AND  WISDOM", font: HEAD,
-                               size: 15, bold: true, color: "1F3864" })] }),
-    new Paragraph({
-      alignment: AlignmentType.RIGHT, spacing: { after: 0 },
-      children: [new TextRun({ text: CODES.join("  ·  "), font: BODY, size: 15, color: MUTED })],
-    })] });
+  // Branding (9 Sep 2026): the document's identifiers on the left, the school
+  // motto centred, and "Mr Malek Thiab · Page n of m" on the right.
+  const codesFooter = (total = W) => {
+    const l = Math.round(total * 0.4), m = Math.round(total * 0.3), r = total - l - m;
+    const fcell = (w, children) => new TableCell({ width: { size: w, type: WidthType.DXA }, borders: noBorders,
+      verticalAlign: VerticalAlign.BOTTOM, margins: { top: 0, bottom: 0, left: 0, right: 0 }, children });
+    return new Footer({ children: [
+      new Table({ columnWidths: [l, m, r], width: { size: total, type: WidthType.DXA }, borders: noBorders,
+        rows: [new TableRow({ children: [
+          fcell(l, [new Paragraph({ alignment: AlignmentType.LEFT, spacing: { after: 0 },
+            children: [new TextRun({ text: CODES.join("  ·  "), font: BODY, size: 14, color: MUTED })] })]),
+          fcell(m, [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 0 },
+            children: [new TextRun({ text: "FAITH,  RIGHTEOUSNESS  AND  WISDOM", font: HEAD,
+              size: 15, bold: true, color: "1F3864" })] })]),
+          fcell(r, [new Paragraph({ alignment: AlignmentType.RIGHT, spacing: { after: 0 },
+            children: [new DocxTextRun({ font: BODY, size: 15, color: MUTED,
+              children: ["Mr Malek Thiab  ·  Page ", PageNumber.CURRENT, " of ", PageNumber.TOTAL_PAGES] })] })]),
+        ] })] }),
+    ] });
+  };
 
   // a3: the project task is printed A3 so a group of four can work on one sheet.
   const makeDoc = (title, children, landscape, a3) => new Document({
@@ -129,7 +152,7 @@ function makeEngine(cfg) {
           : { width: 11906, height: 16838, orientation: landscape ? PageOrientation.LANDSCAPE : undefined },
         margin: { top: 860, bottom: 700, left: 1080, right: 1080 } } },
       headers: { default: brandHeader(a3 ? A3W : landscape ? LW : W) },
-      footers: { default: codesFooter() },
+      footers: { default: codesFooter(a3 ? A3W : landscape ? LW : W) },
       children,
     }],
   });
@@ -209,7 +232,7 @@ function makeEngine(cfg) {
         new TableRow({ children: [cell([P(prompt, { bold: true, size: 9.5, color: TEAL_DEEP })], { w: W, fill: TEAL_TINT2 })] }),
         new TableRow({ children: [cell(answer.map((l, i) => {
           const o = { size: 10, after: i === answer.length - 1 ? 0 : 60 };
-          if (l instanceof Paragraph) return l;
+          if (l instanceof DocxParagraph) return l;
           return Array.isArray(l) ? mix(l, o) : P(l, o);
         }), { w: W })] }),
       ],
@@ -271,7 +294,7 @@ function makeEngine(cfg) {
     k.push(new Paragraph({ spacing: { after: 160 }, children: [
       new TextRun({ text: "Total minutes across the seven stages:  ", font: BODY, size: 20, bold: true, color: CHARCOAL }),
       new TextRun({ text: `${total}`, font: BODY, size: 20, bold: true, color: MAROON }),
-      new TextRun({ text: `   (${T.t1} + ${T.t2} + ${T.t3} + ${T.t4} + ${T.t5} + ${T.t6}) — matches the 60-minute format, including transitions.`, font: BODY, size: 18, color: MUTED }),
+      new TextRun({ text: `   ($${T.t1}+${T.t2}+${T.t3}+${T.t4}+${T.t5}+${T.t6}$) — matches the 60-minute format, including transitions.`, font: BODY, size: 18, color: MUTED }),
     ] }));
 
     k.push(phaseBar("★", "Required Pillars", "Differentiation · Adaptive Learning · Saudi Connection · Exam Alignment"), gap(60));
