@@ -54,7 +54,7 @@ function build(cfg) {
   if (!cfg.essentialQuestion) throw new Error("essential question is required, verbatim");
   // House rule: maths is typeset, never typed as code. Every prose string must
   // carry its maths inside $...$ — the build stops otherwise.
-  IM.lint(cfg);
+  IM.lint(cfg, ["graphAlt", "titleEqAlt"]);
 
   const pres = new pptxgen();
   pres.defineLayout({ name: "WIDE", width: SW, height: SH });

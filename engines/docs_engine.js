@@ -50,7 +50,7 @@ let PBL_EXTRA = {};
 try { PBL_EXTRA = JSON.parse(fs.readFileSync(A("pbl_extra.json"), "utf8")); } catch (e) {}
 
 function makeEngine(cfg) {
-  IM.lint(cfg);
+  IM.lint(cfg, ["graphAlt", "titleEqAlt"]);
   const MATH = JSON.parse(fs.readFileSync(A(cfg.mathDocIndex), "utf8"));
   const GRAPH = cfg.graphIndex ? JSON.parse(fs.readFileSync(A(cfg.graphIndex), "utf8")) : {};
   const CODES = cfg.codes.concat(cfg.mps);

@@ -241,8 +241,15 @@ function expandPpt(arg) {
     const opts = item.options || {};
     const { bullet, breakLine, ...charOpts } = opts;
     const runs = pptRuns(t, charOpts);
+    // pptxgenjs writes one <a:pPr> per run whenever a paragraph mixes runs of
+    // different formatting (which every maths run does). Only the LAST such
+    // pPr survives in LibreOffice/PowerPoint, so a `bullet:true` placed on the
+    // first run of a multi-run paragraph is silently discarded. Rather than
+    // fight that, a bulleted paragraph that contains maths gets its bullet
+    // drawn as a literal glyph on the first run instead of via the `bullet`
+    // paragraph option, which multi-run paragraphs cannot carry reliably.
+    if (bullet) runs[0].text = "•   " + runs[0].text;
     runs.forEach((r, k) => {
-      if (k === 0 && bullet !== undefined) r.options.bullet = bullet;
       if (k === 0) Object.assign(r.options, pick(opts, ["paraSpaceAfter", "paraSpaceBefore", "indentLevel", "align"]));
       if (k === runs.length - 1 && breakLine) r.options.breakLine = true;
       out.push(r);
