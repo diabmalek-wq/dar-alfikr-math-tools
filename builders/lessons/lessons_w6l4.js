@@ -95,8 +95,8 @@ const GR11_L64 = {
       rowsHead: ["PROPERTY", "WORKED CHECK"],
       rowsTop: 2.55, rowH: 1.1, rowsCw: [2.95, 3.35],
       rows: [
-        ["log_b(b^x) = x", { eq: "m_ip_check1", k: 1.55 }],
-        ["b^(log_b x) = x", { eq: "m_ip_check2", k: 1.55 }],
+        [{ eq: "m_ip1_bare", k: 1.35 }, { eq: "m_ip_check1", k: 1.55 }],
+        [{ eq: "m_ip2_bare", k: 1.35 }, { eq: "m_ip_check2", k: 1.55 }],
       ],
       panel: {
         h: "WHY THIS MATTERS",
