@@ -1,0 +1,81 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax-check:
+    name: Syntax check (all engines/generators/verifiers/builders)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: node --check every .js file
+        run: |
+          set -e
+          find engines generators verifiers builders -name '*.js' -print0 \
+            | xargs -0 -n1 node --check
+      - name: python -m py_compile every .py file
+        run: |
+          set -e
+          find engines generators verifiers builders -name '*.py' -print0 \
+            | xargs -0 -n1 python3 -m py_compile
+
+  run-verifiers:
+    name: Run the verifiers that can run standalone against committed data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: pip install
+        run: pip install -r requirements.txt --break-system-packages
+
+      # GAT bank — verify_sim.py re-derives every answer against builders/gat-bank/sim_items_*.js.
+      # No staging needed: the script resolves builders/gat-bank/ relative to its own path.
+      - name: verify_sim.py (GAT bank, 426 items)
+        run: python3 verifiers/verify_sim.py
+
+      # SAAT bank — verify_saat.py needs its 12 per-part check files (already in verifiers/,
+      # same directory) plus the make_math_saat* expression tables (generators/) and the
+      # saat_items_*.js bank itself (builders/saat-bank/) as same-directory imports/requires.
+      # Stage copies into one scratch directory rather than editing the verifier's own paths.
+      - name: verify_saat.py (SAAT bank, 582 items)
+        run: |
+          set -e
+          mkdir -p /tmp/ci_saat
+          cp verifiers/verify_saat.py verifiers/verify_saat_*.py /tmp/ci_saat/
+          cp generators/make_math_saat*.py /tmp/ci_saat/
+          cp builders/saat-bank/saat_items_*.js /tmp/ci_saat/
+          (cd /tmp/ci_saat && python3 verify_saat.py)
+
+      # SAAT bank structural/typographic lint — same same-directory-require constraint as
+      # above; lint_saat.js requires ./saat_items_a.js .. m.js from wherever the script
+      # itself sits, so stage a copy next to the bank rather than the bank next to it.
+      - name: lint_saat.js (SAAT bank structural/typo lint)
+        run: |
+          set -e
+          cp verifiers/lint_saat.js builders/saat-bank/_ci_lint_saat.js
+          (cd builders/saat-bank && node _ci_lint_saat.js)
+          rm builders/saat-bank/_ci_lint_saat.js
+
+      # NOT run here — each of these verifies a specific week's *build output*
+      # (e.g. gat_worksheets.js, a rendered .docx) rather than committed source, so
+      # there's nothing in this repo for them to check against yet:
+      #   verify_gat.js, verify_gat2.js, audit_gat.js   — read gat_worksheets(2).js,
+      #     a built weekly output that isn't committed (it's per-build, not per-repo).
+      #   audit_pair.js, validate_set.js                — take a built module's path as
+      #     an argument (process.argv[2]); nothing to pass without a build step first.
+      #   calibrate_pbl.py, measure_rev.py               — measure a rendered PDF/PNG of
+      #     an already-built .docx and need soffice/pdftoppm; there's no build step in
+      #     this repo yet to produce that .docx from. See docs/ARCHITECTURE.md.
