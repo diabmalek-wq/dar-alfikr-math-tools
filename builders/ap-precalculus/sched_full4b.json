@@ -1,0 +1,858 @@
+{
+ "schedule": [
+  {
+   "week": 5,
+   "start": "2026-09-27",
+   "end": "2026-10-01",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      1,
+      "L1-1",
+      "Change in Tandem"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      2,
+      "L1-2",
+      "Rates of Change"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 6,
+   "start": "2026-10-04",
+   "end": "2026-10-08",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      3,
+      "L1-3",
+      "Rates of Change in Linear and Quadratic Functions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      4,
+      "L1-4",
+      "Polynomial Functions and Rates of Change"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 7,
+   "start": "2026-10-11",
+   "end": "2026-10-15",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      5,
+      "L1-5",
+      "Polynomial Functions and Complex Zeros"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      6,
+      "L1-6",
+      "Polynomial Functions and End Behavior"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 8,
+   "start": "2026-10-18",
+   "end": "2026-10-22",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      7,
+      "L1-7",
+      "Rational Functions and End Behavior"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      8,
+      "L1-8",
+      "Rational Functions and Zeros"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 9,
+   "start": "2026-10-25",
+   "end": "2026-10-29",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      9,
+      "L1-9",
+      "Rational Functions and Vertical Asymptotes"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      10,
+      "L1-10",
+      "Rational Functions and Holes"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 10,
+   "start": "2026-11-01",
+   "end": "2026-11-05",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      11,
+      "L1-11",
+      "Equivalent Representations of Polynomial and Rational Expressions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      12,
+      "L1-12",
+      "Transformations of Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 11,
+   "start": "2026-11-08",
+   "end": "2026-11-12",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "1",
+      13,
+      "L1-13",
+      "Function Model Selection and Assumption Articulation"
+     ]
+    ],
+    [
+     "A",
+     [
+      "1",
+      14,
+      "L1-14",
+      "Function Model Construction and Application"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1"
+    ]
+   ]
+  },
+  {
+   "week": 12,
+   "start": "2026-11-15",
+   "end": "2026-11-19",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      1,
+      "L2-1",
+      "Change in Arithmetic and Geometric Sequences"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      2,
+      "L2-2",
+      "Change in Linear and Exponential Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 13,
+   "start": "2026-11-22",
+   "end": "2026-11-26",
+   "teaching_days": 0,
+   "break": "Autumn Break",
+   "sessions": []
+  },
+  {
+   "week": 14,
+   "start": "2026-11-29",
+   "end": "2026-12-03",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      3,
+      "L2-3",
+      "Exponential Functions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      4,
+      "L2-4",
+      "Exponential Function Manipulation"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 15,
+   "start": "2026-12-06",
+   "end": "2026-12-10",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      5,
+      "L2-5",
+      "Exponential Function Context and Data Modeling"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      6,
+      "L2-6",
+      "Competing Function Model Validation"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 16,
+   "start": "2026-12-13",
+   "end": "2026-12-17",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      7,
+      "L2-7",
+      "Composition of Functions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      8,
+      "L2-8",
+      "Inverse Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 17,
+   "start": "2026-12-20",
+   "end": "2026-12-24",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      9,
+      "L2-9",
+      "Logarithmic Expressions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      10,
+      "L2-10",
+      "Inverses of Exponential Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 18,
+   "start": "2026-12-27",
+   "end": "2026-12-31",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      11,
+      "L2-11",
+      "Logarithmic Functions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      12,
+      "L2-12",
+      "Logarithmic Function Manipulation"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 19,
+   "start": "2027-01-03",
+   "end": "2027-01-07",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      13,
+      "L2-13",
+      "Exponential and Logarithmic Equations and Inequalities"
+     ]
+    ],
+    [
+     "A",
+     [
+      "2",
+      14,
+      "L2-14",
+      "Logarithmic Function Context and Data Modeling"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2"
+    ]
+   ]
+  },
+  {
+   "week": 20,
+   "start": "2027-01-10",
+   "end": "2027-01-14",
+   "teaching_days": 0,
+   "break": "Mid-Year Break",
+   "sessions": []
+  },
+  {
+   "week": 21,
+   "start": "2027-01-17",
+   "end": "2027-01-21",
+   "teaching_days": 4,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "2",
+      15,
+      "L2-15",
+      "Semi-log Plots"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      1,
+      "L3-1",
+      "Periodic Phenomena"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 22,
+   "start": "2027-01-24",
+   "end": "2027-01-28",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      2,
+      "L3-2",
+      "Sine, Cosine, and Tangent"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      3,
+      "L3-3",
+      "Sine and Cosine Function Values"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 23,
+   "start": "2027-01-31",
+   "end": "2027-02-04",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      4,
+      "L3-4",
+      "Sine and Cosine Function Graphs"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      5,
+      "L3-5",
+      "Sinusoidal Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 24,
+   "start": "2027-02-07",
+   "end": "2027-02-11",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      6,
+      "L3-6",
+      "Sinusoidal Function Transformations"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      7,
+      "L3-7",
+      "Sinusoidal Function Context and Data Modeling"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 25,
+   "start": "2027-02-14",
+   "end": "2027-02-18",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      8,
+      "L3-8",
+      "The Tangent Function"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      9,
+      "L3-9",
+      "Inverse Trigonometric Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 26,
+   "start": "2027-02-21",
+   "end": "2027-02-25",
+   "teaching_days": 3,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      10,
+      "L3-10",
+      "Trigonometric Equations and Inequalities"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      11,
+      "L3-11",
+      "The Secant, Cosecant, and Cotangent Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ]
+   ]
+  },
+  {
+   "week": 27,
+   "start": "2027-02-28",
+   "end": "2027-03-04",
+   "teaching_days": 0,
+   "break": "Eid al-Fitr / Ramadan Break",
+   "sessions": []
+  },
+  {
+   "week": 28,
+   "start": "2027-03-07",
+   "end": "2027-03-11",
+   "teaching_days": 0,
+   "break": "Eid al-Fitr / Ramadan Break",
+   "sessions": []
+  },
+  {
+   "week": 29,
+   "start": "2027-03-14",
+   "end": "2027-03-18",
+   "teaching_days": 4,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      12,
+      "L3-12",
+      "Equivalent Representations of Trigonometric Functions"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      13,
+      "L3-13",
+      "Trigonometry and Polar Coordinates"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 30,
+   "start": "2027-03-21",
+   "end": "2027-03-25",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "A",
+     [
+      "3",
+      14,
+      "L3-14",
+      "Polar Function Graphs"
+     ]
+    ],
+    [
+     "A",
+     [
+      "3",
+      15,
+      "L3-15",
+      "Rates of Change in Polar Functions"
+     ]
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  },
+  {
+   "week": 31,
+   "start": "2027-03-28",
+   "end": "2027-04-01",
+   "teaching_days": 5,
+   "break": null,
+   "sessions": [
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ],
+    [
+     "B",
+     null
+    ],
+    [
+     "D",
+     "Unit 1, Unit 2, Unit 3"
+    ]
+   ]
+  }
+ ],
+ "review_weeks": [
+  {
+   "week": 32,
+   "start": "2027-04-04",
+   "end": "2027-04-08",
+   "teaching_days": 5,
+   "break": null
+  },
+  {
+   "week": 33,
+   "start": "2027-04-11",
+   "end": "2027-04-15",
+   "teaching_days": 5,
+   "break": null
+  },
+  {
+   "week": 34,
+   "start": "2027-04-18",
+   "end": "2027-04-22",
+   "teaching_days": 5,
+   "break": null
+  },
+  {
+   "week": 35,
+   "start": "2027-04-25",
+   "end": "2027-04-27",
+   "teaching_days": 3,
+   "break": null
+  }
+ ],
+ "topics_scheduled": 44
+}
