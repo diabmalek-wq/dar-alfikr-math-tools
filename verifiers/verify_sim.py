@@ -1,15 +1,19 @@
 """Re-derive every answer in the simulated bank from scratch, in Python, and
 compare with what the bank claims. Nothing ships until this reports 0 failures."""
 from fractions import Fraction as F
-import json, math, subprocess
+import json, math, os, subprocess
 from itertools import product
+
+# Repo-relative path to builders/gat-bank/ (where sim_items_a..o.js live), so this
+# runs from any checkout/CI runner instead of the old ephemeral session workspace.
+_GAT_BANK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "builders", "gat-bank")
 
 items = json.loads(subprocess.run(
     ["node", "-e",
      "const I=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o'].flatMap(k=>require('./sim_items_'+k+'.js'));"
      "console.log(JSON.stringify(I.map(i=>({sig:i.sig,ans:i.ans,"
      "opts:i.opts.map(o=>(o&&o.eq)?o.eq:o)}))))"],
-    capture_output=True, text=True, cwd="/home/claude/fikr_pptx").stdout)
+    capture_output=True, text=True, cwd=_GAT_BANK_DIR).stdout)
 BY = {i["sig"]: i for i in items}
 
 CMP = {"A": 0, "B": 1, "EQ": 2, "ND": 3}
