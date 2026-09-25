@@ -18,8 +18,8 @@ EXPR = {
 
     # prior knowledge
     "m_prior_log":  (r"\log_b x = y \iff b^{y}=x", INK),
-    "m_prior_exp":  (r"g(x)=2^{x}:\ \ \text{domain all reals},\ \text{range } y>0", INK),
-    "m_prior_inv":  (r"\text{if } (a,b)\text{ is on } f,\ \text{then } (b,a)\text{ is on } f^{-1}", INK),
+    "m_prior_exp":  (r"g(x)=2^{x}", INK),
+    "m_prior_inv":  (r"(a,b)\in f \iff (b,a)\in f^{-1}", INK),
 
     # diagnose
     "m_d1":  (r"\log_2 8 = \underline{\qquad}", INK),
@@ -41,6 +41,7 @@ EXPR = {
     # instruction 2 — inverse properties
     "m_ip1":       (r"\log_b\!\left(b^{x}\right)=x \quad \text{for all } x", INK),
     "m_ip1_bare":  (r"\log_b\!\left(b^{x}\right)=x", INK),
+    "m_ip2_bare":  (r"b^{\log_b x}=x", INK),
     "m_ip2":       (r"b^{\log_b x}=x \quad \text{for } x>0", INK),
     "m_ip_check1": (r"\log_2\!\left(2^{5}\right)=5", INK),
     "m_ip_check2": (r"3^{\log_3 7}=7", INK),
