@@ -84,6 +84,16 @@ EXPR = {
     "m_ex_saat": (r"\text{State the vertical asymptote of } f(x)=\log_3(x-4).", INK),
     "m_ex_sat":  (r"\text{Find the inverse of } f(x)=\log_2(x)+5.", INK),
     "m_ex_gat":  (r"\text{Domain of } f(x)=\log_5(x-9)\ \text{is}\ \underline{\qquad}", INK),
+
+    # HSF.IF.B.6 — average rate of change of a logarithmic function
+    "m_arc_def": (r"\text{average rate of change on } [a,b] = \dfrac{f(b)-f(a)}{b-a}", INK),
+    "m_arc1":    (r"\dfrac{f(3)-f(1)}{3-1}=\dfrac{1-0}{2}=\dfrac{1}{2}", INK),
+    "m_arc2":    (r"\dfrac{f(9)-f(3)}{9-3}=\dfrac{2-1}{6}=\dfrac{1}{6}", INK),
+
+    # (+)HSF.BF.B.4.C — reading inverse values from a table of f(x) = 3^x
+    "m_bf_table": (r"\begin{array}{c|cccc}x & -1 & 0 & 1 & 2\\ \hline 3^{x} & \tfrac13 & 1 & 3 & 9\end{array}", INK),
+    "m_bf_read1": (r"\log_3 9 = \underline{\qquad}\quad(\text{read from the table: } 3^{2}=9)", INK),
+    "m_bf_read2": (r"\log_3\!\left(\tfrac13\right) = \underline{\qquad}\quad(\text{read from the table: } 3^{-1}=\tfrac13)", INK),
 }
 
 keys = list(EXPR)
