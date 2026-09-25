@@ -1,0 +1,315 @@
+// Week 2 exam-prep sets, per the GAT & SAAT Classification Map.
+//   GAT  — focus GAT-Q-ALG.5 (evaluating functions and proportion)
+//          28 items at the official strand weighting, 35 minutes, no calculator.
+//   SAAT — focus SAAT-M-11.2 (radical expressions and equations, extraneous roots)
+//          24 items, 28 minutes, no calculator.
+// Every item is written against the ETEC framework in the Classification Map.
+// No leaked or circulated exam questions are used.
+const { buildSet } = require("./exam_engine");
+const MATH = "math_ex2_doc/_index.json";
+
+// Answer-letter balance. GAT options are ordered by value, exactly as on the
+// real paper, so its key letters fall where the value falls. SAAT options are
+// expressions with no natural order, so they are rotated to a balanced key —
+// otherwise a student could eliminate a letter that is never correct.
+function rot(it, r) {
+  if (!r) return it;
+  const out = new Array(4);
+  it.opts.forEach((o, i) => { out[(i + r) % 4] = o; });
+  const L = ["A", "B", "C", "D"];
+  const traps = (it.traps || []).map((t) =>
+    t.replace(/^([A-D]):/, (m, c) => L[(L.indexOf(c) + r) % 4] + ":"));
+  return { ...it, opts: out, ans: (it.ans + r) % 4, traps };
+}
+const SAAT_ROT = [0, 1, 0, 2, 3, 0, 1, 0, 0, 1, 2, 3, 0, 0, 0, 3, 0, 0, 0, 2, 3, 2, 0, 3];
+
+
+
+// =====================================================================
+// GAT — Week 2
+// =====================================================================
+const GAT = {
+  mathIndex: MATH,
+  examName: "GAT (Qudurat) practice set",
+  weekLine: "Week 2 · Semester 1, 2026–27",
+  headerLine: "GAT (Qudurat) · Quantitative Reasoning · Week 2 focus: GAT-Q-ALG.5 evaluating functions and proportion",
+  paperTitle: "GAT Practice Set 2 — Quantitative Reasoning",
+  paperSub: "28 questions in 35 minutes. Every strand is present, in the proportions the real test uses.",
+  keyTitle: "GAT Practice Set 2 — Answer Key and Error Analysis",
+  keySub: "For Mr Malek Thiab. Every distractor below encodes a specific student error — name it aloud when you review.",
+  outPaper: "GAT_Practice_Set_W2_Paper.docx",
+  outKey: "GAT_Practice_Set_W2_Key.docx",
+  timing: "35 minutes",
+  targets: { "GAT-Q-ARI": "~36%", "GAT-Q-ALG": "~18%", "GAT-Q-GEO": "~18%", "GAT-Q-DAT": "~18%", "GAT-Q-LOG": "~10%" },
+  budgetNote: "matched to the official ETEC weighting — check it before you print",
+  conditions: "Work on the paper, not on a separate sheet — the real test gives you a scratch booklet and nothing else. No calculator, no phone, no smartwatch. If a question is taking more than about 75 seconds, mark it and move on: you can come back, and in the real section you cannot afford to stall.",
+  sourceNote: "Numeric options on this paper are printed in ascending order, as they are on the real test, so the correct letter falls wherever the value falls and the letters are not evenly spread. Tell students this: there is nothing to be gained from counting letters. Every item was written for this set against the ETEC / Qiyas framework recorded in the GAT and SAAT Classification Map. No leaked or circulated exam questions are used here: they are unverified, usually reconstructed from memory, and frequently from retired forms.",
+  followUp: [
+    ["23 or more", "Working at the target band. Move this student to the timed 25-minute section format next week and stop giving extra time."],
+    ["17 to 22", "Sound, but pacing or arithmetic is leaking marks. Look at WHICH questions were left blank — blanks late in the paper mean a pacing problem, not a knowledge problem."],
+    ["12 to 16", "One or two strands are carrying the loss. Use the strand column to find them, then set the Practice route from that week's core lesson as the repair."],
+    ["Below 12", "Do not re-set a full paper. Take the ten GAT-Q-ARI items alone, untimed, and rebuild the arithmetic first — it is 36% of the test and everything else runs on it."],
+    ["Whole class", "Any item where more than half the class chose the SAME wrong option is a teaching point, not a marking point. Put it on the board and work the error, not the answer."],
+  ],
+  items: [
+    { code: "GAT-Q-ALG.5", lvl: 2, stem: "If f(x) = 3x − 5, what is f(−2)?", stemEq: "g1_s",
+      opts: ["−11", "−1", "1", "11"], ans: 0,
+      why: "f(−2) = 3(−2) − 5 = −6 − 5 = −11.",
+      traps: ["B: −6 + 5, the sign of the constant lost.", "C: 6 − 5, the negative not carried into 3x.", "D: 6 + 5, both signs lost."] },
+    { code: "GAT-Q-ARI.1", lvl: 2, stem: "Which of these numbers is divisible by both 4 and 9?",
+      opts: ["126", "144", "234", "152"], ans: 1,
+      why: "144: the digit sum is 9, so it is divisible by 9, and the last two digits 44 divide by 4.",
+      traps: ["A and C: digit sum 9, so divisible by 9 — but 26 and 34 are not divisible by 4.", "D: 52 divides by 4, but the digit sum is 8."] },
+    { code: "GAT-Q-GEO.2", lvl: 1, stem: "A right-angled triangle has legs of 9 cm and 12 cm. What is the length of the hypotenuse?",
+      opts: ["13 cm", "15 cm", "21 cm", "225 cm"], ans: 1,
+      why: "9² + 12² = 81 + 144 = 225, and √225 = 15. This is the 3-4-5 triangle scaled by 3.",
+      traps: ["A: reaching for the memorised 5-12-13 triple.", "C: adding the two legs.", "D: forgetting to take the square root."] },
+    { code: "GAT-Q-DAT.2", lvl: 1, stem: "What is the range of the data set 4, 9, 2, 15, 7?",
+      opts: ["6", "11", "13", "15"], ans: 2,
+      why: "Range = largest − smallest = 15 − 2 = 13.",
+      traps: ["B: using 4 as the minimum because it is written first.", "D: giving the maximum rather than the difference.", "A: subtracting a middle pair."] },
+    { code: "GAT-Q-LOG.1", lvl: 1, stem: "A car covers 180 km in 2 hours 30 minutes. What is its average speed?",
+      opts: ["60 km/h", "72 km/h", "75 km/h", "90 km/h"], ans: 1,
+      why: "180 ÷ 2.5 = 72 km/h. Convert 30 minutes to 0.5 of an hour, never to 0.3.",
+      traps: ["D: dividing by 2 and ignoring the half hour.", "C: dividing by 2.4, from reading 2 h 30 min as 2.3 h.", "A: an estimate rather than a division."] },
+    { code: "GAT-Q-ARI.2", lvl: 1, stem: "What is the lowest common multiple of 12 and 18?",
+      opts: ["6", "36", "72", "216"], ans: 1,
+      why: "12 = 2²·3 and 18 = 2·3², so the LCM is 2²·3² = 36.",
+      traps: ["A: giving the highest common factor instead.", "D: multiplying the two numbers.", "C: a common multiple, but not the lowest."] },
+    { code: "GAT-Q-ALG.5", lvl: 2, stem: "The quantity y varies directly with x. When x = 4, y = 18. What is y when x = 10?",
+      opts: ["7.2", "24", "40", "45"], ans: 3,
+      why: "Direct variation means y = kx, so k = 18 ÷ 4 = 4.5, and y = 4.5 × 10 = 45.",
+      traps: ["A: treating it as inverse variation, 18 × 4 ÷ 10.", "B: adding 6 because x rose by 6 — additive, not proportional.", "C: rounding the constant to 4."] },
+    { code: "GAT-Q-ARI.3", lvl: 1, stem: "15% of a number is 45. What is the number?",
+      opts: ["3", "60", "300", "675"], ans: 2,
+      why: "0.15n = 45, so n = 45 ÷ 0.15 = 300.",
+      traps: ["D: multiplying, 45 × 15.", "A: dividing 45 by 15 and stopping.", "B: adding 15 to 45."] },
+    { code: "GAT-Q-GEO.6", lvl: 2, stem: "What is the distance between the points (−1, 2) and (3, 5)?",
+      opts: ["3", "4", "5", "7"], ans: 2,
+      why: "Δx = 4, Δy = 3, so the distance is √(16 + 9) = √25 = 5.",
+      traps: ["D: adding the two differences instead of using Pythagoras.", "B: giving the horizontal difference only.", "A: giving the vertical difference only."] },
+    { code: "GAT-Q-DAT.3", lvl: 2, stem: "A bag holds 4 red, 3 blue and 3 green marbles. One marble is drawn at random. What is the probability that it is NOT red?",
+      opts: [{ eq: "g23_a" }, { eq: "g23_b" }, { eq: "g23_e" }, { eq: "g23_d" }], ans: 3,
+      why: "There are 10 marbles and 6 are not red, so the probability is 6/10 = 3/5.",
+      traps: ["C: 2/5 is the probability that it IS red — the complement not taken.", "B: 3/10 is the probability of blue alone.", "A: 1/5 counts colours rather than marbles."] },
+    { code: "GAT-Q-ARI.4", lvl: 2, stem: "Evaluate:", stemEq: "g12_s",
+      opts: ["2", "4", "8", "16"], ans: 1,
+      why: "Add the exponents when multiplying, subtract when dividing: 2^(5+3−6) = 2² = 4.",
+      traps: ["Every wrong option is an exponent-arithmetic slip: 5 + 3 − 6 is 2, not 1, 3 or 4. Say the rule aloud before computing."] },
+    { code: "GAT-Q-ALG.5", lvl: 2, stem: "If g(x) = 2x + 1, what is g(g(1))?", stemEq: "g4_s",
+      opts: ["4", "5", "7", "9"], ans: 2,
+      why: "Inside first: g(1) = 3. Then g(3) = 2(3) + 1 = 7.",
+      traps: ["B: computing g(2) — doubling the input instead of applying g to the output.", "A: g(1) + 1.", "D: squaring the result of g(1)."] },
+    { code: "GAT-Q-ARI.5", lvl: 3, stem: "What is the next term of the sequence 3, 7, 15, 31, … ?",
+      opts: ["47", "62", "63", "65"], ans: 2,
+      why: "The differences are 4, 8, 16 — they double. The next difference is 32, so the next term is 31 + 32 = 63. Equivalently each term is double the previous plus one.",
+      traps: ["A: repeating the last difference of 16 instead of doubling it.", "B: doubling 31 and forgetting the +1.", "D: adding 34."] },
+    { code: "GAT-Q-GEO.3", lvl: 2, stem: "A circle has radius 6 cm. What is the area of a sector with a central angle of 60°?",
+      opts: [{ eq: "g18_a" }, { eq: "g18_b" }, { eq: "g18_c" }, { eq: "g18_d" }], ans: 1,
+      why: "The sector is 60/360 = 1/6 of the circle, and the whole area is 36π, so the sector is 6π cm².",
+      traps: ["D: giving the area of the whole circle.", "C: using 120° instead of 60°.", "A: computing an arc length rather than an area."] },
+    { code: "GAT-Q-DAT.4", lvl: 1, stem: "A student has 4 shirts, 3 pairs of trousers and 2 pairs of shoes. How many different complete outfits can be made?",
+      opts: ["9", "12", "24", "36"], ans: 2,
+      why: "The fundamental counting principle: 4 × 3 × 2 = 24.",
+      traps: ["A: adding rather than multiplying.", "B: multiplying only the first two.", "D: multiplying 4 × 3 × 3."] },
+    { code: "GAT-Q-ARI.1", lvl: 1, stem: "What is the smallest prime number greater than 50?",
+      opts: ["51", "53", "55", "57"], ans: 1,
+      why: "51 = 3 × 17, 55 = 5 × 11 and 57 = 3 × 19. Only 53 has no factors other than 1 and itself.",
+      traps: ["A and D: both have digit sums divisible by 3, so both are divisible by 3.", "C: ends in 5, so it is divisible by 5."] },
+    { code: "GAT-Q-ALG.5", lvl: 2, stem: "For which value of x is the function below undefined?", stemEq: "g5_s",
+      opts: ["−2", "0", "2", "3"], ans: 3,
+      why: "A fraction is undefined when its denominator is zero: x − 3 = 0 gives x = 3.",
+      traps: ["A: −2 makes the NUMERATOR zero — that is a root, not a break.", "C: a sign slip on the denominator.", "B: the reflex answer."] },
+    { code: "GAT-Q-ARI.3", lvl: 3, stem: "A price of 240 SAR is increased by 25%, and the new price is then reduced by 20%. What is the final price?",
+      opts: ["228 SAR", "240 SAR", "252 SAR", "300 SAR"], ans: 1,
+      why: "240 × 1.25 = 300, and 300 × 0.80 = 240. The price returns exactly to where it started, because 1.25 × 0.80 = 1.",
+      traps: ["C: taking 20% of the ORIGINAL 240 rather than of the new 300.", "A: combining the percentages as a net 5% and then subtracting 10%.", "D: stopping after the increase."] },
+    { code: "GAT-Q-GEO.2", lvl: 3, stem: "In a 30°-60°-90° triangle the shorter leg measures 5 cm. What is the length of the hypotenuse?",
+      opts: [{ eq: "g17_a" }, { eq: "g17_b" }, { eq: "g17_c" }, { eq: "g17_d" }], ans: 2,
+      why: "The sides are in the ratio 1 : √3 : 2, so the hypotenuse is twice the shorter leg: 10 cm.",
+      traps: ["B: 5√3 is the LONGER LEG, not the hypotenuse.", "A: using the 45-45-90 ratio 1 : 1 : √2.", "D: doubling the longer leg instead of the shorter one."] },
+    { code: "GAT-Q-DAT.1", lvl: 3, stem: "The table shows one shop's sales, in thousands of SAR. What percentage of the four-month total was taken in April?",
+      table: [["Month", "January", "February", "March", "April"], ["Sales (SAR 000s)", "90", "120", "150", "180"]],
+      opts: ["25%", "30%", "33⅓%", "40%"], ans: 2,
+      why: "The total is 90 + 120 + 150 + 180 = 540, and 180 ÷ 540 = 1/3 = 33⅓%.",
+      traps: ["A: assuming each of four months is a quarter of the total.", "D: dividing by 450 — the total with April left out.", "B: an eyeballed estimate."] },
+    { code: "GAT-Q-ARI.2", lvl: 2, stem: "What is the highest common factor of 84 and 126?",
+      opts: ["6", "14", "21", "42"], ans: 3,
+      why: "84 = 2²·3·7 and 126 = 2·3²·7, so the HCF is 2·3·7 = 42.",
+      traps: ["A, B and C are all common factors — but none is the highest. Students stop at the first factor they spot."] },
+    { code: "GAT-Q-LOG.2", lvl: 3, stem: "Worker A can complete a job alone in 6 hours and worker B alone in 12 hours. Working together at the same rates, how long do they take?",
+      opts: ["3 hours", "4 hours", "8 hours", "9 hours"], ans: 1,
+      why: "Rates add: 1/6 + 1/12 = 3/12 = 1/4 of the job per hour, so the job takes 4 hours.",
+      traps: ["D: averaging the two times, (6 + 12)/2.", "A: halving the faster worker's time.", "C: averaging the rates instead of adding them."] },
+    { code: "GAT-Q-ALG.5", lvl: 2, stem: "For f(x) = x² − 4x, which non-zero value of a satisfies f(a) = 0?", stemEq: "g3_s",
+      opts: ["−4", "1", "2", "4"], ans: 3,
+      why: "x² − 4x = x(x − 4), so the roots are 0 and 4.",
+      traps: ["C: 2 is the x-coordinate of the vertex, the halfway point between the roots.", "A: a sign slip when factorising.", "B: substituting without factorising."] },
+    { code: "GAT-Q-ARI.6", lvl: 2, stem: "The mean of five numbers is 12. Four of them are 7, 10, 14 and 16. What is the fifth number?",
+      opts: ["11", "12", "13", "15"], ans: 2,
+      why: "The five must total 5 × 12 = 60. The four given total 47, so the fifth is 13.",
+      traps: ["B: copying the mean back as the missing value.", "A: dividing 47 by 4 and rounding.", "D: a guess above the mean."] },
+    { code: "GAT-Q-GEO.5", lvl: 3, stem: "A cube has a total surface area of 96 cm². What is its volume?",
+      opts: ["16 cm³", "48 cm³", "64 cm³", "512 cm³"], ans: 2,
+      why: "Six faces, so one face is 16 cm², the edge is 4 cm, and the volume is 4³ = 64 cm³.",
+      traps: ["A: giving the area of one face.", "D: using an edge of 8 cm, from dividing by 12 instead of 6.", "B: halving the surface area."] },
+    { code: "GAT-Q-DAT.3", lvl: 2, stem: "Two fair coins are tossed. What is the probability of getting exactly one head?",
+      opts: [{ eq: "g24_a" }, { eq: "g24_b" }, { eq: "g24_c" }, { eq: "g24_d" }], ans: 2,
+      why: "The four equally likely outcomes are HH, HT, TH and TT. Two of them have exactly one head, so the probability is 1/2.",
+      traps: ["A: counting HT but forgetting TH.", "B: treating HH, one head, and TT as three equally likely cases.", "D: answering “at least one head”."] },
+    { code: "GAT-Q-ARI.4", lvl: 1, stem: "Evaluate:", stemEq: "g13_s",
+      opts: ["0.07", "0.7", "7", "0.245"], ans: 1,
+      why: "0.7 × 0.7 = 0.49, so the square root of 0.49 is 0.7.",
+      traps: ["A: moving the decimal point twice instead of once.", "C: ignoring the decimal point altogether.", "D: halving rather than taking a root."] },
+    { code: "GAT-Q-LOG.4", lvl: 2, stem: "An item bought for 400 SAR is sold for 460 SAR. What is the percentage profit?",
+      opts: ["13%", "15%", "60%", "115%"], ans: 1,
+      why: "Profit is 60 SAR on a cost of 400, and 60 ÷ 400 = 0.15, so 15%.",
+      traps: ["A: dividing by the SELLING price instead of the cost price.", "C: quoting the profit in SAR as a percentage.", "D: giving the selling price as a percentage of the cost."] },
+  ],
+};
+
+// =====================================================================
+// SAAT — Week 2
+// =====================================================================
+const SAAT = {
+  mathIndex: MATH,
+  examName: "SAAT (Tahsili) mathematics practice set",
+  weekLine: "Week 2 · Semester 1, 2026–27",
+  headerLine: "SAAT (Tahsili) · Mathematics · Week 2 focus: SAAT-M-11.2 radical expressions, radical equations and extraneous roots",
+  paperTitle: "SAAT Practice Set 2 — Mathematics",
+  paperSub: "24 questions in 28 minutes. Sixteen on this week's focus, eight spiralled from bands already taught.",
+  keyTitle: "SAAT Practice Set 2 — Answer Key and Error Analysis",
+  keySub: "For Mr Malek Thiab. Every distractor below encodes a specific student error — name it aloud when you review.",
+  outPaper: "SAAT_Practice_Set_W2_Paper.docx",
+  outKey: "SAAT_Practice_Set_W2_Key.docx",
+  timing: "28 minutes",
+  targets: { "SAAT-M-10": "4 by design", "SAAT-M-11": "20 by design" },
+  budgetNote: "a focus set, not a mock — the official 20/30/50 split applies to a full paper, not to a weekly set",
+  conditions: "No calculator, no formula sheet — SAAT gives you neither. Work in the margin. Aim for about 70 seconds a question; if one is running long, mark it and come back. Every radical equation on this paper must be checked in the ORIGINAL equation before you commit to an answer.",
+  sourceNote: "Every item was written for this set against the ETEC / Qiyas framework recorded in the GAT and SAAT Classification Map. No leaked or circulated exam questions are used here: they are unverified, usually reconstructed from memory, and frequently from retired forms.",
+  followUp: [
+    ["20 or more", "The radical band is secure. Move this student on to the Grade 11 spiral items and start previewing the Grade 12 band, which is half the real paper."],
+    ["15 to 19", "The method is there but the checking is not. Look specifically at questions 6 and 12 — the extraneous-root items. Getting those wrong is a habit problem, not a knowledge problem."],
+    ["10 to 14", "Simplification is the bottleneck, not the equations. Re-set questions 1, 5, 8, 11 and 14 alone and watch the working, not the answers."],
+    ["Below 10", "Stop and rebuild index laws first. Radical work collapses without them, and this student will not benefit from more radical practice until they are fluent."],
+    ["Whole class", "Any item where more than half the class chose the SAME wrong option is a teaching point, not a marking point. Put it on the board and work the error, not the answer."],
+  ],
+  items: [
+    { code: "SAAT-M-11.2", lvl: 1, stem: "Simplify:", stemEq: "s1_s",
+      opts: [{ eq: "s1_a" }, { eq: "s1_b" }, { eq: "s1_c" }, { eq: "s1_d" }], ans: 0,
+      why: "50 = 25 × 2, and √25 = 5, so √50 = 5√2.",
+      traps: ["B: swapping which factor comes out of the radical.", "C: taking 25 out without rooting it.", "D: using 10 × 5 and rooting the wrong one."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "What is the domain of the function below?", stemEq: "s6_s",
+      opts: [{ eq: "s6_a" }, { eq: "s6_b" }, { eq: "s6_c" }, { eq: "s6_d" }], ans: 0,
+      why: "An even root needs a non-negative radicand: 2x − 6 ≥ 0, so x ≥ 3.",
+      traps: ["B: excluding the endpoint — but the radicand may be zero.", "C: solving 2x ≥ 6 as x ≥ 6.", "D: reversing the inequality."] },
+    { code: "SAAT-M-11.2", lvl: 1, stem: "Solve for x:", stemEq: "s9_s",
+      opts: ["1", "5", "15", "21"], ans: 1,
+      why: "Square both sides: 3x + 1 = 16, so 3x = 15 and x = 5. Check: √16 = 4. ✓",
+      traps: ["A: setting 3x + 1 = 4 without squaring.", "D: cubing instead of squaring, 3x + 1 = 64.", "C: solving 3x = 45."] },
+    { code: "SAAT-M-10.5", lvl: 1, stem: "What is the midpoint of the segment joining the two points below?", stemEq: "s17_s",
+      opts: [{ eq: "s17_a" }, { eq: "s17_b" }, { eq: "s17_c" }, { eq: "s17_d" }], ans: 0,
+      why: "Average each coordinate: ((−3 + 5)/2, (4 + (−2))/2) = (1, 1).",
+      traps: ["B: adding the coordinates without halving.", "D: a sign slip on the y-coordinate.", "C: using the differences rather than the sums."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Simplify:", stemEq: "s2_s",
+      opts: [{ eq: "s2_a" }, { eq: "s2_b" }, { eq: "s2_c" }, { eq: "s2_d" }], ans: 0,
+      why: "54 = 27 × 2 and the cube root of 27 is 3, so the answer is 3 times the cube root of 2.",
+      traps: ["B: swapping the two factors.", "C: treating 54 as a perfect cube.", "D: cubing the 3 instead of extracting it."] },
+    { code: "SAAT-M-11.2", lvl: 3, stem: "Solve for x, giving only the valid solution:", stemEq: "s8_s",
+      opts: ["x = 2", "x = 9", "x = 2 and x = 9", "no real solution"], ans: 1,
+      why: "Squaring gives x² − 10x + 25 = x + 7, so x² − 11x + 18 = 0 and (x − 2)(x − 9) = 0. Checking in the ORIGINAL: x = 9 gives √16 = 4 ✓; x = 2 gives √9 = 3 but the right side is −3 ✗. Only x = 9 survives.",
+      traps: ["C: the classic error — both candidates reported without checking.", "A: keeping the extraneous root and discarding the valid one.", "D: abandoning the question after finding one root fails."] },
+    { code: "SAAT-M-11.3", lvl: 2, stem: "What does the discriminant tell you about the roots of this equation?", stemEq: "s21_s",
+      opts: ["Two distinct real roots", "One repeated real root", "No real roots", "Cannot be determined without factorising"], ans: 2,
+      why: "Δ = b² − 4ac = 16 − 40 = −24. A negative discriminant means no real roots — the two roots are complex conjugates.",
+      traps: ["A: computing Δ as 16 + 40.", "B: reading a negative discriminant as zero.", "D: the discriminant is exactly the tool that determines this."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Simplify:", stemEq: "s3_s",
+      opts: [{ eq: "s3_a" }, { eq: "s3_b" }, { eq: "s3_c" }, { eq: "s3_d" }], ans: 0,
+      why: "√18 = 3√2 and √8 = 2√2. They are like radicals, so they add: 3√2 + 2√2 = 5√2.",
+      traps: ["B: adding the radicands, √(18 + 8).", "D: adding the coefficients as 3 + 3.", "C: adding both parts."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Solve for x:", stemEq: "s11_s",
+      opts: ["3", "9", "18", "81"], ans: 1,
+      why: "Raise both sides to the reciprocal power 2/3: x = 27^(2/3) = (∛27)² = 3² = 9.",
+      traps: ["A: taking only the cube root and stopping.", "D: raising to the power 3/2 instead of 2/3.", "C: multiplying 27 by 2/3."] },
+    { code: "SAAT-M-10.5", lvl: 1, stem: "What is the gradient of the line through the two points below?", stemEq: "s18_s",
+      opts: ["2", { eq: "s18_b" }, { eq: "s18_c" }, "4"], ans: 0,
+      why: "Gradient = (7 − (−1)) / (6 − 2) = 8 / 4 = 2.",
+      traps: ["B: dividing Δx by Δy.", "C: a sign slip on the −1.", "D: giving Δy without dividing."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Write as a single power of x:", stemEq: "s12_s",
+      opts: [{ eq: "s12_a" }, { eq: "s12_b" }, { eq: "s12_c" }, { eq: "s12_d" }], ans: 0,
+      why: "Multiplying powers of the same base adds the exponents: 1/2 + 1/3 = 3/6 + 2/6 = 5/6.",
+      traps: ["B: subtracting the exponents.", "C: multiplying the exponents.", "D: inverting the result."] },
+    { code: "SAAT-M-11.2", lvl: 3, stem: "Which value is an EXTRANEOUS solution of the equation below?", stemEq: "s14_s",
+      opts: ["x = 2", "x = 7", "Both are extraneous", "Neither is extraneous"], ans: 0,
+      why: "Squaring gives x² − 9x + 14 = 0, so x = 2 or x = 7. Check: x = 7 gives √9 = 3 and 7 − 4 = 3 ✓; x = 2 gives √4 = 2 but 2 − 4 = −2 ✗. So x = 2 is extraneous.",
+      traps: ["B: checking only the arithmetic of the quadratic, not the original equation.", "C: assuming squaring always corrupts both roots.", "D: not checking at all — the reason extraneous roots exist as a topic."] },
+    { code: "SAAT-M-11.1", lvl: 1, stem: "Evaluate:", stemEq: "s24_s",
+      opts: ["4", "5", "6", "16"], ans: 1,
+      why: "log₂32 asks: 2 to what power gives 32? 2⁵ = 32, so the answer is 5.",
+      traps: ["A: stopping at 2⁴ = 16.", "C: overshooting to 2⁶ = 64.", "D: halving 32 instead of taking a logarithm."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Rationalise the denominator:", stemEq: "s4_s",
+      opts: [{ eq: "s4_a" }, { eq: "s4_b" }, { eq: "s4_c" }, { eq: "s4_d" }], ans: 0,
+      why: "Multiply top and bottom by √3: (6√3)/3 = 2√3.",
+      traps: ["B: multiplying the numerator but not the denominator.", "D: leaving the radical in the denominator.", "C: using √2."] },
+    { code: "SAAT-M-11.2", lvl: 3, stem: "For which values of x is the expression below undefined?", stemEq: "s16_s",
+      opts: [{ eq: "s16_a" }, { eq: "s16_b" }, { eq: "s16_c" }, { eq: "s16_d" }], ans: 2,
+      why: "The denominator x² − 4 = (x − 2)(x + 2) is zero at x = 2 and x = −2. Both must be excluded.",
+      traps: ["B: finding the positive root and forgetting the negative one.", "A: giving the zero of the numerator.", "D: solving x² = 16."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Simplify, for x > 0:", stemEq: "s13_s",
+      opts: [{ eq: "s13_a" }, { eq: "s13_b" }, { eq: "s13_c" }, { eq: "s13_d" }], ans: 0,
+      why: "√49 = 7 and √(x⁴) = x², so the expression is 7x².",
+      traps: ["B: rooting the variable but not the 49.", "C: leaving the exponent unchanged.", "D: halving the exponent twice."] },
+    { code: "SAAT-M-11.5", lvl: 2, stem: "An arithmetic sequence has the first term and common difference below. What is the tenth term?", stemEq: "s23_s",
+      opts: ["29", "30", "32", "35"], ans: 2,
+      why: "aₙ = a₁ + (n − 1)d, so a₁₀ = 5 + 9(3) = 5 + 27 = 32.",
+      traps: ["D: using 10d instead of 9d — the commonest error in the whole topic.", "A: using 8d.", "B: forgetting the first term."] },
+    { code: "SAAT-M-11.2", lvl: 3, stem: "Solve for x:", stemEq: "s10_s",
+      opts: ["5", "13", "14", "27"], ans: 2,
+      why: "Cube both sides: 2x − 1 = 27, so 2x = 28 and x = 14.",
+      traps: ["B: subtracting instead of adding, (27 − 1)/2.", "A: squaring instead of cubing, (9 + 1)/2.", "D: stopping at the cube."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Evaluate:", stemEq: "s5_s",
+      opts: ["1", "4", "7", "−1"], ans: 0,
+      why: "This is the difference of two squares: 2² − (√3)² = 4 − 3 = 1.",
+      traps: ["C: adding 4 and 3 instead of subtracting.", "D: a sign slip on the squared radical.", "B: ignoring the radical term."] },
+    { code: "SAAT-M-10.6", lvl: 1, stem: "The point below is reflected in the x-axis. What are the coordinates of the image?", stemEq: "s20_s",
+      opts: [{ eq: "s20_a" }, { eq: "s20_b" }, { eq: "s20_c" }, { eq: "s20_d" }], ans: 1,
+      why: "Reflecting in the x-axis changes the sign of the y-coordinate only: (3, −5) becomes (3, 5).",
+      traps: ["A: reflecting in the y-axis instead.", "C: reflecting in both axes.", "D: swapping the coordinates, which is reflection in y = x."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "Simplify, stating the result in its simplest form:", stemEq: "s15_s",
+      opts: [{ eq: "s15_a" }, { eq: "s15_b" }, { eq: "s15_c" }, { eq: "s15_d" }], ans: 0,
+      why: "x² − 9 = (x − 3)(x + 3), so the (x + 3) factors cancel and the result is x − 3, for x ≠ −3.",
+      traps: ["C: cancelling the 9 against the 3 — cancelling terms rather than factors.", "D: cancelling only part of the numerator.", "B: cancelling the wrong bracket."] },
+    { code: "SAAT-M-11.2", lvl: 2, stem: "What is the domain of the function below?", stemEq: "s7_s",
+      opts: [{ eq: "s7_a" }, { eq: "s7_b" }, "All real numbers", { eq: "s7_d" }], ans: 2,
+      why: "The index is 3, which is odd, and an odd root accepts negative radicands. There is no restriction at all.",
+      traps: ["A: applying the even-root rule to an odd root — the single most common radical-domain error.", "B: reversing that same rule.", "D: treating the root like a denominator."] },
+    { code: "SAAT-M-10.3", lvl: 2, stem: "Two triangles are similar. A side of 6 cm in the smaller triangle corresponds to a side of 9 cm in the larger. Another side of the smaller triangle is 8 cm. What is the corresponding side of the larger triangle?",
+      opts: ["5.3 cm", "11 cm", "12 cm", "12.5 cm"], ans: 2,
+      why: "The scale factor is 9/6 = 1.5, so the corresponding side is 8 × 1.5 = 12 cm.",
+      traps: ["A: inverting the scale factor, 8 × 6/9.", "B: adding the difference of 3 rather than scaling.", "D: a rounded guess."] },
+    { code: "SAAT-M-11.3", lvl: 2, stem: "Evaluate:", stemEq: "s22_s",
+      opts: ["1", "−1", { eq: "s22_c" }, { eq: "s22_d" }], ans: 1,
+      why: "Powers of i repeat every 4. Since 26 = 4(6) + 2, i²⁶ = i² = −1.",
+      traps: ["A: reasoning that an even power must be positive.", "C: taking the remainder as 1 instead of 2.", "D: a sign slip on the remainder."] },
+  ],
+};
+
+SAAT.items = SAAT.items.map((it, i) => rot(it, SAAT_ROT[i]));
+
+// sanity: the key must not favour any letter
+for (const set of [GAT, SAAT]) {
+  const c = [0, 0, 0, 0];
+  set.items.forEach((it) => c[it.ans]++);
+  console.log(`${set.examName} — answer spread A/B/C/D = ${c.join("/")} of ${set.items.length}`);
+}
+
+module.exports = { GAT, SAAT };
+
+if (require.main === module) {
+  (async () => {
+    console.log("GAT:");
+    await buildSet(GAT);
+    console.log("SAAT:");
+    await buildSet(SAAT);
+  })();
+}
