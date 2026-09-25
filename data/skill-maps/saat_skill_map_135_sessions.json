@@ -1,0 +1,2000 @@
+{
+ "course": "SAAT (Tahsili) Mathematics — 45-week course, Dar Al Fikr Schools",
+ "built": "2026-09-10",
+ "sessions": [
+  {
+   "session": 1,
+   "unit": 1,
+   "week": 1,
+   "kind": "skill",
+   "title": "Real numbers & their properties",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Classify a number into N, W, Z, Q, I, R and name the smallest set containing it",
+    "Name the property used in a written step: commutative, associative, distributive, identity, inverse",
+    "Additive and multiplicative inverse of a given number, including a fraction",
+    "Closure: decide whether a set is closed under a stated operation"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 2,
+   "unit": 1,
+   "week": 1,
+   "kind": "skill",
+   "title": "Rational & irrational numbers",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Decide whether a given surd, decimal or root is rational or irrational",
+    "Recognise a repeating decimal as rational and a non-terminating non-repeating one as irrational",
+    "Classify a product or sum such as √2 × √8 whose form hides a rational value",
+    "Place an irrational number between two consecutive integers"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 3,
+   "unit": 1,
+   "week": 1,
+   "kind": "skill",
+   "title": "Exponents & radicals",
+   "source": "BOOK ch07",
+   "objectives": [
+    "Apply the laws of indices to simplify a product or quotient of powers",
+    "Convert between radical form and rational-exponent form",
+    "Simplify a radical with an even index using absolute value",
+    "Multiply and divide radicals of the same index; simplify √a·√b and √(a/b)",
+    "Rationalise a denominator, including a two-term denominator by its conjugate"
+   ],
+   "items_in_bank": 5
+  },
+  {
+   "session": 4,
+   "unit": 1,
+   "week": 2,
+   "kind": "skill",
+   "title": "Scientific notation",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Write an ordinary decimal in scientific notation and back",
+    "Multiply and divide numbers in scientific notation and renormalise the result",
+    "Compare two numbers written in scientific notation"
+   ],
+   "items_in_bank": 3
+  },
+  {
+   "session": 5,
+   "unit": 1,
+   "week": 2,
+   "kind": "skill",
+   "title": "Algebraic expressions & operations",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Degree and leading coefficient of a polynomial in one or more variables",
+    "Add, subtract and multiply polynomials; expand a product of binomials",
+    "Simplify an expression with negative and fractional exponents",
+    "Evaluate an expression at given values, including a squared substitution"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 6,
+   "unit": 1,
+   "week": 2,
+   "kind": "skill",
+   "title": "Factoring polynomials",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Common factor, difference of two squares, sum and difference of cubes",
+    "Factor a trinomial with leading coefficient 1 and with a leading coefficient",
+    "Decide whether a polynomial is prime",
+    "Factor by grouping"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 7,
+   "unit": 1,
+   "week": 3,
+   "kind": "skill",
+   "title": "Algebraic fractions",
+   "source": "BOOK ch07",
+   "objectives": [
+    "Simplify a rational expression by factoring numerator and denominator",
+    "Multiply, divide, add and subtract rational expressions",
+    "Simplify a complex fraction",
+    "State the values that make a rational expression undefined",
+    "Find the LCM of two polynomials"
+   ],
+   "items_in_bank": 5
+  },
+  {
+   "session": 8,
+   "unit": 1,
+   "week": 3,
+   "kind": "skill",
+   "title": "Linear equations & inequalities",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Solve a linear equation with fractions or brackets",
+    "Solve a linear inequality and express the solution as an interval",
+    "Reverse the inequality sign when multiplying or dividing by a negative",
+    "Write an interval in set-builder notation and read one off a number line",
+    "Test whether a point satisfies a linear inequality or a system of them"
+   ],
+   "items_in_bank": 5
+  },
+  {
+   "session": 9,
+   "unit": 1,
+   "week": 3,
+   "kind": "skill",
+   "title": "Absolute-value equations & inequalities",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Solve |ax + b| = c, including the no-solution case c < 0",
+    "Solve |ax + b| < c as a double inequality and |ax + b| > c as two branches",
+    "Domain and range of f(x) = |x − a| + b",
+    "Recognise the parent function of an absolute-value graph and its transformations"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 10,
+   "unit": 2,
+   "week": 4,
+   "kind": "skill",
+   "title": "Systems of linear equations",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Solve a 2x2 system by substitution and by elimination",
+    "Solve a 2x2 system with the inverse matrix and with determinants",
+    "Order of a matrix, the element a_ij, and when a product is defined",
+    "Matrix addition, scalar multiplication and multiplication of two matrices",
+    "Determinant of a 2x2 and of a 3x3 matrix; the inverse of a 2x2",
+    "The value of a parameter that makes a matrix singular"
+   ],
+   "items_in_bank": 6
+  },
+  {
+   "session": 11,
+   "unit": 2,
+   "week": 4,
+   "kind": "skill",
+   "title": "Systems in context & number of solutions",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Decide whether a system has one solution, none, or infinitely many, from slopes or from the equations",
+    "Build a system from a worded situation in SAR and solve it",
+    "Read the vertices of a feasible region and identify which point satisfies every constraint",
+    "Area of a triangle from the coordinates of its vertices using a determinant"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 12,
+   "unit": 2,
+   "week": 4,
+   "kind": "skill",
+   "title": "Quadratic equations by factoring",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Solve a quadratic by factoring and by the zero-product property",
+    "Form a quadratic from its two roots",
+    "Solve an equation that becomes quadratic after clearing a fraction",
+    "Interpret a factored form as the zeros of the related function"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 13,
+   "unit": 2,
+   "week": 5,
+   "kind": "skill",
+   "title": "Completing the square & the quadratic formula",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Complete the square to write ax² + bx + c in vertex form",
+    "Solve a quadratic by the formula, including a complex pair",
+    "Read the vertex, axis of symmetry and maximum or minimum from the completed square",
+    "Recover b or c from a given vertex"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 14,
+   "unit": 2,
+   "week": 5,
+   "kind": "skill",
+   "title": "The discriminant & nature of roots",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Compute b² − 4ac and name the nature of the roots in each of the three cases",
+    "Decide from the discriminant whether the roots are rational or irrational",
+    "Find the parameter that gives equal roots, or complex roots",
+    "Match a graph to the sign of the discriminant"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 15,
+   "unit": 2,
+   "week": 5,
+   "kind": "skill",
+   "title": "Quadratic functions & their graphs",
+   "source": "BOOK ch06, ch11",
+   "objectives": [
+    "Direction of opening, vertex, axis of symmetry and intercepts from any form",
+    "Maximum or minimum value and where it occurs",
+    "Number of real zeros from a sketch",
+    "Match a parabola to its equation"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 16,
+   "unit": 2,
+   "week": 6,
+   "kind": "skill",
+   "title": "Polynomial equations",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Synthetic division and the quotient it produces",
+    "Remainder theorem: the remainder on dividing by (x − r) is f(r)",
+    "Factor theorem: decide whether (x − r) is a factor",
+    "Find a parameter k from a stated remainder",
+    "Number of complex roots of a degree-n polynomial; conjugate root pairs",
+    "Read the real zeros of a polynomial from its graph or from a table of values"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 17,
+   "unit": 2,
+   "week": 6,
+   "kind": "skill",
+   "title": "Rational equations",
+   "source": "BOOK ch07",
+   "objectives": [
+    "Solve a rational equation by clearing denominators and reject values outside the domain",
+    "Solve a proportion, including one with a binomial denominator",
+    "Direct, inverse, joint and combined variation: find the constant and a missing value",
+    "Identify the type of variation from a table or from an equation"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 18,
+   "unit": 2,
+   "week": 6,
+   "kind": "skill",
+   "title": "Radical equations",
+   "source": "BOOK ch07",
+   "objectives": [
+    "Solve an equation with one radical by raising both sides to the index",
+    "Solve an equation with a radical on each side",
+    "Identify and reject an extraneous root",
+    "Solve a radical inequality, using the domain of the radicand"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 19,
+   "unit": 3,
+   "week": 7,
+   "kind": "skill",
+   "title": "Relations & functions",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Decide whether a relation given as a set, a mapping diagram, a table or an equation is a function",
+    "Apply the vertical line test to a graph",
+    "Distinguish a one-to-one function from a many-to-one function"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 20,
+   "unit": 3,
+   "week": 7,
+   "kind": "skill",
+   "title": "Domain & range",
+   "source": "BOOK ch05, ch07, ch11",
+   "objectives": [
+    "Domain of a rational function from the zeros of its denominator",
+    "Domain and range of a radical function",
+    "Domain and range read from a graph, in interval notation",
+    "Range of a linear function on a restricted domain",
+    "Domain and range of the greatest-integer and absolute-value functions"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 21,
+   "unit": 3,
+   "week": 7,
+   "kind": "skill",
+   "title": "Function notation",
+   "source": "BOOK ch05",
+   "objectives": [
+    "Evaluate f(a), f(−a), f(a + 1) and f(2a) for a given rule",
+    "Evaluate a piecewise function at a value in each branch",
+    "Solve f(x) = k for x",
+    "Find a parameter from a stated function value"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 22,
+   "unit": 3,
+   "week": 8,
+   "kind": "skill",
+   "title": "Graphs of functions",
+   "source": "BOOK ch11",
+   "objectives": [
+    "Read intercepts, and solve f(x) = 0, from a graph",
+    "Intervals where a function is increasing, decreasing or constant",
+    "Absolute and local maxima and minima from a graph",
+    "Decide even, odd or neither, algebraically and from symmetry",
+    "Recover the rule of a piecewise function from its graph"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 23,
+   "unit": 3,
+   "week": 8,
+   "kind": "skill",
+   "title": "Transformations of functions",
+   "source": "BOOK ch11",
+   "objectives": [
+    "Name the parent function of a given rule or graph",
+    "Horizontal and vertical translations: g(x) = f(x − h) + k",
+    "Reflection in the x-axis, −f(x), and in the y-axis, f(−x)",
+    "Vertical stretch and compression",
+    "Combine two or more transformations in the stated order"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 24,
+   "unit": 3,
+   "week": 8,
+   "kind": "skill",
+   "title": "Inverse functions",
+   "source": "BOOK ch07",
+   "objectives": [
+    "Find the inverse of a linear, quadratic-with-restriction or radical function",
+    "Verify a pair of inverses by composition",
+    "Domain of f inverse equals the range of f",
+    "Recognise the graph of an inverse as a reflection in y = x"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 25,
+   "unit": 3,
+   "week": 9,
+   "kind": "skill",
+   "title": "Composite functions",
+   "source": "BOOK ch07",
+   "objectives": [
+    "Evaluate f(g(a)) and g(f(a)), including from a table or a set of ordered pairs",
+    "Form the rule of f∘g and state its domain",
+    "Solve f(g(x)) = g(f(x))",
+    "Find a parameter from a stated value of a composition"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 26,
+   "unit": 3,
+   "week": 9,
+   "kind": "skill",
+   "title": "Modeling with functions",
+   "source": "BOOK ch06, SHEET",
+   "objectives": [
+    "Build a linear or quadratic model from a worded situation in SAR and answer with it",
+    "Express an area or a volume as a polynomial in one variable",
+    "Units of a derived quantity by cancelling units of the quantities it is built from",
+    "Choose which of four expressions has the units of a stated quantity"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 27,
+   "unit": 3,
+   "week": 9,
+   "kind": "practice",
+   "title": "Tahsili-style function problems",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 3; no new skills"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 28,
+   "unit": 4,
+   "week": 10,
+   "kind": "skill",
+   "title": "Points, lines, planes & angles",
+   "source": "BOOK ch01",
+   "objectives": [
+    "Name angle pairs at a transversal: corresponding, alternate interior, alternate exterior, co-interior",
+    "Find an unknown angle from a pair of parallel lines cut by a transversal",
+    "Complementary, supplementary and vertically opposite angles",
+    "Segment addition: AB + BC = AC and the betweenness it implies"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 29,
+   "unit": 4,
+   "week": 10,
+   "kind": "skill",
+   "title": "Properties of triangles",
+   "source": "BOOK ch02",
+   "objectives": [
+    "Angle sum of a triangle and the exterior angle theorem",
+    "Classify a triangle by its angles and by its sides",
+    "Base angles of an isosceles triangle; every angle of an equilateral triangle is 60°",
+    "Perpendicular bisector and angle bisector theorems",
+    "Median, altitude, angle bisector and midsegment — tell them apart in a figure",
+    "Centroid divides each median in the ratio 2 : 1",
+    "Triangle inequality, and the range of the third side",
+    "Longest side faces the largest angle"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 30,
+   "unit": 4,
+   "week": 10,
+   "kind": "skill",
+   "title": "Congruence & similarity",
+   "source": "BOOK ch02, ch03",
+   "objectives": [
+    "Name the congruence postulate a marked figure shows: SSS, SAS, ASA, AAS",
+    "Find a length or an angle from a stated congruence",
+    "Similar triangles by AA, SSS and SAS; find the scale factor",
+    "Ratio of perimeters equals the scale factor; ratio of areas is its square",
+    "Triangle proportionality theorem with a line parallel to one side",
+    "Angle-bisector ratio theorem",
+    "Triangle midsegment: parallel to a side and half its length",
+    "Shadow and mirror problems solved by similar triangles"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 31,
+   "unit": 4,
+   "week": 11,
+   "kind": "skill",
+   "title": "Pythagorean theorem",
+   "source": "BOOK ch01",
+   "objectives": [
+    "Find a missing side of a right triangle",
+    "Recognise the 3-4-5, 5-12-13 and 8-15-17 triples and their multiples",
+    "Decide from three sides whether a triangle is right, acute or obtuse",
+    "Distance from a point to a line as the length of the perpendicular segment",
+    "Apply the theorem inside a rectangle, a rhombus or a cone"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 32,
+   "unit": 4,
+   "week": 11,
+   "kind": "skill",
+   "title": "Quadrilaterals & polygons",
+   "source": "BOOK ch02, ch03",
+   "objectives": [
+    "Properties of a parallelogram, and the conditions that prove one",
+    "Rectangle, rhombus and square: which diagonals are equal, which are perpendicular, which bisect the angles",
+    "Side of a rhombus from its diagonals; area from the diagonals",
+    "Trapezoid midsegment as the average of the two bases, forwards and backwards",
+    "Isosceles trapezoid: equal diagonals and equal base angles",
+    "Interior angle sum 180(n − 2); one interior angle of a regular polygon",
+    "Exterior angles sum to 360°; find n from one exterior angle"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 33,
+   "unit": 4,
+   "week": 11,
+   "kind": "skill",
+   "title": "Circles",
+   "source": "BOOK ch04",
+   "objectives": [
+    "Circumference and area, forwards and backwards from either one",
+    "Central angle, minor and major arc, and arc addition",
+    "A diameter perpendicular to a chord bisects the chord and its arc",
+    "Inscribed angle is half its intercepted arc; an angle in a semicircle is 90°",
+    "Two inscribed angles on the same arc are equal",
+    "Opposite angles of a cyclic quadrilateral are supplementary",
+    "A tangent is perpendicular to the radius at the point of contact",
+    "Two tangents from an external point are equal",
+    "Tangent-chord angle is half the intercepted arc",
+    "Intersecting chords: AB × BC = DB × BE",
+    "Tangent-secant: the tangent squared equals the whole secant times its external part"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 34,
+   "unit": 4,
+   "week": 12,
+   "kind": "skill",
+   "title": "Perimeter & area",
+   "source": "BOOK ch02, ch03, SHEET",
+   "objectives": [
+    "Area and perimeter of triangle, parallelogram, rhombus, trapezoid and circle",
+    "Area of a sector and length of an arc, in degrees and in radians",
+    "Shaded-region problems: a composite area found by subtraction",
+    "Recover a missing length from a given area or perimeter",
+    "Effect on area of scaling every length by a factor k"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 35,
+   "unit": 4,
+   "week": 12,
+   "kind": "skill",
+   "title": "Surface area & volume",
+   "source": "BOOK ch01, SHEET",
+   "objectives": [
+    "Volume and surface area of a prism, a cylinder, a pyramid, a cone and a sphere",
+    "Slant height of a cone from its radius and height",
+    "Volume expressed as a polynomial and the base area recovered from it",
+    "Effect on volume of scaling every length by a factor k",
+    "Capacity problems in litres and cubic centimetres"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 36,
+   "unit": 4,
+   "week": 12,
+   "kind": "skill",
+   "title": "Three-dimensional geometry",
+   "source": "BOOK ch01, ch14",
+   "objectives": [
+    "Distance between two points in space",
+    "Midpoint of a segment in space",
+    "Classify a triangle in space by comparing the squares of its side lengths",
+    "Diagonal of a rectangular box",
+    "Decide whether four points are coplanar or whether three are collinear"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 37,
+   "unit": 5,
+   "week": 13,
+   "kind": "skill",
+   "title": "Coordinate plane, slope & equations of lines",
+   "source": "BOOK ch01",
+   "objectives": [
+    "Slope from two points, and the parameter that makes a slope take a stated value",
+    "Slope-intercept, point-slope and standard form; convert between them",
+    "Equation of a horizontal line and of a vertical line, and their slopes",
+    "Read the slope and both intercepts from an equation or a graph",
+    "Decide whether a point lies on a given line"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 38,
+   "unit": 5,
+   "week": 13,
+   "kind": "skill",
+   "title": "Parallel & perpendicular lines",
+   "source": "BOOK ch01",
+   "objectives": [
+    "Parallel lines have equal slopes; perpendicular slopes multiply to −1",
+    "Equation of the line through a point parallel to a given line",
+    "Equation of the line through a point perpendicular to a given line",
+    "Decide from two equations whether the lines are parallel, perpendicular or the same line",
+    "Distance between two parallel horizontal or vertical lines"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 39,
+   "unit": 5,
+   "week": 13,
+   "kind": "skill",
+   "title": "Distance & midpoint formulas",
+   "source": "BOOK ch01, ch03",
+   "objectives": [
+    "Distance between two points in the plane",
+    "Midpoint of a segment, and the missing endpoint from a midpoint",
+    "Use distance to classify a triangle or a quadrilateral from its vertices",
+    "Coordinate proof: place a figure on the axes and read off the coordinates of a vertex"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 40,
+   "unit": 5,
+   "week": 14,
+   "kind": "skill",
+   "title": "Transformations in the plane",
+   "source": "BOOK ch03",
+   "objectives": [
+    "Reflection in the x-axis, the y-axis, the origin and the line y = x",
+    "Translation (x, y) → (x + a, y + b), and the translation that maps one point to another",
+    "Rotation about the origin through 90°, 180° and 270° anticlockwise",
+    "Rotational symmetry: order and angle for a regular polygon",
+    "Dilation with factor k, including 0 < k < 1 and a negative k",
+    "Decide which transformations preserve size and which do not"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 41,
+   "unit": 5,
+   "week": 14,
+   "kind": "skill",
+   "title": "Data representation & measures of centre",
+   "source": "BOOK ch09",
+   "objectives": [
+    "Mean, median and mode of a list, and of a frequency table",
+    "Choose the best measure of centre when the data carry an outlier",
+    "Recover a missing value from a stated mean",
+    "Read a bar chart, a histogram or a probability distribution graph and answer with it",
+    "Name the study type: survey, observational study or experiment"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 42,
+   "unit": 5,
+   "week": 14,
+   "kind": "skill",
+   "title": "Measures of dispersion & standard deviation",
+   "source": "BOOK ch09",
+   "objectives": [
+    "Range, variance and standard deviation of a small data set",
+    "Interpret a larger standard deviation as a wider spread",
+    "Compare two groups from their means and standard deviations",
+    "Empirical rule: the 68, 95 and 99.7 percentages within one, two and three standard deviations",
+    "Find a count or a percentage above, below or between two values of a normal variable",
+    "Recover the mean or the standard deviation from a stated percentage",
+    "Name a distribution as symmetric, positively skewed or negatively skewed",
+    "Margin of error from a sample size"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 43,
+   "unit": 5,
+   "week": 15,
+   "kind": "skill",
+   "title": "Probability, sample spaces & counting principles",
+   "source": "BOOK ch09",
+   "objectives": [
+    "Size of a sample space by the fundamental counting principle",
+    "Probability of an event from equally likely outcomes",
+    "Probability of the complement",
+    "Mutually exclusive events: P(A or B) = P(A) + P(B); the correction term when they are not",
+    "Geometric probability from a length ratio and from an area ratio",
+    "Independent events: P(A and B) = P(A)P(B), with replacement and without"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 44,
+   "unit": 5,
+   "week": 15,
+   "kind": "skill",
+   "title": "Permutations, combinations & conditional probability",
+   "source": "BOOK ch09",
+   "objectives": [
+    "Factorial, and an equation in n involving factorials",
+    "Permutations nPr, and permutations with repeated letters",
+    "Circular permutations, with and without a fixed reference point",
+    "Combinations nCr, and when order does not matter",
+    "Probability built from a combination count, such as drawing r of one colour",
+    "Conditional probability from a shrunken sample space and from a two-way table",
+    "Binomial probability, and the mean, variance and standard deviation of a binomial variable"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 45,
+   "unit": 5,
+   "week": 15,
+   "kind": "assess",
+   "title": "Grade 11 Tahsili Benchmark",
+   "source": "—",
+   "objectives": [
+    "Timed Tahsili-format paper over Units 1-5; draws from the bank"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 46,
+   "unit": 6,
+   "week": 16,
+   "kind": "assess",
+   "title": "Retrieval diagnostic: Phase 1 foundations",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 1-5"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 47,
+   "unit": 6,
+   "week": 16,
+   "kind": "skill",
+   "title": "Exponential functions & their graphs",
+   "source": "BOOK ch12",
+   "objectives": [
+    "Domain, range and the y-intercept of f(x) = b^x",
+    "Decide growth or decay from the base",
+    "Horizontal asymptote, and the effect of a vertical shift on it",
+    "Match an exponential graph to its rule"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 48,
+   "unit": 6,
+   "week": 16,
+   "kind": "skill",
+   "title": "Exponential equations",
+   "source": "BOOK ch12",
+   "objectives": [
+    "Solve by writing both sides to the same base",
+    "Solve an equation whose bases are powers of one another, such as 4 and 2 or 8 and 16",
+    "Solve an exponential inequality, reversing the sign when the base is between 0 and 1",
+    "Find the parameter that makes an exponential expression take a stated value"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 49,
+   "unit": 6,
+   "week": 17,
+   "kind": "skill",
+   "title": "Logarithmic functions & their graphs",
+   "source": "BOOK ch12",
+   "objectives": [
+    "Domain, range and the x-intercept of f(x) = log_b x",
+    "Domain of a shifted logarithm from the inequality x − h > 0",
+    "Vertical asymptote of a logarithmic function",
+    "The logarithmic function as the inverse of the exponential, and the graph that shows it"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 50,
+   "unit": 6,
+   "week": 17,
+   "kind": "skill",
+   "title": "Laws of logarithms",
+   "source": "BOOK ch12",
+   "objectives": [
+    "Convert between exponential and logarithmic form",
+    "Evaluate a logarithm as the power the base must be raised to, including fractional and negative results",
+    "Product, quotient and power laws; write several logarithms as one",
+    "Expand a single logarithm into a sum and difference",
+    "Change of base, and a logarithm evaluated from two given values"
+   ],
+   "items_in_bank": 6
+  },
+  {
+   "session": 51,
+   "unit": 6,
+   "week": 17,
+   "kind": "skill",
+   "title": "Logarithmic equations",
+   "source": "BOOK ch12",
+   "objectives": [
+    "Solve log_b A = log_b B by equating the arguments, then reject values outside the domain",
+    "Solve an equation with a logarithm on one side only",
+    "Solve a nested logarithm",
+    "Solve a logarithmic inequality using the domain of both sides"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 52,
+   "unit": 6,
+   "week": 18,
+   "kind": "skill",
+   "title": "Exponential–logarithmic systems",
+   "source": "BOOK ch12",
+   "objectives": [
+    "Solve a system with one exponential and one logarithmic equation",
+    "Composition of a logarithmic and an exponential function",
+    "Find the inverse of a logarithmic or an exponential function"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 53,
+   "unit": 6,
+   "week": 18,
+   "kind": "skill",
+   "title": "Applications: growth, decay & interest",
+   "source": "BOOK ch12, SHEET",
+   "objectives": [
+    "Compound interest, and the number of periods needed to reach a target in SAR",
+    "Exponential growth or decay from a stated rate, and half-life",
+    "Average rate of change of a logarithmic function over an interval"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 54,
+   "unit": 6,
+   "week": 18,
+   "kind": "practice",
+   "title": "Tahsili-style exponential & logarithmic problems",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 6"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 55,
+   "unit": 7,
+   "week": 19,
+   "kind": "skill",
+   "title": "Mathematical patterns & relationships",
+   "source": "BOOK ch08",
+   "objectives": [
+    "Continue a numerical or figural pattern and state its rule",
+    "Decide whether a sequence is arithmetic, geometric or neither",
+    "Find the next term of a sequence given as a graph or a table"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 56,
+   "unit": 7,
+   "week": 19,
+   "kind": "skill",
+   "title": "Arithmetic sequences & series",
+   "source": "BOOK ch08",
+   "objectives": [
+    "Common difference, and the nth term a_n = a_1 + (n − 1)d",
+    "Find a_1 or d from two given terms",
+    "Insert arithmetic means between two numbers",
+    "Sum of n terms, from the last term and from the common difference",
+    "Find n from a given sum, and solve a worded growth situation"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 57,
+   "unit": 7,
+   "week": 19,
+   "kind": "skill",
+   "title": "Geometric sequences & series",
+   "source": "BOOK ch08",
+   "objectives": [
+    "Common ratio, and the nth term a_n = a_1 r^(n−1)",
+    "Find r or a_1 from two given terms",
+    "Insert geometric means between two numbers",
+    "Sum of n terms of a geometric series",
+    "Worded halving and doubling situations"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 58,
+   "unit": 7,
+   "week": 20,
+   "kind": "skill",
+   "title": "Infinite geometric series",
+   "source": "BOOK ch08",
+   "objectives": [
+    "Decide convergence from |r| < 1",
+    "Sum to infinity S = a_1 ÷ (1 − r)",
+    "Find a_1 or r from a stated infinite sum",
+    "Find the values of x for which a series in x converges"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 59,
+   "unit": 7,
+   "week": 20,
+   "kind": "skill",
+   "title": "Sigma notation & applications",
+   "source": "BOOK ch08",
+   "objectives": [
+    "Number of terms of a sum written in sigma notation, and its first and last terms",
+    "Evaluate an arithmetic or a geometric sum written in sigma notation",
+    "Rewrite a listed series in sigma notation",
+    "Binomial theorem: number of terms, the general term, the term in a stated power, and the constant term"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 60,
+   "unit": 7,
+   "week": 20,
+   "kind": "skill",
+   "title": "Sequence-based reasoning problems",
+   "source": "BOOK ch08",
+   "objectives": [
+    "Angles of a polygon that form an arithmetic sequence",
+    "A worded situation where a fixed increase competes with a fixed multiplier",
+    "Compare an arithmetic and a geometric model over the same number of steps"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 61,
+   "unit": 7,
+   "week": 21,
+   "kind": "skill",
+   "title": "Complex numbers & operations",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Powers of i by the remainder on division by 4",
+    "Simplify the square root of a negative number",
+    "Add, subtract and multiply complex numbers; expand a square",
+    "Divide by multiplying by the conjugate of the denominator",
+    "Equality of two complex numbers: match real and imaginary parts"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 62,
+   "unit": 7,
+   "week": 21,
+   "kind": "skill",
+   "title": "Complex roots & the quadratic connection",
+   "source": "BOOK ch06",
+   "objectives": [
+    "Solve a quadratic with a negative discriminant",
+    "Conjugate root pairs, and the least degree of a polynomial with given complex zeros",
+    "Count the imaginary roots of a polynomial equation such as x⁴ − k = 0",
+    "Number of complex roots of a degree-n equation"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 63,
+   "unit": 7,
+   "week": 21,
+   "kind": "practice",
+   "title": "Tahsili-style sequences & complex numbers",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 7"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 64,
+   "unit": 8,
+   "week": 22,
+   "kind": "skill",
+   "title": "Right-triangle trigonometry",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Find a side or an angle of a right triangle from a given ratio",
+    "Angle of elevation and angle of depression",
+    "Two-triangle height and shadow problems",
+    "Area of a right triangle used to recover a missing side"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 65,
+   "unit": 8,
+   "week": 22,
+   "kind": "skill",
+   "title": "Sine, cosine & tangent",
+   "source": "BOOK ch10",
+   "objectives": [
+    "The three ratios and their reciprocals cosecant, secant and cotangent",
+    "Given one ratio, find the other five",
+    "Simplify a product such as sin θ × cot θ",
+    "Values that make a reciprocal ratio undefined"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 66,
+   "unit": 8,
+   "week": 22,
+   "kind": "skill",
+   "title": "Special right triangles",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Exact ratios at 30°, 45° and 60° and the two special triangles they come from",
+    "Find a side using the 30-60-90 relationship without a calculator",
+    "Exact value of an expression built from special angles"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 67,
+   "unit": 8,
+   "week": 23,
+   "kind": "skill",
+   "title": "Degree & radian measure",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Convert degrees to radians and radians to degrees",
+    "Coterminal angles by adding or subtracting a full turn",
+    "Arc length s = rθ in radians and the degree version",
+    "Area of a sector in both measures",
+    "Angle turned in a stated time by a rotating object"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 68,
+   "unit": 8,
+   "week": 23,
+   "kind": "skill",
+   "title": "Unit-circle concepts",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Coordinates on the unit circle as (cos θ, sin θ)",
+    "Signs of the six ratios in each quadrant",
+    "Quadrant of an angle from the signs of two ratios",
+    "Values of the ratios at the quadrantal angles"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 69,
+   "unit": 8,
+   "week": 23,
+   "kind": "skill",
+   "title": "Trigonometric ratios of any angle",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Reference angle in each quadrant, and the sign attached to it",
+    "Exact value of a ratio at an angle beyond 90°, positive or negative",
+    "Ratios from a point (x, y) on the terminal side, with r = √(x² + y²)",
+    "Given one ratio and a quadrant, find another"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 70,
+   "unit": 8,
+   "week": 24,
+   "kind": "skill",
+   "title": "Graphs of trigonometric functions",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Shape, domain and range of the sine, cosine and tangent graphs",
+    "Match a graph to its rule",
+    "Read the maximum, minimum and zeros from a trigonometric graph"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 71,
+   "unit": 8,
+   "week": 24,
+   "kind": "skill",
+   "title": "Amplitude, period & phase shift",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Amplitude |a| and period 360°/|b| or 2π/|b| for sine and cosine",
+    "Period 180°/|b| for the tangent, which has no amplitude",
+    "Find b from a stated period",
+    "Vertical and horizontal shift of a trigonometric graph"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 72,
+   "unit": 8,
+   "week": 24,
+   "kind": "practice",
+   "title": "Tahsili-style trigonometric graphs",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 8"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 73,
+   "unit": 9,
+   "week": 25,
+   "kind": "skill",
+   "title": "Fundamental trigonometric identities",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Quotient identities and reciprocal identities",
+    "The three Pythagorean identities and the two derived by dividing",
+    "Simplify an expression to a single ratio",
+    "Find a second ratio from a first using an identity and a quadrant",
+    "Cofunction identities and the even-odd identities"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 74,
+   "unit": 9,
+   "week": 25,
+   "kind": "skill",
+   "title": "Sum, difference & double-angle identities",
+   "source": "BOOK ch10",
+   "objectives": [
+    "sin(A ± B), cos(A ± B) and tan(A ± B), with attention to the reversed sign in the cosine",
+    "Exact value of a ratio at 15°, 75° or 105° by splitting the angle",
+    "Recognise a written expression as an expanded sum or difference identity",
+    "The three forms of cos 2θ, and sin 2θ and tan 2θ",
+    "Evaluate a double angle from a given ratio and quadrant"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 75,
+   "unit": 9,
+   "week": 25,
+   "kind": "skill",
+   "title": "Proving identities",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Show two expressions are equal by working one side into the other",
+    "Choose which identity removes the mixed terms",
+    "Recognise an expression that is NOT an identity by a counterexample"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 76,
+   "unit": 9,
+   "week": 26,
+   "kind": "skill",
+   "title": "Basic trigonometric equations",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Solve sin θ = k, cos θ = k, tan θ = k on 0° to 360°, giving every solution",
+    "Solve an equation that factors into two trigonometric factors",
+    "Solve a quadratic in sin θ or cos θ",
+    "Inverse trigonometric functions and their principal values"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 77,
+   "unit": 9,
+   "week": 26,
+   "kind": "skill",
+   "title": "Laws of Sines & Cosines",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Law of sines to find a side or an angle",
+    "Law of cosines for three sides, and for two sides and the included angle",
+    "Find the largest angle of a triangle, and read an obtuse angle from a negative cosine",
+    "Choose which law the given information calls for"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 78,
+   "unit": 9,
+   "week": 26,
+   "kind": "skill",
+   "title": "Applications of trigonometry",
+   "source": "BOOK ch10",
+   "objectives": [
+    "Area of a triangle from two sides and the included angle",
+    "Recover an angle or a side from a stated area",
+    "Bearings, heights and distances in a worded setting",
+    "A quadrilateral split into two triangles"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 79,
+   "unit": 9,
+   "week": 27,
+   "kind": "skill",
+   "title": "Vectors & their basic applications",
+   "source": "BOOK ch14",
+   "objectives": [
+    "Equal, parallel and opposite vectors",
+    "Resultant by the triangle and the parallelogram rule; magnitude of a perpendicular resultant",
+    "Resolve a vector into horizontal and vertical components, N cos θ and N sin θ",
+    "Component form of AB from two points, and the magnitude of a vector",
+    "Add, subtract and scale vectors; find a linear combination such as 2A − B",
+    "Unit vector in the direction of a vector, and the i, j form",
+    "Direction angle of a vector",
+    "Dot product, the angle between two vectors, and the perpendicularity condition",
+    "Vectors in space: components, magnitude, dot product",
+    "Cross product, the area of a parallelogram, and the scalar triple product as a volume"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 80,
+   "unit": 9,
+   "week": 27,
+   "kind": "skill",
+   "title": "Polar & parametric concepts",
+   "source": "BOOK ch15",
+   "objectives": [
+    "Plot a polar point and give three other names for the same point",
+    "Convert polar to Cartesian and Cartesian to polar, keeping the quadrant",
+    "A negative r sends the point to the opposite side of the pole",
+    "Convert a simple equation between polar and Cartesian form",
+    "Distance between two points in polar form",
+    "Modulus and argument of a complex number, and its polar form",
+    "De Moivre's theorem for a power, and products and quotients in polar form"
+   ],
+   "items_in_bank": 4
+  },
+  {
+   "session": 81,
+   "unit": 9,
+   "week": 27,
+   "kind": "practice",
+   "title": "Tahsili-style trigonometry problems",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 9"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 82,
+   "unit": 10,
+   "week": 28,
+   "kind": "skill",
+   "title": "Circles in the coordinate plane",
+   "source": "BOOK ch04",
+   "objectives": [
+    "Equation of a circle from its centre and radius, and the reverse",
+    "Complete the square to find the centre and radius from a general equation",
+    "Decide whether a given point lies on a circle",
+    "Condition for a circle to touch an axis",
+    "Recognise which of four equations is a circle"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 83,
+   "unit": 10,
+   "week": 28,
+   "kind": "skill",
+   "title": "Parabolas",
+   "source": "BOOK ch13",
+   "objectives": [
+    "Vertex, focus, directrix and axis of symmetry from the standard form",
+    "Direction of opening from which variable is squared and the sign of 4c",
+    "Length of the focal chord, |4c|",
+    "Write the equation from a vertex and a directrix, or from a focus and a directrix",
+    "Distance from the focus to the directrix",
+    "Complete the square to reach standard form"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 84,
+   "unit": 10,
+   "week": 28,
+   "kind": "skill",
+   "title": "Ellipses",
+   "source": "BOOK ch13",
+   "objectives": [
+    "Centre, vertices, co-vertices and foci for a horizontal and a vertical major axis",
+    "Lengths of the major and minor axes from the equation",
+    "The relation c² = a² − b²",
+    "Eccentricity e = c/a, and what e = 0 means",
+    "Match an ellipse to its equation"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 85,
+   "unit": 10,
+   "week": 29,
+   "kind": "skill",
+   "title": "Hyperbolas",
+   "source": "BOOK ch13",
+   "objectives": [
+    "Centre, vertices and foci for a horizontal and a vertical transverse axis",
+    "The relation c² = a² + b²",
+    "Equations of the asymptotes",
+    "Eccentricity, which is greater than 1",
+    "Write the equation from a centre, a focus and an axis length"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 86,
+   "unit": 10,
+   "week": 29,
+   "kind": "skill",
+   "title": "Identifying conics from their equations",
+   "source": "BOOK ch13",
+   "objectives": [
+    "Classify by the discriminant B² − 4AC",
+    "Classify from the coefficients of x² and y²: equal, unequal same sign, opposite signs, one missing",
+    "Recognise the case where an ellipse degenerates to a circle"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 87,
+   "unit": 10,
+   "week": 29,
+   "kind": "skill",
+   "title": "Conics in context",
+   "source": "BOOK ch13",
+   "objectives": [
+    "A parabolic arch or dish: find the focus or a height from the equation",
+    "An elliptical room or orbit: find a distance from the centre or a focus",
+    "Build the equation from a described physical setting"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 88,
+   "unit": 10,
+   "week": 30,
+   "kind": "skill",
+   "title": "Mixed analytic geometry problems",
+   "source": "BOOK ch01, ch03, ch13",
+   "objectives": [
+    "Combine slope, distance and midpoint in one multi-step problem",
+    "Image of a conic or a point under a reflection followed by a rotation",
+    "Find a vertex of a figure from the conditions its sides satisfy"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 89,
+   "unit": 10,
+   "week": 30,
+   "kind": "skill",
+   "title": "Geometric relationships & reasoning",
+   "source": "BOOK ch02, ch03",
+   "objectives": [
+    "Decide which single piece of extra information proves a stated conclusion",
+    "Judge whether a general statement about a figure is always, sometimes or never true",
+    "Find the counterexample that refutes a stated claim"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 90,
+   "unit": 10,
+   "week": 30,
+   "kind": "practice",
+   "title": "Tahsili-style analytic geometry",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 10"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 91,
+   "unit": 11,
+   "week": 31,
+   "kind": "skill",
+   "title": "Limits & limit laws",
+   "source": "BOOK ch16",
+   "objectives": [
+    "Estimate a limit from a graph, including one-sided limits",
+    "A limit exists only when the two one-sided limits agree",
+    "Evaluate a limit by direct substitution",
+    "The 0/0 case: factor and cancel, or multiply by the conjugate",
+    "The k/0 case, where the limit does not exist",
+    "Find a parameter from a stated limit"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 92,
+   "unit": 11,
+   "week": 31,
+   "kind": "skill",
+   "title": "Continuity",
+   "source": "BOOK ch16",
+   "objectives": [
+    "The three conditions for continuity at a point",
+    "Name the type of discontinuity: removable, jump or infinite",
+    "Find the constant that makes a piecewise function continuous",
+    "Locate the discontinuities of a rational function",
+    "Intermediate value theorem: a sign change forces a zero, and counting sign changes in a table"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 93,
+   "unit": 11,
+   "week": 31,
+   "kind": "skill",
+   "title": "Limits at infinity & asymptotes",
+   "source": "BOOK ch16",
+   "objectives": [
+    "Limit of a polynomial at infinity from its leading term",
+    "Limit of a rational function by comparing the degrees, in all three cases",
+    "Horizontal asymptote from a limit at infinity, and vertical asymptotes from the denominator",
+    "Describe the end behaviour of a graph in limit notation",
+    "Point of discontinuity of a rational function where a factor cancels"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 94,
+   "unit": 11,
+   "week": 32,
+   "kind": "skill",
+   "title": "The derivative: definition & interpretation",
+   "source": "BOOK ch11, ch17",
+   "objectives": [
+    "Average rate of change over an interval as the slope of a chord",
+    "The derivative as the limit of the difference quotient",
+    "Evaluate a limit of difference-quotient form",
+    "The derivative as the slope of the tangent at a point",
+    "Where the average rate of change equals the instantaneous rate"
+   ],
+   "items_in_bank": 3
+  },
+  {
+   "session": 95,
+   "unit": 11,
+   "week": 32,
+   "kind": "skill",
+   "title": "Power, product & quotient rules",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Power rule, including negative and fractional powers and a radical rewritten as a power",
+    "Derivative of a constant and of a constant multiple",
+    "Derivative of a sum and a difference",
+    "Product rule and quotient rule",
+    "Second and higher derivatives, and the order at which they vanish"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 96,
+   "unit": 11,
+   "week": 32,
+   "kind": "skill",
+   "title": "The chain rule",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Differentiate a power of a function",
+    "Differentiate a radical of a function",
+    "Combine the chain rule with the product or the quotient rule",
+    "Evaluate the derivative of a composition at a point"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 97,
+   "unit": 11,
+   "week": 33,
+   "kind": "skill",
+   "title": "Derivatives of trigonometric, exponential & logarithmic functions",
+   "source": "SHEET",
+   "objectives": [
+    "Derivatives of sin x, cos x and tan x, and with the chain rule",
+    "Derivative of e^x and of b^x",
+    "Derivative of ln x and of log_b x",
+    "Combine one of these with the product or quotient rule"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 98,
+   "unit": 11,
+   "week": 33,
+   "kind": "skill",
+   "title": "Implicit differentiation",
+   "source": "SHEET",
+   "objectives": [
+    "Differentiate an equation in x and y and solve for dy/dx",
+    "Slope of the tangent to an implicitly defined curve at a point",
+    "Differentiate a product of x and y implicitly"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 99,
+   "unit": 11,
+   "week": 33,
+   "kind": "practice",
+   "title": "Tahsili-style differentiation",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 11"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 100,
+   "unit": 12,
+   "week": 34,
+   "kind": "skill",
+   "title": "Tangent lines & rates of change",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Slope of the tangent at a point, and the equation of that tangent",
+    "Equation of the normal at a point",
+    "The point where a curve has a stated tangent slope",
+    "Rate of change read from a derivative in a worded setting"
+   ],
+   "items_in_bank": 1
+  },
+  {
+   "session": 101,
+   "unit": 12,
+   "week": 34,
+   "kind": "skill",
+   "title": "Increasing, decreasing & critical points",
+   "source": "BOOK ch11, ch17",
+   "objectives": [
+    "Critical points where the derivative is zero or undefined",
+    "Sign of the derivative to decide increasing or decreasing",
+    "Count the critical points, including a repeated root that gives only one",
+    "Read intervals of increase and decrease from a graph"
+   ],
+   "items_in_bank": 1
+  },
+  {
+   "session": 102,
+   "unit": 12,
+   "week": 34,
+   "kind": "skill",
+   "title": "Maxima & minima",
+   "source": "BOOK ch17",
+   "objectives": [
+    "First derivative test for a local maximum or minimum",
+    "Second derivative test, where a negative second derivative marks the maximum",
+    "Absolute maximum and minimum on a closed interval, testing the endpoints too",
+    "Distinguish local from absolute extrema on a graph"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 103,
+   "unit": 12,
+   "week": 35,
+   "kind": "skill",
+   "title": "Concavity & points of inflection",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Concave up and concave down from the sign of the second derivative",
+    "Point of inflection where the second derivative changes sign",
+    "Tell an inflection point from a turning point"
+   ],
+   "items_in_bank": 1
+  },
+  {
+   "session": 104,
+   "unit": 12,
+   "week": 35,
+   "kind": "skill",
+   "title": "Curve sketching",
+   "source": "BOOK ch11, ch17",
+   "objectives": [
+    "Assemble intercepts, asymptotes, extrema and concavity into one sketch",
+    "Match a function to its graph using its derivative information",
+    "Sketch a curve satisfying stated conditions on f, f′ and f″"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 105,
+   "unit": 12,
+   "week": 35,
+   "kind": "skill",
+   "title": "Optimization problems",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Maximum area for a fixed perimeter, and minimum perimeter for a fixed area",
+    "Maximum volume of an open box cut from a sheet",
+    "Minimum cost or maximum profit in SAR",
+    "Write the constraint, substitute, differentiate and check the endpoints"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 106,
+   "unit": 12,
+   "week": 36,
+   "kind": "skill",
+   "title": "Related rates",
+   "source": "SHEET",
+   "objectives": [
+    "Differentiate a relation with respect to time and substitute the known rates",
+    "Expanding circle, ladder against a wall, filling cone or cylinder",
+    "Keep the units of the answer straight"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 107,
+   "unit": 12,
+   "week": 36,
+   "kind": "skill",
+   "title": "Motion problems",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Velocity as the derivative of displacement and acceleration as its second derivative",
+    "Velocity at a stated time, and the time at which the object is at rest",
+    "Maximum height of a projectile",
+    "Decide whether the object is speeding up or slowing down"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 108,
+   "unit": 12,
+   "week": 36,
+   "kind": "practice",
+   "title": "Tahsili-style derivative applications",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 12"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 109,
+   "unit": 13,
+   "week": 37,
+   "kind": "skill",
+   "title": "Antiderivatives & indefinite integrals",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Antiderivative of a power, and the constant of integration",
+    "Recover F(x) from a given f′(x)",
+    "Antiderivative of a radical rewritten as a power",
+    "Find the particular antiderivative through a given point"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 110,
+   "unit": 13,
+   "week": 37,
+   "kind": "skill",
+   "title": "Basic integration rules",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Integral of a constant and of a constant multiple",
+    "Integral of a sum and a difference, term by term",
+    "Integral of a negative power",
+    "Rewrite a product or a quotient into integrable terms before integrating"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 111,
+   "unit": 13,
+   "week": 37,
+   "kind": "skill",
+   "title": "Integration by substitution",
+   "source": "SHEET",
+   "objectives": [
+    "Choose u and compute du",
+    "Integrate a power of a function times its derivative",
+    "Change the limits when substituting in a definite integral"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 112,
+   "unit": 13,
+   "week": 38,
+   "kind": "skill",
+   "title": "Definite integrals",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Evaluate a definite integral of a polynomial",
+    "Find a limit or a parameter from a stated value of a definite integral",
+    "Integrate a piecewise or an absolute-value integrand by splitting the interval"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 113,
+   "unit": 13,
+   "week": 38,
+   "kind": "skill",
+   "title": "The Fundamental Theorem of Calculus",
+   "source": "BOOK ch17",
+   "objectives": [
+    "The integral equals F(b) − F(a), in that order",
+    "Compute an integral from two given values of an antiderivative",
+    "Differentiate an integral with a variable upper limit"
+   ],
+   "items_in_bank": 2
+  },
+  {
+   "session": 114,
+   "unit": 13,
+   "week": 38,
+   "kind": "skill",
+   "title": "Properties of definite integrals",
+   "source": "BOOK ch17",
+   "objectives": [
+    "An integral from a to a is zero, and reversing the limits changes the sign",
+    "Split an integral at an interior point and add",
+    "Sum and difference of integrals over the same interval",
+    "Combine several given integrals to reach the one asked for"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 115,
+   "unit": 13,
+   "week": 39,
+   "kind": "skill",
+   "title": "Area under a curve",
+   "source": "BOOK ch17",
+   "objectives": [
+    "Area between a curve and the x-axis on an interval",
+    "Treat an area below the axis as positive by splitting at the zeros",
+    "Read the area of a shaded region from a graph and its integral",
+    "Approximate an area by rectangles"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 116,
+   "unit": 13,
+   "week": 39,
+   "kind": "skill",
+   "title": "Area between curves",
+   "source": "SHEET",
+   "objectives": [
+    "Find the intersection points that give the limits",
+    "Integrate the upper curve minus the lower curve",
+    "Area between a curve and a line",
+    "Split the interval where the curves swap positions"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 117,
+   "unit": 13,
+   "week": 39,
+   "kind": "practice",
+   "title": "Tahsili-style integration problems",
+   "source": "—",
+   "objectives": [
+    "Draws from Unit 13"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 118,
+   "unit": 14,
+   "week": 40,
+   "kind": "assess",
+   "title": "Number & algebra review",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 1, 2, 7"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 119,
+   "unit": 14,
+   "week": 40,
+   "kind": "assess",
+   "title": "Functions, exponentials & logarithms review",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 3, 6"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 120,
+   "unit": 14,
+   "week": 40,
+   "kind": "assess",
+   "title": "Mixed algebra–function problems",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 1-3, 6, 7"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 121,
+   "unit": 14,
+   "week": 41,
+   "kind": "assess",
+   "title": "Geometry & analytic geometry review",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 4, 5, 10"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 122,
+   "unit": 14,
+   "week": 41,
+   "kind": "assess",
+   "title": "Trigonometry review",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 8, 9"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 123,
+   "unit": 14,
+   "week": 41,
+   "kind": "assess",
+   "title": "Mixed geometry–trigonometry problems",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 4, 8, 9, 10"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 124,
+   "unit": 14,
+   "week": 42,
+   "kind": "assess",
+   "title": "Sequences, statistics & probability review",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 5, 7"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 125,
+   "unit": 14,
+   "week": 42,
+   "kind": "assess",
+   "title": "Calculus review",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 11, 12, 13"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 126,
+   "unit": 14,
+   "week": 42,
+   "kind": "assess",
+   "title": "Cross-domain mixed problems",
+   "source": "—",
+   "objectives": [
+    "Draws from every unit"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 127,
+   "unit": 15,
+   "week": 43,
+   "kind": "assess",
+   "title": "Weighted practice: Grade 10 & 11 content (50%)",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 1-5"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 128,
+   "unit": 15,
+   "week": 43,
+   "kind": "assess",
+   "title": "Weighted practice: Grade 12 content (50%)",
+   "source": "—",
+   "objectives": [
+    "Draws from Units 6-13"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 129,
+   "unit": 15,
+   "week": 43,
+   "kind": "assess",
+   "title": "Timed mixed-domain set",
+   "source": "—",
+   "objectives": [
+    "Draws from every unit"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 130,
+   "unit": 15,
+   "week": 44,
+   "kind": "assess",
+   "title": "Full Tahsili Mathematics Mock 1",
+   "source": "—",
+   "objectives": [
+    "Draws from every unit"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 131,
+   "unit": 15,
+   "week": 44,
+   "kind": "assess",
+   "title": "Mock 1 analysis & error correction",
+   "source": "—",
+   "objectives": [
+    "No items"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 132,
+   "unit": 15,
+   "week": 44,
+   "kind": "assess",
+   "title": "Targeted intervention",
+   "source": "—",
+   "objectives": [
+    "Draws by skill profile"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 133,
+   "unit": 15,
+   "week": 45,
+   "kind": "assess",
+   "title": "Full Tahsili Mathematics Mock 2",
+   "source": "—",
+   "objectives": [
+    "Draws from every unit"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 134,
+   "unit": 15,
+   "week": 45,
+   "kind": "assess",
+   "title": "Mock 2 analysis & final correction",
+   "source": "—",
+   "objectives": [
+    "No items"
+   ],
+   "items_in_bank": 0
+  },
+  {
+   "session": 135,
+   "unit": 15,
+   "week": 45,
+   "kind": "assess",
+   "title": "Final readiness & test-day strategy",
+   "source": "—",
+   "objectives": [
+    "No items"
+   ],
+   "items_in_bank": 0
+  }
+ ],
+ "skill_sessions": 106,
+ "objectives": 477,
+ "items_built": 108
+}
