@@ -1,0 +1,14 @@
+{
+  "name": "dar-alfikr-math-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for Mr Malek Thiab's Mathematics Department materials at Dar Alfikr Schools.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "docx": "^9.0.0",
+    "pptxgenjs": "^3.12.0"
+  }
+}

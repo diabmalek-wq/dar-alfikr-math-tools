@@ -1,0 +1,15 @@
+# Python dependencies for engines/, generators/, verifiers/, builders/
+# Install with: pip install -r requirements.txt --break-system-packages
+
+matplotlib>=3.8
+numpy>=1.26
+Pillow>=10.0
+opencv-python-headless>=4.9
+lxml>=5.0
+openpyxl>=3.1
+pikepdf>=8.0
+python-pptx>=1.0
+
+# System dependencies NOT installable via pip — install separately:
+#   - pdflatex + Computer Modern fonts (make_math_*.py LaTeX rendering; see README.md)
+#   - LibreOffice / soffice (for any .pptx/.docx -> PDF conversion steps)
