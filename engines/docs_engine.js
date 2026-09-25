@@ -294,7 +294,7 @@ function makeEngine(cfg) {
       new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 140 }, children: [new TextRun({ text: "Lesson plan 2026 / 27", font: HEAD, size: 30, bold: true, color: TEAL_DEEP })] }),
       new Table({ columnWidths: c7, width: { size: LW, type: WidthType.DXA }, rows: [
         new TableRow({ children: ["Day & Date", "Week", "Period/s", "Lesson Title", "Subject", "Chapter/Unit", "Grade/ section"].map((t, i) => hdrCell(t, c7[i])) }),
-        new TableRow({ children: [val(D.day, c7[0]), val("2", c7[1]), val("1 period (60 min)", c7[2]),
+        new TableRow({ children: [val(D.day, c7[0]), val(cfg.weekNum || "2", c7[1]), val("1 period (60 min)", c7[2]),
           val(cfg.lessonTitle, c7[3]), val("Algebra II", c7[4]), val(cfg.unit, c7[5]), val(D.section, c7[6])] }),
       ] }),
       gap(140),
