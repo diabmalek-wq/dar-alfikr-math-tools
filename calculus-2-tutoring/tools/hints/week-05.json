@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Substitute $u=x-1$ to simplify the antiderivative before taking the limit.",
+    "caution": "Don't integrate $(x-1)^{-2}$ as if it were $x^{-2}$ — the shift matters for the antiderivative."
+  },
+  "2": {
+    "hint": "Use integration by parts, then resolve the resulting limit $\\lim_{t\\to\\infty} te^{-2t}$ using exponential-dominates-polynomial reasoning.",
+    "caution": "Don't dismiss $\\lim_{t\\to\\infty} te^{-2t}$ as an unresolvable 'infinity times zero' — it has a definite value of $0$."
+  },
+  "3": {
+    "hint": "Find the antiderivative involving $\\arctan$ first, then carefully evaluate the limit as $t\\to-\\infty$.",
+    "caution": "Watch the sign of $\\arctan(t/2)$ as $t\\to-\\infty$ — it approaches $-\\pi/2$, not $+\\pi/2$."
+  },
+  "4": {
+    "hint": "Identify which endpoint has the discontinuity before setting up the limit — this is a Type-2 integral, not Type-1.",
+    "caution": "Don't set the limit up at $x=+\\infty$ — the singularity here is at $x=0$, the lower limit."
+  },
+  "5": {
+    "hint": "Check every point in $[-8,8]$ for discontinuities before deciding how many pieces to split into.",
+    "caution": "There's an interior discontinuity at $x=0$ in addition to the endpoints — don't integrate straight through as if the integrand were continuous there."
+  },
+  "6": {
+    "hint": "Identify exactly where the antiderivative used in the 'solution' fails to be continuous on $[0,2]$.",
+    "caution": "FTC cannot be applied directly when the antiderivative has a discontinuity inside the interval of integration — split at that point instead."
+  },
+  "7": {
+    "hint": "Just identify which endpoint carries the improper behavior and read $p$ off directly.",
+    "caution": "Double check whether this is a $[1,\\infty)$-type or $[0,1]$-type integral before applying a $p$-rule — the two rules for convergence are opposite."
+  },
+  "8": {
+    "hint": "Just identify which endpoint carries the improper behavior and read $p$ off directly.",
+    "caution": "This is the $[0,1]$-type integral — don't apply the $[1,\\infty)$ rule (\"$p>1$ converges\") to it; the condition flips."
+  },
+  "9": {
+    "hint": "Try bounding the numerator both above and below, and check which direction of inequality actually leads to a conclusion via BCT.",
+    "caution": "A $\\le$-bound to something divergent proves nothing — make sure you're using the bound whose comparison function's behavior actually forces a conclusion."
+  },
+  "10": {
+    "hint": "Use the fact that $\\arctan$ is always bounded above by $\\pi/2$ to build a simple upper bound for BCT.",
+    "caution": "Don't try to bound $\\arctan(x^2)$ by something that grows — it's bounded by the constant $\\pi/2$, which is the easiest and most useful bound available."
+  },
+  "11": {
+    "hint": "Compare to a power of $x$ matching the overall degree gap between numerator and denominator.",
+    "caution": "Compute the degree gap carefully (numerator degree minus denominator degree) — miscounting it leads to comparing against the wrong power of $x$."
+  },
+  "12": {
+    "hint": "Recall $\\lim_{x\\to0}\\frac{\\sin x}{x}=1$ and use it to pick a comparison function suited to the singularity at $x=0$.",
+    "caution": "Take the limit in the LCT ratio as $x\\to0^+$, not $x\\to\\infty$ — the singularity here is at the origin."
+  }
+}

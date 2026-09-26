@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Look separately at the sign pattern, the numerator pattern, and the denominator pattern before combining them into one formula.",
+    "caution": "Check which sign the sequence starts with at $n=1$ before choosing between $(-1)^n$ and $(-1)^{n-1}$ — picking the wrong one flips every term."
+  },
+  "2": {
+    "hint": "Write out the first three or four terms explicitly before guessing the closed form, and verify your guess against all of them.",
+    "caution": "Don't commit to a pattern from only the first two terms — several different formulas can match two data points."
+  },
+  "3": {
+    "hint": "Recall the Key Fact table listing which implications between $f$ and $a_n=f(n)$ hold in only one direction.",
+    "caution": "Think about how a function can oscillate *between* integers without the sampled sequence ever detecting it."
+  },
+  "4": {
+    "hint": "Negate the quantifiers of the convergence definition one at a time, flipping $\\forall\\leftrightarrow\\exists$ at each step, and negate the final inequality too.",
+    "caution": "Remember that 'divergent' means the negated statement holds for *every* real $L$, not just one particular guessed limit."
+  },
+  "5": {
+    "hint": "Compare this restricted-$\\varepsilon$ statement to Worked Example 3(d), which handled a similar restriction.",
+    "caution": "Ask whether every $\\varepsilon>0$ (including large ones) is still automatically controlled once all the small, restricted values are controlled."
+  },
+  "6": {
+    "hint": "Treat each of the four statements as its own true/false question and think of a specific counterexample sequence for any that are false.",
+    "caution": "Don't assume that a statement and its converse must have the same truth value — check each direction separately."
+  },
+  "7": {
+    "hint": "Think about which theorem from Page 1 would be directly contradicted if such a sequence existed.",
+    "caution": "Don't spend time trying to construct an example before checking whether a theorem already rules it out."
+  },
+  "8": {
+    "hint": "Try a sequence that has a factor like $(-1)^n$ providing the non-monotonic behavior, combined with something that shrinks it to a limit.",
+    "caution": "A bounded, non-monotonic sequence like $(-1)^n$ alone is divergent — you need an extra factor to force convergence too."
+  },
+  "9": {
+    "hint": "Start the proof with 'Let $M \\in \\mathbb{R}$' to match the $\\forall M$ in the definition of $a_n\\to\\infty$, then use unboundedness to find your $n_0$.",
+    "caution": "Don't start by assuming the conclusion $a_n\\to\\infty$ and working backwards — fix an arbitrary $M$ first, as the formal definition requires."
+  },
+  "10": {
+    "hint": "Divide numerator and denominator by the fastest-growing term present, using the Big Theorem to justify which terms vanish.",
+    "caution": "Dividing by the wrong term (e.g. a polynomial instead of the exponential) leaves an indeterminate form instead of resolving the limit."
+  },
+  "11": {
+    "hint": "Think about what function of $n$ sits strictly between $n^2$ and any $n^{2+\\epsilon}$ in growth rate — a factor that grows to infinity, but more slowly than any positive power of $n$.",
+    "caution": "$u_n=n^2$ itself doesn't work — it needs to be strictly between the two boundary growth rates, not equal to the boundary case."
+  },
+  "12": {
+    "hint": "Use the Big Theorem's chain of growth rates directly — this is a comparison problem, not something requiring a series test.",
+    "caution": "Don't reach for the Ratio Test or another series-convergence tool here; at this point only the Big Theorem is needed for a growth-rate limit."
+  }
+}

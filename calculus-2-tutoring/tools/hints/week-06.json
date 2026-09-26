@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Identify the first term $a$ and the common ratio $r$ before plugging into $\\frac{a}{1-r}$.",
+    "caution": "Read the ratio directly from consecutive terms — don't misidentify $a$ as a later term in the sequence."
+  },
+  "2": {
+    "hint": "Find the ratio between consecutive terms, including its sign, before checking $|r|<1$.",
+    "caution": "An alternating sign pattern doesn't guarantee convergence — the magnitude $|r|$ is what actually decides it."
+  },
+  "3": {
+    "hint": "Simplify the general term to a single base raised to the $n$-th power first, then recompute the first term for the actual starting index.",
+    "caution": "Don't use the $n=1$ or $n=0$ first term formula when the sum starts at $n=5$ — recompute the first term at the actual starting index."
+  },
+  "4": {
+    "hint": "Simplify all the constants and combine the exponential parts into a single ratio $r$ before deciding convergence.",
+    "caution": "A large constant coefficient out front doesn't affect convergence — only the ratio $r$ (and whether $|r|<1$) matters."
+  },
+  "5": {
+    "hint": "Write out the first term of the sum explicitly in terms of $x$ and $k$ before applying the geometric series formula.",
+    "caution": "Don't reuse the $n=0$-indexed formula $\\frac{1}{1-x}$ regardless of the starting index — the first term depends on $k$."
+  },
+  "6": {
+    "hint": "Do the partial fraction decomposition, then write out several partial-sum terms to see exactly which terms survive.",
+    "caution": "Watch for off-by-one errors in identifying which term is the first surviving one after cancellation."
+  },
+  "7": {
+    "hint": "Work with the partial sums directly rather than trying to split the series into two separate sums.",
+    "caution": "Splitting $\\sum(a_n-b_n)$ into $\\sum a_n - \\sum b_n$ is only valid once you already know both pieces converge — check that first."
+  },
+  "8": {
+    "hint": "Compute $\\lim_{n\\to\\infty}$ of the general term directly.",
+    "caution": "A limit that settles to a nonzero finite value still means the series diverges — don't confuse $a_n\\to L\\ne0$ with $a_n\\to0$."
+  },
+  "9": {
+    "hint": "Recall the standard limit $\\lim_{n\\to\\infty}(1+1/n)^n = e$ before applying the Divergence Test.",
+    "caution": "The terms 'settling down' to a specific number doesn't mean convergence — only settling to exactly $0$ is even a candidate."
+  },
+  "10": {
+    "hint": "Compare $\\frac{1}{\\sqrt n}$ term-by-term to $\\frac1n$, and think about which one is actually the larger term.",
+    "caution": "Don't assume shrinking to $0$ implies convergence — compare directly to the known-divergent harmonic series term by term."
+  },
+  "11": {
+    "hint": "Think about what happens if some of the removed terms $a_0,\\ldots,a_6$ are negative.",
+    "caution": "Don't assume removing early terms always shrinks the total — that's only true if those terms happen to be positive."
+  },
+  "12": {
+    "hint": "Try a proof by contradiction: assume $\\sum(a_n+b_n)$ converges and see what that would force about $\\sum b_n$.",
+    "caution": "Don't apply the Sum Rule directly to a convergent and a divergent series — that rule requires both series to already be convergent."
+  }
+}
