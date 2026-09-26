@@ -83,6 +83,32 @@ These are rules about *what* goes into a build; `LESSONS-LEARNED.md` has the mat
   takes only skill + trick, never stem/numbers/options/figure; never source from a still-
   rotating item pool) apply before an item is written, not after.
 
+## Cost efficiency (Mr Thiab's standing instruction, 26 Sep 2026)
+
+Every deliverable must be produced at the lowest reasonable token/compute cost. This
+governs *how* an assistant works in this repo, not just what it produces:
+
+- **Read PDFs as text, not as images.** Use `markitdown <file>.pdf` (installed via
+  `pip3 install markitdown`) or `pdftotext` to extract a source PDF's content. Never
+  render a PDF to PNG and read it as an image just to get its text — that is a vision
+  call for something a text extractor does for free.
+- **Visual (image) verification is reserved for final delivery, not every draft.**
+  Check a build with `pdfinfo` (page count) and `pdftotext`/`markitdown` (content,
+  clipped text, missing sections) first. Only render pages to PNG and read them back
+  visually once, right before a file is actually handed to Mr Thiab — not after every
+  intermediate fix.
+- **Don't re-read whole files you already have.** Once an engine or config file has
+  been read this session, use `grep`/`sed`/targeted line ranges to check or change one
+  part of it rather than reading the entire file again. This applies especially to the
+  large shared engines (`lesson_engine.js`, `docs_engine.js`, `exam_engine.js`,
+  `presession.js`) — their structure doesn't change between builds.
+- **Don't re-research settled precedent.** Once a format, code list, or convention has
+  been confirmed from a source (a curriculum map, a real delivered PDF, a spreadsheet),
+  reuse that finding for the rest of the session instead of re-fetching it.
+- **Batch fixes, then verify once**, instead of a fix → rebuild → visually inspect →
+  fix → rebuild loop. Read the engine/generator code carefully enough on the first pass
+  to get layout right without needing a render to find out.
+
 ## Where to look next
 
 - `docs/LESSONS-LEARNED.md` — the full list of known traps and why each guard exists.
