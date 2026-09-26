@@ -17,13 +17,14 @@ const A = (f) => path.join(__dirname, f);
 // Generator output (math_*/, figs_*/) lives under generators/, one level up
 // from this engine — never inside engines/ itself.
 const G = (f) => path.join(__dirname, "..", "generators", f);
+const LOGOS = (f) => path.join(__dirname, "..", "assets", "logos", f);
 const TEAL_DEEP = "0E4F4C", TEAL = "1E8F89", TEAL_TINT = "E7F5F4",
       TEAL_TINT2 = "CFEBE8", MAROON = "8A1B17", CHARCOAL = "222E2D",
       MUTED = "5C6E6C", LINE = "C9DEDC", AMBER = "8A5A17", NAVY = "1F3864";
 const HEAD = "Cambria", BODY = "Calibri";
 const SZ = (cfg, big, small) => (cfg && cfg.dense ? small : big);
-const deptLogo = fs.readFileSync(A("dept_logo_doc.png"));
-const schoolLogo = fs.readFileSync(A("school_logo_doc.png"));
+const deptLogo = fs.readFileSync(LOGOS("dept_logo.png"));
+const schoolLogo = fs.readFileSync(LOGOS("school_logo.png"));
 // Cognia accreditation badge — the top CENTRE of every page (his instruction,
 // 9 Sep 2026). It replaced the teacher name that used to sit there; the name now
 // lives in the footer beside the school motto.
