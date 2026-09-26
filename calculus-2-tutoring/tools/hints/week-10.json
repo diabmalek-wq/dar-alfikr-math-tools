@@ -1,0 +1,42 @@
+{
+  "1": {
+    "hint": "Before applying the Alternating Series Test, check whether $b_n=\\dfrac{1}{\\arctan n}$ actually tends to $0$.",
+    "caution": "$\\arctan n$ is bounded above by $\\pi/2$, so $b_n\\to 2/\\pi\\ne 0$ — the AST does not apply here, and the Divergence Test shows the series actually diverges."
+  },
+  "2": {
+    "hint": "Check whether the general term $\\dfrac{\\sin n}{\\arctan n}$ tends to $0$ before trying any convergence test.",
+    "caution": "Don't assume a $\\sin n$ numerator makes a series convergent by comparison to $|\\sin n|\\le 1$ — here the denominator stays bounded (not growing), so the terms don't shrink to $0$ and the series diverges."
+  },
+  "3": {
+    "hint": "Use the Alternating Series error bound: the error after stopping is less than the first omitted term.",
+    "caution": "Use $b_{N+1}$ (the first *excluded* term) to bound the error, not $b_N$ (the last included term) — an off-by-one here gives the wrong partial sum."
+  },
+  "4": {
+    "hint": "Check both AST hypotheses first (is $b_n$ eventually decreasing and does it tend to $0$?), then separately test $\\sum|a_n|$ with a $p$-series comparison to decide absolute vs. conditional.",
+    "caution": "Converging by AST does not automatically mean absolutely convergent — always check $\\sum|a_n|$ separately before classifying."
+  },
+  "5": {
+    "hint": "Write out $\\dfrac{a_{n+1}}{a_n}$ carefully, expanding $(2n+2)!$ and $(n+1)!$ in terms of $(2n)!$ and $n!$ before simplifying.",
+    "caution": "Track the factorial simplification term by term — canceling $(n!)^2$ against $((n+1)!)^2$ incorrectly is the most common way to get the wrong ratio."
+  },
+  "6": {
+    "hint": "Recall the standard limit $\\lim_{n\\to\\infty}\\left(\\dfrac{n}{n+1}\\right)^n=\\dfrac1e$ when simplifying the ratio in the Ratio Test.",
+    "caution": "Don't cancel $\\dfrac{n}{n+1}\\to1$ before raising it to the $n$-th power — that throws away the $1/e$ limit and wrongly suggests $\\rho=1$."
+  },
+  "7": {
+    "hint": "Form the ratio $\\dfrac{(n+1)^2/2^{n+1}}{n^2/2^n}$ and simplify completely before taking the limit as $n\\to\\infty$.",
+    "caution": "Don't evaluate the ratio at a small value of $n$ and stop — the Ratio Test requires the limit as $n\\to\\infty$, not the ratio at any fixed $n$."
+  },
+  "8": {
+    "hint": "For each part, try both a slowly-decaying example (like $1/n^2$) and a fast one (like $1/n^4$) to see whether the conclusion always holds.",
+    "caution": "Square-rooting terms does not always preserve or break convergence — part (a) has no fixed answer, while parts (b) and (c) only need the inequality to hold *eventually*, not for every $n$."
+  },
+  "9": {
+    "hint": "Look for two series that are convergent but NOT absolutely convergent — their product's terms may not shrink fast enough.",
+    "caution": "Two absolutely convergent series always have a convergent product — the counterexample requires conditional convergence, such as $a_n=b_n=(-1)^n/\\sqrt n$."
+  },
+  "10": {
+    "hint": "Think about what information the Ratio Test actually uses (consecutive-term ratios) versus what distinguishes convergent from divergent $p$-series (the exact power $p$).",
+    "caution": "$\\rho=1$ is not a weak or partial verdict from the Ratio Test — it means the test carries no information at all, and a different test (Integral or Comparison) must be used instead."
+  }
+}

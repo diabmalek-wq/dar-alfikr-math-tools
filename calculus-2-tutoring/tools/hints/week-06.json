@@ -1,0 +1,42 @@
+{
+  "1": {
+    "hint": "Evaluate $f(x)=\\sqrt{x}$ at the five grid points $0,1,2,3,4$, then apply the Trapezoidal Rule's weight pattern: endpoints get weight $1$, interior points get weight $2$.",
+    "caution": "Don't forget to double every interior grid-point value before summing — only the first and last values keep weight $1$."
+  },
+  "2": {
+    "hint": "Locate the midpoint of each of the four subintervals $[0,1],[1,2],[2,3],[3,4]$ before evaluating $f$.",
+    "caution": "Evaluate $f$ only at the midpoints, never at the subinterval endpoints — that would silently turn this into a different rule."
+  },
+  "3": {
+    "hint": "Apply Simpson's Rule's alternating $1,4,2,4,1$ weight pattern to the five grid-point values, then compare to the antiderivative's exact value.",
+    "caution": "The exact match is not a coincidence to double-check arithmetic against — it's guaranteed whenever the integrand is a polynomial of degree $3$ or less."
+  },
+  "4": {
+    "hint": "Use the exact values $\\sin(\\pi/4)=\\sin(3\\pi/4)=\\frac{\\sqrt2}{2}\\approx0.707$ in the Simpson's Rule sum.",
+    "caution": "Don't expect an exact match here — $\\sin x$ is not a polynomial, so Simpson's Rule is very accurate but leaves a small residual error."
+  },
+  "5": {
+    "hint": "Find $f''(x)$ first, then determine where $|f''(x)|$ is largest on the given interval before plugging into the Trapezoidal error-bound formula.",
+    "caution": "The error-bound formula needs the second derivative's bound $K$, not the first derivative — double-check which derivative you differentiated to."
+  },
+  "6": {
+    "hint": "Use the Midpoint error bound (denominator $24n^2$), not the Trapezoidal bound (denominator $12n^2$) — check which rule the problem asks about.",
+    "caution": "Mixing up the $12$ and $24$ constants between the Trapezoidal and Midpoint error bounds is the most common mistake on this type of problem."
+  },
+  "7": {
+    "hint": "Set the Trapezoidal error-bound expression less than the target accuracy and solve the resulting inequality for $n$.",
+    "caution": "Round the solved value of $n$ UP to the next integer — rounding down would fail to guarantee the target accuracy."
+  },
+  "8": {
+    "hint": "Since $f^{(4)}(x)=24$ is already constant, set $M=24$ directly in the Simpson error-bound formula and solve for $n$.",
+    "caution": "Round up to the next EVEN integer, not just the next integer — Simpson's Rule requires $n$ to be even."
+  },
+  "9": {
+    "hint": "Use the identity $S_{2n}=\\dfrac{2M_n+T_n}{3}$ directly with the given $T_4$ and $M_4$ values.",
+    "caution": "Don't average $T_4$ and $M_4$ with equal weights — the correct combination weights $M_n$ twice as heavily as $T_n$."
+  },
+  "10": {
+    "hint": "Substitute $2n$ for $n$ in each error-bound formula and simplify the resulting power of $2$.",
+    "caution": "The improvement factor comes directly from the power of $n$ in each formula's denominator ($n^2$ vs. $n^4$) — it is a structural property of the method, not something to verify numerically from a single example."
+  }
+}
