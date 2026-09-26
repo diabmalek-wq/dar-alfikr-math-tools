@@ -1,50 +1,50 @@
 {
   "1": {
-    "hint": "Look separately at the sign pattern, the numerator pattern, and the denominator pattern before combining them into one formula.",
-    "caution": "Check which sign the sequence starts with at $n=1$ before choosing between $(-1)^n$ and $(-1)^{n-1}$ — picking the wrong one flips every term."
+    "hint": "Check whether the power of the function matching $du$ (here $\\cos x\\,dx$) is already isolated, or whether you need to peel one factor off first.",
+    "caution": "A bare $u=\\sin x$ substitution only works directly when exactly one factor of $\\cos x\\,dx$ is left over — for $\\cos^7x$, peel one off first."
   },
   "2": {
-    "hint": "Write out the first three or four terms explicitly before guessing the closed form, and verify your guess against all of them.",
-    "caution": "Don't commit to a pattern from only the first two terms — several different formulas can match two data points."
+    "hint": "Apply the half-angle identity to $\\sin^2x$, then notice the result contains a squared cosine term that needs the identity applied a second time.",
+    "caution": "Don't stop after one application of the half-angle identity — squaring it reintroduces another even power that itself needs simplifying."
   },
   "3": {
-    "hint": "Recall the Key Fact table listing which implications between $f$ and $a_n=f(n)$ hold in only one direction.",
-    "caution": "Think about how a function can oscillate *between* integers without the sampled sequence ever detecting it."
+    "hint": "Check the tangent exponent for oddness, not just the secant exponent, to decide which rule from Page 1 applies.",
+    "caution": "Don't dismiss both rules just because the secant power is odd — the odd-tangent rule only requires the tangent power to be odd."
   },
   "4": {
-    "hint": "Negate the quantifiers of the convergence definition one at a time, flipping $\\forall\\leftrightarrow\\exists$ at each step, and negate the final inequality too.",
-    "caution": "Remember that 'divergent' means the negated statement holds for *every* real $L$, not just one particular guessed limit."
+    "hint": "Rewrite $\\tan^2x$ as $\\sec^2x-1$ to split the integral into two familiar pieces.",
+    "caution": "The sec/tan parity rule on Page 1 assumes at least one factor of secant is present — with no secant factor here, split using the Pythagorean identity instead."
   },
   "5": {
-    "hint": "Compare this restricted-$\\varepsilon$ statement to Worked Example 3(d), which handled a similar restriction.",
-    "caution": "Ask whether every $\\varepsilon>0$ (including large ones) is still automatically controlled once all the small, restricted values are controlled."
+    "hint": "Factor each denominator completely into distinct linear factors before setting up the partial-fraction decomposition.",
+    "caution": "Don't stop factoring early — $x^2-1$ inside $x^3-x$ factors further into $(x-1)(x+1)$, each needing its own partial-fraction term."
   },
   "6": {
-    "hint": "Treat each of the four statements as its own true/false question and think of a specific counterexample sequence for any that are false.",
-    "caution": "Don't assume that a statement and its converse must have the same truth value — check each direction separately."
+    "hint": "Compare the degree of the numerator to the degree of the denominator before attempting any decomposition.",
+    "caution": "Partial fractions cannot be applied until $\\deg(\\text{numerator})<\\deg(\\text{denominator})$ — long divide first if they're equal or the numerator is larger."
   },
   "7": {
-    "hint": "Think about which theorem from Page 1 would be directly contradicted if such a sequence existed.",
-    "caution": "Don't spend time trying to construct an example before checking whether a theorem already rules it out."
+    "hint": "A repeated linear factor $x^2$ needs two separate terms, $\\frac{A}{x}$ and $\\frac{B}{x^2}$, alongside the term for $(x-2)$.",
+    "caution": "Writing only $\\frac{B}{x^2}$ for the repeated factor and skipping $\\frac{A}{x}$ under-determines the system of equations."
   },
   "8": {
-    "hint": "Try a sequence that has a factor like $(-1)^n$ providing the non-monotonic behavior, combined with something that shrinks it to a limit.",
-    "caution": "A bounded, non-monotonic sequence like $(-1)^n$ alone is divergent — you need an extra factor to force convergence too."
+    "hint": "Use a linear numerator $\\frac{Ax+B}{x^2+1}$ for the irreducible quadratic factor, not a constant.",
+    "caution": "A constant-only numerator over an irreducible quadratic factor cannot match all the coefficients when you clear denominators."
   },
   "9": {
-    "hint": "Start the proof with 'Let $M \\in \\mathbb{R}$' to match the $\\forall M$ in the definition of $a_n\\to\\infty$, then use unboundedness to find your $n_0$.",
-    "caution": "Don't start by assuming the conclusion $a_n\\to\\infty$ and working backwards — fix an arbitrary $M$ first, as the formal definition requires."
+    "hint": "After substituting, combine $1+\\sin x$ over the common denominator $1+t^2$ and look for a perfect-square simplification before integrating.",
+    "caution": "Don't jump straight to partial fractions on the raw rational function in $t$ — simplifying the denominator first (it's a perfect square here) makes the integral much shorter."
   },
   "10": {
-    "hint": "Divide numerator and denominator by the fastest-growing term present, using the Big Theorem to justify which terms vanish.",
-    "caution": "Dividing by the wrong term (e.g. a polynomial instead of the exponential) leaves an indeterminate form instead of resolving the limit."
+    "hint": "After substituting, check whether the resulting quadratic denominator in $t$ factors over the reals before choosing an arctangent or a logarithm form.",
+    "caution": "The Weierstrass substitution doesn't always end in an arctangent — here the denominator factors, so the answer is a logarithm from partial fractions instead."
   },
   "11": {
-    "hint": "Think about what function of $n$ sits strictly between $n^2$ and any $n^{2+\\epsilon}$ in growth rate — a factor that grows to infinity, but more slowly than any positive power of $n$.",
-    "caution": "$u_n=n^2$ itself doesn't work — it needs to be strictly between the two boundary growth rates, not equal to the boundary case."
+    "hint": "Use the half-angle identities for $\\sec x$ and $\\tan x$ in terms of $t=\\tan(x/2)$ to show the two forms of the answer are algebraically the same expression up to a constant.",
+    "caution": "Getting a different-looking antiderivative from the Weierstrass substitution than the memorized formula doesn't mean either one is wrong — check algebraic equivalence before assuming an error."
   },
   "12": {
-    "hint": "Use the Big Theorem's chain of growth rates directly — this is a comparison problem, not something requiring a series test.",
-    "caution": "Don't reach for the Ratio Test or another series-convergence tool here; at this point only the Big Theorem is needed for a growth-rate limit."
+    "hint": "For each integral, look first for a direct substitution or a sec/tan parity match before considering the Weierstrass substitution.",
+    "caution": "The Weierstrass substitution always works on rational-trig integrands, but reaching for it when a simpler technique already applies produces far messier algebra for no benefit."
   }
 }

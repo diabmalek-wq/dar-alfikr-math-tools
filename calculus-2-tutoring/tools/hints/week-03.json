@@ -16,35 +16,35 @@
     "caution": "A numeric answer 'looking plausible' doesn't mean the method was correct — verify the limit conversion specifically, since $x=0$ does not give $u=0$ here."
   },
   "5": {
-    "hint": "Treat the integral as $\\int 1\\cdot \\ln x\\,dx$ and choose $u=\\ln x$, $dv=dx$.",
-    "caution": "Don't try to set $dv = \\ln x\\,dx$ — there's no direct antiderivative to use as $v$ that way."
+    "hint": "Look for a direct substitution matching the numerator before reaching for trig substitution.",
+    "caution": "Not every $\\sqrt{a^2-x^2}$-style integral needs $x=a\\sin\\theta$ — check first whether the numerator is already (up to a constant) the derivative of what's under the root."
   },
   "6": {
-    "hint": "Use integration by parts with $u=\\arctan x$, $dv=x\\,dx$, then simplify $\\frac{x^2}{1+x^2}$ by dividing out before integrating further.",
-    "caution": "Don't leave $\\frac{x^2}{1+x^2}$ unsimplified — rewrite it as $1-\\frac{1}{1+x^2}$ rather than reaching for partial fractions."
+    "hint": "Choose $u=x$, $dv=e^{3x}dx$, and remember the extra constant that appears when antidifferentiating $e^{3x}$.",
+    "caution": "Don't write $v=e^{3x}$ — antidifferentiating $e^{3x}$ introduces a factor of $\\frac13$."
   },
   "7": {
-    "hint": "Apply integration by parts twice, and when the original integral reappears, solve for it algebraically as in the worked example.",
-    "caution": "Don't attempt a third round of integration by parts — recognize when the original integral has reappeared and stop to solve the equation instead."
+    "hint": "Apply LIATE: choose $u=\\ln x$ (Logarithmic outranks Algebraic), $dv=x^2\\,dx$.",
+    "caution": "Choosing $u=x^2$ instead of $u=\\ln x$ violates LIATE and leaves a harder integral, not a simpler one."
   },
   "8": {
+    "hint": "Set up the tabular method exactly as in Worked Example 5, differentiating $x^4$ down to $0$ across five rows.",
+    "caution": "Track the extra sign that appears each time you antidifferentiate $e^{-x}$, on top of the tabular method's own alternating $+,-,+,-$ pattern — these two sign patterns compound."
+  },
+  "9": {
+    "hint": "Apply integration by parts twice, and when the original integral reappears, solve for it algebraically as in Worked Example 6.",
+    "caution": "Don't attempt a third round of integration by parts — recognize when the original integral has reappeared and stop to solve the equation instead."
+  },
+  "10": {
     "hint": "Use FTC Part 2 directly for the first integral; for the second, apply integration by parts with $u=x,\\,dv=f'(x)\\,dx$.",
     "caution": "Don't try to estimate $\\int_0^3 x f'(x)\\,dx$ straight from the graph of $f$ — integration by parts converts it into terms involving $f$ itself, which the graph can estimate."
   },
-  "9": {
-    "hint": "Check whether the power of the function matching $du$ (here $\\cos x\\,dx$) is already isolated, or whether you need to peel one factor off first.",
-    "caution": "A bare $u=\\sin x$ substitution only works directly when exactly one factor of $\\cos x\\,dx$ is left over — for $\\cos^7x$, peel one off first."
-  },
-  "10": {
-    "hint": "Apply the half-angle identity to $\\cos^2x$, then notice the result contains another squared cosine term that needs the identity applied a second time.",
-    "caution": "Don't stop after one application of the half-angle identity — squaring it reintroduces another even power that itself needs simplifying."
-  },
   "11": {
-    "hint": "Check the tangent exponent for oddness, not just the secant exponent, to decide which rule from Page 1 applies.",
-    "caution": "Don't dismiss both rules just because the secant power is odd — the odd-tangent rule only requires the tangent power to be odd."
+    "hint": "Use integration by parts twice with the trig-of-log factor as $u$ each round, exactly like Worked Example 6's $e^x\\sin x$ pattern.",
+    "caution": "A substitution $u=\\ln x$ alone does not finish this integral — it still leaves a factor that itself needs integrating by parts."
   },
   "12": {
-    "hint": "Factor each denominator completely into distinct linear factors before setting up the partial-fraction decomposition.",
-    "caution": "Don't stop factoring early — $x^2-1$ inside $x^3-x$ factors further into $(x-1)(x+1)$, each needing its own partial-fraction term."
+    "hint": "Notice $\\frac1x\\ln x\\,dx$ is exactly $u\\,du$ in disguise if you let $u=\\ln x$.",
+    "caution": "Don't assume every 'product-looking' integrand needs integration by parts — check first whether it's secretly a chain-rule substitution."
   }
 }
