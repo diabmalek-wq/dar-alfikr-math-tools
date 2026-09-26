@@ -1,0 +1,444 @@
+MAT A22: Week 0 Winter 2026
+Week 0: A Review of Matrices and Functions:
+Notations and Proof Techniques
+In linear algebra, there are 3 very common vector spaces that are used.
+1. n-tuples defined over F or F n-tuples
+2. Matrices defined over F or F matrices
+3. Functions defined over F or F valued functions.
+We will be using each of these heavily throughout the course. One of the main challenges students
+face when working with these vector spaces is the notation used to discuss these vectors and answering
+the following "basic" questions.
+- Are two vectors equal?
+- Are two matrices equal?
+- Are two functions equal?
+Note that when we say "basic", we mean foundational. It is not easy. If you build a house, digging
+out and pouring the foundation is one of the most critical steps. It must be done correctly. Similar
+to our mathematics. In this course, we will learn our "basic" linear algebra techniques. It is critical
+for your future success that we understand these techniques, computational and theoretical, as they
+will be used throughout your undergraduate career.
+For each type of vector space, we define the basic operations of addition and scalar multiplication,
+as well as define equality. Then we will complete a collection of problems that introduce "basic"
+proofs and computation problems using these vector spaces.
+© Kielstra 2026 p. 1 Version: 5.0
+
+MAT A22: Week 0 Winter 2026
+0A: n-tuples
+Definition: The Vector Space F^n
+The vector space of F n-tuples is given as follows:
+F^n = {(x1, x2, . . . , xn) : xi in F}.
+The addition on F^n is:
+x + y = (x1, x2, . . . , xn) + (y1, y2, . . . , yn) := (x1 + y1, x2 + y2, . . . , xn + yn)
+The scalar multiplication on F^n is:
+cx = c(x1, x2, . . . , xn) := (cx1, cx2, . . . , cxn)
+Let x, y in F^n. Then x = y if:
+xi = yi for all i.
+Example: Equality of 3-tuples
+Let x = (2, -1, 5), y = (2, -1, 5).
+Verify that x = y using the definition of equality in F^3.
+By definition, x = y if and only if xi = yi for i = 1, 2, 3. Here,
+x1 = 2 = y1, x2 = -1 = y2, x3 = 5 = y3.
+Thus xi = yi for all i, so x = y.
+Example: Equality Involving a Scalar
+Let c = 3 and let x = (1, 0, -2), y = (1/3, 0, -2/3).
+Verify that x = cy using the definition of equality in F^3.
+To show x = cy, we verify xi = (cy)i for i = 1, 2, 3. Since (cy)i = c*yi, we compute:
+(cy)1 = 3 * 1/3 = 1 = x1, (cy)2 = 3 * 0 = 0 = x2, (cy)3 = 3 * (-2/3) = -2 = x3.
+Hence cy = (1, 0, -2) = x, so xi = (cy)i for all i and therefore x = cy.
+© Kielstra 2026 p. 2 Version: 5.0
+
+MAT A22: Week 0 Winter 2026
+Example: Can These Operations Be Computed? (n-tuples)
+Let x = (1, 2, 3), y = (4, 5, 6), z = (1, 2).
+Determine whether each expression can be computed. If it can, compute it. If not, explain why it is
+not defined.
+(a) x + y
+(b) x + z
+(a) The vectors x and y are both elements of F^3, so addition is defined:
+x + y = (1 + 4, 2 + 5, 3 + 6) = (5, 7, 9).
+(b) The vector x is in F^3 while z is in F^2. Since vector addition is only defined for vectors
+of the same dimension, the sum x + z is not defined.
+Example: Distributivity Over Vector Addition
+Let x, y in F^n and let c in F. Prove that c(x + y) = cx + cy.
+You may use the distributivity in the field F: a(b + c) = ab + ac for all a, b, c in F.
+Considering a Generic Element Simplifies the Proof
+In the expanded proof above, every step must explicitly track all coordinates
+x1, x2, . . . , xn and y1, y2, . . . , yn, which leads to long expressions and repeated structure.
+A more concise approach is to work with a generic element—for example, the ith coordinate of a
+vector. By fixing an arbitrary index i and proving that the identity holds for that single coordinate,
+the argument automatically applies to every coordinate at once.
+This strategy reduces repetition, shortens proofs, and makes clear that the result does not depend
+on the dimension n. For this reason, proofs in linear algebra are typically written using generic
+elements rather than fully expanded coordinate expressions.
+Proof (generic-element version): Let i be any index with 1 <= i <= n. We compare the ith entries of both sides.
+(c(x + y))_i = c(x + y)_i (definition of scalar multiplication in F^n)
+= c(xi + yi) (definition of vector addition in F^n)
+= cxi + cyi (distributivity in the field F)
+= (cx)_i + (cy)_i (definition of scalar multiplication in F^n)
+= (cx + cy)_i (definition of vector addition in F^n).
+Since (c(x + y))_i = (cx + cy)_i for all i = 1, . . . , n, it follows that c(x + y) = cx + cy.
+Example: Distributivity Over Scalar Addition
+Let x in F^n and let c, d in F. Prove that (c + d)x = cx + dx.
+Let i be any index with 1 <= i <= n. We compare the ith entries of both sides.
+((c + d)x)_i = (c + d)xi (definition of scalar multiplication in F^n)
+= cxi + dxi (distributivity in the field F)
+= (cx)_i + (dx)_i (definition of scalar multiplication in F^n)
+= (cx + dx)_i (definition of vector addition in F^n).
+Since ((c + d)x)_i = (cx + dx)_i for all i = 1, . . . , n, it follows that (c + d)x = cx + dx.
+Suggested Exercises: F^n
+1. Let x = (1, -1, 2) and y = (0, 3, 4). Compute x + y and 2x.
+2. Let x = (1, 2, 3) and z = (1, 2). Explain why x + z is not defined.
+3. Let x, y in F^n and c in F. Use a generic coordinate to prove that c(x + y) = cx + cy.
+4. Suppose x, y in F^n and xi = yi for all i. What can you conclude? Justify using the definition
+of equality.
+© Kielstra 2026 p. 5 Version: 5.0
+
+MAT A22: Week 0 Winter 2026
+0B: n x k Matrices
+Definition: The Vector Space of n x k Matrices Mn×k(F)
+The vector space of n x k ("n by k") matrices is the set of all rectangular arrays with entries aij in F,
+1 <= i <= n, 1 <= j <= k.
+Let A, B in Mn×k(F). Addition is defined entrywise by (A + B)ij := Aij + Bij.
+Scalar multiplication is defined by (cA)ij := cAij.
+Two matrices A and B are equal if:
+1. they have the same dimensions, and
+2. Aij = Bij for all i and j.
+Example: Equality of Matrices
+Let A = [[1, -2], [0, 3]], B = [[1, -2], [0, 3]].
+The matrices have the same dimensions, and A11=1=B11, A12=-2=B12, A21=0=B21, A22=3=B22.
+Thus Aij = Bij for all i and j, so A = B.
+Example: Equality Involving a Scalar
+Let c = 2 and let A = [[1, -1], [2, 0]], B = [[1/2, -1/2], [1, 0]].
+Verify that A = cB using the definition of equality: (cB)ij = cBij for all i,j gives A = cB.
+Example: Can These Operations Be Computed? (Matrices)
+Let A = [[1,2],[3,4]], B = [[5,6],[7,8]], C = [[1,2,3],[4,5,6]].
+(a) A + B is defined (both 2x2): A + B = [[6,8],[10,12]].
+(b) A + C is not defined: A is 2x2, C is 2x3, dimensions differ.
+Leveraging a Generic Entry
+Instead of tracking every entry aij for all i and j, we fix arbitrary indices i and j and carry out the
+argument for a single entry Aij, obtaining a result that automatically applies to the entire matrix.
+Example: Distributivity Over Matrix Addition
+Let A, B in Mn×k(F) and let c in F. Prove that c(A + B) = cA + cB.
+Let i, j be arbitrary indices. Then
+(c(A + B))ij = c(A + B)ij (definition of scalar multiplication)
+= c(Aij + Bij) (definition of matrix addition)
+= cAij + cBij (distributivity in F)
+= (cA)ij + (cB)ij (definition of scalar multiplication)
+= (cA + cB)ij (definition of matrix addition).
+Since this holds for all i and j, we conclude that c(A + B) = cA + cB.
+Example: Distributivity Over Scalar Addition
+Let A in Mn×k(F) and let c, d in F. Prove that (c + d)A = cA + dA. (analogous derivation)
+Definition: Transpose of a Matrix
+Let A in Mn×k(F) with entries Aij. The transpose of A, denoted A^T, is the k x n matrix defined by
+(A^T)ij := Aji. That is, the transpose is obtained by interchanging the rows and columns of A.
+Example: Computing the Transpose of a Matrix
+Let A = [[1, -2, 0], [3, 4, 5]] (2x3). Then A^T = [[1,3],[-2,4],[0,5]] (3x2).
+Example: Transpose Distributes Over Addition
+Let A, B in Mn×k(F). Prove that (A + B)^T = A^T + B^T.
+Let i, j be arbitrary indices. We compare the (i, j)th entries of both sides.
+((A + B)^T)ij = (A + B)ji (definition of transpose)
+= Aji + Bji (definition of matrix addition)
+= (A^T)ij + (B^T)ij (definition of transpose)
+= (A^T + B^T)ij (definition of matrix addition).
+Since this holds for all i and j, we conclude that (A + B)^T = A^T + B^T.
+Example: Can These Transpose Expressions Be Computed?
+Let A = [[1,2,3],[4,5,6]] (2x3), B = [[1,0],[-1,2],[3,1]] (3x2), c = 2.
+(a) (A^T + B)^T : A^T is 3x2, B is 3x2, sum defined. A^T = [[1,4],[2,5],[3,6]], A^T+B = [[2,4],[1,7],[6,7]],
+    (A^T+B)^T = [[2,1,6],[4,7,7]].
+(b) A + B^T : B^T is 2x3, A is 2x3, sum defined. B^T = [[1,-1,3],[0,2,1]]. A+B^T = [[2,1,6],[4,7,7]].
+(c) (cB)^T : cB = [[2,0],[-2,4],[6,2]], (cB)^T = [[2,-2,6],[0,4,2]].
+(d) A^T + B^T : A^T is 3x2, B^T is 2x3 -- dimensions differ, sum NOT defined.
+Suggested Exercises: Matrices
+Let A = [[1,2],[3,4]], B = [[0,-1],[2,5]], C = [[1,2,3],[4,5,6]], and let c in F.
+1. Compute A + B and cA.
+2. Explain why A + C is not defined.
+3. Compute A^T and C^T.
+4. Determine whether A^T + B can be computed. If so, compute it. If not, explain why.
+5. Determine whether A + B^T can be computed. If so, compute it. If not, explain why.
+6. Let A, B in Mn×k(F) and let c in F. Prove that c(A + B) = cA + cB.
+7. Let A, B in Mn×k(F). Prove that (A + B)^T = A^T + B^T.
+8. Suppose X, Y in Mn×k(F) and Xij = Yij for all i and j. What can you conclude?
+© Kielstra 2026 p. 11 Version: 5.0
+
+MAT A22: Week 0 Winter 2026
+0C: F-Valued Functions
+Definition: The Vector Space of Functions F(F)
+The vector space of F-valued functions is given as follows: F(F) = {f : F -> F}.
+Let f, g in F(F). Addition is defined by (f + g)(x) := f(x) + g(x).
+Scalar multiplication is defined by (cf)(x) := c f(x).
+Two functions f and g are equal if f(x) = g(x) for all x in F.
+Example: Equality of Functions
+Let f(x) = 2x + 1, g(x) = 2x + 1. For every x in F, f(x) = 2x+1 = g(x), so f = g.
+Example: Equality Involving a Scalar
+Let c = 2 and define f(x) = 2x, g(x) = x. Since (cg)(x) = c*g(x) = 2x = f(x) for all x, f = cg.
+Leveraging a Generic Input
+By fixing an arbitrary x in F and proving the desired identity for that input, the result automatically
+holds for the entire function. Function equality is determined pointwise.
+Example: Distributivity of Scalar Multiplication
+Let f, g in F(F) and let c in F. Prove that c(f + g) = cf + cg.
+Let x in F be arbitrary. Then
+(c(f + g))(x) = c(f + g)(x) (definition of scalar multiplication)
+= c(f(x) + g(x)) (definition of function addition)
+= cf(x) + cg(x) (distributivity in F)
+= (cf)(x) + (cg)(x) (definition of scalar multiplication)
+= (cf + cg)(x) (definition of function addition).
+Since this holds for all x in F, we conclude that c(f + g) = cf + cg.
+Example: Distributivity Over Scalar Addition
+Let f in F(F) and let c, d in F. Prove that (c + d)f = cf + df. (analogous derivation)
+Definition: Composition of Functions
+Let f, g in F(F). The composition of f and g, denoted f ∘ g, is the function defined by
+(f ∘ g)(x) := f(g(x)).
+Example: Computing a Composition
+Let f(x) = x^2, g(x) = x + 1. Then (f ∘ g)(x) = f(g(x)) = f(x+1) = (x+1)^2.
+Example: Composition Distributes Over Addition
+Let f, g, h in F(F). Prove that (f + g) ∘ h = f ∘ h + g ∘ h.
+Let x in F be arbitrary. We compare the values of both sides at x.
+((f + g) ∘ h)(x) = (f + g)(h(x)) (definition of composition)
+= f(h(x)) + g(h(x)) (definition of function addition)
+= (f ∘ h)(x) + (g ∘ h)(x) (definition of composition)
+= (f ∘ h + g ∘ h)(x) (definition of function addition).
+Since this holds for all x in F, we conclude that (f + g) ∘ h = f ∘ h + g ∘ h.
+Suggested Exercises: F-Valued Functions
+1. Let f(x) = x^2 + 1 and g(x) = 2x. Compute (f + g)(x) and (3f)(x).
+2. Let f(x) = x and g(x) = |x|. Are f and g equal? Justify using the definition of equality.
+3. Let f, g in F(F) and c in F. Prove c(f + g) = cf + cg.
+4. Give an example of two different functions that agree at one input but are not equal.
+© Kielstra 2026 p. 14 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Week 1: A Quick Tour of Number Systems, Fields and Vector Spaces
+Algebra is about definitions, theorems, proofs, and STRUCTURE. In algebra, we explore structures
+that emerge from a set of axioms. An axiom is a definition -- axioms are the basic elements of
+mathematical structures.
+Definition: Binary Operations
+A binary operation is a function ⊞ : X × X → X with two inputs and one output.
+- The usual addition on real numbers + : R × R → R: 2+3 = 3+2 = 5.
+- The usual multiplication · : R × R → R: 3·2 = 2·3 = 6.
+Definition: Commutative and Associative
+An operation ⊞ : X × X → X is commutative if, for all x, y in X: x ⊞ y = y ⊞ x.
+An operation ⊞ : X × X → X is associative if, for all x, y, z in X: x ⊞ (y ⊞ z) = (x ⊞ y) ⊞ z.
+Non-Commutative operators: Division (2/3 ≠ 3/2), Subtraction (2-3 ≠ 3-2), Exponents (2^3 ≠ 3^2).
+Non-Associative operators: Subtraction ((1-2)-3 ≠ 1-(2-3)), Exponents ((2^3)^4 ≠ 2^(3^4)).
+Remark: Number systems -- a collection of numbers with an operator does not always have nice
+properties. Higher-level math classes explore Groups, Rings, Ideals, Fields. This class heavily uses
+a field.
+© Kielstra 2026 p. 2 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+1A: Scalars and Fields
+Definition: The Axioms of a Field
+A field is a set F together with two binary operations ⊞ : F × F → F and ⊡ : F × F → F called
+addition and multiplication such that the following axioms hold:
+A1. ⊞ is associative.
+A2. ⊞ is commutative.
+A3. There exists an additive identity 0-hat in F and multiplicative identity 1 in F such that:
+0-hat ⊞ x = x and 1 ⊡ x = x for all x in F.
+A4. For each x in F there is an additive inverse x' in F such that: x ⊞ x' = 0-hat.
+A5. ⊡ is associative.
+A6. ⊡ is commutative.
+A7. For each x in F except 0-hat there is a multiplicative inverse x' in F such that: x ⊡ x' = 1.
+A8. Multiplication is distributive over addition, i.e for all a, b, c in F: a ⊡ (b ⊞ c) = a ⊡ b ⊞ a ⊡ c.
+Their order, numbering, and names are important. In this class, two fields are used: Complex Numbers
+and Real Numbers.
+© Kielstra 2026 p. 3 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Complex numbers
+Complex numbers originate from trying to solve: what number, when squared, is equal to -1?
+Definition: The imaginary number i
+i = sqrt(-1). While i is not a real number it plays a very important role within mathematics.
+Definition: Complex Numbers
+Complex numbers are numbers of the form z = a + bi, where a, b in R. Here, a = Re(z) is the real
+part and b = Im(z) is the imaginary part. Visualized on a Cartesian plane (Re(z) horizontal axis,
+Im(z) vertical axis).
+Let z1 = a + bi, z2 = c + di.
+Addition: z1 + z2 = (a+c) + (b+d)i.
+Multiplication: z1 × z2 = (ac - bd) + (ad + bc)i (by expanding).
+Definition: Defining Complex Addition and Multiplication using real operations
+z1 + z2 := (a + c) + (b + d)i
+z1 × z2 := (ac − bd) + (ad + bc)i
+where the operators inside the brackets are standard real-number operations.
+Suggested Exercise: prove that the complex numbers, with standard addition and multiplication,
+form a field.
+Definition: The additive inverse of complex numbers
+Let z = a + bi. Then −z := (−a) + (−b)i.
+Example: Verify z + (−z) = 0 for all z in C.
+z + (−z) = (a+bi) + (−a + (−b)i) = (a + (−a)) + (b + (−b))i = 0 + 0i.
+Remark: 0 := 0 + 0i, 1 := 1 + 0i.
+© Kielstra 2026 p. 5 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Remark: Subtraction is the addition of the additive inverse.
+For real numbers: a − b = a + (−b). Same for complex: z1 − z2 = z1 + (−z2) = (a−c) + (b−d)i.
+Definition: Subtraction of complex numbers
+z1 − z2 := (a − c) + (b − d)i.
+Remark: Division is not so easy -- we cannot divide directly, only via multiplication by an inverse.
+Let z1 = a + bi, a,b not both 0.
+z1^-1 = 1/z1 = 1/(a+bi) = (a - b*sqrt(-1)) / (a^2 - b^2*(sqrt(-1))^2) = a/(a^2+b^2) + (-b/(a^2+b^2))i
+(derived by multiplying numerator and denominator by the conjugate a - b*sqrt(-1)).
+© Kielstra 2026 p. 6 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Definition: The multiplicative inverse of complex numbers
+Let z1 = a + bi, a and b not both 0. Then z1^-1 := (a/(a^2+b^2)) + (−b/(a^2+b^2))i.
+Example: Verify z1 × z1^-1 = 1.
+(a+bi) × ((a/(a^2+b^2)) + (−b/(a^2+b^2))i)
+= (a*(a/(a^2+b^2)) − b*(−b/(a^2+b^2))) + (a*(−b/(a^2+b^2)) + b*(a/(a^2+b^2)))i
+= ((a^2+b^2)/(a^2+b^2)) + ((−ab+ab)/(a^2+b^2))i
+= 1 + 0i.
+Remark: similar to defining subtraction via the additive inverse, division is defined via the
+multiplicative inverse -- this needs the complex conjugate notation.
+© Kielstra 2026 p. 7 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Definition: Complex Conjugate
+Let z = a + bi. The complex conjugate of z, denoted z* or z-bar, is defined as z-bar := a − bi.
+Definition: Modulus |z|
+The modulus of a complex number is to complex numbers as the absolute value is to real numbers --
+both measure distance to zero. Using the Pythagorean Theorem on the Cartesian plane:
+|z| = sqrt(Re(z)^2 + Im(z)^2).
+Definition: Dividing complex numbers
+Let z1, z2 in C. z1/z2 := z1 × (z2)^-1 = (z1 * z2-bar) / (z2 * z2-bar) = (z1 * z2-bar) / |z2|^2.
+Remark: Throughout this course we use both real and complex vector spaces. Complex numbers,
+combined with addition and multiplication, form a field just like the real numbers. Comfort with
+complex arithmetic will help with systems of equations (Week 3).
+© Kielstra 2026 p. 8 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+1B: Vectors and Vector Spaces
+Definition: The Axioms of a Vector Space
+A vector space is a set V together with a field F and two binary operations ⊞ : V × V → V and
+⊡ : F × V → V called vector addition and scalar multiplication such that the following axioms hold:
+A1. ⊞ is associative.
+A2. ⊞ is commutative.
+A3. There exists an element 0 in V such that: 0 ⊞ x = x for all x in V. We call 0 the zero vector of V.
+A4. For each x in V there is an additive inverse x' in V such that: x ⊞ x' = 0.
+A5. For all x and y in V and c in F, scaling by c distributes over addition:
+c ⊡ (x ⊞ y) = (c ⊡ x) ⊞ (c ⊡ y).
+A6. For all x in V and c and d in F, field addition in F distributes over scalar multiplication in V:
+(c + d) ⊡ x = (c ⊡ x) ⊞ (d ⊡ x).
+A7. For all x in V and c and d in F, ⊡ associates with scalar multiplication on F:
+(cd) ⊡ x = c ⊡ (d ⊡ x).
+A8. For all x in V, we have: 1 ⊡ x = x, the 1 is the multiplicative identity from F.
+Note: These axioms have been adapted from Little and Damiano p.7 to use ⊞ and ⊡.
+© Kielstra 2026 p. 9 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Remark: Vector Spaces defined over a field
+Vector spaces are said to be "defined over a field" because vector spaces use the addition operator
+from a field to define vector addition, and scalar multiplication is defined using the multiplication
+operator from the field. We classify a vector space by the field over which it is defined.
+Definition: Complex vector spaces
+A complex vector space (C-vector space) is a vector space where the field is the complex numbers.
+Definition: Real vector spaces
+A real vector space (R-vector space) is a vector space where the field is the real numbers.
+Definition: The Vector Space R^n
+R^n = {(x1, x2, . . . , xn) : xi in R}
+Addition: (x1,...,xn) + (y1,...,yn) := (x1+y1, ..., xn+yn).
+Scalar multiplication: c(x1,...,xn) := (cx1,...,cxn).
+x = y if xi = yi for all i.
+Note: Checking Axioms 1-8 for R^n is a good (but long) exercise. All the proofs essentially come
+down to "this property is true because the real numbers form a field." The proof that R is a field is
+highly technical and beyond the scope of this course.
+© Kielstra 2026 p. 10 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Proof technique: Direct Proof
+A Direct Proof is proving a statement is true or false using established definitions, axioms, lemmas
+or theorems without making any further assumptions.
+Example: Calculating in R^3
+x = (1, 2, 3) + 2((1, 1, 1) − (3, 2, 1))
+= (1, 2, 3) + 2(1−3, 1−2, 1−1)
+= (1, 2, 3) + 2(−2, −1, 0)
+= (1, 2, 3) + (−4, −2, 0)
+= (−3, 0, 3)
+y = 1(1,0,0) + 2(0,1,0) + 3(0,0,1) = (1,2,3)
+Remark: "Nice Vectors" -- {(1,0,0),(0,1,0),(0,0,1)} are "nice" because every vector in R^3 has a
+"nice representation": (x,y,z) = x(1,0,0) + y(0,1,0) + z(0,0,1). This idea will be important later
+for basis and dimension.
+Example: The Geometry of Vectors in R^2
+Sketch (1,0), (0,1), (1,2): (1,2) = 1(1,0) + 2(0,1) -- two vertical unit vectors and one horizontal
+unit vector visually.
+Example: An Algebra Question in R^2
+Can (−1, 1) be written as a sum of multiples of (1, 2) and (1, 1)?
+(−1, 1) = a(1, 2) + b(1, 1) = (a+b, 2a+b) ⇔ −1 = a+b, 1 = 2a+b.
+Solving: (a, b) = (2, −3). Verify: (−1,1) = 2(1,2) − 3(1,1) = (2,4) + (−3,−3) = (−1,1). ✓.
+Remark: This is a major theme -- systems of equations (Week 3).
+© Kielstra 2026 p. 14 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Definition: The Vector Space of Functions F(R)
+F(R) = {f : R → R}. Addition: (f+g)(x) := f(x)+g(x). Scalar multiplication: (cf)(x) := cf(x).
+Equality: f = g if f(x) = g(x) for all x in R.
+Remark: For general functions to be equal, domains and codomains must also match; since all
+real-valued functions share domain/codomain R by definition, this is always satisfied.
+Example: Show that F(R) satisfies A6 for vector spaces.
+Let c in R and f, g in F(R). Let x in R.
+(c ⊡ (f ⊞ g))(x) = c ⊡ (f ⊞ g)(x) (definition of scaling functions)
+= c(f(x) + g(x)) (definition of function addition)
+= cf(x) + cg(x) (real multiplication distributes over real addition)
+= (c ⊡ f)(x) + (c ⊡ g)(x) (definition of scaling functions)
+= (c ⊡ f ⊞ c ⊡ g)(x) (definition of function addition).
+As this holds for all x in R, (c ⊡ (f ⊞ g)) = (c ⊡ f ⊞ c ⊡ g).
+© Kielstra 2026 p. 15 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Definition: The Vector Space of n × k Real Matrices (Mn×k(R))
+Entries aij in R. Addition: (A+B)ij := Aij+Bij. Scalar multiplication: (cA)ij := cAij.
+Equality: (1) same dimensions, (2) Aij = Bij for all i,j.
+Proof technique: Showing Equality
+Scalars: use equality of real numbers. Vectors/matrices: entries equal and dimensions same.
+Functions: for all inputs in the domain, outputs the same. Sets: A = B iff A ⊆ B and B ⊆ A.
+Suggested Exercise: n-tuples, functions, and matrices are all examples of vector spaces -- prove each
+of these statements to yourself.
+© Kielstra 2026 p. 16 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Remark: The Importance of Uniqueness
+Uniqueness is a major theme in algebra: define "an" object with a property, then prove it is "the"
+only object with that property.
+Proof technique: Uniqueness
+The general structure of a uniqueness proof: (1) assume two objects have the same property, (2)
+show the objects must be equal.
+Example: A Simple Uniqueness Proof (zero vector)
+A3 states: there exists 0 in V such that 0 ⊞ x = x for all x in V.
+Proof. Assume there are two zero vectors 0 and 0' (each satisfying A3).
+0' = 0 ⊞ 0' (by A3 for 0, putting x = 0')
+= 0' ⊞ 0 (by commutativity of ⊞, A2)
+= 0 (by A3 for 0', putting x = 0).
+Thus the two zero vectors are in fact the same vector.
+© Kielstra 2026 p. 17 Version: 5.0
+
+MAT A22: Week 1 Winter 2026
+Example: A Obvious (?) Fact
+If z-vec in V then 0*z-vec = 0. (Seems obvious -- does it follow from the axioms?)
+Proof. First, observe that
+0*z-vec = (0 + 0)*z-vec (adding the zero element in the field to 0)
+= 0*z-vec ⊞ 0*z-vec (distribution of scalar multiplication over field addition, A6).
+Let (0*z-vec)' be the additive inverse of 0*z-vec. Adding it to both sides:
+0*z-vec ⊞ (0*z-vec)' = (0*z-vec ⊞ 0*z-vec) ⊞ (0*z-vec)'
+⇔ 0 = (0*z-vec ⊞ 0*z-vec) ⊞ (0*z-vec)' (0*z-vec' is the additive inverse of 0*z-vec)
+= 0*z-vec ⊞ (0*z-vec ⊞ (0*z-vec)') (⊞ is associative)
+= 0*z-vec ⊞ 0 (0*z-vec' is the additive inverse of 0*z-vec)
+= 0 ⊞ 0*z-vec (vector addition is commutative)
+= 0*z-vec (0 is the zero vector)
+Therefore, 0*z-vec = 0-vec in ANY vector space.
+© Kielstra 2026 p. 18 Version: 5.0
+
+MAT A22: Week 2 Winter 2026
+Example: Let x in V. Prove that (−1)x is an additive inverse of x.
+Proof.
+x-vec ⊞ (−1)x-vec = 1*x-vec ⊞ (−1)x-vec (by A8)
+= (1 + (−1))*x-vec (by A6)
+= 0*x-vec
+= 0-vec (by our previous result)
+Thus, (−1)x-vec is an additive inverse of x-vec.
+Suggested Exercise: Additive Inverse is unique. We have shown that the zero element is unique. A
+similar argument can be applied to show that the additive inverse is also unique.
+Functions and Matrices defined over other fields
+Thus far, we have worked with matrices and functions defined over the real numbers. Let F be a
+field. We define the set of functions over F to be the collection of all functions whose inputs and
+outputs lie in F: F(F) = { f : F → F }. Similarly, we define the set of matrices over F to be the
+collection of all matrices whose entries lie in F, denoted Mm×n(F). When F = R we obtain
+real-valued functions and real matrices, and when F = C we obtain complex-valued functions and
+complex matrices. Unless otherwise stated, we work over a general field F.
+© Kielstra 2026 p. 19 Version: 5.0
