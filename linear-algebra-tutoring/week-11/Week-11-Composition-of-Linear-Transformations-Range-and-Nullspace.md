@@ -119,8 +119,8 @@ $$\operatorname{range}(T) = \operatorname{col}(M) \qquad \text{and} \qquad \oper
 
 Consequently:
 
-- $\operatorname{rank}(M) := \operatorname{rank}(T) = \dim(\operatorname{col}(M)) = $ the number of pivots in $\operatorname{rref}(M)$.
-- $\operatorname{nullity}(M) := \operatorname{nullity}(T) = \dim(\operatorname{null}(M)) = $ the number of free-variable columns in $\operatorname{rref}(M)$.
+- $\operatorname{rank}(M) := \operatorname{rank}(T) = \dim(\operatorname{col}(M))$ = the number of pivots in $\operatorname{rref}(M)$.
+- $\operatorname{nullity}(M) := \operatorname{nullity}(T) = \dim(\operatorname{null}(M))$ = the number of free-variable columns in $\operatorname{rref}(M)$.
 
 This means any question about the range or null space of a linear transformation can be answered by row-reducing its standard matrix instead.
 
