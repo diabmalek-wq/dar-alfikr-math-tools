@@ -30,3 +30,14 @@
 1. **Page 1** — Introduction, rules, key facts, definitions (verbatim from source, cited).
 2. **Pages 2–3** — Fully solved worked examples.
 3. **Pages 4–5** — Unsolved practice problems/questions (answer key provided separately at the end of the file, not inline, so the student works blind).
+
+**Delivery format:** each week's `.md` file is the committed source of record. The actual
+deliverable handed to the tutor/student is a **PDF**, rendered from that source with:
+```
+pandoc week-0N/Week-0N-<Topic-Slug>.md -o Week-0N.pdf --pdf-engine=xelatex \
+  -V geometry:margin=1in -V fontsize=11pt -V colorlinks=true -V mainfont="DejaVu Serif"
+```
+`xelatex` (not `pdflatex`) is required because the source files use literal Unicode
+characters (×, –, —, ✓) that `pdflatex`'s default font can't render; `DejaVu Serif` covers
+all of them. The rendered PDF is not committed to the repo (it's a build artifact of the
+`.md` source) — regenerate and re-deliver it whenever the source changes.
