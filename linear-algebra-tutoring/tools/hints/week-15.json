@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Check the single fastest disqualifying axiom first: does the set contain the zero vector (the zero matrix) at all?",
+    "caution": "Don't spend time checking closure under addition or scalar multiplication before checking for $\\vec 0$ - if $\\vec 0$ isn't in the set, none of the other axioms matter."
+  },
+  "2": {
+    "hint": "Row-reduce the matrix whose columns are $\\vec v_1,\\vec v_2,\\vec v_3$ and count the pivots before answering either part.",
+    "caution": "Answer part (b) using the independence result from part (a) rather than re-deriving the span size separately - three independent vectors in $\\mathbb{R}^3$ automatically span all of it."
+  },
+  "3": {
+    "hint": "Set up the augmented matrix for all three equations at once and row-reduce systematically, tracking one variable elimination per step.",
+    "caution": "After finding $x,y,z$, plug them back into all three original equations, not just one, to catch an arithmetic slip."
+  },
+  "4": {
+    "hint": "For part (a), remember the operation that produces a vector perpendicular to two given vectors; for part (b), use the projection formula with the correct vector in the denominator.",
+    "caution": "A normal vector to a plane spanned by two vectors comes from their cross product, not from solving a system or picking an arbitrary perpendicular-looking vector."
+  },
+  "5": {
+    "hint": "Set up $c_1\\vec b_1+c_2\\vec b_2=\\vec v$ as a linear system in $c_1,c_2$ and solve.",
+    "caution": "Match each coefficient to its correct basis vector in order - after solving, reconstruct $\\vec v$ from $[\\vec v]_B$ and $B$ to double-check."
+  },
+  "6": {
+    "hint": "Recall that the columns of $[T]$ are exactly $T(\\vec e_1)$ and $T(\\vec e_2)$, in that order; then use the $2\\times2$ inverse formula for part (b).",
+    "caution": "Keep the images of $\\vec e_1$ and $\\vec e_2$ in the correct column order when building $[T]$ - swapping them gives the wrong matrix, not just a relabeled one."
+  },
+  "7": {
+    "hint": "Compute $[S][T]$ and $[T][S]$ separately using standard matrix multiplication, then compare the two results entry by entry.",
+    "caution": "Don't generalize from this one pair of matrices to a claim that composition always commutes - matrix multiplication is non-commutative in general, and this pair is a special case."
+  },
+  "8": {
+    "hint": "Look for row dependencies (one row a multiple of another) before doing any row reduction - that tells you the rank immediately.",
+    "caution": "Use Rank-Nullity to predict $\\dim(\\operatorname{null}(T))$ first, then verify by actually solving for the null space - don't skip the verification step even if the shortcut feels certain."
+  },
+  "9": {
+    "hint": "Expand the determinant along the row or column that already has the most zeros in it.",
+    "caution": "Watch the alternating sign pattern in cofactor expansion carefully - a sign error on the middle term is the most common mistake here."
+  },
+  "10": {
+    "hint": "Find the characteristic polynomial first, get the two eigenvalues, and only then compute each eigenspace by finding $\\operatorname{null}(B-\\lambda I)$.",
+    "caution": "Once you see two distinct eigenvalues for a $2\\times2$ matrix, diagonalizability is guaranteed - but you still need to compute both eigenvectors to actually write down $P$."
+  },
+  "11": {
+    "hint": "For each statement, try to recall the exact theorem it's testing, or construct a quick counterexample if you suspect it's false.",
+    "caution": "For (e), don't assume that diagonalizability of $A$ and $B$ separately carries over to their product $AB$ - that only works reliably when $A$ and $B$ share the same eigenvectors."
+  },
+  "12": {
+    "hint": "Read the eigenvalues and algebraic multiplicities straight off the factored characteristic polynomial, then use Rank-Nullity on $A-2I$ to get the geometric multiplicity of $\\lambda=2$.",
+    "caution": "When evaluating $\\operatorname{char}(A)$ at $\\lambda=0$ to get $\\det(A)$, don't drop the leading minus sign in front of the polynomial - it flips the final answer's sign."
+  }
+}

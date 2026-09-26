@@ -1,0 +1,46 @@
+{
+  "1": {
+    "hint": "Write down the matrix of $T$ first, then apply the $2\\times2$ determinant formula and take the absolute value.",
+    "caution": "The volume is the unsigned value $\\lvert\\det\\rvert$ - don't leave a negative sign in your final volume answer."
+  },
+  "2": {
+    "hint": "Plot $\\vec e_1,\\vec e_2$ and then $T(\\vec e_1),T(\\vec e_2)$ on the same kind of picture, and compare which way you'd rotate to get from the first vector to the second in each pair.",
+    "caution": "This is a geometric question - don't just recompute the determinant algebraically and call it done; actually draw both pairs of vectors and compare their rotational sense."
+  },
+  "3": {
+    "hint": "Recall the two shortcuts: every rotation has determinant $+1$, and every reflection has determinant $-1$, regardless of the angle or line.",
+    "caution": "Don't mix up which one gets $+1$ and which gets $-1$ - a rotation preserves orientation ($+1$), a reflection reverses it ($-1$)."
+  },
+  "4": {
+    "hint": "Track the determinant multiplier for each row operation (swap, scale, add-a-multiple) as you row reduce to $I$, then multiply them all together.",
+    "caution": "When you scale a row by dividing, the elementary matrix's determinant is that same factor - don't accidentally use its reciprocal."
+  },
+  "5": {
+    "hint": "Augment the matrix with copies of its first two columns before reading off the diagonal and anti-diagonal products.",
+    "caution": "Make sure you copy the *first two* columns, not the last two, onto the right side before summing the diagonals."
+  },
+  "6": {
+    "hint": "Write out all five columns (three original plus two repeated) before summing anything, so you don't lose track of which entries multiply together.",
+    "caution": "Don't skip re-copying the columns and try to read the diagonals directly off the $3\\times3$ matrix - it's easy to grab the wrong entries that way."
+  },
+  "7": {
+    "hint": "Before expanding fully, check whether one row is a multiple of another - that alone tells you the determinant.",
+    "caution": "You don't need to finish the full cofactor expansion if you spot that row 2 is exactly twice row 1 - that dependency alone gives $\\det=0$."
+  },
+  "8": {
+    "hint": "Build the matrix with the two given vectors as columns, in the order given, before computing the determinant.",
+    "caution": "Keep the vectors in their given order as columns - swapping which vector goes in which column flips the sign of the determinant and can flip your left/right-handed answer."
+  },
+  "9": {
+    "hint": "Think about what you already know about products of invertible matrices, and about the inverse of an invertible matrix - you don't need to pick specific numbers.",
+    "caution": "Don't try to construct an explicit example matrix - this is a general argument about *any* matrix built from elementary matrices, so reason from the definitions, not from numbers."
+  },
+  "10": {
+    "hint": "Write out $S$'s actual $3\\times3$ matrix and compute $\\det(S)$ directly by cofactor expansion, then compare that number to what each person claimed.",
+    "caution": "Determinant being $0$ and determinant being *undefined* are two completely different things - every square matrix has a determinant, whether or not it's invertible."
+  },
+  "11": {
+    "hint": "Think of a small example: can two rows be proportional to each other without either one being all zeros?",
+    "caution": "Don't assume $\\det=0$ forces a zero row - linear dependence between rows is the real condition, and a zero row is just one special case of it."
+  }
+}

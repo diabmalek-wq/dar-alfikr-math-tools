@@ -1,0 +1,46 @@
+{
+  "1": {
+    "hint": "For each transformation, pick a vector along any special direction (the stretch's whole plane, the line of projection/reflection, the line perpendicular to it) and see whether applying the transformation just scales it.",
+    "caution": "A rotation by any angle that isn't a multiple of $180°$ has no real eigenvectors at all - don't try to force an answer for part (b)."
+  },
+  "2": {
+    "hint": "Set up $\\det(A-\\lambda I)$ as a $2\\times2$ determinant first, then expand and simplify before trying to factor.",
+    "caution": "Expand $(1-\\lambda)(-\\lambda)$ carefully - it equals $-\\lambda+\\lambda^2$, not $\\lambda-\\lambda^2$."
+  },
+  "3": {
+    "hint": "Compute the eigenvalues of $B$ directly, then recall what Week 13 told you about $\\det(A)$ versus $\\det(A^T)$ before computing $B^T$'s eigenvalues from scratch.",
+    "caution": "Don't assume transposing changes the eigenvectors' relationship to the eigenvalues - $A$ and $A^T$ share eigenvalues but generally have different eigenvectors."
+  },
+  "4": {
+    "hint": "Expand $(2-\\lambda)^2-1$ fully into a quadratic in $\\lambda$ before trying to factor it.",
+    "caution": "$(2-\\lambda)^2$ is $4-4\\lambda+\\lambda^2$, not $4-\\lambda^2$ - don't drop the middle term."
+  },
+  "5": {
+    "hint": "Find each eigenvalue's algebraic multiplicity from the characteristic polynomial first, then separately compute $\\operatorname{null}(A-\\lambda I)$ to get the geometric multiplicity.",
+    "caution": "For part (b), don't assume a repeated eigenvalue automatically has a deficient eigenspace - check the actual null space, since $3I$ is the extreme case where every vector is an eigenvector."
+  },
+  "6": {
+    "hint": "Reuse the eigenvalues and eigenspaces you already found in Problem 5 - diagonalization is just assembling $P$ from eigenvectors and $D$ from matching eigenvalues.",
+    "caution": "Keep the order of columns in $P$ matched to the order of eigenvalues in $D$ - the $i$th column of $P$ must correspond to the $i$th diagonal entry of $D$."
+  },
+  "7": {
+    "hint": "The simplest correct answer is a diagonal matrix - just choose how many $2$'s and how many $7$'s appear on the diagonal so that they total $4$.",
+    "caution": "Don't add off-diagonal entries to make the matrix look more interesting - that risks changing the eigenvalues or breaking diagonalizability, and isn't required by the question."
+  },
+  "8": {
+    "hint": "This matrix is upper triangular, so read its eigenvalues straight off the diagonal, then check the eigenspace dimension for the repeated one.",
+    "caution": "Finding the eigenvalues is not the end of the problem - you must still compute the eigenspace of the repeated eigenvalue and compare its dimension to the algebraic multiplicity."
+  },
+  "9": {
+    "hint": "For each statement, try to recall or construct a small example (or a definition) that settles it, rather than guessing from intuition alone.",
+    "caution": "For (c) and (d), the dimension's parity matters - don't assume that because odd-dimensional real matrices always have a real eigenvalue, even-dimensional ones must too."
+  },
+  "10": {
+    "hint": "The roots of $\\operatorname{char}(E)$ are given directly by its factored form - read them off, then use $\\operatorname{char}(E)$ at $\\lambda=0$ to test invertibility.",
+    "caution": "Be careful with the sign convention: $\\operatorname{nullity}(E-cI)$ tests whether $+c$ is an eigenvalue, while $\\operatorname{nullity}(E+cI)$ tests whether $-c$ is - mixing these up is the most common mistake here."
+  },
+  "11": {
+    "hint": "Go back to the definition of eigenvalue: what does it mean for $\\lambda$ to actually be an eigenvalue of $A$ in the first place?",
+    "caution": "Don't confuse a small geometric multiplicity (which can be $1$) with a geometric multiplicity of $0$ - if $\\lambda$ is genuinely an eigenvalue, at least one eigenvector for it must exist."
+  }
+}
