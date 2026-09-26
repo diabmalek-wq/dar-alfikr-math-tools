@@ -19,7 +19,9 @@ const {
 } = require("docx");
 
 const A = (f) => path.join(__dirname, f);
-const MATH = JSON.parse(fs.readFileSync(A("math_pre/_index.json"), "utf8"));
+const G = (f) => path.join(__dirname, "..", "generators", f);
+const LOGOS = (f) => path.join(__dirname, "..", "assets", "logos", f);
+const MATH = JSON.parse(fs.readFileSync(G("math_pre/_index.json"), "utf8"));
 
 const TEAL_DEEP = "0E4F4C", TEAL = "17A199", TEAL_TINT = "EAF6F5",
       TEAL_TINT2 = "CFEBE8", MAROON = "AD2A22", CHARCOAL = "222E2D",
@@ -58,7 +60,7 @@ const eqRun = (key, k = 1.0) => {
   const m = MATH[key];
   if (!m) throw new Error("missing expression " + key);
   return new ImageRun({
-    data: fs.readFileSync(A(m.file)),
+    data: fs.readFileSync(G(m.file)),
     transformation: { width: Math.round(m.win * k * 96), height: Math.round(m.hin * k * 96) },
   });
 };
@@ -82,10 +84,10 @@ function header() {
     columnWidths: [4680, 4680], width: { size: W, type: WidthType.DXA },
     rows: [new TableRow({ children: [
       cell([new Paragraph({ children: [new ImageRun({
-        data: fs.readFileSync(A("dept_logo_doc.png")),
+        data: fs.readFileSync(LOGOS("dept_logo.png")),
         transformation: { width: 150, height: 50 } })] })], { w: 4680, plain: true }),
       cell([new Paragraph({ alignment: AlignmentType.RIGHT, children: [new ImageRun({
-        data: fs.readFileSync(A("school_logo_doc.png")),
+        data: fs.readFileSync(LOGOS("school_logo.png")),
         transformation: { width: 50, height: 50 } })] })], { w: 4680, plain: true }),
     ] })],
   })] });
