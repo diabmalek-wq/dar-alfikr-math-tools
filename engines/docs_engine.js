@@ -24,16 +24,22 @@ function Paragraph(o) {
 }
 
 const A = (f) => path.join(__dirname, f);
+// Generator output (math_wN_doc/, graphs_wN/) lives under generators/, one
+// level up from this engine — never inside engines/ itself.
+const G = (f) => path.join(__dirname, "..", "generators", f);
 
 const TEAL_DEEP = "0E4F4C", TEAL = "1E8F89", TEAL_TINT = "E7F5F4",
       TEAL_TINT2 = "CFEBE8", MAROON = "8A1B17", CHARCOAL = "222E2D",
       MUTED = "5C6E6C", LINE = "C9DEDC";
 const HEAD = "Cambria", BODY = "Calibri";
 
-const deptLogo = fs.readFileSync(A("dept_logo_doc.png"));
-const schoolLogo = fs.readFileSync(A("school_logo_doc.png"));
+// Plain-colour logos and the Cognia badge live in assets/logos/ (the
+// department's single source for branding, per docs/HOUSE-RULES.md).
+const LOGOS = (f) => path.join(__dirname, "..", "assets", "logos", f);
+const deptLogo = fs.readFileSync(LOGOS("dept_logo.png"));
+const schoolLogo = fs.readFileSync(LOGOS("school_logo.png"));
 // Cognia accreditation badge, top CENTRE of every page (9 Sep 2026).
-const cogniaBadge = fs.readFileSync(A("cognia_badge_doc.png"));
+const cogniaBadge = fs.readFileSync(LOGOS("cognia_badge.png"));
 
 const NB = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
 const noBorders = { top: NB, bottom: NB, left: NB, right: NB };
@@ -51,15 +57,15 @@ try { PBL_EXTRA = JSON.parse(fs.readFileSync(A("pbl_extra.json"), "utf8")); } ca
 
 function makeEngine(cfg) {
   IM.lint(cfg, ["graphAlt", "titleEqAlt"]);
-  const MATH = JSON.parse(fs.readFileSync(A(cfg.mathDocIndex), "utf8"));
-  const GRAPH = cfg.graphIndex ? JSON.parse(fs.readFileSync(A(cfg.graphIndex), "utf8")) : {};
+  const MATH = JSON.parse(fs.readFileSync(G(cfg.mathDocIndex), "utf8"));
+  const GRAPH = cfg.graphIndex ? JSON.parse(fs.readFileSync(G(cfg.graphIndex), "utf8")) : {};
   const CODES = cfg.codes.concat(cfg.mps);
 
   // docx sizes are PIXELS; natural inches at 96 dpi scaled by k
   const eqRun = (key, k = 1.3) => {
     const m = MATH[key];
     if (!m) throw new Error("missing expression " + key);
-    return new ImageRun({ type: "png", data: fs.readFileSync(A(m.file)),
+    return new ImageRun({ type: "png", data: fs.readFileSync(G(m.file)),
       transformation: { width: Math.round(m.win * 96 * k), height: Math.round(m.hin * 96 * k) } });
   };
   const mathPara = (key, k = 1.4, o = {}) => new Paragraph({
@@ -72,7 +78,7 @@ function makeEngine(cfg) {
     return new Paragraph({
       alignment: o.align || AlignmentType.CENTER,
       spacing: { before: o.before ?? 80, after: o.after ?? 120 },
-      children: [new ImageRun({ type: "png", data: fs.readFileSync(A(m.file)),
+      children: [new ImageRun({ type: "png", data: fs.readFileSync(G(m.file)),
         transformation: { width: widthPx, height: Math.round(widthPx / m.aspect) } })],
     });
   };

@@ -189,7 +189,7 @@ function lintString(s, where) {
       return;
     }
     // task labels (a) (b) and option letters (A)-(D) are not variables
-    const q = p.replace(/\(([a-dA-D])\)/g, "( )").replace(/\b(Q\d|MP\.\d)\b/g, "");
+    const q = p.replace(/\(([a-dA-D])\)/g, "( )").replace(/\b(Q\d+|MP\.\d)\b/g, "");
     for (const [re, why] of BAD) {
       const m = re.exec(q);
       if (m) { errs.push(`${where}: ${why} outside $…$ → "${p.trim().slice(0, 90)}"`); break; }

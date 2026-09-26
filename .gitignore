@@ -5,3 +5,6 @@ generators/.tex_w*/
 generators/__pycache__/
 __pycache__/
 *.pyc
+
+# Node dependencies (regenerated from package.json via npm install)
+node_modules/

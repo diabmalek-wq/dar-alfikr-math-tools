@@ -20,6 +20,9 @@ const path = require("path");
 const fs = require("fs");
 
 const A = (f) => path.join(__dirname, f);
+// Generator output (math_wN/, graphs_wN/) lives under generators/, one level
+// up from this engine — never inside engines/ itself.
+const G = (f) => path.join(__dirname, "..", "generators", f);
 const IM = require("./inline_math");
 let JSZip;
 try { JSZip = require("jszip"); }
@@ -33,17 +36,21 @@ const HEAD = "Cambria", BODY = "Calibri";
 const SW = 13.333, SH = 7.5, MX = 0.45;
 const DEPT_W = 1.7, DEPT_H = DEPT_W * (154 / 500), SCH = 0.72, LOGO_Y = 0.32;
 
-const DEPT = A("dept_logo.png"), SCHOOL = A("school_logo.png");
+// Plain-colour logos and the Cognia badge live in assets/logos/ (the
+// department's single source for branding, per docs/HOUSE-RULES.md); only
+// the white-on-dark variants derived from them are kept alongside the engine.
+const LOGOS = (f) => path.join(__dirname, "..", "assets", "logos", f);
+const DEPT = LOGOS("dept_logo.png"), SCHOOL = LOGOS("school_logo.png");
 const DEPT_W_LOGO = A("dept_logo_white.png"), SCHOOL_W_LOGO = A("school_logo_white.png");
 const BG_LIGHT = A("bg_light.jpg"), BG_DARK = A("bg_dark.jpg");
-const COGNIA = A("cognia_badge.png");
+const COGNIA = LOGOS("cognia_badge.png");
 // Branding (9 Sep 2026): Cognia badge top-centre on the title slide; the school
 // motto centred in the footer of every slide.
 const MOTTO = "FAITH,  RIGHTEOUSNESS  AND  WISDOM";
 
 function build(cfg) {
-  const MATH = JSON.parse(fs.readFileSync(A(cfg.mathIndex), "utf8"));
-  const GRAPH = cfg.graphIndex ? JSON.parse(fs.readFileSync(A(cfg.graphIndex), "utf8")) : {};
+  const MATH = JSON.parse(fs.readFileSync(G(cfg.mathIndex), "utf8"));
+  const GRAPH = cfg.graphIndex ? JSON.parse(fs.readFileSync(G(cfg.graphIndex), "utf8")) : {};
 
   const T = cfg.timings || { t1: 6, t2: 18, t3: 12, t4: 12, t5: 6, t6: 6 };
   const total = T.t1 + T.t2 + T.t3 + T.t4 + T.t5 + T.t6;
@@ -123,7 +130,7 @@ function build(cfg) {
     const w = m.win * k, h = m.hin * k;
     let x = o.x; if (o.cx !== undefined) x = o.cx - w / 2; if (o.rx !== undefined) x = o.rx - w;
     let y = o.y; if (o.cy !== undefined) y = o.cy - h / 2;
-    s.addImage({ path: A(m.file), x, y, w, h, altText: o.alt || key });
+    s.addImage({ path: G(m.file), x, y, w, h, altText: o.alt || key });
     return { x, y, w, h };
   }
 
@@ -133,7 +140,7 @@ function build(cfg) {
     const w = o.w, h = w / m.aspect;
     let x = o.x; if (o.cx !== undefined) x = o.cx - w / 2;
     let y = o.y; if (o.cy !== undefined) y = o.cy - h / 2;
-    s.addImage({ path: A(m.file), x, y, w, h, altText: o.alt || key });
+    s.addImage({ path: G(m.file), x, y, w, h, altText: o.alt || key });
     return h;
   }
 
@@ -422,7 +429,7 @@ function build(cfg) {
     if (cfg.production.eq) {
       // Dark card behind the white expression — a translucent white card left
       // white maths almost unreadable. Card height follows the expression.
-      const MATHX = JSON.parse(fs.readFileSync(cfg.mathIndex, "utf8"));
+      const MATHX = JSON.parse(fs.readFileSync(G(cfg.mathIndex), "utf8"));
       const mE = MATHX[cfg.production.eq];
       const kE = cfg.production.eqK || 1.8;
       const hE = mE ? mE.hin * kE : 0.5;

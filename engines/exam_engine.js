@@ -14,6 +14,9 @@ const fs = require("fs");
 const path = require("path");
 
 const A = (f) => path.join(__dirname, f);
+// Generator output (math_*/, figs_*/) lives under generators/, one level up
+// from this engine — never inside engines/ itself.
+const G = (f) => path.join(__dirname, "..", "generators", f);
 const TEAL_DEEP = "0E4F4C", TEAL = "1E8F89", TEAL_TINT = "E7F5F4",
       TEAL_TINT2 = "CFEBE8", MAROON = "8A1B17", CHARCOAL = "222E2D",
       MUTED = "5C6E6C", LINE = "C9DEDC", AMBER = "8A5A17", NAVY = "1F3864";
@@ -34,20 +37,20 @@ const W = 9360; // A4 portrait usable width, DXA
 const LETTER = ["A", "B", "C", "D"];
 
 function makeEngine(cfg) {
-  const MATH = JSON.parse(fs.readFileSync(A(cfg.mathIndex), "utf8"));
+  const MATH = JSON.parse(fs.readFileSync(G(cfg.mathIndex), "utf8"));
 
   const eqRun = (key, k = 1.15) => {
     const m = MATH[key];
     if (!m) throw new Error("missing expression " + key);
-    return new ImageRun({ type: "png", data: fs.readFileSync(A(m.file)),
+    return new ImageRun({ type: "png", data: fs.readFileSync(G(m.file)),
       transformation: { width: Math.round(m.win * 96 * k), height: Math.round(m.hin * 96 * k) } });
   };
   const FIGS = cfg.figIndex
-    ? JSON.parse(fs.readFileSync(A(cfg.figIndex), "utf8")) : {};
+    ? JSON.parse(fs.readFileSync(G(cfg.figIndex), "utf8")) : {};
   const figRun = (key, win) => {
     const f = FIGS[key];
     if (!f) throw new Error("missing figure " + key);
-    return new ImageRun({ type: "png", data: fs.readFileSync(A(f.file)),
+    return new ImageRun({ type: "png", data: fs.readFileSync(G(f.file)),
       transformation: { width: Math.round(win * 96),
         height: Math.round(win * 96 / f.aspect) } });
   };
