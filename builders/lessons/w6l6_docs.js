@@ -78,7 +78,7 @@ const GR11_L66 = {
       "Direct explanation (3–5 min, flagged students only): every equation of the form $b^{x}=y$ says the same thing as $x=\\log_b y$ — two ways of writing one fact. Match the bases when possible; take a logarithm when not.",
       "Whole class, SSE.A.2/CED.A.1 (Objective 1): solve $3^{2x-1}=27$ and $2^{x+1}\\le 32$ by rewriting as powers of the same base and comparing exponents; then solve $\\left(1⁄2\\right)^{x}<8$ and show the inequality direction FLIPS because the base is between 0 and 1.",
       "Whole class, REI.A.1 (Objective 2): solve $\\log_2(x+3)=4$ by exponentiating; then $\\log_3 x+\\log_3(x-2)=1$ by condensing first, factoring, and REJECTING the extraneous root $x=-1$ that fails the domain; then the inequality $\\log_5(x-1)\\le 2$, keeping the domain restriction $x>1$ in the final answer.",
-      "Whole class, LE.A.4 (Objective 3): $5^{x}=40$ has no common base — take a logarithm of both sides. Then a refinery's emissions model $E(t)=500{,}000(0.9)^{t}$: solve $E(t)=250{,}000$ for $t$ as a logarithm before evaluating it.",
+      "Whole class, LE.A.4 (Objective 3): $5^{x}=40$ has no common base — take a logarithm of both sides. Then a refinery's emissions model $E(t)=500\\,000(0.9)^{t}$: solve $E(t)=250\\,000$ for $t$ as a logarithm before evaluating it.",
       "Narration focus — after ANY logarithmic equation, go back and check every candidate solution against the ORIGINAL logarithm's domain before accepting it.",
       "This is a NEW example — it does not repeat the flipped video.",
     ],
@@ -102,9 +102,9 @@ const GR11_L66 = {
     ],
     production: [
       "Non-routine transfer task — this context has not appeared in practice.",
-      "A refinery participating in the Saudi Green Initiative is cutting its annual carbon emissions by 10% every year. This year's emissions are 500,000 metric tons of CO2, modeled by $E(t)=500{,}000(0.9)^{t}$, where $t$ is years from now.",
+      "A refinery participating in the Saudi Green Initiative is cutting its annual carbon emissions by 10% every year. This year's emissions are 500,000 metric tons of CO2, modeled by $E(t)=500\\,000(0.9)^{t}$, where $t$ is years from now.",
       "(a) Set up the equation for when emissions first fall to HALF their current level, and solve for $t$ as a logarithm before evaluating it. (b) State the first WHOLE year the target is met, with a justification for the rounding. (c) The board wants emissions below 150,000 tons (30% of current) within 12 years — solve the inequality to check. (d) A board member says “just divide 500,000 by 10 — it hits zero in 10 years.” Explain in one sentence why this is wrong for a percentage-based model.",
-      "Answers: (a) $(0.9)^{t}=0.5 \\to t=(\\log 0.5)/(\\log 0.9)\\approx 6.579$. (b) year 7 (at $t=6$, $E\\approx 265{,}720$; at $t=7$, $E\\approx 239{,}150$, the first whole year below half). (c) $(0.9)^{t}<0.30 \\to t>(\\log 0.30)/(\\log 0.9)\\approx 11.43$, so YES, the 12-year goal is met (at $t=12$, $E\\approx 141{,}000$ tons). (d) a percentage reduction is not a fixed amount — 10% of a shrinking total shrinks too, so the model approaches but never exactly reaches zero, unlike a fixed 50,000-ton yearly cut.",
+      "Answers: (a) $(0.9)^{t}=0.5 \\to t=(\\log 0.5)/(\\log 0.9)\\approx 6.579$. (b) year 7 (at $t=6$, $E\\approx 265\\,720$; at $t=7$, $E\\approx 239\\,150$, the first whole year below half). (c) $(0.9)^{t}<0.30 \\to t>(\\log 0.30)/(\\log 0.9)\\approx 11.43$, so YES, the 12-year goal is met (at $t=12$, $E\\approx 141\\,000$ tons). (d) a percentage reduction is not a fixed amount — 10% of a shrinking total shrinks too, so the model approaches but never exactly reaches zero, unlike a fixed 50,000-ton yearly cut.",
       "Students then hand their reasoning to the AI critic and ask it to challenge any step they have not justified.",
     ],
     criteria: [
@@ -218,12 +218,12 @@ const GR11_L66 = {
     driving: "A refinery is cutting emissions by a PERCENTAGE every year, not a fixed amount. When will it actually hit its target — and can a board member's quick mental estimate be trusted?",
     situation: [
       "A refinery participating in the Saudi Green Initiative is cutting its annual carbon emissions by 10% every year. This year's emissions are 500,000 metric tons of CO2.",
-      "The model is $E(t)=500{,}000(0.9)^{t}$, where $t$ is years from now.",
+      "The model is $E(t)=500\\,000(0.9)^{t}$, where $t$ is years from now.",
       "A group of Grade 11 students is asked to find exactly when two regulatory targets are met.",
     ],
     eq: "e_model",
     steps: [
-      ["1", "SET UP THE HALVING EQUATION  (4 min)", "Set $E(t)=250{,}000$ and solve for $t$, expressing your answer as a logarithm before evaluating it."],
+      ["1", "SET UP THE HALVING EQUATION  (4 min)", "Set $E(t)=250\\,000$ and solve for $t$, expressing your answer as a logarithm before evaluating it."],
       ["2", "STATE THE YEAR  (3 min)", "Round appropriately and state the first WHOLE year emissions fall below half, with a one-sentence justification."],
       ["3", "CHECK THE 12-YEAR GOAL  (5 min)", "Solve the inequality $(0.9)^{t}<0.30$ algebraically to check whether the 150,000-ton goal is met within 12 years."],
       ["4", "FIND THE TRAP  (4 min)", "A board member says “just divide 500,000 by 10 — it hits zero in 10 years.” Explain in one sentence why this is wrong."],

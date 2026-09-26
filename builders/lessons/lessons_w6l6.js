@@ -129,15 +129,15 @@ const GR11_L66 = {
         h: "TAKE THE LOGARITHM OF BOTH SIDES",
         items: [
           "$5^{x}=40$ has no nice common base — take $\\log$ of both sides: $x=(\\log 40)⁄(\\log 5)\\approx 2.292$.",
-          "A refinery's annual CO$_2$ emissions fall 10% a year: $E(t)=500{,}000(0.9)^{t}$ metric tons.",
-          "Find when emissions first drop to HALF: set $E(t)=250{,}000$, giving $(0.9)^{t}=0.5$.",
+          "A refinery's annual CO$_2$ emissions fall 10% a year: $E(t)=500\\,000(0.9)^{t}$ metric tons.",
+          "Find when emissions first drop to HALF: set $E(t)=250\\,000$, giving $(0.9)^{t}=0.5$.",
           "$t=(\\log 0.5)⁄(\\log 0.9)\\approx 6.58$ years — matches the crossing point on the graph.",
         ],
       },
       panelX: 7.2, panelW: 5.7, panelH: 4.0,
       bar: ["AN UNKNOWN IN THE EXPONENT NEEDS A LOGARITHM, NOT DIVISION", "dividing both sides by the base does not isolate an exponent — only taking a logarithm of both sides brings the exponent down where you can solve for it."],
       barY: 6.32,
-      notes: "$5^{x}=40 \\to x=(\\log 40)/(\\log 5)\\approx 2.292$ — check: $5^{2.292}\\approx 40$. Emissions model: $500{,}000(0.9)^{t}=250{,}000 \\to (0.9)^{t}=0.5 \\to t=(\\log 0.5)/(\\log 0.9)\\approx 6.579$, so the halving point falls partway through year 7. Misconception to address aloud: students try to divide both sides by $0.9$ repeatedly instead of taking a logarithm — technically possible for a whole number of steps, but it cannot produce a decimal answer like $6.58$, and it does not generalize to a model with a non-nice base.",
+      notes: "$5^{x}=40 \\to x=(\\log 40)/(\\log 5)\\approx 2.292$ — check: $5^{2.292}\\approx 40$. Emissions model: $500\\,000(0.9)^{t}=250\\,000 \\to (0.9)^{t}=0.5 \\to t=(\\log 0.5)/(\\log 0.9)\\approx 6.579$, so the halving point falls partway through year 7. Misconception to address aloud: students try to divide both sides by $0.9$ repeatedly instead of taking a logarithm — technically possible for a whole number of steps, but it cannot produce a decimal answer like $6.58$, and it does not generalize to a model with a non-nice base.",
     },
   ],
 
@@ -174,7 +174,7 @@ const GR11_L66 = {
   production: {
     title: "Vision 2030: Meeting a Green Initiative Target",
     sub: "A context you have not seen before — this tests transfer",
-    situation: "A refinery participating in the Saudi Green Initiative is cutting its annual carbon emissions by 10% every year. This year's emissions are 500,000 metric tons of CO2, modeled by $E(t)=500{,}000(0.9)^{t}$, where $t$ is years from now.",
+    situation: "A refinery participating in the Saudi Green Initiative is cutting its annual carbon emissions by 10% every year. This year's emissions are 500,000 metric tons of CO2, modeled by $E(t)=500\\,000(0.9)^{t}$, where $t$ is years from now.",
     eq: "e_ctx_w", eqK: 1.6,
     tasks: [
       "(a)  Set up the equation for when emissions first fall to HALF their current level, and solve for $t$ as a logarithm before evaluating it.",
@@ -249,7 +249,7 @@ const GR11_L66 = {
     quickCheck: "Answer: $x=(\\log 50)/(\\log 3)\\approx 3.561$. Watch for students who try common base first on a number that doesn't have one, wasting time before switching methods.",
     guided: "Answers — 1: $\\log_2(x-1)=5 \\to x-1=32 \\to x=33$. 2: $6^{x}=200 \\to x=(\\log 200)/(\\log 6)\\approx 2.957$. Do not release independent work until roughly 80% have both.",
     routes: "Students choose their own route and may switch mid-task. Pear Deck flags error patterns live; use it to decide who gets a two-minute conference. Apply-route answers: doubling time $\\approx 9.01$ months; $\\log_3(x-4)<2 \\to 4<x<13$; savings balance exceeds 3000 SAR after $\\approx 8.31$ years, so year 9.",
-    production: "Answers — (a) $(0.9)^{t}=0.5 \\to t=(\\log 0.5)/(\\log 0.9)\\approx 6.579$. (b) year 7 is the first WHOLE year emissions fall below half (at $t=6$, $E\\approx 265{,}720$; at $t=7$, $E\\approx 239{,}150$). (c) $(0.9)^{12}\\approx 0.282<0.30$, so emissions at year 12 are about $141{,}000$ tons — YES, the model meets the 150,000-ton goal within 12 years (solved exactly: $(0.9)^{t}<0.30 \\to t>(\\log 0.30)/(\\log 0.9)\\approx 11.43$, so by year 12 the target is already met). (d) the board member has mistaken a PERCENTAGE reduction for a fixed yearly amount — 10% of a shrinking total is itself shrinking, so the actual yearly drop gets smaller every year and emissions approach, but never exactly reach, zero.",
+    production: "Answers — (a) $(0.9)^{t}=0.5 \\to t=(\\log 0.5)/(\\log 0.9)\\approx 6.579$. (b) year 7 is the first WHOLE year emissions fall below half (at $t=6$, $E\\approx 265\\,720$; at $t=7$, $E\\approx 239\\,150$). (c) $(0.9)^{12}\\approx 0.282<0.30$, so emissions at year 12 are about $141\\,000$ tons — YES, the model meets the 150,000-ton goal within 12 years (solved exactly: $(0.9)^{t}<0.30 \\to t>(\\log 0.30)/(\\log 0.9)\\approx 11.43$, so by year 12 the target is already met). (d) the board member has mistaken a PERCENTAGE reduction for a fixed yearly amount — 10% of a shrinking total is itself shrinking, so the actual yearly drop gets smaller every year and emissions approach, but never exactly reach, zero.",
     geogebra: "The slider is the whole point — watching the curve tip from rising to falling as $b$ crosses 1 is the same moment an inequality's direction would flip, made visible rather than just stated as a rule.",
     gate: "Answers: $5^{2x-1}=125=5^{3} \\to 2x-1=3 \\to x=2$. $\\log_4(x+5)=3 \\to x+5=64 \\to x=59$; domain check $59+5=64>0$, valid. Q3: because $15$ is not a whole-number power of $7$ (no integer exponent gives $15$), so the exponent must be found with a logarithm, while $8=2^{3}$ already IS a whole-number power of $2$. Score live and route privately.",
     smart: "The non-example in step 2 is the highest-value part — mistaking a percentage decrease for a fixed amount is exactly the error a real sustainability report could make, and the correction (the yearly drop itself shrinks) is worth showing as a short table.",
