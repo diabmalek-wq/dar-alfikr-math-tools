@@ -1,0 +1,54 @@
+{
+  "1": {
+    "hint": "Think about what set *all* scalar multiples $t\\vec v$ trace out geometrically, then write that as $\\{\\vec x : \\ldots\\}$.",
+    "caution": "Remember: give the full set-builder description with \"for some $t$,\" not just the line equation $y=2x$ alone."
+  },
+  "2": {
+    "hint": "First check whether $\\vec q$ is a scalar multiple of $\\vec p$ before deciding what the span looks like.",
+    "caution": "Don't assume two nonzero vectors always span all of $\\mathbb{R}^2$ — check for a scalar-multiple (parallel) relationship first."
+  },
+  "3": {
+    "hint": "Set up $\\alpha\\vec u+\\beta\\vec v=\\vec w$ as a system in $\\alpha,\\beta$ and solve for both unknowns.",
+    "caution": "After solving, plug $\\alpha,\\beta$ back into *both* coordinate equations — don't confirm membership using only one."
+  },
+  "4": {
+    "hint": "Check whether $\\alpha_1\\vec a+\\alpha_2\\vec b+\\alpha_3\\vec c=\\vec x$ is consistent for arbitrary $x,y,z$, not just plausible.",
+    "caution": "Don't assume 3 vectors in $\\mathbb{R}^3$ automatically span $\\mathbb{R}^3$ just from the matching dimension — actually verify the system is consistent."
+  },
+  "5": {
+    "hint": "Find two points on the line, use their difference as the direction vector and either point as the shift.",
+    "caution": "Use set addition, $\\operatorname{span}\\{\\vec d\\}+\\{\\vec p\\}$, with $\\vec p$ outside the span — the line doesn't pass through the origin, so it can't be written as one plain span."
+  },
+  "6": {
+    "hint": "Pick three points on the plane, form two direction vectors from their differences, and pick one point as the shift.",
+    "caution": "Verify your two direction vectors are non-parallel before finishing — three collinear points would silently collapse the \"plane\" into a line."
+  },
+  "7": {
+    "hint": "Set $t\\vec d+\\vec p$ equal to the target vector and solve for a single $t$ that must work in every coordinate.",
+    "caution": "Don't find $t$ from just one coordinate and declare membership — check that the same $t$ satisfies all coordinates."
+  },
+  "8": {
+    "hint": "Solve $\\alpha\\vec v_1+\\beta\\vec v_2=\\vec 0$ algebraically, or check directly whether one vector is a scalar multiple of the other.",
+    "caution": "Don't assume two nonzero vectors must be independent — a scalar-multiple relationship between them is exactly what forces dependence."
+  },
+  "9": {
+    "hint": "Row-reduce the homogeneous system $x\\vec v_1+y\\vec v_2+z\\vec v_3=\\vec 0$ and use any free variable to build an explicit solution.",
+    "caution": "Don't stop at concluding \"dependent\" once a free variable appears — go back and write out the actual non-trivial combination equal to $\\vec 0$."
+  },
+  "10": {
+    "hint": "Look for a relation involving all three vectors together (e.g. try to write one as a combination of the other two), not just pairwise comparisons.",
+    "caution": "Don't conclude independence just because no two of the three are scalar multiples of each other — with three or more vectors, dependence can come from all of them combined."
+  },
+  "11": {
+    "hint": "Test each claim against the exact definitions of linear (in)dependence, and try small counterexamples involving $\\vec 0$ where relevant.",
+    "caution": "Don't stretch the two-vector \"not a scalar multiple\" test to sets of three or more, and remember $1\\cdot\\vec 0=\\vec 0$ always makes $\\vec 0$'s presence create a non-trivial relation."
+  },
+  "12": {
+    "hint": "Check whether $\\vec d_2$ is a scalar multiple of $\\vec d_1$ before concluding the equation describes a plane.",
+    "caution": "Don't assume direction vectors that \"look different\" numerically must be independent — always check for a scalar-multiple relationship first."
+  },
+  "13": {
+    "hint": "Compare the number of unknowns to the number of equations in the corresponding homogeneous system to see if a free variable is guaranteed.",
+    "caution": "Don't judge independence by whether vectors \"look different\" from each other — count equations versus unknowns in the homogeneous system instead, for any number of vectors exceeding the space's dimension."
+  }
+}

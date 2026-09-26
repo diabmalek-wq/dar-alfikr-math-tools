@@ -23,6 +23,10 @@ def shrink_wide_math(tex):
     """Auto-shrink any display-math block (pandoc's \\[...\\]) to fit the
     box's available width, so a long row-reduction/derivation chain that
     used to fit the full page width doesn't clip against a box's padding."""
+    # \tag{...} needs an amsmath numbered-equation environment (align, gather,
+    # etc.) — it errors inside plain $...$/adjustbox math, so replace it with
+    # a plain in-line label before wrapping.
+    tex = re.sub(r'\\tag\{([^}]*)\}', r'\\quad\\text{(\1)}', tex)
     def repl(m):
         return ("\\par\\begin{adjustbox}{max width=\\boxmathwidth,center}$"
                 + m.group(1) + "$\\end{adjustbox}\\par\\noindent ")

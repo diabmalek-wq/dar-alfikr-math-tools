@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Multiply each pair of matching entries, then add those two products together.",
+    "caution": "Don't multiply the two products together at the end — sum them, since a dot product is a sum of products."
+  },
+  "2": {
+    "hint": "First compute $\\vec v \\cdot \\vec v$ as a single scalar, then take its square root.",
+    "caution": "Remember: don't stop at $\\vec v \\cdot \\vec v$ — take the square root, and keep track that the result is a scalar, not a vector."
+  },
+  "3": {
+    "hint": "Compute the dot product first; its sign alone tells you whether the angle is acute, right, or obtuse.",
+    "caution": "Watch out: only a dot product of exactly $0$ means orthogonal — a negative value means obtuse, not perpendicular."
+  },
+  "4": {
+    "hint": "Find one vector orthogonal to $\\begin{bmatrix}1\\\\2\\end{bmatrix}$ first, then scale it to have length $1$.",
+    "caution": "Don't forget the last step: after finding an orthogonal vector you must divide by its length to make it a unit vector."
+  },
+  "5": {
+    "hint": "Find one normal vector orthogonal to $\\vec d$; translating a line by $\\vec p$ doesn't change what vector is normal to it.",
+    "caution": "Remember: the same $\\vec n$ works for both lines — only $\\vec p$ changes in the normal-form equation, not the normal vector itself."
+  },
+  "6": {
+    "hint": "Build two direction vectors from the three points, then solve $\\vec n\\cdot\\vec d_1=0$ and $\\vec n\\cdot\\vec d_2=0$ together.",
+    "caution": "Don't guess a normal vector by inspection and stop there — always check it's orthogonal to *both* direction vectors first."
+  },
+  "7": {
+    "hint": "Expand normal form to scalar form, then row-reduce and see how many variables stay free when writing vector form.",
+    "caution": "Remember: a plane's scalar equation leaves two free parameters, not one — don't write its vector form with only a single $t$."
+  },
+  "8": {
+    "hint": "Since $\\ell$ is a span through the origin, you can apply the vector-component formula directly.",
+    "caution": "Watch out: this shortcut only works because $\\ell$ passes through the origin — don't assume it transfers to every projection problem."
+  },
+  "9": {
+    "hint": "Since $K$ doesn't pass through the origin, set up an orthogonality equation between $\\vec c - \\operatorname{proj}_K\\vec c$ and $K$'s direction vector instead.",
+    "caution": "Don't apply $\\operatorname{vcomp}$ directly here — $K$ is translated away from the origin, so only the orthogonality method gives the correct projection."
+  },
+  "10": {
+    "hint": "List both conditions $\\operatorname{vcomp}_{\\vec b}\\vec a$ must satisfy — being a multiple of $\\vec b$, and leaving an orthogonal remainder — before solving for the scalar.",
+    "caution": "Remember: being parallel to $\\vec b$ alone isn't enough — you also need the orthogonality condition, since that's what actually pins down $k$."
+  },
+  "11": {
+    "hint": "Compute $\\operatorname{vcomp}_{\\vec d}\\vec u$ with the formula, then substitute $-\\vec d$ and track every sign change carefully.",
+    "caution": "Don't assume flipping $\\vec d$'s sign flips the answer's sign — the $(-1)$ appears three times in the formula and cancels out."
+  },
+  "12": {
+    "hint": "Find $\\operatorname{vcomp}_{\\vec v}\\vec u$ first, then get the orthogonal piece by subtracting it from $\\vec u$.",
+    "caution": "Watch out: the orthogonal piece is $\\vec u - \\operatorname{vcomp}_{\\vec v}\\vec u$ — subtracting in the wrong order gives an incorrect result."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "1": {
+    "hint": "Check the equation is homogeneous, then run all parts of the subspace test explicitly, including non-emptiness.",
+    "caution": "Don't skip verifying that $\\vec 0$ satisfies the equation — always confirm non-emptiness explicitly, even for an \"obvious\" line."
+  },
+  "2": {
+    "hint": "Before checking closure, plug $\\vec 0$ into the equation to see whether the line passes through the origin.",
+    "caution": "Don't assume \"it's a line\" is enough — watch for a nonzero constant term showing it misses the origin."
+  },
+  "3": {
+    "hint": "Recognize this vector-form set as already being a span of one vector before deciding how much work the proof needs.",
+    "caution": "Remember: a set already given as $\\operatorname{span}\\{\\vec v\\}$ is automatically a subspace — don't redo a full test from scratch."
+  },
+  "4": {
+    "hint": "Check whether the point at $t=0$, scaled by $0$, still lies on the described line.",
+    "caution": "Watch out: adding a constant vector to a span shifts the line off the origin, so \"direction plus shift\" isn't automatically a subspace."
+  },
+  "5": {
+    "hint": "Test both closure conditions separately with a concrete vector, including a negative scalar.",
+    "caution": "Don't stop after checking only addition — also test scalar multiplication with a negative scalar before concluding."
+  },
+  "6": {
+    "hint": "Reread the subspace definition's non-emptiness requirement before considering closure at all.",
+    "caution": "Remember: the definition explicitly requires non-emptiness, so don't call closure \"vacuously true\" for the empty set."
+  },
+  "7": {
+    "hint": "Write general elements as combinations with arbitrary coefficients, then explicitly combine those coefficients.",
+    "caution": "Don't just assert closure — actually write out the summed and scaled coefficients to make the argument rigorous."
+  },
+  "8": {
+    "hint": "Apply the same coefficient-combination argument as with two vectors; extra spanning vectors don't change the method.",
+    "caution": "Don't worry that one listed vector is a multiple of another — redundancy among spanning vectors never breaks the subspace argument."
+  },
+  "9": {
+    "hint": "Check whether any of the given vectors are scalar multiples of one another before counting the dimension.",
+    "caution": "Don't assume dimension equals the number of vectors listed — check for redundancy first."
+  },
+  "10": {
+    "hint": "Test whether the third vector can be written as a combination of the first two before assuming all three are independent.",
+    "caution": "Don't assume three vectors in $\\mathbb{R}^3$ automatically form a basis — check for a hidden dependency first."
+  },
+  "11": {
+    "hint": "Solve the equation for one variable in terms of the others, then parametrize the remaining free variables.",
+    "caution": "Remember: one homogeneous equation in $\\mathbb{R}^4$ generically cuts dimension by exactly $1$ — recount the free variables carefully."
+  },
+  "12": {
+    "hint": "Think of spans built from one or three standard basis vectors, and recall what basis the trivial subspace uses.",
+    "caution": "Don't dismiss $\\{\\vec 0\\}$ as not a \"real\" subspace — it has dimension $0$ with the empty set as its basis."
+  },
+  "13": {
+    "hint": "Check whether one of the three vectors is a linear combination of the other two before concluding it's a basis.",
+    "caution": "Don't assume three vectors in $\\mathbb{R}^3$ form a basis just because the count matches the dimension — verify independence first."
+  },
+  "14": {
+    "hint": "Compare the number of vectors given to the known dimension of $\\mathbb{R}^3$.",
+    "caution": "Don't stop at confirming independence — remember a basis for $\\mathbb{R}^3$ needs exactly $3$ vectors, not just \"some.\""
+  }
+}
