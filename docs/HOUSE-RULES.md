@@ -102,12 +102,32 @@ governs *how* an assistant works in this repo, not just what it produces:
   part of it rather than reading the entire file again. This applies especially to the
   large shared engines (`lesson_engine.js`, `docs_engine.js`, `exam_engine.js`,
   `presession.js`) — their structure doesn't change between builds.
-- **Don't re-research settled precedent.** Once a format, code list, or convention has
-  been confirmed from a source (a curriculum map, a real delivered PDF, a spreadsheet),
-  reuse that finding for the rest of the session instead of re-fetching it.
 - **Batch fixes, then verify once**, instead of a fix → rebuild → visually inspect →
   fix → rebuild loop. Read the engine/generator code carefully enough on the first pass
   to get layout right without needing a render to find out.
+- **Do the research once, from a primary source, and treat it as settled.** When a
+  format, code list, or convention is uncertain, fetch the authoritative source (a
+  curriculum map, a real delivered file, a spreadsheet) ONE time, extract what's needed,
+  and reuse that finding for the rest of the session and in future sessions (write it
+  into this file or `LESSONS-LEARNED.md` if it's likely to come up again) — never
+  re-fetch or re-derive something already confirmed.
+- **Delegate heavy or isolated work to a subagent instead of doing it inline.** Broad
+  exploration (searching many files for a pattern, browsing a Drive folder tree, a large
+  independent verification pass) should run in a subagent so its intermediate reads and
+  tool output stay out of the main session's context — only its final summary comes
+  back. Don't spawn a subagent for a single targeted lookup or a small edit; the spawn's
+  own overhead costs more than it saves there.
+- **Match the model to the task, not the whole job to one model.** Reserve the
+  strongest/most expensive model for the calls that actually need judgment — pedagogical
+  design decisions, verbatim curriculum alignment, wording that will reach a student or
+  Mr Thiab, and final review. Mechanical, fully-specified steps (running a generator
+  script, applying an already-diagnosed fix pattern, a rote rename or reformat) belong on
+  a lighter/faster model or a cheap-model subagent — the same output, at a fraction of
+  the cost, because no judgment call is actually being made there.
+- **None of the above may cost quality.** These rules change *how* work gets done, not
+  the bar it's held to — verbatim curriculum quoting, page-budget checks, animation, and
+  every other content-integrity rule in this file still apply in full. If a cheaper path
+  and the house rules ever conflict, the house rules win and the cheaper path is dropped.
 
 ## Where to look next
 
