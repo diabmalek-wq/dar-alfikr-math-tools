@@ -1,0 +1,54 @@
+{
+  "1": {
+    "hint": "Find two points satisfying the Cartesian equation by guess-and-check, then subtract them to get a direction vector.",
+    "caution": "Don't rewrite the equation in $y=mx+b$ form — instead find two points and subtract; remember any valid pair of points works."
+  },
+  "2": {
+    "hint": "Compute the direction vector as the displacement from one given point to the other, then use either point as the base point.",
+    "caution": "Remember: $\\overrightarrow{AB} = B - A$, not $A - B$ — double-check the order of subtraction, especially mid-problem."
+  },
+  "3": {
+    "hint": "Reuse the direction vector already found for $\\ell_1$ in Problem 1, since parallel lines share direction vectors.",
+    "caution": "Don't re-derive a new direction vector from scratch, and remember a line through the origin has no added $+\\vec p$ term."
+  },
+  "4": {
+    "hint": "Solve for $t$ using one coordinate equation, then check that same $t$ against the remaining coordinates.",
+    "caution": "Watch out: matching just one coordinate isn't enough — confirm the same value of $t$ satisfies every coordinate equation."
+  },
+  "5": {
+    "hint": "Form two direction vectors by subtracting from a common base point, and confirm they aren't scalar multiples of each other.",
+    "caution": "Remember: if your two direction vectors turn out parallel, you've only described a line, not the full plane."
+  },
+  "6": {
+    "hint": "Guess three points satisfying the equation, then subtract pairs from a common point to form two direction vectors.",
+    "caution": "Don't pick three points that might be collinear — verify your two resulting direction vectors are genuinely non-parallel."
+  },
+  "7": {
+    "hint": "Solve for $t$ and $s$ using two of the coordinate equations, then substitute both into the third to verify.",
+    "caution": "Watch out: matching $t$ and $s$ to two coordinates isn't enough — you must also check the third coordinate equation holds."
+  },
+  "8": {
+    "hint": "Check whether the origin satisfies the equation before guessing a base point for the plane.",
+    "caution": "Don't assume you need a nonzero base point — check first whether $\\vec 0$ already lies on the plane."
+  },
+  "9": {
+    "hint": "Think about which standard basis vectors already lie within the $yz$-plane — those can serve directly as direction vectors.",
+    "caution": "Remember: parallel to the $yz$-plane means the direction vectors are simply $\\vec e_2$ and $\\vec e_3$ — don't alter their $x$-components."
+  },
+  "10": {
+    "hint": "Solve the parametric equations for $t$ and $s$ in terms of coordinates, then substitute into the remaining equation to eliminate them.",
+    "caution": "Watch out for sign errors while isolating $t$ and $s$ — a flipped sign will silently carry through to your final equation."
+  },
+  "11": {
+    "hint": "Rename each line's parameter before setting the two vector equations equal, then solve the resulting system coordinate-by-coordinate.",
+    "caution": "Don't assume two non-intersecting lines in $\\mathbb{R}^3$ must be parallel — check whether directions are proportional before calling them skew."
+  },
+  "12": {
+    "hint": "Substitute the line's parametric coordinates directly into the plane's Cartesian equation and solve for $t$.",
+    "caution": "Remember: after solving for $t$, plug it back into the line's equation to report an actual point, not just the $t$-value."
+  },
+  "13": {
+    "hint": "Compare direction vectors pairwise for proportionality first, then check whether a shared point confirms coincidence.",
+    "caution": "Don't stop at 'directions are parallel' — check whether one line's point actually lies on the other to tell coincident from merely parallel."
+  }
+}

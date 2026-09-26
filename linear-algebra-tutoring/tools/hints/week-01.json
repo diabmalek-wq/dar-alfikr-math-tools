@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Combine real and imaginary parts separately for the sum/difference, and expand the product term by term using $i^2=-1$.",
+    "caution": "Watch out: when expanding the product, don't leave the $bd\\,i^2$ term unsimplified — remember $i^2=-1$."
+  },
+  "2": {
+    "hint": "Apply the modulus formula $|z|=\\sqrt{\\operatorname{Re}(z)^2+\\operatorname{Im}(z)^2}$ using both components of $z$.",
+    "caution": "Don't confuse the modulus with just $|\\operatorname{Re}(z)|$ — you must include the imaginary part too."
+  },
+  "3": {
+    "hint": "Use the multiplicative-inverse formula from Page 1 directly — don't try to guess-and-check.",
+    "caution": "Watch out for a sign error: the formula uses $-\\dfrac{b}{a^2+b^2}$, not $+\\dfrac{b}{a^2+b^2}$."
+  },
+  "4": {
+    "hint": "Multiply both the numerator and denominator by the conjugate of the denominator before simplifying.",
+    "caution": "Remember: you must multiply *both* the numerator and the denominator by the conjugate, not just one."
+  },
+  "5": {
+    "hint": "Recall exactly which part of $z$ the conjugate operation changes the sign of.",
+    "caution": "Don't assume the conjugate flips the sign of the real part $a$ as well as $b$ — only $b$ changes sign."
+  },
+  "6": {
+    "hint": "Go through A1–A8 one at a time, naming the single property (associativity, commutativity, identity, etc.) each one governs.",
+    "caution": "Watch out: don't mix up A3 (identity) with A4 (inverse), and remember A3 requires *both* an additive and a multiplicative identity."
+  },
+  "7": {
+    "hint": "Test commutativity by trying a concrete pair of numbers in the operation, not just checking the operation is defined.",
+    "caution": "Don't settle for showing subtraction is defined for one pair like $2-3$ — the axiom demands commutativity for *all* pairs."
+  },
+  "8": {
+    "hint": "Check each field axiom systematically for $(\\mathbb{Z},+,\\times)$, paying special attention to inverses.",
+    "caution": "Don't assume closure under $+$ and $\\times$ is enough — remember inverses must also lie inside the set."
+  },
+  "9": {
+    "hint": "Add the additive inverse of $x$ to both sides of $x \\boxplus y = x$ and work through the axioms explicitly.",
+    "caution": "Don't informally \"cancel\" $x$ from both sides — add the inverse and cite A1/A2/A3/A4 explicitly."
+  },
+  "10": {
+    "hint": "Model your proof on the zero-vector uniqueness proof, assuming two inverses and showing they're equal.",
+    "caution": "Remember: don't skip using commutativity (A2) — it's the key pivot step in the argument."
+  },
+  "11": {
+    "hint": "Rewrite $-x$ as $(-1)x$ using Example 5, then build the proof from the axioms rather than intuition.",
+    "caution": "Don't treat $-x$ as some new independent object — route through $(-1)x$ from Example 5 instead."
+  },
+  "12": {
+    "hint": "Write $2$ as $1+1$ and apply Axiom A6 before invoking A8.",
+    "caution": "Don't assume $2x$ \"obviously\" equals $x \\boxplus x$ — you must justify it from the axioms, not assert it."
+  }
+}

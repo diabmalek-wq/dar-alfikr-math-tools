@@ -1,0 +1,58 @@
+{
+  "1": {
+    "hint": "Apply coordinatewise addition and scalar multiplication one entry at a time.",
+    "caution": "Watch out: scale every coordinate by $2$, and match corresponding coordinates when adding — not just the first entry."
+  },
+  "2": {
+    "hint": "Compare the number of coordinates in each tuple before attempting to add them.",
+    "caution": "Don't pad the shorter tuple or truncate the longer one to force the addition — the definition allows no such fallback."
+  },
+  "3": {
+    "hint": "Fix an arbitrary index $i$ and expand both sides using scalar multiplication in $F^n$, then field distributivity.",
+    "caution": "Remember to argue with a generic index $i$, not a specific $n$, and cite distributivity in $F$ as its own step."
+  },
+  "4": {
+    "hint": "Check that both matrices share the same shape before combining them entrywise.",
+    "caution": "Don't add a matching block of $C$ to $A$ and drop the extra column — mismatched shapes mean the whole sum is undefined."
+  },
+  "5": {
+    "hint": "Compute each entry of $cB$ individually and compare it to the corresponding entry of $A$.",
+    "caution": "Don't just judge the matrices \"proportional overall\" by eyeballing — verify $A_{ij}=(cB)_{ij}$ entry by entry."
+  },
+  "6": {
+    "hint": "Fix an arbitrary entry $(i,j)$ and expand both sides using the definitions of matrix addition and scalar multiplication.",
+    "caution": "Remember a single generic entry $(i,j)$ covers the whole matrix at once — no need to argue rows and columns separately."
+  },
+  "7": {
+    "hint": "Transpose $A$ first, note its new shape, then check that shape against $B$ before adding.",
+    "caution": "Recheck compatibility using $A^T$'s new shape, not $A$'s original shape — transposing changes what it can be added to."
+  },
+  "8": {
+    "hint": "Fix a generic entry $(i,j)$ and apply the transpose definition to both sides of the equation separately.",
+    "caution": "Swap both the row and column index together when applying the transpose definition, not just one of them."
+  },
+  "9": {
+    "hint": "In the column picture, scale each column of $M$ by the matching entry of $\\vec v$ before adding them.",
+    "caution": "Don't add the raw columns unscaled, and be careful to match row entries with vector entries in the correct order."
+  },
+  "10": {
+    "hint": "For each pair, check whether the number of columns of the first matrix matches the rows of the second.",
+    "caution": "Don't assume a product is defined just because the same number appears in both shapes — check columns-of-first vs. rows-of-second, in that order."
+  },
+  "11": {
+    "hint": "Use the row-dot-column rule for each entry rather than combining the matrices position by position.",
+    "caution": "Don't multiply entrywise (matching same positions) just because $X$ and $Y$ share a shape — use the row-dot-column rule instead."
+  },
+  "12": {
+    "hint": "Apply the definitions of function addition and scalar multiplication pointwise, term by term.",
+    "caution": "Remember to distribute the scalar to every term of $f(x)$, not just the leading term."
+  },
+  "13": {
+    "hint": "Test whether $f(x)=g(x)$ holds for every $x \\in F$, including negative values.",
+    "caution": "Don't conclude equality just because the functions agree for $x \\ge 0$ — pointwise equality requires agreement at every input."
+  },
+  "14": {
+    "hint": "Fix an arbitrary $x$ and unfold the definitions in order: function addition, then scalar multiplication, then field distributivity.",
+    "caution": "Don't jump straight to the algebra shortcut — justify each equality (addition, scalar mult., distributivity) as its own step."
+  }
+}

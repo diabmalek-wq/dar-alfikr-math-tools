@@ -1,0 +1,135 @@
+% ============================================================
+% Linear Algebra Tutoring — shared PDF design system
+% Boxed definitions/facts/hints/cautions, example cards, ruled
+% working space. Loaded via pandoc -H for every week's PDF.
+% ============================================================
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+% Fragment-only pandoc->latex conversion (no --standalone) doesn't define its
+% own template helper macros, needed for any table pandoc renders inside a box.
+\providecommand{\real}[1]{#1}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% \linewidth is not reliably re-scoped inside a breakable tcolorbox (it can
+% still report the page's full text width), so define a fixed, conservative
+% width for auto-shrinking long display equations instead of trusting it.
+\newlength{\boxmathwidth}
+\AtBeginDocument{%
+  \setlength{\boxmathwidth}{\textwidth}
+  \addtolength{\boxmathwidth}{-30pt}%
+}
+
+% ---- palette ----------------------------------------------
+\definecolor{defInk}{HTML}{1F3B73}
+\definecolor{defBg}{HTML}{EEF2FB}
+\definecolor{factInk}{HTML}{0F6E64}
+\definecolor{factBg}{HTML}{E9F7F5}
+\definecolor{hintInk}{HTML}{93650A}
+\definecolor{hintBg}{HTML}{FDF3E0}
+\definecolor{cautionInk}{HTML}{9C2B23}
+\definecolor{cautionBg}{HTML}{FBEAE8}
+\definecolor{exampleInk}{HTML}{3A3A3A}
+\definecolor{exampleBg}{HTML}{F4F4F4}
+\definecolor{noteInk}{HTML}{4A4A4A}
+\definecolor{noteBg}{HTML}{F0F0F0}
+\definecolor{ruleGray}{HTML}{BBBBBB}
+\definecolor{titleRule}{HTML}{1F3B73}
+
+% ---- boxes ---------------------------------------------------
+\newtcolorbox{definitionbox}[1]{
+  enhanced, breakable, colback=defBg, colframe=defInk,
+  coltitle=white, colbacktitle=defInk, fonttitle=\bfseries,
+  title={\footnotesize DEFINITION \quad\normalsize #1},
+  boxrule=0.4pt, arc=2pt, left=5pt, right=5pt, top=5pt, bottom=7pt,
+  before skip=10pt plus 2pt, after skip=10pt plus 2pt,
+  fontupper=\small,
+}
+\newtcolorbox{factbox}[1]{
+  enhanced, breakable, colback=factBg, colframe=factInk,
+  coltitle=white, colbacktitle=factInk, fonttitle=\bfseries,
+  title={\footnotesize KEY FACT \quad\normalsize #1},
+  boxrule=0.4pt, arc=2pt, left=5pt, right=5pt, top=5pt, bottom=7pt,
+  before skip=10pt plus 2pt, after skip=10pt plus 2pt,
+  fontupper=\small,
+}
+\newtcolorbox{methodbox}[1]{
+  enhanced, breakable, colback=factBg, colframe=factInk,
+  coltitle=white, colbacktitle=factInk, fonttitle=\bfseries,
+  title={\footnotesize METHOD \quad\normalsize #1},
+  boxrule=0.4pt, arc=2pt, left=5pt, right=5pt, top=5pt, bottom=7pt,
+  before skip=10pt plus 2pt, after skip=10pt plus 2pt,
+  fontupper=\small,
+}
+\newtcolorbox{notebox}[1]{
+  enhanced, breakable, colback=noteBg, colframe=noteInk!60,
+  coltitle=white, colbacktitle=noteInk, fonttitle=\bfseries,
+  title={\footnotesize NOTE \quad\normalsize #1},
+  boxrule=0.4pt, arc=2pt, left=5pt, right=5pt, top=5pt, bottom=7pt,
+  before skip=10pt plus 2pt, after skip=10pt plus 2pt,
+  fontupper=\small,
+}
+\newtcolorbox{examplebox}[1]{
+  enhanced, breakable, colback=exampleBg, colframe=exampleInk!70,
+  coltitle=white, colbacktitle=exampleInk, fonttitle=\bfseries,
+  title={\footnotesize EXAMPLE~#1},
+  boxrule=0.3pt, arc=2pt, left=6pt, right=6pt, top=6pt, bottom=8pt,
+  before skip=12pt plus 2pt, after skip=12pt plus 2pt,
+  fontupper=\small,
+}
+\newtcolorbox{hintbox}{
+  enhanced, breakable, colback=hintBg, colframe=hintInk,
+  boxrule=0pt, leftrule=3pt, arc=1pt, left=9pt, right=9pt, top=5pt, bottom=5pt,
+  before skip=8pt plus 2pt, after skip=4pt,
+}
+\newtcolorbox{cautionbox}{
+  enhanced, breakable, colback=cautionBg, colframe=cautionInk,
+  boxrule=0pt, leftrule=3pt, arc=1pt, left=9pt, right=9pt, top=5pt, bottom=5pt,
+  before skip=4pt, after skip=10pt plus 2pt,
+}
+\newcommand{\hintlabel}{\textbf{\textcolor{hintInk}{HINT}}\quad}
+\newcommand{\cautionlabel}{\textbf{\textcolor{cautionInk}{CAUTION --- before you solve}}\quad}
+
+% ---- problem number badge + working-space rules ---------------
+\newtcolorbox{problembadge}[1]{
+  enhanced, colback=defInk, colframe=defInk, coltext=white,
+  boxrule=0pt, arc=10pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
+  width=fit, height=2.1em, valign=center, halign=center,
+  fontupper=\bfseries\large,
+}
+\newcommand{\worklines}[1]{%
+  \vspace{2pt}\par\noindent{\small\itshape\color{gray}Your working:}\\[4pt]
+  \foreach \n in {1,...,#1}{\textcolor{ruleGray}{\hrulefill}\\[0.62cm]}
+  \vspace{2pt}
+}
+\usepackage{pgffor}
+
+% ---- title block -----------------------------------------------
+\newcommand{\worksheettitle}[3]{%
+  {\centering
+   {\fontsize{28}{32}\selectfont\bfseries Linear Algebra --- Week #1}\par
+   \vspace{4pt}
+   {\color{titleRule}\rule{\linewidth}{1.4pt}}\par
+   \vspace{6pt}
+   {\large\itshape #2}\par
+   \vspace{2pt}
+   {\small\color{gray} #3}\par
+  }
+  \vspace{14pt}
+}
+
+\newcommand{\sectionbanner}[1]{%
+  \vspace{10pt}\noindent{\Large\bfseries\color{defInk} #1}\par
+  \noindent{\color{defInk}\rule{\linewidth}{1pt}}\vspace{10pt}%
+}
+
+% ---- misc: tighter lists, no section numbers --------------------
+\setlist[enumerate]{leftmargin=1.6em}
+\setcounter{secnumdepth}{0}
+\pagestyle{plain}

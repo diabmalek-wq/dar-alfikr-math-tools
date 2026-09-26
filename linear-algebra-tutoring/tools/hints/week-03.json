@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Write one linear equation per coordinate row, keeping $x$, $y$, $z$ in the same order in every equation before row reducing.",
+    "caution": "Watch out: read each vector's entries top-to-bottom as coefficients in order — mixing up row versus column position scrambles the system."
+  },
+  "2": {
+    "hint": "Start by eliminating $x$ from row 2 using $R_2 \\leftarrow R_2 - 3R_1$.",
+    "caution": "Don't forget to distribute the $-3$ across every entry of $R_1$, including the constant column, when computing $R_2 \\leftarrow R_2 - 3R_1$."
+  },
+  "3": {
+    "hint": "Clear the fraction in the third equation by scaling the whole row before you start eliminating variables.",
+    "caution": "Remember: when clearing a fraction like $-\\dfrac{1}{2}x_3$, multiply every term in that row, including the constant, not just the fractional one."
+  },
+  "4": {
+    "hint": "Row reduce, then check the Number of Solutions theorem: look at the augmented column, not just the coefficient columns.",
+    "caution": "Watch out: a zero row of coefficients doesn't mean infinitely many solutions — check whether the augmented entry in that row is also zero."
+  },
+  "5": {
+    "hint": "Eliminate using the first two rows first and see whether they already contradict each other before touching the third equation.",
+    "caution": "Don't assume the third equation can rescue the system; check whether the first two equations alone are already inconsistent."
+  },
+  "6": {
+    "hint": "Assign a parameter $t$ to one variable, then solve the single equation for the other variable in terms of $t$.",
+    "caution": "Remember: your final answer must name a parameter (like $t$) for the free variable, not just restate the original equation $2x-4y=6$."
+  },
+  "7": {
+    "hint": "Row reduce all the way to rref first, then read the free variable off whichever column truly lacks a pivot.",
+    "caution": "Watch out: only assign the parameter to a non-pivot column — check the rref's actual pivot positions before deciding which variable is free."
+  },
+  "8": {
+    "hint": "Set aside the trivial equation once you confirm it's consistent, then row reduce the remaining equation to see how many pivots you get.",
+    "caution": "Don't treat $0x+0y+0z=0$ as something to solve or as disqualifying — it adds no information and should simply be dropped."
+  },
+  "9": {
+    "hint": "Write one equation for total animals and one for total legs, using $2$ per chicken and $4$ per rabbit, then row reduce.",
+    "caution": "Watch out: double-check which variable gets multiplied by $2$ and which gets multiplied by $4$ in the legs equation."
+  },
+  "10": {
+    "hint": "Compare the two equations' left-hand-side coefficients for proportionality before trying to solve for $c$ and $d$.",
+    "caution": "Remember: check whether the equations' left sides are proportional while their right sides aren't, rather than hunting for specific numeric values."
+  },
+  "11": {
+    "hint": "Try to build a counterexample where two of the three equations directly contradict each other, regardless of the variable count.",
+    "caution": "Don't assume more variables than equations guarantees consistency — that reasoning only applies once consistency is already known."
+  },
+  "12": {
+    "hint": "Ask whether the form $y = mx + c$ could ever produce two different $y$-values for the same $x$.",
+    "caution": "Watch out: don't confuse the $y$-axis containing every $y$-value with the $y$-axis being expressible in the form $y=mx+c$."
+  }
+}

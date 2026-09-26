@@ -1,0 +1,54 @@
+{
+  "1": {
+    "hint": "Check each statement against the precise definitions of $\\in$ and $\\subseteq$ — one relates an element to a set, the other relates two sets.",
+    "caution": "Don't treat a single number as automatically a subset; wrap it in braces first, e.g. $\\{8\\}\\subseteq S$, not $8\\subseteq S$."
+  },
+  "2": {
+    "hint": "Prove both $A\\subseteq B$ and $B\\subseteq A$ separately, rewriting a general element of one form to match the other's form.",
+    "caution": "Remember: proving $A=B$ needs both inclusions proven in general — a few matching examples or only one direction isn't enough."
+  },
+  "3": {
+    "hint": "Before listing integers, check whether each end of the inequality is strict ($<$) or non-strict ($\\leq$).",
+    "caution": "Watch out: don't include $3$ — the strict $<$ excludes the upper endpoint even though $\\leq$ includes the lower one."
+  },
+  "4": {
+    "hint": "Translate \"less than\" directly into a strict inequality inside the set-builder rule.",
+    "caution": "Don't flip the inequality direction or use $\\leq$; \"less than\" means strict $x < -5$, not $x > -5$ or $x \\leq -5$."
+  },
+  "5": {
+    "hint": "Name the coordinates $x, y$ of a generic vector and write the given relationship between them as the rule.",
+    "caution": "Watch out: don't reverse which coordinate is three times the other — it's the second coordinate that equals $3x$, not $x = 3y$."
+  },
+  "6": {
+    "hint": "Apply the definitions of $\\cup$ and $\\cap$ element by element, checking all three sets together for the triple intersection.",
+    "caution": "Remember: $X \\cap Y \\cap Z$ can still be empty even when the pairwise intersections aren't — don't assume it must be nonempty."
+  },
+  "7": {
+    "hint": "Prove both $A \\subseteq A\\cap B$ and $A\\cap B \\subseteq A$ directly from the definition of $\\subseteq$, for arbitrary sets.",
+    "caution": "Don't just check one example — give a general proof, and don't confuse this with the false claim that $A\\cap B = B$."
+  },
+  "8": {
+    "hint": "Try to construct specific sets $A, B, C$ where $C$ lies inside the union but outside $A$ alone.",
+    "caution": "Remember: one counterexample disproves a for-all claim — don't assume a subset of a union must lie in the first set listed."
+  },
+  "9": {
+    "hint": "Collect all the $\\vec{e}_1$ coefficients together, then the $\\vec{e}_2$ coefficients, before writing the column vector.",
+    "caution": "Watch out: combine both $\\vec{e}_1$ terms before reading off the top entry, or you'll drop one of them by mistake."
+  },
+  "10": {
+    "hint": "Match each entry's position in the column to its corresponding basis vector, in order.",
+    "caution": "Don't mismatch entries to basis vectors — the first entry pairs with $\\vec{e}_1$, the second with $\\vec{e}_2$, and so on."
+  },
+  "11": {
+    "hint": "Apply scalar multiplication and addition entrywise, scaling every coordinate of a vector, not just one.",
+    "caution": "Remember: scale every entry by the scalar — don't multiply only the top coordinate and leave the bottom one unscaled."
+  },
+  "12": {
+    "hint": "Write $\\vec{x}$ and $\\vec{y}$ as column vectors first, then carefully distribute the $2$ and the minus sign entrywise.",
+    "caution": "Watch out: distribute the negative sign across every entry of $\\vec{y}$ when subtracting — a sign error on one coordinate is easy to make."
+  },
+  "13": {
+    "hint": "For (a), solve for $k$ using one coordinate and confirm it matches the other; for (b), set up a system from both coordinates and solve for both coefficients.",
+    "caution": "Don't guess $k$ from a single coordinate without checking the other, and don't swap which equation comes from which coordinate when setting up the system."
+  }
+}

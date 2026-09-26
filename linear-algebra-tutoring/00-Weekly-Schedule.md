@@ -32,12 +32,48 @@
 3. **Pages 4–5** — Unsolved practice problems/questions (answer key provided separately at the end of the file, not inline, so the student works blind).
 
 **Delivery format:** each week's `.md` file is the committed source of record. The actual
-deliverable handed to the tutor/student is a **PDF**, rendered from that source with:
+deliverable handed to the tutor/student is a **designed PDF** — not a plain rendering of
+the markdown — built by `linear-algebra-tutoring/tools/`:
+
 ```
-pandoc week-0N/Week-0N-<Topic-Slug>.md -o Week-0N.pdf --pdf-engine=xelatex \
-  -V geometry:margin=1in -V fontsize=11pt -V colorlinks=true -V mainfont="DejaVu Serif"
+tools/build.sh 0N  week-0N/Week-0N-<Topic-Slug>.md  tools/hints/week-0N.json  <out-dir>
 ```
-`xelatex` (not `pdflatex`) is required because the source files use literal Unicode
-characters (×, –, —, ✓) that `pdflatex`'s default font can't render; `DejaVu Serif` covers
-all of them. The rendered PDF is not committed to the repo (it's a build artifact of the
-`.md` source) — regenerate and re-deliver it whenever the source changes.
+
+This produces `Week-0N-worksheet.pdf` (student-facing) and `Week-0N-answerkey.pdf`
+(tutor-only, separate file) from the one `.md` source. What `tools/render.py` +
+`tools/preamble.tex` add on top of the raw markdown:
+
+- Every `### Definition:` / `### Fact:` / `### Key Fact:` / `### Theorem:` block on Page 1
+  becomes a colour-coded box (blue/teal), auto-classified from its heading — not left as
+  plain text.
+- Every worked example becomes its own numbered card.
+- Every unsolved practice problem gets a **HINT** box (method nudge, no answer given) and
+  a **CAUTION** box (the answer key's own misconception, reworded as advice given
+  *before* solving, not after) — authored per-problem in `tools/hints/week-0N.json` —
+  followed by ruled blank space for the student to work in. Line count scales with the
+  problem (multi-part items and long stems get more lines).
+- The answer key is rendered separately, as one card per problem (answer + misconception),
+  never merged into the student PDF.
+- Title is simplified to "Linear Algebra — Week 0N", with the topic and source citation as
+  a subtitle underneath.
+
+`tools/hints/week-0N.json` must exist before building — write it (or have an agent write
+it) as `{"1": {"hint": "...", "caution": "..."}, ...}`, one entry per practice problem,
+with the caution derived from that problem's existing answer-key misconception note.
+
+Technical notes for future maintenance:
+- `xelatex` (not `pdflatex`) is required — the source files use literal Unicode characters
+  (×, –, —, ✓) that `pdflatex`'s default font can't render, and `DejaVu Serif` covers them.
+- Content that ends up inside a custom `tcolorbox` (`\begin{definitionbox}...}` etc.) is
+  treated by pandoc's `raw_tex` extension as ONE opaque block and never reprocessed as
+  markdown — `render.py`'s `md2tex()` helper pre-converts each box's inner markdown to
+  LaTeX via a separate `pandoc -f markdown -t latex` pass before wrapping it, which is why
+  that helper must not be skipped when extending the script.
+- A long display equation (e.g. a multi-step row-reduction chain) that fit the *full* page
+  width as plain text can overflow a box's narrower content width. `render.py` auto-wraps
+  every display-math block in `adjustbox{max width=\boxmathwidth}` to shrink it back down —
+  and that `adjustbox` must be on its own `\par`-separated line (not inline with surrounding
+  text), or `\linewidth`/box measurement gets confused and the shrink silently fails.
+- Neither the rendered PDFs nor `tools/out/`-style scratch output are committed — they're
+  build artifacts of the `.md` source and the hints JSON; regenerate and re-deliver them
+  whenever either changes.
