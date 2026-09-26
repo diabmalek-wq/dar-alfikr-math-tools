@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Check that $f(x)=\\dfrac{1}{x^2+1}$ is continuous, positive, and decreasing on $[1,\\infty)$ before applying the Integral Test, then evaluate $\\int_1^\\infty \\dfrac{dx}{x^2+1}$.",
+    "caution": "The Integral Test only certifies convergence or divergence — the value of the integral ($\\pi/4$ here) is NOT the sum of the series."
+  },
+  "2": {
+    "hint": "Show $f(x)=xe^{-x^2}$ is eventually decreasing by checking the sign of $f'(x)=e^{-x^2}(1-2x^2)$ before applying the Integral Test.",
+    "caution": "Don't apply the Integral Test without verifying the 'eventually decreasing' hypothesis — check $f'(x)<0$ explicitly rather than assuming it."
+  },
+  "3": {
+    "hint": "Compare the net degree gap between numerator and denominator (here $2-4=-2$) to a $p$-series with that same effective power.",
+    "caution": "Don't match denominator degree alone (giving $1/n^4$) — subtract the numerator's degree too, or the comparison series will be wrong."
+  },
+  "4": {
+    "hint": "Simplify by factoring out the dominant exponential in numerator and denominator to isolate the ratio $(2/3)^n$.",
+    "caution": "Don't judge convergence by how 'big' the individual terms look — only the ratio of the dominant exponential bases determines the outcome."
+  },
+  "5": {
+    "hint": "Use $\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ to justify comparing $\\sin^2(1/n)$ to $(1/n)^2$ via the Limit Comparison Test.",
+    "caution": "Don't compare to $1/n$ — remember the term is squared, so the correct comparison series is $1/n^2$, not $1/n$."
+  },
+  "6": {
+    "hint": "Before applying the Alternating Series Test, check whether $b_n=\\dfrac{1}{\\arctan n}$ actually tends to $0$.",
+    "caution": "$\\arctan n$ is bounded above by $\\pi/2$, so $b_n\\to 2/\\pi\\ne 0$ — the AST does not apply here, and the Divergence Test shows the series actually diverges."
+  },
+  "7": {
+    "hint": "Check whether the general term $\\dfrac{\\sin n}{\\arctan n}$ tends to $0$ before trying any convergence test.",
+    "caution": "Don't assume a $\\sin n$ numerator makes a series convergent by comparison to $|\\sin n|\\le 1$ — here the denominator stays bounded (not growing), so the terms don't shrink to $0$ and the series diverges."
+  },
+  "8": {
+    "hint": "Use the Alternating Series error bound: the error after stopping is less than the first omitted term.",
+    "caution": "Use $b_{N+1}$ (the first *excluded* term) to bound the error, not $b_N$ (the last included term) — an off-by-one here gives the wrong partial sum."
+  },
+  "9": {
+    "hint": "Write out $\\dfrac{a_{n+1}}{a_n}$ carefully, expanding $(2n+2)!$ and $(n+1)!$ in terms of $(2n)!$ and $n!$ before simplifying.",
+    "caution": "Track the factorial simplification term by term — canceling $(n!)^2$ against $((n+1)!)^2$ incorrectly is the most common way to get the wrong ratio."
+  },
+  "10": {
+    "hint": "Recall the standard limit $\\lim_{n\\to\\infty}\\left(\\dfrac{n}{n+1}\\right)^n=\\dfrac1e$ when simplifying the ratio in the Ratio Test.",
+    "caution": "Don't cancel $\\dfrac{n}{n+1}\\to1$ before raising it to the $n$-th power — that throws away the $1/e$ limit and wrongly suggests $\\rho=1$."
+  },
+  "11": {
+    "hint": "For each part, try both a slowly-decaying example (like $1/n^2$) and a fast one (like $1/n^4$) to see whether the conclusion always holds.",
+    "caution": "Square-rooting terms does not always preserve or break convergence — part (a) has no fixed answer, while parts (b) and (c) only need the inequality to hold *eventually*, not for every $n$."
+  },
+  "12": {
+    "hint": "Look for two series that are convergent but NOT absolutely convergent — their product's terms may not shrink fast enough.",
+    "caution": "Two absolutely convergent series always have a convergent product — the counterexample requires conditional convergence, such as $a_n=b_n=(-1)^n/\\sqrt n$."
+  }
+}

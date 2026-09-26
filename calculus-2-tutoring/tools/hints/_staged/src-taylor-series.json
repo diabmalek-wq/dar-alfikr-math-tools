@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Since every derivative of $e^x$ is $e^x$, bound $e^t$ on the whole interval $[-R,R]$ by the single constant $e^R$ before plugging into the Lagrange remainder formula.",
+    "caution": "The bound $M$ must be a single constant covering the whole interval — don't use $M=e^x$ (a variable), which isn't a valid Lagrange bound."
+  },
+  "2": {
+    "hint": "Notice the bound $M=e^R$ changes with $R$ — think about fixing one specific $x$ first, then choosing $R=|x|$ (or larger) to apply Problem 1's argument to just that point.",
+    "caution": "\"Analytic on $[-R,R]$ for every $R$\" already IS \"analytic on all of $\\mathbb R$\" — you don't need one universal constant $M$ that works simultaneously for every real number."
+  },
+  "3": {
+    "hint": "Substitute $x^3$ into the geometric series $\\sum x^n$ first, then match the coefficient of $x^{15}$ to $\\dfrac{f^{(15)}(0)}{15!}$.",
+    "caution": "Most coefficients in this series are $0$ — only powers that are multiples of $3$ appear, so don't assume every derivative is nonzero."
+  },
+  "4": {
+    "hint": "Substitute $-x^2$ in place of $x$ in the given $(1+x)^{-1/2}$ series one term at a time, then integrate the result term-by-term.",
+    "caution": "Track the sign changes carefully when substituting $-x^2$ — squaring/cubing the sign inside each coefficient is a common place to drop a minus sign."
+  },
+  "5": {
+    "hint": "Compare the series $\\sum \\dfrac{1}{n!}$ to the Maclaurin series for $e^x$ evaluated at a specific value of $x$.",
+    "caution": "Don't try to evaluate this as an unfamiliar numeric series — recognize it instantly as $e^x$ at $x=1$ rather than computing term by term."
+  },
+  "6": {
+    "hint": "Substitute $-x$ directly into the known Maclaurin series for $e^x$.",
+    "caution": "$e^{-x}$ is NOT $-e^x$ — don't try to relate the two functions algebraically; substitute into the series instead."
+  },
+  "7": {
+    "hint": "Add the series for $e^x$ and $e^{-x}$ term by term and see which powers of $x$ survive after dividing by $2$.",
+    "caution": "Connect the cancellation to the general rule: an even function's Maclaurin series can only contain even powers — check even/odd symmetry first as a shortcut, before grinding through the algebra."
+  },
+  "8": {
+    "hint": "Write $\\ln(1+x)-\\ln(1-x)$ using the known $\\ln(1+x)$ series twice, substituting $-x$ into it for the second term.",
+    "caution": "When substituting $-x$ into $(-1)^{n+1}x^n/n$, track $(-1)^n$ from the substitution SEPARATELY from the series' own alternating sign $(-1)^{n+1}$ — combining them incorrectly is a common sign-tracking trap."
+  },
+  "9": {
+    "hint": "Expand $\\cos x$ far enough (through the $x^4$ term, not just $x^2$) before subtracting and dividing by $x^4$.",
+    "caution": "Stopping the $\\cos x$ expansion at the $x^2$ term (matching only what's explicitly subtracted) misses the term that actually produces the limit — expand at least one extra term further."
+  },
+  "10": {
+    "hint": "Use the first three nonzero terms of the $\\sin x$ Maclaurin series at $x=1$, then bound the error using the Alternating Series Remainder (the next omitted term).",
+    "caution": "Don't just report the numerical estimate — the point of the Alternating Series Remainder is to also state a guaranteed error bound using the next omitted term."
+  },
+  "11": {
+    "hint": "Substitute $-x^2$ into the $e^x$ series, integrate term-by-term from $0$ to $1$, and check how quickly the terms shrink to decide how many to keep.",
+    "caution": "Don't stop after just two or three terms without checking the size of the next omitted term against the precision you actually need."
+  },
+  "12": {
+    "hint": "Distinguish carefully between \"the Taylor series converges (as a number)\" and \"the Taylor series converges to $f(x)$\" — Theorem 6.8 is precisely about closing that gap.",
+    "caution": "Convergence of the Taylor series everywhere does NOT by itself guarantee it equals $f$ — you additionally need the Lagrange remainder $R_n(x)\\to0$, which is a separate condition to verify."
+  }
+}
