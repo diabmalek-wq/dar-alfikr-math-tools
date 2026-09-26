@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Use the power rule in reverse on each term, and rewrite $\\sqrt[3]{x}$ as $x^{1/3}$ before integrating.",
+    "caution": "When the exponent is $1/3$, the new exponent after integrating is $4/3$, and you divide by $4/3$ (i.e.\\ multiply by $3/4$) — don't mishandle the fraction."
+  },
+  "2": {
+    "hint": "Recall the two separate 'guess and check' antiderivative facts for $\\sec x\\tan x$ and for $\\frac{1}{x+5}$.",
+    "caution": "Don't confuse the antiderivative of $\\sec x\\tan x$ with that of $\\tan x$ — they are different functions."
+  },
+  "3": {
+    "hint": "Differentiate $\\ln|3x|$ with the chain rule to find $F'(x)$, then compare the result to $\\ln x + C$ using a log property.",
+    "caution": "Don't forget the chain-rule factor from differentiating the inside function $3x$ — it cancels with the $3$ underneath."
+  },
+  "4": {
+    "hint": "For each option, check whether the free variable $x$ appears anywhere inside the integrand as a dummy-variable stand-in.",
+    "caution": "The outer variable $x$ appearing somewhere in the integrand doesn't automatically make a definition invalid — only using it *as the variable of integration* does."
+  },
+  "5": {
+    "hint": "The upper limit here is bare $x$, so FTC Part 1 applies with no extra chain-rule factor.",
+    "caution": "Don't add an unnecessary chain-rule multiplier when the limit is exactly $x$, not a function of $x$."
+  },
+  "6": {
+    "hint": "Flip the limits first (introducing a minus sign) so the variable is in the upper position, then apply FTC Part 1.",
+    "caution": "Don't forget the sign flip that comes from having the variable in the *lower* limit."
+  },
+  "7": {
+    "hint": "Both limits depend on $x$ here, so differentiate the upper-limit and lower-limit contributions separately.",
+    "caution": "Don't only differentiate with respect to the upper limit — the lower limit needs its own chain-rule term with a minus sign."
+  },
+  "8": {
+    "hint": "For (a), think of a specific antiderivative that doesn't equal the bare integral from $0$. For (b), this is exactly the '+C' fact restated.",
+    "caution": "Don't assume every antiderivative must be expressible with lower limit exactly $0$ — the constant can absorb any base point."
+  },
+  "9": {
+    "hint": "Antidifferentiate each term separately, being careful with the sign on $e^{-x}$.",
+    "caution": "The antiderivative of $e^{-x}$ is $-e^{-x}$, not $e^{-x}$ — watch the chain-rule sign."
+  },
+  "10": {
+    "hint": "Recall which trig function is the antiderivative of $\\sec^2x$.",
+    "caution": "Don't confuse the antiderivative of $\\sec^2x$ (which is $\\tan x$) with the derivative of $\\sec x$ (which is $\\sec x\\tan x$)."
+  },
+  "11": {
+    "hint": "Find where the two curves intersect first, then check which curve is on top on that interval before setting up the integral.",
+    "caution": "Don't integrate top-minus-bottom in the wrong order — check which function is larger on the interval, or you'll get a negative area."
+  },
+  "12": {
+    "hint": "Compute the average value with the formula $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$, then solve $f(c)=$ that average for $c$.",
+    "caution": "Don't forget to divide by $b-a$ — reporting the bare integral as the average value is a common shortcut error."
+  }
+}

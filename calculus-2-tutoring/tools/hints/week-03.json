@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Let $u=e^x$ and check that $du$ matches the leftover factor exactly.",
+    "caution": "Don't look for a second substitution — once $u=e^x$ is chosen, $du=e^x\\,dx$ accounts for everything left in the integral."
+  },
+  "2": {
+    "hint": "Rewrite $\\cot x$ as $\\frac{\\cos x}{\\sin x}$ and substitute $u=\\sin x$.",
+    "caution": "Don't confuse the antiderivative of $\\cot x$ with that of $\\tan x$ — they're mirror images of each other with different signs/functions inside the log."
+  },
+  "3": {
+    "hint": "Substitute $u=x^2$ and convert both the differential and the limits of integration into $u$-values before integrating.",
+    "caution": "Don't plug the original $x$-limits into an antiderivative that's written in terms of $u$ — the limits must be converted too."
+  },
+  "4": {
+    "hint": "Check every step of the given write-up against the substitution rules, especially what happens to the limits of integration.",
+    "caution": "A numeric answer 'looking plausible' doesn't mean the method was correct — verify the limit conversion specifically, since $x=0$ does not give $u=0$ here."
+  },
+  "5": {
+    "hint": "Treat the integral as $\\int 1\\cdot \\ln x\\,dx$ and choose $u=\\ln x$, $dv=dx$.",
+    "caution": "Don't try to set $dv = \\ln x\\,dx$ — there's no direct antiderivative to use as $v$ that way."
+  },
+  "6": {
+    "hint": "Use integration by parts with $u=\\arctan x$, $dv=x\\,dx$, then simplify $\\frac{x^2}{1+x^2}$ by dividing out before integrating further.",
+    "caution": "Don't leave $\\frac{x^2}{1+x^2}$ unsimplified — rewrite it as $1-\\frac{1}{1+x^2}$ rather than reaching for partial fractions."
+  },
+  "7": {
+    "hint": "Apply integration by parts twice, and when the original integral reappears, solve for it algebraically as in the worked example.",
+    "caution": "Don't attempt a third round of integration by parts — recognize when the original integral has reappeared and stop to solve the equation instead."
+  },
+  "8": {
+    "hint": "Use FTC Part 2 directly for the first integral; for the second, apply integration by parts with $u=x,\\,dv=f'(x)\\,dx$.",
+    "caution": "Don't try to estimate $\\int_0^3 x f'(x)\\,dx$ straight from the graph of $f$ — integration by parts converts it into terms involving $f$ itself, which the graph can estimate."
+  },
+  "9": {
+    "hint": "Check whether the power of the function matching $du$ (here $\\cos x\\,dx$) is already isolated, or whether you need to peel one factor off first.",
+    "caution": "A bare $u=\\sin x$ substitution only works directly when exactly one factor of $\\cos x\\,dx$ is left over — for $\\cos^7x$, peel one off first."
+  },
+  "10": {
+    "hint": "Apply the half-angle identity to $\\cos^2x$, then notice the result contains another squared cosine term that needs the identity applied a second time.",
+    "caution": "Don't stop after one application of the half-angle identity — squaring it reintroduces another even power that itself needs simplifying."
+  },
+  "11": {
+    "hint": "Check the tangent exponent for oddness, not just the secant exponent, to decide which rule from Page 1 applies.",
+    "caution": "Don't dismiss both rules just because the secant power is odd — the odd-tangent rule only requires the tangent power to be odd."
+  },
+  "12": {
+    "hint": "Factor each denominator completely into distinct linear factors before setting up the partial-fraction decomposition.",
+    "caution": "Don't stop factoring early — $x^2-1$ inside $x^3-x$ factors further into $(x-1)(x+1)$, each needing its own partial-fraction term."
+  }
+}
