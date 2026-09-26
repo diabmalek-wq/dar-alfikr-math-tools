@@ -1,0 +1,58 @@
+{
+  "1": {
+    "hint": "Work through one-to-one and onto separately for each part, and for (d) compare the rank and nullity to $n$ and $m$ before calling anything invertible.",
+    "caution": "Don't assume onto by itself (or 'it looks like it covers everything') is enough for invertibility - you need one-to-one too, which forces $m=n$."
+  },
+  "2": {
+    "hint": "Row reduce $M_T$ and watch for a row that becomes all zeros - that's your signal for rank and nullity.",
+    "caution": "Don't assume a square matrix full of ordinary-looking consecutive integers must be invertible; row reduce and check rank, don't skip the arithmetic because it 'looks generic.'"
+  },
+  "3": {
+    "hint": "Row reduce $[M_1\\mid I]$ one operation at a time, applying each operation to the full augmented row.",
+    "caution": "When you divide a row by its pivot, remember to divide the entire row - including the identity-matrix side - not just the left block."
+  },
+  "4": {
+    "hint": "Look at $M_2$'s columns before doing any row operations - one of them should jump out at you.",
+    "caution": "Don't launch straight into row-reducing $[M_2\\mid I]$; scan for an obvious dependency like a zero column first, which rules out invertibility instantly."
+  },
+  "5": {
+    "hint": "Compute both $AB$ and $BA$ by direct multiplication before concluding anything.",
+    "caution": "Don't stop after computing just one product order - compute both $AB$ and $BA$, or explicitly cite the theorem that for square matrices $AB=I$ alone forces $BA=I$."
+  },
+  "6": {
+    "hint": "Check the $(1,1)$ entry of $M_3$ before you try to make it a pivot.",
+    "caution": "If the top-left entry of $[M_3\\mid I]$ is $0$, don't try to divide by it - swap rows first to bring a nonzero entry into the pivot position."
+  },
+  "7": {
+    "hint": "Check the shape of $M_4$ before reaching for row reduction.",
+    "caution": "Don't try to row reduce the rectangular matrix or hunt for a 'one-sided' inverse - squareness is a prerequisite you check before any arithmetic, not after."
+  },
+  "8": {
+    "hint": "Compare row 2 of $A$ to row 1 before you start row reducing $[A\\mid I]$.",
+    "caution": "Once a zero row shows up on the left block, stop immediately - don't keep grinding through more row operations, and don't mistake that zero row for 'the inverse has a zero row.'"
+  },
+  "9": {
+    "hint": "Solve it by row reduction first, then redo it with the $2\\times2$ inverse shortcut and $A^{-1}\\vec b$ to check your two answers match.",
+    "caution": "Double-check the signs in the $\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$ shortcut, and make sure you multiply $A^{-1}\\vec b$ in that order, not $\\vec bA^{-1}$."
+  },
+  "10": {
+    "hint": "Think about two separate problems with the classmate's claim: is the product even defined, and does order matter for matrix multiplication?",
+    "caution": "Don't just say 'matrices don't commute' and stop - also point out that $\\vec xA^{-1}$ is typically not even a defined product given the shapes involved."
+  },
+  "11": {
+    "hint": "For part (a), plug $[\\vec x]_A$'s numbers in as coefficients of $A$'s basis vectors to recover $\\vec x$ itself; for (b), re-express that same $\\vec x$ in the $B$ basis.",
+    "caution": "Don't look for a shortcut formula that converts $[\\vec x]_A$ directly into $[\\vec x]_B$ - always pass through the actual vector $\\vec x$ first."
+  },
+  "12": {
+    "hint": "Remember the columns of $[B\\leftarrow A]$ are $[\\vec a_1]_B$ and $[\\vec a_2]_B$ - express $A$'s basis vectors in $B$-coordinates, not the other way around.",
+    "caution": "Watch the direction of the arrow - the columns of $[B\\leftarrow A]$ are $[\\vec a_i]_B$, not $[\\vec b_i]_A$; building it backwards gives a completely wrong matrix."
+  },
+  "13": {
+    "hint": "Find $[A\\leftarrow E]$ and $[E\\leftarrow B]$ separately first, then multiply them in the order that matches the arrow notation.",
+    "caution": "Don't multiply the two matrices in the wrong order - make sure the 'inner' label cancels ($[A\\leftarrow E][E\\leftarrow B]$, not the reverse) - and use the given $[\\vec b_i]_A$ columns afterward as a check on your answer."
+  },
+  "14": {
+    "hint": "Recall the Invertible $\\iff$ Change of Basis Matrix theorem and check the claim directly against it.",
+    "caution": "Don't assume you need some extra 'niceness' condition like orthogonality or tidy-looking entries - invertibility alone is exactly equivalent to being a change-of-basis matrix."
+  }
+}

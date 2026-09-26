@@ -1,0 +1,58 @@
+{
+  "1": {
+    "hint": "Compute $T(\\vec e_1)$ and $T(\\vec e_2)$ by applying $B$ first, then $A$, to build $M_T$ column by column, then confirm with $M_AM_B$.",
+    "caution": "Watch the order: in $T=A\\circ B$, $B$'s matrix goes on the right, so it's $M_AM_B$, not $M_BM_A$."
+  },
+  "2": {
+    "hint": "Before multiplying anything, check the sizes of $M_A$ and $M_B$ to see which product is actually defined for $T=B\\circ A$.",
+    "caution": "Don't default to multiplying in the order the matrices were introduced; verify the dimensions line up for $M_BM_A$ specifically."
+  },
+  "3": {
+    "hint": "Compute both $F\\circ S$ and $S\\circ F$ on $\\vec e_1$ and $\\vec e_2$ and compare the resulting matrices.",
+    "caution": "Don't conclude from this one example that composition order never matters; notice $S=2I$ is special, since scalar multiples of $I$ commute with everything."
+  },
+  "4": {
+    "hint": "Test $F\\circ S$ and $S\\circ F$ on $\\vec e_1$ and $\\vec e_2$ to see which order (or orders) reproduce $V$.",
+    "caution": "Don't assume the decomposition must be unique; if both orders check out (as flagged in Problem 3), either one is a valid answer."
+  },
+  "5": {
+    "hint": "Row reduce $M_1$ all the way to rref before identifying which variable is free.",
+    "caution": "Go slowly through the row operations involving the $8$ and $6$ entries; a small arithmetic slip there can create a false extra free variable."
+  },
+  "6": {
+    "hint": "Solve $M_2\\vec x=\\vec 0$ and write the solution in vector form using the free variable.",
+    "caution": "If your direction vector has fractions, check whether scaling it up gives a cleaner integer vector spanning the same line — same answer, easier to reuse later."
+  },
+  "7": {
+    "hint": "Ask which vectors projection onto $y=x$ sends to $\\vec 0$, not which vectors it sends output to.",
+    "caution": "Don't mix up the line being projected onto ($y=x$, the range) with the line that gets crushed to zero (the perpendicular line $y=-x$, the null space)."
+  },
+  "8": {
+    "hint": "Write out the equation $x+z=0$ from $Q$'s matrix and check every variable, including one that doesn't appear, for whether it's free.",
+    "caution": "Don't assume $y$ is automatically pivot-tied just because it's 'missing' from the equation; a variable with no coefficient anywhere is free too."
+  },
+  "9": {
+    "hint": "Row reduce $M_1$ to find the pivot column positions, then go back and grab those columns from the original matrix.",
+    "caution": "Don't use the columns of $\\operatorname{rref}(M_1)$ itself as your basis for $\\operatorname{col}(M_1)$; only the pivot positions come from rref, the basis vectors must come from the original matrix."
+  },
+  "10": {
+    "hint": "Row reduce the matrix fully before claiming a rank; look for whether any row turns out to be a combination of the others.",
+    "caution": "Don't assume a $3\\times3$ matrix automatically has rank $3$; check by row reducing rather than by size alone."
+  },
+  "11": {
+    "hint": "Think about which coordinate projection onto the $xy$-plane must zero out, then build the matrix from $T(\\vec e_1), T(\\vec e_2), T(\\vec e_3)$.",
+    "caution": "Double-check the $(3,3)$ entry of your matrix is $0$, not $1$ — a $1$ there would make the transformation the identity instead of a projection."
+  },
+  "12": {
+    "hint": "Reuse the Example 7 approach: the range is the plane itself, and the null space is the span of the plane's normal vector.",
+    "caution": "Don't list the normal vector (or a multiple of it) as part of the range too; the range and null space of a projection are orthogonal complements, not overlapping sets."
+  },
+  "13": {
+    "hint": "Use the Rank-Nullity Theorem to find the nullity first, then decide what that says about the columns' independence.",
+    "caution": "Don't reason that 'rank is as high as it can be, so the columns must be independent'; compare the rank to the number of columns, not the number of rows."
+  },
+  "14": {
+    "hint": "Apply Rank-Nullity to relate $\\operatorname{rank}(T)$, $\\operatorname{nullity}(T)$, and the domain dimension $m$, and see whether the statement can fail when $m\\neq n$.",
+    "caution": "Don't assume full row rank (onto) automatically means nullity zero (one-to-one); these are separate extremes of Rank-Nullity that coincide only when $m=n$."
+  }
+}
