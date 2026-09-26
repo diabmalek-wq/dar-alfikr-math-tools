@@ -1,0 +1,58 @@
+{
+  "1": {
+    "hint": "Before doing a full additivity/scalar check on (b), first test the fast $T(\\vec 0)=\\vec 0$ shortcut from Page 1.",
+    "caution": "Don't jump straight into the full additivity/scalar-multiplication proof for (b); check $B(\\vec 0)$ first, and remember 'linear' isn't the same as a linear equation."
+  },
+  "2": {
+    "hint": "Pick specific vectors near the $x$-axis and test additivity and scalar multiplication as two separate checks.",
+    "caution": "Don't stop after checking only one property (e.g. additivity) — a transformation must satisfy both additivity and scalar multiplication to be linear."
+  },
+  "3": {
+    "hint": "Write $R(\\vec x)=S(\\vec x)+T(\\vec x)$ and substitute the linearity properties of $S$ and $T$ explicitly.",
+    "caution": "Don't just assert the result follows because $S$ and $T$ are linear — actually write out the algebra using their linearity properties."
+  },
+  "4": {
+    "hint": "Read the coefficients of $x$ and $y$ directly off each output row to build the matrix.",
+    "caution": "Watch the sign and order of coefficients in each row; don't accidentally transpose rows and columns."
+  },
+  "5": {
+    "hint": "Match the matrix size to the transformation's domain and codomain dimensions before filling in coefficients.",
+    "caution": "Remember the codomain is $\\mathbb{R}^2$, so the matrix must be $2\\times 3$ — don't make it $3\\times 3$ or $3\\times 2$."
+  },
+  "6": {
+    "hint": "Use the matrix's shape to read off domain/codomain, then recall that each column of $M$ is $T_M$ of a standard basis vector.",
+    "caution": "Don't swap domain and codomain from the matrix shape, and double-check signs when multiplying negative entries."
+  },
+  "7": {
+    "hint": "Use the standard-basis shortcut: the columns of the matrix are exactly $T(\\vec e_1)$ and $T(\\vec e_2)$.",
+    "caution": "Place $T(\\vec e_1)$ and $T(\\vec e_2)$ as columns of the matrix, not as rows."
+  },
+  "8": {
+    "hint": "Apply the same standard-basis column shortcut, now tracking three basis vectors and three columns.",
+    "caution": "Keep $T(\\vec e_i)$ as columns (not rows), and double-check the sign of each entry, especially the third entry of $T(\\vec e_1)$."
+  },
+  "9": {
+    "hint": "Think about where $\\vec e_1$ and $\\vec e_2$ land when every vector is simply doubled.",
+    "caution": "Don't add off-diagonal terms just because 'doubling' sounds like it should mix $x$ and $y$ — it's a pure scalar multiple."
+  },
+  "10": {
+    "hint": "Use the rotation matrix formula, but adjust the angle's sign to account for the clockwise direction.",
+    "caution": "Don't reuse the counter-clockwise formula with a positive angle; check that $135^\\circ$ places the image in the correct quadrant with the right signs."
+  },
+  "11": {
+    "hint": "Check whether $T(\\vec 0)=\\vec 0$ before trying to build a standard matrix.",
+    "caution": "Don't try to force a matrix for the translation — if $T(\\vec 0)\\neq\\vec 0$, no standard matrix can exist."
+  },
+  "12": {
+    "hint": "Find where $\\vec e_1$ and $\\vec e_2$ map to under each geometric transformation and use those as the matrix columns.",
+    "caution": "For projection onto the $y$-axis, make sure the $x$-component is zeroed out; for reflection, don't confuse $y=x$ (coordinate swap) with reflecting over an axis."
+  },
+  "13": {
+    "hint": "Rewrite each statement by carefully distinguishing the transformation $T$, its output $T(\\vec x)$, and the matrix of $T$.",
+    "caution": "Don't treat $T$, $T(\\vec x)$, and 'the matrix of $T$' as interchangeable, and in (c) don't stop after checking additivity — scalar multiplication is a separate required property."
+  },
+  "14": {
+    "hint": "Check each statement directly against a specific Page 1 definition or fact, or try to construct a counterexample.",
+    "caution": "Don't answer from gut feeling — verify each claim against the exact theorem or definition, especially the subspace fact and the matrix-vs-transformation distinction."
+  }
+}

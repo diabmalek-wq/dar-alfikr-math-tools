@@ -1,0 +1,50 @@
+{
+  "1": {
+    "hint": "Copy each equation's coefficients into a row of $A$; the constants go only into $\\vec b$, never into $A$.",
+    "caution": "Watch out: don't slip the right-hand-side constants into $A$, and don't transpose rows and columns when copying coefficients."
+  },
+  "2": {
+    "hint": "Multiply $A$ by $\\vec x$ using the row (dot-product) picture: each row of $A$ gives one equation.",
+    "caution": "Remember: read straight across each row of $A$, not down a column, or you'll pair coefficients with the wrong variables."
+  },
+  "3": {
+    "hint": "Row reduce to find $x,y$ once, then reinterpret that same pair as an intersection point and as combination coefficients.",
+    "caution": "Don't solve twice: reuse the $x,y$ from row reduction for the column-combination explanation instead of computing a separate answer."
+  },
+  "4": {
+    "hint": "Write $c_1\\vec u+c_2\\vec v+c_3\\vec w=\\vec 0$ using the vectors as columns, then row reduce and look for a free variable.",
+    "caution": "Don't assume three vectors in $\\mathbb{R}^3$ are automatically independent; always row reduce to check whether a free variable appears."
+  },
+  "5": {
+    "hint": "Stack the given vectors as the rows (not columns) of a matrix $A$ and solve the homogeneous system $A\\vec x=\\vec 0$.",
+    "caution": "Watch out: put the given vectors as rows of $A$, not columns — the row picture is what encodes orthogonality here."
+  },
+  "6": {
+    "hint": "Build $A$ from only the direction vectors $\\vec d_1,\\vec d_2$ as rows, and solve $A\\vec x=\\vec 0$ for the normal vector.",
+    "caution": "Don't include the point vector $\\vec p$ as a row of $A$ — it's used later in the normal-form equation, not for finding $\\vec n$."
+  },
+  "7": {
+    "hint": "For each $\\vec b$, check whether the zero row of $\\operatorname{rref}(A)$ forces a contradiction like $0=$ nonzero before deciding on free variables.",
+    "caution": "Remember: a zero row in $\\operatorname{rref}(A)$ doesn't always mean infinite solutions — check if that row's equation is inconsistent for the given $\\vec b$."
+  },
+  "8": {
+    "hint": "Set up $x(3\\vec e_1+2\\vec e_2)+y(4\\vec e_1-\\vec e_2)=\\vec u$ as a system and solve for $x,y$ algebraically.",
+    "caution": "Don't try to read $[\\vec u]_A$ off by inspection the way you can for the standard basis; solve the resulting system instead."
+  },
+  "9": {
+    "hint": "Think about what $[\\vec a]_M=\\begin{bmatrix}1\\\\0\\end{bmatrix}$ literally says about $\\vec a$'s relationship to $M$'s first basis vector.",
+    "caution": "Don't row reduce to hunt for $M$; recognize that $[\\vec a]_M=(1,0)$ means $\\vec a$ itself must be $M$'s first basis vector."
+  },
+  "10": {
+    "hint": "Build $X$ directly from $\\vec c_1,\\vec c_2$ as its columns; only invert $X$ (via row reduction) to get $Y$.",
+    "caution": "Don't build $X$ from the part (a) equations — its columns are simply $[\\vec c_1]_E,[\\vec c_2]_E$; save the solving for finding $Y$."
+  },
+  "11": {
+    "hint": "Decide which direction you're converting — $C$-to-$E$ or $E$-to-$C$ — before choosing to multiply by $X$ or by $Y$.",
+    "caution": "Watch out: don't swap $X$ and $Y$; multiplying by the wrong change-of-basis matrix converts coordinates the wrong direction."
+  },
+  "12": {
+    "hint": "Compare what kind of object $[\\vec v]_B$ is versus what kind of object $\\vec v$ is before computing $[\\vec v]_B$.",
+    "caution": "Remember: $[\\vec v]_B$ and $\\vec v$ are different kinds of objects, not just different names for the same thing, even if numbers sometimes coincide."
+  }
+}
