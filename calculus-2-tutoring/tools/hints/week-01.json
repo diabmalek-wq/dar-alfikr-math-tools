@@ -38,13 +38,5 @@
   "10": {
     "hint": "Compare the given numbers against the refining-partition inequality $L_P \\le L_Q \\le U_Q \\le U_P$ to see whether they're consistent with $P\\subseteq Q$.",
     "caution": "Being consistent with a containment relationship doesn't prove it — don't conclude $P\\subseteq Q$ is forced just because the inequalities happen to hold."
-  },
-  "11": {
-    "hint": "Check the trivial direction first ($R<x \\Rightarrow R\\le x$), then look for a counterexample where equality $x=R$ is the only witness satisfying the $\\le$ version.",
-    "caution": "Swapping strict for non-strict inequality is not automatically harmless — test whether it changes the logical strength in each direction separately."
-  },
-  "12": {
-    "hint": "Compare $L_P(f)$ and $U_Q(f)$ for two *different* partitions via their common refinement $P\\cup Q$, not $L_P(f)$ and $U_P(f)$ for the same partition.",
-    "caution": "Don't just re-prove $L_P(f)\\le U_P(f)$ for a single partition — that's not what establishes $\\underline I \\le \\overline I$ in general."
   }
 }
