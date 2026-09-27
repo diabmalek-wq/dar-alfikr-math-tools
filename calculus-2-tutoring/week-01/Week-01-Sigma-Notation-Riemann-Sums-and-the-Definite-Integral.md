@@ -1,7 +1,7 @@
 # Week 1 — Sigma Notation, Riemann Sums & the Definite Integral
 
 **Session length:** 3 hours
-**Source:** OpenStax, *Calculus Volume 2*, §1.1 (Approximating Areas) & §1.2 (The Definite Integral); paired with MAT137 (Calculus with Proofs) Unit 7 lecture-slide prompts on partitions, suprema/infima, and upper/lower sums — MAT137 is the University of Toronto's official exclusion-equivalent of MATA37H3
+**Source:** OpenStax, *Calculus Volume 2*, §1.1 (Approximating Areas) & §1.2 (The Definite Integral)
 
 ---
 
@@ -58,9 +58,9 @@ If $f$ is continuous and nonnegative on $[a,b]$, the (exact) area under $y=f(x)$
 $$A = \lim_{n\to\infty} \sum_{i=1}^{n} f(x_i^*)\Delta x.$$
 This limit can be shown to exist and to be the same regardless of how the sample points $x_i^*$ are chosen, whenever $f$ is continuous — this independence-of-choice is what makes "the area under the curve" a well-defined number rather than something that depends on an arbitrary choice.
 
-### Key Fact: Upper Sums, Lower Sums, and $L_P(f)$, $U_P(f)$ (OpenStax §1.1; MAT137 notation)
+### Key Fact: Upper Sums, Lower Sums, and $L_P(f)$, $U_P(f)$ (OpenStax §1.1)
 
-If, on each subinterval, $x_i^*$ is chosen so that $f(x_i^*)$ is the **supremum** (least upper bound) of $f$ on $[x_{i-1},x_i]$, the resulting Riemann sum is called the **upper sum**, written $U_P(f)$. If $f(x_i^*)$ is instead the **infimum** (greatest lower bound) of $f$ on that subinterval, the resulting sum is the **lower sum**, $L_P(f)$. For *any* partition $P$ and any bounded function $f$,
+If, on each subinterval, $x_i^*$ is chosen so that $f(x_i^*)$ is the **largest** value of $f$ on $[x_{i-1},x_i]$, the resulting Riemann sum is called the **upper sum**, written $U_P(f)$. If $f(x_i^*)$ is instead the **smallest** value of $f$ on that subinterval, the resulting sum is the **lower sum**, $L_P(f)$. (Since $f$ is continuous, it does attain a largest and smallest value on each closed subinterval.) For *any* partition $P$ and any such $f$,
 $$L_P(f) \leq U_P(f),$$
 because every lower estimate on a subinterval is $\leq$ every upper estimate on that same subinterval. If $f$ is monotonic (increasing or decreasing throughout $[a,b]$), the maximum/minimum on each subinterval automatically occurs at an endpoint, so $L_P(f)$ and $U_P(f)$ coincide with whichever of $L_n, R_n$ is the underestimate/overestimate.
 
@@ -77,14 +77,6 @@ $$\int_a^b f(x)\,dx = \lim_{n\to\infty} \sum_{i=1}^{n} f(x_i^*)\Delta x,$$
 ### Theorem: Continuous Functions Are Integrable (OpenStax §1.2, Theorem 1.1)
 
 If $f$ is continuous on $[a,b]$, then $f$ is integrable on $[a,b]$. (Integrability can still hold for some discontinuous functions too — e.g. a function with finitely many jump discontinuities — but continuity is the simplest sufficient condition, and the one used most often in this course.)
-
-### Key Fact: Equivalent Characterizations of the Supremum (MAT137 Unit 7, Videos 7.3–7.4)
-
-Let $S$ be an upper bound of a set $A \subseteq \mathbb{R}$. The following statements are **all equivalent** to "$S = \sup A$":
-$$\text{(i) if } R \text{ is an upper bound of } A \text{, then } S \leq R;$$
-$$\text{(ii) } \forall R < S,\ R \text{ is not an upper bound of } A; \qquad \text{(iii) } \forall R < S,\ \exists\, x\in A \text{ such that } R < x;$$
-$$\text{(iv) } \forall \varepsilon>0,\ \exists\, x\in A \text{ such that } S-\varepsilon < x.$$
-Forms (ii)–(iv) are the ones actually used to *prove* a specific number is the supremum: they say that **no number smaller than $S$ can also be an upper bound**, so $S$ is the *smallest* one. Swapping a strict inequality for a non-strict one (e.g. "$R \leq x$" instead of "$R < x$" in (iii)) generally changes the meaning and breaks the equivalence — see Practice Problem 11.
 
 ---
 
@@ -187,8 +179,6 @@ A partition of $[0,3]$ must be a set of points that includes **both endpoints**,
 
 9. Use the limit definition of the definite integral (with right-endpoint sample points) to evaluate $\displaystyle\int_0^2 x^2\,dx$.
 10. Suppose $L_P(f)=4$, $U_P(f)=10$ for a partition $P$, and $L_Q(f)=6$, $U_Q(f)=9$ for a partition $Q$. (a) Is it possible that $P \subseteq Q$? Justify using the Key Fact about refining partitions. (b) What can you conclude about the relationship between $L_{P\cup Q}(f)$ and both pairs of values above?
-11. Let $S$ be an upper bound of a set $A \subseteq \mathbb{R}$. Consider the two statements (C) $\forall R<S,\ \exists x\in A$ such that $R<x$, and (D) $\forall R<S,\ \exists x \in A$ such that $R\leq x$. Does (C) imply (D)? Does (D) imply (C)? Which one (if either) is a correct restatement of "$S=\sup A$"?
-12. Let $f$ be a bounded (but not necessarily continuous) function on $[a,b]$, and define $\underline{I}_a^b(f)$ as the *supremum over all partitions $P$* of $L_P(f)$, and $\overline{I}_a^b(f)$ as the *infimum over all partitions $P$* of $U_P(f)$. Explain why $\underline{I}_a^b(f) \leq \overline{I}_a^b(f)$ always holds, and state (in your own words) the extra condition on $f$ that is needed for $\int_a^b f(x)\,dx$ to actually exist.
 
 ---
 
@@ -206,5 +196,3 @@ A partition of $[0,3]$ must be a set of points that includes **both endpoints**,
 | 8 | For increasing $f$: $L_P(f)=\sum_{i=1}^N f(x_{i-1})\Delta x_i$ (left endpoint gives the min), $U_P(f)=\sum_{i=1}^N f(x_i)\Delta x_i$ (right endpoint gives the max) — swapped from the decreasing case because for an increasing function the smallest value on each subinterval is at the *left* end, not the right | Copying the decreasing-function formulas from Page 1 without re-deriving which endpoint gives the max vs. min for an increasing function — the roles of left/right literally reverse. |
 | 9 | $\int_0^2 x^2\,dx = \lim_{n\to\infty}\dfrac{8}{3}\cdot\text{(ratio}\to1) = \dfrac83$ (using $\Delta x=2/n$, $x_i=2i/n$, and $\sum f(x_i)\Delta x = \dfrac{8}{n^3}\sum i^2 \to \dfrac83$) | Reusing the exact algebra from the worked $\int_0^1x^2dx$ example without redoing $\Delta x = (b-a)/n$ and $x_i$ for the new limits $a=0,b=2$ — the constant out front changes from $\frac13$ to $\frac83$, it does not stay the same. |
 | 10 | (a) No: if $P\subseteq Q$ we'd need $L_P(f)\leq L_Q(f)$ **and** $U_Q(f)\leq U_P(f)$ simultaneously; here $L_P=4\leq L_Q=6$ ✓ but $U_Q=9\leq U_P=10$ ✓ as well — so actually this data is *consistent* with $P\subseteq Q$, though it doesn't prove it (other configurations of $P,Q$ could produce the same numbers without one containing the other). (b) $L_{P\cup Q}(f) \geq \max(L_P,L_Q)=6$ and $U_{P\cup Q}(f)\leq\min(U_P,U_Q)=9$, since $P\cup Q$ refines both $P$ and $Q$ | Concluding "$P\subseteq Q$" or "$Q\subseteq P$" is *forced* by the numbers, when refining relationships only give one-directional inequalities — consistency with a containment is not proof of it. |
-| 11 | (C) does **not** imply (D) is false — actually (C) $\Rightarrow$ (D) trivially since $R<x \Rightarrow R\leq x$; (D) does **not** imply (C) in general (e.g. if the only element of $A$ satisfying $R\leq x$ has $x=R$ exactly, (D) holds but (C) fails); (C) is the correct restatement of $S=\sup A$, not (D) | Assuming that swapping $<$ for $\leq$ in a supremum-style statement never changes its truth value or logical strength — here it strictly weakens the implication in one direction. |
-| 12 | $\underline{I}_a^b(f)\leq\overline{I}_a^b(f)$ because for *any two* partitions $P,Q$ (not just $P=Q$), $L_P(f)\leq L_{P\cup Q}(f)\leq U_{P\cup Q}(f)\leq U_Q(f)$, so every lower sum is $\leq$ every upper sum, hence the sup of all lower sums is $\leq$ the inf of all upper sums; $f$ is (Riemann) integrable exactly when $\underline{I}_a^b(f)=\overline{I}_a^b(f)$ | Trying to prove $L_P(f)\leq U_P(f)$ for the *same* partition $P$ (true, but not what's needed) instead of comparing $L_P(f)$ and $U_Q(f)$ for two *different* partitions via their common refinement $P\cup Q$ — the general inequality needs the refinement step. |
