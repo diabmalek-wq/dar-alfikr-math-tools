@@ -13,7 +13,7 @@ weeks each and dedicated practice woven in. **No midterm review weeks. One final
 
 | Wk | Topic | Status | Source content |
 |----|-------|--------|-----------------|
-| 1 | Sigma Notation, Riemann Sums & the Definite Integral | ✅ built (unchanged) | `week-01/` |
+| 1 | Sigma Notation, Riemann Sums & the Definite Integral | ✅ built (revised — MAT137 rigor removed) | `week-01/` |
 | 2 | The Fundamental Theorem of Calculus | ✅ built (unchanged) | `week-02/` |
 | 3 | Integration Techniques I — Substitution & Integration by Parts | ✅ built (new split) | split from old Week-03 + Dummit enrichment |
 | 4 | Integration Techniques II — Trig Integrals, Partial Fractions & the Weierstrass Substitution | ✅ built (new split + enrichment) | split from old Week-03 + Dummit's Weierstrass sub |
@@ -38,6 +38,7 @@ weeks each and dedicated practice woven in. **No midterm review weeks. One final
 **All 15 weeks are now built.** The 15-week restructuring plan is complete.
 
 ## Known enrichment backlog (from the 10-PDF + SFU-notes library read)
+- Week 1: originally cited MAT137 (Calculus with Proofs) as a paired source and included the formal supremum/infimum equivalent-characterization Key Fact plus two proof-based practice problems — flagged as too advanced for a CS student taking the standard (non-proofs) MATA37H3 stream. Fixed: MAT137 citation and sup/inf-proof content removed; upper/lower sums are now framed informally via max/min on each subinterval, matching the OpenStax level used everywhere else in the series.
 - Week 4: Weierstrass substitution `t=tan(x/2)` — done (added).
 - Week 5: fold in UPenn (Blair) improper-integral examples (interior-singularity split case) — not yet done.
 - Week 6: built from OpenStax §3.6 (Midpoint, Trapezoidal, Simpson's Rule, all error bounds) — done; UConn (Stein)/SFU §3.6 cross-reference examples not yet folded in as extra enrichment.
