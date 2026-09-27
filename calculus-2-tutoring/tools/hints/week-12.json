@@ -1,0 +1,34 @@
+{
+  "1": {
+    "hint": "Read the coefficients directly off the given polynomial $f(x)=2x^3-x^2+5$ — no derivatives are needed thanks to uniqueness.",
+    "caution": "Don't differentiate from scratch to find $p_2$ or $p_1$ — just drop the higher-power terms from $f$ itself; that's what uniqueness guarantees."
+  },
+  "2": {
+    "hint": "Substitute $u=x+1$ (so $x=u-1$), expand $(u-1)^3$, then translate back to powers of $(x+1)$.",
+    "caution": "Watch the signs when expanding $(u-1)^3$ — the odd-power terms alternate sign, and it's easy to drop a minus sign."
+  },
+  "3": {
+    "hint": "Plug the given derivative values directly into the Taylor coefficient formula $\\dfrac{f^{(k)}(2)}{k!}(x-2)^k$ for each $k$ from $0$ to $4$.",
+    "caution": "Don't skip the zero-derivative terms silently — include $0\\cdot(x-2)$ and $0\\cdot(x-2)^3$ in your reasoning so you don't mismatch a power with the wrong given value."
+  },
+  "4": {
+    "hint": "Compute $f(0),f'(0),f''(0),f'''(0)$ for $e^x$ (all equal $1$) and plug into the coefficient formula.",
+    "caution": "Don't forget to divide each derivative value by the matching factorial — the coefficients are $\\frac{f^{(k)}(0)}{k!}$, not the raw derivative values."
+  },
+  "5": {
+    "hint": "Compute $f(0),f'(0),f''(0)$ for $\\cos x$ and plug into the coefficient formula through degree $2$.",
+    "caution": "Track the sign of $f''(0)=-1$ carefully — a dropped negative sign flips the concavity of the resulting quadratic approximation."
+  },
+  "6": {
+    "hint": "Think about what Theorem 6.5 (Uniqueness of Power Series) guarantees about how many degree-$\\le n$ polynomials can match $f$ and its first $n$ derivatives at a point.",
+    "caution": "Two different-looking correct methods can't give two different Taylor polynomials — if your answer disagrees with someone else's, at least one computation has an arithmetic error, not a 'different but valid' answer."
+  },
+  "7": {
+    "hint": "Compare the polynomial's actual degree to $10$, and think about what happens to the higher-order terms of the Taylor coefficient formula when $f$ is already a polynomial.",
+    "caution": "Don't reflexively assume higher-degree Taylor polynomials are only ever 'better approximations' — once $n\\ge\\deg f$, $p_n$ equals $f$ exactly, with zero remainder."
+  },
+  "8": {
+    "hint": "Think about what happens to $x^k$ itself when re-expanded in powers of $(x-a)$ via the binomial theorem, for a nonzero center $a$.",
+    "caution": "Zeroing out high powers of $x$ and zeroing out high powers of $(x-a)$ are only the same operation when $a=0$ — for a nonzero center they redistribute information differently."
+  }
+}

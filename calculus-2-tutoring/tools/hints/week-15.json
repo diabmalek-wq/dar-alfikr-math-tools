@@ -1,0 +1,54 @@
+{
+  "1": {
+    "hint": "Recall the exact logical status of the Divergence Test: $a_n\\to0$ is required for convergence, but think about whether the converse direction also holds.",
+    "caution": "Have a concrete counterexample ready (the harmonic series) rather than just recalling the rule name — exams often ask you to justify, not just answer."
+  },
+  "2": {
+    "hint": "Recall the three possible outcomes of the Ratio Test and which values of $L$ correspond to each.",
+    "caution": "'Inconclusive' is a real, common outcome on exams — don't round $L=1$ up to $L>1$ or down to $L<1$ in your memory of the rule."
+  },
+  "3": {
+    "hint": "Write out the precise definitions of 'absolutely convergent' and 'conditionally convergent' side by side and check whether one set of series is a subset of the other.",
+    "caution": "The two terms describe mutually exclusive categories for a convergent series — a series is one or the other, never both."
+  },
+  "4": {
+    "hint": "Recall the theorem connecting continuity on a closed, bounded interval to Riemann integrability.",
+    "caution": "This is about EXISTENCE of the integral (as a number), not about whether you can find an elementary closed-form antiderivative — those are different questions."
+  },
+  "5": {
+    "hint": "Recall that the radius of convergence theorem only pins down the open interval $(a-R,a+R)$ — think about what must be checked separately at the two boundary points.",
+    "caution": "Endpoint behavior can go three different ways (both diverge, both converge, one of each) — don't assume symmetry between the two endpoints."
+  },
+  "6": {
+    "hint": "Let $u=4-x^2$ so that $du=-2x\\,dx$, matching the $x\\,dx$ in the numerator up to a constant.",
+    "caution": "Track the sign from $du=-2x\\,dx$ carefully — it flips the sign of the final antiderivative if dropped."
+  },
+  "7": {
+    "hint": "Write the improper integral as $\\lim_{b\\to\\infty}\\int_0^b e^{-2x}\\,dx$ and find an antiderivative of $e^{-2x}$ using the chain rule in reverse.",
+    "caution": "The antiderivative of $e^{-2x}$ carries a factor of $-\\frac12$ from the chain rule — a bare $-e^{-2x}$ is off by that factor."
+  },
+  "8": {
+    "hint": "Set up the Trapezoidal Rule formula $T_n=\\frac{\\Delta x}{2}\\left[f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+f(x_4)\\right]$ with $\\Delta x=1$.",
+    "caution": "Only the two endpoint function values get weight $1$ — every interior node gets weight $2$; mixing this up is the most common Trapezoidal Rule error."
+  },
+  "9": {
+    "hint": "Substitute $u=\\ln x$ (so $du=\\frac{dx}{x}$) to convert the integral into a $p$-integral in $u$.",
+    "caution": "Don't forget to change the lower bound from $x=2$ to $u=\\ln2$ when you substitute — the bounds transform along with the variable."
+  },
+  "10": {
+    "hint": "First check whether $|a_n|\\to0$; if it does, that alone doesn't decide absolute convergence — use Limit Comparison Test on $|a_n|$ against a simpler benchmark series like $\\frac1n$.",
+    "caution": "Reaching '$|a_n|\\to0$' is not the same as '$\\sum|a_n|$ converges' — don't stop the absolute-convergence check at the term-limit step; you still need a convergence test on the series of absolute values."
+  },
+  "11": {
+    "hint": "Rewrite $\\frac1x$ as $\\frac{1}{2+(x-2)}$, then factor out a $2$ from the denominator to expose the geometric series form $\\frac{1}{1-r}$ with $r=-\\frac{x-2}{2}$.",
+    "caution": "Don't forget the overall $\\frac12$ factor left outside the geometric series after factoring — it multiplies every term of the final series."
+  },
+  "12": {
+    "hint": "Apply the Binomial Series with $r=\\frac13$, computing $\\binom{1/3}{1},\\binom{1/3}{2},\\binom{1/3}{3}$ directly from the general coefficient formula.",
+    "caution": "Each exponent $r=\\frac13,\\frac12,-\\frac12,\\ldots$ gives its own distinct set of coefficients — don't reuse coefficients computed for a different value of $r$ in an earlier problem."
+  },
+  "13": {
+    "hint": "Recall that a series' sum is defined as $\\lim_{n\\to\\infty}S_n$, so just take the limit of the given partial-sum formula directly.",
+    "caution": "There's no need to reconstruct the individual terms $a_n=S_n-S_{n-1}$ first — the question only asks for the sum, which is the partial-sum limit itself."
+  }
+}

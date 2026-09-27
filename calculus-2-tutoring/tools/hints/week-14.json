@@ -1,0 +1,30 @@
+{
+  "1": {
+    "hint": "Use the general binomial coefficient formula $\\binom{r}{n}=\\dfrac{r(r-1)(r-2)\\cdots(r-n+1)}{n!}$ with $r=-2$, and simplify the growing product of negative factors before multiplying by $x^n$.",
+    "caution": "Cross-check your first few terms against Week 11 Problem 6's series for $\\dfrac{1}{(1-x)^2}=\\sum(n+1)x^n$ by substituting $x\\to-x$ — the two derivations should agree term by term."
+  },
+  "2": {
+    "hint": "Apply the Binomial Series with $r=\\tfrac12$, computing $\\binom{1/2}{0},\\binom{1/2}{1},\\binom{1/2}{2},\\binom{1/2}{3}$ in turn.",
+    "caution": "$\\binom{1/2}{n}$ does not simplify the same way $\\binom{-1/2}{n}$ does — recompute each coefficient from the formula rather than reusing the signs from the $(1-x)^{-1/2}$ example."
+  },
+  "3": {
+    "hint": "Substitute the Maclaurin series for $\\cos x$, subtract $1-x^2/2$ term by term, then divide the remaining series by $x^4$.",
+    "caution": "The lowest surviving power after subtracting $1-x^2/2$ is $x^4$, not $x^6$ — double-check which term of the $\\cos x$ series you're dividing by $x^4$."
+  },
+  "4": {
+    "hint": "Write $\\sin(1)$ as the alternating series $\\sum\\frac{(-1)^n}{(2n+1)!}$ evaluated at $x=1$, then find the smallest $n$ making the next term's magnitude fall under the required tolerance.",
+    "caution": "The Alternating Series Remainder bound only applies once the terms are genuinely decreasing in magnitude and alternating in sign — confirm both before trusting the bound."
+  },
+  "5": {
+    "hint": "Substitute the Maclaurin series for $e^{-x^2}$ (substitute $-x^2$ into the $e^x$ series) and integrate term by term over $[0,1]$.",
+    "caution": "This series has no alternating-sign guarantee issue here since the signs do alternate — but make sure you integrate $x^{2n}$ to $\\frac{x^{2n+1}}{2n+1}$ correctly before evaluating at the bounds."
+  },
+  "6": {
+    "hint": "Bound $|f^{(4)}(t)|=|\\cos t|\\le1$ (or use whichever derivative order matches your chosen degree) on the interval between $0$ and $0.3$, then plug into the Lagrange Remainder formula.",
+    "caution": "Since $|\\cos t|\\le1$ everywhere, you can safely use $M=1$ regardless of the interval — don't overcomplicate the bound by trying to find a tighter $M$."
+  },
+  "7": {
+    "hint": "Recall Theorem 6.8's exact requirement: a Taylor series converges to $f$ only where the Lagrange Remainder $R_n(x)\\to0$ as $n\\to\\infty$ — convergence of the series alone doesn't guarantee this.",
+    "caution": "The classic counterexample here is a function whose Taylor series converges everywhere but only equals the function at the center — don't assume 'the series converges' and 'the series equals $f$' are the same claim."
+  }
+}

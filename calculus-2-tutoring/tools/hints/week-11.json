@@ -1,0 +1,26 @@
+{
+  "1": {
+    "hint": "Use the Ratio Test on $|(-1)^n(x+2)^n/n^2|$ to find $R$, then plug both endpoints $x=-1$ and $x=-3$ back into the original series separately.",
+    "caution": "Don't assume alternating behavior at one endpoint forces the other to diverge — check each endpoint on its own; here both converge because $p=2$ gives absolute convergence regardless of sign."
+  },
+  "2": {
+    "hint": "Apply the Ratio Test to $x^n/n!$ and see what the limit of the ratio equals for every fixed $x$.",
+    "caution": "Endpoints only exist — and only need checking — when $R$ is a finite positive number; don't try to 'check $x=\\pm\\infty$' when $R=\\infty$."
+  },
+  "3": {
+    "hint": "Set up the ratio $\\left|\\dfrac{a_{n+1}}{a_n}\\right|$ and simplify $\\left(\\dfrac{n}{n+1}\\right)^n$ using the standard limit that defines $e$.",
+    "caution": "$\\left(\\dfrac{n}{n+1}\\right)^n$ tends to $1/e$, not $1$ — don't cancel the fraction to $1$ before taking it to the $n$-th power."
+  },
+  "4": {
+    "hint": "Rewrite $\\dfrac{1}{1+3x}$ as $\\dfrac{1}{1-(-3x)}$ to match the geometric series form $\\sum r^n$ with $r=-3x$.",
+    "caution": "Raise the ENTIRE term $-3x$ to the $n$-th power — writing $(-3)x^n$ instead of $(-3)^nx^n$ loses the alternating sign pattern."
+  },
+  "5": {
+    "hint": "Factor a $4$ out of the denominator first to get a geometric form in $-x^2/4$, then multiply the whole series by the leftover $x/4$ at the end.",
+    "caution": "Don't forget the leftover factor of $x$ (and the $\\frac14$) sitting outside the geometric series — it's easy to drop after substituting."
+  },
+  "6": {
+    "hint": "Differentiate the closed form $\\dfrac{1}{1-x}$ to get $\\dfrac{1}{(1-x)^2}$, then differentiate its power series term by term using Theorem 6.4.",
+    "caution": "After differentiating $\\sum x^n$ term by term, the sum correctly starts at $n=1$ — don't relabel it to start at $n=0$ without also shifting the exponent, or you'll include a nonsense term."
+  }
+}
