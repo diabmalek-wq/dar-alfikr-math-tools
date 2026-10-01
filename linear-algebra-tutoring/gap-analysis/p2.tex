@@ -1,0 +1,35 @@
+\secn{New Material Summary}
+\sub{Category D \textemdash\ new concepts (16)}
+{\footnotesize
+\begin{longtable}{@{}p{2.6cm}p{5.6cm}p{4.6cm}p{3.6cm}@{}}
+\toprule \textbf{Topic} & \textbf{New Element} & \textbf{Why It Matters} & \textbf{Recommended Location}\\\midrule\endhead
+\textbf{D1} Conjugate transpose & $A^*=\overline{A}^{\,T}$; $(X{+}Y)^*$, $(cX)^*=\bar cX^*$, $(AB)^*=B^*A^*$; expand/compute/prove & Tested in Q2, MT1, MT2, Final setup; sign of $\bar i$ is the trap & W2 after transpose\\
+\textbf{D2} Abstract carriers & $\mathbf P_n(\mathbb F)$, $M_{m\times n}(\mathbb F)$ as spaces for subspace/span/LI/basis/dim/maps & Most exam items live here, not in $\mathbb R^n$ & W2 (intro), then W6, W8, W10\\
+\textbf{D3} Dim.\ Bound \& Extension Lemma & Named theorems; ``$|S|>\dim V\Rightarrow$ LD'', ``$|S|<\dim V\Rightarrow$ not spanning'', ``$|S|=\dim V$ LI $\Rightarrow$ basis'' & Replaces long computations by 2-line counting proofs (HW4, Q5, MT1 B3, Final B9) & W8\\
+\textbf{D4} Finite vs infinite dim. & $\mathbf P(\mathbb R)$ not finite-dim.; $\mathbb F^{\mathbb N}$; left/right shift; subspaces of infinite-dim.\ spaces & Shows injective and surjective differ for operators in infinite dimension & W8 (dim.), W12 (shifts)\\
+\textbf{D5} $\mathcal L(V,W)$ & It is a vector space; $\dim\mathcal L(V,W)=\dim V\cdot\dim W$; maps out of $\mathcal L$ & Q6, HW8, Final A10 & W11\\
+\textbf{D6} Isomorphism & Bijective linear map; $V\cong W\iff\dim V=\dim W$; $W\cong\mathbb F^n$ & MT2 B8(b), HW9; bridges abstract $\leftrightarrow\mathbb F^n$ & W12\\
+\textbf{D7} Axiomatic determinant & Unique alternating multilinear map, $\det I=1$; compute/prove from axioms (no $ad-bc$) & Q10, A9/B5 Final force it; course only has volume definition & W13 (new subsection)\\
+\textbf{D8} Cramer's rule & $x_i=\det A_i/\det A$, applicability iff $\det A\ne0$ & Q10 B4; 7 HW systems incl.\ singular traps & W13\\
+\textbf{D9} $p(A)$, $p(T)$ & $A^r=MB^rM^{-1}$, $p(A)=Mp(B)M^{-1}$, $p(D)=\mathrm{diag}\,p(d_i)$ & Q11, Final A5, B6(e,f) & W14\\
+\textbf{D10} Inner-product axioms, $W^\perp$, $\oplus$ & Axioms (additivity, homogeneity, symmetry, positive-definite); $W^\perp$ subspace; $W\oplus W^\perp=\mathbb R^n$ & HW6 only (challenge); proofs not in W7 & W7 (optional)\\
+\textbf{D11} Properties from axioms & Uniqueness of $0$/inverse, cancellation, $0v=c0=0$, $(-1)x=-x$; field analogues & Part A/B recall in Q2, MT1 A9, Final B4 & W1 (extend ``Proof Techniques'')\\
+\textbf{D12} Operator catalogue & identity, zero, integration $\mathbf P_n\to\mathbf P_{n+1}$, derivative, $A\mapsto A^T$, $A\mapsto A+A^T$; matrices/eigenvalues & Recurs in HW6, 7, 9, 11, Q6--Q9 & W10--W12\\
+\textbf{D13} Field dependence & Same formula over $\mathbb C$ vs $\mathbb F$; $(x{+}y,y{+}z,x{+}z)$ bijective iff $2\ne0$ & Q8 B2(b) & W12\\
+\textbf{D14} Conjugation and eigen & $\overline{zw}=\bar z\bar w$; $\overline{Av}=\bar A\bar v$; real $A$: $(\lambda,v)\Rightarrow(\bar\lambda,\bar v)$ & Final B2; explains complex pairs & W14\\
+\textbf{D15} Row-op equivalence & Each elementary row operation preserves the solution set & Challenge HW3a (not on quizzes) & W3 (optional)\\
+\textbf{D16} Image/preimage of subspaces & $T(V')$, $T^{-1}(W')$ are subspaces; $T^{-1}(W')=\ker T$ choice & HW7; feeds $\ker T=\ker T^2$ & W11\\\bottomrule
+\end{longtable}}
+\sub{Category C \textemdash\ new question patterns (merged into lessons; detail in Bank)}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item \textbf{``Construct an object with property'' (Part A).} Subspace of $M_2(\mathbb C)$ of dimension 2; spanning-but-dependent subset of $\mathbf P_3$; map $\mathbf P_2\to\mathbb R^3$ not iso.; $A,B$ singular with $A+B$ invertible; $T:\mathbb R^2\to\mathbb R^2$ with one eigenvalue; inconsistent REF. \hfill W8, W10, W12, W14
+\item \textbf{``Set up only'' with if-and-only-if justification.} LI / span-membership / spanning-set systems over $\mathbb C$, $M_2$, $\mathbf P_2$. \hfill W6
+\item \textbf{Subspace test with constraint sets + counterexample} ($f(0)=1$, $p(1)=1$, $\det A=0$, $A_{11}=1$, $x+y-z=2$). \hfill W8
+\item \textbf{Kernel/image of abstract maps via coordinate matrix} (nullspace $\to\ker$, pivot columns $\to$ image), with rank--nullity check. \hfill W11
+\item \textbf{Yes/No dimension reasoning} (surjective? injective? from $\dim$ alone). \hfill W11
+\item \textbf{Linear map from relations} ($T(1,2,3)$, $T(1,1,1)$ given; find $T(0,1,2)$). \hfill W10
+\item \textbf{Basis extension and basis-criterion proofs.} \hfill W8
+\item \textbf{Compute-and-verify coordinate identity} $[T(v)]_\beta=[T]_\alpha^\beta[v]_\alpha$ with non-standard $\beta$. \hfill W9
+\item \textbf{Change-of-basis identities} $[I]^\alpha_\gamma=[I]^\alpha_\beta[I]^\beta_\gamma$, $[I][I]=I$, similarity of representations. \hfill W12
+\item \textbf{Entrywise matrix-algebra proofs} (sum notation). \hfill W2
+\end{itemize}

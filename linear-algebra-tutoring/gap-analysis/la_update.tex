@@ -1,0 +1,336 @@
+\documentclass[9pt]{article}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.7cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,xcolor,longtable,booktabs,array,enumitem,fancyhdr,lastpage,fontspec,tcolorbox}
+\definecolor{NAVY}{HTML}{1F3A5F}\definecolor{GREY}{HTML}{6B7280}\definecolor{ORANGE}{HTML}{E07B39}
+\setlength{\parindent}{0pt}\setlength{\parskip}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\bfseries\color{NAVY}Linear Algebra I \textperiodcentered\ Course Update Analysis \textemdash\ Supplement to Weeks 1--15}
+\fancyhead[R]{\small\color{GREY}Mr Malek Thiab}
+\fancyfoot[C]{\footnotesize\color{GREY}Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\newcommand{\secn}[1]{\vspace{5pt}\par\noindent\begin{tcolorbox}[colback=NAVY,colframe=NAVY,boxrule=0pt,arc=2pt,left=5pt,top=1pt,bottom=1pt]\color{white}\bfseries\MakeUppercase{#1}\end{tcolorbox}\nopagebreak}
+\newcommand{\sub}[1]{\vspace{3pt}\par{\bfseries\color{NAVY}#1}\nopagebreak\par}
+\newcommand{\bi}[2]{\par\noindent\hangindent=1.25cm\hangafter=1\makebox[1.25cm][l]{\textbf{\footnotesize #1}}#2\par}
+\begin{document}
+\begin{tcolorbox}[colback=NAVY!5,colframe=NAVY,boxrule=0.7pt,arc=3pt]
+{\Large\bfseries\color{NAVY}Linear Algebra I \textperiodcentered\ Course Update: Gap Analysis of New Assessments}\\
+\small Supplement to the existing 15-week course (Weeks 1--15). Sources analysed: 11 homework/assignment sets, 11 quizzes, 3 mock exams (25 files; 300 question items). \textbf{Tools: every item is by hand. No calculator and no Desmos} (all source exams state ``no calculators''). No answer key included.
+\end{tcolorbox}
+\secn{Coverage Report}
+\textbf{Baseline (existing course).} Concrete, geometric, $\mathbb R^n$-centred: fields/complex numbers/axioms (W1), $\mathbb F^n$, $M_{n\times k}$, transpose, matrix products, $\mathcal F(\mathbb F)$ (W2), systems/RREF (W3), sets/vectors/lines/planes (W4--5), span/LI (W6), dot product/projection (W7), subspaces/bases/dimension (W8), coordinates/change of basis (W9, W12), linear maps, composition, range/null space, rank--nullity, inverses (W10--12), determinant via volume (W13), eigen/diagonalization (W14), review (W15). \textbf{The new assessments are an abstract, proof-first version of the same syllabus} (general $\mathbb F$, $\mathbf P_n$, $M_{m\times n}$, $\mathcal L(V,W)$, matrices over $\mathbb C$, ``prove/construct/justify''). Verified absences by keyword search: conjugate transpose, Cramer's rule, multilinear/alternating determinant, Dimension Bound Theorem, isomorphism, $\mathcal L(V,W)$, direct sum, inner-product axioms, $\mathbb F^{\mathbb N}$/shifts, $P_n$ as a working space, subspace tests on matrix/polynomial/function constraint sets.
+
+\textbf{Counting convention.} One \emph{item} = one numbered problem (quizzes/mocks: each lettered part counted; homework: each numbered problem, sub-lists not expanded; definition-recall prompts excluded). \emph{Unique} = first occurrence of a task in the set (order: HW$\to$quiz of the same week $\to$ mocks); \emph{Duplicate} = same task/technique already seen. Counts are by hand, $\pm1$. \emph{New concepts} = Category D; \emph{new patterns} = Category C (Section ``Integration Map'' IDs).
+
+{\footnotesize
+\begin{longtable}{@{}p{4.1cm}rrrrr p{6.3cm}@{}}
+\toprule
+\textbf{File} & \textbf{Total} & \textbf{Unique} & \textbf{Dup.} & \textbf{New pat.} & \textbf{New conc.} & \textbf{Main new content}\\\midrule\endhead
+Assignment 1 (fields, VS axioms) & 9 & 9 & 0 & 2 & 1 & axiom-derived properties; $\mathbb R^+$ space\\
+Quiz 1 & 6 & 0 & 6 & 0 & 0 & clone of A1\\
+Assignment 2 (subspaces, span) & 9 & 9 & 0 & 3 & 2 & $A^*$; subspace tests in $M$, $\mathcal F(\mathbb C)$\\
+Quiz 2 & 6 & 0 & 6 & 0 & 0 & clone of A2/A1\\
+Assignment 3a (REF/RREF, solutions) & 7 & 7 & 0 & 2 & 1 & row-op equivalence (challenge)\\
+Assignment 3b (LI/span tests) & 8 & 7 & 1 & 4 & 0 & over $\mathbb C$, $M_2$, $\mathbf P_2$; pivot subsets\\
+Quiz 3 & 8 & 2 & 6 & 2 & 0 & $W_1\cap W_2$; double inclusion\\
+Quiz 4 & 12 & 1 & 11 & 1 & 0 & RREF recognition\\
+Assignment 4 (basis, dimension) & 10 & 10 & 0 & 3 & 2 & Dim.\ Bound, finite vs infinite dim.\\
+Quiz 5 & 7 & 1 & 6 & 1 & 0 & extend to basis\\
+Assignment 6 (linear maps) & 16 & 16 & 0 & 3 & 2 & inner-product axioms, $W^\perp$, $W\oplus W^\perp$\\
+Quiz 6 & 9 & 1 & 8 & 1 & 0 & $\mathcal L(V,W)$ closure\\
+Assignment 7 (ker/image) & 8 & 8 & 0 & 4 & 1 & ker/image via coordinates; $T(V')$, $T^{-1}(W')$\\
+Quiz 7 & 11 & 2 & 9 & 2 & 0 & construct trivial-kernel map\\
+Assignment 8 (inj./surj., $\mathcal L$) & 11 & 11 & 0 & 5 & 1 & $\dim\mathcal L(V,W)$; shifts on $\mathbb F^{\mathbb N}$\\
+Quiz 8 & 8 & 2 & 6 & 1 & 1 & field-dependence (char.\ 2)\\
+Assignment 9 (inverses) & 11 & 11 & 0 & 4 & 1 & isomorphism; $AB{=}I\Rightarrow BA{=}I$\\
+Quiz 9 & 9 & 1 & 8 & 1 & 0 & $T(R{+}S)=TR+TS$\\
+Assignment 10 (determinants) & 17 & 17 & 0 & 2 & 2 & axiomatic det; Cramer\\
+Quiz 10 & 8 & 0 & 8 & 0 & 0 & clone of A10\\
+Assignment 11 (eigen, diag.) & 18 & 18 & 0 & 3 & 1 & $p(A)=Pp(D)P^{-1}$\\
+Quiz 11 (+4 survey parts) & 8 & 0 & 8 & 0 & 0 & clone of A11\\\midrule
+Midterm 1 mock & 26 & 7 & 19 & 5 & 0 & ``construct'' prompts; identity-uniqueness\\
+Midterm 2 mock (Part C placeholder only) & 27 & 5 & 22 & 5 & 0 & $(AB)^*$; associativity; LT from relations\\
+Final mock (Part C unreadable) & 31 & 12 & 19 & 8 & 1 & conjugate eigenpairs; basis criterion\\\midrule
+\textbf{Total} & \textbf{300} & \textbf{157} & \textbf{143} & \textbf{62} & \textbf{16} & \\\bottomrule
+\end{longtable}}
+\textbf{Finding 1.} Quizzes are $\approx$90\% clones of their homework (82 of 92 quiz items are duplicates). \textbf{Homework is the source of value; quizzes add only 10 items.} \textbf{Finding 2.} After merging, the 157 first-occurrence items collapse to \textbf{83 integration entries} (52 Core, 8 Optional, 4 Enrichment, 9 Exam Challenge, 10 Mock Exam Material). \textbf{Finding 3.} No file assesses least squares, Gram--Schmidt, orthogonal diagonalization, LU, or complex inner products; none is added. \textbf{Gaps in sources:} Mock Midterm 2 Part C (``group'') is a placeholder; Mock Final Part C has no question text; HW2 $T_5,T_6$ are garbled in the source and omitted. The first Part-B question in quizzes is printed ``D1'' (typo for B1).
+
+\textbf{Category A (already covered, no action):} RREF reduction and back-substitution (W3), $2\times2$/$3\times3$ determinant formulas (W13), matrix of a map on $\mathbb R^n$ (W10), inverse by row reduction (W12), characteristic polynomial of triangular/small matrices (W14), dot product/projection formula (W7), span/LI over $\mathbb R^n$ (W6), rank--nullity statement (W11). \textbf{Category B (better example, enrichment):} complex-entry RREF/inverse/eigen problems (Q4 D1, MT2 B7, Final B6, Q11 B2); $p(D)$ for diagonal $D$; triangle/tetrahedron volume by determinant.
+\secn{New Material Summary}
+\sub{Category D \textemdash\ new concepts (16)}
+{\footnotesize
+\begin{longtable}{@{}p{2.6cm}p{5.6cm}p{4.6cm}p{3.6cm}@{}}
+\toprule \textbf{Topic} & \textbf{New Element} & \textbf{Why It Matters} & \textbf{Recommended Location}\\\midrule\endhead
+\textbf{D1} Conjugate transpose & $A^*=\overline{A}^{\,T}$; $(X{+}Y)^*$, $(cX)^*=\bar cX^*$, $(AB)^*=B^*A^*$; expand/compute/prove & Tested in Q2, MT1, MT2, Final setup; sign of $\bar i$ is the trap & W2 after transpose\\
+\textbf{D2} Abstract carriers & $\mathbf P_n(\mathbb F)$, $M_{m\times n}(\mathbb F)$ as spaces for subspace/span/LI/basis/dim/maps & Most exam items live here, not in $\mathbb R^n$ & W2 (intro), then W6, W8, W10\\
+\textbf{D3} Dim.\ Bound \& Extension Lemma & Named theorems; ``$|S|>\dim V\Rightarrow$ LD'', ``$|S|<\dim V\Rightarrow$ not spanning'', ``$|S|=\dim V$ LI $\Rightarrow$ basis'' & Replaces long computations by 2-line counting proofs (HW4, Q5, MT1 B3, Final B9) & W8\\
+\textbf{D4} Finite vs infinite dim. & $\mathbf P(\mathbb R)$ not finite-dim.; $\mathbb F^{\mathbb N}$; left/right shift; subspaces of infinite-dim.\ spaces & Shows injective and surjective differ for operators in infinite dimension & W8 (dim.), W12 (shifts)\\
+\textbf{D5} $\mathcal L(V,W)$ & It is a vector space; $\dim\mathcal L(V,W)=\dim V\cdot\dim W$; maps out of $\mathcal L$ & Q6, HW8, Final A10 & W11\\
+\textbf{D6} Isomorphism & Bijective linear map; $V\cong W\iff\dim V=\dim W$; $W\cong\mathbb F^n$ & MT2 B8(b), HW9; bridges abstract $\leftrightarrow\mathbb F^n$ & W12\\
+\textbf{D7} Axiomatic determinant & Unique alternating multilinear map, $\det I=1$; compute/prove from axioms (no $ad-bc$) & Q10, A9/B5 Final force it; course only has volume definition & W13 (new subsection)\\
+\textbf{D8} Cramer's rule & $x_i=\det A_i/\det A$, applicability iff $\det A\ne0$ & Q10 B4; 7 HW systems incl.\ singular traps & W13\\
+\textbf{D9} $p(A)$, $p(T)$ & $A^r=MB^rM^{-1}$, $p(A)=Mp(B)M^{-1}$, $p(D)=\mathrm{diag}\,p(d_i)$ & Q11, Final A5, B6(e,f) & W14\\
+\textbf{D10} Inner-product axioms, $W^\perp$, $\oplus$ & Axioms (additivity, homogeneity, symmetry, positive-definite); $W^\perp$ subspace; $W\oplus W^\perp=\mathbb R^n$ & HW6 only (challenge); proofs not in W7 & W7 (optional)\\
+\textbf{D11} Properties from axioms & Uniqueness of $0$/inverse, cancellation, $0v=c0=0$, $(-1)x=-x$; field analogues & Part A/B recall in Q2, MT1 A9, Final B4 & W1 (extend ``Proof Techniques'')\\
+\textbf{D12} Operator catalogue & identity, zero, integration $\mathbf P_n\to\mathbf P_{n+1}$, derivative, $A\mapsto A^T$, $A\mapsto A+A^T$; matrices/eigenvalues & Recurs in HW6, 7, 9, 11, Q6--Q9 & W10--W12\\
+\textbf{D13} Field dependence & Same formula over $\mathbb C$ vs $\mathbb F$; $(x{+}y,y{+}z,x{+}z)$ bijective iff $2\ne0$ & Q8 B2(b) & W12\\
+\textbf{D14} Conjugation and eigen & $\overline{zw}=\bar z\bar w$; $\overline{Av}=\bar A\bar v$; real $A$: $(\lambda,v)\Rightarrow(\bar\lambda,\bar v)$ & Final B2; explains complex pairs & W14\\
+\textbf{D15} Row-op equivalence & Each elementary row operation preserves the solution set & Challenge HW3a (not on quizzes) & W3 (optional)\\
+\textbf{D16} Image/preimage of subspaces & $T(V')$, $T^{-1}(W')$ are subspaces; $T^{-1}(W')=\ker T$ choice & HW7; feeds $\ker T=\ker T^2$ & W11\\\bottomrule
+\end{longtable}}
+\sub{Category C \textemdash\ new question patterns (merged into lessons; detail in Bank)}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item \textbf{``Construct an object with property'' (Part A).} Subspace of $M_2(\mathbb C)$ of dimension 2; spanning-but-dependent subset of $\mathbf P_3$; map $\mathbf P_2\to\mathbb R^3$ not iso.; $A,B$ singular with $A+B$ invertible; $T:\mathbb R^2\to\mathbb R^2$ with one eigenvalue; inconsistent REF. \hfill W8, W10, W12, W14
+\item \textbf{``Set up only'' with if-and-only-if justification.} LI / span-membership / spanning-set systems over $\mathbb C$, $M_2$, $\mathbf P_2$. \hfill W6
+\item \textbf{Subspace test with constraint sets + counterexample} ($f(0)=1$, $p(1)=1$, $\det A=0$, $A_{11}=1$, $x+y-z=2$). \hfill W8
+\item \textbf{Kernel/image of abstract maps via coordinate matrix} (nullspace $\to\ker$, pivot columns $\to$ image), with rank--nullity check. \hfill W11
+\item \textbf{Yes/No dimension reasoning} (surjective? injective? from $\dim$ alone). \hfill W11
+\item \textbf{Linear map from relations} ($T(1,2,3)$, $T(1,1,1)$ given; find $T(0,1,2)$). \hfill W10
+\item \textbf{Basis extension and basis-criterion proofs.} \hfill W8
+\item \textbf{Compute-and-verify coordinate identity} $[T(v)]_\beta=[T]_\alpha^\beta[v]_\alpha$ with non-standard $\beta$. \hfill W9
+\item \textbf{Change-of-basis identities} $[I]^\alpha_\gamma=[I]^\alpha_\beta[I]^\beta_\gamma$, $[I][I]=I$, similarity of representations. \hfill W12
+\item \textbf{Entrywise matrix-algebra proofs} (sum notation). \hfill W2
+\end{itemize}
+\secn{Question Integration Map}
+IDs are used in the Bank. Source: A\# = assignment/homework, Q\# = quiz, MT1/MT2 = mock midterms, F = mock final. Difficulty E/M/H. Classification: Core Addition, Optional Practice, Exam Challenge, Mock Exam Material (Enrichment = Category B, counted under Optional).
+{\footnotesize\begin{longtable}{@{}l p{2.6cm} p{5.2cm} c p{3.9cm} p{1.7cm}@{}}\toprule \textbf{ID}&\textbf{Source}&\textbf{Topic}&\textbf{Diff}&\textbf{Reason for Inclusion}&\textbf{Class}\\\midrule\endhead
+RR1 & Q4 A1 & RREF recognition & E & Pivot-column zero rule is tested directly & Core\\
+RR2 & MT1 A6, A3a & Construct inconsistent REF; classify systems & E & Recurring ``construct'' prompt & Core\\
+RR3 & A3a (ch.) & Row operations preserve solution set & H & Justifies method; never quizzed & Optional\\
+RR4 & A3b, Q4 A3, Q5 A2 & Column/row bases from RREF, incl.\ complex & M & Col basis = original pivot columns & Core\\
+RR5 & A3b & Basic-variable theorem (pivot vectors span, LI) & H & Proof behind RR4/BD6 & Core\\
+LS1 & A3a & One system family, five tasks (REF, RREF, basic/free, solution space, affine set) & M & Instructor's drill format & Core\\
+LS2 & Q3 B2, Q4 D1, B2 & Set-up-only systems with iff justification & M & Marks for the justification & Core\\
+LS3 & Q3 B3, Q4 B3 & Solution-set subspaces; spanning set; double inclusion & M & Constraint $\to$ span & Core\\
+LS4 & MT1 C1 & Homogeneous solution set is a subspace & H & Extension question & Exam Challenge\\
+LS5 & A8, Q8 D1 & $Ax=b$ over $\mathbb C$ (triangular) & M & Complex back-substitution & Core\\
+MO1 & A2, Q2, MT1 A4, MT2 A6 & Conjugate-transpose expand/compute & M & Sign of $\bar i$ trap & Core\\
+MO2 & A2, Q2 B3, MT2 B2 & Prove/verify $(X{+}Y)^*,(cX)^*,(AB)^*$ & M & Entrywise index proof & Core\\
+MO3 & Q9 A1, MT2 A2, F B10 & Complex matrix products & M & $i^2=-1$ slips & Core\\
+MO4 & Q6 D1 & $4\times4$ complex matrix--vector product & M & Arithmetic only & Enrichment\\
+MO5 & A7, Q7 D1, Q9 D1 & Entrywise distributivity proofs & E & Sum-notation template & Core\\
+MO6 & MT2 A10 & Singular $A,B$ with $A+B$ invertible & E & Invertibility not additive & Mock Exam\\
+MO7 & A9, Q9 A2 & Invertibility of $2\times2$/$3\times3$ over $\mathbb C$ & M & Determinant or rank check & Core\\
+MO8 & A1 & Function algebra and composition notation & E & Fixes $fg$ vs $f\circ g$ & Enrichment\\
+DT1 & A10, F A9, B5 & Determinant from axioms (no $ad-bc$) & H & Explicitly required on exams & Core\\
+DT2 & A10 & Induction proofs: $\det A^T$, triangular, $\det kA=k^n\det A$, row ops & H & Proof bank for DT3 & Optional\\
+DT3 & Q10 B3 & Scaling a row scales $\det$ & M & Use multilinearity only & Core\\
+DT4 & A10, Q10 B2 & Cofactor $3\times3$, $4\times4$ over $\mathbb C$ & M & Sign pattern & Core\\
+DT5 & A10 & Area/volume by $\det$; triangle $\tfrac12$, tetrahedron $\tfrac16$ & M & Application & Optional\\
+DT6 & A10, Q10 B4 & Cramer's rule with singular traps & M & Applicability check is marked & Core\\
+DT7 & Q10 A3 & State characterization of $\det$ & E & Part-A recall & Core\\
+VS1 & A1, Q2, MT1 A9, F B4a & Properties from axioms & M & Repeated on every exam type & Core\\
+VS2 & MT1 B2 & Identity unique from partial axioms & M & Needs commutativity step & Mock Exam\\
+VS3 & A1, Q1 B3, MT1 B1 & Axiom check in $\mathbb F^n$, $M$, $\mathcal F(\mathbb C)$ & E & Pointwise/entrywise template & Core\\
+VS4 & A1 (ch.) & $\mathbb R^+$ with $\boxplus=\cdot$ & H & Non-standard operations & Exam Challenge\\
+VS5 & Q1, MT1 A1, A1 & $\mathbb C$ closure, identity, arithmetic & E & Week-1 quiz pattern & Core\\
+VS6 & A2 & Subspace lists: matrices, functions & M & Broad constraint variety & Core\\
+VS7 & A3a, Q2, MT1 B5, F B1 & Constraint-set tests incl.\ $\det A=0$ & M & Zero-vector disproof & Core\\
+VS8 & Q3 D1 & $W_1\cap W_2$ subspace & M & Not in existing W8 & Core\\
+VS9 & A2, MT1 B4 & Span properties & M & Set-inclusion proofs & Core\\
+VS11 & A2 & True/false/sometimes on LI/LD inclusion & M & Reasoning drill & Optional\\
+VS12 & MT1 A8, A10 & Construct subspace dim 2; dependent spanning set & M & Part-A construction & Mock Exam\\
+VS13 & A4 & Finite vs infinite dimension; $\mathbf P(\mathbb R)$ & H & Infinite-dim.\ logic & Exam Challenge\\
+VS14 & A9, MT2 B8 & $W\cong\mathbb F^n$; symmetric matrices & E & Dimension as invariant & Core\\
+LI1 & A3b, Q3, Q4 & LI tests: $\mathbb C^3$, $M_2(\mathbb C)$, $\mathbf P_2$ & M & Complex $+$ abstract & Core\\
+LI2 & A3b, Q3, Q4, MT1 & Span-membership tests & M & Coefficient matching & Core\\
+LI3 & A2 & $\{u,v,w\}$ LI iff $\{u{+}v,u{+}w,v{+}w\}$ LI & H & Complex field subtlety & Exam Challenge\\
+LI4 & A2 & Proper subset of LI set has smaller span & M & Uses minimality & Optional\\
+LI5 & MT1 B6 & Full LI workflow + basis extraction & M & Mock pattern & Mock Exam\\
+LI6 & F B8, A6, A8 & $T(v_i)$ LI $\Rightarrow v_i$ LI; preservation & M & Converse direction is tested & Core\\
+BD1 & A4 & Standard bases of $\mathbb F^n,M_{n\times k},\mathbf P_n$; dimensions & M & Needed everywhere & Core\\
+BD2 & A4, Q5, MT1, F B1b & Basis/dim of constraint subspaces & M & Highest-frequency mark & Core\\
+BD3 & A4, Q5 B2, MT1 B3, A5 & Counting arguments (Dim.\ Bound) & M & Two-line proofs & Core\\
+BD4 & Q5 B3 & Extend LI set to basis & M & Must justify choice & Core\\
+BD5 & F B9 & Basis criterion $\lvert S\rvert=n$ & H & Uses Extension Lemma & Exam Challenge\\
+BD6 & A3b & Extract LI subset with same span & M & Pivot vectors & Core\\
+LT1 & A6, Q6 B3 & Linearity tests incl.\ $A{+}A^T$, $\mathrm{tr}{+}1$, $A{+}I$ & M & Zero-vector disproof & Core\\
+LT2 & A6, Q6 B4b, MT2 B6 & Properties: $T(0)$, $T(-v)$, image subspace & E & Foundational proofs & Core\\
+LT3 & A6, Q6 B2, Q7, MT2 & Matrix reps on abstract/non-standard bases & M & Coordinate verification & Core\\
+LT4 & MT2 A7 & Matrix $\to$ explicit $T$ & E & Part-A pattern & Mock Exam\\
+LT5 & MT2 A9 & $T$ from relations (non-basis) & M & Write as combination & Mock Exam\\
+LT6 & A6 & Identity, zero, integration operators & E & Composition identities & Optional\\
+LT8 & A7, MT2 B3 & Kernel/image via coordinate matrix; rank--nullity & H & Full 6-part mark block & Core\\
+LT9 & A7 & $\mathrm{im}\,T=\ker T$ possible iff $\dim V$ even & H & Dimension reasoning & Exam Challenge\\
+LT10 & A7, MT2 B5 & $\ker T=\ker T^2\iff\mathrm{im}\,T=\mathrm{im}\,T^2$ & H & Recurs in HW and mock & Exam Challenge\\
+LT11 & Q7 A1--2, MT2 A5, F A1 & Construct maps with stated property & E & Part-A construction & Mock Exam\\
+LT12 & A8, Q8, MT2, F A10 & Dimension yes/no; $\dim\mathcal L(V,W)$ & E & Rapid Part-A marks & Core\\
+LT13 & A8, Q8 & Inj./surj.\ properties; shifts & M & Infinite-dim.\ counterexamples & Core\\
+LT14 & Q6 B4a, Q9 B2, MT2 B4 & $\mathcal L(V,W)$ closure; distributivity; associativity & M & Pointwise equality & Core\\
+LT15 & A9, Q9 B4 & $ST$ inj./surj.\ consequences; iso example & H & Needs counterexample & Exam Challenge\\
+INV1 & A9, Q9 B3, MT2 B7 & Inverse via chosen bases; explicit $T^{-1}$ & H & Complex $4\times4$ & Core\\
+INV2 & A9 & $AB=I\Rightarrow BA=I$; uniqueness; $T^{-1}$ linear & M & Proof block & Core\\
+INV3 & Q8 B2b & Field dependence (char.\ 2) & H & Unusual trap & Optional\\
+EV1 & A11, Q11 B3, F A5, B6e & $p(A),p(T)$ via diagonalization & M & Reused on three assessments & Core\\
+EV2 & A11 & Eigen/diagonalization drill (6+4 matrices) & M & Exam-format matrices & Core\\
+EV3 & A11 & Eigen of derivative, transpose, shear & H & Abstract operators & Core\\
+EV4 & Q11, A11 & Eigen over $\mathbb C$ (triangular) & M & Read diagonal & Core\\
+EV5 & F A1, A4, A6--8 & Conceptual eigen (invertible, $E_0$) & E & Part-A recall & Mock Exam\\
+EV6 & F B2, B4b & Conjugate eigenpair; $E_{\lambda_1}\cap E_{\lambda_2}=0$ & M & Two short proofs & Core\\
+EV7 & F B6 & Diagonalizable $T$, non-diagonalizable $S$ over $\mathbb C$ & H & Geometric multiplicity & Mock Exam\\
+EV8 & F B7 & $3\times3$ char.\ poly.\ with complex roots & M & Rational-root then quadratic & Mock Exam\\
+EV9 & A11 & Orthogonal projection eigenvalues $0,1$ & M & Geometric link & Enrichment\\
+CB1 & A11, Q11 D1, F B3 & Change-of-basis identities & M & Composition proofs & Core\\
+CB2 & A11 & Computations on $\mathbb C^2,\mathbb C^3,\mathbf P_2$ & M & Non-standard bases & Core\\
+OR1 & A6 & Inner-product axioms; multilinearity & E & Axiom template & Optional\\
+OR2 & A6 & $W^\perp$ subspace; $W\oplus W^\perp=\mathbb R^n$ & H & Direct sum new & Exam Challenge\\
+OR3 & A6, A9, Q6 A2 & $P_v$, reflection, rotation as operators & M & Properties $P^2=P$, $R^2=I$ & Core\\
+OR4 & A6 & 12 projection/rotation computations & E & Fluency & Enrichment\\
+OT1 & All Part A & Definition/theorem recall list (see High-Yield) & E & One mark each, every quiz & Core\\
+\bottomrule\end{longtable}}\secn{Supplemental Problem Bank}
+All by hand (no calculator, no Desmos). Questions only; no answers. ``Show/justify'' = full proof or working expected. $\mathbb F$ is an arbitrary field unless stated.
+
+\sub{1. Row Reduction}
+\bi{RR1}{Which of $A=\begin{pmatrix}1&0&2\\0&1&-1\\0&0&0\end{pmatrix}$, $B=\begin{pmatrix}1&0&2\\0&1&0\\0&0&1\end{pmatrix}$, $C=\begin{pmatrix}1&2&0\\0&1&0\\0&0&0\end{pmatrix}$ are in RREF? For each other matrix, name the violated condition.}
+\bi{RR2}{(a) Write an augmented matrix in REF of an inconsistent system. (b) Write one with a unique solution and one with infinitely many. (c) For $\left[\begin{smallmatrix}1&2&-1&0&5\\0&1&3&4&-2\\0&0&0&1&7\end{smallmatrix}\right]$ state the basic and free variables.}
+\bi{RR3}{\textit{(challenge)} Let $S'$ arise from $S$ by one elementary row operation ($R_i\leftrightarrow R_j$, $cR_i$, $R_i+\lambda R_j$). Prove $x$ solves $S\iff x$ solves $S'$; conclude $S$ and $S_{\mathrm{rref}}$ have equal solution sets.}
+\bi{RR4}{Reduce to RREF and give LI spanning sets for $\mathrm{col}(A)$ and $\mathrm{row}(A)$: (a) $\begin{pmatrix}1&2&-1\\2&4&-2\\1&1&0\end{pmatrix}$, (b) $\begin{pmatrix}2&1&0&3\\1&0&1&2\\3&1&1&5\end{pmatrix}$, (c) $\begin{pmatrix}1&i&0\\2&2i&1\\1&i&1\end{pmatrix}$ over $\mathbb C$.}
+\bi{RR5}{Let the homogeneous system for $a_1v_1+\dots+a_nv_n=0$ reduce to REF with basic indices $B$, free indices $F$. Prove (a) $v_f\in\mathrm{span}\{v_b:b\in B\}$ for $f\in F$; (b) $\mathrm{span}\{v_b\}=\mathrm{span}(S)$; (c) $\{v_b:b\in B\}$ is LI. Deduce $\mathrm{col}(A)=\mathrm{span}\{c_i: i\text{ pivot column of }\hat A\}$.}
+
+\sub{2. Linear Systems}
+\bi{LS1}{For each system, (i) Gaussian elimination to REF, (ii) Gauss--Jordan to RREF, (iii) basic/free variables, (iv) for the homogeneous version a spanning set of the solution space, (v) for the non-homogeneous version the solution set as $p+\mathrm{span}(\dots)$: \\ (a) $x{+}y{+}z=2,\ 2x{+}2y{+}2z=4,\ x{-}y{+}z=0$; (b) $x{+}y{+}z=3,\ 2x{-}y{+}z=1,\ -x{+}y{+}2z=4$; (c) $x{+}y=2,\ 2x{-}y=1,\ 3x=3$; (d) $x{+}y{+}z=1,\ 2x{+}2y{+}2z=2,\ x{+}y{+}z=3$.}
+\bi{LS2}{\textit{Set-up only.} Let $v_1=(1,i,0,1)$, $v_2=(2,1,i,0)$, $v_3=(3,1{+}i,i,1)\in\mathbb C^4$. (a) Using an iff chain, construct a system whose solutions decide if $\{v_1,v_2,v_3\}$ is LI. (b) Likewise decide if $w=(4,2{+}i,i,1)\in\mathrm{span}\{v_1,v_2,v_3\}$.}
+\bi{LS3}{(a) $W=\{(a,b,c,d)\in\mathbb R^4:a+b+c+d=0\}$: build a system, solve by Gauss--Jordan, write $W=\mathrm{span}(S)$ with $S$ LI. (b) $W=\{(x,y,z):2x+y=z\}$: construct $S$ and prove $\mathrm{span}(S)=W$ by double inclusion.}
+\bi{LS4}{Let $x,y$ solve $a_{r1}v_1+\dots+a_{rn}v_n=0$ $(r=1..k)$. (a) Show $cx+y$ solves a generic row. (b) Deduce the solution set is a subspace of $\mathbb F^n$.}
+\bi{LS5}{Solve $Ax=b$ in $\mathbb C^3$: (a) $A=\begin{pmatrix}1&1&0\\0&1-i&1\\0&0&i\end{pmatrix}$, $b=(i,1,1{+}i)^T$; (b) $A=\begin{pmatrix}1&0&1\\0&1&i\\0&0&0\end{pmatrix}$, $b=(1{+}i,2,0)^T$; (c) $A=\begin{pmatrix}1{+}i&1&0\\0&1&i\\0&0&1\end{pmatrix}$, $b=(2,1{+}i,-i)^T$.}
+
+\sub{3. Matrix Operations (including inverses)}
+\bi{MO1}{For $A,B\in M_{n\times k}(\mathbb C)$ expand with no brackets: (a) $(2A-3B)^*$, (b) $((3-i)A+2B)^*$, (c) $3iA(iB-4C)^*$. (d) Compute $(2A-3B)^*$ for $A=\begin{pmatrix}1&2\\-i&3\end{pmatrix}$, $B=\begin{pmatrix}0&-1\\2&i\end{pmatrix}$.}
+\bi{MO2}{Prove for $X,Y\in M_{m\times n}(\mathbb C)$, $c\in\mathbb C$: $(X{+}Y)^T$, $(X{+}Y)^*$, $(cX)^*=\bar cX^*$, and for $A\in M_{n\times l}$, $B\in M_{l\times k}$: $(AB)^*=B^*A^*$. Verify the first three for $A=\begin{pmatrix}1{+}i&2\\-3i&4\end{pmatrix}$, $B=\begin{pmatrix}2&-1{+}i\\5&3i\end{pmatrix}$, $c=2-i$.}
+\bi{MO3}{Compute: (a) $\begin{pmatrix}1{+}i&2\\0&1{-}i\end{pmatrix}\begin{pmatrix}i&1\\2&-i\end{pmatrix}$; (b) $(AB)^*$ for $A=\begin{pmatrix}3i&4\\2{-}i&2\end{pmatrix}$, $B=\begin{pmatrix}1&-i\\0&2i\end{pmatrix}$; (c) $\begin{pmatrix}1{+}i&2&0\\-i&1&3\\2&i&1{-}i\end{pmatrix}\begin{pmatrix}2{-}i&1&i\\1{+}i&0&2\\i&1{-}i&1\end{pmatrix}$.}
+\bi{MO4}{\textit{(enrichment)} $\begin{pmatrix}1{+}i&2&0&-i\\0&1{-}i&3i&2\\2&0&i&1\\-i&1&0&2{+}i\end{pmatrix}\begin{pmatrix}1\\i\\-1\\2\end{pmatrix}$.}
+\bi{MO5}{For $A,B\in M$ with compatible shapes prove entrywise (write $(Au)_{i1}=\sum_ja_{ij}u_{j1}$): $A(u{+}v)=Au+Av$; $(cA)u=c(Au)=A(cu)$; $A0=0$; $A(cu{+}dv)=cAu+dAv$; $I_nu=u$; $(A{+}B)u=Au+Bu$; $A(B{+}C)=AB+AC$.}
+\bi{MO6}{Construct $A,B\in M_2(\mathbb R)$, both non-invertible, with $A+B$ invertible.}
+\bi{MO7}{Is it invertible? (a) $\begin{pmatrix}1&2\\3&4\end{pmatrix}$, (b) $\begin{pmatrix}1&2\\2&4\end{pmatrix}$, (c) $\begin{pmatrix}1&0&2\\0&1&3\\0&0&1\end{pmatrix}$, (d) $\begin{pmatrix}1&2&3\\2&4&6\\1&0&1\end{pmatrix}$, (e) $\begin{pmatrix}1{+}i&2\\3&1{-}i\end{pmatrix}$.}
+\bi{MO8}{\textit{(enrichment)} $f(x)=x^2+3x$, $g(x)=2x+x^2$. Compute $f(2x+3)$, $(2f+3)(x)$, $(2f+2g)(x)$, $(fg)(x)$, $(f\circ g)(x)$. State when juxtaposition means product and when composition.}
+\bi{INV1}{For each $T$: choose ordered bases, compute the matrix, use Gauss--Jordan to decide invertibility, and if invertible give $T^{-1}$ explicitly; else say why not. (a) $T(x,y)=(2x{+}y,x{-}y)$; (b) $p\mapsto p'$ on $\mathbf P_2(\mathbb R)$; (c) $A\mapsto A+A^T$ on $M_2(\mathbb R)$; (d) $T(x,y,z)=(x{+}y,y{+}z,x{+}z)$; (e) $a{+}bx{+}cx^2\mapsto a{+}2bx{+}3cx^2$; (f) $p\mapsto\int_0^xp$, $\mathbf P_2\to\mathbf P_3$; (g) $A\mapsto\begin{pmatrix}1&1\\0&1\end{pmatrix}A$; (h) $(x,y,z)\mapsto(x,y,0)$; (i) $a{+}bx{+}cx^2\mapsto a+(b{+}a)x+cx^2$; (j) $T:M_2(\mathbb C)\to\mathbf P_3(\mathbb C)$, $\left[\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right]\mapsto(a{+}bi)+(b{+}ci)x+(c{+}di)x^2+dx^3$ (find $([T]_\alpha^\beta)^{-1}$ and $T^{-1}$).}
+\bi{INV2}{(a) If $AB=I_n$ in $M_{n\times n}(\mathbb F)$, explain via linear maps why $BA=I_n$. (b) Prove an inverse of a linear map is unique; same for matrices. (c) Prove $T^{-1}$ is linear when $T$ is an invertible linear map.}
+\bi{INV3}{$T(x,y,z)=(x{+}y,y{+}z,x{+}z)$ on $\mathbb F^3$. Without computing $\ker$ or image, decide injectivity and surjectivity; how does the answer depend on $\mathbb F$? (Hint: $\det=2$.)}
+
+\sub{4. Determinants}
+\bi{DT1}{Using only multilinearity, alternation and $\det(e_1,\dots,e_n)=1$ (no $ad-bc$, no cofactors) compute $\det$ of (a) $\begin{pmatrix}1&2\\3&4\end{pmatrix}$, (b) $\begin{pmatrix}2&3\\2&-4\end{pmatrix}$, (c) $\begin{pmatrix}1&i&0\\2&3&0\\0&0&2{-}i\end{pmatrix}$, (d) $\begin{pmatrix}1{+}i&1&0\\0&1&i\\0&0&2\end{pmatrix}$, (e) $\begin{pmatrix}1&2&3\\2&4&6\\1&0&1\end{pmatrix}$.}
+\bi{DT2}{Prove (induction where indicated): $\det A^T=\det A$; $\det\bar A=\overline{\det A}$ (challenge) hence $\det A^*=\overline{\det A}$; triangular $\Rightarrow\det A=\prod a_{ii}$; $\det kA=k^n\det A$; equal rows $\Rightarrow0$; swapping rows negates; adding a multiple of a row leaves $\det$ unchanged.}
+\bi{DT3}{Using only the multilinear and alternating properties prove: if $B$ is $A$ with row $i$ multiplied by $k$, then $\det B=k\det A$.}
+\bi{DT4}{Cofactor expansion: (a) $\begin{pmatrix}2&1&0\\-1&3&4\\0&2&5\end{pmatrix}$, (b) $\begin{pmatrix}1&0&2\\3&1&4\\2&0&1\end{pmatrix}$, (c) $\begin{pmatrix}1{+}i&1&2\\2&1{+}i&1\\1&2&1{+}i\end{pmatrix}$, (d) $\begin{pmatrix}1&2&0&1\\0&1&3&2\\0&0&2&1\\0&0&0&4\end{pmatrix}$.}
+\bi{DT5}{(a) Area of the triangle $(1,2),(4,1),(6,5)$; of $(-1,3),(2,0),(5,4)$. (b) Area of the parallelogram spanned by $(2,-1),(4,3)$. (c) Volume of the parallelepiped spanned by $(1,0,2),(2,1,1),(3,-1,4)$. (d) Volume of the tetrahedron $(0,0,0),(1,2,0),(3,1,1),(2,0,4)$. (e) Explain the factors $\tfrac12$ and $\tfrac16$.}
+\bi{DT6}{Decide whether Cramer's rule applies (show $\det\ne0$); if so solve: (a) $x{+}2y=5,\ 3x{+}4y=11$; (b) $2x{-}y=1,\ 4x{-}2y=2$; (c) $x{+}y{+}z=6,\ 2x{+}3y{+}z=10,\ x{+}4y{+}5z=20$; (d) $x{+}2y{+}z=4,\ 2x{+}4y{+}2z=8,\ x{+}y{+}z=3$; (e) $3x{-}y{+}2z=7,\ 2x{+}y{-}z=1,\ x{+}4y{+}z=9$; (f) $x{+}y=2,\ 2x{+}2y=4,\ 3x{+}3y=6$; (g) $2x{+}y{-}z=3,\ x{-}y{+}2z=0,\ 3x{+}2y{+}z=5$; (h) $x{+}y=3,\ 2y{+}z=4,\ x{+}z=5$.}
+\bi{DT7}{State the characterization of $\det:M_{n\times n}(\mathbb F)\to\mathbb F$ by its multilinear and alternating properties.}
+
+\sub{5. Vector Spaces}
+\bi{VS1}{Prove for a field: additive identity unique; additive inverse unique; $0\cdot c=0$; $(-1)c=-c$. Prove for a vector space $V$: zero vector unique; inverse unique; cancellation ($x{+}y=x{+}z\Rightarrow y=z$); $0v=c0=0$; $(-1)x=-x$. List two such properties that are not axioms.}
+\bi{VS2}{$\boxplus:S\times S\to S$ is commutative and has $0$ with $0\boxplus s=s$ for all $s$. Prove $0$ is the unique such element.}
+\bi{VS3}{Prove: (a) $c(x+y)=cx+cy$ in $\mathbb F^n$; (b) $(c+d)f=cf+df$ in $\mathcal F(\mathbb C)$; (c) $M_{n\times k}(\mathbb C)$ and $\mathcal F(\mathbb C)$ are vector spaces; (d) $\mathcal F_{\mathrm{even}}(\mathbb R)$ is a vector space. Structure: given / to prove / technique.}
+\bi{VS4}{\textit{(challenge)} On $\mathbb R^+=\{x>0\}$ set $x\boxplus y=xy$, $c\boxdot x=x^c$. Show $(\mathbb R^+,\boxdot,\boxplus)$ is an $\mathbb R$-vector space; identify its zero and additive inverses.}
+\bi{VS5}{(a) Prove $\mathbb C$ is closed under $+$ and $\times$ and has an additive identity. (b) Compute $(2-3i)(1+2i)$; $1/i$; $(1+i)^{-1}$; $\frac{3+2i}{1-i}$; $-(2-5i)$; $(2+i)^{-1}$.}
+\bi{VS6}{Subspace of $M_{m\times n}(\mathbb F)$ (proof or counterexample): $A_{11}=0$; $A_{11}=1$; $A_{12}=2A_{21}$; symmetric; skew-symmetric; diagonal. Subspace of $\mathcal F(\mathbb C)$: $f(0)=0$; $f(0)=1$; even; odd; real-valued.}
+\bi{VS7}{Subspace? If yes prove it; if not give a counterexample: (a) $\{(x,y,z):x{+}y{-}z=0\}$; (b) $\{A\in M_2(\mathbb C):A=A^*\}$; (c) $\{p\in\mathbf P_2(\mathbb R):p(1)=1\}$; (d) $\{A\in M_2(\mathbb C):\mathrm{tr}A=0\}$; (e) $\{p\in\mathbf P_3(\mathbb R):p(0)+p(1)=0\}$; (f) $\{x{+}y{-}z=2\}$; (g) $\{f\in\mathbf P_2(\mathbb C):f(1)=f(2),\,f(3)=1\}$; (h) $\{A\in M_2(\mathbb R):\det A=0\}$; (i) $\{f\in\mathbf P_3(\mathbb R):f(0)=f(1),\,f(2)=0\}$.}
+\bi{VS8}{$W_1,W_2\le V$. Prove $W_1\cap W_2\le V$. Is $W_1\cup W_2$ a subspace? When?}
+\bi{VS9}{Prove: $S\subseteq\mathrm{span}(S)$; $S\subseteq T\Rightarrow\mathrm{span}(S)\subseteq\mathrm{span}(T)$; $\mathrm{span}(\mathrm{span}S)=\mathrm{span}S$; $\mathrm{span}(S)$ is a subspace (handle $S=\varnothing$).}
+\bi{VS11}{True, false, or sometimes true (justify): $S\subseteq T$ and (a) $S$ LI $\Rightarrow T$ LI; (b) $S$ LD $\Rightarrow T$ LD; (c) $T$ LI $\Rightarrow S$ LI; (d) $T$ LD $\Rightarrow S$ LD.}
+\bi{VS12}{(a) Define a subspace of $M_2(\mathbb C)$ of dimension 2. (b) Give $S\subseteq\mathbf P_3(\mathbb R)$ with $\mathrm{span}S=\mathbf P_3(\mathbb R)$ and $S$ LD. (c) $S=\{x_1..x_n\}$ spans $V$ and is LD: what can be said about $\dim V$?}
+\bi{VS13}{True or false with proof/counterexample: (a) $W\le V$, $V$ infinite-dim.\ $\Rightarrow W$ infinite-dim.; (b) $\Rightarrow W$ finite-dim.; (c) $V$ finite-dim.\ $\Rightarrow W$ infinite-dim.; (d) $\Rightarrow W$ finite-dim. (e) Prove $\mathbf P(\mathbb R)=\bigcup_n\mathbf P_n(\mathbb R)$ is not finite-dimensional.}
+\bi{VS14}{(a) $W=\{A\in M_2(\mathbb F):A^T=A\}$: basis; if $W\cong\mathbb F^n$ find $n$. (b) Explain why $\dim\mathbb F^n,M_{n\times k}(\mathbb F),\mathbf P_n(\mathbb F)$ do not depend on $\mathbb F$.}
+
+\sub{6. Linear Independence}
+\bi{LI1}{LI or LD (use an iff setup): (a) $\{(1,i,0),(2,1,i),(1,0,1)\}\subseteq\mathbb C^3$; (b) $\left\{\left[\begin{smallmatrix}1&i\\0&1\end{smallmatrix}\right],\left[\begin{smallmatrix}i&1\\0&i\end{smallmatrix}\right],\left[\begin{smallmatrix}1{+}i&2\\0&1{+}i\end{smallmatrix}\right]\right\}\subseteq M_2(\mathbb C)$; (c) $\{1{+}x,\,2{-}x{+}x^2,\,1{+}3x{+}x^2\}\subseteq\mathbf P_2(\mathbb R)$; (d) $\left\{\left[\begin{smallmatrix}1&i\\0&1\end{smallmatrix}\right],\left[\begin{smallmatrix}2&2i\\0&2\end{smallmatrix}\right],\left[\begin{smallmatrix}1&0\\0&0\end{smallmatrix}\right]\right\}$; (e) $\{I,2I,3I\}\subseteq M_2(\mathbb R)$ (set-up only).}
+\bi{LI2}{Is $x$ in the span? (a) $(3,4,1)\in\mathrm{span}\{(1,1,0),(2,1,1),(1,2,0)\}$; (b) $(1{+}i,2)\in\mathrm{span}\{(1,i),(2,1)\}\subseteq\mathbb C^2$; (c) $\left[\begin{smallmatrix}1{+}i&2\\0&1{+}i\end{smallmatrix}\right]\in\mathrm{span}\left\{\left[\begin{smallmatrix}1&i\\0&1\end{smallmatrix}\right],\left[\begin{smallmatrix}i&1\\0&i\end{smallmatrix}\right]\right\}$; (d) $1{+}2x{+}x^2\in\mathrm{span}\{1{+}x,1{-}x{+}x^2\}$; (e) $1{+}x{+}x^2\in\mathrm{span}\{1{+}x,x^2,x^3\}$; (f) $2x{+}1\in\mathrm{span}\{x^2{+}3x{+}2,x{+}1,x^2{+}2\}$ (set-up); (g) $x^2{-}x\in\mathrm{span}\{x^2{+}1,x^2{+}x{+}1\}$ (system, RREF, conclude).}
+\bi{LI3}{$V$ complex; $u,v,w\in V$. Prove $\{u,v,w\}$ LI $\iff\{u{+}v,u{+}w,v{+}w\}$ LI. (Where does $2\ne0$ matter?)}
+\bi{LI4}{$S$ LI, $S'\subsetneq S$, $W=\mathrm{span}(S)$. Prove $\mathrm{span}(S')\ne W$.}
+\bi{LI5}{$S=\{(1,2,3),(3,2,1),(1,1,1)\}$. (a) Write the system for LI and justify it. (b) Gaussian elimination to REF. (c) Decide LI/LD and, if LD, a LI $S'\subseteq S$ that is a basis of $\mathrm{span}S$.}
+\bi{LI6}{$T\in\mathcal L(V,W)$. (a) $\{Tv_1..Tv_n\}$ LI $\Rightarrow\{v_1..v_n\}$ LI. (b) $T$ injective and $\{v_i\}$ LI $\Rightarrow\{Tv_i\}$ LI. (c) $T$ preserves linear dependence.}
+
+\sub{7. Basis and Dimension}
+\bi{BD1}{Prove $\{e_i\}$ is a basis of $\mathbb F^n$, $\{E_{ij}\}$ of $M_{n\times k}(\mathbb F)$, $\{1,x,\dots,x^n\}$ of $\mathbf P_n(\mathbb F)$; state the dimensions.}
+\bi{BD2}{Basis and dimension: (a) $\{A\in M_2(\mathbb R):\mathrm{tr}A=0\}$; (b) $\{(x,y,z):x=2y\}$; (c) $\{f\in\mathbf P_3(\mathbb R):f(0)=f(1)=0\}$; (d) $\{A\in M_2(\mathbb C):A_{21}=0\}$; (e) $\{A\in M_2(\mathbb R):a{+}d=0,\ b=c\}$; (f) $\{p\in\mathbf P_3(\mathbb R):p(0)=p(1),\,p(2)=0\}$; (g) $\{(x,y,z,w):x{+}y{-}z=0,\ y{+}w=0\}$; (h) $\{A\in M_2(\mathbb R):\mathrm{tr}A=0,A=A^T\}$; (i) $\{A\in M_3(\mathbb C):A=A^*\}$ as a real vector space (why is it not a complex subspace?).}
+\bi{BD3}{Counting arguments: $\{(1,0,0),(0,1,0),(0,0,1),(1,1,1)\}$ not LI; $\{(1,0,0),(0,1,0)\}$ not spanning $\mathbb R^3$; five matrices in $M_2(\mathbb R)$ are LD; five matrices in $M_{3\times2}(\mathbb R)$ do not span; $\{1,x,x^2,x^3\}\subseteq\mathbf P_2$ LD; $\{1,x\}$ does not span $\mathbf P_2$; ten matrices in $M_3(\mathbb R)$ are not a basis; $n$ polynomials in $\mathbf P_n(\mathbb R)$ are not a basis.}
+\bi{BD4}{Extend the LI set $\left\{\left[\begin{smallmatrix}1&0\\0&0\end{smallmatrix}\right],\left[\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right],\left[\begin{smallmatrix}0&0\\1&1\end{smallmatrix}\right]\right\}$ to a basis of $M_2(\mathbb R)$ using standard basis vectors; justify the choice (not every $E_{ij}$ works).}
+\bi{BD5}{$\dim V=n$, $S$ LI with $|S|=n$. Using the Extension Lemma and Dimension Bound Theorem, prove $S$ is a basis.}
+\bi{BD6}{Find an LI subset with the same span: (a) $\{(1,2,1),(2,4,2),(1,1,0)\}$; (b) $\left\{\left[\begin{smallmatrix}1&2\\0&1\end{smallmatrix}\right],\left[\begin{smallmatrix}2&4\\0&2\end{smallmatrix}\right],\left[\begin{smallmatrix}1&1\\0&0\end{smallmatrix}\right]\right\}$; (c) $\{1{+}x,2{+}2x,x\}$.}
+
+\sub{8. Linear Transformations}
+\bi{LT1}{Linear? Prove or disprove: $T(x,y)=(2x{-}y,x{+}3y)$; $T(A)=A+A^T$; $T(x,y,z)=x-2y+z$; $T(x)=x^2$; $T(p)=p(1)$; $T(p)=p'$; $T(x,y)=(0,x{+}y)$; $T(A)=\mathrm{tr}A+1$ ($M_2\to\mathbb R$); $T(A)=A+I$ on $M_2(\mathbb R)$.}
+\bi{LT2}{Prove for linear $T$: $T(0)=0$; $T(-v)=-T(v)$; $T(\sum c_iv_i)=\sum c_iT(v_i)$; LD preserved; $T(U)$ is a subspace for $U\le V$; $\mathrm{image}(T)\le W$.}
+\bi{LT3}{(i) $[T]_\alpha^\beta$, (ii) $[v]_\alpha$, (iii) $[T(v)]_\beta$, (iv) verify $[T(v)]_\beta=[T]_\alpha^\beta[v]_\alpha$: (a) $T(x,y)=(2x{+}y,x{-}y)$, $\alpha$ standard, $\beta=\{(1,1),(1,-1)\}$, $v=(3,1)$; (b) $p\mapsto p'$ on $\mathbf P_2$, $\alpha=\{1,x,x^2\}$, $\beta=\{1,x,1{+}x^2\}$, $p=2{+}3x{+}x^2$; (c) $T(A)=A+A^T$ on $M_2$ with $\beta=\{E_{11},E_{12}{+}E_{21},E_{22},E_{12}{-}E_{21}\}$, $A=\left[\begin{smallmatrix}1&2\\3&4\end{smallmatrix}\right]$; (d) $T(a{+}bx{+}cx^2)=\left[\begin{smallmatrix}a&b\\c&a\end{smallmatrix}\right]$ and $T(a,b,c)=\left[\begin{smallmatrix}a{+}b&a{-}c\\b&a{+}b\end{smallmatrix}\right]$ in standard bases.}
+\bi{LT4}{$M=\begin{pmatrix}1&2&0\\0&-1&3\\2&0&1\end{pmatrix}$, $\alpha$ standard of $\mathbb R^3$, $\beta=\{1,x,x^2\}$. Define $T_M(a,b,c)$ explicitly.}
+\bi{LT5}{$T:\mathbb R^3\to\mathbf P_2$ linear with $T(1,2,3)=2+3x$, $T(1,1,1)=x^2$. Find $T(0,1,2)$.}
+\bi{LT6}{(a) $I$ and $Z$ are linear on $V$; $I\circ T=T\circ I=T$; $T\circ Z=Z$. (b) $(Tp)(x)=\int_0^xp(t)dt$, $\mathbf P_n\to\mathbf P_{n+1}$: linear; $T(x^k)$; $(Tp)(0)=0$.}
+\bi{LT8}{(a) Prove for $A=[T]_\alpha^\beta$: $(b_1,\dots,b_k)$ solves $Ax=0\iff b\in\mathrm{null}(A)\iff\sum b_iv_i\in\ker T$; and $w\in\mathrm{image}(T)\iff[w]_\beta\in\mathrm{col}(A)$. (b) Bases of $\ker T$, $\mathrm{image}T$ and rank--nullity for $T(x,y)=(2x{+}y,x{-}y)$; $p\mapsto p'$; $A\mapsto A+A^T$. (c) $T:\mathbf P_2(\mathbb C)\to\mathbb C^3$, $a{+}bx{+}cx^2\mapsto(a{+}ib{+}2c,\ (1{+}2i)a{+}b{+}(1{+}i)c,\ 2ia{+}(2{-}i)b{+}c)$: matrix, null-space basis, $\ker T$, col-space basis, $\mathrm{image}T$, rank--nullity. (d) $A=\left[\begin{smallmatrix}1&-2&0\\3&1&4\end{smallmatrix}\right]$, $\alpha=$ std of $\mathbb R^2$, $\beta=\{1,x,x^2\}$: define $T$, find $\ker,\mathrm{image}$.}
+\bi{LT9}{$T\in\mathcal L(V)$. Can $\mathrm{image}T=\ker T$ for $V=\mathbb R^2$? $\mathbb R^3$? State the condition on $\dim V$; prove existence when it holds and impossibility otherwise.}
+\bi{LT10}{(a) $T\in\mathcal L(V,W)$, $V$ finite-dim.: $\ker T=\ker T^2\iff\mathrm{image}T=\mathrm{image}T^2$. (b) $V'\le V$, $W'\le W$: $T(V')$ and $T^{-1}(W')$ are subspaces. (c) Choose $W'$ with $T^{-1}(W')=\ker T$ and $V'$ with $T(V')=\mathrm{image}T$; state the most general such conditions.}
+\bi{LT11}{Construct: (a) linear $T:\mathbb R^3\to\mathbb R^3$ with $\ker T=\{0\}$; (b) linear $T:\mathbf P_2(\mathbb R)\to\mathbb R^3$ that is not an isomorphism; (c) state $\mathrm{image}(P_{(1,2,1)})$.}
+\bi{LT12}{Yes/No with a one-line dimension argument: $T:\mathbb R^2\to\mathbb R^3$ surjective? $\mathbb R^3\to\mathbb R^2$ injective? $\mathbf P_1\to\mathbb R^2$ surjective? $\mathbb R^3\to\mathbb R^3$ injective? $M_{3\times2}(\mathbb R)\to\mathbf P_6(\mathbb R)$ surjective? $V\to M_{2\times4}(\mathbb R)$ surjective: what for $\dim V$ (and if $V$ infinite)? Rank: $\mathbb R^5\to\mathbb R^3$ with nullity 4; $M_2\to\mathbb R^4$ with nullity 3; $\mathbf P_2\to\mathbb R^3$ with nullity 0. Compute $\dim\mathcal L(\mathbb R^5,\mathbb R^3)$, $\dim\mathcal L(\mathbf P_2,\mathbb R^3)$, $\dim\mathcal L(M_2(\mathbb R),\mathbb R^4)$, $\dim\mathcal L(M_{2\times4}(\mathbb C),\mathbf P_2(\mathbb C))$; $\Phi\in\mathcal L(\mathcal L(\mathbb R^2,\mathbb R^3),\mathbb R^7)$: can $\Phi$ be injective? surjective?}
+\bi{LT13}{Prove for $T\in\mathcal L(V,W)$: injective $\Rightarrow$ LI preserved; surjective $\Rightarrow$ spanning sets preserved; ($\dim V<\infty$) injective $\iff\dim\mathrm{image}T=\dim V$; ($\dim W<\infty$) surjective $\iff\dim\mathrm{image}T=\dim W$. State the equivalent conditions for injectivity. On $\mathbb F^{\mathbb N}$: right shift is not surjective; left shift is not injective.}
+\bi{LT14}{(a) $S,T\in\mathcal L(V,W)$: $S{+}T,\ cT\in\mathcal L(V,W)$. (b) $R,S,T\in\mathcal L(V)$: $T(R{+}S)=TR+TS$. (c) $R\in\mathcal L(U,V),S\in\mathcal L(V,W),T\in\mathcal L(W,X)$: $SR$ linear and $T(SR)=(TS)R$. (d) $\mathcal L(V,W)$ is a vector space.}
+\bi{LT15}{$T:U\to V$, $S:V\to W$. (a) $ST$ injective $\Rightarrow T$ injective; $ST$ surjective $\Rightarrow S$ surjective. (b) Give $U,V,W,T,S$ with $ST$ an isomorphism but $S$ not injective and $T$ not surjective. (c) $ST$ injective: $S$ injective $\iff\dim U=\dim V=\dim W$. (d) $ST$ iso $\Rightarrow\dim U\ge\dim V\ge\dim W$.}
+
+\sub{9. Eigenvalues and Eigenvectors}
+\bi{EV3}{Eigenvalues and eigenspace bases: (a) $T(x,y)=(3x,2y)$; (b) $T(x,y)=(x{+}y,y)$ (is it diagonalizable?); (c) $p\mapsto p'$ on $\mathbf P_2(\mathbb R)$ (matrix in $\{1,x,x^2\}$); (d) $A\mapsto A^T$ on $M_2(\mathbb R)$ (describe eigenspaces).}
+\bi{EV4}{(a) Eigenvalues of $\begin{pmatrix}2{+}i&3&0\\0&-1{+}2i&4\\0&0&5{-}i\end{pmatrix}$ and an eigenvector for $2{+}i$. (b) Eigenvalues and eigenspace bases of $A=\begin{pmatrix}1{+}i&1&0\\0&1&i\\0&0&2\end{pmatrix}$. (c) Define eigenvalue of a linear transformation.}
+\bi{EV5}{(a) Define $T:\mathbb R^2\to\mathbb R^2$ with exactly one eigenvalue and give its matrix. (b) $T$ invertible: what is $E_0$? (c) Eigenvalues of $T(x,y,z)=(x{+}y{+}z,\ 2y{-}3z,\ 4z)$. (d) For $T(x,y,z)=(2x,y,-2z)$: diagonalizable? invertible? Why?}
+\bi{EV6}{(a) Prove $\overline{zw}=\bar z\bar w$. (b) Prove $\overline{Av}=\bar A\bar v$. (c) $A\in M_n(\mathbb R)$, $Av=\lambda v$, $v\ne0$: show $A\bar v=\bar\lambda\bar v$ (and $\bar v\ne0$). (d) $\lambda_1\ne\lambda_2$ eigenvalues of $A$: prove $E_{\lambda_1}\cap E_{\lambda_2}=\{0\}$.}
+\bi{EV8}{$A=\begin{pmatrix}1&-1&2\\1&0&-5\\0&1&3\end{pmatrix}$: compute $p(\lambda)=\det(A-\lambda I)$ and all eigenvalues (real and complex).}
+\bi{EV9}{$P$ = orthogonal projection of $\mathbb R^2$ onto $\mathrm{span}\{(1,2)\}$. Find $P(e_1),P(e_2)$, $[P]$, eigenvalues, eigenspace bases, and show the eigenspaces are orthogonal. In general, for $u=(a,b)\ne0$ show $u$ has eigenvalue 1 and $(-b,a)$ eigenvalue 0.}
+
+\sub{10. Diagonalization (including change of basis)}
+\bi{EV1}{(a) $A=MBM^{-1}$, $p(x)=\sum a_ix^i$: prove $A^r=MB^rM^{-1}$ and $p(A)=Mp(B)M^{-1}$; $p(\mathrm{diag}(d_i))=\mathrm{diag}(p(d_i))$; $[T]_\alpha^\alpha=M D M^{-1}$ $\Rightarrow p([T]_\alpha^\alpha)=Mp(D)M^{-1}$. (b) $p(D)$: $D=\mathrm{diag}(2,3)$, $x^2{-}4x{+}1$; $D=\mathrm{diag}(1,-2,4)$, $x^3{-}2x{+}5$; $D=\mathrm{diag}(0,1,-1)$, $2x^3{+}x^2{-}1$. (c) $p(A)$ with $A=MDM^{-1}$: $M=\left[\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right]$, $D=\mathrm{diag}(2,5)$, $x^2{+}1$; $M=\left[\begin{smallmatrix}1&0\\2&1\end{smallmatrix}\right]$, $D=\mathrm{diag}(-1,3)$, $x^2{-}2x$; $M=\left[\begin{smallmatrix}1&0&0\\0&1&1\\0&0&1\end{smallmatrix}\right]$, $D=\mathrm{diag}(1,2,4)$, $x^2{-}3x{+}2$; $P=\left[\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right]$, $D=\mathrm{diag}(2,3)$, $x^2{+}x$. (d) $T(x,y,z)=(2x,y,-2z)$, $f(x)=x^3{-}2x{+}1$: compute $f(T)$.}
+\bi{EV2}{Eigenvalues and a basis of each eigenspace; is it diagonalizable, and if so find $P,D$ with $A=PDP^{-1}$: $\begin{pmatrix}2&0\\0&5\end{pmatrix}$, $\begin{pmatrix}3&1\\0&3\end{pmatrix}$, $\mathrm{diag}(1,4,-2)$, $\begin{pmatrix}2&1\\1&2\end{pmatrix}$, $\begin{pmatrix}0&1\\-2&3\end{pmatrix}$, $\begin{pmatrix}1&0&1\\0&2&0\\0&0&3\end{pmatrix}$, $\begin{pmatrix}4&0&0\\0&1&0\\0&0&2\end{pmatrix}$.}
+\bi{EV7}{$T,S:\mathbb C^2\to\mathbb C^2$, $[T]=\begin{pmatrix}2&i\\-i&2\end{pmatrix}$, $[S]=\begin{pmatrix}\frac52&\frac i2\\\frac i2&\frac32\end{pmatrix}$. (a) Prove $T$ diagonalizable, $S$ not. (b) Eigenbasis $\beta$ for $T$. (c) $[T]_\beta^\beta$ and $[I]_\beta^\alpha$. (d) $[I]_\alpha^\beta$ by Gauss--Jordan. (e) $[p(T)]$ for $p=x^2{-}3x{+}1$. (f) $p(T)$ explicitly.}
+\bi{CB1}{$\alpha,\beta,\gamma$ bases of $V$. Prove: $[v]_\beta=[I]_\alpha^\beta[v]_\alpha$; $[I]_\beta^\alpha=([I]_\alpha^\beta)^{-1}$; $[I]_\alpha^\gamma=[I]_\beta^\gamma[I]_\alpha^\beta$; $[I]_\beta^\alpha[I]_\alpha^\beta=I$ (via $II=I$); $[T]_\beta^\beta=[I]_\alpha^\beta[T]_\alpha^\alpha[I]_\beta^\alpha$, hence different matrices of one $T$ are similar.}
+\bi{CB2}{(a) $\alpha=\{(1,0),(0,1)\}$, $\beta=\{(1,1),(1,-1)\}$: $[I]_\beta^\alpha,[I]_\alpha^\beta$, $[v]_\beta$ for $v=(4,2)$. (b) $\alpha$ standard of $\mathbb C^3$, $\beta=\{(1,0,i),(0,1,1),(1,i,0)\}$: $[I]$'s and $[v]_\beta$, $v=(2,3,1)$. (c) $T(x,y)=(x{+}2iy,3x{+}y)$ on $\mathbb C^2$, $\beta=\{(1,i),(1,-i)\}$: $[T]_\alpha^\alpha$, $[I]$'s, $[T]_\beta^\beta$ by change of basis. (d) $T(p)=p'+p$ on $\mathbf P_2$, $\alpha=\{1,x,x^2\}$, $\beta=\{1,1{+}x,(1{+}x)^2\}$: $[I]$'s, $[T]_\alpha^\alpha$, $[T]_\beta^\beta$.}
+
+\sub{11. Orthogonality}
+\bi{OR1}{\textit{(axioms)} Prove $\langle x|y\rangle=\sum x_iy_i$ on $\mathbb R^n$ is additive and homogeneous in the first slot, symmetric, positive-definite; hence linear in each slot.}
+\bi{OR2}{$W\le\mathbb R^n$, $W^\perp=\{v:\langle v|w\rangle=0\ \forall w\in W\}$. Prove $W^\perp\le\mathbb R^n$. \textit{(challenge)} Prove $W\cap W^\perp=\{0\}$ and $W+W^\perp=\mathbb R^n$, i.e.\ $W\oplus W^\perp=\mathbb R^n$.}
+\bi{OR3}{$P_v(x)=\frac{\langle v|x\rangle}{\langle v|v\rangle}v$ on $\mathbb R^n$. Prove: $P_v$ linear; $\mathrm{image}=\mathrm{span}(v)$, $\ker=\mathrm{span}(v)^\perp$; $P_v\circ P_v=P_v$. Reflection $R_v=2P_v-I$: linear, fixes $\mathrm{span}(v)$, negates $\mathrm{span}(v)^\perp$, $R_v\circ R_v=I$. Rotation $A_\theta$ preserves $\langle\cdot|\cdot\rangle$.}
+\bi{OR4}{\textit{(fluency)} $P_{(1,2,1)}(1,-3,5)$; $P_{(2,-1,2)}(3,0,-1)$; $P_{(1,1,0)}(4,-2,3)$; $P_{(0,1,1)}(2,5,-1)$; rotation $R_{\pi/2}(3,-1)$; $R_\pi(2,5)$; $R_{\pi/3}(4,0)$; $R_{\pi/4}(2,-2)$; $R_{3\pi/2}(-1,3)$; $R_{5\pi/6}(6,0)$.}
+
+\sub{12. Least Squares}
+No new items. None of the 25 sources assesses least squares, Gram--Schmidt, QR, LU, SVD or orthogonal diagonalization; adding material would violate the efficiency criterion.
+
+\sub{13. Other (recall and workflow)}
+\bi{OT1}{\textit{Part-A recall list (one mark each).} Define: field; vector space; $\mathbb C$ operations; $\mathcal F(\mathbb R)$ operations; matrix operations; subspace; closure characterization; linear combination; span; sum of sets; LD; LI; redundant vector; linear system; REF; RREF; pivot; free/basic variable; homogeneous/non-homogeneous/inconsistent/independent-consistent/dependent-consistent system; Extension Lemma; basis; Dimension Bound Theorem; dimension; finite/infinite-dimensional; linear transformation; coordinate vector/matrix; matrix-defined map; fundamental theorem of matrices; kernel; nullspace; image; range; rank; nullity; Rank--Nullity; injective; surjective; bijective; inverse; isomorphism; invertible matrix; multilinear; alternating; determinant; Cramer's rule; diagonal; similar; diagonalizable; eigenvalue/eigenvector/eigenspace (matrix and map); change-of-basis matrix.}
+\secn{High-Yield Additions}
+\sub{Newly discovered recurring question types (frequency across the 25 files)}
+\begin{enumerate}[leftmargin=1.5em,itemsep=0pt,topsep=1pt]
+\item \textbf{Subspace test on a constraint set}, with zero-vector disproof ($f(0)=1$, $p(1)=1$, $\det A=0$): 9 files. \textbf{Basis + dimension of a constraint subspace:} 6 files.
+\item \textbf{Set-up-only system with iff justification} (LI / span / spanning set): 6 files.
+\item \textbf{Abstract map $\to$ matrix $\to$ kernel/image $\to$ rank--nullity} ($\mathbf P_2\to M_2$, $\mathbf P_2\to\mathbb C^3$, $M_2\to M_2$): 6 files.
+\item \textbf{Dimension yes/no} (``can $T$ be surjective/injective?''): 6 files. \textbf{Matrix inverse $\to$ explicit $T^{-1}$:} 4 files.
+\item \textbf{Part-A ``construct/define an example''}: $\ge$11 items across quizzes and mocks.
+\item \textbf{Determinant from axioms; $p(A)$ via $A=PDP^{-1}$; conjugate transpose expansion}: each $\ge$3 files.
+\item \textbf{Complex entries in every computation} (RREF, inverse, eigenvectors, products): $\approx$40\% of computational items.
+\end{enumerate}
+\sub{Repeated assessment patterns}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item Structure: quiz = 15 marks (Part A $3\times1$, Part B 12); mock midterm 50 (+Part C 3--4); mock final 70 (+Part C 4); all no-calculator.
+\item The instructor states quizzes are ``VERY SIMILAR'' to the homework, and they are: 82 of 92 quiz items repeat a homework task. Practise homework wording, not new variants.
+\item \textbf{Reused objects:} $T(x,y,z)=(x{+}y,y{+}z,x{+}z)$; $T(A)=A+A^T$; $p\mapsto p'$; $T(x,y)=(2x{+}y,x{-}y)$; $\begin{pmatrix}1{+}i&1&0\\0&1&i\\0&0&2\end{pmatrix}$; the four systems of Assignment 3a (used five times). Master these five maps and two matrices.
+\item Every Part B proof asks for: \emph{given / to prove / technique}; quizzes add ``using an if-and-only-if argument''.
+\item Week-themed Part A recall: one definition or theorem statement per quiz.
+\end{itemize}
+\sub{Common instructor traps}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item Column-space basis from \textbf{original} pivot columns, not RREF columns; row-space basis from RREF rows.
+\item $\dim\mathbf P_n=n+1$; $\dim M_{3\times2}=6$; $\dim_{\mathbb C}$ vs $\dim_{\mathbb R}$ for Hermitian matrices.
+\item Conjugate the scalar: $(cX)^*=\bar cX^*$; $\bar i=-i$; $(AB)^*=B^*A^*$ reverses order.
+\item ``Surjective $\Rightarrow\dim V\ge\dim W$'' but $V$ may be infinite-dimensional; injective/surjective are not equivalent off finite dimension.
+\item Left-identity only: uniqueness needs commutativity (MT1 B2). Zero vector is $f(x)=0$, never the number $0$.
+\item $\dim(\text{span})\le n-1$ for a dependent spanning list of size $n$ (not $n$).
+\item Basis extension: not every $E_{ij}$ keeps independence. Constant term of $p(A)$ is $a_0I$, not $a_0$.
+\item Field matters: $2=0$ in characteristic 2 (Q8); Hermitian set is a real, not complex, subspace.
+\item Real-$A$ eigenpairs: $(\lambda,v)\Rightarrow(\bar\lambda,\bar v)$; complex roots appear in $3\times3$ real matrices (Final B7: $2,\ 1\pm2i$).
+\end{itemize}
+\sub{Grading-sensitive mistakes (marks stated in sources)}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item Set-up problems: marks for the \textbf{iff justification}, not the solution.
+\item Determinants ``using multilinear/alternating properties'': using $ad-bc$, cofactors or triangular shortcut without justification scores zero (explicit on Q10, Final A9, B5).
+\item Cramer's rule: must \textbf{compute $\det A\ne0$} to justify use; answer in form $a+bi$ for complex arithmetic.
+\item Basis claims need both \textbf{spanning and independence}; standard basis must be written out before quoting its dimension (Q5 B2).
+\item Definitions must name underlying set, operations and all axioms (Q1 A3); state the field.
+\item Proofs of existence (identity in $\mathbb C$) must show the ``for all'' check (Q1 B2); disproofs need an explicit counterexample or the zero-vector failure.
+\item Eigenvectors must be non-zero; show $\bar v\ne0$ (Final B2c).
+\item ``Show your work'' on Part A construction items; final-answer-only earns no credit.
+\end{itemize}
+\sub{Recommended minimal integration (no rewrite of existing lessons)}
+\textbf{W1:} VS1, VS5, OT1. \textbf{W2:} MO1--MO3, MO5, VS3, VS6 + ``abstract spaces'' intro (D2). \textbf{W3:} RR1--RR5, LS1, LS5. \textbf{W6:} LS2, LI1--LI6. \textbf{W8:} VS7--VS14, BD1--BD6. \textbf{W9:} LT3 (coordinate verification). \textbf{W10--11:} LT1--LT14. \textbf{W12:} INV1--INV3, LT13--LT15, D6. \textbf{W13:} DT1--DT7. \textbf{W14:} EV1--EV9, CB1--CB2. \textbf{W15:} add MO6, LI5, VS2, VS12, LT4--LT5, LT11, EV5, EV7--EV8 as mock material. Total addition: 83 entries, of which 52 Core.
+\end{document}
