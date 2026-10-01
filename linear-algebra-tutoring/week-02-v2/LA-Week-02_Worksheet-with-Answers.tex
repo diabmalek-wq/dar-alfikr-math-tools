@@ -1,0 +1,265 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.9cm,top=2.4cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,fontspec,microtype,fancyhdr,lastpage,enumitem,needspace}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{1F3A5F}\definecolor{soft}{HTML}{EEF3F9}\definecolor{ans}{HTML}{F3F8F1}\definecolor{ansb}{HTML}{3C7A3C}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\color{ink}\textbf{Linear Algebra I} \textperiodcentered\ Week 2 --- Matrices over $\mathbb{C}$, Conjugate Transpose, Abstract Spaces \& Subspace Tests}
+\rhead{}\cfoot{\small Mr Malek Thiab \textperiodcentered\ Worksheet with Worked Answers \textperiodcentered\ Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\newcommand{\lv}[1]{\textsc{\small #1}}
+\begin{document}
+{\Large\bfseries\color{ink} Linear Algebra I --- Week 2}\\[2pt]
+{\large\bfseries\color{ink} Matrices over $\mathbb{C}$, Conjugate Transpose, Abstract Spaces \& Subspace Tests}\\[3pt]
+{\small Name: \underline{\hspace{5cm}}\hfill Date: \underline{\hspace{3cm}}\qquad All work \textbf{by hand} --- no calculator, no software.}
+\vspace{4pt}\hrule\vspace{8pt}
+
+\begin{tcolorbox}[colback=soft,colframe=ink,title={\bfseries Key Facts}]
+\textbf{Complex numbers.} $i^{2}=-1$; $\overline{a+bi}=a-bi$; $z\overline z=|z|^{2}=a^{2}+b^{2}$; $\dfrac{z}{w}=\dfrac{z\,\overline w}{|w|^{2}}$. Also $\overline{z+w}=\overline z+\overline w$, $\overline{zw}=\overline z\,\overline w$, and $z=\overline z\iff z\in\mathbb{R}$.
+
+\textbf{Matrices over $\mathbb{C}$.} $M_{m\times n}(\mathbb{C})$ is the set of $m\times n$ matrices with complex entries. Addition and scalar multiplication are entrywise; $(AB)_{jk}=\sum_{l}A_{jl}B_{lk}$. Multiplication is associative but \emph{not} commutative.
+
+\textbf{Conjugate transpose.} $(A^{*})_{jk}=\overline{A_{kj}}$. Rules: $(A+B)^{*}=A^{*}+B^{*}$, $(\lambda A)^{*}=\overline{\lambda}A^{*}$, $(AB)^{*}=B^{*}A^{*}$, $(A^{*})^{*}=A$.
+$A$ is \textbf{Hermitian} if $A^{*}=A$; \textbf{skew-Hermitian} if $A^{*}=-A$.
+
+\textbf{Vector space over $\mathbb{F}$.} A set $V$ with $+$ and scalar multiplication satisfying: commutativity and associativity of $+$; a zero vector $\mathbf 0$; additive inverses; $1v=v$; $(\lambda\mu)v=\lambda(\mu v)$; $\lambda(u+v)=\lambda u+\lambda v$; $(\lambda+\mu)v=\lambda v+\mu v$.
+Standard examples: $\mathbb{F}^{n}$, $M_{m\times n}(\mathbb{F})$, $P_{n}(\mathbb{F})$ (polynomials of degree $\le n$), $\mathcal F(S,\mathbb{F})$ (functions $S\to\mathbb{F}$, pointwise operations).
+
+\textbf{Subspace test.} $W\subseteq V$ is a subspace iff (i) $\mathbf 0\in W$, (ii) $u,v\in W\Rightarrow u+v\in W$, (iii) $\lambda\in\mathbb{F},\,v\in W\Rightarrow\lambda v\in W$. To disprove: exhibit one failure. The field matters: a set can be a subspace over $\mathbb{R}$ but not over $\mathbb{C}$.
+\end{tcolorbox}
+
+\newpage
+\section*{\large\color{ink} Worked Examples}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 1 \textperiodcentered\ Complex arithmetic}]Compute $(2-i)(1+3i)$ and $\dfrac{5+i}{2-i}$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $(2-i)(1+3i)=2+6i-i-3i^{2}=5+5i$.
+\item $\dfrac{5+i}{2-i}=\dfrac{(5+i)(2+i)}{(2-i)(2+i)}=\dfrac{10+5i+2i+i^{2}}{5}=\dfrac{9+7i}{5}$.
+\end{enumerate}\textbf{Answer:} $5+5i$ and $\tfrac95+\tfrac75i$
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 2 \textperiodcentered\ Product over $\mathbb{C}$}]Compute $\begin{pmatrix}i&1\\0&2\end{pmatrix}\begin{pmatrix}1&i\\i&0\end{pmatrix}$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Row 1: $(i\cdot1+1\cdot i,\ i\cdot i+1\cdot0)=(2i,\,-1)$.
+\item Row 2: $(0\cdot1+2\cdot i,\ 0\cdot i+2\cdot0)=(2i,\,0)$.
+\end{enumerate}\textbf{Answer:} $\begin{pmatrix}2i&-1\\2i&0\end{pmatrix}$
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 3 \textperiodcentered\ Conjugate transpose}]Find $M^{*}$ for $M=\begin{pmatrix}2-i&3\\i&1+2i\end{pmatrix}$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Transpose: $\begin{pmatrix}2-i&i\\3&1+2i\end{pmatrix}$.
+\item Conjugate every entry.
+\end{enumerate}\textbf{Answer:} $M^{*}=\begin{pmatrix}2+i&-i\\3&1-2i\end{pmatrix}$
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 4 \textperiodcentered\ Hermitian test}]Is $N=\begin{pmatrix}1&2+i\\2-i&3\end{pmatrix}$ Hermitian?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $N^{*}$: transpose swaps $2+i$ and $2-i$; conjugating gives $\overline{2-i}=2+i$ in position $(1,2)$ and $\overline{2+i}=2-i$ in position $(2,1)$.
+\item Diagonal entries $1,3$ are real and unchanged.
+\end{enumerate}\textbf{Answer:} Yes, $N^{*}=N$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 5 \textperiodcentered\ Proof: $(AB)^{*}=B^{*}A^{*}$}]Prove $(AB)^{*}=B^{*}A^{*}$ for $A\in M_{m\times n}(\mathbb{C})$, $B\in M_{n\times p}(\mathbb{C})$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Entry $(j,k)$ of the left side: $\overline{(AB)_{kj}}=\overline{\sum_{l}A_{kl}B_{lj}}=\sum_{l}\overline{A_{kl}}\;\overline{B_{lj}}$ (conjugation respects sums and products).
+\item Entry $(j,k)$ of the right side: $\sum_{l}(B^{*})_{jl}(A^{*})_{lk}=\sum_{l}\overline{B_{lj}}\;\overline{A_{kl}}$.
+\item The two sums agree term by term (multiplication in $\mathbb{C}$ commutes).
+\end{enumerate}\textbf{Answer:} $(AB)^{*}=B^{*}A^{*}$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 6 \textperiodcentered\ Axiom failure}]On $\mathbb{R}^{2}$ with usual $\oplus$ and $\lambda\odot(a,b)=(\lambda a,\,b)$: is it a vector space?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Test $(\lambda+\mu)\odot v=\lambda\odot v\oplus\mu\odot v$ with $v=(a,b)$.
+\item Left: $((\lambda+\mu)a,\ b)$. Right: $(\lambda a+\mu a,\ b+b)=((\lambda+\mu)a,\ 2b)$.
+\item With $b\neq0$ these differ.
+\end{enumerate}\textbf{Answer:} No: distributivity over scalar addition fails.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 7 \textperiodcentered\ Subspace test}]Show $W=\{p\in P_{2}(\mathbb{R}):p(0)=0\}$ is a subspace.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $\mathbf 0(0)=0$, so $\mathbf 0\in W$.
+\item $p(0)=q(0)=0\Rightarrow(p+q)(0)=0$.
+\item $p(0)=0\Rightarrow(\lambda p)(0)=\lambda\cdot0=0$.
+\end{enumerate}\textbf{Answer:} $W$ is a subspace.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 8 \textperiodcentered\ Non-subspace}]Is $D=\{A\in M_{2\times2}(\mathbb{R}):\det A=0\}$ a subspace?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$ and $B=\begin{pmatrix}0&0\\0&1\end{pmatrix}$ both have $\det=0$, so lie in $D$.
+\item $A+B=I$, and $\det I=1\neq0$.
+\end{enumerate}\textbf{Answer:} No: not closed under addition.
+\end{tcolorbox}
+\newpage
+\section*{\large\color{ink} Practice Problems}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part A --- Complex Arithmetic and Matrices over $\mathbb{C}$}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{1.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Compute $(3+2i)(1-4i)$ and write it in the form $a+bi$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Expand: $(3+2i)(1-4i)=3-12i+2i-8i^{2}$.
+\item Use $i^{2}=-1$: $-8i^{2}=+8$.
+\item Collect: $(3+8)+(-12+2)i$.
+\end{enumerate}\textbf{Answer:} $11-10i$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{2.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Compute $\dfrac{2+i}{1-3i}$ and write it in the form $a+bi$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Multiply top and bottom by the conjugate $1+3i$.
+\item Numerator: $(2+i)(1+3i)=2+6i+i+3i^{2}=-1+7i$.
+\item Denominator: $(1-3i)(1+3i)=1+9=10$.
+\end{enumerate}\textbf{Answer:} $-\dfrac{1}{10}+\dfrac{7}{10}i$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{3.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Let $A=\begin{pmatrix}1&i\\2-i&3\end{pmatrix}$ and $B=\begin{pmatrix}i&0\\1&1+i\end{pmatrix}$. Compute $A+B$ and $2i\,A$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Add entrywise: $A+B=\begin{pmatrix}1+i&i\\3-i&4+i\end{pmatrix}$.
+\item Scale each entry of $A$ by $2i$: $2i\cdot1=2i$, $2i\cdot i=-2$, $2i(2-i)=4i-2i^{2}=2+4i$, $2i\cdot3=6i$.
+\end{enumerate}\textbf{Answer:} $A+B=\begin{pmatrix}1+i&i\\3-i&4+i\end{pmatrix}$, \quad $2iA=\begin{pmatrix}2i&-2\\2+4i&6i\end{pmatrix}$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{4.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak With $A$ and $B$ as in Problem 3, compute $AB$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $(AB)_{11}=1\cdot i+i\cdot1=2i$.
+\item $(AB)_{12}=1\cdot0+i(1+i)=i+i^{2}=-1+i$.
+\item $(AB)_{21}=(2-i)i+3\cdot1=2i-i^{2}+3=4+2i$.
+\item $(AB)_{22}=(2-i)\cdot0+3(1+i)=3+3i$.
+\end{enumerate}\textbf{Answer:} $AB=\begin{pmatrix}2i&-1+i\\4+2i&3+3i\end{pmatrix}$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{5.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Find the conjugate transpose $C^{*}$ of $C=\begin{pmatrix}1+i&2\\3i&4-i\\0&-2i\end{pmatrix}$, and state its size.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $C$ is $3\times2$, so $C^{*}$ is $2\times3$.
+\item Rule: $(C^{*})_{jk}=\overline{C_{kj}}$; row $j$ of $C^{*}$ is the conjugate of column $j$ of $C$.
+\item Column 1 of $C$ is $(1+i,\,3i,\,0)$, conjugate: $(1-i,\,-3i,\,0)$.
+\item Column 2 of $C$ is $(2,\,4-i,\,-2i)$, conjugate: $(2,\,4+i,\,2i)$.
+\end{enumerate}\textbf{Answer:} $C^{*}=\begin{pmatrix}1-i&-3i&0\\2&4+i&2i\end{pmatrix}$ \ ($2\times3$)\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{6.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Decide whether each matrix is Hermitian ($M^{*}=M$), skew-Hermitian ($M^{*}=-M$), or neither: \ $H=\begin{pmatrix}2&1-i\\1+i&5\end{pmatrix}$, \ $K=\begin{pmatrix}i&1\\-1&2i\end{pmatrix}$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $H^{*}=\begin{pmatrix}\overline{2}&\overline{1+i}\\\overline{1-i}&\overline{5}\end{pmatrix}=\begin{pmatrix}2&1-i\\1+i&5\end{pmatrix}=H$.
+\item $K^{*}=\begin{pmatrix}\overline{i}&\overline{-1}\\\overline{1}&\overline{2i}\end{pmatrix}=\begin{pmatrix}-i&-1\\1&-2i\end{pmatrix}$.
+\item $-K=\begin{pmatrix}-i&-1\\1&-2i\end{pmatrix}=K^{*}$.
+\end{enumerate}\textbf{Answer:} $H$ is Hermitian; $K$ is skew-Hermitian.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{7.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find real numbers $x,y$ such that $M=\begin{pmatrix}2&x+iy\\3-2i&5\end{pmatrix}$ is Hermitian.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Hermitian means $M_{21}=\overline{M_{12}}$ (diagonal entries $2,5$ are already real).
+\item $3-2i=\overline{x+iy}=x-iy$.
+\item Compare real parts: $x=3$. Compare imaginary parts: $-y=-2$, so $y=2$.
+\end{enumerate}\textbf{Answer:} $x=3,\ y=2$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{8.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $A=\begin{pmatrix}1&i\\2&1-i\end{pmatrix}$. Compute $\operatorname{tr}(A^{*}A)$ without computing all of $A^{*}A$, and explain why the result is always a non-negative real number.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $A^{*}=\begin{pmatrix}1&2\\-i&1+i\end{pmatrix}$.
+\item Only diagonal entries are needed: $(A^{*}A)_{11}=1\cdot1+2\cdot2=5$; $(A^{*}A)_{22}=(-i)(i)+(1+i)(1-i)=1+2=3$.
+\item $\operatorname{tr}(A^{*}A)=5+3=8$.
+\item In general $(A^{*}A)_{jj}=\sum_k\overline{A_{kj}}A_{kj}=\sum_k|A_{kj}|^{2}$, so the trace is the sum of $|a_{kj}|^{2}$ over all entries: here $1+1+4+2=8$ \ \checkmark.
+\end{enumerate}\textbf{Answer:} $8$; it equals $\sum_{j,k}|a_{kj}|^{2}\ge0$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part B --- Matrix Algebra over $\mathbb{C}$}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{9.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Let $A=\begin{pmatrix}1&i\\0&1\end{pmatrix}$. Compute $A^{2}$ and $A^{3}$, then state $A^{n}$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $A^{2}=\begin{pmatrix}1&i\\0&1\end{pmatrix}\begin{pmatrix}1&i\\0&1\end{pmatrix}=\begin{pmatrix}1&2i\\0&1\end{pmatrix}$.
+\item $A^{3}=A^{2}A=\begin{pmatrix}1&i+2i\\0&1\end{pmatrix}=\begin{pmatrix}1&3i\\0&1\end{pmatrix}$.
+\item Pattern (provable by induction): the top-right entry grows by $i$ each time.
+\end{enumerate}\textbf{Answer:} $A^{2}=\begin{pmatrix}1&2i\\0&1\end{pmatrix}$, $A^{3}=\begin{pmatrix}1&3i\\0&1\end{pmatrix}$, $A^{n}=\begin{pmatrix}1&ni\\0&1\end{pmatrix}$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{10.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $A=\begin{pmatrix}0&i\\1&0\end{pmatrix}$ and $B=\begin{pmatrix}1&0\\0&-1\end{pmatrix}$. Compute $AB$, $BA$ and $AB-BA$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $AB=\begin{pmatrix}0\cdot1+i\cdot0&0\cdot0+i(-1)\\1\cdot1+0&0\end{pmatrix}=\begin{pmatrix}0&-i\\1&0\end{pmatrix}$.
+\item $BA=\begin{pmatrix}1\cdot0&1\cdot i\\-1\cdot1&0\end{pmatrix}=\begin{pmatrix}0&i\\-1&0\end{pmatrix}$.
+\item Subtract entrywise.
+\end{enumerate}\textbf{Answer:} $AB-BA=\begin{pmatrix}0&-2i\\2&0\end{pmatrix}\neq0$, so $AB\ne BA$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{11.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $A=\begin{pmatrix}1&i\\0&1\end{pmatrix}$ and $B=\begin{pmatrix}1&0\\i&1\end{pmatrix}$. Verify $(AB)^{*}=B^{*}A^{*}$ by computing both sides.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $AB=\begin{pmatrix}1+i\cdot i&i\\i&1\end{pmatrix}=\begin{pmatrix}0&i\\i&1\end{pmatrix}$, so $(AB)^{*}=\begin{pmatrix}0&-i\\-i&1\end{pmatrix}$.
+\item $A^{*}=\begin{pmatrix}1&0\\-i&1\end{pmatrix}$, \quad $B^{*}=\begin{pmatrix}1&-i\\0&1\end{pmatrix}$.
+\item $B^{*}A^{*}=\begin{pmatrix}1+(-i)(-i)&-i\\-i&1\end{pmatrix}=\begin{pmatrix}0&-i\\-i&1\end{pmatrix}$.
+\end{enumerate}\textbf{Answer:} Both sides equal $\begin{pmatrix}0&-i\\-i&1\end{pmatrix}$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{12.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $A$ be an $n\times n$ Hermitian matrix. Prove that (a) every diagonal entry of $A$ is real, and (b) $iA$ is skew-Hermitian.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item (a) $A^{*}=A$ gives $\overline{a_{jj}}=a_{jj}$ for each $j$.
+\item A complex number equal to its conjugate is real ($a+bi=a-bi\Rightarrow b=0$), so $a_{jj}\in\mathbb{R}$.
+\item (b) $(iA)^{*}=\overline{i}\,A^{*}$, since conjugate transpose conjugates scalars.
+\item $\overline{i}\,A^{*}=-iA^{*}=-iA=-(iA)$, so $(iA)^{*}=-(iA)$.
+\end{enumerate}\textbf{Answer:} Diagonal entries satisfy $a_{jj}=\overline{a_{jj}}$, hence real; and $(iA)^{*}=-(iA)$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part C --- Abstract Vector Spaces}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{13.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak On $\mathbb{R}^{2}$ define $(a,b)\oplus(c,d)=(a+c,\,b+d)$ and $\lambda\odot(a,b)=(\lambda a,\,0)$. Is $(\mathbb{R}^{2},\oplus,\odot)$ a vector space over $\mathbb{R}$? Justify.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Addition is the usual one, so the additive axioms hold. Check the scalar axiom $1\odot v=v$.
+\item Take $v=(1,1)$: $1\odot(1,1)=(1,0)$.
+\item $(1,0)\neq(1,1)$, so the axiom fails.
+\end{enumerate}\textbf{Answer:} No: $1\odot v\ne v$ for $v=(1,1)$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{14.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $V=\mathbb{R}_{>0}$ with $x\oplus y=xy$ and $\lambda\odot x=x^{\lambda}$. (Assume it is a real vector space.) Find the zero vector, the additive inverse of $5$, and compute $(3\odot2)\oplus\big((-1)\odot5\big)$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Zero vector $\mathbf 0$: need $x\oplus\mathbf 0=x$, i.e.\ $x\cdot\mathbf 0=x$, so $\mathbf 0=1$.
+\item Inverse of $5$: need $5\oplus y=1$, i.e.\ $5y=1$, so $y=\tfrac15$ (also equals $(-1)\odot5=5^{-1}$).
+\item $3\odot2=2^{3}=8$ and $(-1)\odot5=5^{-1}=\tfrac15$.
+\item $8\oplus\tfrac15=8\cdot\tfrac15=\tfrac85$.
+\end{enumerate}\textbf{Answer:} $\mathbf 0=1$;\ $-5=\tfrac15$;\ result $\tfrac85$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{15.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Using only the vector space axioms, prove that $0\cdot v=\mathbf 0$ for every vector $v$ (here $0$ is the scalar zero and $\mathbf 0$ the zero vector).
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Since $0+0=0$ in $\mathbb{F}$: $0\cdot v=(0+0)\cdot v$.
+\item Distributivity: $(0+0)v=0v+0v$, so $0v=0v+0v$.
+\item Add the additive inverse $-(0v)$ to both sides: $\mathbf 0=0v+\big(-(0v)\big)=\big(0v+0v\big)+\big(-(0v)\big)$.
+\item Associativity and inverse: the right side is $0v+\big(0v+(-(0v))\big)=0v+\mathbf 0=0v$.
+\end{enumerate}\textbf{Answer:} $0\cdot v=\mathbf 0$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{16.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak In $P_{2}(\mathbb{R})$ let $p(x)=1+x-x^{2}$ and $q(x)=2-x+x^{2}$. Compute $3p-2q$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $3p=3+3x-3x^{2}$ and $2q=4-2x+2x^{2}$.
+\item Subtract coefficientwise: constant $3-4=-1$; $x$: $3-(-2)=5$; $x^{2}$: $-3-2=-5$.
+\end{enumerate}\textbf{Answer:} $-1+5x-5x^{2}$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{17.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak In $\mathcal F(\mathbb{R},\mathbb{R})$ let $f(x)=x^{2}$ and $g(x)=3x+1$. Write the function $2f-g$ and evaluate it at $x=2$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Functions add and scale pointwise: $(2f-g)(x)=2x^{2}-(3x+1)=2x^{2}-3x-1$.
+\item At $x=2$: $8-6-1=1$.
+\end{enumerate}\textbf{Answer:} $(2f-g)(x)=2x^{2}-3x-1$;\ $(2f-g)(2)=1$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{18.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak In $\mathbb{C}^{2}$ over $\mathbb{C}$, compute $(1+i)\,(2-i,\;3i)+(-i)\,(1,\;1+i)$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $(1+i)(2-i)=2-i+2i-i^{2}=3+i$ and $(1+i)(3i)=3i+3i^{2}=-3+3i$.
+\item $(-i)(1)=-i$ and $(-i)(1+i)=-i-i^{2}=1-i$.
+\item Add componentwise: $(3+i-i,\ -3+3i+1-i)$.
+\end{enumerate}\textbf{Answer:} $(3,\ -2+2i)$\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part D --- Subspace Tests}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{19.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Show that $W=\{(x,y,z)\in\mathbb{R}^{3}: x+2y-z=0\}$ is a subspace of $\mathbb{R}^{3}$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Zero vector: $0+0-0=0$, so $(0,0,0)\in W$.
+\item Addition: if $(x,y,z),(x',y',z')\in W$ then $(x+x')+2(y+y')-(z+z')=(x+2y-z)+(x'+2y'-z')=0+0=0$.
+\item Scalars: for $\lambda\in\mathbb{R}$, $\lambda x+2\lambda y-\lambda z=\lambda(x+2y-z)=0$.
+\item All three conditions hold.
+\end{enumerate}\textbf{Answer:} $W$ is a subspace (contains $\mathbf 0$, closed under $+$ and scalar multiplication).\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{20.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Show that $W=\{(x,y)\in\mathbb{R}^{2}: xy=0\}$ is \emph{not} a subspace of $\mathbb{R}^{2}$.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $(1,0)\in W$ since $1\cdot0=0$, and $(0,1)\in W$ since $0\cdot1=0$.
+\item Their sum is $(1,1)$ and $1\cdot1=1\neq0$, so $(1,1)\notin W$.
+\end{enumerate}\textbf{Answer:} Not closed under addition: $(1,0)+(0,1)=(1,1)\notin W$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{21.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $W=\{A\in M_{2\times2}(\mathbb{C}):A^{*}=A\}$ (Hermitian matrices). Is $W$ a subspace of $M_{2\times2}(\mathbb{C})$ over $\mathbb{C}$? Is it a subspace over $\mathbb{R}$? Justify both.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $\mathbf 0^{*}=\mathbf 0$, so $\mathbf 0\in W$. For $A,B\in W$: $(A+B)^{*}=A^{*}+B^{*}=A+B$, so $W$ is closed under addition.
+\item Real $\lambda$: $(\lambda A)^{*}=\overline{\lambda}A^{*}=\lambda A$. So $W$ is closed under real scalars.
+\item Complex $\lambda=i$: take $A=I\in W$. Then $(iI)^{*}=-iI\neq iI$, so $iI\notin W$.
+\item Hence closure under complex scalar multiplication fails.
+\end{enumerate}\textbf{Answer:} Not a subspace over $\mathbb{C}$ (e.g.\ $iI\notin W$); it is a subspace over $\mathbb{R}$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{22.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak In $P_{3}(\mathbb{R})$ let $W_1=\{p: p(2)=0\}$ and $W_2=\{p: p(2)=1\}$. Decide which is a subspace.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $W_1$: the zero polynomial has value $0$ at $2$, so $\mathbf 0\in W_1$.
+\item If $p(2)=q(2)=0$ then $(p+q)(2)=0$ and $(\lambda p)(2)=\lambda\cdot0=0$; so $W_1$ is closed.
+\item $W_2$: the zero polynomial has $\mathbf 0(2)=0\neq1$, so $\mathbf 0\notin W_2$.
+\end{enumerate}\textbf{Answer:} $W_1$ is a subspace; $W_2$ is not.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{23.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Show that the set $E$ of even functions $f\in\mathcal F(\mathbb{R},\mathbb{R})$, i.e.\ $f(-x)=f(x)$ for all $x$, is a subspace.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item Zero function: $\mathbf 0(-x)=0=\mathbf 0(x)$, so $\mathbf 0\in E$.
+\item If $f,g\in E$: $(f+g)(-x)=f(-x)+g(-x)=f(x)+g(x)=(f+g)(x)$.
+\item If $f\in E$, $\lambda\in\mathbb{R}$: $(\lambda f)(-x)=\lambda f(-x)=\lambda f(x)=(\lambda f)(x)$.
+\end{enumerate}\textbf{Answer:} $E$ is a subspace of $\mathcal F(\mathbb{R},\mathbb{R})$.\end{tcolorbox}
+\par\vspace{2pt}
+\Needspace{9\baselineskip}\begin{minipage}{\linewidth}\textbf{24.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak In $\mathbb{R}^{2}$ let $U=\{(x,0)\}$ and $W=\{(0,y)\}$. Show that $U\cap W$ and $U+W$ are subspaces, but $U\cup W$ is not.
+\end{minipage}\par\nopagebreak
+\begin{tcolorbox}[breakable,colback=ans,colframe=ansb,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]\begin{enumerate}[leftmargin=2.2em,itemsep=1pt,topsep=1pt,label=\textbf{Step \arabic*.}]\item $U\cap W=\{(0,0)\}$, the zero subspace.
+\item $U+W=\{(x,0)+(0,y)\}=\{(x,y)\}=\mathbb{R}^{2}$, a subspace.
+\item $(1,0)\in U\cup W$ and $(0,1)\in U\cup W$, but $(1,0)+(0,1)=(1,1)$ lies in neither $U$ nor $W$.
+\item So $U\cup W$ is not closed under addition.
+\end{enumerate}\textbf{Answer:} $U\cap W=\{\mathbf 0\}$, $U+W=\mathbb{R}^{2}$ are subspaces; $U\cup W$ is not.\end{tcolorbox}
+\par\vspace{2pt}
+\end{document}
