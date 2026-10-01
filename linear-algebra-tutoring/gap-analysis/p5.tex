@@ -1,0 +1,45 @@
+\secn{High-Yield Additions}
+\sub{Newly discovered recurring question types (frequency across the 25 files)}
+\begin{enumerate}[leftmargin=1.5em,itemsep=0pt,topsep=1pt]
+\item \textbf{Subspace test on a constraint set}, with zero-vector disproof ($f(0)=1$, $p(1)=1$, $\det A=0$): 9 files. \textbf{Basis + dimension of a constraint subspace:} 6 files.
+\item \textbf{Set-up-only system with iff justification} (LI / span / spanning set): 6 files.
+\item \textbf{Abstract map $\to$ matrix $\to$ kernel/image $\to$ rank--nullity} ($\mathbf P_2\to M_2$, $\mathbf P_2\to\mathbb C^3$, $M_2\to M_2$): 6 files.
+\item \textbf{Dimension yes/no} (``can $T$ be surjective/injective?''): 6 files. \textbf{Matrix inverse $\to$ explicit $T^{-1}$:} 4 files.
+\item \textbf{Part-A ``construct/define an example''}: $\ge$11 items across quizzes and mocks.
+\item \textbf{Determinant from axioms; $p(A)$ via $A=PDP^{-1}$; conjugate transpose expansion}: each $\ge$3 files.
+\item \textbf{Complex entries in every computation} (RREF, inverse, eigenvectors, products): $\approx$40\% of computational items.
+\end{enumerate}
+\sub{Repeated assessment patterns}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item Structure: quiz = 15 marks (Part A $3\times1$, Part B 12); mock midterm 50 (+Part C 3--4); mock final 70 (+Part C 4); all no-calculator.
+\item The instructor states quizzes are ``VERY SIMILAR'' to the homework, and they are: 82 of 92 quiz items repeat a homework task. Practise homework wording, not new variants.
+\item \textbf{Reused objects:} $T(x,y,z)=(x{+}y,y{+}z,x{+}z)$; $T(A)=A+A^T$; $p\mapsto p'$; $T(x,y)=(2x{+}y,x{-}y)$; $\begin{pmatrix}1{+}i&1&0\\0&1&i\\0&0&2\end{pmatrix}$; the four systems of Assignment 3a (used five times). Master these five maps and two matrices.
+\item Every Part B proof asks for: \emph{given / to prove / technique}; quizzes add ``using an if-and-only-if argument''.
+\item Week-themed Part A recall: one definition or theorem statement per quiz.
+\end{itemize}
+\sub{Common instructor traps}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item Column-space basis from \textbf{original} pivot columns, not RREF columns; row-space basis from RREF rows.
+\item $\dim\mathbf P_n=n+1$; $\dim M_{3\times2}=6$; $\dim_{\mathbb C}$ vs $\dim_{\mathbb R}$ for Hermitian matrices.
+\item Conjugate the scalar: $(cX)^*=\bar cX^*$; $\bar i=-i$; $(AB)^*=B^*A^*$ reverses order.
+\item ``Surjective $\Rightarrow\dim V\ge\dim W$'' but $V$ may be infinite-dimensional; injective/surjective are not equivalent off finite dimension.
+\item Left-identity only: uniqueness needs commutativity (MT1 B2). Zero vector is $f(x)=0$, never the number $0$.
+\item $\dim(\text{span})\le n-1$ for a dependent spanning list of size $n$ (not $n$).
+\item Basis extension: not every $E_{ij}$ keeps independence. Constant term of $p(A)$ is $a_0I$, not $a_0$.
+\item Field matters: $2=0$ in characteristic 2 (Q8); Hermitian set is a real, not complex, subspace.
+\item Real-$A$ eigenpairs: $(\lambda,v)\Rightarrow(\bar\lambda,\bar v)$; complex roots appear in $3\times3$ real matrices (Final B7: $2,\ 1\pm2i$).
+\end{itemize}
+\sub{Grading-sensitive mistakes (marks stated in sources)}
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt]
+\item Set-up problems: marks for the \textbf{iff justification}, not the solution.
+\item Determinants ``using multilinear/alternating properties'': using $ad-bc$, cofactors or triangular shortcut without justification scores zero (explicit on Q10, Final A9, B5).
+\item Cramer's rule: must \textbf{compute $\det A\ne0$} to justify use; answer in form $a+bi$ for complex arithmetic.
+\item Basis claims need both \textbf{spanning and independence}; standard basis must be written out before quoting its dimension (Q5 B2).
+\item Definitions must name underlying set, operations and all axioms (Q1 A3); state the field.
+\item Proofs of existence (identity in $\mathbb C$) must show the ``for all'' check (Q1 B2); disproofs need an explicit counterexample or the zero-vector failure.
+\item Eigenvectors must be non-zero; show $\bar v\ne0$ (Final B2c).
+\item ``Show your work'' on Part A construction items; final-answer-only earns no credit.
+\end{itemize}
+\sub{Recommended minimal integration (no rewrite of existing lessons)}
+\textbf{W1:} VS1, VS5, OT1. \textbf{W2:} MO1--MO3, MO5, VS3, VS6 + ``abstract spaces'' intro (D2). \textbf{W3:} RR1--RR5, LS1, LS5. \textbf{W6:} LS2, LI1--LI6. \textbf{W8:} VS7--VS14, BD1--BD6. \textbf{W9:} LT3 (coordinate verification). \textbf{W10--11:} LT1--LT14. \textbf{W12:} INV1--INV3, LT13--LT15, D6. \textbf{W13:} DT1--DT7. \textbf{W14:} EV1--EV9, CB1--CB2. \textbf{W15:} add MO6, LI5, VS2, VS12, LT4--LT5, LT11, EV5, EV7--EV8 as mock material. Total addition: 83 entries, of which 52 Core.
+\end{document}
