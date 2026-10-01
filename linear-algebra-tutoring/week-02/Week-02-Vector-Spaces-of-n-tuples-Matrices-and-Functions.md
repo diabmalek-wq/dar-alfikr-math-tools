@@ -186,6 +186,42 @@ $$
 $$
 Since this holds for every $x \in F$, and function equality is exactly agreement at every input, we conclude $(f+g)\circ h = f\circ h + g\circ h$. $\blacksquare$ *(Kielstra, 0C: F-Valued Functions)*
 
+**Example 9 (Level: Foundational — matrix–vector multiplication, straightforward).** Let $A=\begin{bmatrix}3&-1\\0&2\end{bmatrix}$ and $\vec v=\begin{bmatrix}2\\5\end{bmatrix}$. Compute $A\vec v$ using the column picture.
+
+**Step 1.** Read off the columns of $A$: $\vec c_1=\begin{bmatrix}3\\0\end{bmatrix}$, $\vec c_2=\begin{bmatrix}-1\\2\end{bmatrix}$.
+
+**Step 2.** Form the linear combination with coefficients from $\vec v=(2,5)$: $A\vec v = 2\vec c_1+5\vec c_2$.
+
+**Step 3.** Scale each column: $2\vec c_1=\begin{bmatrix}6\\0\end{bmatrix}$, $5\vec c_2=\begin{bmatrix}-5\\10\end{bmatrix}$.
+
+**Step 4.** Add: $A\vec v=\begin{bmatrix}6\\0\end{bmatrix}+\begin{bmatrix}-5\\10\end{bmatrix}=\begin{bmatrix}1\\10\end{bmatrix}$. $\blacksquare$
+
+---
+
+**Example 10 (Level: Intermediate — a symmetric-matrix proof by generic entries).** Let $A\in M_{n\times n}(F)$. Prove that $A+A^T$ is always symmetric.
+
+**Step 1.** Let $S=A+A^T$. By definition, $S$ is symmetric if $S_{ij}=S_{ji}$ for every $i,j$ — so fix an arbitrary pair $(i,j)$ and compare both sides.
+
+**Step 2.** Expand the $(i,j)$ entry using the definitions of matrix addition and transpose: $S_{ij}=(A+A^T)_{ij}=A_{ij}+(A^T)_{ij}=A_{ij}+A_{ji}$.
+
+**Step 3.** Expand the $(j,i)$ entry the same way: $S_{ji}=(A+A^T)_{ji}=A_{ji}+(A^T)_{ji}=A_{ji}+A_{ij}$.
+
+**Step 4.** Compare: $S_{ij}=A_{ij}+A_{ji}$ and $S_{ji}=A_{ji}+A_{ij}$ are the same sum in the field $F$ (addition is commutative), so $S_{ij}=S_{ji}$ for every $i,j$. Hence $A+A^T$ is symmetric. $\blacksquare$
+
+---
+
+**Example 11 (Level: Challenge — matrix multiplication is not commutative, but IS associative here; a three-matrix computation).** Let $X=\begin{bmatrix}1&0\\2&1\end{bmatrix}$, $Y=\begin{bmatrix}0&1\\1&0\end{bmatrix}$, $Z=\begin{bmatrix}1&1\\0&1\end{bmatrix}$. Compute $(XY)Z$ and $X(YZ)$, and confirm they agree (illustrating associativity, Fact on Page 1) even though $XY\neq YX$ in general.
+
+**Step 1.** Compute $XY$: row $i$ of $X$ dotted with column $j$ of $Y$. $X=\begin{bmatrix}1&0\\2&1\end{bmatrix}$, $Y=\begin{bmatrix}0&1\\1&0\end{bmatrix}$: $(XY)_{11}=(1)(0)+(0)(1)=0$; $(XY)_{12}=(1)(1)+(0)(0)=1$; $(XY)_{21}=(2)(0)+(1)(1)=1$; $(XY)_{22}=(2)(1)+(1)(0)=2$. So $XY=\begin{bmatrix}0&1\\1&2\end{bmatrix}$.
+
+**Step 2.** Compute $(XY)Z=\begin{bmatrix}0&1\\1&2\end{bmatrix}\begin{bmatrix}1&1\\0&1\end{bmatrix}$: $(1,1)$: $(0)(1)+(1)(0)=0$; $(1,2)$: $(0)(1)+(1)(1)=1$; $(2,1)$: $(1)(1)+(2)(0)=1$; $(2,2)$: $(1)(1)+(2)(1)=3$. So $(XY)Z=\begin{bmatrix}0&1\\1&3\end{bmatrix}$.
+
+**Step 3.** Now compute $YZ=\begin{bmatrix}0&1\\1&0\end{bmatrix}\begin{bmatrix}1&1\\0&1\end{bmatrix}$: $(1,1)$: $(0)(1)+(1)(0)=0$; $(1,2)$: $(0)(1)+(1)(1)=1$; $(2,1)$: $(1)(1)+(0)(0)=1$; $(2,2)$: $(1)(1)+(0)(1)=1$. So $YZ=\begin{bmatrix}0&1\\1&1\end{bmatrix}$.
+
+**Step 4.** Compute $X(YZ)=\begin{bmatrix}1&0\\2&1\end{bmatrix}\begin{bmatrix}0&1\\1&1\end{bmatrix}$: $(1,1)$: $(1)(0)+(0)(1)=0$; $(1,2)$: $(1)(1)+(0)(1)=1$; $(2,1)$: $(2)(0)+(1)(1)=1$; $(2,2)$: $(2)(1)+(1)(1)=3$. So $X(YZ)=\begin{bmatrix}0&1\\1&3\end{bmatrix}$.
+
+**Step 5.** Compare: $(XY)Z=\begin{bmatrix}0&1\\1&3\end{bmatrix}=X(YZ)$ — they agree, confirming associativity for this triple, even though matrix multiplication is not commutative in general. $\blacksquare$
+
 ---
 
 ## Pages 4–5 — Practice Problems (unsolved)
@@ -219,23 +255,200 @@ Since this holds for every $x \in F$, and function equality is exactly agreement
 13. Let $f(x)=x$ and $g(x)=|x|$. Are $f$ and $g$ equal as elements of $\mathcal F(F)$? Justify your answer using the definition of function equality.
 14. Let $f,g \in \mathcal F(F)$ and $c \in F$. Prove $c(f+g)=cf+cg$ using a generic input $x \in F$.
 
+**More Practice, Graded by Level**
+
+15. *(Level: Foundational)* Let $A=\begin{bmatrix}2&1\\-3&4\end{bmatrix}$, $B=\begin{bmatrix}-1&2\\0&5\end{bmatrix}$. Compute $A-B$ and $2B$.
+16. *(Level: Intermediate)* Let $M=\begin{bmatrix}1&-2\\3&0\end{bmatrix}$ and $N=\begin{bmatrix}2&1\\-1&4\end{bmatrix}$. Compute $MN$ and $NM$, and confirm $MN\neq NM$.
+17. *(Level: Challenge)* Let $f,g\in\mathcal F(F)$ with $f(x)=x^2$ and $g(x)=x+1$. Compute $(f\circ g)(x)$ and $(g\circ f)(x)$, and determine whether $f\circ g=g\circ f$.
+
 ---
 
 ## Answer Key & Misconception Notes (for tutor use — do not show student until after attempt)
 
-| # | Answer | Common misconception |
-|---|---|---|
-| 1 | $x+y=(1,2,6)$; $2x=(2,-2,4)$ | Forgetting to scale **every** coordinate by $2$ (e.g. only doubling the first entry), or adding $x$ and $y$ by mismatching which coordinate pairs with which. |
-| 2 | Not defined: $x \in F^3$, $z \in F^2$; vector addition on $F^n$ is only defined between two elements of the *same* $F^n$ | Believing you can "pad" the shorter tuple with a $0$ or truncate the longer one to make the addition work — the definition simply doesn't allow it, there's no fallback rule. |
-| 3 | $((c+d)x)_i = (c+d)x_i = cx_i+dx_i = (cx)_i+(dx)_i = (cx+dx)_i$ for all $i$ | Writing out the proof for a specific numeric $n$ (e.g. $n=3$) instead of a generic index $i$, or skipping the explicit citation of distributivity *in the field $F$* as its own step. |
-| 4 | $A+B=\begin{bmatrix}1&1\\5&9\end{bmatrix}$; $3A=\begin{bmatrix}3&6\\9&12\end{bmatrix}$; $A+C$ undefined since $A$ is $2\times2$ and $C$ is $2\times3$ | Adding the matching $2\times2$ block of $C$ to $A$ and dropping the extra column, instead of declaring the whole sum undefined. |
-| 5 | $(cB)_{11}=2$, $(cB)_{12}=-4$, $(cB)_{21}=6$, $(cB)_{22}=0$, all matching $A$, so $A=cB$ | Judging the matrices "proportional overall" (e.g. by eyeballing that $A$ "looks like" $4$ times $B$) rather than verifying $A_{ij}=(cB)_{ij}$ entry by entry as the definition requires. |
-| 6 | $(c(A+B))_{ij}=c(A+B)_{ij}=c(A_{ij}+B_{ij})=cA_{ij}+cB_{ij}=(cA)_{ij}+(cB)_{ij}=(cA+cB)_{ij}$ for all $i,j$ | Thinking a generic pair $(i,j)$ only covers "one row and one column" and that rows and columns need to be argued separately, rather than realizing a single arbitrary entry covers the whole matrix at once. |
-| 7 | $A^T=\begin{bmatrix}1&2&0\\0&-1&3\end{bmatrix}$ ($2\times3$); since $B$ is also $2\times3$, $A^T+B$ is defined and equals $\begin{bmatrix}2&4&1\\0&-2&5\end{bmatrix}$ | Checking compatibility using $A$'s original shape ($3\times2$) instead of $A^T$'s new shape ($2\times3$) — forgetting that transposing changes which matrices it can be added to. |
-| 8 | $((A+B)^T)_{ij}=(A+B)_{ji}=A_{ji}+B_{ji}=(A^T)_{ij}+(B^T)_{ij}=(A^T+B^T)_{ij}$ for all $i,j$ | Swapping only one index when applying the transpose definition (e.g. writing $(A+B)_{ji}$ as $A_{ij}+B_{ji}$) instead of consistently swapping **both** the row and column index on every term. |
-| 9 | $M\vec v = \begin{bmatrix}8\\-6\end{bmatrix}$ by both pictures (column: $5\begin{bmatrix}2\\0\end{bmatrix}-2\begin{bmatrix}1\\3\end{bmatrix}$; row: $(2\cdot5+1\cdot(-2),\ 0\cdot5+3\cdot(-2))$) | In the column picture, adding the raw columns without scaling them by the corresponding entries of $\vec v$ first; in the row picture, pairing row and vector entries in the wrong order when taking the dot product. |
-| 10 | Defined: $AB$ ($3\times4$), $CB$ ($1\times4$). Undefined: $BA$, $BC$, $CA$, $AC$ (inner dimensions don't match) | Assuming a product is defined just because a "$2$" appears in both matrices' shapes, rather than checking that the number of *columns of the first* matches the number of *rows of the second*, in that specific order. |
-| 11 | $XY=\begin{bmatrix}5&4\\1&2\end{bmatrix}$, $YX=\begin{bmatrix}3&6\\1&4\end{bmatrix}$; $XY \neq YX$, confirming matrix multiplication is not commutative | Multiplying entrywise (Hadamard-style: matching entries in the same position) instead of using the row-dot-column rule — tempting here because $X$ and $Y$ are the same shape. |
-| 12 | $(f+g)(x)=x^2+2x+1$; $(3f)(x)=3x^2+3$ | Forgetting to distribute the scalar to **every** term of $f(x)$, e.g. writing $(3f)(x)=3x^2+1$ instead of $3(x^2+1)$. |
-| 13 | Not equal: e.g. $f(-1)=-1$ but $g(-1)=1$, so $f(x)\neq g(x)$ for all negative $x$ | Concluding $f=g$ because the two functions agree for all $x \ge 0$ — forgetting that function equality (pointwise) requires agreement at **every** input in $F$, not just most of them. |
-| 14 | $(c(f+g))(x)=c(f+g)(x)=c(f(x)+g(x))=cf(x)+cg(x)=(cf)(x)+(cg)(x)=(cf+cg)(x)$ for all $x$ | Treating $c(f+g)$ as an algebra shortcut and skipping the definitional chain (function addition, then scalar multiplication, then distributivity in $F$) instead of justifying each equality as its own step. |
+**Problem 1 — Answer.**
+
+**Step 1.** Add coordinatewise: $x+y=(1+0,\,-1+3,\,2+4)=(1,2,6)$.
+
+**Step 2.** Scale every coordinate by $2$: $2x=(2\cdot1,\,2\cdot(-1),\,2\cdot2)=(2,-2,4)$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Forgetting to scale \textit{every} coordinate by $2$ (e.g. only doubling the first entry), or adding $x$ and $y$ by mismatching which coordinate pairs with which.
+
+**Problem 2 — Answer.**
+
+**Step 1.** Identify which $F^n$ each tuple lives in: $x=(1,2,3)\in F^3$ (three coordinates), $z=(1,2)\in F^2$ (two coordinates).
+
+**Step 2.** Recall the definition on Page 1: addition on $F^n$ is only defined between two elements of the \textit{same} $F^n$.
+
+**Step 3.** Since $3\neq2$, $x$ and $z$ do not live in the same space, so $x+z$ is \textbf{not defined}.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Believing you can "pad" the shorter tuple with a $0$ or truncate the longer one to make the addition work — the definition simply doesn't allow it, there's no fallback rule.
+
+**Problem 3 — Answer.**
+
+**Step 1.** Fix an arbitrary index $i$ with $1\le i\le n$, and expand the $i$th coordinate of the left side using the definition of scalar multiplication in $F^n$: $((c+d)x)_i=(c+d)x_i$.
+
+**Step 2.** Apply distributivity in the field $F$ itself: $(c+d)x_i=cx_i+dx_i$.
+
+**Step 3.** Rewrite each term using the definition of scalar multiplication again: $cx_i+dx_i=(cx)_i+(dx)_i$.
+
+**Step 4.** Recognize the right side by the definition of vector addition in $F^n$: $(cx)_i+(dx)_i=(cx+dx)_i$.
+
+**Step 5.** Since $((c+d)x)_i=(cx+dx)_i$ holds for the arbitrary index $i$, it holds for every $i=1,\ldots,n$, so $(c+d)x=cx+dx$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Writing out the proof for a specific numeric $n$ (e.g. $n=3$) instead of a generic index $i$, or skipping the explicit citation of distributivity \textit{in the field $F$} as its own step.
+
+**Problem 4 — Answer.**
+
+**Step 1.** Add entrywise: $A+B=\begin{bmatrix}1+0&2+(-1)\\3+2&4+5\end{bmatrix}=\begin{bmatrix}1&1\\5&9\end{bmatrix}$.
+
+**Step 2.** Scale every entry by $3$: $3A=\begin{bmatrix}3&6\\9&12\end{bmatrix}$.
+
+**Step 3.** Check shapes for $A+C$: $A$ is $2\times2$, $C=\begin{bmatrix}1&2&3\\4&5&6\end{bmatrix}$ is $2\times3$. Since the shapes differ, $A+C$ is \textbf{not defined}.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Adding the matching $2\times2$ block of $C$ to $A$ and dropping the extra column, instead of declaring the whole sum undefined.
+
+**Problem 5 — Answer.**
+
+**Step 1.** Compute $cB$ entrywise with $c=4$: $(cB)_{11}=4\cdot\frac12=2$; $(cB)_{12}=4\cdot(-1)=-4$; $(cB)_{21}=4\cdot\frac32=6$; $(cB)_{22}=4\cdot0=0$.
+
+**Step 2.** Compare each entry of $cB$ to the corresponding entry of $A=\begin{bmatrix}2&-4\\6&0\end{bmatrix}$: they match in all four positions.
+
+**Step 3.** By the definition of matrix equality (same shape, and every entry equal), $A=cB$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Judging the matrices "proportional overall" (e.g. by eyeballing that $A$ "looks like" $4$ times $B$) rather than verifying $A_{ij}=(cB)_{ij}$ entry by entry as the definition requires.
+
+**Problem 6 — Answer.**
+
+**Step 1.** Fix an arbitrary entry position $(i,j)$ and expand the left side using scalar multiplication: $(c(A+B))_{ij}=c(A+B)_{ij}$.
+
+**Step 2.** Expand $(A+B)_{ij}$ using matrix addition: $c(A+B)_{ij}=c(A_{ij}+B_{ij})$.
+
+**Step 3.** Distribute $c$ in the field $F$: $c(A_{ij}+B_{ij})=cA_{ij}+cB_{ij}$.
+
+**Step 4.** Recognize each term as a scalar-multiplication entry and recombine using matrix addition: $cA_{ij}+cB_{ij}=(cA)_{ij}+(cB)_{ij}=(cA+cB)_{ij}$.
+
+**Step 5.** Since this holds for the arbitrary entry $(i,j)$, it holds for every entry, so $c(A+B)=cA+cB$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Thinking a generic pair $(i,j)$ only covers "one row and one column" and that rows and columns need to be argued separately, rather than realizing a single arbitrary entry covers the whole matrix at once.
+
+**Problem 7 — Answer.**
+
+**Step 1.** Transpose $A=\begin{bmatrix}1&0\\2&-1\\0&3\end{bmatrix}$ (a $3\times2$ matrix) by swapping rows and columns: $A^T=\begin{bmatrix}1&2&0\\0&-1&3\end{bmatrix}$, now $2\times3$.
+
+**Step 2.** Check shapes: $B=\begin{bmatrix}1&2&1\\0&-1&2\end{bmatrix}$ is also $2\times3$, so $A^T+B$ \textbf{is} defined.
+
+**Step 3.** Add entrywise: $A^T+B=\begin{bmatrix}1+1&2+2&0+1\\0+0&-1-1&3+2\end{bmatrix}=\begin{bmatrix}2&4&1\\0&-2&5\end{bmatrix}$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Checking compatibility using $A$'s original shape ($3\times2$) instead of $A^T$'s new shape ($2\times3$) — forgetting that transposing changes which matrices it can be added to.
+
+**Problem 8 — Answer.**
+
+**Step 1.** Fix an arbitrary entry $(i,j)$ and expand the left side using the definition of transpose: $((A+B)^T)_{ij}=(A+B)_{ji}$.
+
+**Step 2.** Expand using matrix addition (note both indices are $ji$, not $ij$): $(A+B)_{ji}=A_{ji}+B_{ji}$.
+
+**Step 3.** Recognize each term as a transpose entry: $A_{ji}=(A^T)_{ij}$ and $B_{ji}=(B^T)_{ij}$, so $A_{ji}+B_{ji}=(A^T)_{ij}+(B^T)_{ij}$.
+
+**Step 4.** Recombine using matrix addition: $(A^T)_{ij}+(B^T)_{ij}=(A^T+B^T)_{ij}$.
+
+**Step 5.** Since $((A+B)^T)_{ij}=(A^T+B^T)_{ij}$ for the arbitrary entry $(i,j)$, it holds everywhere, so $(A+B)^T=A^T+B^T$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Swapping only one index when applying the transpose definition (e.g. writing $(A+B)_{ji}$ as $A_{ij}+B_{ji}$) instead of consistently swapping \textbf{both} the row and column index on every term.
+
+**Problem 9 — Answer.**
+
+**Step 1.** \textit{Column picture.} Columns of $M$: $\vec c_1=\begin{bmatrix}2\\0\end{bmatrix}$, $\vec c_2=\begin{bmatrix}1\\3\end{bmatrix}$. Form $5\vec c_1-2\vec c_2$.
+
+**Step 2.** Scale: $5\vec c_1=\begin{bmatrix}10\\0\end{bmatrix}$, $-2\vec c_2=\begin{bmatrix}-2\\-6\end{bmatrix}$. Add: $M\vec v=\begin{bmatrix}8\\-6\end{bmatrix}$.
+
+**Step 3.** \textit{Row picture, as a check.} Rows of $M$ (as column vectors): $\vec r_1=\begin{bmatrix}2\\1\end{bmatrix}$, $\vec r_2=\begin{bmatrix}0\\3\end{bmatrix}$. Dot each with $\vec v=(5,-2)$: $\vec r_1\cdot\vec v=2(5)+1(-2)=8$; $\vec r_2\cdot\vec v=0(5)+3(-2)=-6$.
+
+**Step 4.** Both pictures agree: $M\vec v=\begin{bmatrix}8\\-6\end{bmatrix}$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} In the column picture, adding the raw columns without scaling them by the corresponding entries of $\vec v$ first; in the row picture, pairing row and vector entries in the wrong order when taking the dot product.
+
+**Problem 10 — Answer.**
+
+**Step 1.** Recall the rule: for $XY$ to be defined, (columns of $X$) must equal (rows of $Y$); the result is (rows of $X$) $\times$ (columns of $Y$).
+
+**Step 2.** $AB$: $A$ is $3\times2$, $B$ is $2\times4$. Columns of $A$ ($2$) $=$ rows of $B$ ($2$) $\checkmark$ — defined, shape $3\times4$.
+
+**Step 3.** $BA$: columns of $B$ ($4$) $\neq$ rows of $A$ ($3$) — undefined. $BC$: columns of $B$ ($4$) $\neq$ rows of $C$ ($1$) — undefined. $CA$: columns of $C$ ($2$) $\neq$ rows of $A$ ($3$) — undefined. $AC$: columns of $A$ ($2$) $\neq$ rows of $C$ ($1$) — undefined.
+
+**Step 4.** $CB$: $C$ is $1\times2$, $B$ is $2\times4$. Columns of $C$ ($2$) $=$ rows of $B$ ($2$) $\checkmark$ — defined, shape $1\times4$.
+
+**Step 5.** Summary: defined are $AB$ ($3\times4$) and $CB$ ($1\times4$); undefined are $BA$, $BC$, $CA$, $AC$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Assuming a product is defined just because a "$2$" appears in both matrices' shapes, rather than checking that the number of \textit{columns of the first} matches the number of \textit{rows of the second}, in that specific order.
+
+**Problem 11 — Answer.**
+
+**Step 1.** Compute $XY$ entry by entry (row of $X$ dotted with column of $Y$): $(XY)_{11}=1(3)+2(1)=5$; $(XY)_{12}=1(0)+2(2)=4$; $(XY)_{21}=0(3)+1(1)=1$; $(XY)_{22}=0(0)+1(2)=2$. So $XY=\begin{bmatrix}5&4\\1&2\end{bmatrix}$.
+
+**Step 2.** Compute $YX$ the same way: $(YX)_{11}=3(1)+0(0)=3$; $(YX)_{12}=3(2)+0(1)=6$; $(YX)_{21}=1(1)+2(0)=1$; $(YX)_{22}=1(2)+2(1)=4$. So $YX=\begin{bmatrix}3&6\\1&4\end{bmatrix}$.
+
+**Step 3.** Compare: $XY\neq YX$ (e.g. the $(1,1)$ entries are $5$ vs.\ $3$), confirming matrix multiplication is not commutative in general.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Multiplying entrywise (Hadamard-style: matching entries in the same position) instead of using the row-dot-column rule — tempting here because $X$ and $Y$ are the same shape.
+
+**Problem 12 — Answer.**
+
+**Step 1.** Add pointwise: $(f+g)(x)=f(x)+g(x)=(x^2+1)+2x=x^2+2x+1$.
+
+**Step 2.** Scale pointwise, distributing to \textit{every} term: $(3f)(x)=3f(x)=3(x^2+1)=3x^2+3$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Forgetting to distribute the scalar to \textit{every} term of $f(x)$, e.g. writing $(3f)(x)=3x^2+1$ instead of $3(x^2+1)$.
+
+**Problem 13 — Answer.**
+
+**Step 1.** Recall function equality is pointwise: $f=g$ requires $f(x)=g(x)$ for \textbf{every} $x\in F$, not just some.
+
+**Step 2.** Test a negative input, $x=-1$: $f(-1)=-1$, but $g(-1)=|-1|=1$.
+
+**Step 3.** Since $f(-1)\neq g(-1)$, the two functions disagree at at least one input, so $f\neq g$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Concluding $f=g$ because the two functions agree for all $x\ge0$ — forgetting that function equality (pointwise) requires agreement at \textbf{every} input in $F$, not just most of them.
+
+**Problem 14 — Answer.**
+
+**Step 1.** Fix an arbitrary input $x\in F$ and expand the left side using scalar multiplication of functions: $(c(f+g))(x)=c\big((f+g)(x)\big)$.
+
+**Step 2.** Expand $(f+g)(x)$ using function addition: $c\big((f+g)(x)\big)=c\big(f(x)+g(x)\big)$.
+
+**Step 3.** Distribute $c$ using the field axioms: $c\big(f(x)+g(x)\big)=cf(x)+cg(x)$.
+
+**Step 4.** Recognize each term as a scalar-multiplication value and recombine using function addition: $cf(x)+cg(x)=(cf)(x)+(cg)(x)=(cf+cg)(x)$.
+
+**Step 5.** Since $(c(f+g))(x)=(cf+cg)(x)$ for the arbitrary input $x$, the two functions agree everywhere, so $c(f+g)=cf+cg$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Treating $c(f+g)$ as an algebra shortcut and skipping the definitional chain (function addition, then scalar multiplication, then distributivity in $F$) instead of justifying each equality as its own step.
+
+**Problem 15 — Answer.**
+
+**Step 1.** $A-B$ means $A+(-1)B$; subtract entrywise: $A-B=\begin{bmatrix}2-(-1)&1-2\\-3-0&4-5\end{bmatrix}=\begin{bmatrix}3&-1\\-3&-1\end{bmatrix}$.
+
+**Step 2.** Scale $B$ by $2$: $2B=\begin{bmatrix}2(-1)&2(2)\\2(0)&2(5)\end{bmatrix}=\begin{bmatrix}-2&4\\0&10\end{bmatrix}$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Subtracting the matrices "column-major" instead of entry-by-entry in place (e.g. swapping which entries line up), or forgetting that subtraction scales $B$ by $-1$ before adding, which matters if a sign is mishandled.
+
+**Problem 16 — Answer.**
+
+**Step 1.** Compute $MN$ (row of $M$ dotted with column of $N$), $M=\begin{bmatrix}1&-2\\3&0\end{bmatrix}$, $N=\begin{bmatrix}2&1\\-1&4\end{bmatrix}$: $(MN)_{11}=1(2)+(-2)(-1)=2+2=4$; $(MN)_{12}=1(1)+(-2)(4)=1-8=-7$; $(MN)_{21}=3(2)+0(-1)=6$; $(MN)_{22}=3(1)+0(4)=3$. So $MN=\begin{bmatrix}4&-7\\6&3\end{bmatrix}$.
+
+**Step 2.** Compute $NM$: $(NM)_{11}=2(1)+1(3)=5$; $(NM)_{12}=2(-2)+1(0)=-4$; $(NM)_{21}=-1(1)+4(3)=11$; $(NM)_{22}=-1(-2)+4(0)=2$. So $NM=\begin{bmatrix}5&-4\\11&2\end{bmatrix}$.
+
+**Step 3.** Compare: every entry of $MN$ differs from the corresponding entry of $NM$, so $MN\neq NM$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Reusing the row-dot-column pairing from $MN$ without recomputing it for $NM$ — the rows and columns being dotted genuinely swap roles, so $NM$ must be computed from scratch, not guessed from $MN$.
+
+**Problem 17 — Answer.**
+
+**Step 1.** Compute $(f\circ g)(x)=f(g(x))$: substitute $g(x)=x+1$ into $f(t)=t^2$, giving $f(g(x))=(x+1)^2=x^2+2x+1$.
+
+**Step 2.** Compute $(g\circ f)(x)=g(f(x))$: substitute $f(x)=x^2$ into $g(t)=t+1$, giving $g(f(x))=x^2+1$.
+
+**Step 3.** Compare the two functions: $f\circ g$ has value $x^2+2x+1$ while $g\circ f$ has value $x^2+1$ — these agree only when $2x=0$, i.e.\ only at $x=0$, not for every $x$.
+
+**Step 4.** Since function equality requires agreement at \textbf{every} input, and e.g. at $x=1$ we get $(f\circ g)(1)=4\neq2=(g\circ f)(1)$, we conclude $f\circ g\neq g\circ f$.
+
+\textbf{\textcolor{cautionInk}{Common misconception:}} Assuming composition of functions is commutative the way multiplication of numbers is — it is not, and checking a single input where they disagree is enough to disprove equality, by the definition of function equality on Page 1.
