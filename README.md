@@ -92,6 +92,28 @@ scripts/               One-off pipeline utilities not specific to one product.
    holds engines and data; narrative decisions, standing instructions, and delivered-document
    summaries stay in the Project's `claude/*.md` docs, cross-linked from here where useful.
 
+## Standing request: enhance an existing PowerPoint (added 1 Oct 2026)
+
+When Mr Malek attaches a deck and asks for it to be "updated, enriched and enhanced", follow this spec. If no deck is attached, say so rather than inventing one.
+
+**Preserve exactly:** theme, colours, fonts, backgrounds, layouts, school and department logos, the school motto in its existing position, CCSS codes in the slide footers, footer and slide numbering. Do not change the established style without a strong instructional reason. Reuse the deck's own masters, layouts and assets.
+
+**Content:** read the whole deck first; keep all correct and valuable material; fix factual, mathematical, grammatical and instructional errors; enrich weak explanations concisely; do not remove valuable content unless it is wrong, duplicated or clearly unnecessary. Each lesson follows one clear sequence: objective and standard, prior-knowledge activation, concept introduction, modelled example, guided practice, independent practice, higher-order application, assessment or exit ticket. Apply the FIKR model in the activities, questioning, examples and assessment (not just by name). If the exact FIKR framework is in the uploaded materials, follow it precisely and do not invent components.
+
+**Exam connections (GAT, SAT, SAAT):** only where academically relevant, never forced. For each: name the skill assessed, give one challenging example aligned to the lesson and grade, show the reasoning and an efficient strategy, and flag the misconceptions, distractors and traps.
+
+**Visuals:** accurate graphs and diagrams with labels, scales, units and legends; replace low-quality visuals; strong contrast, consistent spacing, readable sizes; no overcrowding; progressive disclosure; dense text becomes concise visual structure; works both projected and for student review.
+
+**Animation:** purposeful and consistent only. Use it to reveal definitions, solution steps, graph transformations, diagram components, and answers after thinking time. No decorative or excessive effects.
+
+**GeoGebra:** only where it adds clear instructional value (dynamic geometry, transformations, sliders, visual proof, modelling). Embed if reliable; otherwise supply a screenshot or preview, a clickable link or button, and brief teacher instructions. The deck must still work offline wherever possible.
+
+**Output:** a fully editable .pptx (do not flatten text, equations, charts or diagrams into images unless necessary); everything inside slide boundaries; spelling, grammar, notation and consistency checked. Return only: (1) the finished file, (2) a concise change log of the most important improvements, (3) any external GeoGebra links used.
+
+**Process (token efficiency):** inspect the full deck first; keep a brief internal slide-by-slide plan; prioritise the slides with the greatest instructional need; do not rewrite content that is already accurate; no narrated routine actions or repeated summaries; ask a question only if essential information is missing and cannot be inferred; finish in one workflow.
+
+**Final check before delivery:** accuracy, standards alignment, FIKR implementation, relevant GAT/SAT/SAAT links, graph and diagram quality, branding/motto/footer consistency, readability, animation purpose, GeoGebra function or backup, no overflow/overlap/cropping, full editability.
+
 ## Status
 
 Scaffolded 24 Sep 2026. Engines and configs referenced above exist from prior session work but
