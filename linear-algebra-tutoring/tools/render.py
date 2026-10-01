@@ -155,7 +155,7 @@ SUBHEAD_RE = re.compile(r'(?m)^\*\*([^*]+)\*\*\s*$')
 def word_count(s):
     return len(re.findall(r'\S+', s))
 
-def render_problems(body, hints):
+def render_problems(body, hints, answers=None):
     body = strip_hr(body)
     # tokenize into a stream of (kind, content) : ('sub', title) or ('item', (num, text))
     lines = body.split('\n')
@@ -184,8 +184,9 @@ def render_problems(body, hints):
     if cur_item:
         tokens.append(('item', cur_item))
 
-    out = ["\\sectionbanner{Practice Problems}\n",
-           "*Read the hint and the caution before you start each problem — not after.*\n"]
+    out = ["\\sectionbanner{Practice Problems}\n"]
+    if hints:
+        out.append("*Read the hint and the caution before you start each problem — not after.*\n")
     for kind, val in tokens:
         if kind == 'sub':
             out.append(f"\\vspace{{6pt}}\\noindent{{\\bfseries\\large {md_lite_to_tex(val)}}}\\par\\vspace{{2pt}}\n")
@@ -200,6 +201,9 @@ def render_problems(body, hints):
                 out.append(f"\\begin{{hintbox}}\\hintlabel {md2tex(hint)}\\end{{hintbox}}")
             if caution:
                 out.append(f"\\begin{{cautionbox}}\\cautionlabel {md2tex(caution)}\\end{{cautionbox}}")
+            if answers and num in answers:
+                out.append(f"\\begin{{answerbox}}\n{md2tex(answers[num])}\n\\end{{answerbox}}\n\\vspace{{6pt}}\n")
+                continue
             n_lines = 6 if ('(a)' in text and '(b)' in text) else (5 if word_count(text) > 35 else 4)
             out.append(f"\\worklines{{{n_lines}}}\n\\vspace{{6pt}}\n")
     return '\n\n'.join(out)
@@ -234,7 +238,32 @@ def parse_answer_table(body):
         rows.append((a, b, c))
     return rows
 
+STEP_ANSWER_RE = re.compile(r'(?m)^\*\*Problem\s+(\d+)\s*[—-]\s*Answer\.\*\*\s*$')
+
+def render_answerkey_steps(body, weeknum, topic):
+    """New format: full step-by-step derivations instead of a compressed
+    table row. Source uses standalone '**Problem N — Answer.**' heading
+    lines, each followed by '**Step 1.**'/'**Step 2.**'/... paragraphs and
+    a raw-tex 'Common misconception' line; the whole block is one pandoc
+    pass so bold labels, display math and the raw color command all render
+    together, exactly like a worked example."""
+    body = strip_hr(body)
+    matches = list(STEP_ANSWER_RE.finditer(body))
+    out = [f"\\worksheettitle{{{weeknum}}}{{Answer Key \\& Misconception Notes}}"
+           f"{{For tutor use only --- do not show the student until after their attempt. ({topic})}}\n"]
+    for i, m in enumerate(matches):
+        num = m.group(1)
+        start = m.end()
+        end = matches[i+1].start() if i+1 < len(matches) else len(body)
+        block = body[start:end].strip()
+        out.append(f"\\begin{{examplebox}}{{{num} --- Answer, step by step}}")
+        out.append(md2tex(block))
+        out.append("\\end{examplebox}\n")
+    return '\n\n'.join(out)
+
 def render_answerkey(body, weeknum, topic):
+    if STEP_ANSWER_RE.search(body):
+        return render_answerkey_steps(body, weeknum, topic)
     rows = parse_answer_table(body)
     out = [f"\\worksheettitle{{{weeknum}}}{{Answer Key \\& Misconception Notes}}"
            f"{{For tutor use only --- do not show the student until after their attempt. ({topic})}}\n"]
@@ -266,11 +295,21 @@ def main():
     prob_key = next(k for k in sections if k.startswith('Pages 4'))
     ans_key = next(k for k in sections if k.startswith('Answer Key'))
 
+    answers = None
+    if os.environ.get('WITH_ANSWERS'):
+        akb = strip_hr(sections[ans_key])
+        ms = list(STEP_ANSWER_RE.finditer(akb))
+        answers = {}
+        for i, m in enumerate(ms):
+            blk = akb[m.end(): ms[i+1].start() if i+1 < len(ms) else len(akb)].strip()
+            blk = '\n'.join(l for l in blk.split('\n') if 'Common misconception' not in l).strip()
+            answers[m.group(1)] = blk
+
     worksheet_parts = [
         f"\\worksheettitle{{{weeknum}}}{{{topic}}}{{{subtitle_line}}}\n",
         render_page1(sections[page1_key]),
         render_examples(sections[ex_key]),
-        render_problems(sections[prob_key], hints),
+        render_problems(sections[prob_key], hints, answers),
     ]
     worksheet_md = '\n\n'.join(worksheet_parts)
     answerkey_md = render_answerkey(sections[ans_key], weeknum, topic)
