@@ -46,5 +46,37 @@
   "12": {
     "hint": "Notice $\\frac1x\\ln x\\,dx$ is exactly $u\\,du$ in disguise if you let $u=\\ln x$.",
     "caution": "Don't assume every 'product-looking' integrand needs integration by parts — check first whether it's secretly a chain-rule substitution."
+  },
+  "13": {
+    "hint": "Let $u=3x$ and don't forget to convert $dx$ into $du$.",
+    "caution": "Scaling the inside of $\\sec^2$ by $3$ means the antiderivative picks up a compensating $\\frac13$ — don't drop it."
+  },
+  "14": {
+    "hint": "Treat this as $\\int 1\\cdot\\arcsin x\\,dx$ and choose $u=\\arcsin x$, $dv=dx$.",
+    "caution": "There is no elementary antiderivative for $dv=\\arcsin x\\,dx$, so $\\arcsin x$ must be $u$, never $dv$."
+  },
+  "15": {
+    "hint": "Reuse the general antiderivative from Worked Example 7 and evaluate it at both endpoints.",
+    "caution": "Remember $\\ln 1 = 0$ when evaluating the lower limit — don't skip or mis-simplify that term."
+  },
+  "16": {
+    "hint": "The numerator's degree is higher than the denominator's — divide first before applying any integration technique.",
+    "caution": "Don't try to substitute $u=x^2+1$ into the whole fraction at once; it only matches cleanly after the division step separates out the right piece."
+  },
+  "17": {
+    "hint": "Choose $u=x$, $dv=\\cos(2x)\\,dx$, and track the extra $\\frac12$ from antidifferentiating the inside function $2x$.",
+    "caution": "Don't forget the $\\frac12$ when antidifferentiating $\\sin(2x)$ in the second step — it's easy to write $-\\cos(2x)$ instead of $-\\frac12\\cos(2x)$."
+  },
+  "18": {
+    "hint": "Check whether $v=e^{x^2}$ is actually a valid antiderivative of $dv=e^{x^2}dx$ before doing anything else.",
+    "caution": "$xe^{x^2}$ is already in the exact form for a substitution ($u=x^2$) — integration by parts is the wrong tool here regardless of the $v$ error."
+  },
+  "19": {
+    "hint": "Substitute $t=\\sqrt x$ first to remove the radical from the exponent — a second technique is still needed afterward.",
+    "caution": "Integration by parts alone cannot make progress on $e^{\\sqrt x}$ while the radical sits inside the exponent."
+  },
+  "20": {
+    "hint": "Use integration by parts with $u=5t$, $dv=e^{-t/2}dt$, and evaluate the resulting antiderivative at both $t=0$ and $t=4$.",
+    "caution": "The antiderivative is not zero at $t=0$ — evaluating only at $t=4$ and forgetting to subtract the $t=0$ value drops part of the answer."
   }
 }
