@@ -5,7 +5,7 @@ from sat6 import ITEMS
 
 PRE = r"""
 \documentclass[10pt]{article}
-\usepackage[a4paper,left=1.7cm,right=1.7cm,top=2.2cm,bottom=2.2cm,headheight=0.9cm,headsep=0.35cm,footskip=1.0cm]{geometry}
+\usepackage[a4paper,left=1.7cm,right=1.7cm,top=3.0cm,bottom=2.2cm,headheight=1.6cm,headsep=0.3cm,footskip=1.0cm]{geometry}
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{xcolor,graphicx,array,booktabs,enumitem,lastpage}
 \usepackage{tikz}\usetikzlibrary{arrows.meta,calc}
@@ -18,8 +18,9 @@ PRE = r"""
 \renewcommand{\arraystretch}{1.25}
 \pagestyle{fancy}\fancyhf{}
 \renewcommand{\headrulewidth}{0.5pt}\renewcommand{\headrule}{\hbox to\headwidth{\color{NAVY}\leaders\hrule height \headrulewidth\hfill}}
-\fancyhead[L]{\small\bfseries\color{NAVY}SAT Math \textperiodcentered\ Week 6 \textperiodcentered\ Grade 11@@KEYTAG@@}
-\fancyhead[R]{\small\color{GREY}Mr Malek Thiab}
+\fancyhead[L]{\raisebox{-0.35\height}{\includegraphics[height=1.05cm]{dept_logo_doc.png}}}
+\fancyhead[C]{\raisebox{-0.35\height}{\includegraphics[height=1.15cm]{cognia_badge_doc.png}}}
+\fancyhead[R]{\raisebox{-0.35\height}{\includegraphics[height=1.15cm]{school_logo_doc.png}}}
 \fancyfoot[L]{\footnotesize\color{GREY}SAT-M \textperiodcentered\ W6 \textperiodcentered\ G11@@KEYCODE@@}
 \fancyfoot[C]{\footnotesize\color{NAVY}{\addfontfeatures{LetterSpace=18}\textsc{Faith, Righteousness and Wisdom}}}
 \fancyfoot[R]{\footnotesize\color{GREY}Mr Malek Thiab \textperiodcentered\ Page \thepage\ of \pageref{LastPage}}
