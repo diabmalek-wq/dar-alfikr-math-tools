@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.9cm,top=2.4cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,fontspec,microtype,fancyhdr,lastpage,enumitem,needspace}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{1F3A5F}\definecolor{soft}{HTML}{EEF3F9}\definecolor{ans}{HTML}{F3F8F1}\definecolor{ansb}{HTML}{3C7A3C}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\color{ink}\textbf{Linear Algebra I} \textperiodcentered\ Week 3 --- Span, Linear Independence \& Setting Up Linear Systems}
+\rhead{}\cfoot{\small Mr Malek Thiab \textperiodcentered\ Worksheet \textperiodcentered\ Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\newcommand{\lv}[1]{\textsc{\small #1}}
+\begin{document}
+{\Large\bfseries\color{ink} Linear Algebra I --- Week 3}\\[2pt]
+{\large\bfseries\color{ink} Span, Linear Independence \& Setting Up Linear Systems}\\[3pt]
+{\small Name: \underline{\hspace{5cm}}\hfill Date: \underline{\hspace{3cm}}\qquad All work \textbf{by hand} --- no calculator, no software.}
+\vspace{4pt}\hrule\vspace{8pt}
+
+\begin{tcolorbox}[colback=soft,colframe=ink,title={\bfseries Key Facts}]
+\textbf{Linear combination and span.} A linear combination of $v_1,\dots,v_k\in V$ is $a_1v_1+\dots+a_kv_k$ with $a_i\in\mathbb{F}$. $\operatorname{span}\{v_1,\dots,v_k\}$ is the set of all of them; $\operatorname{span}\varnothing=\{\mathbf 0\}$. It is a subspace, and the smallest subspace containing $v_1,\dots,v_k$.
+
+\textbf{Setting up the system.} To test $w\in\operatorname{span}\{v_1,\dots,v_k\}$ in $\mathbb{F}^{n}$, solve $a_1v_1+\dots+a_kv_k=w$. Coordinatewise this is $n$ equations in $k$ unknowns, with augmented matrix whose columns are $v_1,\dots,v_k\mid w$. Solution exists $\iff w\in$ span.
+
+\textbf{Linear independence.} $v_1,\dots,v_k$ are \emph{independent} if $a_1v_1+\dots+a_kv_k=\mathbf 0$ forces $a_1=\dots=a_k=0$; otherwise \emph{dependent}. Test: solve the homogeneous system; only $\mathbf 0$ $\Rightarrow$ independent, a nonzero solution $\Rightarrow$ dependent (and it gives a relation).
+
+\textbf{Useful facts.} A set containing $\mathbf 0$ is dependent. One vector is independent iff it is nonzero. Two vectors are independent iff neither is a scalar multiple of the other. $v_1,\dots,v_k$ dependent $\iff$ some $v_j\in\operatorname{span}$ of the others. If $w\in\operatorname{span}\{v_1,\dots,v_k\}$, adding $w$ does not enlarge the span. Independence and span depend on the field: $\{(1,i),(i,-1)\}$ is dependent over $\mathbb{C}$ but independent over $\mathbb{R}$.
+
+\textbf{Counting.} More homogeneous unknowns than equations forces a nonzero solution; so more than $n$ vectors in $\mathbb{F}^{n}$ are dependent.
+\end{tcolorbox}
+
+\newpage
+\section*{\large\color{ink} Worked Examples}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 1 \textperiodcentered\ Membership in a span}]Is $(4,7)\in\operatorname{span}\{(1,2),(3,5)\}$ in $\mathbb{R}^{2}$?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Solve $a(1,2)+b(3,5)=(4,7)$: $a+3b=4$, $2a+5b=7$.
+\item From the first, $a=4-3b$. Substitute: $8-6b+5b=7$, so $b=1$, $a=1$.
+\item Check: $(1,2)+(3,5)=(4,7)$.
+\end{enumerate}\textbf{Answer:} Yes: $(4,7)=1(1,2)+1(3,5)$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 2 \textperiodcentered\ Membership (positive)}]Is $(1,2,3)\in\operatorname{span}\{(1,0,1),(0,1,1)\}$?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $a(1,0,1)+b(0,1,1)=(a,\ b,\ a+b)$.
+\item Match: $a=1$, $b=2$; third coordinate $a+b=3$ \checkmark.
+\end{enumerate}\textbf{Answer:} Yes: $(1,2,3)=1(1,0,1)+2(0,1,1)$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 3 \textperiodcentered\ Membership (negative)}]Is $(1,2,4)\in\operatorname{span}\{(1,0,1),(0,1,1)\}$?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item As before the combination is $(a,b,a+b)$.
+\item Match: $a=1$, $b=2$, but then $a+b=3\neq4$.
+\end{enumerate}\textbf{Answer:} No.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 4 \textperiodcentered\ Dependence, finding a relation}]Test $\{(1,2,1),(2,1,0),(1,-1,-1)\}$ for independence.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Solve $a(1,2,1)+b(2,1,0)+c(1,-1,-1)=\mathbf 0$: $a+2b+c=0,\ 2a+b-c=0,\ a-c=0$.
+\item Third: $c=a$. First: $2a+2b=0$, so $b=-a$. Second: $2a-a-a=0$ \checkmark (automatically).
+\item So $(a,b,c)=(1,-1,1)$ is a nontrivial solution. Check: $v_1-v_2+v_3=(1-2+1,\ 2-1-1,\ 1-0-1)=\mathbf 0$.
+\end{enumerate}\textbf{Answer:} Linearly dependent: $v_1-v_2+v_3=\mathbf 0$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 5 \textperiodcentered\ Independence in $P_{2}$}]Show $\{1+x,\ x+x^{2},\ 1+x^{2}\}$ is linearly independent in $P_{2}(\mathbb{R})$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Suppose $a(1+x)+b(x+x^{2})+c(1+x^{2})=\mathbf 0$. Compare coefficients.
+\item Constant: $a+c=0$. $x$: $a+b=0$. $x^{2}$: $b+c=0$.
+\item So $a=-c$ and $b=-a=c$; then $b+c=2c=0$, so $c=0$, hence $a=b=0$.
+\end{enumerate}\textbf{Answer:} Linearly independent.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 6 \textperiodcentered\ The field matters}]Is $\{(1,i),(i,-1)\}$ linearly independent in $\mathbb{C}^{2}$ over $\mathbb{C}$? Over $\mathbb{R}$?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Note $i\cdot(1,i)=(i,\,i^{2})=(i,-1)$.
+\item Over $\mathbb{C}$: $i\,v_1-v_2=\mathbf 0$, a nontrivial relation, so dependent.
+\item Over $\mathbb{R}$: $a(1,i)+b(i,-1)=\mathbf 0$ with real $a,b$ gives first coordinate $a+bi=0$, so $a=b=0$: independent.
+\end{enumerate}\textbf{Answer:} Dependent over $\mathbb{C}$; independent over $\mathbb{R}$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 7 \textperiodcentered\ Proof: dependence means one vector is redundant}]Prove: if $v_1,\dots,v_k$ are linearly dependent, then some $v_j$ is a linear combination of the others.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Take a nontrivial relation $a_1v_1+\dots+a_kv_k=\mathbf 0$ and pick $j$ with $a_j\neq0$.
+\item Isolate: $a_jv_j=-\sum_{i\neq j}a_iv_i$.
+\item Divide by $a_j$ (allowed because $a_j\ne0$ in a field): $v_j=-\sum_{i\ne j}\dfrac{a_i}{a_j}v_i$.
+\end{enumerate}\textbf{Answer:} $v_j\in\operatorname{span}\{v_i:i\neq j\}$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 8 \textperiodcentered\ Describing a span by an equation}]Find the condition on $(a,b,c)$ for $(a,b,c)\in\operatorname{span}\{(1,1,0),(0,1,1)\}$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $x(1,1,0)+y(0,1,1)=(x,\ x+y,\ y)$.
+\item Matching: $x=a$, $y=c$, and $b=x+y=a+c$.
+\end{enumerate}\textbf{Answer:} $a-b+c=0$
+\end{tcolorbox}
+\newpage
+\section*{\large\color{ink} Practice Problems}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part A --- Linear Combinations and Span}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{1.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Write $(5,-1)$ as a linear combination of $(1,1)$ and $(1,-1)$ in $\mathbb{R}^{2}$.
+\vspace{3.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{2.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Decide whether $(2,3,4)\in\operatorname{span}\{(1,1,1),(0,1,2)\}$ in $\mathbb{R}^{3}$. If so, give the coefficients.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{3.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Decide whether $(1,0,0)\in\operatorname{span}\{(1,1,0),(0,1,1)\}$ in $\mathbb{R}^{3}$.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{4.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find $k$ such that $(1,2,k)\in\operatorname{span}\{(1,1,0),(1,-1,2)\}$.
+\vspace{3.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{5.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak In $\mathbb{C}^{2}$ over $\mathbb{C}$, write $(1+i,\;2)$ as a linear combination of $(1,i)$ and $(1,-i)$.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{6.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Show that $\operatorname{span}\{(1,2),(2,4)\}\subseteq\mathbb{R}^{2}$ is a line, and give its equation.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{7.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Describe $\operatorname{span}\{(1,0,2),(0,1,-1)\}\subseteq\mathbb{R}^{3}$ by a single linear equation in $x,y,z$.
+\vspace{4.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{8.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Prove that for any vectors $v_1,\dots,v_k$ in a vector space $V$, the set $\operatorname{span}\{v_1,\dots,v_k\}$ is a subspace of $V$.
+\vspace{5.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part B --- Linear Independence and Dependence}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{9.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Is $\{(1,2),(3,6)\}$ linearly independent in $\mathbb{R}^{2}$?
+\vspace{2.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{10.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Is $\{(1,2),(2,3)\}$ linearly independent in $\mathbb{R}^{2}$?
+\vspace{3.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{11.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Is $\{(1,0,1),(1,1,0),(0,1,1)\}$ linearly independent in $\mathbb{R}^{3}$?
+\vspace{4.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{12.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Is $\{(1,2,3),(4,5,6),(7,8,9)\}$ linearly independent in $\mathbb{R}^{3}$? If not, give a nontrivial relation.
+\vspace{4.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{13.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Find all real $k$ for which $\{(1,1,1),(1,2,3),(1,3,k)\}$ is linearly dependent.
+\vspace{4.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{14.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak In $P_{2}(\mathbb{R})$, is $\{1+x,\ 1-x,\ 2\}$ linearly independent?
+\vspace{3.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{15.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak In $\mathbb{C}^{2}$, consider $\{(1,i),\ (1+i,\ i-1)\}$. (a) Is it linearly independent over $\mathbb{C}$? (b) Is it linearly independent over $\mathbb{R}$?
+\vspace{5.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{16.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $u,v,w$ be linearly independent in a real vector space. Prove that $u+v,\ v+w,\ u+w$ are linearly independent.
+\vspace{5.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{10\baselineskip}\subsection*{\normalsize\color{ink} Part C --- Setting Up Systems, Spanning Sets and Proofs}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{17.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Set up and solve the system that decides whether $(1,2,3)\in\operatorname{span}\{(1,0,1),(2,1,0),(0,1,1)\}$.
+\vspace{4.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{18.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find the condition on $(a,b,c)$ for $(a,b,c)\in\operatorname{span}\{(1,2,0),(0,1,1)\}$.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{19.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find a finite spanning set for $W=\{(x,y,z)\in\mathbb{R}^{3}:x+y+z=0\}$.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{20.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak (a) Show that $\{(1,1),(1,2),(2,1)\}$ spans $\mathbb{R}^{2}$. (b) Is it linearly independent?
+\vspace{5.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{21.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Show that $\{1,\ 1+x,\ 1+x+x^{2}\}$ spans $P_{2}(\mathbb{R})$.
+\vspace{4.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{22.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Show that $\left\{\begin{pmatrix}1&0\\0&1\end{pmatrix},\begin{pmatrix}0&1\\1&0\end{pmatrix},\begin{pmatrix}0&1\\-1&0\end{pmatrix},\begin{pmatrix}1&0\\0&-1\end{pmatrix}\right\}$ spans $M_{2\times2}(\mathbb{R})$ and is linearly independent.
+\vspace{6.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{23.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Prove: if $w\in\operatorname{span}\{v_1,\dots,v_k\}$ then $\operatorname{span}\{v_1,\dots,v_k,w\}=\operatorname{span}\{v_1,\dots,v_k\}$.
+\vspace{5.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{24.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $v_1,\dots,v_k$ be linearly independent and $v_{k+1}\notin\operatorname{span}\{v_1,\dots,v_k\}$. Prove that $v_1,\dots,v_{k+1}$ are linearly independent.
+\vspace{5.4cm}\end{minipage}\par\vspace{4pt}
+\end{document}
