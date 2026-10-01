@@ -1,118 +1,40 @@
-"""
-Gr11 T6 L6-4 Logarithmic Functions — graphs. Same house style as
-make_graphs_w6l3.py: recessive grid, arrowheads on axes, direct labels,
-Computer Modern. Prefix gm_.
-"""
-import json, os, shutil
-import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from PIL import Image
+from gfx import *
+S = Set("graphs_w6l4", {"g_inv": 3.8, "g_shift": 5.6})
 
-plt.rcParams["mathtext.fontset"] = "cm"
-plt.rcParams["font.family"] = "serif"
-plt.rcParams["font.serif"] = ["DejaVu Serif"]
+# ---- inverse pair, equal scales so the reflection across y = x is honest
+fig, ax = S.fig(4.7, 4.7)
+S.axes(ax, (-1.5, 10.5), (-1.5, 10.5), equal=True)
+xs = np.linspace(-1.5, 2.2, 300); S.curve(ax, xs, 3.0 ** xs, TEAL)
+xl = np.linspace(0.12, 10.4, 400); S.curve(ax, xl, np.log(xl) / np.log(3), ORANGE)
+S.line(ax, (-1.5, -1.5), (10.5, 10.5), color=GREY, lw=1.2, ls=":")
+pairs = [((0, 1), (1, 0)), ((1, 3), (3, 1)), ((2, 9), (9, 2))]
+for (a, b), (c, d) in pairs:
+    assert abs(3.0 ** a - b) < 1e-12 and abs(np.log(c) / np.log(3) - d) < 1e-12 and (a, b) == (d, c)
+    S.dot(ax, a, b); S.dot(ax, c, d)
+    S.line(ax, (a, b), (c, d), color=GREY, lw=0.8, ls="--")
+S.label(ax, r"$f(x)=3^{x}$", (3.9, 8.3), direction=(1, 0), steps=(0.0, 0.4, 0.8), ha="center")
+S.label(ax, r"$f^{-1}(x)=\log_3 x$", (8.0, 1.5), direction=(0, -1), steps=(0.3, 0.7, 1.1), ha="center")
+S.label(ax, r"$y=x$", (8.2, 7.2), direction=(1, -1), steps=(0.3, 0.7, 1.1, 1.5), ha="center")
+S.label(ax, r"$(2,9)$", (2, 9), direction=(-1, 0.3), steps=(1.0, 1.4, 1.8))
+S.label(ax, r"$(9,2)$", (9, 2), direction=(0, 1), steps=(0.7, 1.1))
+S.save(fig, "g_inv")
 
-OUT = "graphs_w6l4"
-shutil.rmtree(OUT, ignore_errors=True)
-os.makedirs(OUT)
-
-TEAL = "#17A199"; MAROON = "#AD2A22"; INK = "#222E2D"
-MUTED = "#5C6E6C"; GRID = "#DCE9E8"; DEEP = "#0E4F4C"; GOLD = "#C8912A"
-BOX = dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.88)
-
-idx = {}
-
-
-def axes(ax, xlim, ylim, xstep=1, ystep=1, grid=True):
-    ax.set_xlim(*xlim); ax.set_ylim(*ylim)
-    if grid:
-        ax.set_xticks(np.arange(np.ceil(xlim[0]), xlim[1] + 1e-9, xstep))
-        ax.set_yticks(np.arange(np.ceil(ylim[0]), ylim[1] + 1e-9, ystep))
-        ax.grid(True, color=GRID, lw=0.7, zorder=0)
-    ax.spines["left"].set_position("zero"); ax.spines["bottom"].set_position("zero")
-    ax.spines["right"].set_color("none"); ax.spines["top"].set_color("none")
-    ax.spines["left"].set_color(MUTED); ax.spines["bottom"].set_color(MUTED)
-    ax.tick_params(colors=MUTED, labelsize=8)
-    ax.plot(1, 0, ">", transform=ax.get_yaxis_transform(), color=MUTED,
-            clip_on=False, ms=5)
-    ax.plot(0, 1, "^", transform=ax.get_xaxis_transform(), color=MUTED,
-            clip_on=False, ms=5)
-
-
-def save(fig, name):
-    p = os.path.join(OUT, name + ".png")
-    fig.savefig(p, dpi=460, transparent=True, bbox_inches="tight", pad_inches=0.04)
-    plt.close(fig)
-    with Image.open(p) as im:
-        idx[name] = {"file": p, "aspect": im.width / im.height}
-
-
-def key_features(name):
-    """f(x) = log3(x): key features labelled — x-intercept, asymptote, domain."""
-    fig, ax = plt.subplots(figsize=(5.4, 3.8))
-    axes(ax, (-2, 9), (-3, 4), xstep=1, ystep=1)
-    xs = np.linspace(0.05, 8.8, 300)
-    ax.plot(xs, np.log(xs) / np.log(3), color=TEAL, lw=2.2, zorder=4)
-    ax.axvline(0, color=MAROON, lw=1.4, ls="--", zorder=2)
-    ax.plot(1, 0, "o", ms=6.5, color=DEEP, zorder=6)
-    ax.annotate(r"$(1,0)$" + "\n" + "$x$-intercept", (1, 0), xytext=(10, -34),
-                textcoords="offset points", color=DEEP, fontsize=8.8, bbox=BOX)
-    ax.annotate(r"$(3,1)$", (3, 1), xytext=(8, 8), textcoords="offset points",
-                color=DEEP, fontsize=9, bbox=BOX)
-    ax.plot(3, 1, "o", ms=6, color=DEEP, zorder=6)
-    ax.text(6.2, 2.6, r"$f(x)=\log_3 x$", color=TEAL, fontsize=10, bbox=BOX, ha="center")
-    ax.text(0.35, 3.2, r"asymptote$\ x=0$", color=MAROON, fontsize=8.6, bbox=BOX,
-            ha="left", rotation=90, va="top")
-    ax.text(4.8, -2.4, "domain: $x>0$", color=MUTED, fontsize=8.8, bbox=BOX, ha="center")
-    ax.set_xlabel("$x$", color=MUTED, fontsize=9.5, labelpad=-2)
-    fig.tight_layout()
-    save(fig, name)
-
-
-def inverse_pair(name):
-    """f(x)=3^x and its inverse g(x)=log3(x), mirrored across y=x."""
-    fig, ax = plt.subplots(figsize=(5.6, 4.0))
-    axes(ax, (-4, 8), (-4, 8), xstep=1, ystep=1)
-    xs_exp = np.linspace(-3.8, 2, 300)
-    xs_log = np.linspace(0.05, 7.8, 300)
-    ax.plot(xs_exp, 3 ** xs_exp, color=TEAL, lw=2.2, zorder=4)
-    ax.plot(xs_log, np.log(xs_log) / np.log(3), color=MAROON, lw=2.2, zorder=4)
-    diag = np.linspace(-4, 8, 50)
-    ax.plot(diag, diag, color=MUTED, lw=1.0, ls=":", zorder=2)
-    ax.plot(0, 1, "o", ms=6, color=DEEP, zorder=6)
-    ax.plot(1, 0, "o", ms=6, color=DEEP, zorder=6)
-    ax.text(1.9, 6.6, r"$f(x)=3^{x}$", color=TEAL, fontsize=10, bbox=BOX, ha="center")
-    ax.text(6.0, 1.9, r"$f^{-1}(x)=\log_3 x$", color=MAROON, fontsize=10, bbox=BOX, ha="center")
-    ax.text(5.5, 6.0, r"$y=x$", color=MUTED, fontsize=9, bbox=BOX, ha="center")
-    ax.set_xlabel("$x$", color=MUTED, fontsize=9.5, labelpad=-2)
-    fig.tight_layout()
-    save(fig, name)
-
-
-def shift_transform(name):
-    """g(x) = log2(x - 3): asymptote shifted to x = 3, vs parent f(x) = log2(x)."""
-    fig, ax = plt.subplots(figsize=(5.4, 3.8))
-    axes(ax, (-2, 11), (-3, 4), xstep=1, ystep=1)
-    xs1 = np.linspace(0.05, 10.8, 300)
-    xs2 = np.linspace(3.05, 10.8, 300)
-    ax.plot(xs1, np.log2(xs1), color=MUTED, lw=1.8, ls="--", zorder=3)
-    ax.plot(xs2, np.log2(xs2 - 3), color=TEAL, lw=2.2, zorder=4)
-    ax.axvline(0, color=MUTED, lw=1.1, ls=":", zorder=2)
-    ax.axvline(3, color=MAROON, lw=1.4, ls="--", zorder=2)
-    ax.text(6.6, 2.7, r"$g(x)=\log_2(x-3)$", color=TEAL, fontsize=9.6, bbox=BOX, ha="center")
-    ax.text(7.6, -2.0, r"$f(x)=\log_2 x$", color=MUTED, fontsize=9, bbox=BOX, ha="center")
-    ax.text(3.35, 3.2, r"asymptote$\ x=3$", color=MAROON, fontsize=8.4, bbox=BOX,
-            ha="left", rotation=90, va="top")
-    ax.set_xlabel("$x$", color=MUTED, fontsize=9.5, labelpad=-2)
-    fig.tight_layout()
-    save(fig, name)
-
-
-key_features("gm_key_features")
-inverse_pair("gm_exp_log_inverse")
-shift_transform("gm_shift")
-
-json.dump(idx, open(os.path.join(OUT, "_index.json"), "w"), indent=1)
-print(f"{len(idx)} graphs -> {OUT}")
+# ---- shift: f(x) = log3 x  and  g(x) = log3(x-2) + 1
+fig, ax = S.fig(6.0, 3.9)
+S.axes(ax, (-1.5, 12.5), (-3.5, 4.5))
+x1 = np.linspace(0.04, 12.4, 500); S.curve(ax, x1, np.log(x1) / np.log(3), BLUE)
+x2 = np.linspace(2.03, 12.4, 500); S.curve(ax, x2, np.log(x2 - 2) / np.log(3) + 1, ORANGE)
+ax.plot([0, 0], [-3.5, 4.5], color=RED, lw=1.5, ls="--", zorder=3)
+ax.plot([2, 2], [-3.5, 4.5], color=RED, lw=1.5, ls="--", zorder=3)
+fl.polyline(ax, [(2, -3.5), (2, 4.5)], lw=0)
+for x, y in [(1, 0), (3, 1), (9, 2)]:
+    assert abs(np.log(x) / np.log(3) - y) < 1e-12; S.dot(ax, x, y, BLUE)
+for x, y in [(3, 1), (5, 2), (11, 3)]:
+    assert abs(np.log(x - 2) / np.log(3) + 1 - y) < 1e-12; S.dot(ax, x, y, ORANGE)
+S.label(ax, r"$f(x)=\log_3 x$", (9.0, 0.6), direction=(0, -1), steps=(0.2, 0.6, 1.0), ha="center")
+S.label(ax, r"$g(x)=\log_3(x-2)+1$", (9.5, 3.6), direction=(0, 1), steps=(0.2, 0.5), ha="center")
+S.label(ax, r"$x=0$", (0.0, 4.0), direction=(1, 0), steps=(0.8, 0.9, 1.0), ha="center")
+S.label(ax, r"$x=2$", (2.0, -3.0), direction=(1, 0), steps=(0.7, 1.1), ha="center")
+S.label(ax, r"$(5,2)$", (5, 2), direction=(-1, 0.4), steps=(0.7, 1.1), ha="center")
+S.save(fig, "g_shift")
+S.done()

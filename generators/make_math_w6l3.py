@@ -48,6 +48,9 @@ EXPR = {
     # instruction 3 — logs to solve exponential-model problems
     "l_model1":  (r"A = A_0\,b^{t}", INK),
     "l_model2":  (r"b^{t}=\dfrac{A}{A_0}\ \Longrightarrow\ t=\log_b\!\left(\dfrac{A}{A_0}\right)", INK),
+    "l_mod_a":   (r"5\cdot 2^{t}=40", INK),
+    "l_mod_b":   (r"2^{t}=8", INK),
+    "l_mod_c":   (r"t=\log_2 8=3", INK),
     "l_model_w": (r"t=\log_b\!\left(\dfrac{A}{A_0}\right)", WHITE),
 
     # quick check, guided, gate
