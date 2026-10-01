@@ -7,7 +7,7 @@
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, BorderStyle, ShadingType, Header, Footer,
-  ImageRun, VerticalAlign, PageOrientation,
+  ImageRun, VerticalAlign, PageOrientation, PageNumber, TabStopType,
 } = require("docx");
 const fs = require("fs");
 const path = require("path");
@@ -84,9 +84,9 @@ function makeEngine(cfg) {
     children,
   });
   const gap = (a = 120) => new Paragraph({ spacing: { after: a }, children: [] });
-  const lines = (n, indent = 0) => Array.from({ length: n }, () => new Paragraph({
-    spacing: { before: 0, after: 150 }, indent: { left: indent },
-    border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "B9CFCD", space: 4 } },
+  const lines = (n, indent = 0, gapAfter = 150) => Array.from({ length: n }, () => new Paragraph({
+    spacing: { before: 0, after: gapAfter }, indent: { left: indent },
+    border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "B9CFCD", space: 4 }, between: { style: BorderStyle.SINGLE, size: 4, color: "B9CFCD", space: 4 } },
     children: [new TextRun({ text: " ", size: 20 })],
   }));
 
@@ -109,14 +109,20 @@ function makeEngine(cfg) {
       new Paragraph({ spacing: { after: 40 }, children: [] }),
     ] });
   }
-  const codesFooter = () => new Footer({ children: [
+  const codesFooter = (tabPos) => new Footer({ children: [
     new Paragraph({
       alignment: AlignmentType.CENTER, spacing: { before: 60, after: 20 },
       children: [new TextRun({ text: "FAITH,  RIGHTEOUSNESS  AND  WISDOM", font: HEAD,
                                size: 15, bold: true, color: "1F3864" })] }),
     new Paragraph({
-      alignment: AlignmentType.RIGHT, spacing: { after: 0 },
-      children: [new TextRun({ text: CODES.join("  ·  "), font: BODY, size: 15, color: MUTED })],
+      spacing: { after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: tabPos }],
+      children: [
+        new TextRun({ text: CODES.join("  ·  "), font: BODY, size: 15, color: MUTED }),
+        new TextRun({ text: "\tMr Malek Thiab  ·  Page ", font: BODY, size: 15, color: MUTED }),
+        new TextRun({ children: [PageNumber.CURRENT], font: BODY, size: 15, color: MUTED }),
+        new TextRun({ text: " of ", font: BODY, size: 15, color: MUTED }),
+        new TextRun({ children: [PageNumber.TOTAL_PAGES], font: BODY, size: 15, color: MUTED }),
+      ],
     })] });
 
   // a3: the project task is printed A3 so a group of four can work on one sheet.
@@ -127,9 +133,9 @@ function makeEngine(cfg) {
         size: a3
           ? { width: 16838, height: 23811 }
           : { width: 11906, height: 16838, orientation: landscape ? PageOrientation.LANDSCAPE : undefined },
-        margin: { top: 860, bottom: 700, left: 1080, right: 1080 } } },
+        margin: { top: landscape ? 640 : 860, bottom: landscape ? 560 : 700, left: 1080, right: 1080 } } },
       headers: { default: brandHeader(a3 ? A3W : landscape ? LW : W) },
-      footers: { default: codesFooter() },
+      footers: { default: codesFooter(a3 ? A3W : landscape ? LW : 9746) },
       children,
     }],
   });
@@ -239,7 +245,7 @@ function makeEngine(cfg) {
         ] }),
       ] }),
       gap(),
-      field("Essential Question (curriculum map)", [cfg.essentialQuestion]), gap(60),
+      field("Essential Question (curriculum map)", [cfg.essentialQuestion || "Not shown — the curriculum map's Essential Question column for Topic 2 was not in the project text, so it is left open rather than invented. Add it when confirmed."]), gap(60),
       field("Lesson Objectives (curriculum map — verbatim)", cfg.objectives.map((o, i) => `${i + 1}.  ${o}`)), gap(60),
       field("Vocabulary (curriculum map) · Assessments (curriculum map)", [
         `Vocabulary:  ${cfg.vocabList}.`,
@@ -320,7 +326,7 @@ function makeEngine(cfg) {
           cell(D.hard.map((t, i) => P(`${i + 1}-  ${t}`, { size: 9.5, after: 50 })), { w: 4893 }),
         ] }),
       ] }),
-      gap(140),
+      new Paragraph({ pageBreakBefore: true, spacing: { after: 0 }, children: [new TextRun({ text: "", size: 2 })] }),
       new Table({ columnWidths: [LW], width: { size: LW, type: WidthType.DXA },
         rows: [new TableRow({ children: [cell([P("Lesson Integral Parts", { size: 12, bold: true, color: "FFFFFF", align: AlignmentType.CENTER })], { w: LW, fill: MAROON })] })] }),
     ];
@@ -329,29 +335,29 @@ function makeEngine(cfg) {
       new TableRow({ children: ["Objectives / skills", "Teacher Strategies & Student Activities", "Assessment", "Time"].map((t, i) => hdrCell(t, c4[i])) }),
       new TableRow({ children: [
         cell([
-          ...cfg.objectives.map((o, i) => P(`${i + 1}-  ${o}`, { size: 9.5, after: 50 })),
-          P(`Essential question: ${cfg.essentialQuestion}`, { size: 9, italic: true, color: MUTED, before: 40, after: 60 }),
-          P(`Vocabulary: ${cfg.vocabList}.`, { size: 9, italic: true, color: MUTED }),
+          ...cfg.objectives.map((o, i) => P(`${i + 1}-  ${o}`, { size: 9, after: 50 })),
+          ...(cfg.essentialQuestion ? [P(`Essential question: ${cfg.essentialQuestion}`, { size: 8.5, italic: true, color: MUTED, before: 40, after: 60 })] : []),
+          P(cfg.vocabList.split(";").length > 8 ? `Vocabulary: ${cfg.vocabList.split(";").length} terms — listed in the FIKR plan.` : `Vocabulary: ${cfg.vocabList}.`, { size: 8.5, italic: true, color: MUTED }),
         ], { w: c4[0] }),
-        cell(D.phases.map((t, i) => P(t, { size: 9.5, after: i === D.phases.length - 1 ? 0 : 60 })), { w: c4[1] }),
-        cell(D.assessment.map((t, i) => P(t, { size: 9.5, after: i === D.assessment.length - 1 ? 0 : 60 })), { w: c4[2] }),
-        cell([P(`${T.t1} min`, { size: 9.5, after: 60 }), P(`${T.t2} min`, { size: 9.5, after: 60 }),
-              P(`${T.t3} min`, { size: 9.5, after: 60 }), P(`${T.t4} min`, { size: 9.5, after: 60 }),
-              P(`${T.t5} min`, { size: 9.5, after: 60 }), P(`${T.t6} min`, { size: 9.5, after: 80 }),
-              P("Total 60 min", { size: 9.5, bold: true, color: MAROON })], { w: c4[3] }),
+        cell(D.phases.map((t, i) => P(t, { size: 9, after: i === D.phases.length - 1 ? 0 : 60 })), { w: c4[1] }),
+        cell(D.assessment.map((t, i) => P(t, { size: 9, after: i === D.assessment.length - 1 ? 0 : 60 })), { w: c4[2] }),
+        cell([P(`${T.t1} min`, { size: 9, after: 60 }), P(`${T.t2} min`, { size: 9, after: 60 }),
+              P(`${T.t3} min`, { size: 9, after: 60 }), P(`${T.t4} min`, { size: 9, after: 60 }),
+              P(`${T.t5} min`, { size: 9, after: 60 }), P(`${T.t6} min`, { size: 9, after: 80 }),
+              P("Total 60 min", { size: 9, bold: true, color: MAROON })], { w: c4[3] }),
       ] }),
     ] }));
-    children.push(gap(140));
+    children.push(new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "", size: 8 })] }));
     const wide = (label, text) => new Table({
       columnWidths: [2600, LW - 2600], width: { size: LW, type: WidthType.DXA },
       rows: [new TableRow({ children: [
         cell([P(label, { size: 10, bold: true, color: "FFFFFF" })], { w: 2600, fill: TEAL_DEEP }),
-        cell([P(text, { size: 9.5 })], { w: LW - 2600 }),
+        cell([P(text, { size: 9 })], { w: LW - 2600 }),
       ] })],
     });
-    children.push(wide("Lesson Closure:", D.closure)); children.push(gap(90));
-    children.push(wide("Reflection for Improvement:", " ")); children.push(gap(90));
-    children.push(wide("Homework:", D.homework)); children.push(gap(90));
+    children.push(wide("Lesson Closure:", D.closure)); children.push(new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "", size: 8 })] }));
+    children.push(wide("Reflection for Improvement:", " ")); children.push(new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "", size: 8 })] }));
+    children.push(wide("Homework:", D.homework)); children.push(new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "", size: 8 })] }));
     children.push(wide("Teacher name:", "Mr Malek Thiab"));
     return makeDoc(`Lesson plan 2026/27 — ${cfg.lessonTitle}`, children, true);
   }
@@ -384,11 +390,22 @@ function makeEngine(cfg) {
       ["INVESTIGATE — Find out why", R.routes[2].note],
     ];
     R.routes.forEach((r, i) => {
+      if (i === 1) k.push(new Paragraph({ pageBreakBefore: true, spacing: { after: 0 }, children: [new TextRun({ text: "", size: 2 })] }));
       k.push(sectionBar(names[i][0], names[i][1])); k.push(gap(80));
       if (r.intro) k.push(P(r.intro, { size: 10.5, after: 120 }));
       if (r.grid) k.push(qGrid(r.grid));
       if (r.graph) k.push(graphPara(r.graph, r.graphW || 400));
-      (r.tasks || []).forEach((t) => k.push(Array.isArray(t) ? mix(t, { size: 10.5, after: 140 }) : P(t, { size: 10.5, after: 140 })));
+      (r.tasks || []).forEach((t) => {
+        if (!Array.isArray(t) && typeof t === "object" && t.graph) k.push(graphPara(t.graph, t.w || 420));
+        else if (!Array.isArray(t) && typeof t === "object" && t.table) {
+          const n = t.table[0].length, cw = Math.floor(W * 0.8 / n);
+          k.push(new Table({ columnWidths: Array(n).fill(cw), width: { size: cw * n, type: WidthType.DXA },
+            rows: t.table.map((row, ri) => new TableRow({ children: row.map((v) => cell(
+              [P(v, { size: 10.5, bold: ri === 0 || false, align: AlignmentType.CENTER })], { w: cw, fill: ri === 0 ? TEAL_TINT : undefined })) })) }));
+          k.push(gap(100));
+        }
+        else k.push(Array.isArray(t) ? mix(t, { size: 10.5, after: 140 }) : P(t, { size: 10.5, after: 140 }));
+      });
       k.push(...lines(r.lines || 3));
       // house rule 3 — "Done when…", never "Success:"
       k.push(P(`Done when: ${r.done}`, { size: 10, italic: true, color: MUTED, before: 100, after: 160 }));
@@ -460,7 +477,7 @@ function makeEngine(cfg) {
           cell([P(n, { size: 16, bold: true, color: "FFFFFF", align: AlignmentType.CENTER, font: HEAD })], { w: badge, fill: MAROON }),
           cell([P(h, { size: 12, bold: true, color: TEAL_DEEP, after: 40 }), P(d, { size: 11.5 })], { w: rw - badge, fill: TEAL_TINT }),
         ] })] }));
-      steps.push(gap(45));
+      steps.push(gap(15));
     });
 
     k.push(new Table({
@@ -471,7 +488,7 @@ function makeEngine(cfg) {
         cell(steps, { w: rw, plain: true }),
       ] })],
     }));
-    k.push(gap(150));
+    k.push(gap(40));
 
     // ---- band 2: two writing columns and a reference panel
     k.push(sectionBar("YOUR WORKING", "write on this sheet", PW));
@@ -510,7 +527,7 @@ function makeEngine(cfg) {
       const out = [];
       items.forEach(([label, n], i) => {
         out.push(P(label, { size: 12.5, bold: true, color: TEAL_DEEP, before: i ? 170 : 0, after: 120 }));
-        out.push(...lines(n));   // A3 exists to give them room to work
+        out.push(...lines(n, 0, 240));   // A3 exists to give them room to work
       });
       return out.length ? out : [P(" ", { size: 10 })];
     };

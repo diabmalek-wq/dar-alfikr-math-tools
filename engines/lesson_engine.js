@@ -32,7 +32,6 @@ const DEPT_W = 1.7, DEPT_H = DEPT_W * (154 / 500), SCH = 0.72, LOGO_Y = 0.32;
 const DEPT = A("dept_logo.png"), SCHOOL = A("school_logo.png");
 const DEPT_W_LOGO = A("dept_logo_white.png"), SCHOOL_W_LOGO = A("school_logo_white.png");
 const BG_LIGHT = A("bg_light.jpg"), BG_DARK = A("bg_dark.jpg");
-const QR = A("geogebra_qr_placeholder.png");
 
 function build(cfg) {
   const MATH = JSON.parse(fs.readFileSync(A(cfg.mathIndex), "utf8"));
@@ -44,7 +43,7 @@ function build(cfg) {
     throw new Error(`FIKR timings total ${total}, must be 40 or 60 — ${cfg.out}`);
   }
   if (!cfg.objectives.length) throw new Error("objectives are required, verbatim from the map");
-  if (!cfg.essentialQuestion) throw new Error("essential question is required, verbatim");
+  
 
   const pres = new pptxgen();
   pres.defineLayout({ name: "WIDE", width: SW, height: SH });
@@ -53,19 +52,46 @@ function build(cfg) {
   pres.title = cfg.deckTitle;
 
   // ---------------------------------------------------------------- helpers
+
+  // ---- typeset inline maths in editable text: _{x} -> subscript, ^{x} -> superscript
+  function mathRuns(text, opt) {
+    const out = []; const re = /([_^])(\{[^}]*\}|[A-Za-z0-9])/g; let last = 0, m;
+    const push = (t, extra) => { if (t) { const o = Object.assign({}, opt, extra || {}); if (o.bullet === true) { delete o.bullet; t = "\u2063" + t; } out.push({ text: t, options: o }); } };
+    while ((m = re.exec(text))) {
+      push(text.slice(last, m.index));
+      let body = m[2]; if (body[0] === "{") body = body.slice(1, -1);
+      push(body, m[1] === "_" ? { subscript: true } : { superscript: true });
+      last = re.lastIndex;
+    }
+    push(text.slice(last));
+    if (!out.length) push("");
+    if (opt && opt.breakLine) { out.forEach((r, i) => { r.options = Object.assign({}, r.options, { breakLine: i === out.length - 1 }); }); }
+    return out;
+  }
+  function addMathText(s, content, o) {
+    let runs;
+    if (typeof content === "string") runs = mathRuns(content, {});
+    else runs = content.flatMap((r) => mathRuns(r.text, r.options || {}));
+    return s.addText(runs, o);
+  }
   function base(dark, codes) {
     const s = pres.addSlide();
+    { const raw = s.addText.bind(s); s.addText = (c, o) => { let runs; if (typeof c === "string") runs = mathRuns(c, {}); else runs = c.flatMap((r) => mathRuns(r.text, r.options || {})); return raw(runs, o); }; }
     s.background = { path: dark ? BG_DARK : BG_LIGHT };
     s.addImage({ path: dark ? DEPT_W_LOGO : DEPT, x: MX, y: LOGO_Y, w: DEPT_W, h: DEPT_H,
       altText: "Mathematics Department logo" });
     s.addImage({ path: dark ? SCHOOL_W_LOGO : SCHOOL, x: SW - MX - SCH, y: LOGO_Y, w: SCH, h: SCH,
       altText: "Dar Alfikr Schools logo" });
-    s.addText(cfg.footerLeft, { x: MX, y: SH - 0.4, w: 5.6, h: 0.3, fontFace: BODY, fontSize: 9,
+    s.addText(cfg.footerLeft, { x: MX, y: SH - 0.4, w: 4.2, h: 0.3, fontFace: BODY, fontSize: 9,
       color: dark ? "BFD9D7" : MUTED, isTextBox: true, margin: 0 });
     // house rule 2 — codes only, bottom corner
     const c = codes && codes.length ? codes : null;
-    s.addText(c ? c.join("  ·  ") : "Faith · Righteousness · Wisdom", {
-      x: SW - MX - 5.6, y: SH - 0.4, w: 5.6, h: 0.3, fontFace: BODY, fontSize: 9,
+    s.addText("Faith, Righteousness and Wisdom", { x: 4.9, y: SH - 0.4, w: 3.53, h: 0.3, fontFace: BODY, fontSize: 9,
+      italic: true, align: "center", color: dark ? "BFD9D7" : MUTED, isTextBox: true, margin: 0 });
+    const ctext = c ? c.join("  ·  ") : "";
+    const long = ctext.length > 52;
+    s.addText(ctext, {
+      x: SW - MX - 4.2, y: long ? SH - 0.44 : SH - 0.4, w: 4.2, h: long ? 0.4 : 0.3, valign: "middle", lineSpacingMultiple: 0.9, fontFace: BODY, fontSize: 9,
       color: dark ? "BFD9D7" : MUTED, align: "right", isTextBox: true, margin: 0 });
     return s;
   }
@@ -103,7 +129,8 @@ function build(cfg) {
   function eq(s, key, o) {
     const m = MATH[key];
     if (!m) throw new Error(`missing expression "${key}" in ${cfg.mathIndex}`);
-    const k = o.k !== undefined ? o.k : 1.5;
+    let k = o.k !== undefined ? o.k : 1.5;
+    if (o.maxW && m.win * k > o.maxW) k = o.maxW / m.win;
     const w = m.win * k, h = m.hin * k;
     let x = o.x; if (o.cx !== undefined) x = o.cx - w / 2; if (o.rx !== undefined) x = o.rx - w;
     let y = o.y; if (o.cy !== undefined) y = o.cy - h / 2;
@@ -143,6 +170,8 @@ function build(cfg) {
     const s = base(true);
     s.addShape("ellipse", { x: 9.6, y: -2.3, w: 6.2, h: 6.2, fill: { color: TEAL, transparency: 62 }, line: { type: "none" } });
     s.addShape("ellipse", { x: -2.1, y: 4.9, w: 5.2, h: 5.2, fill: { color: MAROON, transparency: 76 }, line: { type: "none" } });
+    s.addShape("roundRect", { x: SW / 2 - 0.62, y: 0.22, w: 1.24, h: 0.93, rectRadius: 0.08, fill: { color: WHITE }, line: { type: "none" } });
+    s.addImage({ path: A("cognia_badge.png"), x: SW / 2 - 0.55, y: 0.27, w: 1.1, h: 0.825, altText: "Cognia accredited badge" });
     s.addText(cfg.topicLine, { x: MX, y: 2.3, w: 11.0, h: 0.34, fontFace: BODY, fontSize: 12,
       charSpacing: 2.2, color: TEAL_BRIGHT, bold: true, isTextBox: true, margin: 0 });
     s.addText(cfg.lessonTitle, { x: MX, y: 2.62, w: 11.2, h: 1.5, fontFace: HEAD,
@@ -165,16 +194,18 @@ function build(cfg) {
   {
     const s = base(false, ALL);
     title(s, "Lesson Objectives", cfg.objectivesSub || "Quoted verbatim from the curriculum map");
-    s.addShape("roundRect", { x: MX, y: 2.34, w: 9.85, h: 0.72, rectRadius: 0.09, fill: { color: TEAL_DEEP }, line: { type: "none" } });
-    s.addText([
-      { text: "ESSENTIAL QUESTION   ", options: { bold: true, color: TEAL_BRIGHT } },
-      { text: cfg.essentialQuestion, options: { color: WHITE } },
-    ], { x: MX + 0.28, y: 2.34, w: 9.3, h: 0.72, valign: "middle", fontFace: BODY,
-      fontSize: 12.5, isTextBox: true, margin: 0 });
+    if (cfg.essentialQuestion) {
+      s.addShape("roundRect", { x: MX, y: 2.34, w: 9.85, h: 0.72, rectRadius: 0.09, fill: { color: TEAL_DEEP }, line: { type: "none" } });
+      s.addText([
+        { text: "ESSENTIAL QUESTION   ", options: { bold: true, color: TEAL_BRIGHT } },
+        { text: cfg.essentialQuestion, options: { color: WHITE } },
+      ], { x: MX + 0.28, y: 2.34, w: 9.3, h: 0.72, valign: "middle", fontFace: BODY,
+        fontSize: 12.5, isTextBox: true, margin: 0 });
+    }
 
     const n = cfg.objectives.length;
     const step = n <= 3 ? 0.82 : (n === 4 ? 0.7 : 0.6);
-    let y = 3.3;
+    let y = cfg.essentialQuestion ? 3.3 : 2.62;
     cfg.objectives.forEach((t, i) => {
       s.addShape("ellipse", { x: MX, y, w: 0.44, h: 0.44, fill: { color: TEAL }, line: { type: "none" } });
       s.addText(String(i + 1), { x: MX, y, w: 0.44, h: 0.44, align: "center", valign: "middle",
@@ -204,10 +235,12 @@ function build(cfg) {
   }
 
   // ============================================================ 3 VOCABULARY
-  {
+  const VPAGE = 8, vPages = [];
+  for (let i = 0; i < cfg.vocabulary.length; i += VPAGE) vPages.push(cfg.vocabulary.slice(i, i + VPAGE));
+  if (vPages.length > 1 && vPages[vPages.length - 1].length < 3) { const last = vPages.pop(); vPages[vPages.length - 1] = vPages[vPages.length - 1].concat(last); }
+  vPages.forEach((v, vp) => {
     const s = base(false, ALL.slice(0, 2));
-    title(s, "Key Vocabulary", cfg.vocabSub || `The ${cfg.vocabulary.length} terms the curriculum map lists for this lesson`);
-    const v = cfg.vocabulary;
+    title(s, vPages.length > 1 ? `Key Vocabulary (${vp + 1} of ${vPages.length})` : "Key Vocabulary", cfg.vocabSub || `The ${cfg.vocabulary.length} terms the curriculum map lists for this lesson`);
     if (v.length <= 3) {
       const cw = (12.43 - 0.28 * (v.length - 1)) / v.length;
       v.forEach((t, i) => {
@@ -238,7 +271,7 @@ function build(cfg) {
       });
     }
     s.addNotes(cfg.notes.vocabulary);
-  }
+  });
 
   // ============================================================ 4 PRIOR KNOWLEDGE
   {
@@ -249,7 +282,7 @@ function build(cfg) {
       const cx = MX + i * (cw + gp);
       s.addShape("roundRect", { x: cx, y: 2.42, w: cw, h: 2.05, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
       s.addText(it.h, { x: cx + 0.26, y: 2.58, w: cw - 0.52, h: 0.34, fontFace: HEAD, bold: true, fontSize: 15, color: TEAL_DEEP, isTextBox: true, margin: 0 });
-      if (it.eq) eq(s, it.eq, { cx: cx + cw / 2, cy: 3.24, k: 1.8 });
+      if (it.eq) eq(s, it.eq, { cx: cx + cw / 2, cy: 3.24, k: 1.8, maxW: cw - 0.5 });
       s.addText(it.d, { x: cx + 0.26, y: 3.62, w: cw - 0.52, h: 0.7, fontFace: BODY, fontSize: 12, color: CHARCOAL, isTextBox: true, margin: 0, valign: "top" });
     });
     s.addShape("roundRect", { x: MX, y: 4.68, w: 12.43, h: 1.7, rectRadius: 0.1, fill: { color: TEAL_DEEP }, line: { type: "none" } });
@@ -294,24 +327,25 @@ function build(cfg) {
     }
     if (sl.rows) {
       const TOP = sl.rowsTop || 2.36, rowH = sl.rowH || 0.62;
-      const cw = sl.rowsCw || [6.2, 6.23];
+      const RX = sl.rowsX !== undefined ? sl.rowsX : MX;
+      const cw = sl.rowsCw || (sl.rowsW ? [sl.rowsW * 0.3, sl.rowsW * 0.7] : [6.2, 6.23]);
       (sl.rowsHead || ["", ""]).forEach((t, j) => {
-        const x0 = MX + cw.slice(0, j).reduce((a, b) => a + b, 0);
+        const x0 = RX + cw.slice(0, j).reduce((a, b) => a + b, 0);
         s.addShape("rect", { x: x0, y: TOP, w: cw[j], h: 0.38, fill: { color: TEAL_DEEP }, line: { color: TEAL_DEEP, width: 1 } });
         s.addText(t, { x: x0 + 0.2, y: TOP, w: cw[j] - 0.4, h: 0.38, valign: "middle", fontFace: BODY, bold: true, fontSize: 11.5, color: WHITE, isTextBox: true, margin: 0 });
       });
       sl.rows.forEach((r, i) => {
         const ry = TOP + 0.38 + i * rowH;
         cw.forEach((w, j) => {
-          s.addShape("rect", { x: MX + cw.slice(0, j).reduce((a, b) => a + b, 0), y: ry, w, h: rowH,
+          s.addShape("rect", { x: RX + cw.slice(0, j).reduce((a, b) => a + b, 0), y: ry, w, h: rowH,
             fill: { color: i % 2 === 0 ? TEAL_TINT : WHITE }, line: { color: LINE, width: 1 } });
         });
         r.forEach((cell, j) => {
-          const x0 = MX + cw.slice(0, j).reduce((a, b) => a + b, 0);
+          const x0 = RX + cw.slice(0, j).reduce((a, b) => a + b, 0);
           if (typeof cell === "string") {
             s.addText(cell, { x: x0 + 0.24, y: ry, w: cw[j] - 0.48, h: rowH, valign: "middle", fontFace: BODY, fontSize: 12, color: CHARCOAL, isTextBox: true, margin: 0 });
           } else {
-            eq(s, cell.eq, { x: x0 + 0.3, cy: ry + rowH / 2, k: cell.k || 1.25 });
+            { const mm = MATH[cell.eq]; let kk = cell.k || 1.25; if (mm && mm.win * kk > cw[j] - 0.5) kk = (cw[j] - 0.5) / mm.win; eq(s, cell.eq, { x: x0 + 0.3, cy: ry + rowH / 2, k: kk }); }
           }
         });
       });
@@ -354,7 +388,7 @@ function build(cfg) {
       s.addShape("ellipse", { x: MX + 0.28, y: ry + 0.24, w: 0.46, h: 0.46, fill: { color: TEAL }, line: { type: "none" } });
       s.addText(String(i + 1), { x: MX + 0.28, y: ry + 0.24, w: 0.46, h: 0.46, align: "center", valign: "middle", fontFace: HEAD, bold: true, fontSize: 15, color: WHITE, isTextBox: true, margin: 0 });
       s.addShape("roundRect", { x: MX + 0.95, y: ry + 0.24, w: 3.3, h: 1.35, rectRadius: 0.08, fill: { color: WHITE }, line: { type: "none" } });
-      eq(s, it.eq, { cx: MX + 0.95 + 1.65, cy: ry + 0.915, k: it.k || 2.2 });
+      eq(s, it.eq, { cx: MX + 0.95 + 1.65, cy: ry + 0.915, k: it.k || 2.2, maxW: 3.15 });
       s.addText(it.t, { x: MX + 4.55, y: ry + 0.3, w: 7.4, h: 0.7, fontFace: BODY, fontSize: 14, color: CHARCOAL, isTextBox: true, margin: 0, valign: "top" });
       s.addText(`Hint: ${it.hint}`, { x: MX + 4.55, y: ry + 1.1, w: 7.4, h: 0.4, fontFace: BODY, italic: true, fontSize: 11.5, color: MUTED, isTextBox: true, margin: 0 });
     });
@@ -431,18 +465,19 @@ function build(cfg) {
     const s = base(false, ALL.slice(0, 2));
     phaseTag(s, "4", "PRODUCTION — EXPLORE", `within ${T.t4} min`, false);
     title(s, "Test Your Thinking in GeoGebra", cfg.geogebra.sub);
-    s.addShape("roundRect", { x: MX, y: 2.42, w: 7.5, h: 3.9, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
-    s.addText("GEOGEBRA APPLET\nEMBED AREA", { x: MX, y: 2.42, w: 7.5, h: 3.2, align: "center", valign: "middle", fontFace: BODY, italic: true, fontSize: 15, color: MUTED, isTextBox: true, margin: 0 });
-    s.addText("Insert → Add-ins → GeoGebra Graphing Calculator, or paste the activity's share link here.", { x: MX + 0.3, y: 5.7, w: 6.9, h: 0.5, fontFace: BODY, italic: true, fontSize: 10.5, color: MUTED, isTextBox: true, margin: 0, valign: "top" });
-    s.addImage({ path: QR, x: 8.3, y: 2.42, w: 1.45, h: 1.45, altText: "QR code placeholder linking to the GeoGebra activity" });
-    s.addText("Scan to open the\ninteractive activity", { x: 9.93, y: 2.42, w: 1.95, h: 1.45, valign: "middle", fontFace: BODY, fontSize: 11, color: CHARCOAL, isTextBox: true, margin: 0 });
-    s.addShape("roundRect", { x: 8.3, y: 4.1, w: 4.58, h: 0.58, rectRadius: 0.08, fill: { color: TEAL_DEEP }, line: { type: "none" } });
-    s.addText("geogebra.org/m/PLACEHOLDER", { x: 8.3, y: 4.1, w: 4.58, h: 0.58, align: "center", valign: "middle", fontFace: BODY, fontSize: 12, color: WHITE, isTextBox: true, margin: 0 });
-    s.addShape("roundRect", { x: 8.3, y: 4.86, w: 4.58, h: 1.46, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
+    const G = cfg.geogebra;
+    s.addShape("roundRect", { x: MX, y: 2.42, w: 6.0, h: 3.95, rectRadius: 0.1, fill: { color: WHITE }, line: { color: LINE, width: 1 } });
+    img(s, G.preview, { cx: MX + 3.0, cy: 2.42 + 1.95, w: Math.min(5.3, 3.7 * GRAPH[G.preview].aspect), alt: G.previewAlt });
+    s.addText("Static preview (works offline). Open the link to make it move.", { x: MX + 0.2, y: 6.43, w: 5.6, h: 0.28, align: "center", fontFace: BODY, italic: true, fontSize: 10, color: MUTED, isTextBox: true, margin: 0 });
+    s.addShape("roundRect", { x: 6.8, y: 2.42, w: 6.08, h: 0.55, rectRadius: 0.08, fill: { color: TEAL_DEEP }, line: { type: "none" } });
+    s.addText([{ text: "Open GeoGebra Graphing:  geogebra.org/graphing", options: { hyperlink: { url: G.url, tooltip: "Open GeoGebra Graphing Calculator" } } }], { x: 6.8, y: 2.42, w: 6.08, h: 0.55, align: "center", valign: "middle", fontFace: BODY, bold: true, fontSize: 13, color: WHITE, isTextBox: true, margin: 0 });
+    s.addShape("roundRect", { x: 6.8, y: 3.12, w: 6.08, h: 3.25, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
+    s.addText("SET-UP (60 SECONDS)", { x: 7.05, y: 3.24, w: 5.6, h: 0.26, fontFace: BODY, bold: true, fontSize: 10, charSpacing: 1.4, color: TEAL_DEEP, isTextBox: true, margin: 0 });
+    s.addText(G.steps.map((t, i) => ({ text: t, options: { bullet: { type: "number" }, breakLine: i < G.steps.length - 1 } })), { x: 7.05, y: 3.54, w: 5.6, h: 1.78, fontFace: BODY, fontSize: 11, color: CHARCOAL, isTextBox: true, margin: 0, valign: "top", paraSpaceAfter: 3 });
     s.addText([
       { text: "Explore: ", options: { bold: true, color: MAROON } },
-      { text: cfg.geogebra.explore, options: { color: CHARCOAL } },
-    ], { x: 8.55, y: 4.86, w: 4.1, h: 1.46, valign: "middle", fontFace: BODY, fontSize: 11.5, isTextBox: true, margin: 0 });
+      { text: G.explore, options: { color: CHARCOAL } },
+    ], { x: 7.05, y: 5.36, w: 5.6, h: 0.96, valign: "middle", fontFace: BODY, fontSize: 10.5, isTextBox: true, margin: 0 });
     s.addNotes(cfg.notes.geogebra);
   }
 
@@ -461,7 +496,7 @@ function build(cfg) {
     cfg.gate.items.forEach((it, i) => {
       s.addText(`${i + 1}.  ${it.t}`, { x: bx + 0.32, y: gy, w: bwid - 0.64, h: 0.4, fontFace: BODY, fontSize: 12.5, color: WHITE, isTextBox: true, margin: 0, valign: "top" });
       gy += 0.42;
-      if (it.eq) { eq(s, it.eq, { x: bx + 0.6, y: gy, k: 1.7 }); gy += 0.72; }
+      if (it.eq) { eq(s, it.eq, { x: bx + 0.6, y: gy, k: 1.7, maxW: bwid - 1.0 }); gy += 0.72; }
       else gy += 0.12;
     });
     s.addText(cfg.gate.footer, { x: bx + 0.32, y: 5.4, w: bwid - 0.64, h: 0.42, fontFace: BODY, italic: true, fontSize: 11.5, color: "F5CFCD", isTextBox: true, margin: 0 });
@@ -501,44 +536,27 @@ function build(cfg) {
     const colours = [TEAL_DEEP, TEAL, MAROON];
     // Card height grows when an item carries e.question (added field, optional
     // and backward-compatible — older decks without it render as before).
-    const hasQ = cfg.exams.some((e) => e.question);
-    const hasSteps = cfg.exams.some((e) => e.steps && e.steps.length);
-    const cardH = hasSteps ? 5.0 : (hasQ ? 4.02 : 3.6);
-    const cardBottom = 2.4 + cardH;
+    const cardH = 4.02;
     cfg.exams.forEach((e, i) => {
       const cw = 3.95, cx = MX + i * (cw + 0.28);
       s.addShape("roundRect", { x: cx, y: 2.4, w: cw, h: cardH, rectRadius: 0.1, fill: { color: TEAL_TINT }, line: { color: LINE, width: 1 } });
-      s.addShape("roundRect", { x: cx, y: 2.4, w: cw, h: 0.9, rectRadius: 0.1, fill: { color: colours[i] }, line: { type: "none" } });
-      s.addShape("rect", { x: cx, y: 3.0, w: cw, h: 0.3, fill: { color: colours[i] }, line: { type: "none" } });
-      s.addText(e.code, { x: cx, y: 2.46, w: cw, h: 0.42, align: "center", fontFace: HEAD, bold: true, fontSize: 20, color: WHITE, isTextBox: true, margin: 0 });
-      s.addText(e.full, { x: cx + 0.14, y: 2.88, w: cw - 0.28, h: 0.3, align: "center", fontFace: BODY, fontSize: 10, color: WHITE, isTextBox: true, margin: 0 });
+      s.addShape("roundRect", { x: cx, y: 2.4, w: cw, h: 0.8, rectRadius: 0.1, fill: { color: colours[i] }, line: { type: "none" } });
+      s.addShape("rect", { x: cx, y: 2.9, w: cw, h: 0.3, fill: { color: colours[i] }, line: { type: "none" } });
+      s.addText(e.code, { x: cx, y: 2.42, w: cw, h: 0.4, align: "center", fontFace: HEAD, bold: true, fontSize: 19, color: WHITE, isTextBox: true, margin: 0 });
+      s.addText(e.full, { x: cx + 0.14, y: 2.82, w: cw - 0.28, h: 0.28, align: "center", fontFace: BODY, fontSize: 10, color: WHITE, isTextBox: true, margin: 0 });
+      const H = (t, c) => ({ text: t, options: { bold: true, color: c, breakLine: true } });
       const body = [
-        { text: "Skill tested", options: { bold: true, color: TEAL_DEEP, breakLine: true } },
-        { text: e.skill, options: { breakLine: true } },
-        { text: " ", options: { breakLine: true, fontSize: 4 } },
-        { text: "Format", options: { bold: true, color: TEAL_DEEP, breakLine: true } },
-        { text: e.fmt, options: { breakLine: true } },
-        { text: " ", options: { breakLine: true, fontSize: 4 } },
-        { text: "Practice tip", options: { bold: true, color: MAROON, breakLine: true } },
-        { text: e.tip, options: {} },
+        H("Skill assessed", TEAL_DEEP), { text: e.skill, options: { breakLine: true } },
+        H("Item", TEAL_DEEP), { text: e.question, options: { italic: true, breakLine: true } },
+        H("Reasoning", MAROON),
       ];
-      if (e.question) {
-        body.push({ text: "", options: { breakLine: true, fontSize: 4 } });
-        body.push({ text: "High-level item", options: { bold: true, color: TEAL_DEEP, breakLine: true } });
-        body.push({ text: e.question, options: { italic: true, breakLine: !!(e.steps && e.steps.length) } });
-      }
-      if (e.steps && e.steps.length) {
-        body.push({ text: "", options: { breakLine: true, fontSize: 3 } });
-        body.push({ text: "Worked in steps", options: { bold: true, color: MAROON, breakLine: true } });
-        e.steps.forEach((st, si) => {
-          body.push({ text: `${si + 1}. ${st}`, options: { breakLine: si < e.steps.length - 1, fontSize: 9.5 } });
-        });
-      }
-      s.addText(body, { x: cx + 0.26, y: 3.46, w: cw - 0.52, h: cardH - 0.6, fontFace: BODY, fontSize: hasSteps ? 9.5 : (hasQ ? 10 : 11), color: CHARCOAL, isTextBox: true, margin: 0, valign: "top", paraSpaceAfter: hasSteps ? 1.5 : (hasQ ? 2 : 3) });
+      e.steps.forEach((st, si) => body.push({ text: `${si + 1}. ${st}`, options: { breakLine: true } }));
+      body.push(H("Trap", MAROON));
+      body.push({ text: e.trap, options: {} });
+      s.addText(body, { x: cx + 0.2, y: 3.28, w: cw - 0.4, h: cardH - 0.96, fontFace: BODY, fontSize: 10.5, color: CHARCOAL, isTextBox: true, margin: 0, valign: "top", paraSpaceAfter: 2 });
     });
     if (cfg.examBar) {
-      if (hasQ) bar(s, cfg.examBar[0], cfg.examBar[1], { y: cardBottom + 0.14, h: 0.46, fs: 10.5 });
-      else bar(s, cfg.examBar[0], cfg.examBar[1], { y: 6.14, h: 0.62 });
+      bar(s, cfg.examBar[0], cfg.examBar[1], { y: 6.54, h: 0.46, fs: 10.5 });
     }
     s.addNotes(cfg.notes.exams);
   }
