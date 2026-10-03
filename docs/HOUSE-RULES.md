@@ -90,3 +90,12 @@ These are rules about *what* goes into a build; `LESSONS-LEARNED.md` has the mat
   → verifiers.
 - `verifiers/README.md` — which verifier applies to which product (once committed; see
   `docs/MIGRATION.md`).
+
+## File naming and formats
+
+Every deliverable is named by chapter number, lesson number, lesson title and file type. Never use a generic label such as "deck" or "lesson plan" on its own.
+
+Examples: "Lesson 6-4 Logarithmic Functions presentation", "Lesson 6-4 Logarithmic Functions Fikr Plan", "Lesson 6-4 Logarithmic Functions worksheet".
+
+Formats: PDF for everything, plus PPT (.pptx) for presentations. No .docx deliverables (the .docx files in assets/templates are build shells only, never delivered).
+  
