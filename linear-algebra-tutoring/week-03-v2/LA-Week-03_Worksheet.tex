@@ -32,55 +32,82 @@
 \section*{\large\color{ink} Worked Examples}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 1 \textperiodcentered\ Membership in a span}]Is $(4,7)\in\operatorname{span}\{(1,2),(3,5)\}$ in $\mathbb{R}^{2}$?
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Solve $a(1,2)+b(3,5)=(4,7)$: $a+3b=4$, $2a+5b=7$.
-\item From the first, $a=4-3b$. Substitute: $8-6b+5b=7$, so $b=1$, $a=1$.
-\item Check: $(1,2)+(3,5)=(4,7)$.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item We need numbers $a,b$ with $a(1,2)+b(3,5)=(4,7)$.
+\item Expand: $a(1,2)=(a,2a)$ and $b(3,5)=(3b,5b)$. Add: $(a+3b,\ 2a+5b)$.
+\item Match coordinates: Eq.\,1: $a+3b=4$; Eq.\,2: $2a+5b=7$.
+\item From Eq.\,1: $a=4-3b$.
+\item Substitute into Eq.\,2: $2(4-3b)+5b=7$, i.e.\ $8-6b+5b=7$, i.e.\ $8-b=7$, so $b=1$.
+\item Then $a=4-3(1)=1$.
+\item Check: $1(1,2)+1(3,5)=(1,2)+(3,5)=(4,7)$ \checkmark.
 \end{enumerate}\textbf{Answer:} Yes: $(4,7)=1(1,2)+1(3,5)$.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 2 \textperiodcentered\ Membership (positive)}]Is $(1,2,3)\in\operatorname{span}\{(1,0,1),(0,1,1)\}$?
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $a(1,0,1)+b(0,1,1)=(a,\ b,\ a+b)$.
-\item Match: $a=1$, $b=2$; third coordinate $a+b=3$ \checkmark.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item We seek $a,b$ with $a(1,0,1)+b(0,1,1)=(1,2,3)$.
+\item Expand: $a(1,0,1)=(a,0,a)$ and $b(0,1,1)=(0,b,b)$. Add: $(a,\ b,\ a+b)$.
+\item Match coordinates: $a=1$, \ $b=2$, \ $a+b=3$.
+\item The first two equations give the values $a=1$ and $b=2$ directly.
+\item There are three equations for two unknowns, so check the third: $a+b=1+2=3$, which equals the required $3$ \checkmark.
+\item All three equations hold, so the vector is in the span.
 \end{enumerate}\textbf{Answer:} Yes: $(1,2,3)=1(1,0,1)+2(0,1,1)$.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 3 \textperiodcentered\ Membership (negative)}]Is $(1,2,4)\in\operatorname{span}\{(1,0,1),(0,1,1)\}$?
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item As before the combination is $(a,b,a+b)$.
-\item Match: $a=1$, $b=2$, but then $a+b=3\neq4$.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item As in the previous example, $a(1,0,1)+b(0,1,1)=(a,\ b,\ a+b)$.
+\item Matching $(1,2,4)$ requires $a=1$, \ $b=2$, \ $a+b=4$.
+\item The first two equations force $a=1$ and $b=2$.
+\item Test the third: $a+b=1+2=3$, but the equation requires $4$. Since $3\ne4$, the system is inconsistent: no $a,b$ satisfy all three equations.
+\item So $(1,2,4)$ is not a linear combination of the two vectors.
 \end{enumerate}\textbf{Answer:} No.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 4 \textperiodcentered\ Dependence, finding a relation}]Test $\{(1,2,1),(2,1,0),(1,-1,-1)\}$ for independence.
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Solve $a(1,2,1)+b(2,1,0)+c(1,-1,-1)=\mathbf 0$: $a+2b+c=0,\ 2a+b-c=0,\ a-c=0$.
-\item Third: $c=a$. First: $2a+2b=0$, so $b=-a$. Second: $2a-a-a=0$ \checkmark (automatically).
-\item So $(a,b,c)=(1,-1,1)$ is a nontrivial solution. Check: $v_1-v_2+v_3=(1-2+1,\ 2-1-1,\ 1-0-1)=\mathbf 0$.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Suppose $a(1,2,1)+b(2,1,0)+c(1,-1,-1)=\mathbf 0$.
+\item Expand coordinatewise: $a(1,2,1)=(a,2a,a)$, $b(2,1,0)=(2b,b,0)$, $c(1,-1,-1)=(c,-c,-c)$. Sum: $(a+2b+c,\ 2a+b-c,\ a-c)$.
+\item Set each coordinate to $0$: Eq.\,1: $a+2b+c=0$; Eq.\,2: $2a+b-c=0$; Eq.\,3: $a-c=0$.
+\item Eq.\,3 gives $c=a$.
+\item Substitute $c=a$ into Eq.\,1: $a+2b+a=2a+2b=0$, so $b=-a$.
+\item Substitute $b=-a$ and $c=a$ into Eq.\,2: $2a+(-a)-a=0$, true for every $a$. So Eq.\,2 adds no new restriction and $a$ is a free variable.
+\item Choose $a=1$ (any nonzero value): $(a,b,c)=(1,-1,1)$, a nontrivial solution.
+\item Check: $v_1-v_2+v_3=(1,2,1)-(2,1,0)+(1,-1,-1)=(1-2+1,\ 2-1-1,\ 1-0-1)=(0,0,0)$ \checkmark.
 \end{enumerate}\textbf{Answer:} Linearly dependent: $v_1-v_2+v_3=\mathbf 0$.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 5 \textperiodcentered\ Independence in $P_{2}$}]Show $\{1+x,\ x+x^{2},\ 1+x^{2}\}$ is linearly independent in $P_{2}(\mathbb{R})$.
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Suppose $a(1+x)+b(x+x^{2})+c(1+x^{2})=\mathbf 0$. Compare coefficients.
-\item Constant: $a+c=0$. $x$: $a+b=0$. $x^{2}$: $b+c=0$.
-\item So $a=-c$ and $b=-a=c$; then $b+c=2c=0$, so $c=0$, hence $a=b=0$.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Suppose $a(1+x)+b(x+x^{2})+c(1+x^{2})$ is the zero polynomial.
+\item Expand and collect powers of $x$: $a+ax+bx+bx^{2}+c+cx^{2}=(a+c)+(a+b)x+(b+c)x^{2}$.
+\item A polynomial is zero only if all coefficients are $0$. Constant term: $a+c=0$. Coefficient of $x$: $a+b=0$. Coefficient of $x^{2}$: $b+c=0$.
+\item From $a+c=0$: $a=-c$. From $a+b=0$: $b=-a=c$.
+\item Substitute into $b+c=0$: $c+c=2c=0$, so $c=0$.
+\item Then $a=-c=0$ and $b=c=0$. Only the trivial solution exists, so the set is linearly independent.
 \end{enumerate}\textbf{Answer:} Linearly independent.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 6 \textperiodcentered\ The field matters}]Is $\{(1,i),(i,-1)\}$ linearly independent in $\mathbb{C}^{2}$ over $\mathbb{C}$? Over $\mathbb{R}$?
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Note $i\cdot(1,i)=(i,\,i^{2})=(i,-1)$.
-\item Over $\mathbb{C}$: $i\,v_1-v_2=\mathbf 0$, a nontrivial relation, so dependent.
-\item Over $\mathbb{R}$: $a(1,i)+b(i,-1)=\mathbf 0$ with real $a,b$ gives first coordinate $a+bi=0$, so $a=b=0$: independent.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write $v_1=(1,i)$ and $v_2=(i,-1)$. First look for a complex multiple: $i\cdot v_1=(i\cdot1,\ i\cdot i)=(i,\ i^{2})=(i,-1)=v_2$ (using $i^{2}=-1$).
+\item Over $\mathbb{C}$: $i\,v_1-1\cdot v_2=\mathbf 0$ is a relation with coefficients $i$ and $-1$, not both zero. So the set is dependent over $\mathbb{C}$.
+\item Over $\mathbb{R}$: suppose $a(1,i)+b(i,-1)=(0,0)$ with real $a,b$. Expand: $(a+bi,\ ai-b)=(0,0)$.
+\item First coordinate $a+bi=0$: a complex number is $0$ only when both real and imaginary parts are $0$, so $a=0$ and $b=0$.
+\item Only the trivial solution exists over $\mathbb{R}$, so the set is independent over $\mathbb{R}$.
 \end{enumerate}\textbf{Answer:} Dependent over $\mathbb{C}$; independent over $\mathbb{R}$.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 7 \textperiodcentered\ Proof: dependence means one vector is redundant}]Prove: if $v_1,\dots,v_k$ are linearly dependent, then some $v_j$ is a linear combination of the others.
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Take a nontrivial relation $a_1v_1+\dots+a_kv_k=\mathbf 0$ and pick $j$ with $a_j\neq0$.
-\item Isolate: $a_jv_j=-\sum_{i\neq j}a_iv_i$.
-\item Divide by $a_j$ (allowed because $a_j\ne0$ in a field): $v_j=-\sum_{i\ne j}\dfrac{a_i}{a_j}v_i$.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item By the definition of dependence there are scalars $a_1,\dots,a_k$, \emph{not all zero}, with $a_1v_1+\dots+a_kv_k=\mathbf 0$.
+\item Since not all the $a_i$ are zero, pick an index $j$ with $a_j\neq0$.
+\item Isolate the $j$-th term: move all other terms to the right side, $a_jv_j=-\sum_{i\neq j}a_iv_i$.
+\item Divide both sides by $a_j$. This is legal because $a_j\neq0$ and every nonzero element of a field has an inverse: $v_j=-\sum_{i\neq j}\dfrac{a_i}{a_j}\,v_i$.
+\item The right side is a linear combination of the vectors $v_i$ with $i\ne j$, so $v_j$ lies in their span.
 \end{enumerate}\textbf{Answer:} $v_j\in\operatorname{span}\{v_i:i\neq j\}$.
 \end{tcolorbox}
 \begin{tcolorbox}[colback=white,colframe=ink!60,title={\bfseries Example 8 \textperiodcentered\ Describing a span by an equation}]Find the condition on $(a,b,c)$ for $(a,b,c)\in\operatorname{span}\{(1,1,0),(0,1,1)\}$.
 \par\smallskip
-\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $x(1,1,0)+y(0,1,1)=(x,\ x+y,\ y)$.
-\item Matching: $x=a$, $y=c$, and $b=x+y=a+c$.
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item We need numbers $x,y$ with $x(1,1,0)+y(0,1,1)=(a,b,c)$.
+\item Expand: $x(1,1,0)=(x,x,0)$ and $y(0,1,1)=(0,y,y)$. Add: $(x,\ x+y,\ y)$.
+\item Match coordinates: $x=a$, \ $x+y=b$, \ $y=c$.
+\item The first and third equations give $x=a$ and $y=c$.
+\item Substitute into the middle equation: $a+c=b$, i.e.\ $a-b+c=0$.
+\item Converse: if $a-b+c=0$ then $b=a+c$ and $a(1,1,0)+c(0,1,1)=(a,\ a+c,\ c)=(a,b,c)$. So the condition is exactly right.
 \end{enumerate}\textbf{Answer:} $a-b+c=0$
 \end{tcolorbox}
 \newpage
