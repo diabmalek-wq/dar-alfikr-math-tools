@@ -1,0 +1,276 @@
+{
+ "id": "L2-3",
+ "outName": "Lesson 2-3 Factored Form of a Quadratic Function presentation",
+ "grade": "GRADE 10",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 2",
+ "lessonNo": "Lesson 2-3",
+ "titleLines": [
+  "Factored Form of a",
+  "Quadratic Function"
+ ],
+ "topicTitle": "Quadratic Functions and Equations",
+ "titleMath": "f(x)=a(x-p)(x-q)",
+ "codes": "HSA.SSE.A.1.B · HSA.SSE.B.3.A · HSA.APR.B.3 · HSF.IF.C.7 · HSF.IF.C.7.A · HSA.SSE.A.2 · HSF.IF.C.8.A",
+ "eq": null,
+ "mps": null,
+ "objectives": [
+  "Solve quadratic equations by factoring.",
+  "Find the zeros of a quadratic function by factoring.",
+  "Determine the intervals where a quadratic function is positive or negative."
+ ],
+ "vocab": [
+  "factored form",
+  "negative interval",
+  "positive interval",
+  "x-intercepts",
+  "zeros (of a quadratic function)",
+  "zero-product property"
+ ],
+ "standards": [
+  {
+   "code": "HSA.SSE.A.1.B",
+   "text": "Interpret complicated expressions by viewing one or more of their parts as a single entity."
+  },
+  {
+   "code": "HSA.SSE.B.3.A",
+   "text": "Factor a quadratic expression to reveal the zeros of the function it defines."
+  },
+  {
+   "code": "HSA.APR.B.3",
+   "text": "Identify zeros of polynomials when suitable factorizations are available, and use the zeros to construct a rough graph of the function defined by the polynomial."
+  },
+  {
+   "code": "HSF.IF.C.7",
+   "text": "Graph functions expressed symbolically and show key features of the graph, by hand in simple cases and using technology for more complicated cases."
+  },
+  {
+   "code": "HSF.IF.C.7.A",
+   "text": "Graph linear and quadratic functions and show intercepts, maxima, and minima."
+  },
+  {
+   "code": "HSA.SSE.A.2",
+   "text": "Use the structure of an expression to identify ways to rewrite it. For example, see x4 - y4 as (x2)2 - (y2)2, thus recognizing it as a difference of squares that can be factored as (x2 - y2)(x2 + y2)."
+  },
+  {
+   "code": "HSF.IF.C.8.A",
+   "text": "Use the process of factoring and completing the square in a quadratic function to show zeros, extreme values, and symmetry of the graph, and interpret these in terms of a context."
+  }
+ ],
+ "diagnose": {
+  "items": [
+   "(x+2)(x-5)=\\ ?",
+   "\\text{Factor: }x^{2}+5x+6",
+   "\\text{If }a\\cdot b=0\\text{, then }a=\\ ?\\text{ or }b=\\ ?"
+  ],
+  "doneWhen": "All three are answered without a calculator, and you can say why a product equal to 0 forces one of its factors to be 0.",
+  "notes": "Answers. Q1: (x+2)(x-5) = x^2 -5x +2x -10 = x^2 - 3x - 10. Q2: two numbers with product 6 and sum 5 are 2 and 3, so (x+2)(x+3). Q3: a = 0 or b = 0. Verbal misconceptions: Q1 students write x^2 - 10 (they forget the middle terms) or x^2 + 3x - 10 (sign slip on the middle term); Q2 students pick 1 and 6 (product right, sum wrong); Q3 students answer 'both are 0' - say 'at least one'. Adaptive routing: if >30% miss Q1, spend 2 minutes on expanding two brackets with an area model, then go to slide 5 / block 1; if >30% miss Q2, pause on slide 6 / block 2 and rehearse the product-and-sum factor search before examples; if >30% miss Q3, go straight to slide 6 / block 2 and teach the zero-product property first. If all three are secure for nearly everyone, move quickly through slide 5 and start the Investigate route early."
+ },
+ "blocks": [
+  {
+   "title": "Factored form shows the zeros",
+   "rules": [
+    "f(x)=a(x-p)(x-q)",
+    "\\text{zeros: }x=p,\\ x=q\\qquad\\text{axis: }x=\\dfrac{p+q}{2}"
+   ],
+   "examples": [
+    {
+     "q": "\\begin{array}{c}f(x)=(x+1)(x-3)\\text{:}\\\\ \\text{find the zeros}\\end{array}",
+     "steps": [
+      "x+1=0\\ \\Rightarrow\\ x=-1",
+      "x-3=0\\ \\Rightarrow\\ x=3",
+      "x\\text{-intercepts: }(-1,0),\\ (3,0)"
+     ]
+    },
+    {
+     "q": "\\text{Axis and vertex of the same }f",
+     "steps": [
+      "x=\\dfrac{-1+3}{2}=1",
+      "f(1)=(2)(-2)=-4",
+      "\\text{vertex }(1,-4)"
+     ]
+    }
+   ],
+   "fig": {
+    "file": "figs/L2-3_factored.png",
+    "w": 1230,
+    "h": 930
+   },
+   "notes": "Worked solutions. Example 1: f(x) = (x+1)(x-3). Set each bracket to 0: x+1 = 0 gives x = -1; x-3 = 0 gives x = 3. The x-intercepts are (-1, 0) and (3, 0). Example 2: the axis of symmetry is halfway between the zeros: (-1 + 3)/2 = 1, so x = 1. Substitute x = 1: f(1) = (1+1)(1-3) = (2)(-2) = -4, so the vertex is (1, -4). Extra check on the figure: the y-intercept is f(0) = (1)(-3) = -3, and expanded f(x) = x^2 - 2x - 3, the same parabola as in standard form. Point to the figure: the two orange points are the zeros, the teal point is the vertex, the gold dashed line is the axis. Verbal misconceptions: (1) the zero of (x+1) is -1, not +1 - the zero is the value that makes the bracket 0; (2) zeros are x-values, the x-intercepts are the points (-1, 0) and (3, 0); (3) the vertex y-value comes from substituting the axis value, not from averaging the zeros' y-values; (4) a changes the stretch and direction but never moves the zeros. Adaptive routing: if >30% give 1 and -3 (wrong signs) for Example 1, repeat Example 1 with f(x) = (x-2)(x+5) before moving on; if >30% miss Q1 of the Mastery Gate come back to this slide (slide 5 / block 1)."
+  },
+  {
+   "title": "Solve by factoring",
+   "rules": [
+    "a\\cdot b=0\\ \\Rightarrow\\ a=0\\ \\text{or}\\ b=0",
+    "\\text{Solutions of }f(x)=0\\text{ are the zeros of }f"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Solve: }x^{2}-7x+12=0",
+     "steps": [
+      "(x-3)(x-4)=0",
+      "x-3=0\\ \\text{or}\\ x-4=0",
+      "x=3\\ \\text{or}\\ x=4"
+     ]
+    },
+    {
+     "q": "\\text{Solve: }2x^{2}-2x-12=0",
+     "steps": [
+      "2(x^{2}-x-6)=0",
+      "2(x-3)(x+2)=0",
+      "x=3\\ \\text{or}\\ x=-2"
+     ]
+    },
+    {
+     "q": "\\text{Solve: }x^{2}+3x=10",
+     "steps": [
+      "x^{2}+3x-10=0",
+      "(x+5)(x-2)=0",
+      "x=-5\\ \\text{or}\\ x=2"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Example 1: x^2 - 7x + 12 = 0. Need two numbers with product 12 and sum -7: -3 and -4. So (x-3)(x-4) = 0, hence x = 3 or x = 4. Check: 9 - 21 + 12 = 0 and 16 - 28 + 12 = 0. Example 2: 2x^2 - 2x - 12 = 0. Take out the common factor 2: 2(x^2 - x - 6) = 0. Product -6, sum -1: -3 and 2, so 2(x-3)(x+2) = 0, giving x = 3 or x = -2. The factor 2 never equals 0, so it gives no solution. Check: 2(9) - 6 - 12 = 0 and 2(4) + 4 - 12 = 0. Example 3: x^2 + 3x = 10 is not yet equal to 0. Subtract 10: x^2 + 3x - 10 = 0. Product -10, sum 3: 5 and -2, so (x+5)(x-2) = 0, giving x = -5 or x = 2. Check: 25 - 15 - 10 = 0 and 4 + 6 - 10 = 0. Verbal misconceptions: (1) get 0 on one side first - for (x-2)(x-3) = 6 you can NOT write x-2 = 6; (2) do not drop the second solution; (3) a common factor is not a solution, so do not write x = 2; (4) sign of the bracket versus sign of the solution: (x+5) gives x = -5. Adaptive routing: if >30% miss Q2 of the Mastery Gate come back to this slide (slide 6 / block 2); if >30% write x-2 = 6 style answers, show Example 3 again and use the smart-production non-example on slide 11."
+  },
+  {
+   "title": "Positive and negative intervals",
+   "rules": [
+    "f(x)>0\\ \\text{above the axis},\\quad f(x)<0\\ \\text{below}",
+    "\\text{Zeros split the }x\\text{-axis; test one }x\\text{ in each part}"
+   ],
+   "examples": [
+    {
+     "q": "f(x)=(x+1)(x-3)",
+     "steps": [
+      "\\text{Zeros: }x=-1,\\ x=3",
+      "f(0)=-3<0:\\ f<0\\text{ on }-1<x<3",
+      "f>0\\text{ on }x<-1\\text{ or }x>3"
+     ]
+    },
+    {
+     "q": "f(x)=-(x-1)(x+4)",
+     "steps": [
+      "\\text{Zeros: }x=1,\\ x=-4",
+      "f(0)=4>0:\\ f>0\\text{ on }-4<x<1",
+      "f<0\\text{ on }x<-4\\text{ or }x>1"
+     ]
+    },
+    {
+     "q": "f(x)=x^{2}-6x+8",
+     "steps": [
+      "f(x)=(x-2)(x-4)",
+      "f(3)=-1<0:\\ f<0\\text{ on }2<x<4",
+      "f>0\\text{ on }x<2\\text{ or }x>4"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Example 1: f(x) = (x+1)(x-3), zeros -1 and 3 give three intervals. f(0) = -3 < 0, so f is negative for -1 < x < 3; f(-2) = (-1)(-5) = 5 > 0 and f(4) = (5)(1) = 5 > 0, so f is positive for x < -1 or x > 3. Example 2: f(x) = -(x-1)(x+4), zeros 1 and -4. f(0) = -(-1)(4) = 4 > 0, so f is positive for -4 < x < 1; f(-5) = -(-6)(-1) = -6 < 0 and f(2) = -(1)(6) = -6 < 0, so f is negative for x < -4 or x > 1. The leading coefficient is negative, so the parabola opens down and the pattern flips. Example 3: x^2 - 6x + 8 = (x-2)(x-4), zeros 2 and 4. f(3) = 9 - 18 + 8 = -1 < 0, so f is negative for 2 < x < 4 and positive for x < 2 or x > 4. Verbal misconceptions: (1) positive and negative describe the OUTPUT f(x), not x; (2) the zeros themselves are neither positive nor negative, so use open intervals with strict inequalities; (3) the two outside intervals are joined with 'or', never 'and'; (4) a negative a flips the pattern. Adaptive routing: if >30% miss Q3 of the Mastery Gate come back to this slide (slide 7 / block 3); if >30% flip the Example 2 answer, redo it by testing one point in each interval before looking at the sign of a."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "\\text{Solve: }x^{2}+8x+15=0",
+    "\\text{Zeros of }f(x)=(x+3)(x-2)"
+   ],
+   "done": "Done when: each solution is checked by substitution and the zeros are also written as x-intercepts."
+  },
+  "apply": {
+   "items": [
+    "\\text{Write }f\\text{ with zeros }-2,\\ 4\\text{ and }f(0)=-16",
+    "\\text{Where is }f(x)=x^{2}-x-6\\text{ negative?}"
+   ],
+   "done": "Done when: your function is checked by substituting a point and the interval is written with strict inequality signs."
+  },
+  "investigate": {
+   "items": [
+    "\\text{Show the axis of }a(x-p)(x-q)\\text{ is }x=\\dfrac{p+q}{2}",
+    "\\begin{array}{c}\\text{Why is}\\\\ \\text{}(x-2)(x-3)=6\\Rightarrow x-2=6\\text{ wrong?}\\end{array}"
+   ],
+   "done": "Done when: your argument uses the zero-product property or the symmetry of the zeros, not just a computed answer."
+  },
+  "notes": "Answers. Practice 1: x^2 + 8x + 15 = (x+3)(x+5) = 0, so x = -3 or x = -5; check 9 - 24 + 15 = 0 and 25 - 40 + 15 = 0. Practice 2: set x+3 = 0 and x-2 = 0, zeros -3 and 2, x-intercepts (-3, 0) and (2, 0). Apply 1: f(x) = a(x+2)(x-4); f(0) = a(2)(-4) = -8a = -16, so a = 2 and f(x) = 2(x+2)(x-4); check f(-2) = 0 and f(4) = 0. Apply 2: x^2 - x - 6 = (x-3)(x+2), zeros -2 and 3, a = 1 > 0 so negative for -2 < x < 3 (check f(0) = -6). Investigate 1: the zeros p and q are the same distance from the axis (symmetry), so the axis is their midpoint (p+q)/2. Investigate 2: the product equals 6, not 0, so the zero-product property does not apply; expanding gives x^2 - 5x = 0, so x = 0 or x = 5 (check (0-2)(0-3) = 6 and (5-2)(5-3) = 6). Verbal misconceptions: students choose the route that feels comfortable - remind them they may switch at any time; the factor pair with the right product but wrong sum; reading the zero of (x+3) as 3. Adaptive routing: if >30% of Practice students miss item 1, route them to slide 6 / block 2 Example 1 with a partner; if >30% of Apply students cannot find a, return to slide 5 / block 1 and substitute the point; if Investigate stalls, point to the figure on slide 5."
+ },
+ "production": {
+  "title": "the Red Sea dive-tour profit",
+  "context": "A Red Sea tourism operator off the Jeddah coast models its daily profit from a dive-boat tour as a quadratic function of the ticket price, in the spirit of Vision 2030 tourism growth. All numbers are model values invented for this lesson, not real company data.",
+  "given": [
+   "P(x)=-(x-20)(x-140)",
+   "P\\text{ and }x\\text{ both in SAR}"
+  ],
+  "tasks": [
+   "Find the two break-even ticket prices (the zeros) and write them as x-intercepts.",
+   "Find the prices where the tour makes a profit and the price that gives the largest profit.",
+   "Find the profit at a ticket price of 100 SAR and compare it with the largest profit."
+  ],
+  "doneWhen": [
+   "Both zeros are found by setting each bracket equal to 0 and are labelled with SAR.",
+   "The profit interval is written with strict inequalities and explained in a sentence.",
+   "The best price comes from the axis of symmetry and is checked by substitution.",
+   "Every answer has units (SAR) and a sentence about what it means for the operator."
+  ],
+  "hint": "Hint for solving: the best price is halfway between the break-even prices; substitute it into the function to get the largest profit.",
+  "notes": "Model values only. Task 1: set -(x-20)(x-140) = 0, so x = 20 or x = 140; the x-intercepts are (20, 0) and (140, 0): at 20 SAR and 140 SAR the profit is exactly 0 (break-even). Task 2: a = -1 < 0, so the parabola opens down and P > 0 between the zeros: profit for 20 < x < 140 (strict inequalities; at 20 and 140 the profit is 0). The axis is x = (20 + 140)/2 = 80, so the best price is 80 SAR. Largest profit P(80) = -(60)(-60) = 3600 SAR. Task 3: P(100) = -(80)(-40) = 3200 SAR, which is 400 SAR less than the largest profit 3600 SAR (100 is 20 SAR above the axis value 80). Extra: P(50) = 2700 SAR and P(160) = -2800 SAR (a loss). Verbal misconceptions: students forget the minus sign in front of the factors and get a minimum instead of a maximum; they read the zeros of -(x-20) as -20; they give the maximum value as x = 80 instead of 3600 SAR - the maximum is the output, 80 is the price. Adaptive routing: if >30% cannot find the best price, return to slide 5 / block 1 (axis halfway between zeros); if >30% write the profit interval with 'and', return to slide 7 / block 3."
+ },
+ "gate": {
+  "items": [
+   "\\text{Zeros and axis of }f(x)=(x+6)(x-2)",
+   "\\text{Solve: }x^{2}-x-12=0",
+   "\\text{Where is }f(x)=(x+2)(x-5)\\text{ negative?}"
+  ],
+  "notes": "Answers. Q1: zeros x = -6 and x = 2; axis x = (-6 + 2)/2 = -2. Q2: x^2 - x - 12 = (x-4)(x+3) = 0, so x = 4 or x = -3 (check 16 - 4 - 12 = 0 and 9 + 3 - 12 = 0). Q3: zeros -2 and 5; a = 1 > 0 so f is negative between them: -2 < x < 5 (check f(0) = (2)(-5) = -10 < 0). Traps to expect: Q1 zeros 6 and -2 (sign of bracket misread) or axis -4 (sum instead of half the sum); Q2 x = -4 or x = 3 (signs swapped) or x = 12; Q3 x < -2 or x > 5 (outside interval) or the closed interval with 'less than or equal to'. Adaptive routing: Q1 missed -> slide 5 / block 1; Q2 missed -> slide 6 / block 2; Q3 missed -> slide 7 / block 3. Score live, route privately through the LMS, and never announce the clinic list to the class. If >30% miss any one question, reteach that block with a new example at the start of the next lesson."
+ },
+ "smart": {
+  "create": [
+   "Write one quadratic function in factored form with two integer zeros.",
+   "Write the zeros, the axis, the vertex and the intervals where it is positive and negative on the back.",
+   "Swap with a partner, solve theirs and check it by substituting a point."
+  ],
+  "createDone": "Done when: your solution is complete and correct, and your partner agrees with every step.",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\text{Solve }x^{2}-6x+5=0",
+   "\\text{Where is }x^{2}-6x+5<0\\text{?}"
+  ],
+  "next": "Next lesson: 2-4 Overview of Complex Numbers.",
+  "notes": "Exit ticket solutions. Q1: x^2 - 6x + 5 = (x-1)(x-5) = 0, so x = 1 or x = 5 (check 1 - 6 + 5 = 0 and 25 - 30 + 5 = 0). Q2: a = 1 > 0, so the expression is negative between the zeros: 1 < x < 5 (check f(3) = 9 - 18 + 5 = -4 < 0). Non-example for the creation task: solving (x-2)(x-3) = 6 as x = 8 or x = 9 is wrong because the product is 6, not 0; expanding gives x^2 - 5x = 0, so x = 0 or x = 5, and (0-2)(0-3) = 6, (5-2)(5-3) = 6. Verbal misconceptions: students answer x = -1 and x = -5 (signs of the brackets copied as solutions); they say 'between 1 and 5' without strict inequality; they write the interval as 1 < x < 5 only for an upward parabola and forget to check a. Adaptive routing: if >30% miss exit Q1, start the next lesson with a 10-minute factoring clinic using slide 6 / block 2; if >30% miss exit Q2, reteach intervals using slide 7 / block 3. If time is short, cut Smart Production and carry it over, never the Mastery Gate."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "\\begin{array}{c}\\text{Parabola with }x\\text{-intercepts }-3\\\\ \\text{and }5\\end{array}",
+    "\\text{passes through }(1,-32)\\text{; find }a"
+   ],
+   "steps": [
+    "y=a(x+3)(x-5)",
+    "-32=a(4)(-4)=-16a",
+    "a=2"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\begin{array}{c}A=\\text{larger solution}\\\\ \\text{of }x^{2}-x-6=0\\end{array}",
+    "B=3"
+   ],
+   "steps": [
+    "(x-3)(x+2)=0",
+    "x=3\\ \\text{or}\\ x=-2",
+    "A=3=B"
+   ]
+  },
+  "saat": {
+   "q": [
+    "\\begin{array}{c}\\text{Sum of the solutions}\\\\ \\text{of }x^{2}-5x+6=0\\end{array}"
+   ],
+   "steps": [
+    "(x-2)(x-3)=0",
+    "x=2\\ \\text{or}\\ x=3",
+    "2+3=5"
+   ]
+  },
+  "notes": "SAT (grid-in or four options, Advanced Math): y = a(x+3)(x-5); substitute (1, -32): -32 = a(1+3)(1-5) = a(4)(-4) = -16a, so a = 2, and y = 2(x+3)(x-5). Trap: writing y = a(x-3)(x+5) (signs of zeros reversed), which gives the wrong a = 8/3 because a(-2)(6) = -32, or forgetting a and answering y = (x+3)(x-5), which passes through (1, -16), not (1, -32). GAT/Qudurat (quantitative comparison: A greater, B greater, equal, cannot be determined): x^2 - x - 6 = (x-3)(x+2) = 0, so x = 3 or x = -2; the larger is 3, so A = B = 3, answer: equal. Trap: choosing -2 as the larger, taking x = 6 from the constant term, or answering 'cannot be determined' because there are two solutions. SAAT/Tahsili (four options, no calculator): x^2 - 5x + 6 = (x-2)(x-3) = 0, solutions 2 and 3, sum 5. Trap: the product 6 (the constant term), the sum with the sign of b (-5), or the difference 1. Verbal misconceptions: the single most tested idea is to set the factored expression equal to 0 and read the zeros, watching the sign inside each bracket. Adaptive routing: if >30% miss the SAT item, go to slide 5 / block 1 (writing a function from zeros); if >30% miss the GAT item, go to slide 6 / block 2; if >30% miss the SAAT item, use Vieta-style checking: the sum of the solutions equals -b/a."
+ },
+ "recap": "Factor, set each bracket to 0, and read the zeros, the axis and the intervals where a quadratic is positive or negative."
+}

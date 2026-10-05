@@ -1,0 +1,295 @@
+{
+ "id": "L6-4",
+ "outName": "Lesson 6-4 Logarithmic Functions presentation",
+ "grade": "GRADE 11",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 6",
+ "lessonNo": "Lesson 6-4",
+ "titleLines": [
+  "Logarithmic",
+  "Functions"
+ ],
+ "topicTitle": "Exponential and Logarithmic Functions",
+ "titleMath": "y=\\log_{3}x,\\ \\ y=3^{x}",
+ "codes": "HSF.IF.B.5 · HSF.IF.B.6 · HSF.IF.C.7.E · HSF.IF.C.9 · HSF.BF.B.3 · HSF.BF.B.4 · (+)HSF.BF.B.4.C",
+ "eq": "How is the relationship between logarithmic and exponential functions revealed in the features of their graphs?",
+ "mps": [
+  "MP.4",
+  "MP.7"
+ ],
+ "objectives": [
+  "Identify key features of logarithmic functions.",
+  "Use inverse properties to analyze logarithmic and exponential functions.",
+  "Graph logarithmic functions and interpret their key features.",
+  "Write and interpret the inverses of exponential and logarithmic functions."
+ ],
+ "vocab": [
+  "inverse relationship",
+  "logarithmic function"
+ ],
+ "standards": [
+  {
+   "code": "HSF.IF.B.5",
+   "text": "Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes."
+  },
+  {
+   "code": "HSF.IF.B.6",
+   "text": "Calculate and interpret the average rate of change of a function (presented symbolically or as a table) over a specified interval. Estimate the rate of change from a graph."
+  },
+  {
+   "code": "HSF.IF.C.7.E",
+   "text": "Graph exponential and logarithmic functions, showing intercepts and end behavior, and trigonometric functions, showing period, midline, and amplitude."
+  },
+  {
+   "code": "HSF.IF.C.9",
+   "text": "Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions)."
+  },
+  {
+   "code": "HSF.BF.B.3",
+   "text": "Identify the effect on the graph of replacing f(x) by f(x) + k, k f(x), f(kx), and f(x + k) for specific values of k (both positive and negative); find the value of k given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them."
+  },
+  {
+   "code": "HSF.BF.B.4",
+   "text": "Find inverse functions."
+  },
+  {
+   "code": "(+)HSF.BF.B.4.C",
+   "text": "Read values of an inverse function from a graph or a table, given that the function has an inverse."
+  }
+ ],
+ "diagnose": {
+  "items": [
+   "\\text{Solve }3^{x}=\\dfrac{1}{9}",
+   "\\text{If }f(x)=2x+1\\text{, find }f^{-1}(x)",
+   "\\text{Average rate of change of }x^{2}\\text{ on }[1,3]"
+  ],
+  "doneWhen": "All three answers are written without a calculator, and you can say in one sentence what swapping inputs and outputs does to a function.",
+  "notes": "Answers. Q1: 1/9 = 3^(-2), so x = -2. Q2: y = 2x + 1; swap: x = 2y + 1; solve: y = (x - 1)/2, so f^-1(x) = (x - 1)/2. Q3: (f(3) - f(1))/(3 - 1) = (9 - 1)/2 = 4. Verbal misconceptions: Q1 'a negative exponent makes the answer negative' (3^(-2) is 1/9, positive); Q2 'f^-1 means 1/f' (it means undo, not reciprocal) and forgetting to swap before solving; Q3 'average rate of change is the average of the two outputs' or dividing by the sum of the inputs. Adaptive routing: if >30% miss Q1, route to slide 5 (block 1, converting and reading inverse values) before anything else and re-teach b^y = x; if >30% miss Q2, spend 3 minutes on slide 5 Example 2 (swap then solve); if >30% miss Q3, pause on slide 7 (block 3, average rate of change) and model Example 1 twice. If all three are correct for 90% of the class, skip to slide 8 and then to Investigate."
+ },
+ "blocks": [
+  {
+   "title": "Exponentials and logarithms are inverses",
+   "rules": [
+    "f(x)=3^{x}\\ \\Longleftrightarrow\\ f^{-1}(x)=\\log_{3}x",
+    "(a,b)\\text{ on }f\\iff(b,a)\\text{ on }f^{-1}"
+   ],
+   "examples": [
+    {
+     "q": "\\begin{array}{c}\\text{Table of }f(x)=3^{x}\\text{: read }f^{-1}(3)\\\\ \\text{and }f^{-1}\\!\\left(\\tfrac{1}{3}\\right)\\end{array}",
+     "steps": [
+      "f(1)=3\\Rightarrow f^{-1}(3)=1",
+      "f(-1)=\\tfrac{1}{3}\\Rightarrow f^{-1}\\!\\left(\\tfrac{1}{3}\\right)=-1"
+     ]
+    },
+    {
+     "q": "\\text{Find the inverse of }f(x)=3^{x}+2",
+     "steps": [
+      "y=3^{x}+2\\to x=3^{y}+2",
+      "3^{y}=x-2",
+      "f^{-1}(x)=\\log_{3}(x-2)"
+     ]
+    }
+   ],
+   "fig": {
+    "file": "figs/L6-4_inverse.png",
+    "w": 754,
+    "h": 754
+   },
+   "notes": "Worked solutions. Table of f(x) = 3^x: x = -1, 0, 1, 2 gives f(x) = 1/3, 1, 3, 9. BF.B.4.C: to read an inverse value from a table, find the output in the f(x) column and read the matching input. Example 1: f(1) = 3, so f^-1(3) = 1; f(-1) = 1/3, so f^-1(1/3) = -1. Example 2: y = 3^x + 2; swap x and y: x = 3^y + 2; subtract 2: 3^y = x - 2; rewrite in log form: y = log_3(x - 2), so f^-1(x) = log_3(x - 2). Check with a point: f(1) = 5, and f^-1(5) = log_3(3) = 1. On the graph point to the pairs (0,1) and (1,0), (1,3) and (3,1): each point on 3^x has its coordinates swapped on log_3 x, and the dashed line y = x is the mirror; (2,9) and (9,2) are off the picture but follow the same rule. Verbal misconceptions: say aloud that f^-1 is NOT 1/f; 'the log graph is the exponential graph rotated' (it is reflected, not rotated); forgetting to subtract 2 before taking the log in Example 2 (writing log_3(x) - 2). Adaptive routing: if >30% of the class cannot read f^-1(3) from the table, replay the swap of the columns before Example 2; if >30% miss Example 2, return to the Diagnose Q2 method and do one more linear example, then come back. Gate Q1 routes back to this slide."
+  },
+  {
+   "title": "Key features of the logarithmic function",
+   "rules": [
+    "\\text{Domain: }x>0,\\quad\\text{Range: all real }y",
+    "\\text{Asymptote }x=0,\\quad x\\text{-intercept }(1,0)"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Evaluate }\\log_{3}\\dfrac{1}{9}\\text{ and }\\log_{3}27",
+     "steps": [
+      "3^{-2}=\\tfrac{1}{9}\\Rightarrow\\log_{3}\\tfrac{1}{9}=-2",
+      "3^{3}=27\\Rightarrow\\log_{3}27=3"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{Domain and asymptote}\\\\ \\text{of }h(x)=\\log_{3}(x+4)\\end{array}",
+     "steps": [
+      "x+4>0\\Rightarrow x>-4",
+      "\\text{Domain }(-4,\\infty),\\ \\text{asymptote }x=-4"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{End behavior: as}\\\\ \\text{}x\\to0^{+}\\text{, }\\log_{3}x\\to\\ ?\\end{array}",
+     "steps": [
+      "\\log_{3}\\tfrac{1}{3^{n}}=-n",
+      "\\text{as }x\\to0^{+},\\ \\log_{3}x\\to-\\infty"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Why these features: the exponential 3^x has domain all reals, range y > 0 and asymptote y = 0; its inverse swaps them, so log_3 x has domain x > 0, range all reals, and a vertical asymptote x = 0. The x-intercept (1,0) comes from the exponential's y-intercept (0,1) swapped. Example 1: 3^(-2) = 1/9 so log_3(1/9) = -2; 3^3 = 27 so log_3(27) = 3. Example 2: the argument must be positive: x + 4 > 0 gives x > -4; the asymptote is where the argument equals 0, x = -4; domain (-4, infinity). Example 3: log_3(1/3^n) = -n, which gets arbitrarily negative as the input gets near 0 from the right; the curve never touches the asymptote. As x grows without bound the log keeps rising but slowly (end behavior to infinity). Verbal misconceptions: 'log of a negative number is a negative number' (a negative input is not allowed at all); 'the graph levels off like an asymptote at the right' (it keeps increasing, only slowly); 'the asymptote is the x-axis' (it is the y-axis for the parent). Adaptive routing: if >30% miss Example 2, redo with g(x) = log_3(x - 1) on the board before moving to slide 8; if >30% give a positive answer to log_3(1/9), return to slide 5 and rebuild from 3^(-2) = 1/9. Gate Q2 routes back to this slide."
+  },
+  {
+   "title": "Average rate of change of a logarithm",
+   "rules": [
+    "\\text{AROC on }[a,b]=\\dfrac{f(b)-f(a)}{b-a}",
+    "\\log_{3}x\\text{ is increasing, but its rate of change falls}"
+   ],
+   "examples": [
+    {
+     "q": "\\begin{array}{c}\\text{AROC of}\\\\ \\text{}f(x)=\\log_{3}x\\text{ on }[1,3]\\end{array}",
+     "steps": [
+      "\\dfrac{\\log_{3}3-\\log_{3}1}{3-1}=\\dfrac{1-0}{2}",
+      "=\\dfrac{1}{2}"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{AROC of}\\\\ \\text{}f(x)=\\log_{3}x\\text{ on }[3,9]\\end{array}",
+     "steps": [
+      "\\dfrac{\\log_{3}9-\\log_{3}3}{9-3}=\\dfrac{2-1}{6}",
+      "=\\dfrac{1}{6}"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{AROC of }3^{x}\\text{ on }[0,2]\\text{}\\\\ \\text{and of }\\log_{3}x\\text{ on }[1,9]\\end{array}",
+     "steps": [
+      "3^{x}:\\ \\dfrac{9-1}{2-0}=4",
+      "\\log_{3}x:\\ \\dfrac{2-0}{9-1}=\\dfrac{1}{4}"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "IF.B.6 slide. Definition: AROC on [a,b] is (f(b) - f(a))/(b - a), the slope of the secant line. Example 1: log_3(3) = 1 and log_3(1) = 0, so (1 - 0)/(3 - 1) = 1/2. Example 2: log_3(9) = 2, log_3(3) = 1, so (2 - 1)/(9 - 3) = 1/6. Pattern: each time the interval triples the output rises by exactly 1, so the rate falls: next, on [9,27], (3 - 2)/(27 - 9) = 1/18. Example 3: for 3^x on [0,2]: (9 - 1)/2 = 4. For log_3 x on [1,9], the swapped interval: (2 - 0)/(9 - 1) = 2/8 = 1/4. The two rates are reciprocals: swapping inputs and outputs swaps rise and run. Interpretation to say aloud: 'the log grows 1/2 unit per input unit near x = 2, but only 1/6 unit per input unit near x = 6'. Verbal misconceptions: 'average rate of change is the average of the outputs'; dividing by the sum of the inputs; subtracting in a different order on top and bottom (sign error); 'increasing means the slope is constant'. Adaptive routing: if >30% miss Example 1, return to Diagnose Q3 (slide 4) and re-model the secant slope; if >30% cannot explain why the rate falls, show the shift graph on slide 8 and ask students to compare steepness near x = 1 and x = 9. Gate Q3 routes back to this slide."
+  },
+  {
+   "title": "Graphing transformations of a logarithm",
+   "rules": [
+    "g(x)=\\log_{3}(x-h)+k,\\quad\\text{asymptote }x=h,\\quad\\text{domain }x>h",
+    "\\text{each point }(x,y)\\ \\to\\ (x+h,\\ y+k)"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Graph }g(x)=\\log_{3}(x-2)+1",
+     "steps": [
+      "\\text{Asymptote }x=2,\\ \\text{domain }x>2",
+      "(3,1),\\ (5,2),\\ (11,3)"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{Write: }\\log_{3}x\\text{}\\\\ \\text{moved left 4, down 2}\\end{array}",
+     "steps": [
+      "y=\\log_{3}(x+4)-2",
+      "\\text{Asymptote }x=-4;\\ (-3,-2)\\text{ on graph}"
+     ]
+    }
+   ],
+   "fig": {
+    "file": "figs/L6-4_shift.png",
+    "w": 991,
+    "h": 754
+   },
+   "notes": "BF.B.3 and IF.C.7.E slide. The parent key points are (1,0), (3,1), (9,2). Example 1: x - 2 inside moves the graph RIGHT 2, +1 outside moves it up 1. The asymptote follows the horizontal shift only: x = 0 becomes x = 2. Domain: x - 2 > 0 so x > 2. Key points shift by (+2, +1): (1,0) to (3,1); (3,1) to (5,2); (9,2) to (11,3). Check: g(5) = log_3(3) + 1 = 2; g(11) = log_3(9) + 1 = 3. Both curves pass through (3,1): point out the coincidence on the graph. Example 2: left 4 means x + 4 inside; down 2 means -2 outside: y = log_3(x + 4) - 2. Asymptote x = -4. Point: parent (1,0) goes to (-3,-2); check: log_3(-3 + 4) - 2 = 0 - 2 = -2. Compare (IF.C.9): the graph of g is described algebraically here and graphically in the figure; ask students to state the domain from each. Verbal misconceptions: moving the asymptote with the vertical shift; shifting left for x - 2; forgetting that the domain changes; writing log_3(x) + 4 for 'left 4'. Adaptive routing: if >30% place the asymptote wrongly, replay slide 6 Example 2; if >30% shift the wrong way, put x - 2 = 0 on the board and ask where the graph now starts. Gate Q2 can route here as well."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "\\text{Evaluate }\\log_{2}32\\text{ and }\\log_{5}\\dfrac{1}{25}",
+    "\\text{Find the inverse of }f(x)=2^{x}-3"
+   ],
+   "done": "Done when: both logarithms are evaluated by writing the matching exponential, and the inverse is checked with one point."
+  },
+  "apply": {
+   "items": [
+    "\\text{Average rate of change of }\\log_{3}x\\text{ on }[3,27]",
+    "\\begin{array}{c}\\text{Domain and asymptote}\\\\ \\text{of }h(x)=\\log_{3}(x+1)-4\\end{array}"
+   ],
+   "done": "Done when: the rate is written as a simplified fraction with its meaning in a sentence, and the domain uses interval notation."
+  },
+  "investigate": {
+   "items": [
+    "\\text{Why can }\\log_{3}x\\text{ never cross the line }x=0\\text{?}",
+    "\\text{AROC of }\\log_{3}x\\text{ on }[a,3a]\\text{: same for every }a\\text{?}"
+   ],
+   "done": "Done when: you give a reason using the exponential with base 3, and a test with at least two values of a."
+  },
+  "notes": "Answers. Practice 1: log_2 32 = 5 since 2^5 = 32; log_5(1/25) = -2 since 5^(-2) = 1/25. Practice 2: y = 2^x - 3; swap x = 2^y - 3; 2^y = x + 3; f^-1(x) = log_2(x + 3). Check: f(2) = 1, f^-1(1) = log_2(4) = 2. Apply 1: (log_3 27 - log_3 3)/(27 - 3) = (3 - 1)/24 = 2/24 = 1/12; meaning: on average the log rises 1/12 unit per input unit. Apply 2: x + 1 > 0 so x > -1; domain (-1, infinity); asymptote x = -1 (the -4 shifts the graph down and does not move the asymptote). Investigate 1: 3^y is always positive, so x = 3^y can never be 0 or negative; the graph never reaches x = 0 or crosses it. Investigate 2: (log_3(3a) - log_3(a))/(3a - a) = 1/(2a), because log_3(3a) = 1 + log_3(a); depends on a (a = 1 gives 1/2, a = 3 gives 1/6), so NOT the same; it falls as a grows. Verbal misconceptions: writing log_5(1/25) = 2; adding 3 instead of subtracting before taking the log in Practice 2; moving the asymptote to y = -4. Adaptive routing: if >30% miss Practice 1, route to slide 6 Example 1; Practice 2 to slide 5 Example 2; Apply 1 to slide 7; Apply 2 to slide 8. Students who finish Apply early move to Investigate."
+ },
+ "production": {
+  "title": "the Red Sea tourism fund",
+  "context": "A model fund for a Red Sea tourism project triples in value every five years. Using model values only, its value in millions of SAR after t five-year periods is 3 to the power t, starting from 1 million SAR. Investors want to know how long it takes to reach a target value.",
+  "given": [
+   "V(t)=3^{t}\\ \\ (\\text{SAR millions})",
+   "t=\\log_{3}V\\ \\ (\\text{inverse of }V)"
+  ],
+  "tasks": [
+   "Make a table of V and t for V = 9, 27 and 81, and write the inverse model.",
+   "Find the average rate of change of t on V from 9 to 81 and say what it means for the fund.",
+   "Explain why the graph of t against V has a vertical asymptote at V = 0."
+  ],
+  "doneWhen": [
+   "The table reads t from V correctly for 2, 3 and 4 periods.",
+   "The average rate of change is 1/36 period per million SAR, with units.",
+   "The meaning says that each extra million SAR adds only a little time, and that the rate keeps falling.",
+   "The asymptote explanation uses the fact that the fund value is always positive."
+  ],
+  "hint": "Hint for solving: to find t, ask which power of 3 gives V; for the rate, use change in t divided by change in V.",
+  "notes": "Model values only. Task 1: V = 9 gives t = log_3 9 = 2; V = 27 gives t = 3; V = 81 gives t = 4. That means 10, 15 and 20 years (each period is 5 years). Inverse model t = log_3 V. Task 2: (4 - 2)/(81 - 9) = 2/72 = 1/36 period per million SAR (about 0.14 years, or roughly 7 weeks, per million SAR). Meaning: between 9 and 81 million, each extra million SAR needs only a small amount of extra time, and the rate keeps falling as V grows. Task 3: V = 3^t is always positive, so V can never be 0 or negative; t decreases without bound as V gets close to 0 from the right: vertical asymptote at V = 0. Verbal misconceptions: confusing t with V when reading the table; writing 1/36 without units; saying the rate is constant. Adaptive routing: if >30% cannot start Task 1, go back to slide 5 Example 1 (reading inverse values from a table); if >30% miss Task 2, go to slide 7; if >30% miss Task 3, go to slide 6. Early finishers: compute the rate from 81 to 729 and compare (it is 1/324)."
+ },
+ "gate": {
+  "items": [
+   "\\text{Find the inverse of }f(x)=3^{x}+5",
+   "\\begin{array}{c}\\text{Domain and asymptote}\\\\ \\text{of }g(x)=\\log_{3}(x+6)\\end{array}",
+   "\\text{AROC of }\\log_{3}x\\text{ on }[3,81]"
+  ],
+  "notes": "Answers. Q1: y = 3^x + 5; swap x = 3^y + 5; 3^y = x - 5; f^-1(x) = log_3(x - 5). Q2: x + 6 > 0 so x > -6; domain (-6, infinity); asymptote x = -6. Q3: (log_3 81 - log_3 3)/(81 - 3) = (4 - 1)/78 = 3/78 = 1/26. Verbal misconceptions: Q1 writing log_3(x) - 5 or log_3(x + 5) (sign error); Q2 asymptote x = 6 (wrong sign) or domain x > 6; Q3 writing 4/81 or (4 - 1)/(81 + 3). Adaptive routing: Q1 missed, route to slide 5 (block 1); Q2 missed, route to slide 6 (block 2) and slide 8 (block 4); Q3 missed, route to slide 7 (block 3). If a student misses two or more, they join the teacher group for the Smart Production create step; students who get all three correct start the create step immediately."
+ },
+ "smart": {
+  "create": [
+   "Write one inverse question: give an exponential function with a vertical shift and ask for its inverse.",
+   "Write a full solution on the back, with the domain of the inverse and its asymptote.",
+   "Swap with a partner and solve theirs."
+  ],
+  "createDone": "Done when: your question has a unique answer, and your solution shows the swap, the solving step and one checking point.",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\text{Write the inverse of }f(x)=\\log_{3}(x-1)",
+   "\\text{State the domain and asymptote of }f"
+  ],
+  "next": "Next lesson: 6-5 Properties of Logarithms.",
+  "notes": "Worked solutions. Exit 1: y = log_3(x - 1); swap x = log_3(y - 1); write in exponential form: 3^x = y - 1; so f^-1(x) = 3^x + 1. Exit 2: x - 1 > 0 so x > 1; domain (1, infinity); asymptote x = 1. Check with a point: f(4) = log_3 3 = 1 and f^-1(1) = 3 + 1 = 4. Verbal misconceptions: writing 3^(x - 1) for the inverse (undoing the +1 incorrectly); giving x = -1 for the asymptote. Adaptive routing: if >30% miss exit 1, begin 6-5 with a ten-minute recap of slide 5 Example 2; if >30% miss exit 2, open with slide 6 Example 2. Create step: check that every student question has a single answer; the partner solves it as a mastery check."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "\\text{If }f(x)=2^{x}+1\\text{, what is }f^{-1}(9)\\text{?}"
+   ],
+   "steps": [
+    "2^{x}+1=9",
+    "2^{x}=8",
+    "x=3"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\text{A: }\\log_{3}27\\qquad\\text{B: }\\log_{2}16"
+   ],
+   "steps": [
+    "\\text{A}=3\\ (3^{3}=27)",
+    "\\text{B}=4\\ (2^{4}=16)",
+    "\\text{B is greater}"
+   ]
+  },
+  "saat": {
+   "q": [
+    "\\begin{array}{c}\\text{Vertical asymptote}\\\\ \\text{of }y=\\log_{2}(x+5)-7\\end{array}"
+   ],
+   "steps": [
+    "x+5=0",
+    "x=-5"
+   ]
+  },
+  "notes": "SAT: f^-1(9) is the input x with f(x) = 9: 2^x + 1 = 9, 2^x = 8, x = 3. Trap: computing f(9) = 513, or answering 8 (stopping at 2^x = 8, a partial step). Check: f(3) = 8 + 1 = 9. GAT/Qudurat quantitative comparison: A = log_3 27 = 3 because 3^3 = 27; B = log_2 16 = 4 because 2^4 = 16; B is greater. Trap: comparing 27 and 16 instead of the logarithms. SAAT/Tahsili: the asymptote is where the argument equals zero: x + 5 = 0 gives x = -5. Trap: choosing x = 5 (sign error) or y = -7 (confusing the vertical shift with the asymptote). Adaptive routing: if >30% miss the SAT item, return to slide 5 Example 2; the GAT item, slide 6 Example 1; the SAAT item, slide 8."
+ },
+ "recap": "A logarithm undoes an exponential, so its graph mirrors it across the line y equals x: domain x above 0, asymptote at x equals 0, and shifts move both."
+}

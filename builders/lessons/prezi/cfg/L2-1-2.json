@@ -1,0 +1,310 @@
+{
+ "id": "L2-1-2",
+ "outName": "Lessons 2-1 and 2-2 Vertex Form and Standard Form of a Quadratic Function presentation",
+ "grade": "GRADE 10",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 2",
+ "lessonNo": "Lessons 2-1 and 2-2",
+ "titleLines": [
+  "Vertex Form and",
+  "Standard Form"
+ ],
+ "topicTitle": "Quadratic Functions and Equations",
+ "titleMath": "a(x-h)^{2}+k=ax^{2}+bx+c",
+ "codes": "HSA.REI.B.4 · HSA.REI.B.4.A · HSF.IF.C.7.A · HSA.CED.A.2 · HSF.IF.B.4 · HSF.BF.B.3 · HSF.IF.C.7 · HSS.ID.B.6.A",
+ "eq": null,
+ "mps": null,
+ "objectives": [
+  "Graph quadratic functions given in vertex form.",
+  "Write a quadratic function in vertex form given its key features.",
+  "Write a quadratic function in standard form and analyze the significance of each term.",
+  "Identify and explain the key features of quadratic functions in standard form.",
+  "Graph quadratic functions using key features and symmetry to accurately represent their shape and position on the coordinate plane."
+ ],
+ "vocab": [
+  "axis of symmetry",
+  "maximum point",
+  "maximum value",
+  "minimum point",
+  "minimum value",
+  "Parabola",
+  "parent quadratic function",
+  "quadratic function",
+  "Vertex",
+  "vertex form",
+  "constant term",
+  "leading coefficient",
+  "leading term",
+  "linear coefficient",
+  "linear term",
+  "standard form (of a quadratic function)"
+ ],
+ "standards": [
+  {
+   "code": "HSA.REI.B.4",
+   "text": "Solve quadratic equations in one variable."
+  },
+  {
+   "code": "HSA.REI.B.4.A",
+   "text": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)2 = q that has the same solutions. Derive the quadratic formula from this form."
+  },
+  {
+   "code": "HSF.IF.C.7.A",
+   "text": "Graph linear and quadratic functions and show intercepts, maxima, and minima."
+  },
+  {
+   "code": "HSA.CED.A.2",
+   "text": "Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales."
+  },
+  {
+   "code": "HSF.IF.B.4",
+   "text": "For a function that models a relationship between two quantities, interpret key features of graphs and tables in terms of the quantities, and sketch graphs showing key features given a verbal description of the relationship. Key features include: intercepts; intervals where the function is increasing, decreasing, positive, or negative; relative maximums and minimums; symmetries; end behavior; and periodicity."
+  },
+  {
+   "code": "HSF.BF.B.3",
+   "text": "Identify the effect on the graph of replacing f(x) by f(x) + k, k f(x), f(kx), and f(x + k) for specific values of k (both positive and negative); find the value of k given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them."
+  },
+  {
+   "code": "HSF.IF.C.7",
+   "text": "Graph functions expressed symbolically and show key features of the graph, by hand in simple cases and using technology for more complicated cases."
+  },
+  {
+   "code": "HSS.ID.B.6.A",
+   "text": "Fit a function to the data; use functions fitted to data to solve problems in the context of the data. Use given functions or choose a function suggested by the context. Emphasize linear, quadratic, and exponential models."
+  }
+ ],
+ "diagnose": {
+  "items": [
+   "(x-3)^{2}=\\ ?",
+   "f(x)=x^{2}-6x+5:\\ \\ f(0)=\\ ?",
+   "y=(x+2)^{2}-5\\text{ is }y=x^{2}\\text{ moved }?"
+  ],
+  "doneWhen": "All three answers are written without a calculator, and you can say what f(0) tells you about the graph.",
+  "notes": "Answers: Q1 (x-3)^2 = x^2 - 6x + 9 (square the bracket: (x-3)(x-3), middle term 2*(-3)x = -6x). Q2 f(0) = 0 - 0 + 5 = 5, the y-intercept (0,5). Q3 y=(x+2)^2-5 is y=x^2 moved LEFT 2 and DOWN 5. Verbal misconceptions: (x-3)^2 is NOT x^2 - 9 (the middle term is missing); f(0) is the y-intercept, not the x-intercept; x+2 moves the graph LEFT, not right. Adaptive routing: if >30% miss Q1, route to slide 7 (standard form; expanding) and slow down there; if >30% miss Q3, route to slide 5 (vertex form; read h with the opposite sign); if >30% miss Q2, route to slide 7 (c is f(0))."
+ },
+ "blocks": [
+  {
+   "title": "Vertex Form: Read the Turning Point",
+   "rules": [
+    "f(x)=a(x-h)^{2}+k,\\quad\\text{vertex }(h,k),\\quad x=h",
+    "a>0\\text{: opens up (min }k)\\quad a<0\\text{: opens down (max }k)"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Graph }f(x)=2(x-3)^{2}-1",
+     "steps": [
+      "\\text{Vertex }(3,-1),\\ \\text{axis }x=3",
+      "f(2)=f(4)=2(1)^{2}-1=1",
+      "f(1)=f(5)=2(4)-1=7"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}f(x)=-(x+2)^{2}+5:\\\\ \\text{vertex, direction, extreme value}\\end{array}",
+     "steps": [
+      "h=-2,\\ k=5\\Rightarrow(-2,\\,5)",
+      "a=-1<0:\\ \\text{opens down}",
+      "\\text{maximum value }5\\text{ at }x=-2"
+     ]
+    }
+   ],
+   "fig": {
+    "file": "figs/L2-1-2_vertex.png",
+    "w": 1230,
+    "h": 930
+   },
+   "notes": "Example 1: f(x)=2(x-3)^2-1. h=3, k=-1, so the vertex is (3,-1) and the axis is x=3. a=2>0 so it opens up with minimum value -1. Symmetry: one step from the axis (x=2 and x=4) gives f=2(1)^2-1=1; two steps (x=1 and x=5) gives f=2(4)-1=7. Example 2: f(x)=-(x+2)^2+5 = -(x-(-2))^2+5, so h=-2, k=5, vertex (-2,5), axis x=-2; a=-1<0 opens down; maximum value 5. Link to Lesson 1-2: this is y=x^2 stretched by 2, moved right 3 and down 1. Verbal misconceptions: (1) x-3 moves the graph RIGHT, and the vertex is (3,-1), not (-3,-1); (2) in (x+2) the h is -2, so flip the sign; (3) k is the extreme value, not the x-coordinate; (4) a=2 stretches vertically: the heights above the vertex are 2 and 8, not steps of 2 sideways. Adaptive routing: if >30% miss the sign of h in Example 2, pause and do one more with (x+4); if >30% miss Q3 of the Diagnose, stay on this slide; if most students are secure, go straight to slide 6."
+  },
+  {
+   "title": "Writing Vertex Form from Key Features",
+   "rules": [
+    "f(x)=a(x-h)^{2}+k",
+    "\\text{1. Put the vertex }(h,k)\\text{ in. 2. Use the extra point to find }a"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Vertex }(-2,\\,5),\\ \\text{through }(0,\\,-3)",
+     "steps": [
+      "f(x)=a(x+2)^{2}+5",
+      "-3=a(2)^{2}+5\\Rightarrow a=-2",
+      "f(x)=-2(x+2)^{2}+5"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{Maximum value }12\\text{ at}\\\\ \\text{}x=3,\\ \\text{through }(1,\\,4)\\end{array}",
+     "steps": [
+      "f(x)=a(x-3)^{2}+12",
+      "4=a(-2)^{2}+12\\Rightarrow a=-2",
+      "f(x)=-2(x-3)^{2}+12"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Example 1: vertex (-2,5) gives the bracket (x+2) and k=5. Substitute (0,-3): -3 = a(0+2)^2 + 5 = 4a + 5, so 4a = -8 and a = -2. f(x) = -2(x+2)^2 + 5. Check: f(0) = -2(4)+5 = -3. Example 2: a maximum value of 12 at x=3 means the vertex is (3,12). Substitute (1,4): 4 = a(1-3)^2 + 12 = 4a + 12, so 4a = -8 and a = -2. f(x) = -2(x-3)^2 + 12. Check: f(1) = -2(4)+12 = 4. Verbal misconceptions: (1) vertex (-2,5) gives (x+2), not (x-2); (2) square the bracket BEFORE multiplying by a: a(x+2)^2 is not (ax+2a)^2; (3) 'maximum value 12 at x=3' gives the vertex (3,12), not (12,3); (4) the sign of a is decided by the picture: the graph falls from the vertex, so a is negative. Adaptive routing: if >30% miss the sign of h, route back to slide 5; if >30% get a wrong sign for a, redo Example 1 with a sketch first; Mastery Gate Q1 routes back here (slide 6)."
+  },
+  {
+   "title": "Standard Form: What Each Term Tells You",
+   "rules": [
+    "f(x)=ax^{2}+bx+c,\\quad a\\neq 0",
+    "f(0)=c\\Rightarrow\\text{y-intercept }(0,\\,c)",
+    "\\text{axis: }x=-\\dfrac{b}{2a}"
+   ],
+   "examples": [
+    {
+     "q": "\\begin{array}{c}f(x)=x^{2}-6x+5:\\\\ \\text{name }a,\\,b,\\,c\\text{ and the axis}\\end{array}",
+     "steps": [
+      "a=1,\\ b=-6,\\ c=5",
+      "\\text{y-intercept }(0,\\,5)",
+      "x=-\\dfrac{-6}{2(1)}=3"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}f(x)=-2x^{2}+8x-3:\\\\ \\text{axis and vertex}\\end{array}",
+     "steps": [
+      "x=-\\dfrac{8}{2(-2)}=2",
+      "f(2)=-8+16-3=5",
+      "\\text{vertex }(2,\\,5),\\ \\text{max value }5"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Terms: ax^2 is the leading term (a the leading coefficient); bx is the linear term (b the linear coefficient); c is the constant term. Example 1: f(x)=x^2-6x+5 has a=1, b=-6, c=5. f(0)=c=5 so the y-intercept is (0,5). Axis x = -b/(2a) = -(-6)/(2*1) = 3. Example 2: f(x)=-2x^2+8x-3 has a=-2, b=8, c=-3. Axis x = -8/(2*(-2)) = -8/-4 = 2. Substitute: f(2) = -2(4) + 16 - 3 = 5. Vertex (2,5); a<0 so opens down and 5 is the maximum value. Verbal misconceptions: (1) the sign belongs to the coefficient: b=-6 in Example 1, not 6; (2) the y-intercept is c, not b; (3) -b/(2a) is only the x-coordinate: substitute to get the y-coordinate; (4) in Example 2 the denominator is 2a=-4, so the two negatives make a positive 2. Adaptive routing: if >30% give the wrong axis in Example 2, redo with the sign of b and a written in brackets; Mastery Gate Q2 routes back here (slide 7)."
+  },
+  {
+   "title": "Graphing from Standard Form",
+   "rules": [
+    "\\text{vertex }\\Bigl(-\\dfrac{b}{2a},\\ f\\bigl(-\\dfrac{b}{2a}\\bigr)\\Bigr)",
+    "(0,\\,c)\\ \\text{and its mirror }\\bigl(-\\dfrac{b}{a},\\,c\\bigr)\\text{ have equal height}"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Graph }f(x)=x^{2}-4x+3",
+     "steps": [
+      "x=2,\\ \\ \\text{vertex }(2,-1)",
+      "\\text{y-intercept }(0,3),\\ \\text{mirror }(4,3)",
+      "a=1>0:\\ \\text{opens up; plot and join}"
+     ]
+    },
+    {
+     "q": "\\text{Graph }f(x)=-x^{2}+4x+1",
+     "steps": [
+      "x=2,\\ \\ \\text{vertex }(2,\\,5)",
+      "\\text{y-intercept }(0,1),\\ \\text{mirror }(4,1)",
+      "a=-1<0:\\ \\text{opens down}"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{Same parabola:}\\\\ \\text{}(x-3)^{2}-4\\text{ in standard form}\\end{array}",
+     "steps": [
+      "(x-3)^{2}-4=x^{2}-6x+9-4",
+      "=x^{2}-6x+5"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Method: (1) direction from the sign of a; (2) axis x=-b/(2a); (3) vertex by substituting the axis value; (4) y-intercept (0,c) and its mirror image across the axis, (2h, c); (5) plot, join with a smooth curve, label. Example 1: f(x)=x^2-4x+3: a=1 opens up; axis 4/2=2; f(2)=4-8+3=-1, vertex (2,-1); y-intercept (0,3), mirror (4,3) (4 = 2*2 - 0). Example 2: f(x)=-x^2+4x+1: a=-1 opens down; axis -4/(2*(-1))=2; f(2)=-4+8+1=5, vertex (2,5); y-intercept (0,1), mirror (4,1). Example 3: expand (x-3)^2 = x^2-6x+9, then subtract 4: x^2-6x+5. So vertex form shows the vertex (3,-4) at once; standard form shows the y-intercept (0,5) at once; same function. Verbal misconceptions: (1) the mirror of (0,c) is (-b/a, c), the SAME height, not the same x; (2) forgetting to plot the mirror image; (3) the parabola is symmetric about the axis, not about the y-axis (unless b=0); (4) plotting the vertex at (-b/(2a), c). Adaptive routing: if >30% miss the vertex y-coordinate, redo the substitution step; Mastery Gate Q3 routes back here (slide 8)."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "f(x)=3(x-5)^{2}-2:\\ \\text{vertex, axis, direction}",
+    "\\text{Vertex }(2,-3),\\ \\text{through }(0,\\,1):\\ \\text{write }f(x)"
+   ],
+   "done": "Done when: the vertex is an ordered pair with the sign of h checked, and a is found by substitution and checked with the given point."
+  },
+  "apply": {
+   "items": [
+    "\\text{Vertex }(3,-1),\\ \\text{through }(5,\\,7):\\ \\text{write }f(x)",
+    "\\begin{array}{c}g(x)=2x^{2}-8x+5:\\\\ a,b,c,\\text{ axis, vertex, y-intercept and its mirror}\\end{array}"
+   ],
+   "done": "Done when: every answer is checked by substituting a point, and g is sketched symmetric about its axis."
+  },
+  "investigate": {
+   "items": [
+    "\\text{Expand }a(x-h)^{2}+k\\text{ and show }h=-\\dfrac{b}{2a}",
+    "\\begin{array}{c}y=(x+3)^{2}-4:\\\\ \\text{why is the vertex not }(3,-4)\\text{?}\\end{array}"
+   ],
+   "done": "Done when: your argument uses expanding or the graph, not just a computed answer."
+  },
+  "notes": "Answers. Practice 1: vertex (5,-2), axis x=5, opens up (a=3>0). Practice 2: 1 = a(0-2)^2 - 3 = 4a - 3, so a = 1 and f(x) = (x-2)^2 - 3. Apply 1: 7 = a(5-3)^2 - 1 = 4a - 1, so a = 2 and f(x) = 2(x-3)^2 - 1. Apply 2: g has a=2, b=-8, c=5; axis x = 8/4 = 2; vertex g(2) = 8-16+5 = -3, so (2,-3); y-intercept (0,5), mirror (4,5); opens up. Investigate 1: a(x-h)^2 + k = ax^2 - 2ahx + (ah^2 + k), so b = -2ah and h = -b/(2a). Investigate 2: x+3 = x-(-3), so h=-3 and the vertex is (-3,-4); the point (3,-4) is a different point and is NOT on the graph (y at x=3 is 32). Verbal misconceptions: reading the sign of h as written; forgetting to square the bracket; swapping the coordinates of the vertex. Adaptive routing: if >30% of Practice students miss item 1, send them to slide 5 with a partner; if Apply students stall on the mirror point, point to slide 8; students who finish Investigate move on to the Production task; students stuck on the Practice sequence use the slide 5-8 examples."
+ },
+ "production": {
+  "title": "Designing a Footbridge Arch",
+  "context": "A pedestrian footbridge in a Red Sea coastal tourism development, in the spirit of Vision 2030, has a parabolic arch. Standing on the left foot of the arch, the walkway rises to a highest point of 12 metres above the water at a horizontal distance of 20 metres, and the right foot is level with the left. Take x as the horizontal distance in metres from the left foot and y as the height in metres. These are invented model values for the classroom.",
+  "given": [
+   "\\text{Vertex }(20,\\,12),\\ \\ \\text{left foot }(0,\\,0)",
+   "y=a(x-h)^{2}+k"
+  ],
+  "tasks": [
+   "Write the height y in vertex form, using the vertex and the left foot.",
+   "Expand to standard form, name a, b and c, and say what c = 0 means for the arch.",
+   "Use the axis formula to confirm the axis of symmetry, then find the height 5 metres from the left foot and the other point at that height."
+  ],
+  "doneWhen": [
+   "The vertex form is checked by substituting the left foot.",
+   "The standard form is shown as an expansion with a, b and c named.",
+   "The axis x = 20 is confirmed with the formula.",
+   "Every answer has units (metres) and a sentence in context."
+  ],
+  "hint": "Hint for solving: put (20, 12) in first, then use (0, 0) to find a; the right foot is the mirror image of the left foot.",
+  "notes": "Answers. (a) y = a(x-20)^2 + 12 with (0,0): 0 = 400a + 12, so a = -12/400 = -0.03; y = -0.03(x-20)^2 + 12. (b) Expand: -0.03(x^2 - 40x + 400) + 12 = -0.03x^2 + 1.2x - 12 + 12 = -0.03x^2 + 1.2x. So a = -0.03, b = 1.2, c = 0; c = 0 means the arch starts at ground (water) level at x = 0 (the left foot is the y-intercept). (c) Axis: x = -1.2/(2*(-0.03)) = 1.2/0.06 = 20, so the axis is x = 20. Height at x = 5: -0.03(5-20)^2 + 12 = -0.03(225) + 12 = 5.25 m. Mirror of x = 5 across x = 20 is x = 35, and y(35) = 5.25 m too (also the right foot is at x = 40, the mirror of 0). Verbal misconceptions: (1) 12 is the maximum height k, not a; (2) a is negative because the arch opens down; (3) c is the height at x = 0, which is 0 here, not 12; (4) the other point at 5.25 m is at x = 35, not x = -5. Adaptive routing: if >30% cannot find a, route to slide 6 (writing vertex form); if >30% mis-expand, route to slide 8 Example 3; early finishers: find the width of the arch at height 9 m (-0.03(x-20)^2 = -3, x = 20 +/- 10, so x = 10 and 30, width 20 m)."
+ },
+ "gate": {
+  "items": [
+   "\\begin{array}{c}\\text{Vertex }(-1,\\,4),\\ \\text{through }(1,\\,-4):\\\\ \\text{write }f(x)\\end{array}",
+   "\\begin{array}{c}f(x)=x^{2}+6x+5:\\\\ \\text{state }c,\\ \\text{the axis and the vertex}\\end{array}",
+   "\\begin{array}{c}f(x)=-x^{2}+2x+3:\\\\ \\text{direction, axis, vertex, mirror of the y-intercept}\\end{array}"
+  ],
+  "notes": "Answers. Q1: f(x)=a(x+1)^2+4; -4 = a(2)^2 + 4 = 4a + 4, so a = -2; f(x) = -2(x+1)^2 + 4. Q2: c = 5; axis x = -6/(2*1) = -3; vertex f(-3) = 9 - 18 + 5 = -4, so (-3,-4). Q3: a = -1, opens down; axis x = -2/(2*(-1)) = 1; vertex f(1) = -1 + 2 + 3 = 4, so (1,4); y-intercept (0,3), mirror (2,3). Verbal misconceptions: Q1 using (x-1) for h=-1 or squaring after multiplying; Q2 stating the axis as x=3 (dropping the sign of b) or stating c=6; Q3 using the vertex as (1,3) or the mirror as (-2,3). Adaptive routing: Q1 wrong -> block 2, slide 6 (Writing Vertex Form); Q2 wrong -> block 3, slide 7 (Standard Form); Q3 wrong -> block 4, slide 8 (Graphing from Standard Form). Students with 3/3 move to Investigate; students below 2/3 join the targeted clinic."
+ },
+ "smart": {
+  "create": [
+   "Invent a parabola in the first quadrant: choose a vertex and one extra point, and write it in vertex form.",
+   "Expand it to standard form and list a, b, c, the axis, the vertex and the y-intercept.",
+   "Swap with a partner and check that both forms agree by substituting a point."
+  ],
+  "createDone": "Done when: both forms are written, the partner's check is signed, and one sentence says which form was quicker for finding the vertex.",
+  "exitIntro": "Exit ticket: write your answers on a sticky note and place it on the door.",
+  "exit": [
+   "f(x)=x^{2}-8x+10:\\ \\text{axis and vertex}",
+   "\\text{Vertex }(4,-6),\\ a=1:\\ \\text{write }f(x)"
+  ],
+  "next": "Next lesson: 2-3 Factored Form of a Quadratic Function.",
+  "notes": "Exit answers. Q1: axis x = 8/2 = 4; f(4) = 16 - 32 + 10 = -6; vertex (4,-6). Q2: f(x) = (x-4)^2 - 6 (check: expands to x^2 - 8x + 10, the same function as Q1). Create: any valid pair works; check that the vertex form uses the opposite sign of h, that a is found from the extra point, and that the expanded form matches (e.g. vertex (2,5) through (0,1): a=-1, f=-(x-2)^2+5=-x^2+4x+1). Verbal misconceptions: writing (x+4) for h=4; leaving the vertex as only the x-value. Adaptive routing: if >30% miss Q1, begin the next lesson with slide 7 (Standard Form) for 5 minutes; if most are secure, link forward to factored form (the x-intercepts)."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "\\begin{array}{c}h(x)=2x^{2}-12x+7:\\\\ x\\text{-coordinate of the vertex?}\\end{array}",
+    "\\text{A) }-3\\quad \\text{B) }2\\quad \\text{C) }3\\quad \\text{D) }6"
+   ],
+   "steps": [
+    "x=-\\dfrac{b}{2a}=-\\dfrac{-12}{2(2)}",
+    "x=\\dfrac{12}{4}=3\\quad\\Rightarrow\\ \\text{C)}"
+   ]
+  },
+  "gat": {
+   "q": [
+    "A=\\text{least value of }x^{2}-6x+10",
+    "B=1"
+   ],
+   "steps": [
+    "x^{2}-6x+10=(x-3)^{2}+1",
+    "(x-3)^{2}\\geq 0\\Rightarrow\\ \\text{least value }1",
+    "A=B"
+   ]
+  },
+  "saat": {
+   "q": [
+    "\\begin{array}{c}\\text{Maximum value}\\\\ \\text{of }f(x)=-x^{2}+6x-5\\end{array}",
+    "\\text{A) }3\\quad \\text{B) }4\\quad \\text{C) }-5\\quad \\text{D) }6"
+   ],
+   "steps": [
+    "x=-\\dfrac{6}{2(-1)}=3",
+    "f(3)=-9+18-5=4\\quad\\Rightarrow\\ \\text{B)}"
+   ]
+  },
+  "notes": "SAT (Advanced Math, calculator allowed): answer C. x = -b/(2a) = 12/4 = 3. Traps: A) -3 drops the minus of -b; B) 2 is just a; D) 6 is -b/a (forgetting the 2). GAT/Qudurat quantitative comparison: A = B. x^2-6x+10 = (x-3)^2 + 1 and a square is at least 0, so the least value is 1; answer 'the two quantities are equal'. Traps: reading c=10 as the least value, or assuming the least value is 0 (then A<B). SAAT/Tahsili (four options, no calculator): answer B. Axis x = 3, f(3) = -9 + 18 - 5 = 4. Traps: A) 3 is the axis, not the value; C) -5 is c; D) 6 is b. Verbal misconceptions: -b/(2a) gives the x-coordinate only; the maximum value is the y-coordinate. Adaptive routing: if >30% miss any item, route to slide 7 for the axis formula, or slide 6 for the vertex-form reading."
+ },
+ "recap": "A parabola has two views: vertex form shows its turning point, standard form shows its y-intercept, and the axis x = -b/(2a) links them."
+}

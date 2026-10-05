@@ -1,0 +1,163 @@
+{
+ "id": "L2-4",
+ "outName": "Lesson 2-4 Overview of Complex Numbers presentation",
+ "grade": "GRADE 10",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 2",
+ "lessonNo": "Lesson 2-4",
+ "titleLines": [
+  "Overview of",
+  "Complex Numbers"
+ ],
+ "topicTitle": "Quadratic Functions and Equations",
+ "titleMath": "i^{2}=-1,\\quad z=a+bi",
+ "codes": "HSN.CN.A.1 \u00b7 HSN.CN.A.2 \u00b7 HSN.CN.A.3 \u00b7 HSN.CN.C.8 \u00b7 HSA.REI.B.4.B",
+ "eq": null,
+ "mps": null,
+ "objectives": [
+  "Demonstrate the role of the imaginary unit i in the system of complex numbers.",
+  "Evaluate expressions involving the imaginary unit i and complex numbers."
+ ],
+ "vocab": [
+  "complex number",
+  "imaginary unit"
+ ],
+ "standards": [
+  {
+   "code": "HSN.CN.A.1",
+   "text": "Know there is a complex number i such that i2 = -1, and every complex number has the form a + bi with a and b real."
+  }
+ ],
+ "diagnose": {
+  "items": [
+   "\\sqrt{72}=\\ ?",
+   "(x+3)(x-2)=\\ ?",
+   "\\text{Discriminant of }x^{2}+2x+5\\text{ is }\\ ?"
+  ],
+  "doneWhen": "All three answers are written without a calculator, and you can say what a negative discriminant tells you about real solutions.",
+  "notes": "Speaker notes with answers, routing cues (if more than 30% miss Q1, ...) and verbal misconceptions."
+ },
+ "blocks": [
+  {
+   "title": "The imaginary unit i",
+   "rules": [
+    "i=\\sqrt{-1},\\qquad i^{2}=-1",
+    "i^{1}=i,\\ \\ i^{2}=-1,\\ \\ i^{3}=-i,\\ \\ i^{4}=1"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Simplify: }\\sqrt{-49}",
+     "steps": [
+      "=\\sqrt{49}\\cdot\\sqrt{-1}",
+      "=7i"
+     ]
+    },
+    {
+     "q": "\\text{Evaluate: }i^{27}",
+     "steps": [
+      "27=4\\cdot 6+3",
+      "i^{27}=i^{3}=-i"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Step-by-step solutions, misconceptions, routing."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "\\text{Simplify }\\sqrt{-75}"
+   ],
+   "done": "Done when: both are written as a + bi with no skipped steps."
+  },
+  "apply": {
+   "items": [
+    "\\text{Write }\\dfrac{2+3i}{1-2i}\\text{ as }a+bi"
+   ],
+   "done": "Done when: ..."
+  },
+  "investigate": {
+   "items": [
+    "\\text{Why is }(a+bi)(a-bi)\\text{ always real?}"
+   ],
+   "done": "Done when: ..."
+  },
+  "notes": "Answers for all items."
+ },
+ "production": {
+  "title": "the pump motor current",
+  "context": "Prose only, no math symbols. Saudi / Vision 2030 context where natural, labelled as model values.",
+  "given": [
+   "Z=3+4i\\ \\ (\\Omega)",
+   "I=\\dfrac{V}{Z},\\quad V=120\\text{ V}"
+  ],
+  "tasks": [
+   "Write the current I in the form a + bi.",
+   "Find the size (modulus) of the current.",
+   "Explain why you multiplied by the conjugate."
+  ],
+  "doneWhen": [
+   "a",
+   "b",
+   "c",
+   "d"
+  ],
+  "hint": "Hint for solving: ...",
+  "notes": "Full solution."
+ },
+ "gate": {
+  "items": [
+   "\\text{Evaluate }i^{50}",
+   "\\text{Multiply }(2+i)(3-2i)",
+   "\\text{Simplify }\\dfrac{4}{1+i}"
+  ],
+  "notes": "Answers; Q1 missed -> block 1 etc."
+ },
+ "smart": {
+  "create": [
+   "Write one ...",
+   "Write a full solution on the back.",
+   "Swap with a partner and solve theirs."
+  ],
+  "createDone": "Done when: ...",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\text{Solve }x^{2}+4x+13=0",
+   "\\text{Write the answers as }a+bi"
+  ],
+  "next": "Next lesson: 2-5 Completing the Square.",
+  "notes": "Worked solutions."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "\\text{Real solutions of }x^{2}+2x+5=0:\\ \\text{how many?}"
+   ],
+   "steps": [
+    "\\Delta=b^{2}-4ac=4-20=-16",
+    "\\Delta<0\\Rightarrow\\text{ none}"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\text{50th term of }i,\\,-1,\\,-i,\\,1,\\dots"
+   ],
+   "steps": [
+    "50=4\\cdot 12+2",
+    "\\text{2nd term}=-1"
+   ]
+  },
+  "saat": {
+   "q": [
+    "(2+3i)(2-3i)=\\ ?"
+   ],
+   "steps": [
+    "=4-6i+6i-9i^{2}",
+    "=4+9=13"
+   ]
+  },
+  "notes": "Steps, misconceptions."
+ },
+ "recap": "i squared is minus one: add, multiply, use conjugates to divide, and solve any quadratic."
+}

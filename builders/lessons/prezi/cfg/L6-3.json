@@ -1,0 +1,291 @@
+{
+ "id": "L6-3",
+ "outName": "Lesson 6-3 Logarithms presentation",
+ "grade": "GRADE 11",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 6",
+ "lessonNo": "Lesson 6-3",
+ "titleLines": [
+  "Logarithms"
+ ],
+ "topicTitle": "Exponential and Logarithmic Functions",
+ "titleMath": "\\log_{b}x=y\\Leftrightarrow b^{y}=x",
+ "codes": "HSF.BF.B.4.A · HSF.BF.B.5 · HSF.LE.A.4",
+ "eq": "How can we use logarithms and relate them to exponents?",
+ "mps": [
+  "MP.2",
+  "MP.5"
+ ],
+ "objectives": [
+  "Understand and evaluate logarithms.",
+  "Analyze common logarithms and natural logarithms.",
+  "Convert between exponential and logarithmic forms.",
+  "Use logarithms to solve problems involving exponential models.",
+  "Evaluate logarithms using technology."
+ ],
+ "vocab": [
+  "common logarithm",
+  "logarithm",
+  "logarithmic function",
+  "natural logarithm",
+  "order of magnitude"
+ ],
+ "standards": [
+  {
+   "code": "HSF.BF.B.4.A",
+   "text": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse."
+  },
+  {
+   "code": "HSF.BF.B.5",
+   "text": "Understand the inverse relationship between exponents and logarithms and use this relationship to solve problems involving logarithms and exponents."
+  },
+  {
+   "code": "HSF.LE.A.4",
+   "text": "For exponential models, express as a logarithm the solution to ab^(ct) = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate the logarithm using technology."
+  }
+ ],
+ "diagnose": {
+  "items": [
+   "\\text{Evaluate }2^{5}",
+   "\\text{Solve }3^{x}=81",
+   "2^{x}=20:\\ x\\text{ is between which integers?}"
+  ],
+  "doneWhen": "Done when: all three are answered without a calculator, and for the last one you can name the two powers of 2 that trap the answer.",
+  "notes": "Answers: Q1 2^5 = 32. Q2 3^x = 81, and 3^4 = 81 so x = 4. Q3 2^4 = 16 and 2^5 = 32, and 20 sits between them, so x is between 4 and 5. Q3 is the hook for the lesson: no whole number works, and we need a new tool. Verbal misconceptions: Q1 students compute 2 x 5 = 10; Q2 students divide 81 by 3 = 27; Q3 students say x = 10 (20 divided by 2). Adaptive routing: if >30% miss Q1 or Q2, pause and rebuild the meaning of an exponent before slide 5 (use 2^1, 2^2, 2^3 on the board). If >30% miss Q3, that is expected: go straight to slide 5 block 1 and return to Q3 on slide 7. If everyone is secure, jump to the Investigate item on slide 9."
+ },
+ "blocks": [
+  {
+   "title": "A Logarithm Is an Exponent",
+   "rules": [
+    "\\log_{b}x=y\\iff b^{y}=x",
+    "b>0,\\ b\\neq1,\\ x>0"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Write }3^{4}=81\\text{ as a logarithm}",
+     "steps": [
+      "\\text{base }3,\\ \\text{exponent }4,\\ \\text{result }81",
+      "\\log_{3}81=4"
+     ]
+    },
+    {
+     "q": "\\text{Evaluate }\\log_{2}32",
+     "steps": [
+      "2^{y}=32",
+      "2^{5}=32",
+      "\\log_{2}32=5"
+     ]
+    },
+    {
+     "q": "\\text{Evaluate }\\log_{7}\\dfrac{1}{49}",
+     "steps": [
+      "7^{y}=\\dfrac{1}{49}",
+      "7^{-2}=\\dfrac{1}{49}",
+      "\\log_{7}\\dfrac{1}{49}=-2"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Ex1: 3^4 = 81 -> base 3 stays the base, exponent 4 becomes the answer: log_3(81) = 4. Ex2: ask '2 to what power gives 32?'; 2^5 = 32 so log_2(32) = 5. Ex3: 7^(-2) = 1/49, so log_7(1/49) = -2 (a log can be negative; its argument cannot). Vocabulary: a logarithm is the exponent; the function f(x) = log_b(x) is called a logarithmic function, the inverse of b^x, and we graph it in Lesson 6-4. Domain: b > 0, b not 1, x > 0 because no power of a positive base gives zero or a negative number. Verbal misconceptions: 'cancel' the log and the base like factors; swap base and result and write log_81(3) = 4; believe a logarithm can never be negative. Adaptive routing: if >30% miss Gate Q1, return to this slide and redo Ex2 with a new number; if >30% hesitate on Ex3, show 7^(-1) and 7^(-2) first, then 7^0 = 1 so log_7(1) = 0."
+  },
+  {
+   "title": "Common and Natural Logarithms",
+   "rules": [
+    "\\log x=\\log_{10}x",
+    "\\ln x=\\log_{e}x,\\quad e\\approx2.718"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Evaluate }\\log 1000",
+     "steps": [
+      "10^{y}=1000",
+      "\\log 1000=3"
+     ]
+    },
+    {
+     "q": "\\text{Evaluate }\\log 0.001",
+     "steps": [
+      "10^{y}=\\dfrac{1}{1000}=10^{-3}",
+      "\\log 0.001=-3"
+     ]
+    },
+    {
+     "q": "\\text{Evaluate }\\ln e^{5}",
+     "steps": [
+      "e^{y}=e^{5}",
+      "\\ln e^{5}=5"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Ex1: log means base 10, 10^3 = 1000 so log 1000 = 3 (count the zeros). Ex2: 0.001 = 1/1000 = 10^(-3) so log 0.001 = -3. Ex3: ln means base e; e^y = e^5 gives y = 5, so ln(e^5) = 5 (the log and the exponential undo each other). Say aloud: the common logarithm has no base written and means base 10; the natural logarithm is written ln and means base e. Verbal misconceptions: 'log with no base means base e' (confusing log with ln); log 1000 = 1000/10 = 100; ln e^5 = 5e. Adaptive routing: if >30% give base e for log, redo Ex1 with the calculator LOG key and compare with LN on slide 7; if >30% miss Ex3, write e^y = e^5 on the board and ask 'e to what power gives e^5?'. Gate Q2 routes here (slide 6)."
+  },
+  {
+   "title": "Evaluating with Technology",
+   "rules": [
+    "\\text{integer powers: convert and read off}",
+    "\\text{otherwise: use LOG, LN or the log key}"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Evaluate }\\log 50\\text{ and }\\ln 50",
+     "steps": [
+      "\\log 50\\approx1.699",
+      "\\ln 50\\approx3.912"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{Estimate, then}\\\\ \\text{evaluate }\\log_{2}20\\end{array}",
+     "steps": [
+      "2^{4}=16<20<2^{5}=32",
+      "4<\\log_{2}20<5",
+      "\\log_{2}20\\approx4.322"
+     ]
+    },
+    {
+     "q": "\\begin{array}{c}\\text{Order of magnitude}\\\\ \\text{of }6.3\\times10^{8}\\end{array}",
+     "steps": [
+      "\\log(6.3\\times10^{8})\\approx8.80",
+      "\\text{rounds to }9\\Rightarrow10^{9}"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Ex1: calculator LOG gives 1.69897 -> 1.699; LN gives 3.91202 -> 3.912; they differ because the bases differ (10 vs e). Ex2: 2^4 = 16 < 20 < 2^5 = 32, so log_2(20) lies between 4 and 5 (this answers diagnostic Q3); a graphing calculator or the log(base, x) key gives 4.3219 -> 4.322; always estimate first to catch keying errors. Ex3: log(6.3 x 10^8) = 8.799 -> rounds to 9, so the order of magnitude is 10^9 (the number has 9 digits). Verbal misconceptions: students type log(2)(20) or log 20 / 2; students think log 50 and ln 50 must match because 'both are logs of 50'; students report 8.8 as the order of magnitude instead of rounding to the integer. Adaptive routing: if >30% cannot place log_2(20) between 4 and 5, go back to slide 5 Ex2 and list 2^1 to 2^6; if >30% miss the rounding in Ex3, ask 'how many digits?'. Gate Q1 routes to slide 5 and Q2 to slide 6."
+  },
+  {
+   "title": "Logarithms and Exponential Models",
+   "rules": [
+    "b^{t}=k\\iff t=\\log_{b}k",
+    "A=A_{0}b^{t}\\Rightarrow t=\\log_{b}\\dfrac{A}{A_{0}}"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Solve }5\\cdot2^{t}=40",
+     "steps": [
+      "2^{t}=8",
+      "t=\\log_{2}8=3"
+     ]
+    },
+    {
+     "q": "\\text{Solve }1000(1.05)^{t}=2000",
+     "steps": [
+      "1.05^{t}=2",
+      "t=\\log_{1.05}2",
+      "t\\approx14.2"
+     ]
+    },
+    {
+     "q": "\\text{Solve }200e^{0.03t}=600",
+     "steps": [
+      "e^{0.03t}=3\\Rightarrow0.03t=\\ln 3",
+      "t=\\dfrac{\\ln 3}{0.03}",
+      "t\\approx36.6"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Ex1: divide by 5 FIRST: 2^t = 8, convert: t = log_2(8) = 3. Check 5 x 2^3 = 40. Ex2: divide by 1000: 1.05^t = 2; convert: t = log_{1.05}(2) = ln2/ln1.05 = 14.2067 -> 14.2 years (model values). Check 1000 x 1.05^14.2 is about 2000. Ex3: divide by 200: e^(0.03t) = 3; take ln of both sides (ln and e undo each other): 0.03t = ln 3 = 1.0986; t = 1.0986/0.03 = 36.62 -> 36.6. Link to HSF.LE.A.4: solutions of ab^(ct) = d are written as a logarithm and evaluated with technology. Verbal misconceptions: students divide 40 by 2 or subtract 2 instead of isolating the power; students take the log before dividing by 5 and write log(5 x 2^t) = 5 log(2^t) wrongly; students write t = ln3 / 0.03 as ln(3/0.03). Adaptive routing: if >30% miss Gate Q3, return to this slide, redo Ex2 and insist on 'isolate, then convert'; if >30% cannot finish Ex3, practice with base 10 first (10^t = 50). Gate Q3 routes here (slide 8)."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "\\text{Write }4^{3}=64\\text{ as a logarithm}",
+    "\\text{Evaluate }\\log_{2}\\dfrac{1}{8}"
+   ],
+   "done": "Done when: each answer is checked by rewriting it in exponential form."
+  },
+  "apply": {
+   "items": [
+    "6000(1.18)^{t}=50000",
+    "\\text{Solve for }t\\ (1\\text{ d.p.})"
+   ],
+   "done": "Done when: the equation is set up before using a calculator, and the answer states units (years)."
+  },
+  "investigate": {
+   "items": [
+    "\\text{Why is }\\log_{b}x\\text{ undefined for }x\\le0\\text{?}",
+    "\\text{Show that }\\log_{b}(b^{k})=k"
+   ],
+   "done": "Done when: your argument uses what a logarithm means, not only that the calculator gives an error."
+  },
+  "notes": "Answers. Practice: 4^3 = 64 gives log_4(64) = 3. log_2(1/8): 2^(-3) = 1/8 so the answer is -3. Apply (model values for a Jeddah desalination storage tank, 6000 m3 growing 18% a year): 6000(1.18)^t = 50000 -> 1.18^t = 25/3 = 8.333 -> t = log_{1.18}(8.333) = ln(8.333)/ln(1.18) = 12.81 -> 12.8 years. Investigate: no power of a positive base gives 0 or a negative number, so b^y = x has no solution when x <= 0; and b^k = b^k means the exponent needed to reach b^k is k, so log_b(b^k) = k. Verbal misconceptions: students write log_4(3) = 64 (swapped roles); students divide 50000 by 6000 and call 8.3 the answer; students say log of a negative is 'negative infinity'. Adaptive routing: if >30% miss Practice item 1, route to slide 5 block 1; if >30% cannot set up the Apply equation, route to slide 8 block 4 Ex2; if Investigate is secure early, pose: what is log_b(1) for every base?"
+ },
+ "production": {
+  "title": "Red Sea Visitors: When Do We Reach 3 Million?",
+  "context": "A Red Sea destination under Vision 2030 plans for growth in yearly visitors. In this model, the destination welcomed 1.2 million visitors in the base year 2026 and visitor numbers grow by 12 percent every year. All numbers are model values, not official statistics. Time t is measured in years after 2026.",
+  "given": [
+   "V(t)=1.2(1.12)^{t}\\ \\ (\\text{millions})",
+   "V(t)=3"
+  ],
+  "tasks": [
+   "Write the equation to be solved for t and isolate the exponential term.",
+   "Use a logarithm to write the exact solution, then evaluate it to one decimal place.",
+   "Check by substitution, state the calendar year, and explain why dividing 3 by 1.2 does not answer the question."
+  ],
+  "doneWhen": [
+   "The exponential term is isolated before any logarithm is taken.",
+   "The exact logarithm answer is written before the decimal.",
+   "The answer is checked by substituting back into the model.",
+   "The conclusion names units and the year, and says it is a model value."
+  ],
+  "hint": "Hint for solving: divide both sides by 1.2 first. Then ask: 1.12 to what power gives 2.5?",
+  "notes": "Full solution (model values). Equation: 1.2(1.12)^t = 3. Isolate: 1.12^t = 3/1.2 = 2.5. Convert: t = log_{1.12}(2.5) = ln(2.5)/ln(1.12) = 0.91629/0.11333 = 8.085 -> 8.1 years. Check: 1.2 x 1.12^8.085 = 3.000 million. Year: 2026 + 8.1 = early 2034 in the model. Dividing 3 by 1.2 gives only the growth ratio 2.5, not how many yearly 12 percent increases produce it; the logarithm counts the years. Extension if time: doubling time = ln2/ln1.12 = 6.1 years. Verbal misconceptions: 'divide by 1.12 each time' or 't = 2.5 / 1.12 = 2.2 years'; students round the logarithm early; students forget that t counts years after 2026. Adaptive routing: if >30% cannot isolate 1.12^t, route to slide 8 block 4 Ex1; if the exact form is missing, route to slide 5 block 1 conversion; if >30% finish early, ask for the year when the model reaches 6 million (t = ln5/ln1.12 = 14.2)."
+ },
+ "gate": {
+  "items": [
+   "\\text{Evaluate }\\log_{4}\\dfrac{1}{16}",
+   "\\text{Evaluate }\\ln e^{3}+\\log 100",
+   "\\text{Solve }500(1.04)^{t}=1500\\ (1\\text{ d.p.})"
+  ],
+  "notes": "Answers. Q1: 4^(-2) = 1/16 so the answer is -2. Q2: ln(e^3) = 3 and log 100 = 2, sum = 5. Q3: 1.04^t = 3 -> t = ln3/ln1.04 = 28.01 -> 28.0. Pass = all three correct (or Q1-Q2 correct with a correct set-up for Q3). Common wrong answers: Q1 4 or 1/2 or -4; Q2 3e + 2 or 6 (treating ln as multiplication); Q3 3/1.04 = 2.88, or t = 1500/500 = 3. Verbal misconceptions: swapping base and argument, treating log as a factor, taking the log before dividing. Adaptive routing: Q1 missed -> slide 5 block 1; Q2 missed -> slide 6 block 2 (and slide 7 for technology); Q3 missed -> slide 8 block 4. If >30% miss Q1, reteach block 1 with a fresh example before continuing; if >30% miss Q3, shorten Smart Production and carry it into the next session; never cut the gate."
+ },
+ "smart": {
+  "create": [
+   "Design a one-slide model for a Saudi growth or decay situation of your own (label every number as a model value).",
+   "Show the equation, the isolated exponential, the exact logarithm answer and the decimal with units.",
+   "Add one NON-example: dividing the two values and stopping, with a caption saying what that shortcut actually computes."
+  ],
+  "createDone": "Done when: your slide is checked by substitution and a partner can follow it without you.",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\text{Solve }120e^{0.05t}=360\\text{ exactly}",
+   "\\text{Give }t\\text{ to 1 d.p.}"
+  ],
+  "next": "Next lesson: 6-4 Logarithmic Functions.",
+  "notes": "Exit ticket solution: divide by 120: e^(0.05t) = 3; take ln: 0.05t = ln 3; t = ln3/0.05 = 1.0986/0.05 = 21.97 -> 22.0. Check: 120 e^(1.0986) = 120 x 3 = 360. Verbal misconceptions: writing t = ln(3/0.05); forgetting to divide by 120 first; reporting 21.9 by truncating. Adaptive routing: if >30% miss the exit ticket, open the next lesson with slide 8 block 4 Ex3; strong students may extend to compare doubling times of two growth rates. If time runs short, carry Smart Production into the next session."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "500(1.06)^{t}=1000\\Rightarrow t=\\ ?"
+   ],
+   "steps": [
+    "1.06^{t}=2",
+    "t=\\log_{1.06}2\\approx11.9"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\text{Compare }\\log_{2}64\\text{ and }\\log_{3}243"
+   ],
+   "steps": [
+    "2^{6}=64\\Rightarrow\\log_{2}64=6",
+    "3^{5}=243\\Rightarrow\\log_{3}243=5",
+    "6>5:\\ \\text{first is greater}"
+   ]
+  },
+  "saat": {
+   "q": [
+    "\\text{If }\\log_{4}x=3,\\ \\text{find }\\log_{2}x"
+   ],
+   "steps": [
+    "x=4^{3}=64",
+    "\\log_{2}64=6"
+   ]
+  },
+  "notes": "SAT (Advanced Math, calculator allowed): 500(1.06)^t = 1000; divide by 500: 1.06^t = 2; t = log_{1.06}(2) = ln2/ln1.06 = 11.9. Answer choices would typically include log_{1.06}(1000) (trap: skipped dividing by 500), log_2(1.06) (trap: base and argument swapped) and 2/1.06 (trap: treating t as a factor). GAT/Qudurat (quantitative comparison, no calculator, about 75 seconds): 2^6 = 64 so A = 6; 3^5 = 243 so B = 5; A is greater. Trap: choosing B because 243 > 64; the base decides the exponent, not the size of the number. SAAT/Tahsili (four options, no calculator): log_4(x) = 3 gives x = 64; log_2(64) = 6. Trap: answering 3 (assuming the base does not matter), 12 (4 x 3) or 1.5 (halving). Verbal misconceptions: comparing arguments instead of exponents; swapping base and result. Adaptive routing: if >30% miss the SAT item, return to slide 8 block 4; if >30% miss the GAT item, return to slide 5 block 1 Ex2; if >30% miss the SAAT item, return to slide 5 and rehearse find-x-first."
+ },
+ "recap": "A logarithm is an exponent: convert, evaluate with LOG or LN, and use it to find time in exponential models."
+}
