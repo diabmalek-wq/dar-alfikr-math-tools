@@ -50,3 +50,12 @@ Folders without a `-v2` suffix and the `_staged/` folder hold older copies and m
 ## Status
 
 Updated 3 Oct 2026. Tutoring materials now live in this repo alongside the engines. `docs/MIGRATION.md` still describes the engine migration plan.
+
+
+## Presentations (Prezi style, from 4 Oct 2026)
+
+All presentations use the Prezi-style design of the Lesson 6-5 Properties of Logarithms deck: a dark journey map of six numbered stations, Morph zoom transitions into a top breadcrumb, light content slides with rounded white cards, and typeset math images. FIKR decks keep the 60-minute structure (Diagnose 6, Targeted Instruction 18, Practice 12, Production 12, Mastery Gate 6, Smart Production 6). Mawhiba activity decks are student-run and not FIKR.
+
+Engine: engines/prezi/ (engine.js builds a deck from one lesson config; build.sh renders the math, builds, injects Morph, validates and makes a contact sheet; BRIEF.md is the authoring brief). Lesson configs: builders/lessons/prezi/cfg/ with figures in builders/lessons/prezi/figs/. Finished Week 6 decks (pptx and PDF): presentations/week-06/.
+
+To add a lesson: write builders/lessons/prezi/cfg/ID.json (see _example_L2-4_abridged.json and BRIEF.md), run validate_cfg.py, then build.sh ID. Objectives, vocabulary and standards are quoted verbatim; never invent essential questions or practices.
