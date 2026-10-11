@@ -1,0 +1,20492 @@
+[Math Department Logo] | Mr. Malek Thiab | [Dar Alfikr School Logo]
+
+# SAT Math Bank — Medium/Hard, House-Authored, Coverage-Matched to Verified College Board Distribution
+
+**Teacher of Record:** Mr. Malek Thiab
+**Scope:** Grades 10–11 SAT preparation (Algebra II Semester 1)
+**Difficulty:** Medium and Hard only (no Easy items, per weekly work order)
+**Item count:** 929 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36; the earlier header total of 491 was one short of the 492 items actually present)
+**Status:** Complete — §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
+
+---
+
+## 1. Provenance and Methodology
+
+Seven College Board SAT Math PDF exports were supplied to this project this cycle: `S1.pdf`, `S21.pdf`, `S22.pdf`, `S31.pdf`, `S32.pdf`, `S41.pdf`, `S42.pdf` (plus the pre-existing `SAT1.pdf`/`SAT2.pdf`). Extraction via `markitdown` was run on all files. Verification found:
+
+- **`S41.pdf` and `S42.pdf` are duplicate/subset exports** of `S31.pdf` and `S32.pdf` respectively (identical starting Question IDs `61f61789` and `267f82b5`) — excluded entirely from the tally.
+- **Every remaining file has the same systematic extraction defect**: `markitdown` recovers Question ID, Domain, Skill, and Difficulty intact for every item, and the final numeric answer for grid-in items, but **loses essentially all embedded mathematical notation** (numbers, variables, equations, figures) from question stems, answer choices, and rationale prose, because the source PDF renders math as images rather than text. This affects all 8 files uniformly — it is a property of the College Board's PDF export format, not a defect in these particular files.
+- Because reconstructing "text-intact" items from this corpus is not reliably automatable, the decision (confirmed with the teacher) was to use the five unique files — `S1`, `S21`, `S22`, `S31`, `S32` — purely as a **Domain / Skill / Difficulty coverage map**, and to **hand-author** all item content to match that real, verified distribution.
+- One boundary duplicate was found and deduplicated: Question ID `e833de9a` is the last item of `S21.pdf` and the first item of `S22.pdf` — counted once.
+
+**Verified deduplicated coverage map (974 unique real College Board Question IDs, 0% Easy):**
+
+| Domain | Hard | Medium | Total | Share |
+|---|---:|---:|---:|---:|
+| Algebra | 147 | 200 | 347 | 35.6% |
+| Advanced Math | 136 | 133 | 269 | 27.6% |
+| Geometry and Trigonometry | 116 | 78 | 255 (incl. 61 unclassified "Lines, angles, and triangles") | 26.2% |
+| Problem-Solving and Data Analysis | 44 | 37 (incl. 22 unclassified "Ratios, rates...") | 103 | 10.6% |
+| **Total** | **443** | **448** (+83 skill-label truncations, resolved below) | **974** | **100%** |
+
+Full Domain × Skill × Difficulty breakdown (the actual sourcing target for every item below):
+
+**Algebra (347)**
+| Skill | Medium | Hard |
+|---|---:|---:|
+| Linear functions | 56 | 32 |
+| Systems of two linear equations in two variables | 46 | 42 |
+| Linear equations in two variables | 41 | 33 |
+| Linear inequalities in one or two variables | 29 | 20 |
+| Linear equations in one variable | 28 | 20 |
+
+**Advanced Math (269)**
+| Skill | Medium | Hard |
+|---|---:|---:|
+| Nonlinear functions | 66 | 67 |
+| Nonlinear equations in one variable and systems of equations in two variables | 41 | 48 |
+| Equivalent expressions | 26 | 21 |
+
+**Geometry and Trigonometry (255)**
+| Skill | Medium | Hard |
+|---|---:|---:|
+| Right triangles and trigonometry | 19 | 41 |
+| Circles | 22 | 40 |
+| Area and volume | 37 | 35 |
+| Lines, angles, and triangles | 28 | 33 |
+
+**Problem-Solving and Data Analysis (103)**
+| Skill | Medium | Hard |
+|---|---:|---:|
+| Percentages | 10 | 18 |
+| Ratios, rates, proportional relationships, and units | 10 | 12 |
+| Two-variable data: Models and scatterplots | 12 | 6 |
+| One-variable data: Distributions and measures of center and spread | 5 | 9 |
+| Probability and conditional probability | 6 | 4 |
+| Inference from sample statistics and margin of error | 4 | 3 |
+| Evaluating statistical claims: Observational studies and experiments | 0 | 4 |
+
+---
+
+## 2. Item Bank
+
+Every item below is **house-authored** (original, not reproduced from College Board material) and tagged with the real Skill/Difficulty cell it was calibrated to fill. Roughly one-third of items per domain are contextualized to Saudi Vision 2030 / Makkah–Jeddah–Riyadh–NEOM settings and SAR currency, matching the project's Pillar 3 (Saudi Culture Connection) requirement; the remainder are context-neutral to mirror real SAT phrasing. All items were solved and verified before inclusion.
+
+### 2.1 Algebra (17 items — A-001 to A-017)
+
+### A-001
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear functions (Medium)
+
+**Question:** The function $f$ is linear. Selected values of $x$ and $f(x)$ are shown in the table below.
+
+| $x$ | $f(x)$ |
+|---|---|
+| $2$ | $11$ |
+| $5$ | $20$ |
+
+What is the value of $f(0)$?
+
+A) $2$
+B) $5$
+C) $8$
+D) $11$
+
+**Correct Answer:** B
+
+**Rationale:** The slope is $\dfrac{20-11}{5-2} = \dfrac{9}{3} = 3$. Using the point $\left(2, 11\right)$: $f(0) = 11 - 3(2) = 5$.
+
+**Misconception addressed:** Students often compute the slope correctly but then add instead of subtract when stepping backward from $x=2$ to $x=0$.
+
+---
+
+### A-002
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear functions (Medium)
+
+**Question:** As part of a NEOM sustainable housing initiative aligned with Vision 2030, the number of homes connected to a renewable microgrid increases at a constant rate. At the start of construction ($m=0$ months), $1200$ homes were connected. After $8$ months, $4400$ homes were connected. Which function $h(m)$ best models the number of homes connected after $m$ months?
+
+A) $h(m) = 1200m + 400$
+B) $h(m) = 400m + 1200$
+C) $h(m) = 1200m + 4400$
+D) $h(m) = 550m + 1200$
+
+**Correct Answer:** B
+
+**Rationale:** The rate of change is $\dfrac{4400 - 1200}{8 - 0} = \dfrac{3200}{8} = 400$ homes per month. The initial value (at $m=0$) is $1200$, giving $h(m) = 400m + 1200$.
+
+**Misconception addressed:** Students often swap the slope and $y$-intercept roles, placing the initial value as the coefficient of $m$.
+
+---
+
+### A-003
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, coverage-matched to Algebra — Linear functions (Medium)
+
+**Question:** If $f(x) = 3x - 7$ and $g(x) = f(x+2)$ for all values of $x$, what is the value of $g(1)$?
+
+**Correct Answer:** $2$
+
+**Rationale:** Substituting $x+2$ into $f$: $g(x) = 3(x+2) - 7 = 3x + 6 - 7 = 3x - 1$. Evaluating at $x=1$: $g(1) = 3(1) - 1 = 2$.
+
+**Misconception addressed:** Students often evaluate $f(1) + 2$ instead of correctly composing the shift inside the function before substituting.
+
+---
+
+### A-004
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear functions (Hard)
+
+**Question:** For the linear function $h$, $h(k) = c$ and $h(k+5) = c + 15$, where $c$ and $k$ are constants. What is the value of $h(k+2) - h(k)$?
+
+A) $3$
+B) $6$
+C) $9$
+D) $15$
+
+**Correct Answer:** B
+
+**Rationale:** The slope of $h$ is $\dfrac{\left(c+15\right) - c}{\left(k+5\right) - k} = \dfrac{15}{5} = 3$. Since $h(k+2) - h(k)$ represents the change in $h$ over an interval of $2$, this equals $3 \times 2 = 6$.
+
+**Misconception addressed:** Students without concrete numbers often assume they cannot solve the problem, not recognizing that only the constant slope is needed, not the values of $c$ or $k$.
+
+---
+
+### A-005
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, coverage-matched to Algebra — Linear functions (Hard)
+
+**Question:** A contractor building a section of the Jeddah Corniche waterfront walkway charges a fixed inspection fee plus a constant cost per meter of walkway constructed. Building $150$ meters costs a total of SAR $97{,}500$, and building $250$ meters costs a total of SAR $152{,}500$. Based on this linear relationship, what is the total cost, in SAR, to build $400$ meters of walkway?
+
+**Correct Answer:** $235{,}000$
+
+**Rationale:** The cost per meter is $\dfrac{152{,}500 - 97{,}500}{250 - 150} = \dfrac{55{,}000}{100} = 550$. The fixed fee is $97{,}500 - 550(150) = 97{,}500 - 82{,}500 = 15{,}000$. At $400$ meters: $C = 550(400) + 15{,}000 = 220{,}000 + 15{,}000 = 235{,}000$.
+
+**Misconception addressed:** Students often scale the total cost proportionally (treating cost as directly proportional to length) instead of recognizing a nonzero fixed fee must first be isolated.
+
+---
+
+### A-006
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Systems of two linear equations in two variables (Medium)
+
+**Question:** If $2x + 3y = 12$ and $x - y = 1$, what is the value of $x + y$?
+
+A) $3$
+B) $4$
+C) $5$
+D) $6$
+
+**Correct Answer:** C
+
+**Rationale:** From $x - y = 1$, $x = y+1$. Substituting: $2(y+1) + 3y = 12 \Rightarrow 5y + 2 = 12 \Rightarrow y = 2$, so $x = 3$. Then $x + y = 3 + 2 = 5$.
+
+**Misconception addressed:** Students sometimes solve for only one variable and report it as the final answer, forgetting the question asks for $x+y$.
+
+---
+
+### A-007
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Systems of two linear equations in two variables (Medium)
+
+**Question:** During Riyadh Season, $3$ standard tickets and $2$ VIP tickets to a concert cost a total of SAR $850$. $5$ standard tickets and $1$ VIP ticket cost a total of SAR $950$. What is the price, in SAR, of one VIP ticket?
+
+A) $150$
+B) $175$
+C) $200$
+D) $225$
+
+**Correct Answer:** C
+
+**Rationale:** Let $s$ and $v$ be the standard and VIP prices. From $5s + v = 950$, $v = 950 - 5s$. Substituting into $3s + 2v = 850$: $3s + 2(950 - 5s) = 850 \Rightarrow 3s + 1900 - 10s = 850 \Rightarrow {-7s} = {-1050} \Rightarrow s = 150$. Then $v = 950 - 5(150) = 200$.
+
+**Misconception addressed:** Students often set up the elimination with mismatched coefficients and combine the equations incorrectly, solving for $s$ instead of $v$.
+
+---
+
+### A-008
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Systems of two linear equations in two variables (Hard)
+
+**Question:** For what value of $k$ does the system of equations below have no solution?
+
+$3x - ky = 12$
+$6x - 8y = 9$
+
+A) $2$
+B) $4$
+C) $6$
+D) $8$
+
+**Correct Answer:** B
+
+**Rationale:** A system of two linear equations has no solution when the lines are parallel but not identical, i.e., $\dfrac{3}{6} = \dfrac{-k}{-8}$ while the constants are in a different ratio. Solving $\dfrac{3}{6} = \dfrac{k}{8}$ gives $k = 4$. Checking constants, $\dfrac{12}{9} \neq \dfrac{1}{2}$, confirming the lines are parallel and distinct.
+
+**Misconception addressed:** Students often set the ratio of constants equal to the ratio of coefficients (which would give infinitely many solutions) instead of requiring it to be unequal for no solution.
+
+---
+
+### A-009
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, coverage-matched to Algebra — Systems of two linear equations in two variables (Hard)
+
+**Question:** If $5x + 4y = 21$ and $3x + 2y = 13$, what is the value of $x + y$?
+
+**Correct Answer:** $4$
+
+**Rationale:** Multiply the second equation by $2$: $6x + 4y = 26$. Subtracting the first equation: $\left(6x+4y\right) - \left(5x+4y\right) = 26 - 21 \Rightarrow x = 5$. Substituting into $3x+2y=13$: $15 + 2y = 13 \Rightarrow y = {-1}$. Thus $x + y = 5 + \left({-1}\right) = 4$.
+
+**Misconception addressed:** Students often try to eliminate $x$ instead of $y$ first, leading to fractional intermediate values and arithmetic errors under time pressure.
+
+---
+
+### A-010
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear equations in two variables (Medium)
+
+**Question:** What is the slope of the line represented by the equation $4x - 2y = 10$?
+
+A) ${-5}$
+B) ${-2}$
+C) $2$
+D) $4$
+
+**Correct Answer:** C
+
+**Rationale:** Solving for $y$: $-2y = -4x + 10 \Rightarrow y = 2x - 5$. The coefficient of $x$ in slope-intercept form is the slope, so the slope is $2$.
+
+**Misconception addressed:** Students often read the coefficient of $x$ directly from standard form without first isolating $y$, incorrectly reporting the slope as $4$.
+
+---
+
+### A-011
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear equations in two variables (Medium)
+
+**Question:** Saudi Arabia's annual date exports increased at a constant rate between $2021$ and $2024$. In $2021$, exports were $210$ thousand metric tons; in $2024$, exports were $288$ thousand metric tons. Which equation models the exports $y$ (in thousand metric tons) $t$ years after $2021$?
+
+A) $y = 26t + 210$
+B) $y = 78t + 210$
+C) $y = 26t + 288$
+D) $y = 210t + 26$
+
+**Correct Answer:** A
+
+**Rationale:** The rate of change is $\dfrac{288 - 210}{2024 - 2021} = \dfrac{78}{3} = 26$ thousand metric tons per year. Since $t=0$ corresponds to $2021$ when exports were $210$, the model is $y = 26t + 210$.
+
+**Misconception addressed:** Students often use the total change in exports ($78$) as the rate instead of dividing by the number of years elapsed.
+
+---
+
+### A-012
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear equations in two variables (Hard)
+
+**Question:** Line $\ell$ passes through the point $\left(3, {-2}\right)$ and is parallel to the line with equation $6x - 3y = 9$. What is the $y$-intercept of line $\ell$?
+
+A) ${-8}$
+B) ${-6}$
+C) ${-3}$
+D) $2$
+
+**Correct Answer:** A
+
+**Rationale:** Rewriting $6x - 3y = 9$ as $y = 2x - 3$ gives a slope of $2$. Using point-slope form with $\left(3,{-2}\right)$: $y - \left({-2}\right) = 2\left(x - 3\right) \Rightarrow y = 2x - 8$. The $y$-intercept is ${-8}$.
+
+**Misconception addressed:** Students sometimes use the perpendicular slope $\left({-\dfrac{1}{2}}\right)$ instead of recognizing "parallel" requires the identical slope.
+
+---
+
+### A-013
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, coverage-matched to Algebra — Linear equations in two variables (Hard)
+
+**Question:** Line $m$ is perpendicular to the line represented by the equation $2x + 5y = 20$ and passes through the point $\left(4, 1\right)$. What is the $x$-intercept of line $m$?
+
+**Correct Answer:** $\dfrac{18}{5}$ (or $3.6$)
+
+**Rationale:** Rewriting $2x+5y=20$ as $y = {-\dfrac{2}{5}}x + 4$ gives slope ${-\dfrac{2}{5}}$, so the perpendicular slope is $\dfrac{5}{2}$. Line $m$: $y - 1 = \dfrac{5}{2}\left(x - 4\right)$. Setting $y=0$: ${-1} = \dfrac{5}{2}\left(x-4\right) \Rightarrow x - 4 = {-\dfrac{2}{5}} \Rightarrow x = \dfrac{18}{5}$.
+
+**Misconception addressed:** Students often take the negative reciprocal of the wrong value (the $y$-coefficient itself, $5$, instead of the simplified slope) when finding the perpendicular slope.
+
+---
+
+### A-014
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear inequalities in one or two variables (Medium)
+
+**Question:** A truck transporting cargo between Jeddah Islamic Port and Riyadh Dry Port can carry at most $5000$ kilograms. The truck is already loaded with $60$ boxes of textiles, each weighing $25$ kilograms. Each additional box of electronics weighs $35$ kilograms. What is the maximum number of boxes of electronics the truck can carry in addition to the textiles?
+
+A) $85$
+B) $90$
+C) $100$
+D) $105$
+
+**Correct Answer:** C
+
+**Rationale:** The inequality is $60(25) + 35x \leq 5000 \Rightarrow 1500 + 35x \leq 5000 \Rightarrow 35x \leq 3500 \Rightarrow x \leq 100$. The maximum number of electronics boxes is $100$.
+
+**Misconception addressed:** Students often forget to subtract the textile weight first, dividing $5000$ directly by $35$ instead of the remaining capacity.
+
+---
+
+### A-015
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear inequalities in one or two variables (Hard)
+
+**Question:** Which ordered pair $\left(x, y\right)$ satisfies the system of inequalities below?
+
+$y > 3x - 4$
+$y \leq {-2x} + 10$
+
+A) $\left(1, 2\right)$
+B) $\left(4, 3\right)$
+C) $\left(0, {-5}\right)$
+D) $\left(5, 1\right)$
+
+**Correct Answer:** A
+
+**Rationale:** For $\left(1,2\right)$: $3(1)-4={-1}$, and $2 > {-1}$ is true; also ${-2}(1)+10=8$, and $2 \leq 8$ is true, so both inequalities hold. Checking the remaining choices shows each fails at least one inequality.
+
+**Misconception addressed:** Students often test only one of the two inequalities and stop once it is satisfied, without verifying the point also satisfies the second.
+
+---
+
+### A-016
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, coverage-matched to Algebra — Linear equations in one variable (Medium)
+
+**Question:** What value of $x$ satisfies the equation $\dfrac{2x+5}{3} = x - 4$?
+
+**Correct Answer:** $17$
+
+**Rationale:** Multiplying both sides by $3$: $2x + 5 = 3x - 12$. Isolating $x$: $5 + 12 = 3x - 2x \Rightarrow x = 17$.
+
+**Misconception addressed:** Students often forget to distribute the multiplication by $3$ across the entire right side, only clearing the fraction on the left.
+
+---
+
+### A-017
+**Skill:** Linear equations in one variable | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Algebra — Linear equations in one variable (Hard)
+
+**Question:** If the equation $a\left(x - 3\right) + 5 = bx - 2a + 11$ is true for all values of $x$, where $a$ and $b$ are constants, what is the value of $a$?
+
+A) ${-6}$
+B) ${-2}$
+C) $2$
+D) $6$
+
+**Correct Answer:** A
+
+**Rationale:** Expanding the left side: $ax - 3a + 5 = bx - 2a + 11$. Since this holds for all $x$, the coefficients of $x$ must match ($a = b$) and the constant terms must match: ${-3a} + 5 = {-2a} + 11 \Rightarrow {-3a} + 2a = 11 - 5 \Rightarrow {-a} = 6 \Rightarrow a = {-6}$.
+
+**Misconception addressed:** Students often solve for a single specific value of $x$ instead of recognizing that "true for all values of $x$" requires matching coefficients and constants separately.
+
+
+### 2.2 Advanced Math (12 items — AM-001 to AM-012)
+
+### AM-001
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear functions (Hard)
+
+**Question:** A decorative fountain in a public park in Riyadh shoots a jet of water whose height above the ground, in meters, is modeled by
+$$h(t) = -4\left(t-3\right)^{2} + 45,$$
+where $t$ is the time, in seconds, after the jet is activated. For which values of $t$ does the water reach a height of $29$ meters?
+
+A) $t = 1$ only
+B) $t = 5$ only
+C) $t = 1$ and $t = 5$
+D) $t = 2$ and $t = 4$
+
+**Correct Answer:** C
+
+**Rationale:** Set $h(t)=29$: $-4(t-3)^2 = -16$, so $(t-3)^2 = 4$, giving $t - 3 = \pm 2$. Thus $t = 1$ or $t = 5$. Both values are valid times after launch, so both are solutions.
+
+**Misconception addressed:** Students take only the positive square root of $(t-3)^2=4$ and report a single solution, forgetting a quadratic in vertex form has two symmetric times at any height below the maximum.
+
+---
+
+### AM-002
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear functions (Medium)
+
+**Question:** As part of a Red Sea coastal development aligned with Vision 2030, the estimated resident population $t$ years after 2024 is modeled by
+$$P(t) = 5000\left(1.15\right)^{t}.$$
+According to the model, by approximately what factor does the population increase every $5$ years?
+
+A) $1.15$
+B) $1.75$
+C) $2.01$
+D) $2.99$
+
+**Correct Answer:** C
+
+**Rationale:** The growth factor over $5$ years is $1.15^{5} \approx 2.01$, since $P(t+5) = 5000(1.15)^{t+5} = P(t)\cdot(1.15)^{5}$. This factor is independent of $t$ because the model is exponential.
+
+**Misconception addressed:** Students multiply the annual rate by $5$ (treating $1.15\times 5$ or $1 + 0.15\times5$) instead of raising the growth factor to the $5$th power, confusing linear and exponential accumulation.
+
+---
+
+### AM-003
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The function $f$ is defined by
+$$f(x) = a\left(x-2\right)\left(x+6\right),$$
+where $a$ is a constant. The graph of $y = f(x)$ in the $xy$-plane passes through the point $\left(0, {-24}\right)$. What is the value of $f(5)$?
+
+**Correct Answer:** $66$
+
+**Rationale:** Substituting $\left(0,{-24}\right)$: $-24 = a(-2)(6) = -12a$, so $a = 2$. Then $f(5) = 2(5-2)(5+6) = 2(3)(11) = 66$.
+
+**Misconception addressed:** Students plug $x=5$ into the factored form before solving for $a$, effectively leaving $a=1$ and producing an answer that ignores the given point entirely.
+
+---
+
+### AM-004
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear functions (Medium)
+
+**Question:** A car is purchased in Riyadh for $120{,}000$ SAR. Its value depreciates according to
+$$V(t) = 120000\left(0.88\right)^{t},$$
+where $t$ is the number of years since purchase. To the nearest thousand SAR, what is the value of the car after $4$ years?
+
+A) $61{,}000$ SAR
+B) $72{,}000$ SAR
+C) $84{,}000$ SAR
+D) $94{,}000$ SAR
+
+**Correct Answer:** B
+
+**Rationale:** $V(4) = 120000\left(0.88\right)^{4} = 120000\left(0.59970\right) \approx 71{,}963$ SAR, which rounds to $72{,}000$ SAR.
+
+**Misconception addressed:** Students compute simple (linear) depreciation of $12\%$ per year for $4$ years, i.e. $120000(1-0.48)$, instead of compounding the $0.88$ factor multiplicatively each year.
+
+---
+
+### AM-005
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The function $f$ is defined by $f(x) = a\cdot 2^{x}$, where $a$ is a constant. If $f(3) = 40$, what is the value of $f(5)$?
+
+A) $64$
+B) $128$
+C) $160$
+D) $200$
+
+**Correct Answer:** C
+
+**Rationale:** From $f(3) = a\cdot 2^{3} = 8a = 40$, we get $a = 5$. Then $f(5) = 5\cdot 2^{5} = 5\left(32\right) = 160$.
+
+**Misconception addressed:** Students assume $f(5) = f(3)\cdot 2^{2}$ using the wrong base relationship, or attempt to scale $40$ by $\dfrac{5}{3}$ as though the function were linear.
+
+---
+
+### AM-006
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear functions (Medium)
+
+**Question:** The function $h$ is defined by $h(x) = 2x^{2} - 12x + 7$. What is the $x$-coordinate of the vertex of the graph of $y = h(x)$ in the $xy$-plane?
+
+A) ${-3}$
+B) $2$
+C) $3$
+D) $6$
+
+**Correct Answer:** C
+
+**Rationale:** For $h(x)=ax^2+bx+c$, the vertex occurs at $x = -\dfrac{b}{2a} = -\dfrac{-12}{2(2)} = \dfrac{12}{4} = 3$.
+
+**Misconception addressed:** Students forget to divide by $2a$ and instead use $x = -\dfrac{b}{a}$, or drop the negative sign in the formula.
+
+---
+
+### AM-007
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** In the $xy$-plane, the graphs of $y = x^{2} - 6x + 8$ and $y = 2x - 4$ intersect at two points. What is the sum of the $x$-coordinates of these two points?
+
+**Correct Answer:** $8$
+
+**Rationale:** Setting the expressions equal: $x^{2}-6x+8 = 2x-4$, so $x^{2}-8x+12=0$, which factors as $(x-2)(x-6)=0$. The solutions are $x=2$ and $x=6$, and their sum is $8$.
+
+**Misconception addressed:** Students solve for one intersection point only and submit a single $x$-value instead of recognizing the system has two solutions whose sum is requested.
+
+---
+
+### AM-008
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** What is the solution set of the equation
+$$\sqrt{x+7} = x-5?$$
+
+A) $x=2$ only
+B) $x=9$ only
+C) $x=2$ and $x=9$
+D) There is no solution.
+
+**Correct Answer:** B
+
+**Rationale:** Squaring both sides gives $x+7 = x^{2}-10x+25$, so $x^{2}-11x+18=0$, which factors as $(x-2)(x-9)=0$, giving $x=2$ or $x=9$. Checking in the original equation: $x=2$ gives $\sqrt{9}=3 \neq {-3}$, so it is extraneous; $x=9$ gives $\sqrt{16}=4=4$, which checks.
+
+**Misconception addressed:** Students report both algebraic roots without substituting back into the original (unsquared) equation to eliminate the extraneous solution introduced by squaring.
+
+---
+
+### AM-009
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** As part of a heritage-tourism marketing campaign in AlUla, aligned with Vision 2030, the number of visitors (in thousands) $x$ weeks after the campaign begins is modeled by $v = x^{2} - 2x - 3$. A separate baseline estimate predicts $v = {-3}$ for the same period. For how many nonnegative values of $x$ are the two estimates equal?
+
+A) $0$
+B) $1$
+C) $2$
+D) $3$
+
+**Correct Answer:** C
+
+**Rationale:** Setting $x^{2}-2x-3 = {-3}$ gives $x^{2}-2x=0$, so $x(x-2)=0$, meaning $x=0$ or $x=2$. Both values are nonnegative, so there are $2$ solutions.
+
+**Misconception addressed:** Students divide both sides by $x$ to "simplify," losing the solution $x=0$ and reporting only one value.
+
+---
+
+### AM-010
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** What is the positive solution to the equation $x^{2} - 5x - 24 = 0$?
+
+**Correct Answer:** $8$
+
+**Rationale:** The equation factors as $(x-8)(x+3)=0$, so $x=8$ or $x={-3}$. The positive solution is $x=8$.
+
+**Misconception addressed:** Students find both roots correctly but grid in the negative root $-3$, or attempt to grid a negative value into a response box that only accepts a positive value, without re-reading which root the question asks for.
+
+---
+
+### AM-011
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Equivalent expressions (Medium)
+
+**Question:** Which of the following is equivalent to $\dfrac{x^{2}-9}{x-3}$, for $x \neq 3$?
+
+A) $x+3$
+B) $x-3$
+C) $x^{2}-3$
+D) $x+9$
+
+**Correct Answer:** A
+
+**Rationale:** The numerator factors as a difference of squares: $x^{2}-9 = (x-3)(x+3)$. Dividing by $(x-3)$, valid since $x\neq 3$, leaves $x+3$.
+
+**Misconception addressed:** Students cancel the $x^2$ term with the $x$ in the denominator term-by-term instead of factoring the numerator first, producing an invalid simplification like $x-9$.
+
+---
+
+### AM-012
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Advanced Math — Equivalent expressions (Hard)
+
+**Question:** The expression $\dfrac{3}{x-4} - \dfrac{2}{x+1}$ is equivalent to which of the following, for $x \neq 4$ and $x \neq {-1}$?
+
+A) $\dfrac{x+11}{x^{2}-3x-4}$
+B) $\dfrac{x-11}{x^{2}-3x-4}$
+C) $\dfrac{5x-5}{x^{2}-3x-4}$
+D) $\dfrac{x+11}{x^{2}+3x-4}$
+
+**Correct Answer:** A
+
+**Rationale:** Using the common denominator $(x-4)(x+1) = x^{2}-3x-4$: $\dfrac{3(x+1) - 2(x-4)}{(x-4)(x+1)} = \dfrac{3x+3-2x+8}{x^{2}-3x-4} = \dfrac{x+11}{x^{2}-3x-4}$.
+
+**Misconception addressed:** Students subtract the numerators directly ($3-2=1$) without distributing across each binomial, or forget to distribute the negative sign through the second numerator, producing $5x-5$ or a sign error in the denominator.
+
+
+### 2.3 Geometry and Trigonometry (13 items — GT-001 to GT-013)
+
+### GT-001
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Right triangles and trigonometry (Medium)
+
+**Question:** [Figure: right triangle $ABC$ with the right angle at vertex $C$ — diagram file: GT-001.png, ready to attach (pilot batch, rendered 2026-09-22)] In right triangle $ABC$, the right angle is at $C$. If $\sin(A) = \dfrac{3}{5}$, what is the value of $\cos(B)$?
+
+A) $\dfrac{3}{4}$
+B) $\dfrac{3}{5}$
+C) $\dfrac{4}{5}$
+D) $\dfrac{5}{3}$
+
+**Correct Answer:** B
+
+**Rationale:** In a right triangle, the two acute angles $A$ and $B$ are complementary, so $A + B = 90^\circ$. This means $\cos(B) = \cos(90^\circ - A) = \sin(A) = \dfrac{3}{5}$ by the co-function identity.
+
+**Misconception addressed:** Students confuse the co-function relationship and instead try to compute $\cos(B)$ using $\cos^2 + \sin^2 = 1$ on angle $A$, arriving at $\dfrac{4}{5}$ (option C) rather than recognizing $B$ is complementary to $A$.
+
+---
+
+### GT-002
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Right triangles and trigonometry (Hard)
+
+**Question:** [Figure: a vertical tower of height $h$ meters; two observation points lie on level ground along the same line as the base of the tower, with the farther point 50 meters beyond the nearer point] Engineers surveying a proposed tower near King Abdullah Financial District measure the angle of elevation to the top of the tower from a point on the ground to be $30^\circ$. Standing $50$ meters closer to the base of the tower, along the same straight line, the angle of elevation is $60^\circ$. What is the height of the tower, in meters, to the nearest tenth?
+
+**Correct Answer:** $43.3$
+
+**Rationale:** Let $d$ be the horizontal distance from the nearer point to the base, and $h$ the tower height. Then $h = d\tan(60^\circ)$ and $h = (d+50)\tan(30^\circ)$. Setting these equal: $d\sqrt{3} = \dfrac{d+50}{\sqrt{3}}$, so $3d = d + 50$, giving $d = 25$. Then $h = 25\sqrt{3} \approx 43.3$.
+
+**Misconception addressed:** Students often set up $\tan(60^\circ) - \tan(30^\circ) = \dfrac{h}{50}$ directly (treating the two triangles as sharing the $50$ m base rather than the correct nested horizontal distances), which produces an incorrect height.
+
+---
+
+### GT-003
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Right triangles and trigonometry (Hard)
+
+**Question:** [Figure: triangle with two sides of length 7 km and 8 km meeting at a vertex, with an included angle of $120^\circ$ between them] A triangular plot of land has two sides of length $7$ kilometers and $8$ kilometers, with an included angle of $120^\circ$ between them. What is the length, in kilometers, of the third side of the plot?
+
+A) $11$
+B) $12$
+C) $13$
+D) $15$
+
+**Correct Answer:** C
+
+**Rationale:** By the Law of Cosines, $c^2 = 7^2 + 8^2 - 2(7)(8)\cos(120^\circ) = 49 + 64 - 112\left({-\dfrac{1}{2}}\right) = 113 + 56 = 169$. So $c = \sqrt{169} = 13$.
+
+**Misconception addressed:** Students frequently drop the negative sign on $\cos(120^\circ)$ (treating it as $+\dfrac{1}{2}$ since $120^\circ$ "looks acute" from memorized values), yielding $c^2 = 113 - 56 = 57$ and an incorrect answer.
+
+---
+
+### GT-004
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Circles (Medium)
+
+**Question:** A circle in the $xy$-plane is defined by the equation $x^2 + y^2 - 6x + 8y = 0$. What is the radius of the circle?
+
+A) $3$
+B) $4$
+C) $5$
+D) $25$
+
+**Correct Answer:** C
+
+**Rationale:** Complete the square on both variables: $x^2 - 6x = (x-3)^2 - 9$ and $y^2 + 8y = (y+4)^2 - 16$. Substituting gives $(x-3)^2 + (y+4)^2 - 25 = 0$, so $(x-3)^2 + (y+4)^2 = 25$. Thus $r^2 = 25$ and $r = 5$.
+
+**Misconception addressed:** Students stop after completing the square and report the value on the right side of the equation ($25$, option D) as the radius instead of taking its square root.
+
+---
+
+### GT-005
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Circles (Hard)
+
+**Question:** In the $xy$-plane, the graph of $x^2 + y^2 + 4x - 10y + k = 0$ is a circle with radius $4$. What is the value of $k$?
+
+**Correct Answer:** $13$
+
+**Rationale:** Completing the square: $x^2 + 4x = (x+2)^2 - 4$ and $y^2 - 10y = (y-5)^2 - 25$. Substituting: $(x+2)^2 + (y-5)^2 - 29 + k = 0$, so $(x+2)^2 + (y-5)^2 = 29 - k$. Since the radius is $4$, $29 - k = 16$, so $k = 13$.
+
+**Misconception addressed:** Students set $29 - k$ equal to the radius itself ($4$) rather than to $r^2 = 16$, producing $k = 25$ instead of the correct value.
+
+---
+
+### GT-006
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Circles (Hard)
+
+**Question:** [Figure: a circular plaza with center $O$ and radius $45$ meters; a decorative walking path traces an arc along the circle's edge, subtending a central angle at $O$] As part of a Vision 2030 public-space project in Riyadh, a circular plaza has a radius of $45$ meters. A decorative walking path forms an arc along the plaza's boundary that subtends a central angle of $\dfrac{5\pi}{6}$ radians. What is the length of the arc, in meters?
+
+A) $\dfrac{75\pi}{2}$
+B) $45\pi$
+C) $150\pi$
+D) $\dfrac{25\pi}{2}$
+
+**Correct Answer:** A
+
+**Rationale:** Arc length equals $r\theta$ when $\theta$ is in radians: $s = 45 \cdot \dfrac{5\pi}{6} = \dfrac{225\pi}{6} = \dfrac{75\pi}{2}$.
+
+**Misconception addressed:** Students often convert the radian measure to degrees first and then misapply the degree arc-length formula $s = 2\pi r \cdot \dfrac{\theta}{360}$ using $\theta$ still in radians, leading to a numerically wrong multiple of $\pi$.
+
+---
+
+### GT-007
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Area and volume (Medium)
+
+**Question:** [Figure: a rectangle measuring 12 meters by 8 meters, with a semicircle of diameter 8 meters attached along one of the 8-meter sides, bulging outward] A school courtyard is shaped like a $12$-meter by $8$-meter rectangle with a semicircular reading nook attached to one of the $8$-meter sides, as shown. The semicircle has a diameter of $8$ meters. What is the total area of the courtyard, in square meters?
+
+A) $96 + 4\pi$
+B) $96 + 8\pi$
+C) $96 + 16\pi$
+D) $104\pi$
+
+**Correct Answer:** B
+
+**Rationale:** The rectangle's area is $12 \times 8 = 96$ square meters. The semicircle has radius $4$, so its area is $\dfrac{1}{2}\pi(4)^2 = 8\pi$. The total area is $96 + 8\pi$.
+
+**Misconception addressed:** Students use the diameter ($8$) instead of the radius ($4$) in the semicircle area formula, computing $\dfrac{1}{2}\pi(8)^2 = 32\pi$ and selecting an answer built from that error.
+
+---
+
+### GT-008
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Area and volume (Medium)
+
+**Question:** A cylindrical water tank supplying a public fountain project in Jeddah has a radius of $15$ meters and a volume of $4500\pi$ cubic meters. What is the height of the tank, in meters?
+
+A) $10$
+B) $15$
+C) $20$
+D) $30$
+
+**Correct Answer:** C
+
+**Rationale:** The volume of a cylinder is $V = \pi r^2 h$. Substituting: $4500\pi = \pi(15)^2 h = 225\pi h$, so $h = \dfrac{4500}{225} = 20$.
+
+**Misconception addressed:** Students substitute the radius into the formula as if it were the diameter (using $r = 7.5$), which produces an incorrect height nearly four times too large.
+
+---
+
+### GT-009
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Area and volume (Hard)
+
+**Question:** A scale model of a cross-sectional segment of NEOM's "The Line" is geometrically similar to the actual structure, with a scale factor of $1$ to $20$ (model to actual). If the volume of the model is $3$ cubic meters, what is the volume of the actual segment, in cubic meters?
+
+A) $60$
+B) $1{,}200$
+C) $8{,}000$
+D) $24{,}000$
+
+**Correct Answer:** D
+
+**Rationale:** For similar solids, volume scales as the cube of the linear scale factor. Since the linear ratio is $1:20$, the volume ratio is $1:20^3 = 1:8000$. Thus the actual volume is $3 \times 8000 = 24{,}000$ cubic meters.
+
+**Misconception addressed:** Students apply the linear scale factor directly to volume (multiplying by $20$ instead of $20^3$), or apply it as an area scale factor (squaring instead of cubing), giving $60$ or $1{,}200$ respectively.
+
+---
+
+### GT-010
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Area and volume (Hard)
+
+**Question:** [Figure: a cylindrical base topped by a hemispherical dome, both sharing the same radius] A mosque prayer hall is designed as a cylindrical base topped by a hemispherical dome of the same radius. The cylindrical base has radius $6$ meters and height $10$ meters, and the dome is a hemisphere with radius $6$ meters. What is the total volume of the structure, in cubic meters, in terms of $\pi$?
+
+A) $360\pi$
+B) $432\pi$
+C) $504\pi$
+D) $576\pi$
+
+**Correct Answer:** C
+
+**Rationale:** The cylinder's volume is $\pi r^2 h = \pi(6)^2(10) = 360\pi$. The hemisphere's volume is $\dfrac{2}{3}\pi r^3 = \dfrac{2}{3}\pi(6)^3 = \dfrac{2}{3}\pi(216) = 144\pi$. The total volume is $360\pi + 144\pi = 504\pi$.
+
+**Misconception addressed:** Students use the full sphere volume formula $\dfrac{4}{3}\pi r^3$ instead of halving it for the hemisphere, adding $288\pi$ instead of $144\pi$ and arriving at an incorrect total.
+
+---
+
+### GT-011
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Lines, angles, and triangles (Medium)
+
+**Question:** [Figure: line $\ell$ parallel to line $m$, both cut by transversal $t$; the angle formed at the intersection with $\ell$ measures $(3x+10)^\circ$, and the corresponding angle formed at the intersection with $m$ measures $(5x-30)^\circ$] Line $\ell$ is parallel to line $m$ and both are intersected by transversal $t$. One angle formed at the intersection with $\ell$ measures $(3x+10)^\circ$, and its corresponding angle at the intersection with $m$ measures $(5x-30)^\circ$. What is the value of $x$?
+
+A) $10$
+B) $15$
+C) $20$
+D) $40$
+
+**Correct Answer:** C
+
+**Rationale:** Corresponding angles formed by a transversal crossing parallel lines are congruent, so $3x + 10 = 5x - 30$. Solving: $40 = 2x$, so $x = 20$.
+
+**Misconception addressed:** Students treat the two angles as supplementary (setting the sum equal to $180$) instead of congruent, since they mistake corresponding angles for co-interior (same-side interior) angles.
+
+---
+
+### GT-012
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Lines, angles, and triangles (Hard)
+
+**Question:** [Figure: triangle $PQR$ with point $S$ on side $PQ$ and point $T$ on side $PR$, and segment $ST$ drawn parallel to side $QR$] In triangle $PQR$, segment $ST$ is drawn parallel to side $QR$, where $S$ lies on $PQ$ and $T$ lies on $PR$. If $PS = x$, $SQ = x + 4$, $PT = 15$, and $TR = 25$, what is the value of $x$?
+
+**Correct Answer:** $6$
+
+**Rationale:** Since $ST \parallel QR$, the Triangle Proportionality Theorem gives $\dfrac{PS}{SQ} = \dfrac{PT}{TR}$, so $\dfrac{x}{x+4} = \dfrac{15}{25} = \dfrac{3}{5}$. Cross-multiplying: $5x = 3(x+4) = 3x + 12$, so $2x = 12$ and $x = 6$.
+
+**Misconception addressed:** Students set up the proportion as $\dfrac{PS}{PQ} = \dfrac{PT}{PR}$ using total side lengths inconsistently (mixing a part with a whole rather than part-to-part or part-to-whole consistently on both sides), producing an incorrect equation.
+
+---
+
+### GT-013
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Geometry and Trigonometry — Lines, angles, and triangles (Hard)
+
+**Question:** [Figure: triangle $XYZ$ with an exterior angle drawn at vertex $X$ by extending one of the triangle's sides] In triangle $XYZ$, the exterior angle at vertex $X$ measures $(5x-10)^\circ$. This exterior angle equals the sum of the two non-adjacent (remote) interior angles, which measure $(2x+15)^\circ$ at vertex $Y$ and $(x+25)^\circ$ at vertex $Z$. What is the measure of angle $Y$, in degrees?
+
+**Correct Answer:** $65$
+
+**Rationale:** By the Exterior Angle Theorem, the exterior angle equals the sum of the two remote interior angles: $5x - 10 = (2x+15) + (x+25) = 3x + 40$. Solving: $2x = 50$, so $x = 25$. Then angle $Y = 2(25) + 15 = 65^\circ$.
+
+**Misconception addressed:** Students set the exterior angle equal to $180$ minus only one remote interior angle (confusing the Exterior Angle Theorem with the linear pair relationship at vertex $X$), leading to an incorrect value of $x$.
+
+
+### 2.4 Problem-Solving and Data Analysis (13 items — PS-001 to PS-013)
+
+### PS-001
+**Skill:** Percentages | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Percentages (Hard)
+
+**Question:** The number of Umrah pilgrims visiting Makkah increased by $25\%$ from 2022 to 2023. From 2023 to 2024, the number of Umrah pilgrims decreased by $12\%$. If the number of Umrah pilgrims in 2024 was $9{,}020{,}000$, what was the number of Umrah pilgrims in 2022?
+
+**Correct Answer:** $8{,}200{,}000$
+
+**Rationale:** Let $x$ be the 2022 total. Then $2023 = 1.25x$, and $2024 = 1.25x\left(0.88\right) = 1.1x$. Setting $1.1x = 9{,}020{,}000$ gives $x = 8{,}200{,}000$.
+
+**Misconception addressed:** Students often combine the percent changes additively (assuming a net $+13\%$, i.e. $25\% - 12\%$) instead of multiplying the successive scale factors $\left(1.25\right)\left(0.88\right)$.
+
+---
+
+### PS-002
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Percentages (Medium)
+
+**Question:** A jacket is discounted by $30\%$. A $5\%$ sales tax is then applied to the discounted price. If the final price paid is $\$44.10$, what was the original price of the jacket, before the discount?
+
+A) $\$42.00$
+B) $\$58.80$
+C) $\$60.00$
+D) $\$63.00$
+
+**Correct Answer:** C
+
+**Rationale:** Let $x$ be the original price. After the discount, the price is $0.7x$; after tax, it is $0.7x\left(1.05\right) = 0.735x$. Solving $0.735x = 44.10$ gives $x = 60$.
+
+**Misconception addressed:** Students often apply the tax to the original price instead of the discounted price, or treat the $30\%$ discount and $5\%$ tax as a single net $25\%$ reduction.
+
+---
+
+### PS-003
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units (Hard)
+
+**Question:** For a construction project at NEOM, a concrete mixture is made from cement, sand, and gravel in the ratio $1 : 2 : 3$ by weight. A batching plant produces gravel at a constant rate of $6$ metric tons per hour. At this rate, how many hours will it take the plant to produce $90$ metric tons of the mixture?
+
+**Correct Answer:** $7.5$
+
+**Rationale:** The ratio has $1+2+3 = 6$ total parts, and gravel makes up $3$ parts. Since gravel is produced at $6$ tons/hour, each part corresponds to $6 \div 3 = 2$ tons/hour, so the full mixture is produced at $6\left(2\right) = 12$ tons/hour. The time to produce $90$ tons is $\dfrac{90}{12} = 7.5$ hours.
+
+**Misconception addressed:** Students often use the gravel rate as the rate for the *whole* mixture (treating $6$ tons/hour as the total production rate) instead of first converting it to a per-part rate using the ratio.
+
+---
+
+### PS-004
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units (Medium)
+
+**Question:** A car consumes fuel at a rate of $6.5$ liters per $100$ kilometers. At this rate, how many liters of fuel are needed to travel $340$ kilometers?
+
+A) $20.4$
+B) $21.0$
+C) $22.1$
+D) $23.9$
+
+**Correct Answer:** C
+
+**Rationale:** Using the unit rate, fuel used $= \dfrac{6.5}{100}\left(340\right) = 22.1$ liters.
+
+**Misconception addressed:** Students often round the rate to $6$ L per $100$ km before multiplying, producing an underestimate such as $20.4$.
+
+---
+
+### PS-005
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots (Medium)
+
+**Question:** A teacher records hours studied ($x$) and exam score ($y$) for $6$ students.
+
+| Hours studied ($x$) | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| Exam score ($y$) | 55 | 60 | 68 | 75 | 80 | 86 |
+
+The line of best fit for this data is approximately $y = 6.2x + 48.7$. Which of the following is the best interpretation of the slope of this line?
+
+A) The predicted exam score for a student who studies $0$ hours is $6.2$.
+B) Each additional hour studied is associated with a predicted increase of about $6.2$ points on the exam.
+C) Each additional point on the exam is associated with a predicted increase of about $6.2$ hours studied.
+D) The exam score increases by exactly $6.2$ points for every student, regardless of hours studied.
+
+**Correct Answer:** B
+
+**Rationale:** In a linear model $y = mx + b$, the slope $m$ represents the predicted change in $y$ (exam score) per one-unit increase in $x$ (hours studied). Here, each additional hour studied predicts about a $6.2$-point increase in score.
+
+**Misconception addressed:** Students often swap the roles of slope and $y$-intercept, or confuse the direction of the dependency (thinking the slope describes hours per point rather than points per hour).
+
+---
+
+### PS-006
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots (Hard)
+
+**Question:** As part of tracking Vision 2030 progress, annual tourism revenue (in billion SAR) is recorded for years since 2016 ($x$):
+
+Approximate data points: $\left(0, 30\right)$, $\left(2, 45\right)$, $\left(4, 68\right)$, $\left(6, 95\right)$, $\left(8, 138\right)$, with described upward curvature in the later years.
+
+A line of best fit for this data is $y = 13.5x + 20$. What is the residual for the data point at $x = 8$?
+
+A) ${-10}$
+B) $0$
+C) $10$
+D) $128$
+
+**Correct Answer:** C
+
+**Rationale:** The predicted value at $x=8$ is $y = 13.5\left(8\right) + 20 = 128$. The residual is (actual value) $-$ (predicted value) $= 138 - 128 = 10$.
+
+**Misconception addressed:** Students frequently reverse the residual formula (computing predicted $-$ actual), which flips the sign and would incorrectly yield ${-10}$.
+
+---
+
+### PS-007
+**Skill:** One-variable data: Distributions and measures of center and spread | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread (Hard)
+
+**Question:** Box plots summarize final exam scores for two Grade 11 sections.
+
+Class A: minimum $60$, $Q1 = 70$, median $= 78$, $Q3 = 85$, maximum $95$.
+Class B: minimum $55$, $Q1 = 65$, median $= 78$, $Q3 = 90$, maximum $100$.
+
+Which statement is best supported by these box plots?
+
+A) The two classes have the same median and the same interquartile range (IQR).
+B) The two classes have the same median, but Class B's scores are more spread out, as shown by its greater IQR.
+C) Class A has a greater median than Class B.
+D) Class B's scores are less spread out than Class A's, as shown by its smaller IQR.
+
+**Correct Answer:** B
+
+**Rationale:** Both classes share a median of $78$. The IQR for Class A is $Q3 - Q1 = 85 - 70 = 15$, while for Class B it is $90 - 65 = 25$. Since Class B's IQR is larger, its middle $50\%$ of scores is more spread out.
+
+**Misconception addressed:** Students often judge spread using the full range instead of the IQR, and can misapply this reasoning when the range and IQR disagree in other data sets.
+
+---
+
+### PS-008
+**Skill:** One-variable data: Distributions and measures of center and spread | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread (Medium)
+
+**Question:** The table shows the number of siblings reported by $20$ students.
+
+| Number of siblings | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| Number of students | 5 | 8 | 4 | 2 | 1 |
+
+What is the mean number of siblings for these $20$ students?
+
+A) $1.1$
+B) $1.2$
+C) $1.3$
+D) $1.5$
+
+**Correct Answer:** C
+
+**Rationale:** The sum of siblings is $0\left(5\right)+1\left(8\right)+2\left(4\right)+3\left(2\right)+4\left(1\right) = 0+8+8+6+4 = 26$. The mean is $\dfrac{26}{20} = 1.3$.
+
+**Misconception addressed:** Students sometimes divide the sum of siblings by the number of distinct sibling-count categories ($5$) instead of the total number of students ($20$).
+
+---
+
+### PS-009
+**Skill:** Probability and conditional probability | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Probability and conditional probability (Medium)
+
+**Question:** As part of a Vision 2030 STEM-participation study, $200$ Grade 11 students were surveyed on their intended career track.
+
+| | STEM track | Non-STEM track | Total |
+|---|---|---|---|
+| Male | 60 | 40 | 100 |
+| Female | 50 | 50 | 100 |
+| Total | 110 | 90 | 200 |
+
+If a student is selected at random from those surveyed and the student is female, what is the probability that the student intends a STEM track?
+
+A) $0.45$
+B) $0.50$
+C) $0.55$
+D) $0.60$
+
+**Correct Answer:** B
+
+**Rationale:** This is a conditional probability restricted to the "female" row. There are $100$ female students, of whom $50$ intend a STEM track. So $P\left(\text{STEM} \mid \text{female}\right) = \dfrac{50}{100} = 0.50$.
+
+**Misconception addressed:** Students often divide by the overall total of $200$ instead of restricting the denominator to the given condition (female students only).
+
+---
+
+### PS-010
+**Skill:** Probability and conditional probability | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Probability and conditional probability (Hard)
+
+**Question:** Using the survey from the $90$ students on the Non-STEM track ($40$ male, $50$ female), two students are selected at random, one after another, without replacement. What is the probability that both selected students are female? (Round to the nearest thousandth.)
+
+**Correct Answer:** $0.306$
+
+**Rationale:** The probability the first student selected is female is $\dfrac{50}{90}$. Given that, $49$ of the remaining $89$ students are female, so the probability the second is also female is $\dfrac{49}{89}$. Multiplying, $\dfrac{50}{90}\cdot\dfrac{49}{89} = \dfrac{2450}{8010} \approx 0.306$.
+
+**Misconception addressed:** Students often treat the two selections as independent (using $\dfrac{50}{90}\cdot\dfrac{50}{90}$) instead of adjusting both the numerator and denominator for sampling without replacement.
+
+---
+
+### PS-011
+**Skill:** Evaluating statistical claims: Observational studies and experiments | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments (Hard)
+
+**Question:** A researcher wants to determine whether a flipped-classroom method (Method A) causes higher unit-test scores than traditional lecture (Method B) among Grade 11 Algebra II students in a large school district. From all Grade 11 Algebra II sections in the district, the researcher randomly assigns $10$ sections to use Method A and $10$ sections to use Method B for one unit, then compares the sections' mean test scores. Which statement is best supported by this study design?
+
+A) Because sections were randomly assigned to a method, a causal conclusion about the effect of the method on test scores can be drawn for the Grade 11 Algebra II sections in this district, but the results should not be generalized beyond this district.
+B) Because sections, rather than individual students, were randomly assigned, no causal conclusion can be drawn at all.
+C) Because an entire school district was involved, the results can be generalized to all high school students nationally.
+D) Because the researcher chose which sections received which method, this is an observational study, so no causal conclusions are valid.
+
+**Correct Answer:** A
+
+**Rationale:** Random assignment of sections to treatments supports a causal conclusion about the effect of the method for the group actually studied (this district's sections). However, since the sections were not randomly *sampled* from a larger population, the results cannot be generalized beyond this district.
+
+**Misconception addressed:** Students frequently conflate random assignment (which supports causal claims for the studied group) with random sampling (which supports generalizability), leading them to either deny causality entirely or over-generalize the results.
+
+---
+
+### PS-012
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Inference from sample statistics and margin of error (Medium)
+
+**Question:** A random sample of $500$ residents in the NEOM region found that $62\%$ support a proposed residential zoning initiative, with a margin of error of $4$ percentage points at the $95\%$ confidence level. Which of the following is the most appropriate interpretation of this result?
+
+A) Exactly $62\%$ of all residents in the NEOM region support the initiative.
+B) It is plausible that between $58\%$ and $66\%$ of all residents in the NEOM region support the initiative.
+C) Exactly $95\%$ of residents in the NEOM region support the initiative.
+D) The survey proves beyond doubt that a majority of residents support the initiative.
+
+**Correct Answer:** B
+
+**Rationale:** A margin of error defines a plausible range for the true population parameter: $62\% \pm 4\%$ gives an interval of $58\%$ to $66\%$, which is likely (at the stated confidence level) to contain the true percentage of all residents who support the initiative.
+
+**Misconception addressed:** Students often treat the sample statistic ($62\%$) as an exact, certain value for the entire population, ignoring that margin of error describes a range of plausible values, not certainty.
+
+---
+
+### PS-013
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, coverage-matched to Problem-Solving and Data Analysis — Inference from sample statistics and margin of error (Hard)
+
+**Question:** A survey of $n = 400$ randomly selected residents produces a margin of error of $4.5\%$ at a given confidence level. Assuming the margin of error is inversely proportional to $\sqrt{n}$, what would the margin of error be, in percent, for a survey of $n = 1600$ residents at the same confidence level?
+
+**Correct Answer:** $2.25$
+
+**Rationale:** Since margin of error $\propto \dfrac{1}{\sqrt{n}}$, $\text{ME}_2 = \text{ME}_1\sqrt{\dfrac{n_1}{n_2}} = 4.5\sqrt{\dfrac{400}{1600}} = 4.5\left(0.5\right) = 2.25$.
+
+**Misconception addressed:** Students often assume margin of error scales linearly with sample size (e.g., quadrupling $n$ should quarter the margin of error) rather than with $\sqrt{n}$, which would incorrectly give $1.125$.
+
+
+### 2.5 Simulated Batch — Retired-Practice-Style Original Items (16 items — coverage top-up)
+
+The 16 items below were added after reviewing five uploaded PDF exports (`Math Test 1, 3, 4, 5, 6`). Those files were traced to `cracksat.net`, an unauthorized redistributor of copyrighted College Board material, and per this bank's own provenance rule ("No leaked or circulated exam questions are used"), **no content, numbers, or phrasing were extracted or reproduced from them.** These 16 items are entirely house-authored and original — inspired only by the general skill areas and difficulty level typical of retired-format SAT Math sections — and are added to help close the domain-weighting gaps identified in the Coverage Audit (Algebra, Advanced Math, and Geometry under-represented relative to real distribution).
+
+### A-018
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Algebra — Linear functions (Medium)
+
+**Question:** The function $f$ is linear. Selected values of $x$ and $f(x)$ are shown in the table below.
+
+| $x$ | $f(x)$ |
+|---|---|
+| $2$ | $9$ |
+| $6$ | $21$ |
+
+What is the value of $f(10)$?
+
+A) $27$
+B) $30$
+C) $33$
+D) $36$
+
+**Correct Answer:** C
+
+**Rationale:** The slope is $\dfrac{21-9}{6-2} = \dfrac{12}{4} = 3$. Since $x=10$ is $4$ units beyond $x=6$: $f(10) = f(6) + 3(4) = 21 + 12 = 33$.
+
+**Misconception addressed:** Students often recompute the slope correctly but then add it only once regardless of how many equal intervals separate the known point from the target $x$-value.
+
+---
+
+### A-019
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Algebra — Systems of two linear equations in two variables (Medium)
+
+**Question:** At a juice stand in Jeddah, $2$ small cups and $3$ large cups of juice cost a total of SAR $39$. $4$ small cups and $1$ large cup cost a total of SAR $33$. What is the price, in SAR, of one large cup?
+
+A) $6$
+B) $7$
+C) $8$
+D) $9$
+
+**Correct Answer:** D
+
+**Rationale:** Let $s$ and $l$ be the small and large cup prices. From $4s + l = 33$, $l = 33 - 4s$. Substituting into $2s + 3l = 39$: $2s + 3(33-4s) = 39 \Rightarrow 2s + 99 - 12s = 39 \Rightarrow {-10s} = {-60} \Rightarrow s = 6$. Then $l = 33 - 4(6) = 9$.
+
+**Misconception addressed:** Students often solve for $s$ correctly and then report that value, forgetting the question asks for the price of the large cup, not the small one.
+
+---
+
+### A-020
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Algebra — Linear equations in two variables (Hard)
+
+**Question:** Line $\ell$ passes through the point $\left({-1}, 4\right)$ and is parallel to the line with equation $4x + 2y = 10$. What is the $y$-intercept of line $\ell$?
+
+A) ${-2}$
+B) $0$
+C) $2$
+D) $6$
+
+**Correct Answer:** C
+
+**Rationale:** Rewriting $4x+2y=10$ as $y = {-2x} + 5$ gives a slope of ${-2}$. Using point-slope form with $\left({-1},4\right)$: $y - 4 = {-2}\left(x-\left({-1}\right)\right) = {-2}\left(x+1\right)$, so $y = {-2x} + 2$. The $y$-intercept is $2$.
+
+**Misconception addressed:** Students often use the sign-flipped slope ($2$ instead of ${-2}$) when rewriting the equation, or confuse "parallel" with "perpendicular" and take a reciprocal slope.
+
+---
+
+### A-021
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Algebra — Linear inequalities in one or two variables (Medium)
+
+**Question:** A delivery van moving goods between Jeddah and Makkah can carry at most $3600$ kilograms. The van is already loaded with $40$ boxes of packaged dates, each weighing $45$ kilograms. Each additional box of bottled water weighs $60$ kilograms. What is the maximum number of boxes of bottled water the van can carry in addition to the dates?
+
+A) $25$
+B) $28$
+C) $30$
+D) $32$
+
+**Correct Answer:** C
+
+**Rationale:** The inequality is $40(45) + 60x \leq 3600 \Rightarrow 1800 + 60x \leq 3600 \Rightarrow 60x \leq 1800 \Rightarrow x \leq 30$. The maximum number of water boxes is $30$.
+
+**Misconception addressed:** Students often skip subtracting the existing load and divide $3600$ directly by $60$, overestimating the remaining capacity.
+
+---
+
+### A-022
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Algebra — Linear equations in one variable (Medium)
+
+**Question:** What value of $x$ satisfies the equation $\dfrac{3x-4}{2} = x + 5$?
+
+**Correct Answer:** $14$
+
+**Rationale:** Multiplying both sides by $2$: $3x - 4 = 2\left(x+5\right) = 2x + 10$. Isolating $x$: $3x - 2x = 10 + 4 \Rightarrow x = 14$.
+
+**Misconception addressed:** Students often forget to distribute the multiplication by $2$ across both terms on the right side, only clearing the fraction on the left.
+
+---
+
+### A-023
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Algebra — Systems of two linear equations in two variables (Hard)
+
+**Question:** For what value of $k$ does the system of equations below have infinitely many solutions?
+
+$2x + ky = 10$
+$6x + 12y = 30$
+
+A) $2$
+B) $3$
+C) $4$
+D) $6$
+
+**Correct Answer:** C
+
+**Rationale:** Multiplying the first equation by $3$: $6x + 3ky = 30$. For the two equations to represent the same line, the coefficients of $y$ must match: $3k = 12$, so $k = 4$.
+
+**Misconception addressed:** Students often set up the ratio using only one pair of coefficients directly (e.g., $k = 12$) without first scaling the equation to match the coefficient of $x$, or forget to verify the constant terms already agree.
+
+---
+
+### AM-013
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Advanced Math — Nonlinear functions (Medium)
+
+**Question:** The function $f$ is defined by $f(x) = a\cdot 3^{x}$, where $a$ is a constant. If $f(2) = 45$, what is the value of $f(4)$?
+
+A) $135$
+B) $225$
+C) $405$
+D) $450$
+
+**Correct Answer:** C
+
+**Rationale:** From $f(2) = a\cdot 3^{2} = 9a = 45$, we get $a = 5$. Then $f(4) = 5\cdot 3^{4} = 5\left(81\right) = 405$.
+
+**Misconception addressed:** Students often scale $f(2)$ by the linear factor $\dfrac{4}{2}=2$ instead of recognizing the growth factor must itself be squared ($3^{2}=9$) between $x=2$ and $x=4$.
+
+---
+
+### AM-014
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** In the $xy$-plane, the graphs of $y = x^{2} - 4x - 5$ and $y = 3x + 1$ intersect at two points. What is the sum of the $x$-coordinates of these two points?
+
+**Correct Answer:** $7$
+
+**Rationale:** Setting the expressions equal: $x^{2}-4x-5 = 3x+1$, so $x^{2}-7x-6=0$. By Vieta's formulas, the sum of the roots of $x^{2}-7x-6=0$ is $-\dfrac{-7}{1} = 7$, regardless of whether the individual roots are rational.
+
+**Misconception addressed:** Students try to factor the quadratic to find each root individually, get stuck because the roots are irrational, and abandon the problem instead of using the sum-of-roots relationship.
+
+---
+
+### AM-015
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Advanced Math — Equivalent expressions (Medium)
+
+**Question:** Which of the following is equivalent to $\dfrac{x^{2}-25}{x+5}$, for $x \neq {-5}$?
+
+A) $x-5$
+B) $x+5$
+C) $x^{2}-5$
+D) $x-25$
+
+**Correct Answer:** A
+
+**Rationale:** The numerator factors as a difference of squares: $x^{2}-25 = (x-5)(x+5)$. Dividing by $(x+5)$, valid since $x \neq {-5}$, leaves $x-5$.
+
+**Misconception addressed:** Students cancel the $x^2$ term with a term in the denominator directly instead of factoring the numerator first, producing an invalid simplification.
+
+---
+
+### AM-016
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** A ball is thrown upward, and its height above the ground, in meters, is modeled by
+$$h(t) = -5\left(t-2\right)^{2} + 30,$$
+where $t$ is the time, in seconds, after the ball is thrown. For which values of $t$ does the ball reach a height of $10$ meters?
+
+A) $t=0$ only
+B) $t=4$ only
+C) $t=0$ and $t=4$
+D) $t=1$ and $t=3$
+
+**Correct Answer:** C
+
+**Rationale:** Set $h(t)=10$: $-5(t-2)^2 = -20$, so $(t-2)^2 = 4$, giving $t-2 = \pm 2$. Thus $t=0$ or $t=4$; both are valid times after the throw.
+
+**Misconception addressed:** Students take only the positive square root of $(t-2)^2=4$ and report a single solution, forgetting a quadratic in vertex form has two symmetric times at any height below the maximum.
+
+---
+
+### AM-017
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** What are the solutions to the equation $2x^{2} - 5x - 3 = 0$?
+
+A) $x = {-\dfrac{1}{2}}$ and $x = 3$
+B) $x = \dfrac{1}{2}$ and $x = {-3}$
+C) $x = {-\dfrac{3}{2}}$ and $x = 1$
+D) $x = \dfrac{3}{2}$ and $x = {-1}$
+
+**Correct Answer:** A
+
+**Rationale:** The expression factors as $2x^{2}-5x-3 = (2x+1)(x-3)$. Setting each factor to $0$ gives $x = {-\dfrac{1}{2}}$ or $x=3$.
+
+**Misconception addressed:** Students mis-distribute the leading coefficient $2$ between the two binomial factors (e.g., trying $(2x-3)(x+1)$, which does not expand back to the original expression), producing sign errors in the roots.
+
+---
+
+### GT-014
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Geometry and Trigonometry — Right triangles and trigonometry (Medium)
+
+**Question:** [Figure: right triangle $DEF$ with the right angle at vertex $F$ — diagram file: GT-014.png, ready to attach (pilot batch, rendered 2026-09-22)] In right triangle $DEF$, the right angle is at $F$. If $\tan(D) = \dfrac{8}{15}$, what is the value of $\tan(E)$?
+
+A) $\dfrac{8}{15}$
+B) $\dfrac{15}{8}$
+C) $\dfrac{8}{17}$
+D) $\dfrac{17}{15}$
+
+**Correct Answer:** B
+
+**Rationale:** Angles $D$ and $E$ are complementary. The two legs of the triangle swap roles as "opposite" and "adjacent" between $D$ and $E$, so $\tan(E) = \dfrac{1}{\tan(D)} = \dfrac{15}{8}$.
+
+**Misconception addressed:** Students assume $\tan(E) = \tan(D)$ because both angles are acute, confusing the reciprocal relationship between complementary tangents with the co-function identity that applies to sine and cosine.
+
+---
+
+### GT-015
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Geometry and Trigonometry — Circles (Medium)
+
+**Question:** A circle in the $xy$-plane is defined by the equation $x^2 + y^2 + 10x - 4y + 13 = 0$. What is the radius of the circle?
+
+A) $4$
+B) $8$
+C) $13$
+D) $16$
+
+**Correct Answer:** A
+
+**Rationale:** Complete the square: $x^2+10x = (x+5)^2 - 25$ and $y^2-4y = (y-2)^2 - 4$. Substituting gives $(x+5)^2 + (y-2)^2 - 25 - 4 + 13 = 0$, so $(x+5)^2+(y-2)^2 = 16$. Thus $r^2=16$ and $r=4$.
+
+**Misconception addressed:** Students stop after completing the square and report the value on the right side of the equation ($16$, option D) as the radius instead of taking its square root.
+
+---
+
+### GT-016
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Geometry and Trigonometry — Area and volume (Hard)
+
+**Question:** [Figure: a cylindrical grain silo topped by a cone, both sharing the same radius] A grain silo near Tabuk is designed as a cylindrical base topped by a conical roof of the same radius. The cylindrical base has radius $4$ meters and height $12$ meters, and the conical roof has radius $4$ meters and height $3$ meters. What is the total volume of the structure, in cubic meters, in terms of $\pi$?
+
+A) $176\pi$
+B) $192\pi$
+C) $208\pi$
+D) $240\pi$
+
+**Correct Answer:** C
+
+**Rationale:** The cylinder's volume is $\pi r^2 h = \pi(4)^2(12) = 192\pi$. The cone's volume is $\dfrac{1}{3}\pi r^2 h = \dfrac{1}{3}\pi(4)^2(3) = 16\pi$. The total volume is $192\pi + 16\pi = 208\pi$.
+
+**Misconception addressed:** Students forget the factor of $\dfrac{1}{3}$ in the cone volume formula, computing $\pi r^2 h = 48\pi$ for the cone instead of $16\pi$, and arriving at $240\pi$.
+
+---
+
+### PS-014
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Problem-Solving and Data Analysis — Percentages (Medium)
+
+**Question:** A laptop's price increased by $20\%$ during a promotional period, then decreased by $15\%$ after the promotion ended. If the final price is SAR $1{,}020$, what was the original price, before the increase?
+
+A) $950$
+B) $1{,}000$
+C) $1{,}050$
+D) $1{,}200$
+
+**Correct Answer:** B
+
+**Rationale:** Let $x$ be the original price. After the increase, the price is $1.2x$; after the decrease, it is $1.2x\left(0.85\right) = 1.02x$. Solving $1.02x = 1020$ gives $x = 1000$.
+
+**Misconception addressed:** Students often combine the percent changes additively (assuming a net $+5\%$, i.e. $20\% - 15\%$) instead of multiplying the successive scale factors $\left(1.20\right)\left(0.85\right)$.
+
+---
+
+### PS-015
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (retired-practice-style, original), coverage top-up for Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots (Hard)
+
+**Question:** A scatterplot showing the relationship between daily study time ($x$, in hours) and nightly sleep time ($y$, in hours) for a group of students has a correlation coefficient of $r = {-0.82}$. Which of the following best describes this relationship?
+
+A) A strong, positive linear relationship between study time and sleep time.
+B) A strong, negative linear relationship between study time and sleep time.
+C) A weak, negative linear relationship between study time and sleep time.
+D) No linear relationship between study time and sleep time.
+
+**Correct Answer:** B
+
+**Rationale:** A correlation coefficient of $r = {-0.82}$ is close to ${-1}$, indicating a strong negative linear relationship: as one variable tends to increase, the other tends to decrease.
+
+**Misconception addressed:** Students associate the sign of $r$ with the strength of the relationship rather than its direction, sometimes assuming a negative $r$ automatically means a weak relationship instead of judging strength by distance from $0$.
+
+
+### 2.6 Simulated Batch 2 — Numeric-Reasoning & Advanced-Style Top-Up (20 items — coverage top-up)
+
+The 20 items below were added after reviewing three additional uploaded/added reference materials: `sat-practice-test-10-digital.pdf` (College Board's officially released Digital SAT Practice Test #10 — a legitimate first-party source, unlike the earlier `cracksat.net` files), `sat-math-hard-practice-quiz.pdf` (a freely and openly distributed resource from `erikthered.com/tutor`), and `SAT-Quantitative-Question-Bank.pdf` (a commercial Manhattan Review publication added to the project knowledge folder). Per this bank's standing provenance rule, **no content, numbers, or phrasing were extracted or reproduced from any of the three** — the Manhattan Review book in particular is copyrighted commercial material and was used only to identify topic/difficulty style (abstract numeric relationships, integer-property reasoning, compact algebraic manipulation), never copied. All 20 items are entirely house-authored and original, continuing the coverage-gap top-up from §2.5 (per the Coverage Audit's ~160-item target: Algebra, Advanced Math, and Geometry remain the priority domains).
+
+### A-024
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear functions (Medium)
+
+**Question:** The function $f$ is linear. Selected values of $x$ and $f(x)$ are shown in the table below.
+
+| $x$ | $f(x)$ |
+|---|---|
+| $1$ | $7$ |
+| $4$ | $19$ |
+
+What is the value of $f(10)$?
+
+A) $37$
+B) $40$
+C) $43$
+D) $46$
+
+**Correct Answer:** C
+
+**Rationale:** The slope is $\dfrac{19-7}{4-1} = \dfrac{12}{3} = 4$. Since $x=10$ is $6$ units beyond $x=4$: $f(10) = f(4) + 4(6) = 19 + 24 = 43$.
+
+**Misconception addressed:** Students often recompute the slope correctly but then misjudge how many equal intervals separate the known point from the target $x$-value, adding the slope too few or too many times.
+
+---
+
+### A-025
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear functions (Hard)
+
+**Question:** The function $g$ is linear, and $g(a+3) = g(a) + 15$ for all values of $a$. If $g(0) = {-4}$, what is the value of $g(6)$?
+
+**Correct Answer:** $26$
+
+**Rationale:** Since $g$ is linear, $g(a+3) - g(a) = 3m = 15$, so the slope $m = 5$. Then $g(6) = g(0) + 5(6) = {-4} + 30 = 26$.
+
+**Misconception addressed:** Students often treat $g(a+3) = g(a) + 15$ as meaning the slope itself is $15$, forgetting to divide by the interval width of $3$ to isolate the slope.
+
+---
+
+### A-026
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Systems of two linear equations in two variables (Medium)
+
+**Question:** If $3x + 2y = 18$ and $x + y = 7$, what is the value of $x - y$?
+
+A) ${-1}$
+B) $1$
+C) $3$
+D) $7$
+
+**Correct Answer:** B
+
+**Rationale:** From $x+y=7$, $x = 7-y$. Substituting: $3(7-y) + 2y = 18 \Rightarrow 21 - 3y + 2y = 18 \Rightarrow 21 - y = 18 \Rightarrow y = 3$, so $x = 4$. Then $x - y = 4 - 3 = 1$.
+
+**Misconception addressed:** Students solve correctly for $x$ and $y$ but then compute $x+y$ (the given sum) again out of habit instead of the requested difference $x-y$.
+
+---
+
+### A-027
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Systems of two linear equations in two variables (Hard)
+
+**Question:** For what value of $c$ does the system of equations below have no solution?
+
+$cx + 6y = 9$
+$2x + 4y = 5$
+
+A) $1.5$
+B) $3$
+C) $4$
+D) $6$
+
+**Correct Answer:** B
+
+**Rationale:** No solution requires the coefficient ratios to match while the constant ratio differs: $\dfrac{c}{2} = \dfrac{6}{4} = 1.5 \Rightarrow c = 3$. Checking constants, $\dfrac{9}{5} = 1.8 \neq 1.5$, confirming the lines are parallel and distinct.
+
+**Misconception addressed:** Students set the constant ratio equal to the coefficient ratio (which would force infinitely many solutions instead of none), or solve using only one pair of coefficients without checking both.
+
+---
+
+### A-028
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear equations in two variables (Medium)
+
+**Question:** A line contains the points $\left(2, 5\right)$ and $\left(6, 17\right)$. What is the $x$-intercept of this line?
+
+A) ${-\dfrac{1}{3}}$
+B) $\dfrac{1}{3}$
+C) $1$
+D) $3$
+
+**Correct Answer:** B
+
+**Rationale:** The slope is $\dfrac{17-5}{6-2} = \dfrac{12}{4} = 3$. Using point-slope form: $y - 5 = 3(x-2) \Rightarrow y = 3x - 1$. Setting $y=0$: $0 = 3x - 1 \Rightarrow x = \dfrac{1}{3}$.
+
+**Misconception addressed:** Students find the $y$-intercept ($-1$) correctly but then confuse it with the $x$-intercept, or set $x=0$ instead of $y=0$ when solving for the intercept.
+
+---
+
+### A-029
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear equations in two variables (Hard)
+
+**Question:** Line $k$ is perpendicular to the line represented by the equation $3x - 4y = 8$ and passes through the point $\left(2, {-1}\right)$. What is the $y$-intercept of line $k$?
+
+**Correct Answer:** $\dfrac{5}{3}$ (or $1.667$)
+
+**Rationale:** Rewriting $3x-4y=8$ as $y = \dfrac{3}{4}x - 2$ gives slope $\dfrac{3}{4}$, so the perpendicular slope is $-\dfrac{4}{3}$. Line $k$: $y - \left({-1}\right) = -\dfrac{4}{3}\left(x-2\right) \Rightarrow y = -\dfrac{4}{3}x + \dfrac{8}{3} - 1 = -\dfrac{4}{3}x + \dfrac{5}{3}$. The $y$-intercept is $\dfrac{5}{3}$.
+
+**Misconception addressed:** Students take the negative reciprocal of the $y$-coefficient itself ($-4$) rather than the simplified slope ($\dfrac{3}{4}$), producing an incorrect perpendicular slope.
+
+---
+
+### A-030
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear inequalities in one or two variables (Medium)
+
+**Question:** If $4x - 7 \leq 21$ and $x$ is a positive integer, what is the greatest possible value of $x$?
+
+A) $5$
+B) $6$
+C) $7$
+D) $8$
+
+**Correct Answer:** C
+
+**Rationale:** Solving: $4x \leq 28 \Rightarrow x \leq 7$. The greatest positive integer satisfying this is $7$.
+
+**Misconception addressed:** Students make an arithmetic slip when isolating $x$ (e.g., dividing $28$ by $4$ incorrectly or mishandling the $-7$), landing one integer above or below the true boundary.
+
+---
+
+### A-031
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear equations in one variable (Medium)
+
+**Question:** What is the value of $x$ that satisfies $5\left(x-2\right) - 3 = 2\left(x+4\right)$?
+
+**Correct Answer:** $7$
+
+**Rationale:** Expanding: $5x - 10 - 3 = 2x + 8 \Rightarrow 5x - 13 = 2x + 8 \Rightarrow 3x = 21 \Rightarrow x = 7$.
+
+**Misconception addressed:** Students distribute correctly on one side but forget to distribute the $2$ across both terms on the right side, or combine the constants on the left incorrectly ($-10-3$ becoming $-7$ instead of $-13$).
+
+---
+
+### AM-018
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Advanced Math — Nonlinear functions (Medium)
+
+**Question:** If $f(x) = x^{2} - 4x + k$ and $f(1) = 9$, what is the value of $k$?
+
+A) $6$
+B) $9$
+C) $12$
+D) $14$
+
+**Correct Answer:** C
+
+**Rationale:** Substituting $x=1$: $f(1) = 1 - 4 + k = k - 3 = 9$, so $k = 12$.
+
+**Misconception addressed:** Students compute $1-4=-3$ correctly but then add $9$ and $3$ incorrectly, or forget to isolate $k$ as the last step after substitution.
+
+---
+
+### AM-019
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The function $h$ is defined by $h(x) = \left(x-a\right)\left(x-b\right)$, where $a$ and $b$ are constants and $a < b$. The graph of $y=h(x)$ crosses the $x$-axis at $x={-3}$ and $x=7$. What is the minimum value of $h$?
+
+A) ${-25}$
+B) ${-20}$
+C) ${-10}$
+D) $25$
+
+**Correct Answer:** A
+
+**Rationale:** The vertex occurs midway between the roots: $x = \dfrac{-3+7}{2} = 2$. The minimum value is $h(2) = \left(2-\left({-3}\right)\right)\left(2-7\right) = 5\left({-5}\right) = {-25}$.
+
+**Misconception addressed:** Students multiply the two roots directly ($-3 \times 7 = -21$) as though that were the minimum value, instead of evaluating the function at the vertex $x$-coordinate.
+
+---
+
+### AM-020
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The function $p$ is defined by $p(x) = a\cdot x^{3}$, where $a$ is a nonzero constant. If $p(2) = 40$, what is the value of $p(-2)$?
+
+**Correct Answer:** ${-40}$
+
+**Rationale:** From $p(2) = a\left(2\right)^{3} = 8a = 40$, we get $a = 5$. Then $p({-2}) = 5\left({-2}\right)^{3} = 5\left({-8}\right) = {-40}$.
+
+**Misconception addressed:** Students assume $p({-2}) = p(2)$ by symmetry, not recognizing that an odd-power term like $x^3$ flips sign under negation, unlike an even-power term.
+
+---
+
+### AM-021
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** If $x$ and $y$ are positive integers such that $x^{2} - y^{2} = 45$ and $x - y = 5$, what is the value of $x + y$?
+
+A) $7$
+B) $9$
+C) $11$
+D) $13$
+
+**Correct Answer:** B
+
+**Rationale:** Factoring the difference of squares: $x^{2}-y^{2} = \left(x-y\right)\left(x+y\right) = 45$. Since $x-y=5$: $5\left(x+y\right) = 45 \Rightarrow x+y = 9$.
+
+**Misconception addressed:** Students attempt to solve the system by substitution (solving for $y$ in terms of $x$ and substituting into the quadratic) instead of recognizing the difference-of-squares factoring shortcut, leading to unnecessary algebra and arithmetic slips.
+
+---
+
+### AM-022
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** In the $xy$-plane, the graphs of $y = x^{2} - x - 14$ and $y = 2x - 4$ intersect at two points. What is the positive difference between the $x$-coordinates of these two points?
+
+**Correct Answer:** $7$
+
+**Rationale:** Setting the expressions equal: $x^{2}-x-14 = 2x-4 \Rightarrow x^{2}-3x-10=0 \Rightarrow \left(x+2\right)\left(x-5\right)=0$, so $x={-2}$ or $x=5$. The positive difference is $5-\left({-2}\right)=7$.
+
+**Misconception addressed:** Students compute the sum of the roots (using $-b/a=3$) instead of the requested difference, or make a sign error factoring the quadratic and report an incorrect pair of roots.
+
+---
+
+### AM-023
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Advanced Math — Equivalent expressions (Hard)
+
+**Question:** The expression $\dfrac{5}{x+2} + \dfrac{3}{x-1}$ is equivalent to which of the following, for $x \neq {-2}$ and $x \neq 1$?
+
+A) $\dfrac{8x+1}{x^{2}+x-2}$
+B) $\dfrac{8x-1}{x^{2}+x-2}$
+C) $\dfrac{2x+11}{x^{2}+x-2}$
+D) $\dfrac{8x+1}{x^{2}-x-2}$
+
+**Correct Answer:** A
+
+**Rationale:** Using the common denominator $\left(x+2\right)\left(x-1\right) = x^{2}+x-2$: $\dfrac{5\left(x-1\right) + 3\left(x+2\right)}{\left(x+2\right)\left(x-1\right)} = \dfrac{5x-5+3x+6}{x^{2}+x-2} = \dfrac{8x+1}{x^{2}+x-2}$.
+
+**Misconception addressed:** Students make a sign error distributing across the second numerator's binomial (e.g., writing $3x-6$ instead of $3x+6$), or write the denominator with the wrong sign on the linear term.
+
+---
+
+### GT-017
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Geometry and Trigonometry — Right triangles and trigonometry (Hard)
+
+**Question:** [Figure: right triangle $JKL$ with the right angle at vertex $L$ — diagram file: GT-017.png, ready to attach (pilot batch, rendered 2026-09-22)] In right triangle $JKL$, the right angle is at $L$. If $\cos(J) = \dfrac{7}{25}$, what is the value of $\sin(J)$?
+
+A) $\dfrac{7}{25}$
+B) $\dfrac{24}{25}$
+C) $\dfrac{25}{7}$
+D) $\dfrac{25}{24}$
+
+**Correct Answer:** B
+
+**Rationale:** Using the Pythagorean identity $\sin^2(J) + \cos^2(J) = 1$: $\sin(J) = \sqrt{1 - \left(\dfrac{7}{25}\right)^2} = \sqrt{\dfrac{576}{625}} = \dfrac{24}{25}$.
+
+**Misconception addressed:** Students confuse this with the co-function identity for a complementary angle (which would require angle $K$, not $J$), rather than applying the Pythagorean identity to the same angle.
+
+---
+
+### GT-018
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Geometry and Trigonometry — Circles (Hard)
+
+**Question:** A circle in the $xy$-plane has the equation $x^2 + y^2 - 8x + 2y - 8 = 0$. What is the diameter of the circle?
+
+**Correct Answer:** $10$
+
+**Rationale:** Completing the square: $x^2-8x = \left(x-4\right)^2 - 16$ and $y^2+2y = \left(y+1\right)^2 - 1$. Substituting: $\left(x-4\right)^2 + \left(y+1\right)^2 - 25 = 0$, so $\left(x-4\right)^2+\left(y+1\right)^2 = 25$. The radius is $5$, so the diameter is $10$.
+
+**Misconception addressed:** Students correctly find the radius ($5$) but report it directly instead of doubling it to answer the question, which specifically asks for the diameter.
+
+---
+
+### GT-019
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Geometry and Trigonometry — Area and volume (Hard)
+
+**Question:** A stone block used in a heritage restoration project in AlUla is a rectangular prism measuring $8$ meters by $8$ meters by $20$ meters, with a cylindrical channel of radius $2$ meters drilled completely through its $20$-meter length. What is the volume of the remaining stone, in cubic meters, in terms of $\pi$?
+
+A) $1280 - 80\pi$
+B) $1280 - 160\pi$
+C) $1280 - 20\pi$
+D) $1200 - 80\pi$
+
+**Correct Answer:** A
+
+**Rationale:** The prism's volume is $8 \times 8 \times 20 = 1280$ cubic meters. The drilled cylinder's volume is $\pi r^2 h = \pi(2)^2(20) = 80\pi$. The remaining stone's volume is $1280 - 80\pi$.
+
+**Misconception addressed:** Students use the diameter instead of the radius in the cylinder volume formula (using $r=4$), computing $\pi(4)^2(20) = 320\pi$ and selecting a distractor built from that error.
+
+---
+
+### GT-020
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Geometry and Trigonometry — Lines, angles, and triangles (Medium)
+
+**Question:** In triangle $ABC$, the measure of angle $A$ is twice the measure of angle $B$, and the measure of angle $C$ is $30^\circ$ more than the measure of angle $B$. What is the measure of angle $A$, in degrees?
+
+A) $37.5$
+B) $67.5$
+C) $75$
+D) $82.5$
+
+**Correct Answer:** C
+
+**Rationale:** Let angle $B = x$. Then angle $A = 2x$ and angle $C = x + 30$. Since the angles sum to $180^\circ$: $2x + x + \left(x+30\right) = 180 \Rightarrow 4x = 150 \Rightarrow x = 37.5$. So angle $A = 2\left(37.5\right) = 75^\circ$.
+
+**Misconception addressed:** Students correctly solve for angle $B$ ($37.5°$) but then report that value as the answer instead of doubling it for angle $A$, or misassign the "$30$ more" condition to the wrong angle.
+
+---
+
+### PS-016
+**Skill:** Percentages | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (original), coverage top-up for Problem-Solving and Data Analysis — Percentages (Hard)
+
+**Question:** The number of families visiting a Riyadh Season family zone increased by $40\%$ from Week 1 to Week 2, then decreased by $25\%$ from Week 2 to Week 3. If Week 3 attendance was $8{,}400$ families, what was the Week 1 attendance?
+
+**Correct Answer:** $8{,}000$
+
+**Rationale:** Let $x$ be the Week 1 attendance. Week 2 attendance is $1.4x$. Week 3 attendance is $1.4x\left(0.75\right) = 1.05x$. Solving $1.05x = 8400$ gives $x = 8000$.
+
+**Misconception addressed:** Students combine the percent changes additively (assuming a net $+15\%$, i.e. $40\% - 25\%$) instead of multiplying the successive scale factors $\left(1.40\right)\left(0.75\right)$.
+
+---
+
+### PS-017
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (original), coverage top-up for Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units (Medium)
+
+**Question:** A recipe for a traditional Saudi dish requires flour, sugar, and dates in the ratio $5 : 2 : 3$ by weight. If a bakery uses $18$ kilograms of dates to prepare a large batch, how many kilograms of flour are used?
+
+A) $12$
+B) $24$
+C) $30$
+D) $36$
+
+**Correct Answer:** C
+
+**Rationale:** Dates make up $3$ parts of the ratio, so $18 \div 3 = 6$ kilograms per part. Flour makes up $5$ parts, so the flour used is $5\left(6\right) = 30$ kilograms.
+
+**Misconception addressed:** Students divide $18$ by flour's ratio number ($5$) instead of dates' own ratio number ($3$), using the wrong quantity to find the value of one part.
+
+### 2.7 Simulated Batch 3 — Manhattan Review-Style Abstract Reasoning Top-Up (16 items — coverage top-up)
+
+The 16 items below are inspired specifically by the reasoning *style* found in the newly added `SAT-Quantitative-Question-Bank.pdf` (Manhattan Review, © 1999–2016) — abstract variable relationships ("express $q$ in terms of $N$, $S$, $p$"), integer-constraint puzzles ("$Q=17m$, find $m$"), custom-operation notation, and "which of the following could NOT be" reasoning. Per the bank's standing provenance rule, **no content, numbers, or context was extracted or reproduced from that book** — it is a copyrighted commercial publication and was used only to identify a style of question underrepresented in this bank, not as a content source. Several of that book's chapters (Complex Numbers, Combinatorics, Time & Work, Mixtures) fall outside what the current Digital SAT actually tests and were deliberately **not** mimicked, to preserve the bank's fidelity to the real, verified Skill/Difficulty coverage map in Section 1 — every item below is still tagged to one of the 19 real Digital SAT skills. PSDA is intentionally excluded from this batch: it already reached its Coverage Audit target (17 items) in §2.5–2.6.
+
+### A-032
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Algebra — Linear inequalities in one or two variables (Medium)
+
+**Question:** If $Q = 24m$, where $m$ is an integer, and $Q$ is greater than $270$ and less than $290$, what is the value of $m$?
+
+A) $10$
+B) $11$
+C) $12$
+D) $13$
+
+**Correct Answer:** C
+
+**Rationale:** Testing multiples of $24$ in the range: $24(11) = 264$ (too low), $24(12) = 288$ (satisfies $270 < 288 < 290$), $24(13) = 312$ (too high). So $m = 12$.
+
+**Misconception addressed:** Students estimate a value of $m$ without checking both inequality bounds precisely, sometimes selecting $m=11$ without verifying that $264$ actually exceeds $270$.
+
+---
+
+### A-033
+**Skill:** Linear equations in one variable | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Algebra — Linear equations in one variable (Hard)
+
+**Question:** If $N = \dfrac{Sp}{q-1}$, where $N$, $S$, and $p$ are nonzero, what is $q$ in terms of $N$, $S$, and $p$?
+
+A) $q = \dfrac{Sp+N}{N}$
+B) $q = \dfrac{Sp-N}{N}$
+C) $q = \dfrac{Sp}{N} - 1$
+D) $q = \dfrac{N}{Sp} + 1$
+
+**Correct Answer:** A
+
+**Rationale:** Multiplying both sides by $\left(q-1\right)$: $N\left(q-1\right) = Sp \Rightarrow q - 1 = \dfrac{Sp}{N} \Rightarrow q = \dfrac{Sp}{N} + 1 = \dfrac{Sp+N}{N}$.
+
+**Misconception addressed:** Students isolate $\dfrac{Sp}{N}$ correctly but forget to rewrite the "$+1$" using the common denominator $N$, leaving an unsimplified or incomplete expression that doesn't match any answer choice cleanly.
+
+---
+
+### A-034
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Algebra — Linear functions (Hard)
+
+**Question:** If $f(x) = 4x - 3$ and $f(2a) = 3f(a) + 7$, what is the value of $a$?
+
+A) $-\dfrac{1}{4}$
+B) $-\dfrac{1}{2}$
+C) $\dfrac{1}{4}$
+D) $\dfrac{1}{2}$
+
+**Correct Answer:** A
+
+**Rationale:** $f(2a) = 4(2a) - 3 = 8a - 3$. Also $3f(a) + 7 = 3(4a-3) + 7 = 12a - 9 + 7 = 12a - 2$. Setting these equal: $8a - 3 = 12a - 2 \Rightarrow -1 = 4a \Rightarrow a = -\dfrac{1}{4}$.
+
+**Misconception addressed:** Students treat $f(2a)$ as though it equals $2f(a)$ (assuming the function distributes over scalar multiplication), rather than substituting $2a$ correctly into the function rule.
+
+---
+
+### A-035
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Algebra — Systems of two linear equations in two variables (Hard)
+
+**Question:** If $2x + 3y = 16$ and $4x - y = 18$, what is the value of $x + y$?
+
+**Correct Answer:** $7$
+
+**Rationale:** From the second equation, $y = 4x - 18$. Substituting into the first: $2x + 3\left(4x-18\right) = 16 \Rightarrow 2x + 12x - 54 = 16 \Rightarrow 14x = 70 \Rightarrow x = 5$. Then $y = 4(5) - 18 = 2$, so $x + y = 5 + 2 = 7$.
+
+**Misconception addressed:** Students substitute correctly but make a sign error distributing the $3$ across $\left(4x-18\right)$, or solve for $x$ and stop without computing the requested sum $x+y$.
+
+---
+
+### A-036
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Algebra — Linear equations in two variables (Medium)
+
+**Question:** The graph of the equation $\dfrac{x}{4} + \dfrac{y}{6} = 1$ in the $xy$-plane is a line. What is the slope of this line?
+
+A) $-\dfrac{3}{2}$
+B) $-\dfrac{2}{3}$
+C) $\dfrac{2}{3}$
+D) $\dfrac{3}{2}$
+
+**Correct Answer:** A
+
+**Rationale:** Multiplying both sides by $12$: $3x + 2y = 12 \Rightarrow y = -\dfrac{3}{2}x + 6$. The slope is $-\dfrac{3}{2}$.
+
+**Misconception addressed:** Students recognize the intercept form but jump directly to a slope of $-\dfrac{6}{4}$ (the ratio of the two intercepts, with the sign or reciprocal wrong) instead of clearing denominators and solving for $y$ properly.
+
+---
+
+### A-037
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Algebra — Linear inequalities in one or two variables (Hard)
+
+**Question:** If $20 < a < 35$ and $40 < b < 55$, which of the following represents all possible values of $a - b$?
+
+A) $-35 < a-b < -20$
+B) $-35 < a-b < -5$
+C) $-15 < a-b < -5$
+D) $-20 < a-b < 5$
+
+**Correct Answer:** B
+
+**Rationale:** The minimum of $a-b$ occurs at the smallest $a$ and the largest $b$: $20 - 55 = -35$. The maximum occurs at the largest $a$ and the smallest $b$: $35 - 40 = -5$. Since both bounds are strict, $-35 < a - b < -5$.
+
+**Misconception addressed:** Students pair the same extreme of both variables (e.g., using the smallest value of both $a$ and $b$, or the largest of both) instead of pairing $a$'s minimum with $b$'s maximum (and vice versa) to find the true range of the difference.
+
+---
+
+### AM-024
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Advanced Math — Equivalent expressions (Hard)
+
+**Question:** The operation $\odot$ is defined for all real numbers $x \neq 1$ by $x^{\odot} = \dfrac{x+3}{x-1}$. Which of the following is equivalent to $x^{\odot} - 1$?
+
+A) $\dfrac{x+2}{x-1}$
+B) $\dfrac{4}{x-1}$
+C) $\dfrac{2x+4}{x-1}$
+D) $\dfrac{2}{x-1}$
+
+**Correct Answer:** B
+
+**Rationale:** $x^{\odot} - 1 = \dfrac{x+3}{x-1} - 1 = \dfrac{x+3 - \left(x-1\right)}{x-1} = \dfrac{x+3-x+1}{x-1} = \dfrac{4}{x-1}$.
+
+**Misconception addressed:** Students subtract $1$ from only the numerator (getting $\dfrac{x+2}{x-1}$) instead of first rewriting $1$ as $\dfrac{x-1}{x-1}$ to combine over the common denominator.
+
+---
+
+### AM-025
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Advanced Math — Equivalent expressions (Medium)
+
+**Question:** If $a$ and $b$ are positive numbers such that $a^{3} = b^{2}$, which of the following is equivalent to $b\sqrt{a}$?
+
+A) $b^{2/3}$
+B) $b^{4/3}$
+C) $b^{2}$
+D) $b^{3}$
+
+**Correct Answer:** B
+
+**Rationale:** From $a^{3}=b^{2}$, $a = b^{2/3}$, so $\sqrt{a} = a^{1/2} = b^{1/3}$. Then $b\sqrt{a} = b \cdot b^{1/3} = b^{4/3}$.
+
+**Misconception addressed:** Students convert the exponent incorrectly when moving from $a^3=b^2$ to an expression for $\sqrt{a}$, or add exponents without first expressing both terms in the same base.
+
+---
+
+### AM-026
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Advanced Math — Nonlinear functions (Medium)
+
+**Question:** Let $f(x) = ax^{2}$ and $g(x) = bx^{4}$ for any value of $x$, where $a$ and $b$ are positive constants. For how many values of $x$ is $f(x) = g(x)$?
+
+A) None
+B) One
+C) Two
+D) Three
+
+**Correct Answer:** D
+
+**Rationale:** Setting $ax^{2} = bx^{4}$: $x^{2}\left(a - bx^{2}\right) = 0$, so $x=0$ or $x^{2} = \dfrac{a}{b}$, giving $x = \pm\sqrt{\dfrac{a}{b}}$. That's three distinct values: $0$, $\sqrt{a/b}$, and $-\sqrt{a/b}$.
+
+**Misconception addressed:** Students divide both sides by $x^{2}$ immediately to simplify, silently losing the solution $x=0$ and reporting only two values instead of three.
+
+---
+
+### AM-027
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** Suppose $m$ and $n$ are positive integers such that $mn > 20$ and $12mn$ is a perfect square. What is the least possible value of $mn$?
+
+**Correct Answer:** $27$
+
+**Rationale:** Since $12 = 4 \cdot 3$ already contributes the perfect-square factor $4$, $12mn$ is a perfect square exactly when $3mn$ is a perfect square, which requires $mn = 3k^{2}$ for some positive integer $k$. Testing $k=1,2,3$ gives $mn = 3, 12, 27$; the least value exceeding $20$ is $27$ (check: $12(27) = 324 = 18^{2}$).
+
+**Misconception addressed:** Students look for $mn$ itself to be a perfect square, rather than recognizing $mn$ only needs to supply the factor of $3$ still missing from $12$'s square part.
+
+---
+
+### AM-028
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The function $N$ is defined by $N(t) = k \cdot 2^{-at}$ for positive constants $k$ and $a$. The table shows values of $N$ for select values of $t$.
+
+| $t$ | $0$ | $1$ | $2$ |
+|---|---|---|---|
+| $N(t)$ | $200$ | $50$ | $12.5$ |
+
+What is the value of $a$?
+
+**Correct Answer:** $2$
+
+**Rationale:** At $t=0$: $N(0) = k = 200$. At $t=1$: $N(1) = 200 \cdot 2^{-a} = 50 \Rightarrow 2^{-a} = \dfrac{1}{4} = 2^{-2} \Rightarrow a = 2$. (Check at $t=2$: $200\cdot 2^{-4} = 12.5$, which matches the table.)
+
+**Misconception addressed:** Students correctly set up $2^{-a} = \dfrac{1}{4}$ but then solve it as a linear equation (e.g., $-a = \dfrac{1}{4}$) instead of matching exponents of a common base.
+
+---
+
+### AM-029
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** An integer $n$ is subtracted from its square. Which of the following could NOT be the result?
+
+A) $0$
+B) An even integer
+C) An odd integer
+D) A positive integer
+
+**Correct Answer:** C
+
+**Rationale:** $n^{2} - n = n\left(n-1\right)$, the product of two consecutive integers. One of any two consecutive integers is always even, so their product is always even — the result can never be odd.
+
+**Misconception addressed:** Students test only a couple of specific values (e.g., $n=2$ giving $2$, $n=3$ giving $6$) and notice a pattern without proving the always-even property algebraically, so they may not confidently rule out every odd value.
+
+---
+
+### GT-021
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Geometry and Trigonometry — Circles (Hard)
+
+**Question:** [Figure: circle with center $O$; chord $AB$ subtends a central angle of $100^\circ$ at $O$; point $C$ lies on the major arc] In the circle above, chord $AB$ subtends a central angle of $100^\circ$ at center $O$. Point $C$ lies on the major arc. What is the measure of angle $ACB$, in degrees?
+
+**Correct Answer:** $50$
+
+**Rationale:** By the Inscribed Angle Theorem, an inscribed angle is half the central angle that subtends the same arc: angle $ACB = \dfrac{100^\circ}{2} = 50^\circ$.
+
+**Misconception addressed:** Students set the inscribed angle equal to the central angle directly, or subtract the central angle from $180^\circ$ instead of halving it.
+
+---
+
+### GT-022
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Geometry and Trigonometry — Area and volume (Hard)
+
+**Question:** A cone has base radius $6$ centimeters and height $8$ centimeters, apex pointing up. A plane parallel to the base cuts the cone at a height of $4$ centimeters from the apex, removing the smaller cone on top. What is the volume of the removed smaller cone, in cubic centimeters, in terms of $\pi$?
+
+A) $12\pi$
+B) $24\pi$
+C) $48\pi$
+D) $96\pi$
+
+**Correct Answer:** A
+
+**Rationale:** Since the cut is parallel to the base at half the total height, the removed cone is similar to the original with linear scale factor $\dfrac{4}{8} = \dfrac{1}{2}$, so its radius is $3$ cm. Its volume is $\dfrac{1}{3}\pi(3)^2(4) = 12\pi$.
+
+**Misconception addressed:** Students use the original cone's base radius ($6$) at the cut height instead of scaling the radius down proportionally to match the smaller similar cone.
+
+---
+
+### GT-023
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Geometry and Trigonometry — Right triangles and trigonometry (Medium)
+
+**Question:** If $\theta$ is an acute angle and $\sin(\theta) = \dfrac{5}{13}$, what is the value of $\tan(\theta)$?
+
+A) $\dfrac{5}{12}$
+B) $\dfrac{12}{5}$
+C) $\dfrac{5}{13}$
+D) $\dfrac{12}{13}$
+
+**Correct Answer:** A
+
+**Rationale:** For a $5$-$12$-$13$ right triangle, $\sin(\theta)=\dfrac{5}{13}$ means the opposite leg is $5$ and the hypotenuse is $13$, so the adjacent leg is $12$. Then $\tan(\theta) = \dfrac{\text{opposite}}{\text{adjacent}} = \dfrac{5}{12}$.
+
+**Misconception addressed:** Students confuse $\tan(\theta)$ with $\sin(\theta)/1$ or with the sine-over-hypotenuse ratio, or use $13$ (the hypotenuse) as the adjacent side instead of computing it from the Pythagorean triple.
+
+---
+
+### GT-024
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Manhattan Review-style abstract reasoning, original), coverage top-up for Geometry and Trigonometry — Lines, angles, and triangles (Medium)
+
+**Question:** A regular polygon has exterior angles that each measure $24^\circ$. How many sides does the polygon have?
+
+A) $12$
+B) $15$
+C) $18$
+D) $24$
+
+**Correct Answer:** B
+
+**Rationale:** The exterior angles of any convex polygon sum to $360^\circ$. For a regular polygon with each exterior angle equal to $24^\circ$: $\dfrac{360^\circ}{24^\circ} = 15$ sides.
+
+**Misconception addressed:** Students apply the interior angle sum formula $(n-2)\times 180^\circ$ unnecessarily, or divide $360^\circ$ by the wrong angle (such as an assumed interior angle), overcomplicating a problem the exterior-angle-sum shortcut solves directly.
+
+### 2.8 Simulated Batch 4 — "Acing the New SAT Math"-Style Topic Top-Up (16 items — coverage top-up)
+
+The 16 items below were added after reading `acing_the_new_sat_math_pdf_book.pdf` (*Acing the New SAT Math* by Thomas Hyun, © 2016 Greenhall Publishing) — another copyrighted commercial test-prep book, added to the project knowledge folder. Per the bank's standing provenance rule, **no content, numbers, or phrasing were extracted or reproduced from it.** Its table of contents was used only to identify real, currently-tested Digital SAT topics this bank had not yet covered at all: **absolute value equations and inequalities** (its §3-6 and §4-2), **discriminant/nature-of-roots reasoning** and **direct/inverse/joint variation** (§11-5, §14-3), **rational equations with extraneous solutions** (§14-2), **recursive sequences** (§12-2), **special right triangles** (§17-2), and **surface area** of prisms and cylinders (§20-1, §20-2) — all of which are still current, testable Digital SAT content, unlike this book's Complex Numbers and Permutations/Combinations chapters, which were skipped for the same reason as in §2.7. PSDA is again excluded: it already met its Coverage Audit target.
+
+### A-038
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Algebra — Linear equations in one variable (Medium)
+
+**Question:** What are the solutions to the equation $|2x - 5| = 11$?
+
+A) $x={-3}$ or $x=8$
+B) $x=3$ or $x={-8}$
+C) $x={-3}$ only
+D) $x=8$ only
+
+**Correct Answer:** A
+
+**Rationale:** $|2x-5|=11$ means $2x-5=11$ or $2x-5={-11}$. Solving each: $2x=16 \Rightarrow x=8$, or $2x={-6} \Rightarrow x={-3}$.
+
+**Misconception addressed:** Students solve only the positive case ($2x-5=11$) and forget the negative case entirely, reporting $x=8$ as the only solution.
+
+---
+
+### A-039
+**Skill:** Linear equations in one variable | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Algebra — Linear equations in one variable (Hard)
+
+**Question:** What is the value of $x$ that satisfies $|3x+2| = 5x - 6$?
+
+**Correct Answer:** $4$
+
+**Rationale:** Case 1: $3x+2 = 5x-6 \Rightarrow {-2x}={-8} \Rightarrow x=4$; check: $5(4)-6=14 \geq 0$, valid. Case 2: $3x+2 = -\left(5x-6\right) \Rightarrow 8x=4 \Rightarrow x=0.5$; check: $5(0.5)-6={-3.5} < 0$, invalid since an absolute value cannot equal a negative number. So $x=4$ is the only solution.
+
+**Misconception addressed:** Students solve both algebraic cases correctly but forget to check that the right-hand side must be nonnegative for a valid absolute-value equation, reporting both $x=4$ and $x=0.5$ as solutions.
+
+---
+
+### A-040
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Algebra — Linear inequalities in one or two variables (Medium)
+
+**Question:** Which of the following describes the solution set of $|x-4| \leq 9$?
+
+A) $-5 \leq x \leq 13$
+B) $x \leq {-5}$ or $x \geq 13$
+C) $-13 \leq x \leq 5$
+D) $x \leq {-13}$ or $x \geq 5$
+
+**Correct Answer:** A
+
+**Rationale:** $|x-4| \leq 9$ means $-9 \leq x-4 \leq 9$. Adding $4$ to all three parts: $-5 \leq x \leq 13$.
+
+**Misconception addressed:** Students confuse the "$\leq$" absolute-value inequality (a bounded, connected interval) with the "$\geq$" case (two disjoint rays), or mishandle the sign when adding $4$ to the compound inequality.
+
+---
+
+### A-041
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Algebra — Linear inequalities in one or two variables (Hard)
+
+**Question:** Which of the following describes the solution set of $|2x+3| > 7$?
+
+A) $x < {-5}$ or $x > 2$
+B) $-5 < x < 2$
+C) $x < 2$
+D) $x > {-5}$
+
+**Correct Answer:** A
+
+**Rationale:** $|2x+3|>7$ splits into $2x+3>7$ or $2x+3<{-7}$. The first gives $x>2$; the second gives $2x<{-10} \Rightarrow x<{-5}$.
+
+**Misconception addressed:** Students treat a "$>$" absolute-value inequality as though it produces a single bounded interval (the way "$<$" would), instead of recognizing it produces two disjoint rays.
+
+---
+
+### A-042
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Algebra — Linear functions (Medium)
+
+**Question:** Which of the following lines is perpendicular to the line $y = -\dfrac{2}{3}x + 5$?
+
+A) $y = \dfrac{3}{2}x - 1$
+B) $y = -\dfrac{3}{2}x + 4$
+C) $y = \dfrac{2}{3}x + 2$
+D) $y = -\dfrac{2}{3}x - 7$
+
+**Correct Answer:** A
+
+**Rationale:** A line perpendicular to one with slope $-\dfrac{2}{3}$ has slope equal to the negative reciprocal, $\dfrac{3}{2}$.
+
+**Misconception addressed:** Students negate the slope without also taking the reciprocal (choosing slope $-\dfrac{3}{2}$, option B), or select the line with the same slope (parallel, option D) by mistake.
+
+---
+
+### A-043
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Algebra — Systems of two linear equations in two variables (Medium)
+
+**Question:** A school orders tables at SAR $400$ each and chairs at SAR $100$ each for a new STEM lab, purchasing $40$ items total for SAR $7{,}000$. How many tables did the school order?
+
+A) $8$
+B) $10$
+C) $12$
+D) $15$
+
+**Correct Answer:** B
+
+**Rationale:** Let $t$ be the number of tables and $c$ the number of chairs. Then $t+c=40$ and $400t+100c=7000$. Substituting $c=40-t$: $400t + 100\left(40-t\right) = 7000 \Rightarrow 300t + 4000 = 7000 \Rightarrow t = 10$.
+
+**Misconception addressed:** Students set up the cost equation correctly but forget to distribute the $100$ across $\left(40-t\right)$, or substitute the wrong variable's expression into the equation.
+
+---
+
+### AM-030
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** For which value of $k$ does the equation $x^{2} + 6x + k = 0$ have exactly one real solution?
+
+A) $3$
+B) $6$
+C) $9$
+D) $12$
+
+**Correct Answer:** C
+
+**Rationale:** A quadratic has exactly one real solution when its discriminant equals zero: $b^{2}-4ac = 36 - 4k = 0 \Rightarrow k = 9$.
+
+**Misconception addressed:** Students set the discriminant expression equal to a nonzero value, or confuse "exactly one real solution" (discriminant $=0$) with "no real solutions" (discriminant $<0$).
+
+---
+
+### AM-031
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** If $x^{2} - 8x + 5 = 0$ has roots $r$ and $s$, what is the value of $r^{2} + s^{2}$?
+
+**Correct Answer:** $54$
+
+**Rationale:** By Vieta's formulas, $r+s=8$ and $rs=5$. Then $r^{2}+s^{2} = \left(r+s\right)^{2} - 2rs = 64 - 10 = 54$.
+
+**Misconception addressed:** Students attempt to solve for $r$ and $s$ individually using the quadratic formula (obtaining irrational roots) and get stuck computing $r^2+s^2$ directly, instead of using the algebraic identity that bypasses finding the roots explicitly.
+
+---
+
+### AM-032
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear functions (Medium)
+
+**Question:** The variable $y$ varies inversely with $x$. When $x=6$, $y=15$. What is the value of $y$ when $x=10$?
+
+A) $5$
+B) $6$
+C) $9$
+D) $25$
+
+**Correct Answer:** C
+
+**Rationale:** For inverse variation, $y = \dfrac{k}{x}$. From $x=6, y=15$: $k = 6\left(15\right) = 90$. When $x=10$: $y = \dfrac{90}{10} = 9$.
+
+**Misconception addressed:** Students treat the relationship as direct variation instead of inverse, computing $y = 15\left(\dfrac{10}{6}\right) = 25$ (option D).
+
+---
+
+### AM-033
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The variable $z$ varies jointly with $x$ and the square of $y$. If $z=48$ when $x=3$ and $y=4$, what is the value of $z$ when $x=5$ and $y=2$?
+
+A) $10$
+B) $16$
+C) $20$
+D) $25$
+
+**Correct Answer:** C
+
+**Rationale:** Joint variation: $z = kxy^{2}$. From $z=48, x=3, y=4$: $48 = k\left(3\right)\left(16\right) = 48k \Rightarrow k=1$. When $x=5, y=2$: $z = 1\left(5\right)\left(4\right) = 20$.
+
+**Misconception addressed:** Students use $y$ instead of $y^2$ when setting up or substituting into the joint variation equation, forgetting to square $y$.
+
+---
+
+### AM-034
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Medium)
+
+**Question:** What is the solution set of the equation $\dfrac{x}{x-3} = \dfrac{3}{x-3} + 2$?
+
+A) $x=3$ only
+B) $x=9$ only
+C) $x=3$ and $x=9$
+D) There is no solution.
+
+**Correct Answer:** D
+
+**Rationale:** Multiplying both sides by $\left(x-3\right)$: $x = 3 + 2\left(x-3\right) = 2x-3 \Rightarrow x=3$. But $x=3$ makes the original denominators zero, so it is extraneous — there is no solution.
+
+**Misconception addressed:** Students solve the resulting linear equation correctly but forget to check the result against the original equation's domain restriction, reporting $x=3$ as a valid solution.
+
+---
+
+### AM-035
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** A sequence is defined recursively by $a_{1} = 5$ and $a_{n} = 2a_{n-1} - 3$ for $n \geq 2$. What is the value of $a_{4}$?
+
+**Correct Answer:** $19$
+
+**Rationale:** $a_{2} = 2(5)-3 = 7$. $a_{3} = 2(7)-3 = 11$. $a_{4} = 2(11)-3 = 19$.
+
+**Misconception addressed:** Students apply the recursive rule to the index number itself (e.g., computing $2(4)-3=5$) instead of to the previous term's value, or miscount which term corresponds to $n=4$.
+
+---
+
+### GT-025
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Right triangles and trigonometry (Medium)
+
+**Question:** In a $30^\circ$-$60^\circ$-$90^\circ$ right triangle, the side opposite the $30^\circ$ angle has length $7$. What is the length of the hypotenuse?
+
+A) $7$
+B) $7\sqrt{2}$
+C) $7\sqrt{3}$
+D) $14$
+
+**Correct Answer:** D
+
+**Rationale:** In a $30$-$60$-$90$ triangle, the side ratios are $x : x\sqrt{3} : 2x$, where $x$ is the side opposite the $30^\circ$ angle and $2x$ is the hypotenuse. Here $x=7$, so the hypotenuse is $2(7)=14$.
+
+**Misconception addressed:** Students apply the $45$-$45$-$90$ ratio (multiplying by $\sqrt{2}$) instead of the $30$-$60$-$90$ ratio, or use the side opposite the $60^\circ$ angle ($7\sqrt{3}$) as though it were the hypotenuse.
+
+---
+
+### GT-026
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Area and volume (Medium)
+
+**Question:** A rectangular storage box has length $8$ cm, width $5$ cm, and height $4$ cm. What is the total surface area of the box, in square centimeters?
+
+A) $92$
+B) $144$
+C) $160$
+D) $184$
+
+**Correct Answer:** D
+
+**Rationale:** Surface area $= 2\left(lw+lh+wh\right) = 2\left(40+32+20\right) = 2\left(92\right) = 184$.
+
+**Misconception addressed:** Students compute only the sum of the three distinct face areas ($92$) and forget to double it to account for each face's matching opposite face.
+
+---
+
+### GT-027
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Area and volume (Hard)
+
+**Question:** A cylindrical water tank has a radius of $5$ meters and a height of $12$ meters. What is the total surface area of the tank, including both circular bases, in square meters, in terms of $\pi$?
+
+A) $120\pi$
+B) $150\pi$
+C) $170\pi$
+D) $220\pi$
+
+**Correct Answer:** C
+
+**Rationale:** Total surface area $= 2\pi r^{2} + 2\pi r h = 2\pi(25) + 2\pi(5)(12) = 50\pi + 120\pi = 170\pi$.
+
+**Misconception addressed:** Students compute only the lateral surface area ($2\pi r h = 120\pi$) and forget to add the two circular bases ($2\pi r^2 = 50\pi$), selecting option A.
+
+---
+
+### GT-028
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated ("Acing the New SAT Math"-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Circles (Medium)
+
+**Question:** In a circle with radius $10$, a chord subtends a central angle of $60^\circ$. What is the length of the chord?
+
+A) $5$
+B) $5\sqrt{3}$
+C) $10$
+D) $10\sqrt{3}$
+
+**Correct Answer:** C
+
+**Rationale:** The chord and the two radii to its endpoints form an isosceles triangle with a $60^\circ$ vertex angle and two equal sides (the radii), making it equilateral. So the chord length equals the radius: $10$.
+
+**Misconception addressed:** Students apply the arc-length formula ($r\theta$) to a chord-length question, or assume the chord equals the diameter regardless of the central angle's measure.
+
+### 2.9 Simulated Batch 5 — Kaplan-Style Topic Top-Up (12 items — coverage top-up)
+
+A fifth reference source was added to the project knowledge folder: `SAT-Kaplan Test Prep.pdf` (© 2020 Kaplan, Inc.), whose copyright notice explicitly forbids reproducing, storing, or transmitting any part of its text. **No content, numbers, or wording were extracted from it** — its chapter list was used only to spot real, current Digital SAT topics this bank had not yet exercised: **function transformations and nested/composite functions** (its Ch. 8), **polynomial division** and **completing the square** (Ch. 9–10), **tangent lines to circles** and **benchmark-angle trig values** (Ch. 12, 14), and a **complex composite-figure area problem** (Ch. 11). Its Imaginary Numbers chapter (Ch. 15) was skipped, as complex numbers are not tested on the current Digital SAT. PSDA is again excluded — it already met its Coverage Audit target.
+
+### A-044
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Algebra — Linear functions (Medium)
+
+**Question:** The function $f$ is linear, with $f(1)=6$ and $f(5)=18$. If $g(x) = f(x-4) + 2$, what is the value of $g(10)$?
+
+A) $20$
+B) $21$
+C) $23$
+D) $25$
+
+**Correct Answer:** C
+
+**Rationale:** The slope is $\dfrac{18-6}{5-1}=3$, so $f(x)=3x+3$ (check: $f(1)=6$). Then $g(10)=f(10-4)+2=f(6)+2=3(6)+3+2=23$.
+
+**Misconception addressed:** Students substitute $x=10$ directly into $f$ without first applying the horizontal shift, computing $f(10)+2$ instead of $f(6)+2$.
+
+---
+
+### A-045
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Algebra — Linear inequalities in one or two variables (Hard)
+
+**Question:** A gym in Jeddah charges a SAR $150$ monthly membership fee plus SAR $20$ per personal training session. A member wants their total monthly cost to be at least SAR $150$ but no more than SAR $350$. Which compound inequality represents the possible number of sessions $s$ the member can book in a month?
+
+A) $0 \leq s \leq 10$
+B) $0 \leq s \leq 200$
+C) $7.5 \leq s \leq 17.5$
+D) $150 \leq s \leq 350$
+
+**Correct Answer:** A
+
+**Rationale:** $150 \leq 150+20s \leq 350$. Subtracting $150$ from all three parts: $0 \leq 20s \leq 200$. Dividing by $20$: $0 \leq s \leq 10$.
+
+**Misconception addressed:** Students subtract $150$ from only one side of the compound inequality, or forget the final division by $20$, leaving the answer in un-converted units (option B).
+
+---
+
+### A-046
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Algebra — Systems of two linear equations in two variables (Hard)
+
+**Question:** A café blends two types of coffee beans: Type A costs SAR $30$ per kilogram and Type B costs SAR $45$ per kilogram. The café wants to make $20$ kilograms of a blend that costs SAR $36$ per kilogram. How many kilograms of Type B should be used?
+
+**Correct Answer:** $8$
+
+**Rationale:** Let $a$ and $b$ be the kilograms of Type A and Type B. Then $a+b=20$ and $30a+45b=36(20)=720$. Substituting $a=20-b$: $30(20-b)+45b=720 \Rightarrow 600+15b=720 \Rightarrow b=8$.
+
+**Misconception addressed:** Students apply the target price of $36$ as though it were the cost of one specific bean type rather than the blended average, or substitute the wrong variable's expression into the cost equation.
+
+---
+
+### A-047
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Algebra — Linear equations in one variable (Medium)
+
+**Question:** A taxi in Riyadh charges a base fare of SAR $8$ plus SAR $2.50$ per kilometer traveled. If a ride costs SAR $33.50$, how many kilometers was the ride?
+
+A) $8.2$
+B) $9.5$
+C) $10.2$
+D) $12.0$
+
+**Correct Answer:** C
+
+**Rationale:** $8 + 2.5k = 33.5 \Rightarrow 2.5k = 25.5 \Rightarrow k = 10.2$.
+
+**Misconception addressed:** Students divide the full fare ($33.5$) by $2.5$ without first subtracting the base fare, obtaining an incorrect distance.
+
+---
+
+### AM-036
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear functions (Medium)
+
+**Question:** If $f(x) = x^{2} + 1$ and $g(x) = 2x - 3$, what is the value of $f\left(g(2)\right)$?
+
+A) $1$
+B) $2$
+C) $3$
+D) $5$
+
+**Correct Answer:** B
+
+**Rationale:** $g(2) = 2(2)-3 = 1$. Then $f\left(g(2)\right) = f(1) = 1^{2}+1 = 2$.
+
+**Misconception addressed:** Students evaluate $g\left(f(2)\right)$ instead of $f\left(g(2)\right)$, applying the functions in the wrong order.
+
+---
+
+### AM-037
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear functions (Hard)
+
+**Question:** The graph of $y=h(x)$ is the graph of $y=x^{2}$ shifted right $3$ units and down $5$ units. What is the value of $h(7)$?
+
+A) $6$
+B) $11$
+C) $14$
+D) $16$
+
+**Correct Answer:** B
+
+**Rationale:** $h(x) = \left(x-3\right)^{2} - 5$. Then $h(7) = \left(7-3\right)^{2} - 5 = 16-5 = 11$.
+
+**Misconception addressed:** Students shift the output correctly but apply the horizontal shift with the wrong sign (using $\left(x+3\right)^2$ instead of $\left(x-3\right)^2$ for a rightward shift).
+
+---
+
+### AM-038
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Advanced Math — Equivalent expressions (Medium)
+
+**Question:** What is the quotient when $2x^{3} - 3x^{2} - 11x + 6$ is divided by $x - 3$ (the division has no remainder)?
+
+A) $2x^{2} + 3x - 2$
+B) $2x^{2} - 3x - 2$
+C) $2x^{2} + 3x + 2$
+D) $2x^{2} - 9x + 16$
+
+**Correct Answer:** A
+
+**Rationale:** Using synthetic division with root $3$ on coefficients $2, {-3}, {-11}, 6$: bring down $2$; $2(3)=6$, $-3+6=3$; $3(3)=9$, $-11+9={-2}$; $-2(3)={-6}$, $6+({-6})=0$ (remainder). The quotient is $2x^{2}+3x-2$.
+
+**Misconception addressed:** Students make a sign error carrying the synthetic-division products at each step (e.g., subtracting instead of adding), producing a quotient with flipped signs on the linear or constant term.
+
+---
+
+### AM-039
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Advanced Math — Nonlinear equations in one variable and systems of equations in two variables (Hard)
+
+**Question:** What is the positive solution to the equation $x^{2} - 6x - 7 = 0$, found by completing the square?
+
+**Correct Answer:** $7$
+
+**Rationale:** $x^{2}-6x = 7 \Rightarrow x^{2}-6x+9 = 7+9 = 16 \Rightarrow \left(x-3\right)^{2}=16 \Rightarrow x-3=\pm4 \Rightarrow x=7$ or $x={-1}$. The positive solution is $7$.
+
+**Misconception addressed:** Students add the wrong constant to complete the square (e.g., adding $3$, half of $6$, instead of $9$, the square of half of $6$), producing an incorrect trinomial and wrong roots.
+
+---
+
+### GT-029
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Circles (Medium)
+
+**Question:** [Figure: circle with center $O$; line $\ell$ is tangent to the circle at point $P$; point $Q$ lies on line $\ell$] In the figure, line $\ell$ is tangent to the circle with center $O$ at point $P$. If $OP=9$ and $OQ=15$ for a point $Q$ on line $\ell$, what is the length of $PQ$?
+
+A) $6$
+B) $12$
+C) $\sqrt{306}$
+D) $18$
+
+**Correct Answer:** B
+
+**Rationale:** A tangent line is perpendicular to the radius at the point of tangency, so triangle $OPQ$ has a right angle at $P$. By the Pythagorean theorem: $PQ = \sqrt{OQ^{2}-OP^{2}} = \sqrt{225-81} = \sqrt{144} = 12$.
+
+**Misconception addressed:** Students don't recognize that the tangent-radius perpendicularity makes $OQ$ the hypotenuse, and instead add $OP$ and $OQ$ or misapply the Pythagorean theorem.
+
+---
+
+### GT-030
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Right triangles and trigonometry (Medium)
+
+**Question:** What is the value of $\cos\left(60^\circ\right) + \sin\left(30^\circ\right)$?
+
+A) $\dfrac{1}{2}$
+B) $\dfrac{\sqrt{3}}{2}$
+C) $1$
+D) $\sqrt{3}$
+
+**Correct Answer:** C
+
+**Rationale:** $\cos\left(60^\circ\right) = \dfrac{1}{2}$ and $\sin\left(30^\circ\right) = \dfrac{1}{2}$, so the sum is $\dfrac{1}{2}+\dfrac{1}{2}=1$.
+
+**Misconception addressed:** Students confuse the benchmark values of sine and cosine at $30^\circ$ and $60^\circ$ (swapping which angle gives $\dfrac{1}{2}$ and which gives $\dfrac{\sqrt3}{2}$), leading to an incorrect sum.
+
+---
+
+### GT-031
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Lines, angles, and triangles (Hard)
+
+**Question:** [Figure: quadrilateral $ABCD$ formed by two right triangles, $ABC$ and $ACD$, sharing diagonal $AC$; triangle $ABC$ has a right angle at $B$ with $AB=9$ and $BC=12$; triangle $ACD$ has a right angle at $A$ with $AD=8$] In the figure, quadrilateral $ABCD$ is formed by two right triangles, $ABC$ and $ACD$, sharing diagonal $AC$. Triangle $ABC$ has a right angle at $B$ with $AB=9$ and $BC=12$. Triangle $ACD$ has a right angle at $A$ with $AD=8$. What is the area of quadrilateral $ABCD$?
+
+A) $90$
+B) $96$
+C) $108$
+D) $114$
+
+**Correct Answer:** D
+
+**Rationale:** In triangle $ABC$: $AC=\sqrt{9^2+12^2}=\sqrt{225}=15$. Area of $ABC = \dfrac{1}{2}(9)(12)=54$. In triangle $ACD$, with right angle at $A$ and legs $AC=15$, $AD=8$: Area of $ACD = \dfrac{1}{2}(15)(8)=60$. Total area $=54+60=114$.
+
+**Misconception addressed:** Students forget to first find the shared diagonal $AC$ using the Pythagorean theorem in triangle $ABC$ before using it as a leg of triangle $ACD$, or misidentify which sides are the legs versus the hypotenuse in each right triangle.
+
+---
+
+### GT-032
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated (Kaplan-style topic coverage, original), coverage top-up for Geometry and Trigonometry — Area and volume (Medium)
+
+**Question:** A cube has a total surface area of $150$ square centimeters. What is the volume of the cube, in cubic centimeters?
+
+A) $25$
+B) $75$
+C) $125$
+D) $150$
+
+**Correct Answer:** C
+
+**Rationale:** Surface area $=6s^{2}=150 \Rightarrow s^{2}=25 \Rightarrow s=5$. Volume $=s^{3}=5^{3}=125$.
+
+**Misconception addressed:** Students correctly solve for $s^2=25$ but forget to take the square root to find the side length $s$ before cubing, instead cubing $25$ directly or substituting $s^2$ into the volume formula.
+
+### 2.10 Simulated Batch 6 — Kaplan-Style Worthy-Question Pattern Top-Up (25 items)
+
+*Deep-read pass: items in this batch simulate the specific reasoning patterns found in the actual practice-set questions of `SAT-Kaplan Test Prep.pdf` (Kaplan, Inc., © 2020) — not merely its chapter titles (superseding the shallower approach of §2.9). Every number, context, and wording below is newly authored; no Kaplan text is reproduced. This batch completes the Coverage Audit's ~160-item target: Algebra +10 (A-048–A-057), Advanced Math +5 (AM-040–AM-044), Geometry and Trigonometry +10 (GT-033–GT-042).*
+
+---
+
+### A-048
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: solving a real-world linear equation for a usage-reduction variable, inspired by a Kaplan Linear Equations practice-set item; not reproduced).
+
+**Question:** Fahd's family budgets SAR 450 per month for electricity from the Saudi Electricity Company (SEC). Last month's actual bill was SAR 570, an increase caused entirely by extra usage billed at a marginal rate of SAR 0.6 per kWh. If Fahd's household reduces its usage by $k$ kWh next month, at the same marginal rate, which equation could be solved to find the value of $k$ that would bring next month's bill back down to the SAR 450 budget, assuming all other charges stay the same?
+
+A) $450 - 0.6k = 570$
+B) $570 - 0.6k = 450$
+C) $570 + 0.6k = 450$
+D) $450(0.6) - k = 570$
+
+**Correct Answer:** B
+
+**Rationale:** The actual bill (570) minus the savings from reducing usage by $k$ kWh at SAR 0.6 per kWh must equal the budget (450): $570 - 0.6k = 450$. Solving gives $k = 200$.
+
+**Misconception addressed:** Students often set up the subtraction backward (budget minus reduction equals actual bill) or add the reduction instead of subtracting it, both of which reverse the direction of the relationship between the actual and budgeted amounts.
+
+---
+
+### A-049
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: constructing a linear rate from two cumulative-total checkpoints in a production/time context, inspired by a Kaplan Linear Equations practice-set item; not reproduced).
+
+**Question:** A NEOM production line starts each day with a number of units already completed and then produces additional units at a constant rate per hour. After 3 hours of operation, a total of 460 units have been completed. After 7 hours, a total of 780 units have been completed. What is the constant hourly production rate, in units per hour?
+
+**Correct Answer:** 80
+
+**Rationale:** The two checkpoints $(3, 460)$ and $(7, 780)$ lie on the same line, so the rate is the slope: $\dfrac{780 - 460}{7 - 3} = \dfrac{320}{4} = 80$ units per hour.
+
+**Misconception addressed:** Students sometimes divide the later total by the later time (or the earlier total by the earlier time) to find a rate, ignoring that the line has a nonzero starting value (y-intercept) rather than passing through the origin.
+
+---
+
+### A-050
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: fractional-inventory word problem using a common denominator to isolate the "remaining" fraction, inspired by a Kaplan Linear Equations practice-set item; not reproduced).
+
+**Question:** A car dealership in Riyadh has a total vehicle inventory $T$. Of these vehicles, $\dfrac{1}{3}$ are sedans, $\dfrac{1}{4}$ are SUVs, $\dfrac{1}{6}$ are trucks, and the remaining 45 vehicles are motorcycles. What is the total number of vehicles, $T$, in the dealership's inventory?
+
+**Correct Answer:** 180
+
+**Rationale:** The three named fractions sum to $\dfrac{1}{3} + \dfrac{1}{4} + \dfrac{1}{6} = \dfrac{4}{12} + \dfrac{3}{12} + \dfrac{2}{12} = \dfrac{9}{12} = \dfrac{3}{4}$. So motorcycles make up $1 - \dfrac{3}{4} = \dfrac{1}{4}$ of the inventory: $\dfrac{1}{4}T = 45$, giving $T = 180$.
+
+**Misconception addressed:** Students often add the three given fractions and treat that sum (rather than $1$ minus the sum) as the coefficient of $T$ in the equation, or forget to find a common denominator and add the fractions incorrectly.
+
+---
+
+### A-051
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: weighted-mixture system with a bag-count equation and a total-weight equation, inspired by a Kaplan Systems of Linear Equations practice-set item; not reproduced).
+
+**Question:** A date-packing facility near Al-Madinah packs dates into 5 kg bags and 20 kg bags. A shipment contains 24 bags in total, weighing 285 kg altogether. How many 20 kg bags are in the shipment?
+
+**Correct Answer:** 11
+
+**Rationale:** Let $x$ be the number of 5 kg bags and $y$ be the number of 20 kg bags. Then $x + y = 24$ and $5x + 20y = 285$. Substituting $x = 24 - y$: $5(24-y) + 20y = 285 \rightarrow 120 - 5y + 20y = 285 \rightarrow 15y = 165 \rightarrow y = 11$.
+
+**Misconception addressed:** Students frequently write the weight equation using the bag counts without the corresponding weights (e.g., $x + y = 285$), or forget to substitute back and instead report $x$ instead of the requested $y$.
+
+---
+
+### A-052
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: two-quantity time-average system where one average is a fixed amount less than the other, inspired by a Kaplan Systems of Linear Equations practice-set item; not reproduced).
+
+**Question:** Layla's total daily round-trip commute in Jeddah averages 84 minutes. Her average morning commute is 6 minutes less than her average evening commute. What is her average evening commute, in minutes?
+
+**Correct Answer:** 45
+
+**Rationale:** Let $e$ be the evening average and $m = e - 6$ be the morning average. Then $m + e = 84 \rightarrow (e - 6) + e = 84 \rightarrow 2e = 90 \rightarrow e = 45$.
+
+**Misconception addressed:** Students often solve for the morning average (39) instead of the evening average the question asks for, or set up $m = e + 6$, reversing which commute is shorter.
+
+---
+
+### A-053
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: item-count-and-volume system with a "total volume exceeds total volume by" condition, inspired by a Kaplan Systems of Linear Equations practice-set item; not reproduced).
+
+**Question:** A vending machine in a Dammam school cafeteria stocks 18 juice boxes, each either 200 mL or 350 mL. The total volume of the 200 mL boxes is 1,400 mL more than the total volume of the 350 mL boxes. How many 350 mL boxes are in the machine?
+
+**Correct Answer:** 4
+
+**Rationale:** Let $x$ be the number of 200 mL boxes and $y$ be the number of 350 mL boxes. Then $x + y = 18$ and $200x - 350y = 1{,}400$. Substituting $x = 18 - y$: $200(18-y) - 350y = 1{,}400 \rightarrow 3{,}600 - 200y - 350y = 1{,}400 \rightarrow 550y = 2{,}200 \rightarrow y = 4$.
+
+**Misconception addressed:** Students sometimes write the volume difference as $200x + 350y = 1{,}400$ (an addition rather than the stated "more than" subtraction), producing a system with no valid solution in context.
+
+---
+
+### A-054
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: threshold inequality where a starting amount plus a constant rate reaches or exceeds a capacity, inspired by a Kaplan Inequalities practice-set item; not reproduced).
+
+**Question:** King Fahd International Stadium has a capacity of 60,000 spectators. At kickoff, 30,000 spectators are already seated, and fans continue entering through the gates at a constant rate of 200 per minute. Let $t$ represent the number of minutes after kickoff. Which inequality can be solved to find the values of $t$ for which the number of spectators in the stadium is at or above capacity?
+
+A) $30{,}000 + 200t \leq 60{,}000$
+B) $30{,}000 + 200t \geq 60{,}000$
+C) $60{,}000 + 200t \geq 30{,}000$
+D) $200(30{,}000 + t) \geq 60{,}000$
+
+**Correct Answer:** B
+
+**Rationale:** "At or above capacity" means the total number of spectators is greater than or equal to 60,000, so $30{,}000 + 200t \geq 60{,}000$, which gives $t \geq 150$.
+
+**Misconception addressed:** Students often reverse the inequality direction (using $\leq$ for "at or above"), confusing the phrase with "at or below."
+
+---
+
+### A-055
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: translating a "within a tolerance of" condition into an absolute-value inequality, inspired by a Kaplan Inequalities practice-set item; not reproduced).
+
+**Question:** A weather station's forecast temperature $f$, in degrees Celsius, must be within $2°C$ of the actual recorded temperature $a$ for the forecast to be considered accurate. Which inequality represents this condition?
+
+A) $|f - a| \leq 2$
+B) $|f - a| \geq 2$
+C) $|f + a| \leq 2$
+D) $f - a \leq 2$
+
+**Correct Answer:** A
+
+**Rationale:** "Within 2 of" means the distance between $f$ and $a$ is at most 2, which is written as $|f - a| \leq 2$.
+
+**Misconception addressed:** Students often choose $\geq$ instead of $\leq$, reasoning that "within" suggests a minimum rather than a maximum allowed distance, or omit the absolute value and only bound the difference from one side.
+
+---
+
+### A-056
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: "rounded up to the next whole unit" step-rate inequality under a budget constraint, inspired by a Kaplan Inequalities practice-set item; not reproduced).
+
+**Question:** An STC mobile plan costs SAR 60 per month plus SAR 8 for each additional GB of data used beyond the included allotment, where any portion of an additional GB is billed as a full GB. If Noura's monthly budget for this plan is SAR 100, what is the maximum number of additional whole GB she can use and still stay within budget?
+
+**Correct Answer:** 5
+
+**Rationale:** $60 + 8g \leq 100 \rightarrow 8g \leq 40 \rightarrow g \leq 5$. Since any portion of a 6th GB would be billed as a full 6th GB (raising the cost to $60 + 8(6) = 108 > 100$), the maximum whole number of additional GB Noura can use is 5.
+
+**Misconception addressed:** Students often solve the inequality correctly but fail to account for the "rounded up" billing rule, incorrectly assuming partial GB usage beyond 5 is billed proportionally rather than rounded up to the next whole GB.
+
+---
+
+### A-057
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: percent-mixture equation solving for an unknown volume given a target blended concentration, inspired by a Kaplan Ratios, Proportions, and Percents practice-set item; not reproduced).
+
+**Question:** A juice company blends $a$ liters of a 15% concentrate juice with 800 liters of a 60% concentrate juice to create a mixture that is 40% concentrate. What is the value of $a$?
+
+**Correct Answer:** 640
+
+**Rationale:** $0.15a + 0.60(800) = 0.40(a + 800) \rightarrow 0.15a + 480 = 0.40a + 320 \rightarrow 160 = 0.25a \rightarrow a = 640$.
+
+**Misconception addressed:** Students often apply the target percentage (40%) only to the unknown quantity $a$ instead of to the total mixture $(a + 800)$, producing an equation that does not represent a weighted blend.
+
+---
+
+### AM-040
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: composite function evaluation using only two given specific function values, inspired by a Kaplan Functions practice-set item; not reproduced).
+
+**Question:** The function $C$ gives the Celsius equivalent of a temperature reading $x$, and the function $P$ gives the predicted crop yield, in tons, at temperature $x$°C for a NEOM greenhouse. Suppose $C(30) = 30$ and $P(30) = 18$. What is the value of $P(C(30))$?
+
+A) $30$
+B) $18$
+C) $48$
+D) $540$
+
+**Correct Answer:** B
+
+**Rationale:** Since $C(30) = 30$, $P(C(30)) = P(30) = 18$.
+
+**Misconception addressed:** Students often add or multiply the two given values ($C(30) + P(30) = 48$ or otherwise combine them) instead of recognizing that $C(30) = 30$ allows the composition to collapse directly to $P(30)$.
+
+---
+
+### AM-041
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: solving for an unknown constant using one given function value, then evaluating the function at a different, strategically symmetric input, inspired by a Kaplan Quadratics practice-set item; not reproduced).
+
+**Question:** A ball's height above the ground, in meters, $t$ seconds after being launched from a platform in Al-Ula is modeled by $h(t) = -5t^2 + 20t + c$, where $c$ is the platform height. If $h(1) = 35$, what is the value of $h(3)$?
+
+**Correct Answer:** 35
+
+**Rationale:** $h(1) = -5(1)^2 + 20(1) + c = 15 + c = 35 \rightarrow c = 20$. Then $h(3) = -5(3)^2 + 20(3) + 20 = -45 + 60 + 20 = 35$. (The parabola's vertex is at $t = 2$, and $t=1$ and $t=3$ are symmetric about it, so $h(1) = h(3)$ without needing to solve for $c$ at all.)
+
+**Misconception addressed:** Students often forget to solve for $c$ first and instead substitute $t = 3$ into an equation still missing the constant term, or fail to notice the time symmetry that would let them shortcut the computation.
+
+---
+
+### AM-042
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: identifying an undefined input of a rational function by finding where its denominator equals zero, inspired by a Kaplan Functions practice-set item; not reproduced).
+
+**Question:** For which value of $x$ is the function $f(x) = \dfrac{2x - 1}{x^2 - 2x - 24}$ undefined?
+
+A) $-6$
+B) $-4$
+C) $2$
+D) $5$
+
+**Correct Answer:** B
+
+**Rationale:** $f$ is undefined where the denominator equals zero: $x^2 - 2x - 24 = (x - 6)(x + 4) = 0 \rightarrow x = 6$ or $x = {-4}$. Of the given choices, only $x = {-4}$ makes the denominator zero.
+
+**Misconception addressed:** Students often set the numerator equal to zero instead of the denominator, or make a sign error factoring the trinomial (e.g., using $(x+6)(x-4)$).
+
+---
+
+### AM-043
+
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: converting a factored quadratic to vertex form and solving for the vertex-form constant in terms of a leading coefficient, inspired by a Kaplan Quadratics practice-set item; not reproduced).
+
+**Question:** If $a(x-2)(x+6) = a(x-h)^2 + k$ for all values of $x$, where $a \neq 0$, what is $k$ in terms of $a$?
+
+A) $-16a$
+B) $-12a$
+C) $4a$
+D) $16a$
+
+**Correct Answer:** A
+
+**Rationale:** Expanding, $a(x-2)(x+6) = a(x^2 + 4x - 12)$. Completing the square: $x^2 + 4x - 12 = (x+2)^2 - 16$. So $a(x^2+4x-12) = a(x+2)^2 - 16a$, giving $h = {-2}$ and $k = {-16a}$.
+
+**Misconception addressed:** Students often complete the square correctly but forget to distribute $a$ into the constant term, answering $-16$ instead of $-16a$.
+
+---
+
+### AM-044
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: solving a nonlinear system by substitution, then evaluating a combined expression of the solution rather than the solution's individual coordinates, inspired by a Kaplan Quadratics practice-set item; not reproduced).
+
+**Question:** If $y = x^2 - 7$ and $x + y = 5$, what is the value of $x^2y^2$ for the solution $(x, y)$ of this system with $x > 0$?
+
+**Correct Answer:** 36
+
+**Rationale:** Substituting $y = 5 - x$ into $y = x^2 - 7$: $5 - x = x^2 - 7 \rightarrow x^2 + x - 12 = 0 \rightarrow (x+4)(x-3) = 0 \rightarrow x = 3$ or $x = {-4}$. Since $x > 0$, $x = 3$, so $y = 5 - 3 = 2$. Then $x^2y^2 = (xy)^2 = (3 \cdot 2)^2 = 36$.
+
+**Misconception addressed:** Students often stop after finding $x = 3$ and $y = 2$ and report one of those values instead of computing the requested combined expression, or fail to discard the extraneous solution $x = {-4}$ excluded by the given condition.
+
+---
+
+### GT-033
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: a straight-line angle pair feeding into a triangle's interior-angle sum with one angle expressed as a multiple of another, inspired by a Kaplan Lines, Angles, and Triangles practice-set item; not reproduced).
+
+**Question:** In a figure, angles $b$ and $d$ together form a straight line, with $d = 112°$. Angles $a$, $b$, and $c$ are the three interior angles of a triangle, where $a = 3c$. What is the value of $a + b$?
+
+A) $140$
+B) $146$
+C) $152$
+D) $158$
+
+**Correct Answer:** C
+
+**Rationale:** Since $b$ and $d$ form a straight line, $b = 180° - 112° = 68°$. The triangle's angles sum to $180°$: $3c + 68° + c = 180° \rightarrow 4c = 112° \rightarrow c = 28°$, so $a = 3(28°) = 84°$. Then $a + b = 84° + 68° = 152°$.
+
+**Misconception addressed:** Students sometimes solve for $c$ correctly but then report $a + c$ or $c$ alone instead of the requested $a + b$, or substitute $d$ directly into the triangle's angle sum instead of first finding $b$.
+
+---
+
+### GT-034
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: positive difference between the exterior angle measures of two different regular polygons, inspired by a Kaplan Lines, Angles, and Triangles practice-set item; not reproduced).
+
+**Question:** What is the positive difference, in degrees, between the measure of an exterior angle of a regular octagon (8 sides) and the measure of an exterior angle of a regular decagon (10 sides)?
+
+**Correct Answer:** 9
+
+**Rationale:** A regular polygon's exterior angles are all equal and sum to $360°$, so each measures $\dfrac{360°}{n}$. For the octagon: $\dfrac{360°}{8} = 45°$. For the decagon: $\dfrac{360°}{10} = 36°$. The positive difference is $45° - 36° = 9°$.
+
+**Misconception addressed:** Students sometimes use the interior-angle formula $\dfrac{(n-2)180°}{n}$ instead of the simpler exterior-angle formula $\dfrac{360°}{n}$, or divide 360° by the wrong polygon's side count.
+
+---
+
+### GT-035
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: chaining two isosceles triangles together — one angle is half another, and a third angle is supplementary to a base angle — inspired by a Kaplan Lines, Angles, and Triangles practice-set item; not reproduced).
+
+**Question:** In a figure, two isosceles triangles share a common vertex. In the top triangle, the vertex angle is $c$, and each of its two equal base angles measures $40°$. In the bottom triangle, the vertex angle $b$ equals half of $c$, and angle $a$ is supplementary to one of the bottom triangle's two equal base angles. What is the value of $a$, in degrees?
+
+**Correct Answer:** 115
+
+**Rationale:** In the top triangle, $c = 180° - 40° - 40° = 100°$. Then $b = \dfrac{c}{2} = 50°$. In the bottom (isosceles) triangle, the two equal base angles each measure $\dfrac{180° - 50°}{2} = 65°$. Since $a$ is supplementary to a base angle, $a = 180° - 65° = 115°$.
+
+**Misconception addressed:** Students often stop at finding $b = 50°$ and treat it as one of the bottom triangle's base angles rather than its vertex angle, which skips the step of halving $180° - b$ to find the true base angle before taking the supplement.
+
+---
+
+### GT-036
+
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: a square's area gives a shared side length that becomes the hypotenuse of a Pythagorean-triple right triangle used to find a parallelogram's height, inspired by a Kaplan Lines, Angles, and Triangles practice-set item; not reproduced).
+
+**Question:** In a figure, square $WXYZ$ has an area of 400 square units. Side $AB$ of parallelogram $ABCD$ has the same length as a side of the square. Right triangle $ABE$, formed by dropping an altitude from vertex $B$ to the extension of side $AD$, has hypotenuse $AB$ and one leg $AE = 12$. If side $AD$ of the parallelogram has length 33, what is the area of parallelogram $ABCD$?
+
+**Correct Answer:** 528
+
+**Rationale:** The square's side length is $\sqrt{400} = 20$, so $AB = 20$ (the hypotenuse of right triangle $ABE$). Since $AE = 12$, the other leg is $BE = \sqrt{20^2 - 12^2} = \sqrt{400 - 144} = \sqrt{256} = 16$ (a 3:4:5 triple scaled by 4). This altitude, $BE = 16$, is the height of the parallelogram. Area $= AD \times BE = 33 \times 16 = 528$ square units.
+
+**Misconception addressed:** Students often use $AB$ (the slant side) as the parallelogram's height instead of the perpendicular altitude $BE$, overstating the area.
+
+---
+
+### GT-037
+
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: a rectangular region's dimensions each shrink by a fixed amount due to a widened border, and the resulting percent decrease in area is requested, inspired by a Kaplan Lines, Angles, and Triangles practice-set item; not reproduced).
+
+**Question:** A rectangular vegetable garden at a NEOM community project originally has length $s$ meters and width $0.4s$ meters. A surrounding path is widened, which decreases the garden's length by $0.1s$ and its width by $0.1s$. What is the percent decrease in the garden's area?
+
+**Correct Answer:** 32.5
+
+**Rationale:** The original area is $s(0.4s) = 0.4s^2$. The new dimensions are $s - 0.1s = 0.9s$ and $0.4s - 0.1s = 0.3s$, so the new area is $(0.9s)(0.3s) = 0.27s^2$. The percent decrease is $\dfrac{0.4s^2 - 0.27s^2}{0.4s^2} = \dfrac{0.13}{0.4} = 0.325 = 32.5\%$.
+
+**Misconception addressed:** Students often subtract the dimension decreases directly from the area (e.g., treating the area decrease as $0.1s + 0.1s$ scaled somehow) instead of recomputing the new area from the new dimensions and comparing it to the original.
+
+---
+
+### GT-038
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: using an arc-length-to-circumference proportion to find a central angle, then applying a 30-60-90 triangle formed by a tangent line, inspired by a Kaplan Circles practice-set item; not reproduced).
+
+**Question:** A circle has center $A$ and radius $20\sqrt{3}$. Segment $CD$ is tangent to the circle at point $D$, so triangle $ACD$ has a right angle at $D$. Point $B$ lies on the circle along ray $AC$, and minor arc $BD$ has length $\dfrac{10\sqrt{3}}{3}\pi$. What is the length of $CD$?
+
+**Correct Answer:** 20
+
+**Rationale:** The circumference is $2\pi(20\sqrt{3}) = 40\sqrt{3}\pi$. Setting up the proportion $\dfrac{a}{360°} = \dfrac{\frac{10\sqrt3}{3}\pi}{40\sqrt3\pi} = \dfrac{1}{12}$ gives central angle $a = 30°$, so $\angle DAC = 30°$. Triangle $ACD$ is therefore a 30-60-90 triangle with $AD$ (the radius, adjacent to the $30°$ angle) $= 20\sqrt{3}$ and $CD$ (opposite the $30°$ angle) $= \dfrac{AD}{\sqrt3} = \dfrac{20\sqrt3}{\sqrt3} = 20$.
+
+**Misconception addressed:** Students often set up the arc-to-circumference proportion but then misassign which triangle side ($AD$, $CD$, or $AC$) corresponds to the "opposite" versus "adjacent" leg of the 30° angle, swapping the $\times\sqrt3$ and $\div\sqrt3$ steps.
+
+---
+
+### GT-039
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (pattern: using the interior-angle sum of a quadrilateral formed by two tangent lines and two radii to find a central angle, then converting to an arc length, inspired by a Kaplan Circles practice-set item; not reproduced).
+
+**Question:** In a figure, $PA$ and $PB$ are tangent to a circle centered at $O$, at points $A$ and $B$ respectively, so $OA \perp PA$ and $OB \perp PB$. If $\angle APB = 100°$ and the circle has a circumference of $36\pi$, what is the length of minor arc $AB$?
+
+A) $6\pi$
+B) $8\pi$
+C) $9\pi$
+D) $10\pi$
+
+**Correct Answer:** B
+
+**Rationale:** Quadrilateral $PAOB$ has interior angles summing to $360°$. Since $\angle A = \angle B = 90°$ (tangent-radius angles), the central angle is $\angle O = 360° - 90° - 90° - 100° = 80°$. The arc length is $\dfrac{80°}{360°}(36\pi) = 8\pi$.
+
+**Misconception addressed:** Students often assume the central angle equals $\angle APB$ directly (ignoring that the two tangent-radius right angles must be subtracted from $360°$ first), which produces an arc-length answer based on a $100°$ central angle instead of $80°$.
+
+---
+
+### GT-040
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: finding an unknown coordinate in a circle's equation using two given points, each yielding two candidate values, and identifying the common value, inspired by a Kaplan Circles practice-set item; not reproduced).
+
+**Question:** A circle has equation $(x+4)^2 + (y-b)^2 = 100$, where $b$ is a constant. The points $(4, 13)$ and $({-10}, {-1})$ both lie on the circle. What is the value of $b$?
+
+**Correct Answer:** 7
+
+**Rationale:** Using $(4, 13)$: $(4+4)^2 + (13-b)^2 = 100 \rightarrow 64 + (13-b)^2 = 100 \rightarrow (13-b)^2 = 36 \rightarrow b = 7 \text{ or } 19$. Using $({-10}, {-1})$: $({-10}+4)^2 + ({-1}-b)^2 = 100 \rightarrow 36 + ({-1}-b)^2 = 100 \rightarrow ({-1}-b)^2 = 64 \rightarrow b = {-9} \text{ or } 7$. The value common to both solution sets is $b = 7$.
+
+**Misconception addressed:** Students often take the square root of one squared expression and select only one of the two $\pm$ solutions arbitrarily, instead of solving both points' equations and identifying the value they have in common.
+
+---
+
+### GT-041
+
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: converting a rectangular tank's fill volume to a weight using a given density, inspired by a Kaplan Three-Dimensional Figures practice-set item; not reproduced).
+
+**Question:** A rectangular desalinated-water storage tank at a facility near Yanbu has a base measuring 8 feet by 5 feet. The tank is filled with water to a depth of 4.5 feet. Using a water density of 62.4 pounds per cubic foot, what is the weight of the water in the tank, in pounds?
+
+**Correct Answer:** 11232
+
+**Rationale:** The volume of water is $8 \times 5 \times 4.5 = 180$ cubic feet. The weight is $180 \times 62.4 = 11{,}232$ pounds.
+
+**Misconception addressed:** Students sometimes use the tank's total height rather than the water's fill depth when computing volume, or forget to multiply by the density and report the volume itself as the answer.
+
+---
+
+### GT-042
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (pattern: applying the same cosine ratio twice in a chain of two nested right triangles that share an angle, inspired by a Kaplan Trigonometry practice-set item; not reproduced).
+
+**Question:** In a figure, right triangle $ACD$ has a right angle at $D$, and right triangle $BCD$ (with $B$ on segment $AD$) has a right angle at $B$; both triangles share angle $C$. If $\cos C = 0.75$ and $AC = 48$, what is the length of $BC$?
+
+**Correct Answer:** 27
+
+**Rationale:** In triangle $ACD$, $\cos C = \dfrac{DC}{AC}$, so $DC = 0.75 \times 48 = 36$. In the smaller triangle $BCD$, $\cos C = \dfrac{BC}{DC}$, so $BC = 0.75 \times 36 = 27$.
+
+**Misconception addressed:** Students often apply $\cos C$ only once (using it directly on $AC$ to find $BC$, skipping the intermediate triangle), which does not account for the two separate right triangles sharing angle $C$ at different scales.
+
+---
+
+### 2.11 Simulated Batch 7 — College Board Question Bank Pattern Deepening (Advanced Math, 15 items — AM-045 to AM-059)
+
+*Source note: patterns drawn from reading real, current Digital SAT College Board Question Bank exports (Nonlinear Functions, Nonlinear Equations and Systems, Equivalent Expressions — Levels 1 and 2) uploaded by the teacher. No source question's exact numbers, wording, or answer choices are reproduced; every item below is house-authored with new numbers, phrasing, and (where applicable) Saudi context, simulating only the underlying skill pattern. This batch extends the bank beyond the original ~160-item Coverage Audit target as additional Advanced Math depth, per explicit instruction.*
+
+### AM-045
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear functions, Level 1); not reproduced
+
+**Question:** As part of a NEOM smart-city energy initiative, the storage capacity of a battery facility is modeled by
+$$E(t) = 1450\left(1.08\right)^{t},$$
+where $E(t)$ is the capacity, in megawatt-hours, and $t$ is the number of years after the facility opened, for $0 \leq t \leq 15$. Which is the best interpretation of $1450$ in this context?
+
+A) The predicted capacity, in megawatt-hours, $15$ years after the facility opened
+B) The estimated capacity, in megawatt-hours, when the facility opened
+C) The annual percent increase in capacity
+D) The number of years it takes the capacity to double
+
+**Correct Answer:** B
+
+**Rationale:** In a model of the form $E(t) = E_0(1+r)^t$, the constant $E_0 = 1450$ is the value at $t=0$, i.e., when the facility opened.
+
+**Misconception addressed:** Students associate the leading constant with the final or maximum value instead of the initial ($t=0$) value.
+
+---
+
+### AM-046
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear functions, Level 1); not reproduced
+
+**Question:** The function $g$ is defined by
+$$g(x) = a\left(x-3\right)\left(x+4\right),$$
+where $a$ is a constant. The graph of $y = g(x)$ in the $xy$-plane passes through the point $\left(0, {-36}\right)$. What is the value of $g(6)$?
+
+**Correct Answer:** $90$
+
+**Rationale:** Substituting $(0,-36)$: $-36 = a(-3)(4) = -12a$, so $a = 3$. Then $g(6) = 3(6-3)(6+4) = 3(3)(10) = 90$.
+
+**Misconception addressed:** Students evaluate $g(6)$ using $a=1$, never solving for $a$ from the given point first.
+
+---
+
+### AM-047
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear functions, Level 2); not reproduced
+
+**Question:** The function $h$ is defined by $h(x) = 3x^{2} - 24x + 10$. What is the $x$-coordinate of the vertex of the graph of $y = h(x)$ in the $xy$-plane?
+
+A) ${-4}$
+B) $3$
+C) $4$
+D) $8$
+
+**Correct Answer:** C
+
+**Rationale:** For $h(x) = ax^2+bx+c$, the vertex occurs at $x = -\dfrac{b}{2a} = -\dfrac{-24}{2(3)} = \dfrac{24}{6} = 4$.
+
+**Misconception addressed:** Students use $x = -\dfrac{b}{a}$, omitting the factor of $2$ in the denominator.
+
+---
+
+### AM-048
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear functions, Level 1); not reproduced
+
+**Question:** A cooperative in Al-Ahsa tracks its annual date export tonnage with the function $f(x) = a\cdot 3^{x}$, where $a$ is a constant and $x$ is the number of years since record-keeping began. If $f(2) = 54$, what is the value of $f(4)$?
+
+A) $108$
+B) $162$
+C) $324$
+D) $486$
+
+**Correct Answer:** D
+
+**Rationale:** From $f(2) = a\cdot 3^{2} = 9a = 54$, so $a = 6$. Then $f(4) = 6\cdot 3^{4} = 6(81) = 486$.
+
+**Misconception addressed:** Students scale $54$ by $\dfrac{4}{2}=2$ as though the function were linear, giving $108$ instead of applying the exponential growth factor $3^{2}=9$.
+
+---
+
+### AM-049
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear functions, Level 1); not reproduced
+
+**Question:** During a scheduled maintenance check, the water level change in a Jeddah desalination reservoir is modeled by $f(x) = x^{3} - 5x + 12$, where $f(x)$ is the change in level, in centimeters, and $x$ is the number of hours after maintenance begins, for $-3 \leq x \leq 3$. What is the value of $f({-2})$?
+
+A) $6$
+B) $10$
+C) $14$
+D) $18$
+
+**Correct Answer:** C
+
+**Rationale:** $f({-2}) = {(-2)}^{3} - 5({-2}) + 12 = {-8} + 10 + 12 = 14$.
+
+**Misconception addressed:** Students drop the sign when cubing a negative number, computing $(-2)^3$ as $8$ instead of ${-8}$.
+
+---
+
+### AM-050
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear equations and systems, Level 1); not reproduced
+
+**Question:** Which inequality is equivalent to $8x - 12y > 20$?
+
+A) $2x - 3y > 5$
+B) $3x - 2y > 5$
+C) $4x - 3y > 5$
+D) $2y - 3x > 5$
+
+**Correct Answer:** A
+
+**Rationale:** Dividing every term by $4$ (a positive number, so the inequality direction is unchanged): $\dfrac{8x}{4} - \dfrac{12y}{4} > \dfrac{20}{4}$, which gives $2x - 3y > 5$.
+
+**Misconception addressed:** Students divide only the left side, or flip the inequality sign despite dividing by a positive constant.
+
+---
+
+### AM-051
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear equations and systems, Level 1); not reproduced
+
+**Question:** How many distinct real solutions does the equation $4x^{2} - 20x + 25 = 0$ have?
+
+A) Exactly one
+B) Exactly two
+C) Infinitely many
+D) Zero
+
+**Correct Answer:** A
+
+**Rationale:** The discriminant is $b^{2}-4ac = ({-20})^{2} - 4(4)(25) = 400 - 400 = 0$. A discriminant of $0$ means the equation has exactly one distinct real solution (a repeated root), confirmed by $4x^2-20x+25=(2x-5)^2$.
+
+**Misconception addressed:** Students see a perfect-square trinomial and assume "two solutions" without checking that both roots coincide.
+
+---
+
+### AM-052
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear equations and systems, Level 1); not reproduced
+
+**Question:** In the system of equations below, $x$ and $y$ satisfy both equations.
+$$y = 5x + 2$$
+$$y = 5x^{2} + 2$$
+Which ordered pair $(x,y)$ is a solution to this system?
+
+A) $(0,0)$
+B) $(0,2)$
+C) $(1,5)$
+D) $(1,7)$
+
+**Correct Answer:** D
+
+**Rationale:** Setting the expressions equal: $5x+2 = 5x^2+2$, so $5x = 5x^2$, giving $x = x^2$ and thus $x=0$ or $x=1$. At $x=1$: $y = 5(1)+2 = 7$, so $(1,7)$ satisfies both equations (check: $5(1)^2+2=7$ also).
+
+**Misconception addressed:** Students substitute a candidate pair into only one of the two equations and stop, rather than confirming it satisfies both.
+
+---
+
+### AM-053
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear equations and systems, Level 1); not reproduced
+
+**Question:** $7|x| = 63$
+What is the positive solution to the given equation?
+
+**Correct Answer:** $9$
+
+**Rationale:** Dividing both sides by $7$: $|x| = 9$. This gives $x=9$ or $x={-9}$; the positive solution is $9$.
+
+**Misconception addressed:** Students report both $9$ and ${-9}$ despite the question asking specifically for the positive solution, or stop after dividing without resolving the absolute value.
+
+---
+
+### AM-054
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Nonlinear equations and systems, Level 1); not reproduced
+
+**Question:** A transportation company serving pilgrims in Makkah uses the formula $10p = q + 25r$, where $p$ is the fare per passenger, in SAR; $q$ is a fixed service charge, in SAR; and $r$ is the distance traveled, in kilometers. Which equation correctly expresses $p$ in terms of $q$ and $r$?
+
+A) $p = \dfrac{q}{10} + 25r$
+B) $p = q + \dfrac{25r}{10}$
+C) $p = 10\left(q + 25r\right)$
+D) $p = \dfrac{q + 25r}{10}$
+
+**Correct Answer:** D
+
+**Rationale:** Dividing both sides of $10p = q+25r$ by $10$ gives $p = \dfrac{q+25r}{10}$ — the entire right-hand side must be divided by $10$, not just one term.
+
+**Misconception addressed:** Students divide only the term nearest the equals sign (as in choice A or B) instead of dividing the whole right-hand expression.
+
+---
+
+### AM-055
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Equivalent expressions, Level 1); not reproduced
+
+**Question:** Which expression is equivalent to $4\left(2x+7\right) - 5x$?
+
+A) $3x + 28$
+B) $3x + 2$
+C) $13x + 7$
+D) $13x + 28$
+
+**Correct Answer:** A
+
+**Rationale:** Distributing: $4(2x+7) = 8x+28$. Then $8x+28-5x = 3x+28$.
+
+**Misconception addressed:** Students distribute the $4$ across only the first term inside the parentheses, or combine $8x$ and $5x$ incorrectly by adding instead of subtracting.
+
+---
+
+### AM-056
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Equivalent expressions, Level 2); not reproduced
+
+**Question:** Which expression is equivalent to $\left(5x^{2}+3x-9\right) - \left(2x^{2}-7x+4\right)$?
+
+A) $3x^{2} + 10x - 13$
+B) $3x^{2} - 4x - 13$
+C) $7x^{2} - 4x - 5$
+D) $7x^{2} + 10x - 5$
+
+**Correct Answer:** A
+
+**Rationale:** Distributing the negative sign: $5x^2+3x-9-2x^2+7x-4 = (5x^2-2x^2)+(3x+7x)+(-9-4) = 3x^2+10x-13$.
+
+**Misconception addressed:** Students fail to distribute the subtraction across every term of the second polynomial, flipping the sign of only the first term.
+
+---
+
+### AM-057
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Equivalent expressions, Level 1); not reproduced
+
+**Question:** An urban planner in Dammam models the area of a rectangular section of a park as $3x^{2}+ax$ square meters, where $a$ is a constant. This expression is equivalent to $x\left(3x+11\right)$. What is the value of $a$?
+
+A) $3$
+B) $8$
+C) $11$
+D) $14$
+
+**Correct Answer:** C
+
+**Rationale:** Distributing: $x(3x+11) = 3x^2+11x$. Matching to $3x^2+ax$ gives $a=11$.
+
+**Misconception addressed:** Students confuse the coefficient of $x$ inside the factor with the leading coefficient $3$, or add the two factor coefficients incorrectly.
+
+---
+
+### AM-058
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Multiple Choice
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Equivalent expressions, Level 2); not reproduced
+
+**Question:** Which expression is equivalent to $x^{4} - 2x^{2} - 15$?
+
+A) $\left(x^{2}-5\right)\left(x^{2}+3\right)$
+B) $\left(x^{2}+5\right)\left(x^{2}-3\right)$
+C) $\left(x^{2}-15\right)\left(x^{2}+1\right)$
+D) $\left(x^{2}-1\right)\left(x^{2}+15\right)$
+
+**Correct Answer:** A
+
+**Rationale:** Let $u = x^2$. Then $u^2-2u-15$ factors as $(u-5)(u+3)$, since $-5\cdot3=-15$ and $-5+3=-2$. Substituting back: $\left(x^2-5\right)\left(x^2+3\right)$.
+
+**Misconception addressed:** Students find two numbers with the correct product but wrong sum (or vice versa), producing a factorization that expands to the wrong middle term.
+
+---
+
+### AM-059
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Student-Produced Response
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Equivalent expressions, Level 2); not reproduced
+
+**Question:** The sum of $-3x^{2}+5x+18$ and $6x^{2}-2x-9$ can be written in the form $ax^{2}+bx+c$, where $a$, $b$, and $c$ are constants. What is the value of $a+b+c$?
+
+**Correct Answer:** $15$
+
+**Rationale:** Adding: $(-3x^2+6x^2)+(5x-2x)+(18-9) = 3x^2+3x+9$. So $a=3$, $b=3$, $c=9$, and $a+b+c = 15$.
+
+**Misconception addressed:** Students substitute $x=1$ into the two original expressions and sum the results directly instead of first combining like terms into standard form, occasionally miscounting a sign along the way.
+
+---
+
+
+### 2.12 Simulated Batch 8 — College Board Question Bank Pattern Deepening (Algebra, 16 items — A-058 to A-073)
+
+*Source note: patterns drawn from reading real, current Digital SAT College Board Question Bank exports (Linear equations in one variable, Linear equations in two variables, Linear functions, Linear inequalities in one or two variables — Levels 2 and 3, per the teacher's instruction to skip the easiest tier) uploaded by the teacher. No source question's exact numbers, wording, or answer choices are reproduced; every item below is house-authored with new numbers, phrasing, and (where applicable) Saudi context, simulating only the underlying skill pattern. This batch extends the bank beyond the original ~160-item Coverage Audit target as additional Algebra depth, per explicit instruction.*
+
+### A-058
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in one variable, Level 2); not reproduced
+
+**Question:** A company that roasts and sells coffee beans calculates its monthly profit, in SAR, by subtracting its fixed monthly costs from its monthly sales revenue. The equation $22{,}000 = 3.50x - 6{,}500$ represents this situation for a month where $x$ kilograms of coffee beans are sold. Which statement is the best interpretation of $3.50x$ in this context?
+
+A) The monthly sales revenue, in SAR, from selling $x$ kilograms of coffee beans
+B) The monthly sales revenue, in SAR, from each kilogram of coffee beans sold
+C) The monthly cost, in SAR, of roasting each kilogram of coffee beans
+D) The monthly cost, in SAR, of roasting $x$ kilograms of coffee beans
+
+**Correct Answer:** A
+
+**Rationale:** In the equation profit $=$ revenue $-$ costs, the term $3.50x$ represents the total sales revenue earned from selling $x$ kilograms at $3.50$ SAR per kilogram — not the price per kilogram alone.
+
+**Misconception addressed:** Students interpret $3.50x$ as a per-unit rate (choice B) rather than as the total revenue generated by all $x$ kilograms sold.
+
+---
+
+### A-059
+
+**Skill:** Linear equations in one variable | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in one variable, Level 3); not reproduced
+
+**Question:** $$\dfrac{18x+24}{6} - \dfrac{s}{11} = r(x-9)$$
+In the given equation, $s$ and $r$ are constants, and $s > 0$. If the equation has infinitely many solutions, what is the value of $s$?
+
+**Correct Answer:** $341$
+
+**Rationale:** Simplifying the left side: $\dfrac{18x+24}{6} - \dfrac{s}{11} = 3x + 4 - \dfrac{s}{11}$. The right side is $rx - 9r$. For infinitely many solutions, the coefficients of $x$ and the constant terms must match: $r = 3$, and $4 - \dfrac{s}{11} = -9r = -27$, so $\dfrac{s}{11} = 31$, giving $s = 341$.
+
+**Misconception addressed:** Students solve for $r$ from the $x$-coefficient but forget to substitute that value of $r$ back into the constant-term equation before solving for $s$.
+
+---
+
+### A-060
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in one variable, Level 2); not reproduced
+
+**Question:** If $58 = 22 + 3(x-5)$, what is the value of $3(x-5)$?
+
+A) $22$
+B) $36$
+C) $44$
+D) $58$
+
+**Correct Answer:** B
+
+**Rationale:** Subtracting $22$ from both sides of $58 = 22 + 3(x-5)$ gives $3(x-5) = 58 - 22 = 36$ directly, without needing to solve for $x$ itself.
+
+**Misconception addressed:** Students solve fully for $x$ first (an unnecessary extra step prone to arithmetic error) instead of recognizing that isolating the expression $3(x-5)$ requires only one subtraction step.
+
+---
+
+### A-061
+
+**Skill:** Linear equations in one variable | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in one variable, Level 3); not reproduced
+
+**Question:** An amusement park in Riyadh charges $18$ SAR per ride ticket. On a Thursday, the park earned $612$ SAR in profit from ride-ticket sales after paying daily operating expenses of $216$ SAR. How many ride tickets were sold on Thursday? (profit $=$ total revenue $-$ total expenses)
+
+**Correct Answer:** $46$
+
+**Rationale:** Let $x$ be the number of tickets sold. Then $612 = 18x - 216$, so $18x = 828$, giving $x = 46$.
+
+**Misconception addressed:** Students add the expenses and profit incorrectly or divide before combining the two known quantities, instead of first isolating $18x$ by adding $216$ to both sides.
+
+---
+
+### A-062
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in two variables, Level 2); not reproduced
+
+**Question:** Line $k$ is defined by $y = -\dfrac{21}{4}x + 9$. Line $j$ is perpendicular to line $k$ in the $xy$-plane. What is the slope of line $j$?
+
+**Correct Answer:** $\dfrac{4}{21}$
+
+**Rationale:** Perpendicular lines have slopes that are negative reciprocals of each other. The slope of line $k$ is $-\dfrac{21}{4}$, so the slope of line $j$ is $\dfrac{4}{21}$.
+
+**Misconception addressed:** Students take the reciprocal of the slope but forget to flip its sign, or flip the sign but forget to take the reciprocal.
+
+---
+
+### A-063
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in two variables, Level 2); not reproduced
+
+**Question:** Layla ordered soil and gravel for her garden in Jeddah, which cost a total of $518$ SAR. The given equation represents the relationship between the number of cubic meters of soil, $x$, and the number of tons of gravel, $y$, that Layla ordered: $28.5x + 32.75y = 518$. How much more, in SAR, did a ton of gravel cost Layla than a cubic meter of soil?
+
+**Correct Answer:** $4.25$
+
+**Rationale:** The coefficient of $x$ ($28.5$) is the cost per cubic meter of soil, and the coefficient of $y$ ($32.75$) is the cost per ton of gravel. The difference is $32.75 - 28.5 = 4.25$ SAR.
+
+**Misconception addressed:** Students try to solve the two-variable equation for specific values of $x$ and $y$ instead of recognizing that the question only requires comparing the two coefficients directly.
+
+---
+
+### A-064
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in two variables, Level 2); not reproduced
+
+**Question:** Noura made $48$ cups of date paste. She then filled $x$ small jars and $y$ large jars with all the paste she made. The equation $3x + 5y = 48$ represents this situation. Which is the best interpretation of $5y$ in this context?
+
+A) The number of large jars Noura filled
+B) The number of small jars Noura filled
+C) The total number of cups of paste in the large jars
+D) The total number of cups of paste in the small jars
+
+**Correct Answer:** C
+
+**Rationale:** Since each large jar holds $5$ cups of paste and $y$ is the number of large jars, the product $5y$ represents the total number of cups of paste placed in the large jars.
+
+**Misconception addressed:** Students interpret $5y$ as simply "the number of large jars" (choice A), overlooking that the coefficient $5$ scales $y$ into a total quantity of cups, not a count of jars.
+
+---
+
+### A-065
+
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear equations in two variables, Level 3); not reproduced
+
+**Question:** The table shows four values of $x$ and their corresponding values of $y$. There is a linear relationship between $x$ and $y$.
+
+| $x$ | $y$ |
+|---|---|
+| $-8$ | $73$ |
+| $-4$ | $61$ |
+| $4$ | $37$ |
+| $8$ | $25$ |
+
+Which equation represents this relationship?
+
+A) $3x + y = 49$
+B) $3x + y = 41$
+C) $x + 3y = 49$
+D) $x + 3y = 41$
+
+**Correct Answer:** A
+
+**Rationale:** The slope is $\dfrac{61-73}{-4-(-8)} = \dfrac{-12}{4} = -3$. Using the point $(-8,73)$: $73 = -3(-8) + b = 24 + b$, so $b = 49$. This gives $y = -3x + 49$, equivalent to $3x + y = 49$. Checking $x=8$: $3(8)+25 = 49$. ✓
+
+**Misconception addressed:** Students compute the slope correctly but substitute it into the wrong point, or swap the roles of $x$ and $y$ when converting slope-intercept form into standard form.
+
+---
+
+### A-066
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear functions, Level 2); not reproduced
+
+**Question:** According to a model, the wingspan, in millimeters, of a desert locust can be estimated by adding $1.2$ to five times the body length of the locust, in centimeters. According to the model, what would be the wingspan, in millimeters, of a desert locust that has a body length of $4.6$ centimeters?
+
+**Correct Answer:** $24.2$
+
+**Rationale:** Translating the description gives wingspan $= 1.2 + 5(\text{body length})$. Substituting $4.6$: $1.2 + 5(4.6) = 1.2 + 23 = 24.2$.
+
+**Misconception addressed:** Students reverse the roles in the verbal description, computing $5(1.2) + 4.6$ instead of $1.2 + 5(4.6)$.
+
+---
+
+### A-067
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear functions, Level 2); not reproduced
+
+**Question:** In the $xy$-plane, the graph of the linear function $f$ contains the points $(0,5)$ and $(6,41)$. Which equation defines $f$, where $y = f(x)$?
+
+A) $f(x) = 6x + 5$
+B) $f(x) = 5x + 6$
+C) $f(x) = 41x + 5$
+D) $f(x) = 36x + 41$
+
+**Correct Answer:** A
+
+**Rationale:** The slope is $\dfrac{41-5}{6-0} = \dfrac{36}{6} = 6$, and the $y$-intercept is given directly by the point $(0,5)$, so $f(x) = 6x+5$.
+
+**Misconception addressed:** Students swap the slope and $y$-intercept values (choice B), or use the difference in $y$-values alone as the slope without dividing by the difference in $x$-values (choice C).
+
+---
+
+### A-068
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear functions, Level 2); not reproduced
+
+**Question:** A crew at Jeddah Islamic Port has been unloading containers from a ship. The equation below models the approximate number of containers, $y$, that remains to be unloaded $x$ hours after the crew started working.
+$$y = 340 - 28x$$
+The graph of this equation in the $xy$-plane is a line. What is the best interpretation of the $x$-intercept in this context?
+
+A) The crew will have unloaded all the containers in about $12.1$ hours.
+B) The crew has been unloading about $12.1$ containers per hour.
+C) The crew has been unloading about $28$ containers per hour.
+D) The crew started with $340$ containers to unload.
+
+**Correct Answer:** A
+
+**Rationale:** The $x$-intercept occurs where $y=0$: $0 = 340-28x$, so $x = \dfrac{340}{28} \approx 12.1$. Since $y$ counts containers remaining and $x$ counts hours, $y=0$ means all containers have been unloaded after about $12.1$ hours.
+
+**Misconception addressed:** Students confuse the $x$-intercept (time to finish) with the slope (rate of unloading, choice C) or the $y$-intercept (starting amount, choice D).
+
+---
+
+### A-069
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear functions, Level 3); not reproduced
+
+**Question:** Some values of the linear function $g$ are shown in the table below.
+
+| $x$ | $g(x)$ |
+|---|---|
+| $0$ | $-5$ |
+| $3$ | $13$ |
+| $9$ | $49$ |
+
+What is the value of $g(7)$?
+
+**Correct Answer:** $37$
+
+**Rationale:** The slope is $\dfrac{13-(-5)}{3-0} = \dfrac{18}{3} = 6$, so $g(x) = 6x - 5$. Then $g(7) = 6(7) - 5 = 42-5 = 37$. (Check: $g(9) = 54-5=49$, matching the table.)
+
+**Misconception addressed:** Students compute the slope using the $(0,-5)$ and $(9,49)$ pair inconsistently with the $y$-intercept, or interpolate linearly between table rows instead of finding the actual linear equation.
+
+---
+
+### A-070
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear inequalities, Level 2); not reproduced
+
+**Question:** A logistics company in Dammam needs to hire at least $12$ delivery drivers for a new route. The drivers will be part-time, paid $45$ SAR per hour, or full-time, paid $70$ SAR per hour. The company's budget allows no more than $720$ SAR per hour in driver wages. The company must hire at least $4$ part-time drivers and at least $2$ full-time drivers. Which system of inequalities represents the conditions described, if $x$ is the number of part-time drivers and $y$ is the number of full-time drivers?
+
+A) $45x+70y \geq 720$
+&nbsp;&nbsp;&nbsp;$x+y \leq 12$
+&nbsp;&nbsp;&nbsp;$x \geq 4$
+&nbsp;&nbsp;&nbsp;$y \geq 2$
+
+B) $45x+70y \leq 720$
+&nbsp;&nbsp;&nbsp;$x+y \geq 12$
+&nbsp;&nbsp;&nbsp;$x \geq 4$
+&nbsp;&nbsp;&nbsp;$y \geq 2$
+
+C) $45x+70y \geq 720$
+&nbsp;&nbsp;&nbsp;$x+y \geq 12$
+&nbsp;&nbsp;&nbsp;$x \leq 4$
+&nbsp;&nbsp;&nbsp;$y \leq 2$
+
+D) $45x+70y \leq 720$
+&nbsp;&nbsp;&nbsp;$x+y \leq 12$
+&nbsp;&nbsp;&nbsp;$x \leq 4$
+&nbsp;&nbsp;&nbsp;$y \leq 2$
+
+**Correct Answer:** B
+
+**Rationale:** "At least 12 drivers" means $x+y \geq 12$. "No more than 720 SAR per hour" means $45x+70y \leq 720$. "At least 4 part-time" and "at least 2 full-time" mean $x \geq 4$ and $y \geq 2$.
+
+**Misconception addressed:** Students reverse the inequality direction for the budget constraint (treating "no more than" as $\geq$) or for the staffing minimums (treating "at least" as $\leq$).
+
+---
+
+### A-071
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear inequalities, Level 2); not reproduced
+
+**Question:** In Saudi Arabia, the standard width of a car parking space is at least $2.4$ meters and no more than $2.9$ meters. A mosque recently paved its parking area and wants to determine the number of parking spaces, $n$, that could be placed perpendicular to a curb that is $87$ meters long, based on the standard width of a parking space. Which of the following describes all the possible values of $n$?
+
+A) $30 \leq n \leq 36$
+B) $2.4 \leq n \leq 2.9$
+C) $24 \leq n \leq 87$
+D) $30 \leq n \leq 87$
+
+**Correct Answer:** A
+
+**Rationale:** The number of spaces is the curb length divided by the width of one space. Using the widest space ($2.9$ m) gives the fewest spaces: $\dfrac{87}{2.9} = 30$. Using the narrowest space ($2.4$ m) gives the most spaces: $\dfrac{87}{2.4} \approx 36.25$, so at most $36$ whole spaces fit. Thus $30 \leq n \leq 36$.
+
+**Misconception addressed:** Students pair the wider space with the larger count (reversing the inverse relationship between space width and number of spaces), or forget that $n$ must be a whole number of spaces.
+
+---
+
+### A-072
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear inequalities, Level 3); not reproduced
+
+**Question:** A number $p$ is at most $7$ less than $4$ times the value of $q$. If the value of $q$ is ${-3}$, what is the greatest possible value of $p$?
+
+**Correct Answer:** ${-19}$
+
+**Rationale:** "At most 7 less than 4 times $q$" translates to $p \leq 4q - 7$. Substituting $q={-3}$: $p \leq 4({-3}) - 7 = {-12}-7 = {-19}$. The greatest possible value of $p$ is ${-19}$.
+
+**Misconception addressed:** Students write the inequality as $p \leq 7 - 4q$, reversing which quantity is subtracted from which, or misread "at most" as $\geq$.
+
+---
+
+### A-073
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Linear inequalities, Level 3); not reproduced
+
+**Question:** $$y < {-6}x + 9$$
+Which point $(x,y)$ is a solution to the given inequality in the $xy$-plane?
+
+A) $({-2},21)$
+B) $(0,10)$
+C) $(1,2)$
+D) $(3,{-8})$
+
+**Correct Answer:** C
+
+**Rationale:** Substituting $(1,2)$: ${-6}(1)+9 = 3$, and $2 < 3$ is true. Checking the others: at $({-2},21)$, the boundary value is $21$, and $21 < 21$ is false; at $(0,10)$, the boundary value is $9$, and $10<9$ is false; at $(3,{-8})$, the boundary value is ${-9}$, and ${-8}<{-9}$ is false.
+
+**Misconception addressed:** Students substitute a point and check whether it satisfies the boundary equation $y={-6}x+9$ (equality) rather than the strict inequality, incorrectly accepting points that lie exactly on the boundary line.
+
+---
+
+
+---
+
+### 2.13 Simulated Batch 9 — College Board Question Bank Pattern Deepening (Geometry and Trigonometry / Systems of Linear Equations)
+
+### GT-043
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Right triangles and trigonometry, Level 2); not reproduced
+
+**Question:** If $\sin(2x)^{\circ} = \cos(x + 15)^{\circ}$, what is the value of $x$?
+
+**Correct Answer:** $25$
+
+**Rationale:** Since $\sin\theta = \cos(90 - \theta)$ for complementary angles, $2x$ and $x + 15$ must sum to $90$: $2x + (x+15) = 90 \Rightarrow 3x = 75 \Rightarrow x = 25$.
+
+**Misconception addressed:** Students confuse the cofunction identity with an equality of angles ($2x = x+15$) instead of a complementary-angle sum.
+
+---
+
+### GT-044
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Right triangles and trigonometry, Level 2); not reproduced
+
+**Question:** In right triangle $ABC$, the right angle is at $C$. If $AC = 16$ and $BC = 30$, what is $\tan A$?
+
+A) $\dfrac{8}{15}$
+
+B) $\dfrac{15}{8}$
+
+C) $\dfrac{16}{34}$
+
+D) $\dfrac{34}{16}$
+
+**Correct Answer:** B) $\dfrac{15}{8}$
+
+**Rationale:** $\tan A = \dfrac{\text{opposite}}{\text{adjacent}} = \dfrac{BC}{AC} = \dfrac{30}{16} = \dfrac{15}{8}$.
+
+**Misconception addressed:** Students invert opposite and adjacent, or use $AC/BC$ instead of $BC/AC$ for $\tan A$.
+
+---
+
+### GT-045
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Right triangles and trigonometry, Level 3); not reproduced
+
+**Question:** In right triangle $ABC$, the right angle is at $C$, and $\cos A = \dfrac{3}{5}$. If $AC = 36$, what is the length of $AB$?
+
+**Correct Answer:** $60$
+
+**Rationale:** $\cos A = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{AC}{AB}$, so $AB = \dfrac{AC}{\cos A} = \dfrac{36}{3/5} = 60$. This is consistent with the $3$-$4$-$5$ triple scaled by $12$ ($36$-$48$-$60$).
+
+**Misconception addressed:** Students set $AB = AC \cdot \cos A$ instead of dividing, confusing which side is the hypotenuse.
+
+---
+
+### GT-046
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Right triangles and trigonometry, Level 2); not reproduced
+
+**Question:** In triangle $ABC$, angle $C = {90}^{\circ}$, angle $B = {30}^{\circ}$, and $BC = 18$. What is the length of $AC$?
+
+A) $9$
+
+B) $6\sqrt{3}$
+
+C) $9\sqrt{3}$
+
+D) $18\sqrt{3}$
+
+**Correct Answer:** B) $6\sqrt{3}$
+
+**Rationale:** $AC$ is opposite angle $B$, and $BC$ is adjacent to angle $B$, so $\tan B = \dfrac{AC}{BC}$, giving $AC = BC\tan(30^{\circ}) = 18 \cdot \dfrac{1}{\sqrt{3}} = \dfrac{18}{\sqrt{3}} = 6\sqrt{3}$.
+
+**Misconception addressed:** Students apply the $30$-$60$-$90$ side ratio ($1 : \sqrt{3} : 2$) to the wrong pair of sides.
+
+---
+
+### GT-047
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Right triangles and trigonometry, Level 3); not reproduced
+
+**Question:** An isosceles right triangle has a perimeter of $40 + 20\sqrt{2}$. What is the length of the hypotenuse of the triangle?
+
+**Correct Answer:** $20\sqrt{2}$
+
+**Rationale:** For an isosceles right triangle with leg length $L$, the hypotenuse is $L\sqrt{2}$, so the perimeter is $2L + L\sqrt{2} = L(2 + \sqrt{2})$. Since $40 + 20\sqrt{2} = 20(2+\sqrt{2})$, $L = 20$, and the hypotenuse is $20\sqrt{2}$.
+
+**Misconception addressed:** Students try to solve $2L + L\sqrt{2}$ term-by-term instead of factoring out $L$ first.
+
+---
+
+### GT-048
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Lines, angles, and triangles, Level 2); not reproduced
+
+**Question:** At a certain time of day in Jeddah, a $6$-meter flagpole casts a shadow that is $4$ meters long. At the same time, a nearby minaret casts a shadow that is $30$ meters long. What is the height, in meters, of the minaret?
+
+**Correct Answer:** $45$
+
+**Rationale:** The flagpole and its shadow form a triangle similar to the minaret and its shadow, so $\dfrac{6}{4} = \dfrac{h}{30}$. Solving gives $h = \dfrac{6}{4}\times 30 = 45$.
+
+**Misconception addressed:** Students set up the proportion with mismatched corresponding parts (e.g., $\frac{6}{4}=\frac{30}{h}$), inverting the ratio.
+
+---
+
+### GT-049
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Lines, angles, and triangles, Level 2); not reproduced
+
+**Question:** Triangle $DEF$ is similar to triangle $GHI$, where $D$, $E$, and $F$ correspond to $G$, $H$, and $I$, respectively. The measure of angle $D$ is ${48}^{\circ}$, and the measure of angle $E$ is ${63}^{\circ}$. What is the measure of angle $H$?
+
+A) ${48}^{\circ}$
+
+B) ${63}^{\circ}$
+
+C) ${69}^{\circ}$
+
+D) ${117}^{\circ}$
+
+**Correct Answer:** B) ${63}^{\circ}$
+
+**Rationale:** Similar triangles have congruent corresponding angles regardless of the scale factor between them, so angle $H$ equals angle $E$, which is ${63}^{\circ}$.
+
+**Misconception addressed:** Students assume corresponding angles change when the side lengths are scaled, or they compute the third angle ($180-48-63=69^\circ$) instead of the requested corresponding angle.
+
+---
+
+### GT-050
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Lines, angles, and triangles, Level 3); not reproduced
+
+**Question:** In triangle $ABC$, the exterior angle at vertex $C$ measures ${130}^{\circ}$. If the measure of angle $A$ is ${55}^{\circ}$, what is the measure of angle $B$?
+
+**Correct Answer:** $75$
+
+**Rationale:** By the exterior angle theorem, an exterior angle equals the sum of the two remote interior angles: ${130}^{\circ} = \text{angle }A + \text{angle }B = {55}^{\circ} + \text{angle }B$, so angle $B = {75}^{\circ}$.
+
+**Misconception addressed:** Students set the exterior angle equal to the adjacent interior angle instead of the sum of the two remote interior angles.
+
+---
+
+### GT-051
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Lines, angles, and triangles, Level 3); not reproduced
+
+**Question:** Lines $l$ and $m$ are parallel and are cut by transversal $t$. Which of the following pairs of measures could NOT represent the measures of two same-side interior angles formed by $l$, $m$, and $t$?
+
+A) ${100}^{\circ}$ and ${80}^{\circ}$
+
+B) ${95}^{\circ}$ and ${85}^{\circ}$
+
+C) ${112}^{\circ}$ and ${68}^{\circ}$
+
+D) ${95}^{\circ}$ and ${84}^{\circ}$
+
+**Correct Answer:** D) ${95}^{\circ}$ and ${84}^{\circ}$
+
+**Rationale:** Same-side (co-interior) interior angles formed by a transversal crossing parallel lines are supplementary, summing to ${180}^{\circ}$. Choices A, B, and C each sum to ${180}^{\circ}$; choice D sums to ${179}^{\circ}$, which is not possible.
+
+**Misconception addressed:** Students assume same-side interior angles must be congruent rather than supplementary, or fail to check the sum against $180°$ precisely.
+
+---
+
+### GT-052
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Circles, Level 2); not reproduced
+
+**Question:** An angle has a measure of $\dfrac{7\pi}{12}$ radians. What is the measure of the angle, in degrees?
+
+**Correct Answer:** $105$
+
+**Rationale:** Multiply by $\dfrac{180^{\circ}}{\pi}$: $\dfrac{7\pi}{12}\times\dfrac{180}{\pi} = 7 \times 15 = 105^{\circ}$.
+
+**Misconception addressed:** Students multiply by $\dfrac{\pi}{180}$ instead of $\dfrac{180}{\pi}$ when converting radians to degrees.
+
+---
+
+### GT-053
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Circles, Level 2); not reproduced
+
+**Question:** The number of radians in a $540$-degree angle can be written as $a\pi$, where $a$ is a constant. What is the value of $a$?
+
+**Correct Answer:** $3$
+
+**Rationale:** Convert using $\text{radians} = \text{degrees}\times\dfrac{\pi}{180}$: $540 \times \dfrac{\pi}{180} = 3\pi$, so $a = 3$.
+
+**Misconception addressed:** Students forget to reduce $\dfrac{540}{180}$ and instead leave a non-simplified constant, or divide by $360$ instead of $180$.
+
+---
+
+### GT-054
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Circles, Level 2); not reproduced
+
+**Question:** Points $X$, $Y$, and $Z$ lie on a circular fountain in a Jeddah park, as shown below. On this circle, minor arc $XY$ has a length of $52$ meters, and major arc $XZY$ has a length of $260$ meters. What is the circumference, in meters, of the circle?
+
+A) $52$
+
+B) $208$
+
+C) $260$
+
+D) $312$
+
+**Correct Answer:** D) $312$
+
+**Rationale:** A minor arc and its corresponding major arc together make up the entire circle, so the circumference is $52 + 260 = 312$ meters.
+
+**Misconception addressed:** Students select the major arc's length alone, forgetting that the circumference is the sum of both arcs.
+
+---
+
+### GT-055
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Circles, Level 3); not reproduced
+
+**Question:** In the $xy$-plane, the graph of $2x^{2} - 8x + 2y^{2} + 12y = 24$ is a circle. What is the radius of the circle?
+
+A) $5$
+
+B) $6.5$
+
+C) $\sqrt{40}$
+
+D) $\sqrt{50}$
+
+**Correct Answer:** A) $5$
+
+**Rationale:** Divide by $2$: $x^{2} - 4x + y^{2} + 6y = 12$. Completing the square: $(x-2)^{2} - 4 + (y+3)^{2} - 9 = 12$, so $(x-2)^{2} + (y+3)^{2} = 25$. The radius is $\sqrt{25} = 5$.
+
+**Misconception addressed:** Students forget to divide the entire equation by the leading coefficient before completing the square, corrupting the constant added to each side.
+
+---
+
+### GT-056
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Circles, Level 2); not reproduced
+
+**Question:** What is the center of the circle in the $xy$-plane defined by the equation $x^{2} + y^{2} - 14x + 22y + 10 = 0$?
+
+A) $(7, -11)$
+
+B) $(7, 11)$
+
+C) $(-7, 11)$
+
+D) $(-7, -11)$
+
+**Correct Answer:** A) $(7, -11)$
+
+**Rationale:** Completing the square: $(x-7)^{2} - 49 + (y+11)^{2} - 121 + 10 = 0$, so $(x-7)^{2} + (y+11)^{2} = 160$. The center is $(7, -11)$.
+
+**Misconception addressed:** Students read the sign of $h$ and $k$ directly from the expanded equation instead of from the completed-square form $(x-h)^2+(y-k)^2$.
+
+---
+
+### GT-057
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Circles, Level 3); not reproduced
+
+**Question:** A circular roundabout on the Jeddah Corniche has its center at $(2, -5)$ in a coordinate model of the area, where distances are measured in hundreds of meters. Road $k$ is tangent to the roundabout at the point $(9, -1)$. What is the slope of road $k$?
+
+**Correct Answer:** $-\dfrac{7}{4}$
+
+**Rationale:** The radius to the point of tangency has slope $\dfrac{-1-(-5)}{9-2} = \dfrac{4}{7}$. A tangent line is perpendicular to the radius at the point of tangency, so its slope is the negative reciprocal, $-\dfrac{7}{4}$.
+
+**Misconception addressed:** Students use the radius's slope directly for the tangent line instead of taking the negative reciprocal.
+
+---
+
+### GT-058
+
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Area and volume, Level 2); not reproduced
+
+**Question:** A cylindrical water tank near Riyadh has a base circumference of $44\pi$ meters and a height of $15$ meters. What is the volume, in cubic meters, of the tank? (Express your answer in terms of $\pi$.)
+
+**Correct Answer:** $7260\pi$
+
+**Rationale:** From the circumference, $2\pi r = 44\pi$, so $r = 22$. The volume is $V = \pi r^{2} h = \pi (22)^{2}(15) = \pi(484)(15) = 7260\pi$.
+
+**Misconception addressed:** Students use the circumference value directly as the radius instead of solving $2\pi r = 44\pi$ first.
+
+---
+
+### GT-059
+
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Area and volume, Level 3); not reproduced
+
+**Question:** A hemisphere is half of a sphere. If a hemisphere has a radius of $18$ inches, which of the following is closest to the volume, in cubic inches, of the hemisphere?
+
+A) $2{,}400$
+
+B) $6{,}100$
+
+C) $12{,}200$
+
+D) $24{,}400$
+
+**Correct Answer:** C) $12{,}200$
+
+**Rationale:** The volume of a hemisphere is $V = \dfrac{2}{3}\pi r^{3} = \dfrac{2}{3}\pi(18)^{3} = \dfrac{2}{3}\pi(5{,}832) = 3{,}888\pi \approx 12{,}214.5$, which is closest to $12{,}200$.
+
+**Misconception addressed:** Students use the full sphere volume formula $\dfrac{4}{3}\pi r^{3}$ instead of halving it for a hemisphere.
+
+---
+
+### GT-060
+
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Area and volume, Level 2); not reproduced
+
+**Question:** A design team is producing rectangular Saudi flag replica banners of two sizes. Rectangle $A$ is similar to rectangle $B$, and the side lengths of rectangle $A$ are $3$ times the corresponding side lengths of rectangle $B$. If the area of rectangle $B$ is $24$ square centimeters, what is the area, in square centimeters, of rectangle $A$?
+
+**Correct Answer:** $216$
+
+**Rationale:** When linear dimensions scale by a factor of $3$, area scales by $3^{2} = 9$. So the area of rectangle $A$ is $24 \times 9 = 216$ square centimeters.
+
+**Misconception addressed:** Students multiply the area by the scale factor ($24 \times 3 = 72$) instead of the square of the scale factor.
+
+---
+
+### GT-061
+
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Area and volume, Level 2); not reproduced
+
+**Question:** For a school engineering fair project in Jeddah, a team builds a right circular cone-shaped sand mound model with a volume of $48\pi$ cubic centimeters and a height of $9$ centimeters. What is the radius, in centimeters, of the base of the cone?
+
+**Correct Answer:** $4$
+
+**Rationale:** $V = \dfrac{1}{3}\pi r^{2} h$, so $48\pi = \dfrac{1}{3}\pi r^{2}(9) = 3\pi r^{2}$. Dividing both sides by $3\pi$ gives $r^{2} = 16$, so $r = 4$.
+
+**Misconception addressed:** Students forget the factor of $\dfrac{1}{3}$ in the cone volume formula and solve as if it were a cylinder.
+
+---
+
+### A-074
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Systems of Linear Equations, Level 2); not reproduced
+
+**Question:**
+
+$$y = 4x$$
+$$3x + y = 21$$
+
+The solution to the given system of equations is $(x, y)$. What is the value of $7x$?
+
+**Correct Answer:** $21$
+
+**Rationale:** Substituting $y = 4x$ into the second equation gives $3x + 4x = 21$, so $7x = 21$ directly.
+
+**Misconception addressed:** Students solve fully for $x$ (getting $x=3$) and then multiply, introducing an unnecessary rounding or arithmetic step, rather than recognizing $3x+4x$ already equals $7x$.
+
+---
+
+### A-075
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Systems of Linear Equations, Level 3); not reproduced
+
+**Question:** A cultural heritage exhibition in Jeddah sells two types of tickets: adult tickets for SAR $45$ and student tickets for SAR $25$. If the exhibition sold $80$ tickets for a total of SAR $3{,}000$, how many student tickets were sold?
+
+A) $20$
+
+B) $30$
+
+C) $50$
+
+D) $60$
+
+**Correct Answer:** B) $30$
+
+**Rationale:** Let $a$ = adult tickets and $s$ = student tickets. Then $a + s = 80$ and $45a + 25s = 3000$. Substituting $a = 80-s$: $45(80-s) + 25s = 3000 \Rightarrow 3600 - 45s + 25s = 3000 \Rightarrow -20s = -600 \Rightarrow s = 30$.
+
+**Misconception addressed:** Students set up the total-cost equation with the wrong ticket price attached to each variable, or solve for adult tickets ($50$) instead of the requested student tickets.
+
+---
+
+### A-076
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Systems of Linear Equations, Level 3); not reproduced
+
+**Question:**
+
+$$4x - 6y = 10y + 2$$
+$$ty = \dfrac{1}{2} + 2x$$
+
+In the given system of equations, $t$ is a constant. If the system has no solution, what is the value of $t$?
+
+**Correct Answer:** $8$
+
+**Rationale:** Rewrite the first equation as $4x - 16y = 2$, or $x - 4y = \dfrac{1}{2}$. Rewrite the second as $-2x + ty = \dfrac{1}{2}$, or $-x + \dfrac{t}{2}y = \dfrac{1}{4}$. For no solution, the coefficient ratios must be equal while the constant ratio differs: $\dfrac{1}{-1} = \dfrac{-4}{t/2}$, giving $-1 = \dfrac{-8}{t}$, so $t = 8$. Checking constants confirms they are not proportional, so the system indeed has no solution.
+
+**Misconception addressed:** Students set only the $x$-coefficients or only the $y$-coefficients proportional without checking that the full system (all three ratios) is consistent with "no solution" rather than "infinitely many solutions."
+
+---
+
+### A-077
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Question:**
+
+$$\dfrac{1}{3}x + \dfrac{1}{2}y = \dfrac{1}{4}$$
+$$ax + y = c$$
+
+In the given system of equations, $a$ and $c$ are constants. If the system has infinitely many solutions $(x,y)$, what is the value of $a$?
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Systems of Linear Equations, Level 3); not reproduced
+
+**Correct Answer:** $\dfrac{2}{3}$
+
+**Rationale:** Multiply the first equation by $2$ so the $y$-coefficient matches the second equation's coefficient of $1$: $\dfrac{2}{3}x + y = \dfrac{1}{2}$. For infinitely many solutions, the second equation must be identical to this, so $a = \dfrac{2}{3}$ (and $c = \dfrac{1}{2}$).
+
+**Misconception addressed:** Students multiply the first equation by the wrong factor (e.g., by $3$ instead of $2$) since the $x$-coefficient is not what needs to become $1$.
+
+---
+
+### A-078
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Systems of Linear Equations, Level 2); not reproduced
+
+**Question:** At how many points do the graphs of the equations $y = 3x - 11$ and $y = 12x$ intersect in the $xy$-plane?
+
+A) $0$
+
+B) $1$
+
+C) $2$
+
+D) Infinitely many
+
+**Correct Answer:** B) $1$
+
+**Rationale:** The two lines have different slopes ($3$ and $12$), so they are neither parallel nor identical and must intersect at exactly one point.
+
+**Misconception addressed:** Students assume two linear equations with different constant terms cannot intersect, rather than checking the slopes.
+
+---
+
+---
+
+### 2.14 Simulated Batch 10 — College Board Question Bank Pattern Deepening (Problem-Solving and Data Analysis)
+
+### PS-018
+
+**Skill:** Probability and conditional probability | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Probability, Level 2); not reproduced
+
+**Question:** The table below shows the number of students in two grade levels at a school who do and do not own a graphing calculator.
+
+| | Owns a graphing calculator | Does not own a graphing calculator | Total |
+|---|---|---|---|
+| Grade 10 | $18$ | $7$ | $25$ |
+| Grade 11 | $22$ | $3$ | $25$ |
+| Total | $40$ | $10$ | $50$ |
+
+If one of these $50$ students is selected at random, what is the probability that the student is in Grade $11$ and does not own a graphing calculator?
+
+A) $\dfrac{3}{50}$
+
+B) $\dfrac{7}{50}$
+
+C) $\dfrac{10}{50}$
+
+D) $\dfrac{22}{50}$
+
+**Correct Answer:** A) $\dfrac{3}{50}$
+
+**Rationale:** The number of Grade $11$ students who do not own a graphing calculator is $3$, out of $50$ total students, so the probability is $\dfrac{3}{50}$.
+
+**Misconception addressed:** Students compute a conditional probability (dividing by the Grade 11 row total) instead of the joint probability requested (dividing by the grand total).
+
+---
+
+### PS-019
+
+**Skill:** Probability and conditional probability | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Probability, Level 2); not reproduced
+
+**Question:** The table below shows the distribution of $50$ students by club membership.
+
+| | Coding club | Not coding club | Total |
+|---|---|---|---|
+| Robotics club | $15$ | $8$ | $23$ |
+| Not robotics club | $10$ | $17$ | $27$ |
+| Total | $25$ | $25$ | $50$ |
+
+If one of these $50$ students is selected at random, what is the probability that the student is in the coding club but not the robotics club? (Express your answer as a decimal or fraction, not as a percent.)
+
+**Correct Answer:** $\dfrac{1}{5}$ (or equivalent: $0.2$)
+
+**Rationale:** The number of students in the coding club but not the robotics club is $10$, out of $50$ total students: $\dfrac{10}{50} = \dfrac{1}{5}$.
+
+**Misconception addressed:** Students add the "coding club" total and the "not robotics" total instead of reading the single joint cell in the table.
+
+---
+
+### PS-020
+
+**Skill:** Probability and conditional probability | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Probability, Level 3); not reproduced
+
+**Question:** On January 1, 2024, there were $34.1$ million mobile broadband subscriptions in Saudi Arabia. By January 1, 2025, the number of subscriptions had increased to $36.8$ million. If a subscriber on January 1, 2025, is selected at random, the probability that the subscriber uses STC is $0.45$. There were $p$ million STC subscribers on January 1, 2025. To the nearest integer, what is the value of $p$?
+
+**Correct Answer:** $17$
+
+**Rationale:** $p = 36.8 \times 0.45 = 16.56$, which rounds to $17$.
+
+**Misconception addressed:** Students apply the probability to the earlier (2024) total instead of the total that corresponds to the given probability (2025).
+
+---
+
+### PS-021
+
+**Skill:** Probability and conditional probability | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Probability, Level 3); not reproduced
+
+**Question:** The table below shows the distribution of employment sector and nationality for a group of employees at a company.
+
+| | Public sector | Private sector |
+|---|---|---|
+| Saudi | $45$ | $12$ |
+| Non-Saudi | $9$ | $x$ |
+
+If one of these employees who works in the private sector is chosen at random, the probability that the employee is Non-Saudi is $\dfrac{1}{5}$. What is the value of $x$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $\dfrac{x}{12+x} = \dfrac{1}{5} \Rightarrow 5x = 12+x \Rightarrow 4x = 12 \Rightarrow x = 3$.
+
+**Misconception addressed:** Students set up the ratio using the whole table's total instead of restricting to the private-sector column only, since the probability is conditional on being in the private sector.
+
+---
+
+### PS-022
+
+**Skill:** Probability and conditional probability | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Probability, Level 3); not reproduced
+
+**Question:**
+
+| | WhatsApp | Paper form |
+|---|---|---|
+| Robotics | $60\%$ | $80\%$ |
+| Sports | $25\%$ | $10\%$ |
+| Art | $10\%$ | $5\%$ |
+| Music | $5\%$ | $5\%$ |
+
+A school activity survey asked each student to select the one activity they preferred for a school event. Some students responded via WhatsApp, and the others responded on a paper form. The table above shows the distribution of preferred activity, in percent, for each response type. For the survey, the number of paper-form responses was twice the number of WhatsApp responses. If a student who preferred Art is selected at random, what is the probability that the student responded via the paper form? (Express your answer as a decimal or fraction, not as a percent.)
+
+**Correct Answer:** $\dfrac{1}{2}$ (or equivalent: $0.5$)
+
+**Rationale:** Let the number of WhatsApp responses be $n$, so paper-form responses are $2n$. The number of Art responses is $0.10n$ (WhatsApp) $+ 0.05(2n) = 0.10n$ (paper), for a total of $0.20n$. So $P(\text{paper} \mid \text{Art}) = \dfrac{0.10n}{0.20n} = \dfrac{1}{2}$.
+
+**Misconception addressed:** Students compare the raw percentages ($5\%$ vs. $10\%$) directly without weighting by the different total numbers of WhatsApp and paper-form responses.
+
+---
+
+### PS-023
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Percentages, Level 2); not reproduced
+
+**Question:** Which of the following represents the result of decreasing the quantity $y$ by $12\%$, where $y > 0$?
+
+A) $0.88y$
+
+B) $0.12y$
+
+C) $y - 12$
+
+D) $y - 0.12$
+
+**Correct Answer:** A) $0.88y$
+
+**Rationale:** Decreasing $y$ by $12\%$ means computing $y - 0.12y = (1-0.12)y = 0.88y$.
+
+**Misconception addressed:** Students subtract the percent as a whole number from $y$ ($y-12$) instead of converting it to a decimal fraction of $y$.
+
+---
+
+### PS-024
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Percentages, Level 2); not reproduced
+
+**Question:** The number $m$ is $24\%$ greater than $75$. If $m$ is the product of $75$ and $r$, what is the value of $r$?
+
+**Correct Answer:** $1.24$
+
+**Rationale:** $m = 75 + 0.24(75) = 75(1.24)$, so $r = 1.24$.
+
+**Misconception addressed:** Students give $r = 0.24$, reporting only the increase rather than the full multiplicative factor.
+
+---
+
+### PS-025
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Percentages, Level 2); not reproduced
+
+**Question:** A household's monthly electricity bill was SAR $340.00$. After a rate adjustment, the bill is now SAR $378.20$. To the nearest tenth of a percent, by what percent did the amount of the bill increase?
+
+A) $10.1\%$
+
+B) $11.2\%$
+
+C) $11.9\%$
+
+D) $12.4\%$
+
+**Correct Answer:** B) $11.2\%$
+
+**Rationale:** Percent increase $= \dfrac{378.20 - 340.00}{340.00} \times 100 = \dfrac{38.20}{340.00}\times 100 \approx 11.2\%$.
+
+**Misconception addressed:** Students divide the increase by the new value ($378.20$) instead of the original value ($340.00$).
+
+---
+
+### PS-026
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Percentages, Level 2); not reproduced
+
+**Question:** Fahad purchased a car for SAR $90{,}000$. He estimates that each year the value of the car will depreciate by $15\%$ of the previous year's estimated value. What is the estimated value of the car exactly $2$ years after Fahad purchased it?
+
+A) SAR $61{,}200$
+
+B) SAR $63{,}750$
+
+C) SAR $65{,}025$
+
+D) SAR $76{,}500$
+
+**Correct Answer:** C) SAR $65{,}025$
+
+**Rationale:** After each year, the value is multiplied by $0.85$. After $2$ years: $90{,}000 \times (0.85)^2 = 90{,}000 \times 0.7225 = 65{,}025$.
+
+**Misconception addressed:** Students subtract $15\%$ of the original value twice ($90{,}000 - 2(0.15)(90{,}000)$) instead of compounding the depreciation.
+
+---
+
+### PS-027
+
+**Skill:** Percentages | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Percentages, Level 3); not reproduced
+
+**Question:** The table below summarizes the number of students in each of four school clubs.
+
+| Club | Number of students |
+|---|---|
+| A | $500$ |
+| B | $72$ |
+| C | $1{,}100$ |
+| D | $128$ |
+| Total | $1{,}800$ |
+
+The number of students in club C is $p\%$ of the number of students in club A. What is the value of $p$?
+
+**Correct Answer:** $220$
+
+**Rationale:** $p\% = \dfrac{1{,}100}{500}\times 100\% = 220\%$, so $p = 220$.
+
+**Misconception addressed:** Students divide club A by club C instead of club C by club A, inverting the "is what percent of" relationship.
+
+---
+
+### PS-028
+
+**Skill:** Percentages | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Percentages, Level 3); not reproduced
+
+**Question:** In a factory quality check, $40\%$ of the items inspected in a batch are defective. Of those defective items, $45\%$ are also mislabeled. Which of the following is closest to the percentage of items in the batch that are NOT mislabeled defective items?
+
+A) $18\%$
+
+B) $55\%$
+
+C) $82\%$
+
+D) $96.4\%$
+
+**Correct Answer:** C) $82\%$
+
+**Rationale:** The percentage of items that are mislabeled defective items is $0.40 \times 0.45 = 0.18 = 18\%$. The percentage that are NOT mislabeled defective items is $100\% - 18\% = 82\%$.
+
+**Misconception addressed:** Students select the "mislabeled defective" percentage itself ($18\%$) instead of its complement, missing the word "NOT" in the question.
+
+---
+
+### PS-029
+
+**Skill:** One-variable data: Distributions and measures of center and spread | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (One-Variable Data, Level 2); not reproduced
+
+**Question:** The table below shows the distribution of ages of $20$ tutors enrolled in a training program.
+
+| Age | Frequency |
+|---|---|
+| $20$ | $7$ |
+| $21$ | $5$ |
+| $22$ | $3$ |
+| $23$ | $2$ |
+| $24$ | $1$ |
+| $30$ | $2$ |
+
+Which of the following gives the correct order of the mean, median, and mode of the ages?
+
+A) mode $<$ median $<$ mean
+
+B) mode $<$ mean $<$ median
+
+C) median $<$ mode $<$ mean
+
+D) mean $<$ mode $<$ median
+
+**Correct Answer:** A) mode $<$ median $<$ mean
+
+**Rationale:** The mode is $20$ (the most frequent value). With $20$ values, the median is the average of the $10$th and $11$th values, both $21$, so the median is $21$. The mean is $\dfrac{20(7)+21(5)+22(3)+23(2)+24(1)+30(2)}{20} = \dfrac{441}{20} = 22.05$. So mode $(20) <$ median $(21) <$ mean $(22.05)$.
+
+**Misconception addressed:** Students assume a single high outlier ($30$) pulls the median as much as the mean, when only the mean is sensitive to the outlier's magnitude.
+
+---
+
+### PS-030
+
+**Skill:** One-variable data: Distributions and measures of center and spread | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (One-Variable Data, Level 2); not reproduced
+
+**Question:** Data set A and data set B each consist of $20$ values. The table shows the frequencies of the values for each data set. Which of the following statements best compares the means of the two data sets?
+
+| Value | Data set A frequency | Data set B frequency |
+|---|---|---|
+| $30$ | $2$ | $7$ |
+| $35$ | $5$ | $6$ |
+| $40$ | $6$ | $4$ |
+| $45$ | $7$ | $3$ |
+
+A) The mean of data set A is greater than the mean of data set B.
+
+B) The mean of data set A is less than the mean of data set B.
+
+C) The mean of data set A is equal to the mean of data set B.
+
+D) There is not enough information to compare the means of the data sets.
+
+**Correct Answer:** A) The mean of data set A is greater than the mean of data set B.
+
+**Rationale:** Mean of A $= \dfrac{30(2)+35(5)+40(6)+45(7)}{20} = \dfrac{790}{20} = 39.5$. Mean of B $= \dfrac{30(7)+35(6)+40(4)+45(3)}{20} = \dfrac{715}{20} = 35.75$. Since $39.5 > 35.75$, the mean of A is greater.
+
+**Misconception addressed:** Students assume equal total frequencies mean equal means, without noticing that data set A's frequencies are weighted toward the higher values.
+
+---
+
+### PS-031
+
+**Skill:** One-variable data: Distributions and measures of center and spread | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (One-Variable Data, Level 3); not reproduced
+
+**Question:** A data set of $24$ different numbers has a mean of $50$ and a median of $50$. A new data set is created by adding $5$ to each number in the original data set that is greater than the median and subtracting $5$ from each number that is less than the median. Which of the following measures does NOT have the same value in both the original and new data sets?
+
+A) Median
+
+B) Mean
+
+C) Sum of the numbers
+
+D) Standard deviation
+
+**Correct Answer:** D) Standard deviation
+
+**Rationale:** Since exactly half the values increase by $5$ and half decrease by $5$, the sum (and therefore the mean) is unchanged, and the median stays at $50$. However, every value moves farther from the mean, so the spread — and therefore the standard deviation — increases.
+
+**Misconception addressed:** Students assume that because the mean and median are unaffected, the standard deviation must also be unaffected, not recognizing that spread depends on distance from the mean, not just central tendency.
+
+---
+
+### PS-032
+
+**Skill:** One-variable data: Distributions and measures of center and spread | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (One-Variable Data, Level 3); not reproduced
+
+**Question:** The mean score of $12$ students on a quiz was $16.5$ points. If the highest individual score is removed, the mean score of the remaining $11$ students becomes $15$ points. What was the highest score?
+
+**Correct Answer:** $33$
+
+**Rationale:** The original total is $12(16.5) = 198$. The total for the remaining $11$ students is $11(15) = 165$. The highest score is $198 - 165 = 33$.
+
+**Misconception addressed:** Students try to solve for the highest score using only the difference in means ($16.5-15=1.5$) instead of comparing the two group totals.
+
+---
+
+### PS-033
+
+**Skill:** Evaluating statistical claims: Observational studies and experiments | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Evaluating Statistical Claims, Level 2); not reproduced
+
+**Question:** A researcher surveyed a random sample of chemistry teachers selected from all chemistry teachers in the Makkah region. The teachers were asked to name the textbook publisher they currently use. What is the largest population to which the results of the survey can be generalized?
+
+A) All teachers in Saudi Arabia
+
+B) All chemistry teachers in Saudi Arabia
+
+C) All chemistry teachers in the Makkah region
+
+D) All teachers in the Makkah region
+
+**Correct Answer:** C) All chemistry teachers in the Makkah region
+
+**Rationale:** Since the random sample was drawn only from chemistry teachers in the Makkah region, results can only be generalized to that same population — not to a broader subject area or geographic region.
+
+**Misconception addressed:** Students generalize results to the largest-sounding population (all teachers, or the whole country) rather than restricting the conclusion to the population actually sampled.
+
+---
+
+### PS-034
+
+**Skill:** Evaluating statistical claims: Observational studies and experiments | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Evaluating Statistical Claims, Level 2); not reproduced
+
+**Question:** A random sample of $150$ residents of a city was surveyed about whether they support a new recycling program. All $150$ responded, and $64\%$ said they support it. Based on this information, which of the following statements must be true?
+
+I. Of all city residents, $64\%$ support the recycling program.
+
+II. If another random sample of $150$ residents were surveyed, $64\%$ would say they support it.
+
+A) Neither
+
+B) I only
+
+C) II only
+
+D) I and II
+
+**Correct Answer:** A) Neither
+
+**Rationale:** A sample statistic is an estimate of the population parameter, not an exact value, and it is also expected to vary somewhat from sample to sample due to sampling variability. Neither statement must be exactly true.
+
+**Misconception addressed:** Students treat a single sample's percentage as if it were the fixed, exact value for the whole population and for any future sample.
+
+---
+
+### PS-035
+
+**Skill:** Evaluating statistical claims: Observational studies and experiments | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Evaluating Statistical Claims, Level 3); not reproduced
+
+**Question:** For a date-palm research station near Al-Ahsa, a scientist randomly selected $40$ date palm saplings that were $3$ years old and randomly assigned them to two groups. Each group received a different irrigation schedule for $2$ consecutive years to observe whether the schedule affects fruit yield. Based on the design of the study, what is the largest group to which these results can be applied?
+
+A) All $40$ saplings that were selected at this station
+
+B) All date palm saplings that were $3$ years old at this station
+
+C) All date palm saplings that were $3$ years old in Saudi Arabia
+
+D) All date palm saplings that were $5$ years old at this station
+
+**Correct Answer:** B) All date palm saplings that were $3$ years old at this station
+
+**Rationale:** Because the saplings were randomly selected from the $3$-year-old saplings at this station and then randomly assigned to treatment groups, the causal results can be generalized to that same population — $3$-year-old saplings at this station — but not to a broader geographic population that was not sampled from.
+
+**Misconception addressed:** Students extend the results to the entire country (a population that was never sampled) simply because random assignment allows for a causal conclusion within the sampled population.
+
+---
+
+### PS-036
+
+**Skill:** Evaluating statistical claims: Observational studies and experiments | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Evaluating Statistical Claims, Level 3); not reproduced
+
+**Question:** At the end of a Saudi radio program, the host invited listeners to text in and respond to a poll asking, "Do you support extending school hours by $30$ minutes?" By the end of the show, the host reported that $62\%$ responded "Yes" and $35\%$ responded "No." Which of the following best explains why the results are unlikely to represent the sentiments of all students' families in the country?
+
+A) The percentages do not add up to $100\%$, so any possible conclusions from the poll are invalid.
+
+B) Those who responded to the poll were not a random sample of all students' families in the country.
+
+C) There were not $50\%$ "Yes" responses and $50\%$ "No" responses.
+
+D) The show did not allow listeners enough time to respond to the poll.
+
+**Correct Answer:** B) Those who responded to the poll were not a random sample of all students' families in the country.
+
+**Rationale:** A voluntary-response poll of radio listeners who chose to text in is a self-selected sample, not a random sample of the target population, so the results are subject to bias and cannot be reliably generalized.
+
+**Misconception addressed:** Students focus on the fact that the percentages don't sum to $100\%$ (a red herring, since not everyone chooses one of only two options) rather than identifying the actual source of bias: the non-random, self-selected sample.
+
+---
+
+### PS-037
+
+**Skill:** Evaluating statistical claims: Observational studies and experiments | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Evaluating Statistical Claims, Level 3); not reproduced
+
+**Question:** A polling agency surveyed $800$ adults selected at random from a large Saudi city and asked, "Are you satisfied with the quality of public transportation in the city?" Of those surveyed, $71\%$ responded that they were satisfied. Based on the results of the survey, which of the following statements must be true?
+
+1. Of all adults in the city, $71\%$ are satisfied with the quality of public transportation.
+
+2. If another $800$ adults selected at random from the city were surveyed, $71\%$ of them would report they are satisfied.
+
+3. If $800$ adults selected at random from a different city were surveyed, $71\%$ of them would report they are satisfied.
+
+A) None
+
+B) $2$ only
+
+C) $1$ and $2$ only
+
+D) $1$ and $3$ only
+
+**Correct Answer:** A) None
+
+**Rationale:** A single sample percentage is only an estimate of the true population percentage and is subject to sampling variability; it is not guaranteed to match the population exactly, to repeat exactly in another sample from the same city, or to apply to an entirely different population (a different city).
+
+**Misconception addressed:** Students believe a sample result generalizes automatically to any future sample or to an entirely different population, rather than treating it as a single estimate with sampling variability.
+
+---
+
+### 2.15 Simulated Batch 11 — College Board Question Bank Pattern Deepening (Two-Variable Data / Sample Statistics and Margin of Error)
+
+### PS-038
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 2); not reproduced
+
+**Question:** A household water-conservation study in Riyadh recorded, for several summer days, the daily high temperature $x$ (in degrees Celsius above $25\,^\circ\text{C}$) and the household's water use $y$ (in liters). A line of best fit for the data is given by $y = 12x + 20$. On one recorded day, $x = 10$ and the household's actual water use was $155$ liters. What is the positive difference between the actual water use on that day and the water use predicted by the line of best fit?
+
+**Correct Answer:** $15$
+
+**Rationale:** The predicted value is $y = 12(10) + 20 = 140$ liters. The actual value was $155$ liters, so the positive difference is $155 - 140 = 15$ liters.
+
+**Misconception addressed:** Students often subtract in the wrong order or plug $y$ into the equation instead of $x$; the prompt requires substituting the given $x$-value to find the predicted $y$, then comparing to the given actual $y$.
+
+---
+
+### PS-039
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 2); not reproduced
+
+**Question:** A scatterplot shows the relationship between $x$, the distance in kilometers from the Jeddah Corniche, and $y$, the number of visitors counted per hour at a beach access point. The line of best fit for the data passes through the points $(2, 340)$ and $(10, 60)$. What is the slope of this line of best fit?
+
+A) $-35$
+B) $-28$
+C) $28$
+D) $35$
+
+**Correct Answer:** A) $-35$
+
+**Rationale:** Slope $= \dfrac{60 - 340}{10 - 2} = \dfrac{-280}{8} = -35$.
+
+**Misconception addressed:** Students sometimes reverse the subtraction order between numerator and denominator, or drop the negative sign, turning a decreasing trend into an increasing one.
+
+---
+
+### PS-040
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 2); not reproduced
+
+**Question:** A line of best fit models $y$, the installed solar capacity (in megawatts) at a NEOM pilot site, in terms of $x$, the number of years since 2015: $y = 45.2x + 12.5$. Which of the following is closest to the capacity predicted by this model at $x = 8.4$?
+
+A) $380.5$
+B) $388.7$
+C) $392.2$
+D) $401.0$
+
+**Correct Answer:** C) $392.2$
+
+**Rationale:** $y = 45.2(8.4) + 12.5 = 379.68 + 12.5 = 392.18$, which rounds to $392.2$.
+
+**Misconception addressed:** Students often round $45.2 \times 8.4$ too early, or add $12.5$ before multiplying, producing an answer close to but not matching the correctly ordered computation.
+
+---
+
+### PS-041
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 2); not reproduced
+
+**Question:** A desalination plant's storage tank begins a shift completely full. The tank is drained at a constant rate throughout the shift to supply a neighborhood. What type of model best describes the volume of water remaining in the tank at any time during the shift?
+
+A) A linear model with a positive slope
+B) A linear model with a negative slope
+C) An exponential growth model
+D) An exponential decay model
+
+**Correct Answer:** B) A linear model with a negative slope
+
+**Rationale:** A constant rate of drainage means the volume decreases by the same amount per unit time, which is modeled by a line with negative slope.
+
+**Misconception addressed:** Students often associate any decreasing quantity with exponential decay; a *constant rate* of change is the defining signal of a linear, not exponential, model.
+
+---
+
+### PS-042
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 2); not reproduced
+
+**Question:** A scatterplot shows GAT preparation hours $x$ and practice-exam score $y$ for $10$ students, with a line of best fit shown. For the student with the highest practice-exam score, the actual score was $96$, and the score predicted by the line of best fit was $89$. Which of the following is closest to the difference between the actual score and the predicted score for this student?
+
+A) $10$
+B) $7$
+C) $4$
+D) $1$
+
+**Correct Answer:** B) $7$
+
+**Rationale:** The difference is $96 - 89 = 7$.
+
+**Misconception addressed:** Students sometimes confuse "difference between actual and predicted" with the slope of the line or with a percent change rather than a direct subtraction of the two $y$-values.
+
+---
+
+### PS-043
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 2); not reproduced
+
+**Question:** The table shows the age $x$, in years, and the efficiency loss $y$, in percent, for a sample of rooftop solar panels.
+
+| $x$ | $1$ | $2$ | $3$ | $4$ | $5$ |
+|---|---|---|---|---|---|
+| $y$ | $3.5$ | $6.0$ | $8.6$ | $11.0$ | $13.4$ |
+
+Which of the following equations could be the line of best fit for the data?
+
+A) $y = 2.5x + 1$
+B) $y = x + 2.5$
+C) $y = -2.5x + 1$
+D) $y = 2.5x - 1$
+
+**Correct Answer:** A) $y = 2.5x + 1$
+
+**Rationale:** Consecutive $y$-values increase by roughly $2.5$ each time $x$ increases by $1$, indicating a slope near $2.5$; checking $x = 1$: $2.5(1) + 1 = 3.5$, which matches the data, and the other checked points are close. A negative slope (choice C) or a slope of $1$ (choice B) does not match the increasing pattern of about $2.5$ per year.
+
+**Misconception addressed:** Students sometimes swap the roles of slope and $y$-intercept when reading an approximate linear pattern from a table, choosing an equation with the intercept value as the slope.
+
+---
+
+### PS-044
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 3); not reproduced
+
+**Question:** In which of the following tables is the relationship between the values of $x$ and their corresponding $y$-values nonlinear?
+
+A)
+| $x$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|
+| $y$ | $5$ | $9$ | $13$ | $17$ |
+
+B)
+| $x$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|
+| $y$ | $2$ | $4$ | $6$ | $8$ |
+
+C)
+| $x$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|
+| $y$ | $5$ | $10$ | $15$ | $20$ |
+
+D)
+| $x$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|
+| $y$ | $3$ | $6$ | $12$ | $24$ |
+
+**Correct Answer:** D)
+
+**Rationale:** In tables A, B, and C, $y$ increases by a constant amount ($4$, $2$, and $5$, respectively) for each unit increase in $x$, so each is linear. In table D, the differences between consecutive $y$-values are $3$, $6$, and $12$ — not constant — because each $y$-value is double the previous one (a constant ratio, not a constant difference), so the relationship is nonlinear (exponential).
+
+**Misconception addressed:** Students sometimes assume any steadily increasing table is linear without checking whether the *differences* (not just the values) between consecutive outputs stay constant.
+
+---
+
+### PS-045
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 3); not reproduced
+
+**Question:** A line of best fit models the relationship between $x$, the number of years since 2018, and $y$, the average monthly electricity subsidy, in SAR, provided to households in a Vision 2030 efficiency pilot program: $y = -18.6x + 340$. Which of the following is the best interpretation of the slope of this line of best fit in this context?
+
+A) The estimated subsidy increases by SAR $18.6$ each year.
+B) The estimated subsidy decreases by SAR $18.6$ each year.
+C) The estimated subsidy decreases by SAR $340$ each year.
+D) The estimated initial subsidy was SAR $18.6$.
+
+**Correct Answer:** B) The estimated subsidy decreases by SAR $18.6$ each year.
+
+**Rationale:** In a linear model $y = mx + b$, the slope $m$ represents the estimated change in $y$ for each increase of $1$ unit in $x$. Here $m = -18.6$, so the estimated monthly subsidy decreases by SAR $18.6$ for each additional year since 2018.
+
+**Misconception addressed:** Students frequently interpret the $y$-intercept ($340$) as the rate of change, or interpret the slope's magnitude without its sign, missing that the subsidy is decreasing rather than increasing.
+
+---
+
+### PS-046
+
+**Skill:** Two-variable data: Models and scatterplots | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Two-variable data: Models and scatterplots, Level 3); not reproduced
+
+**Question:** Ahmad deposits SAR $800$ into Account A, which earns $5\%$ interest compounded annually. He deposits SAR $1{,}500$ into Account B, whose balance increases by a fixed SAR $40$ each year. Based on these growth patterns, which of the following best describes the long-term behavior of the balances of Account A and Account B?
+
+A) The balance of Account A is always greater than the balance of Account B.
+B) The balance of Account A is always less than the balance of Account B.
+C) The balance of Account A starts lower than the balance of Account B but eventually exceeds it.
+D) The balance of Account A starts higher than the balance of Account B but eventually falls below it.
+
+**Correct Answer:** C) The balance of Account A starts lower than the balance of Account B but eventually exceeds it.
+
+**Rationale:** Account A starts at SAR $800$, lower than Account B's SAR $1{,}500$. Account A grows exponentially (compounding $5\%$ annually), while Account B grows linearly (a fixed SAR $40$ per year). Exponential growth eventually outpaces linear growth no matter the starting gap, so Account A's balance will eventually exceed Account B's.
+
+**Misconception addressed:** Students often assume that because Account B starts with — and initially keeps — a larger balance, it will always remain ahead, missing that exponential growth necessarily overtakes linear growth in the long run.
+
+---
+
+### PS-047
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 2); not reproduced
+
+**Question:** Researchers studying a reforestation program near AlUla selected a random sample of $250$ acacia trees planted through the program and measured each tree's growth rate. Based on this sample, which of the following is the most appropriate conclusion?
+
+A) The average growth rate of the sampled trees can be used to estimate the average growth rate of all acacia trees planted through the reforestation program.
+B) The average growth rate of the sampled trees can be used to estimate the average growth rate of all trees, of any species, in Saudi Arabia.
+C) The average growth rate of the sampled trees is exactly equal to the average growth rate of all acacia trees planted through the reforestation program.
+D) The average growth rate of the sampled trees cannot be used to estimate the average growth rate of any other trees.
+
+**Correct Answer:** A) The average growth rate of the sampled trees can be used to estimate the average growth rate of all acacia trees planted through the reforestation program.
+
+**Rationale:** A conclusion drawn from a random sample can only be generalized to the population from which the sample was drawn — here, the acacia trees planted through this specific reforestation program — and only as an estimate, not an exact value.
+
+**Misconception addressed:** Students often extend a sample's conclusion beyond the population it was drawn from (choice B), or mistake a sample estimate for an exact population value (choice C).
+
+---
+
+### PS-048
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 2); not reproduced
+
+**Question:** A survey of a random sample of employees at a company estimates that the mean daily commute time is $34$ minutes, with an associated margin of error of $4$ minutes. Which of the following is the most plausible value for the actual mean commute time, in minutes, of all employees at the company?
+
+A) $25$
+B) $31$
+C) $39$
+D) $44$
+
+**Correct Answer:** B) $31$
+
+**Rationale:** The margin of error gives a plausible range of $34 - 4 = 30$ to $34 + 4 = 38$ minutes. Of the choices, only $31$ falls within this range.
+
+**Misconception addressed:** Students sometimes select a value close to the sample mean itself rather than checking whether it falls strictly within the margin-of-error interval, or select a value just outside the interval.
+
+---
+
+### PS-049
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 2); not reproduced
+
+**Question:** A poll of a random sample of residents in a Jeddah district estimates that $42\%$ of all residents support a new public transit expansion, with a margin of error of $3.5$ percentage points. Which of the following is the most plausible value for the actual percentage of all residents in the district who support the expansion?
+
+A) $36\%$
+B) $41\%$
+C) $47\%$
+D) $50\%$
+
+**Correct Answer:** B) $41\%$
+
+**Rationale:** The margin of error gives a plausible range of $42\% - 3.5\% = 38.5\%$ to $42\% + 3.5\% = 45.5\%$. Of the choices, only $41\%$ falls within this range.
+
+**Misconception addressed:** Students often treat the margin of error as applying only to counts, not percentages, or select a value outside the interval that still looks "close" to the sample percentage.
+
+---
+
+### PS-050
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 2); not reproduced
+
+**Question:** A survey of a random sample of students at a university estimates that $22\% \pm 3\%$ of the university's $8{,}000$ students use the campus shuttle daily. Based on this estimate, which of the following is closest to a plausible range for the number of students at the university who use the shuttle daily?
+
+A) $1{,}400 < n < 1{,}800$
+B) $1{,}520 < n < 2{,}000$
+C) $1{,}760 < n < 1{,}840$
+D) $1{,}600 < n < 2{,}200$
+
+**Correct Answer:** B) $1{,}520 < n < 2{,}000$
+
+**Rationale:** The plausible percentage range is $19\%$ to $25\%$. Applying this to $8{,}000$ students: $0.19 \times 8{,}000 = 1{,}520$ and $0.25 \times 8{,}000 = 2{,}000$, giving the range $1{,}520 < n < 2{,}000$.
+
+**Misconception addressed:** Students sometimes apply the margin of error to the midpoint count only, narrowing or shifting the interval instead of converting the full percentage range into a count range.
+
+---
+
+### PS-051
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 2); not reproduced
+
+**Question:** In a random sample of $60$ laptops tested at a distribution center, $15$ were found to have a manufacturing defect. Based on this sample, which of the following is the best conclusion about the number of defective laptops in a shipment of $2{,}400$ laptops from the same production run?
+
+A) Exactly $600$ laptops in the shipment are defective.
+B) At least $600$ laptops in the shipment are defective.
+C) A best estimate is that $600$ laptops in the shipment are defective.
+D) At most $600$ laptops in the shipment are defective.
+
+**Correct Answer:** C) A best estimate is that $600$ laptops in the shipment are defective.
+
+**Rationale:** The sample defect rate is $\dfrac{15}{60} = 25\%$. Applying this rate to $2{,}400$ laptops gives $0.25 \times 2{,}400 = 600$. Because this is drawn from a sample, it is a *best estimate*, not a guaranteed exact, minimum, or maximum count.
+
+**Misconception addressed:** Students frequently treat a sample-based projection as an exact or guaranteed value rather than recognizing it as a statistical estimate.
+
+---
+
+### PS-052
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 2); not reproduced
+
+**Question:** In a random sample of $500$ registered voters surveyed about a proposed municipal budget, $310$ said they support it. There are $45{,}000$ registered voters in total. Based on the sample, what is the expected number of registered voters who support the proposed budget?
+
+**Correct Answer:** $27{,}900$
+
+**Rationale:** The sample proportion in favor is $\dfrac{310}{500} = 0.62$. Applying this proportion to the full population: $0.62 \times 45{,}000 = 27{,}900$.
+
+**Misconception addressed:** Students sometimes apply the sample count ($310$) directly to the population instead of first finding and then scaling the sample *proportion*.
+
+---
+
+### PS-053
+
+**Skill:** Inference from sample statistics and margin of error | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated from a real College Board Question Bank item pattern (Inference from sample statistics and margin of error, Level 3); not reproduced
+
+**Question:** Based on a random sample survey, a researcher estimates that $24\% \pm 4\%$ of high school students in a district spend more than $2$ hours a day on Arabic-language reading apps. A school administrator claims that $32\%$ of the district's high school students spend more than $2$ hours a day on such apps. Is the administrator's claim consistent with the survey's estimate?
+
+A) Yes, because $32\%$ is within the range of $20\%$ to $28\%$ suggested by the estimate.
+B) Yes, because $32\%$ is close to $24\%$.
+C) No, because the sample size is too small to draw any conclusion.
+D) No, because $32\%$ is outside the range of $20\%$ to $28\%$ suggested by the estimate.
+
+**Correct Answer:** D) No, because $32\%$ is outside the range of $20\%$ to $28\%$ suggested by the estimate.
+
+**Rationale:** The margin of error gives a plausible range of $24\% - 4\% = 20\%$ to $24\% + 4\% = 28\%$. Since $32\%$ falls outside this range, the administrator's claim is not consistent with the survey's estimate.
+
+**Misconception addressed:** Students sometimes judge "closeness" informally rather than checking whether a claimed value falls strictly within the calculated margin-of-error interval.
+
+---
+
+### 2.16 Standards-Aligned Gap-Closing Batch — Ratios/Rates, Percentages, Linear Functions, Linear Equations in Two Variables, Nonlinear Functions
+
+### PS-054
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A car travels at a constant speed of $90$ kilometers per hour. What is this speed in meters per second?
+
+A) $15$
+B) $25$
+C) $32.4$
+D) $324$
+
+**Correct Answer:** B) $25$
+
+**Rationale:** $90 \text{ km/h} = \dfrac{90{,}000 \text{ m}}{3{,}600 \text{ s}} = 25$ m/s.
+
+**Misconception addressed:** Students often multiply by $3.6$ instead of dividing (or divide by the wrong conversion factor), turning a km/h-to-m/s conversion into its reciprocal.
+
+---
+
+### PS-055
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A recipe that serves $8$ people uses $3$ cups of orange juice and $5$ cups of water. If the same ratio of ingredients is used to make a batch that serves $24$ people, how many cups of orange juice are needed?
+
+A) $6$
+B) $7.5$
+C) $9$
+D) $15$
+
+**Correct Answer:** C) $9$
+
+**Rationale:** The scale factor from $8$ to $24$ servings is $\dfrac{24}{8} = 3$, so the orange juice needed is $3 \times 3 = 9$ cups.
+
+**Misconception addressed:** Students sometimes scale by adding a fixed amount rather than multiplying by the scale factor, or scale using the water amount instead of the orange juice amount.
+
+---
+
+### PS-056
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A factory produces cardboard boxes at a constant rate of $480$ boxes every $8$ hours. At this rate, how many boxes does the factory produce in $5.5$ hours?
+
+**Correct Answer:** $330$
+
+**Rationale:** The rate is $\dfrac{480}{8} = 60$ boxes per hour. In $5.5$ hours, the factory produces $60 \times 5.5 = 330$ boxes.
+
+**Misconception addressed:** Students sometimes round $5.5$ hours to $5$ or $6$ hours before multiplying, or find the rate per box instead of boxes per hour.
+
+---
+
+### PS-057
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** An architect built a scale model of a tower planned for the King Abdullah Financial District, where every $1$ centimeter on the model represents $2.5$ meters of the actual tower. If the model is $18$ centimeters tall, what is the height, in meters, of the actual tower?
+
+A) $20$
+B) $36$
+C) $45$
+D) $50$
+
+**Correct Answer:** C) $45$
+
+**Rationale:** Height $= 18 \times 2.5 = 45$ meters.
+
+**Misconception addressed:** Students sometimes divide instead of multiply by the scale factor, or multiply by $2.5$ incorrectly by treating it as a percentage.
+
+---
+
+### PS-058
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A saline solution is mixed so that the ratio of salt to water is $2$ to $15$. If a container holds $51$ liters of the solution in total, how many liters of salt are in the container?
+
+A) $3$
+B) $6$
+C) $9$
+D) $12$
+
+**Correct Answer:** B) $6$
+
+**Rationale:** The ratio $2:15$ means the total is divided into $2 + 15 = 17$ parts. Salt makes up $\dfrac{2}{17}$ of the total: $51 \times \dfrac{2}{17} = 6$ liters.
+
+**Misconception addressed:** Students often use $2/15$ (part-to-part) instead of $2/17$ (part-to-whole) when scaling a ratio to a total amount.
+
+---
+
+### PS-059
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** Car A travels $240$ kilometers in $3$ hours at a constant speed, and Car B travels $350$ kilometers in $4.5$ hours at a constant speed. Which of the following is closest to how much faster, in kilometers per hour, Car A's speed is compared with Car B's speed?
+
+A) $0.9$
+B) $2.2$
+C) $4.4$
+D) $10.0$
+
+**Correct Answer:** B) $2.2$
+
+**Rationale:** Car A's speed is $\dfrac{240}{3} = 80$ km/h. Car B's speed is $\dfrac{350}{4.5} \approx 77.78$ km/h. The difference is $80 - 77.78 \approx 2.2$ km/h.
+
+**Misconception addressed:** Students sometimes compare total distances or total times directly instead of computing and comparing the two unit rates first.
+
+---
+
+### PS-060
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A metal block has a mass of $540$ grams and a volume of $60$ cubic centimeters. What is the density of the block, in kilograms per cubic meter? ($1$ gram per cubic centimeter $= 1{,}000$ kilograms per cubic meter.)
+
+A) $9$
+B) $90$
+C) $900$
+D) $9{,}000$
+
+**Correct Answer:** D) $9{,}000$
+
+**Rationale:** The density is $\dfrac{540 \text{ g}}{60 \text{ cm}^3} = 9$ g/cm$^3$. Converting: $9 \text{ g/cm}^3 \times 1{,}000 = 9{,}000$ kg/m$^3$.
+
+**Misconception addressed:** Students often stop after finding the density in g/cm$^3$ and forget to apply the given unit-conversion factor, or apply it in the wrong direction (dividing instead of multiplying).
+
+---
+
+### PS-061
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A desalination plant in the Eastern Province produces fresh water at a constant rate of $1{,}250{,}000$ liters per hour. At this rate, how many cubic meters of water does the plant produce in one day? ($1$ cubic meter $= 1{,}000$ liters.)
+
+**Correct Answer:** $30{,}000$
+
+**Rationale:** In one day, the plant produces $1{,}250{,}000 \times 24 = 30{,}000{,}000$ liters, which is $\dfrac{30{,}000{,}000}{1{,}000} = 30{,}000$ cubic meters.
+
+**Misconception addressed:** Students often perform only one of the two required conversions (hours-to-day or liters-to-cubic-meters), or apply the unit conversion before scaling to a full day.
+
+---
+
+### PS-062
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** The value of $y$ varies directly with $x$. When $x = 9$, $y = 45$. What is the value of $y$ when $x = 14$?
+
+A) $56$
+B) $63$
+C) $70$
+D) $77$
+
+**Correct Answer:** C) $70$
+
+**Rationale:** Since $y$ varies directly with $x$, $y = kx$ for a constant $k$. From $x=9, y=45$: $k = \dfrac{45}{9} = 5$. When $x = 14$: $y = 5(14) = 70$.
+
+**Misconception addressed:** Students sometimes treat "varies directly" as an additive relationship (adding a constant difference) instead of a multiplicative constant-ratio relationship.
+
+---
+
+### PS-063
+
+**Skill:** Ratios, rates, proportional relationships, and units | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Ratios, rates, proportional relationships, and units); not reproduced from any specific real item
+
+**Question:** A bus rapid transit line in Riyadh carries passengers at a constant average rate. The line carries $15{,}000$ passengers over a $6$-hour morning service window. At this same constant rate, which of the following is closest to the number of passengers carried during a $2.5$-hour afternoon service window?
+
+A) $3{,}750$
+B) $5{,}000$
+C) $6{,}250$
+D) $7{,}500$
+
+**Correct Answer:** C) $6{,}250$
+
+**Rationale:** The rate is $\dfrac{15{,}000}{6} = 2{,}500$ passengers per hour. Over $2.5$ hours: $2{,}500 \times 2.5 = 6{,}250$ passengers.
+
+**Misconception addressed:** Students sometimes set up a proportion using the wrong pair of corresponding quantities (e.g., matching $6$ hours to $2.5$ passengers) instead of finding and applying the unit rate.
+
+---
+
+### PS-064
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Percentages); not reproduced from any specific real item
+
+**Question:** A school's enrollment increased from $640$ students to $720$ students over one year. What is the percent increase in enrollment?
+
+A) $10\%$
+B) $11.1\%$
+C) $12.5\%$
+D) $14.3\%$
+
+**Correct Answer:** C) $12.5\%$
+
+**Rationale:** The increase is $720 - 640 = 80$ students. Percent increase $= \dfrac{80}{640} \times 100 = 12.5\%$.
+
+**Misconception addressed:** Students frequently divide the increase by the *new* value ($720$) instead of the *original* value ($640$), producing $11.1\%$ instead of the correct $12.5\%$.
+
+---
+
+### PS-065
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Percentages); not reproduced from any specific real item
+
+**Question:** A laptop has a listed price of SAR $3{,}200$. A store offers a $15\%$ discount, and then $15\%$ VAT is added to the discounted price. What is the final price of the laptop, in SAR?
+
+A) $2{,}976$
+B) $3{,}008$
+C) $3{,}128$
+D) $3{,}200$
+
+**Correct Answer:** C) $3{,}128$
+
+**Rationale:** After the discount: $3{,}200 \times 0.85 = 2{,}720$. Adding $15\%$ VAT: $2{,}720 \times 1.15 = 3{,}128$ SAR.
+
+**Misconception addressed:** Students often combine $-15\%$ and $+15\%$ into "no net change" and answer $3{,}200$, missing that percent changes applied to different base amounts do not cancel.
+
+---
+
+### PS-066
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Percentages); not reproduced from any specific real item
+
+**Question:** After a $20\%$ discount, the price of a jacket is SAR $256$. What was the original price, in SAR, of the jacket before the discount?
+
+**Correct Answer:** $320$
+
+**Rationale:** If $p$ is the original price, $0.80p = 256$, so $p = \dfrac{256}{0.80} = 320$.
+
+**Misconception addressed:** Students often compute $256 \times 1.20 = 307.2$ (adding $20\%$ back to the discounted price) instead of dividing by $0.80$ to undo a $20\%$ reduction.
+
+---
+
+### PS-067
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Percentages); not reproduced from any specific real item
+
+**Question:** A survey of $850$ Grade 11 students found that $34\%$ plan to take the SAT this year. Which of the following is closest to the number of students who plan to take the SAT?
+
+A) $255$
+B) $272$
+C) $289$
+D) $306$
+
+**Correct Answer:** C) $289$
+
+**Rationale:** $0.34 \times 850 = 289$.
+
+**Misconception addressed:** Students sometimes use $0.34$ as a whole number multiplier or misplace the decimal, giving an answer off by a factor of $10$.
+
+---
+
+### PS-068
+
+**Skill:** Percentages | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Percentages); not reproduced from any specific real item
+
+**Question:** The population of a town increased by $10\%$ in the first year and then decreased by $10\%$ in the second year. If the population at the start of the first year was $5{,}000$, what was the population at the end of the second year?
+
+A) $4{,}900$
+B) $4{,}950$
+C) $5{,}000$
+D) $5{,}050$
+
+**Correct Answer:** B) $4{,}950$
+
+**Rationale:** After the first year: $5{,}000 \times 1.10 = 5{,}500$. After the second year: $5{,}500 \times 0.90 = 4{,}950$.
+
+**Misconception addressed:** Students often assume a $10\%$ increase followed by a $10\%$ decrease returns to the original value; because the second percentage is taken of a larger base, the net result is a decrease.
+
+---
+
+### PS-069
+
+**Skill:** Percentages | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Percentages); not reproduced from any specific real item
+
+**Question:** A Vision 2030 renewable-energy report estimated that a new solar farm would generate $480$ gigawatt-hours (GWh) of electricity in its first year. The farm actually generated $432$ GWh. What is the percent error of the estimate, relative to the actual amount generated?
+
+A) $9.1\%$
+B) $10.0\%$
+C) $11.1\%$
+D) $12.5\%$
+
+**Correct Answer:** C) $11.1\%$
+
+**Rationale:** Percent error $= \dfrac{|480 - 432|}{432} \times 100 = \dfrac{48}{432} \times 100 \approx 11.1\%$.
+
+**Misconception addressed:** Students often divide the difference by the *estimated* value ($480$) instead of the *actual* value ($432$), which the definition of percent error requires as the base.
+
+---
+
+### A-079
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** A linear function models the total cost, in SAR, of a school field trip as $C(n) = 25n + 400$, where $n$ is the number of students attending. What does the value $400$ represent in this context?
+
+A) The cost per student
+B) The total cost if exactly $25$ students attend
+C) A fixed cost that does not depend on the number of students attending
+D) The number of students who can attend for free
+
+**Correct Answer:** C) A fixed cost that does not depend on the number of students attending
+
+**Rationale:** In $C(n) = 25n + 400$, the term $400$ is the $y$-intercept — the value of $C(n)$ when $n = 0$ — representing a fixed cost incurred regardless of attendance (such as bus rental), while $25$ is the per-student cost.
+
+**Misconception addressed:** Students often confuse the roles of slope and intercept in a linear model, assigning the fixed-cost meaning to the per-unit coefficient instead of the constant term.
+
+---
+
+### A-080
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** A line passes through the points $(2, 11)$ and $(6, 27)$. What is the equation of the line?
+
+A) $y = 4x + 3$
+B) $y = 4x + 5$
+C) $y = 3x + 5$
+D) $y = 3x + 11$
+
+**Correct Answer:** A) $y = 4x + 3$
+
+**Rationale:** Slope $= \dfrac{27 - 11}{6 - 2} = \dfrac{16}{4} = 4$. Using point $(2, 11)$: $11 = 4(2) + b \Rightarrow b = 3$. The equation is $y = 4x + 3$.
+
+**Misconception addressed:** Students sometimes compute the slope correctly but substitute the wrong point (or the wrong coordinate order) when solving for the $y$-intercept.
+
+---
+
+### A-081
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** For the linear function $h$, $h(3) = 20$ and $h(7) = 44$. What is the value of $x$ for which $h(x) = 62$?
+
+**Correct Answer:** $10$
+
+**Rationale:** Slope $= \dfrac{44 - 20}{7 - 3} = \dfrac{24}{4} = 6$. Using $h(3)=20$: $20 = 6(3) + b \Rightarrow b = 2$, so $h(x) = 6x + 2$. Setting $h(x) = 62$: $62 = 6x + 2 \Rightarrow x = 10$.
+
+**Misconception addressed:** Students sometimes try to find $h(x)$ for a given $x$ rather than recognizing they must solve the equation in reverse for $x$ given $h(x)$.
+
+---
+
+### A-082
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** Two mobile data plans are modeled by linear functions of $x$, the number of gigabytes used in a month. Plan A costs $A(x) = 8x + 60$ SAR, and Plan B costs $B(x) = 12x + 20$ SAR. For what value of $x$ do the two plans cost the same amount?
+
+A) $5$
+B) $8$
+C) $10$
+D) $15$
+
+**Correct Answer:** C) $10$
+
+**Rationale:** Setting $A(x) = B(x)$: $8x + 60 = 12x + 20 \Rightarrow 40 = 4x \Rightarrow x = 10$.
+
+**Misconception addressed:** Students sometimes set the slopes or the intercepts equal to each other separately instead of setting the two full expressions equal and solving for $x$.
+
+---
+
+### A-083
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** What is the $x$-intercept of the line given by the equation $3x + 4y = 24$?
+
+A) $(0, 6)$
+B) $(6, 0)$
+C) $(8, 0)$
+D) $(0, 8)$
+
+**Correct Answer:** C) $(8, 0)$
+
+**Rationale:** The $x$-intercept occurs where $y = 0$: $3x + 4(0) = 24 \Rightarrow x = 8$. The $x$-intercept is $(8, 0)$.
+
+**Misconception addressed:** Students often confuse the $x$-intercept with the $y$-intercept, or swap the coordinate order in the final answer.
+
+---
+
+### A-084
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** Line $k$ is parallel to the line given by $y = -2x + 7$ and passes through the point $(4, 5)$. Which of the following is an equation of line $k$?
+
+A) $y = -2x + 13$
+B) $y = -2x - 3$
+C) $y = 2x - 3$
+D) $y = 2x + 13$
+
+**Correct Answer:** A) $y = -2x + 13$
+
+**Rationale:** Parallel lines have equal slopes, so line $k$ has slope $-2$. Using point $(4, 5)$: $5 = -2(4) + b \Rightarrow b = 13$. The equation is $y = -2x + 13$.
+
+**Misconception addressed:** Students sometimes use the negative reciprocal slope (as for a perpendicular line) instead of the equal slope required for a parallel line.
+
+---
+
+### A-085
+
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** For what value of $k$ does the system of equations below have no solution?
+
+$$4x - 6y = 10$$
+$$kx - 9y = 20$$
+
+**Correct Answer:** $6$
+
+**Rationale:** A system of two linear equations has no solution when the lines are parallel but not identical — that is, when the ratio of $x$-coefficients equals the ratio of $y$-coefficients but not the ratio of constants. Setting $\dfrac{4}{k} = \dfrac{-6}{-9} = \dfrac{2}{3}$ gives $k = 6$. Checking the constants: $\dfrac{10}{20} = \dfrac{1}{2} \neq \dfrac{2}{3}$, confirming the lines are parallel but distinct, so the system has no solution when $k = 6$.
+
+**Misconception addressed:** Students often set only the coefficient ratio without checking that the constant ratio differs, which can accidentally select a value that makes the system have infinitely many solutions instead of none.
+
+---
+
+### A-086
+
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** A straight irrigation canal in an agricultural project near Al-Kharj is modeled by the equation $2x - 5y = 20$, where $x$ and $y$ are measured in meters. A new access road is to be built perpendicular to the canal, crossing it at the point $(10, 0)$. Which of the following is an equation of the access road?
+
+A) $y = -\dfrac{5}{2}x + 25$
+B) $y = \dfrac{5}{2}x - 25$
+C) $y = -\dfrac{2}{5}x + 4$
+D) $y = \dfrac{2}{5}x - 4$
+
+**Correct Answer:** A) $y = -\dfrac{5}{2}x + 25$
+
+**Rationale:** Rewriting the canal's equation in slope-intercept form: $2x - 5y = 20 \Rightarrow y = \dfrac{2}{5}x - 4$, so its slope is $\dfrac{2}{5}$. A perpendicular line has slope $-\dfrac{5}{2}$ (the negative reciprocal). Using point $(10, 0)$: $0 = -\dfrac{5}{2}(10) + b \Rightarrow b = 25$. The equation is $y = -\dfrac{5}{2}x + 25$.
+
+**Misconception addressed:** Students sometimes use the canal's own slope ($\frac{2}{5}$) for the "perpendicular" road, producing a parallel line instead, or invert the fraction without also changing its sign.
+
+---
+
+### AM-060
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** A decorative fountain shoots a stream of water whose height, in meters, is modeled by $h(t) = -5t^2 + 20t$, where $t$ is the time in seconds after the water leaves the nozzle. What is the maximum height, in meters, reached by the stream of water?
+
+A) $10$
+B) $15$
+C) $20$
+D) $25$
+
+**Correct Answer:** C) $20$
+
+**Rationale:** The maximum of a downward-opening parabola $h(t) = -5t^2 + 20t$ occurs at $t = -\dfrac{b}{2a} = -\dfrac{20}{2(-5)} = 2$. Then $h(2) = -5(2)^2 + 20(2) = -20 + 40 = 20$ meters.
+
+**Misconception addressed:** Students sometimes evaluate $h(t)$ at $t = 0$ or use the coefficient $20$ directly as the maximum height, instead of first finding the vertex's $t$-coordinate.
+
+---
+
+### AM-061
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** A population of bacteria in a lab culture is modeled by $P(t) = 300(1.5)^t$, where $t$ is the time in hours. What is the population after $3$ hours?
+
+A) $675$
+B) $900$
+C) $1{,}012.5$
+D) $1{,}350$
+
+**Correct Answer:** C) $1{,}012.5$
+
+**Rationale:** $P(3) = 300(1.5)^3 = 300 \times 3.375 = 1{,}012.5$.
+
+**Misconception addressed:** Students sometimes compute $300 \times 1.5 \times 3$ (treating the growth as linear/repeated addition) instead of raising $1.5$ to the power $3$.
+
+---
+
+### AM-062
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** The height, in meters, of a ball above the ground $t$ seconds after being thrown is given by $h(t) = -4.9t^2 + 14.7t + 2$. Which of the following is closest to the number of seconds it takes for the ball to hit the ground ($h(t) = 0$)?
+
+A) $2.1$
+B) $2.6$
+C) $3.1$
+D) $3.6$
+
+**Correct Answer:** C) $3.1$
+
+**Rationale:** Using the quadratic formula on $-4.9t^2 + 14.7t + 2 = 0$ (equivalently $4.9t^2 - 14.7t - 2 = 0$): $t = \dfrac{14.7 \pm \sqrt{14.7^2 + 4(4.9)(2)}}{2(4.9)} = \dfrac{14.7 \pm \sqrt{255.29}}{9.8} \approx \dfrac{14.7 \pm 15.98}{9.8}$. Taking the positive root: $t \approx \dfrac{30.68}{9.8} \approx 3.13$, closest to $3.1$.
+
+**Misconception addressed:** Students often discard the correct positive root in favor of a rounded intermediate value, or forget that the negative root is extraneous in a real-world time context.
+
+---
+
+### AM-063
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** A water-treatment filter reduces the concentration of a contaminant by $12\%$ every hour it operates. If the initial concentration is $250$ parts per million (ppm), which of the following functions models the concentration $C(t)$, in ppm, after $t$ hours of operation?
+
+A) $C(t) = 250(0.12)^t$
+B) $C(t) = 250(0.88)^t$
+C) $C(t) = 250(1.12)^t$
+D) $C(t) = 250 - 12t$
+
+**Correct Answer:** B) $C(t) = 250(0.88)^t$
+
+**Rationale:** A $12\%$ decrease each hour means $88\%$ of the concentration remains each hour, so the decay factor is $0.88$, giving $C(t) = 250(0.88)^t$.
+
+**Misconception addressed:** Students often use the percent decrease itself ($0.12$) as the base instead of the retained percent ($1 - 0.12 = 0.88$), or model the decay as linear subtraction rather than exponential decay.
+
+---
+
+### 2.17 Standards-Aligned Gap-Closing Batch II — Algebra / Advanced Math / Geometry Domain-Balance Top-Up (PSDA frozen)
+
+### A-087
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** A ride-hailing fare in Jeddah is modeled by the linear function $F(m) = 2.25m + 8$, where $m$ is the number of kilometers traveled and $F(m)$ is the fare in SAR. What does the value $2.25$ represent in this context?
+
+A) The fare for a trip of $0$ kilometers
+B) The total fare for a $1$-kilometer trip
+C) The additional fare, in SAR, for each additional kilometer traveled
+D) The maximum possible fare
+
+**Correct Answer:** C) The additional fare, in SAR, for each additional kilometer traveled
+
+**Rationale:** In $F(m) = 2.25m + 8$, the coefficient $2.25$ is the slope, representing the change in fare per additional kilometer. The constant $8$ is the base fare (the $y$-intercept, at $m=0$).
+
+**Misconception addressed:** Students often assign the slope's meaning to the constant term, or think the slope represents a one-time flat fee rather than a per-unit rate.
+
+---
+
+### A-088
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** The table shows three values of the linear function $g$.
+
+| $x$ | $2$ | $5$ | $8$ |
+|---|---|---|---|
+| $g(x)$ | $13$ | $22$ | $31$ |
+
+Which of the following defines $g$?
+
+A) $g(x) = 3x + 7$
+B) $g(x) = 3x + 4$
+C) $g(x) = 2x + 9$
+D) $g(x) = 4x + 5$
+
+**Correct Answer:** A) $g(x) = 3x + 7$
+
+**Rationale:** The slope is $\dfrac{22 - 13}{5 - 2} = \dfrac{9}{3} = 3$. Using $(2, 13)$: $13 = 3(2) + b \Rightarrow b = 7$, so $g(x) = 3x + 7$. Checking $x = 8$: $3(8) + 7 = 31$, which matches.
+
+**Misconception addressed:** Students sometimes compute the slope using only one pair of consecutive values without confirming it holds for the third point, or swap slope and intercept when reading the table.
+
+---
+
+### A-089
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** For the linear function $p$, $p(-2) = 5$ and $p(4) = -13$. What is the value of $p(0)$?
+
+**Correct Answer:** $-1$
+
+**Rationale:** Slope $= \dfrac{-13 - 5}{4 - (-2)} = \dfrac{-18}{6} = -3$. Using $p(-2) = 5$: $5 = -3(-2) + b \Rightarrow b = -1$, so $p(x) = -3x - 1$. Then $p(0) = -1$.
+
+**Misconception addressed:** Students sometimes mishandle the negative $x$-value when computing the slope's denominator, flipping the sign of the result.
+
+---
+
+### A-090
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** At a school bookstore, $3$ notebooks and $2$ pens cost SAR $29$, while $5$ notebooks and $2$ pens cost SAR $43$. What is the cost, in SAR, of one notebook?
+
+A) $5$
+B) $6$
+C) $7$
+D) $8$
+
+**Correct Answer:** C) $7$
+
+**Rationale:** Subtracting the first equation from the second eliminates the pens: $(5n + 2p) - (3n + 2p) = 43 - 29 \Rightarrow 2n = 14 \Rightarrow n = 7$.
+
+**Misconception addressed:** Students sometimes add the equations instead of subtracting, or subtract in the wrong order, producing a sign error.
+
+---
+
+### A-091
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** If $2x + 3y = 16$ and $x - y = 3$, what is the value of $x$?
+
+A) $3$
+B) $4$
+C) $5$
+D) $6$
+
+**Correct Answer:** C) $5$
+
+**Rationale:** From the second equation, $x = y + 3$. Substituting: $2(y+3) + 3y = 16 \Rightarrow 5y + 6 = 16 \Rightarrow y = 2$, so $x = 5$.
+
+**Misconception addressed:** Students sometimes substitute $x = y + 3$ incorrectly as $x = 3 - y$, reversing the sign relationship.
+
+---
+
+### A-092
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** Ahmad invests a total of SAR $12{,}000$ in two accounts. Account A earns $4\%$ annual interest, and Account B earns $7\%$ annual interest. After one year, the total interest earned from both accounts is SAR $690$. How much money, in SAR, was invested in Account B?
+
+**Correct Answer:** $7{,}000$
+
+**Rationale:** Let $a + b = 12{,}000$ and $0.04a + 0.07b = 690$. Substituting $a = 12{,}000 - b$: $0.04(12{,}000 - b) + 0.07b = 690 \Rightarrow 480 + 0.03b = 690 \Rightarrow b = 7{,}000$.
+
+**Misconception addressed:** Students often set up the interest equation using the wrong rate for each variable, or forget to substitute the total-investment constraint before solving.
+
+---
+
+### A-093
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** For what value of $k$ does the system of equations below have infinitely many solutions?
+
+$$6x + 9y = 21$$
+$$kx + 6y = 14$$
+
+A) $3$
+B) $4$
+C) $6$
+D) $9$
+
+**Correct Answer:** B) $4$
+
+**Rationale:** A system has infinitely many solutions when the two equations represent the same line — that is, when all three ratios of corresponding coefficients/constants are equal: $\dfrac{6}{k} = \dfrac{9}{6} = \dfrac{21}{14} = \dfrac{3}{2}$. Solving $\dfrac{6}{k} = \dfrac{3}{2}$ gives $k = 4$.
+
+**Misconception addressed:** Students sometimes only match the $x$- and $y$-coefficient ratio (which gives a parallel line) without checking that the constant ratio also matches, confusing "no solution" with "infinitely many solutions."
+
+---
+
+### A-094
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** A line has a slope of $-3$ and passes through the point $(5, -2)$. What is the $y$-intercept of the line?
+
+A) $7$
+B) $10$
+C) $13$
+D) $15$
+
+**Correct Answer:** C) $13$
+
+**Rationale:** Using $y = -3x + b$ with the point $(5, -2)$: $-2 = -3(5) + b \Rightarrow -2 = -15 + b \Rightarrow b = 13$.
+
+**Misconception addressed:** Students sometimes substitute the coordinates in the wrong order (treating $-2$ as $x$ and $5$ as $y$), producing an incorrect intercept.
+
+---
+
+### A-095
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** Which of the following equations, when graphed in the $xy$-plane, is a line with the same slope as the line $5x - 2y = 8$?
+
+A) $10x - 4y = 6$
+B) $2x - 5y = 10$
+C) $5x + 2y = 8$
+D) $2x + 5y = 10$
+
+**Correct Answer:** A) $10x - 4y = 6$
+
+**Rationale:** The given line has slope $\dfrac{5}{2}$ (from $y = \dfrac{5}{2}x - 4$). Rewriting choice A: $10x - 4y = 6 \Rightarrow 5x - 2y = 3 \Rightarrow y = \dfrac{5}{2}x - \dfrac{3}{2}$, which has the same slope $\dfrac{5}{2}$ but a different intercept (a distinct, parallel line).
+
+**Misconception addressed:** Students sometimes assume that doubling every coefficient in an equation changes its slope, when scaling both sides of a linear equation by a constant leaves the slope unchanged.
+
+---
+
+### A-096
+
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** The lines given by $3x + y = 15$ and $x - 2y = -2$ intersect at the point $(x, y)$. What is the value of $x + y$?
+
+**Correct Answer:** $7$
+
+**Rationale:** From the first equation, $y = 15 - 3x$. Substituting into the second: $x - 2(15 - 3x) = -2 \Rightarrow x - 30 + 6x = -2 \Rightarrow 7x = 28 \Rightarrow x = 4$, so $y = 15 - 12 = 3$. Then $x + y = 4 + 3 = 7$.
+
+**Misconception addressed:** Students sometimes report only one coordinate (just $x$ or just $y$) instead of computing the requested sum, or make a sign error distributing $-2$ across the parenthesis.
+
+---
+
+### AM-064
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** If $f(x) = 2x^2 - 5x + 3$, what is the value of $f(4)$?
+
+A) $11$
+B) $13$
+C) $15$
+D) $17$
+
+**Correct Answer:** C) $15$
+
+**Rationale:** $f(4) = 2(4)^2 - 5(4) + 3 = 2(16) - 20 + 3 = 32 - 20 + 3 = 15$.
+
+**Misconception addressed:** Students sometimes apply the exponent to $2x$ as a whole instead of to $x$ alone, computing $(2 \cdot 4)^2$ instead of $2(4)^2$.
+
+---
+
+### AM-065
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** The number of subscribers to an online tutoring platform grows according to $N(t) = 500(1.2)^t$, where $t$ is measured in months since launch. Which of the following is closest to the number of subscribers after $5$ months?
+
+A) $1{,}000$
+B) $1{,}100$
+C) $1{,}244$
+D) $1{,}500$
+
+**Correct Answer:** C) $1{,}244$
+
+**Rationale:** $N(5) = 500(1.2)^5 = 500 \times 2.48832 \approx 1{,}244.2$.
+
+**Misconception addressed:** Students sometimes compute $500 \times 1.2 \times 5$ (linear scaling) instead of raising the growth factor to the power $5$.
+
+---
+
+### AM-066
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** The graph of the function $g(x) = (x-3)^2 - 7$ is the same as the graph of $y = x^2$ after which of the following transformations?
+
+A) Shifted left $3$ and up $7$
+B) Shifted right $3$ and down $7$
+C) Shifted right $3$ and up $7$
+D) Shifted left $3$ and down $7$
+
+**Correct Answer:** B) Shifted right $3$ and down $7$
+
+**Rationale:** In $g(x) = (x-h)^2 + k$, the graph of $y = x^2$ is shifted right by $h$ and up by $k$. Here $h = 3$ and $k = -7$, so the shift is right $3$ and down $7$.
+
+**Misconception addressed:** Students commonly misread the sign inside the parenthesis, believing $(x-3)^2$ shifts the graph left rather than right.
+
+---
+
+### AM-067
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** If $x = 5$ is one solution to the equation $x^2 - kx + 20 = 0$, what is the value of $k$?
+
+**Correct Answer:** $9$
+
+**Rationale:** Substituting $x = 5$: $25 - 5k + 20 = 0 \Rightarrow 45 = 5k \Rightarrow k = 9$.
+
+**Misconception addressed:** Students sometimes solve for $k$ before combining the constant terms, or divide by the wrong coefficient when isolating $k$.
+
+---
+
+### AM-068
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear equations in one variable and systems of equations in two variables); not reproduced from any specific real item
+
+**Question:** What is the sum of the $y$-coordinates of the solutions to the system below?
+
+$$y = x^2 - 4x$$
+$$y = 2x - 5$$
+
+A) $-2$
+B) $0$
+C) $2$
+D) $4$
+
+**Correct Answer:** C) $2$
+
+**Rationale:** Setting the expressions equal: $x^2 - 4x = 2x - 5 \Rightarrow x^2 - 6x + 5 = 0 \Rightarrow (x-1)(x-5) = 0$, so $x = 1$ or $x = 5$. At $x=1$: $y = 2(1)-5 = -3$. At $x=5$: $y = 2(5)-5 = 5$. The sum is $-3 + 5 = 2$.
+
+**Misconception addressed:** Students sometimes find only one intersection point (often stopping at the first factor) and report a single $y$-value instead of the sum requested.
+
+---
+
+### AM-069
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear equations in one variable and systems of equations in two variables); not reproduced from any specific real item
+
+**Question:** What is the solution to $\sqrt{2x + 7} = 5$?
+
+**Correct Answer:** $9$
+
+**Rationale:** Squaring both sides: $2x + 7 = 25 \Rightarrow 2x = 18 \Rightarrow x = 9$. Checking: $\sqrt{2(9)+7} = \sqrt{25} = 5$, which is valid.
+
+**Misconception addressed:** Students sometimes square only one term (e.g., just the $7$) instead of squaring the entire left-hand side as a unit.
+
+---
+
+### AM-070
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear equations in one variable and systems of equations in two variables); not reproduced from any specific real item
+
+**Question:** A company's monthly profit, in thousands of SAR, is modeled by $P(x) = -2x^2 + 40x - 150$, where $x$ is the price of the product in SAR. For what price $x$, other than $x = 5$, does the company break even (that is, $P(x) = 0$)?
+
+**Correct Answer:** $15$
+
+**Rationale:** Setting $P(x) = 0$ and dividing by $-2$: $x^2 - 20x + 75 = 0 \Rightarrow (x-5)(x-15) = 0$, so $x = 5$ or $x = 15$. The price other than $5$ is $15$.
+
+**Misconception addressed:** Students sometimes stop after verifying $x=5$ works and fail to factor fully to find the second root.
+
+---
+
+### GT-062
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** In a triangle, the measures of the three interior angles are $x$, $2x$, and $(3x - 30)$ degrees. What is the value of $x$?
+
+A) $30$
+B) $32$
+C) $35$
+D) $40$
+
+**Correct Answer:** C) $35$
+
+**Rationale:** The interior angles of a triangle sum to $180^\circ$: $x + 2x + (3x - 30) = 180 \Rightarrow 6x - 30 = 180 \Rightarrow 6x = 210 \Rightarrow x = 35$.
+
+**Misconception addressed:** Students sometimes forget to include the $-30$ constant when combining like terms, or set the sum equal to $360^\circ$ instead of $180^\circ$.
+
+---
+
+### GT-063
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** Line $\ell$ is parallel to line $m$, and a transversal crosses both lines. One angle formed at line $\ell$ measures $(3x + 15)^\circ$, and the corresponding angle formed at line $m$ measures $(5x - 25)^\circ$. What is the value of $x$?
+
+A) $15$
+B) $18$
+C) $20$
+D) $25$
+
+**Correct Answer:** C) $20$
+
+**Rationale:** Corresponding angles formed by a transversal crossing parallel lines are congruent: $3x + 15 = 5x - 25 \Rightarrow 40 = 2x \Rightarrow x = 20$.
+
+**Misconception addressed:** Students sometimes treat the two angles as supplementary (summing to $180^\circ$) instead of congruent, which applies to a different angle pair (same-side interior angles).
+
+---
+
+### GT-064
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** In triangle $ABC$, the exterior angle at vertex $C$ measures $(4x + 10)^\circ$. This exterior angle equals the sum of the two non-adjacent interior angles, which measure $(2x + 5)^\circ$ and $(x + 25)^\circ$. What is the value of $x$?
+
+**Correct Answer:** $20$
+
+**Rationale:** By the Exterior Angle Theorem, the exterior angle equals the sum of the two remote interior angles: $4x + 10 = (2x + 5) + (x + 25) \Rightarrow 4x + 10 = 3x + 30 \Rightarrow x = 20$.
+
+**Misconception addressed:** Students sometimes add the exterior angle's adjacent interior angle into the sum instead of only the two non-adjacent (remote) interior angles the theorem specifies.
+
+---
+
+### GT-065
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** A pole that is $2.4$ meters tall casts a shadow $3.2$ meters long. At the same time, a nearby communications tower casts a shadow $52$ meters long. Using similar triangles, which of the following is closest to the height, in meters, of the tower?
+
+A) $34.7$
+B) $36.4$
+C) $39.0$
+D) $41.6$
+
+**Correct Answer:** C) $39.0$
+
+**Rationale:** Since the pole and its shadow form a triangle similar to the tower and its shadow, the ratio of height to shadow length is constant: $\dfrac{2.4}{3.2} = 0.75$. The tower's height is $0.75 \times 52 = 39.0$ meters.
+
+**Misconception addressed:** Students sometimes set up the proportion with mismatched quantities (e.g., pole height to tower shadow) instead of keeping height-to-shadow ratios consistent between the two similar triangles.
+
+---
+
+### GT-066
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** In right triangle $ABC$, angle $C$ is the right angle, $AC = 9$, and $BC = 12$. What is $\sin(A)$?
+
+A) $\dfrac{3}{5}$
+B) $\dfrac{4}{5}$
+C) $\dfrac{3}{4}$
+D) $\dfrac{4}{3}$
+
+**Correct Answer:** B) $\dfrac{4}{5}$
+
+**Rationale:** The hypotenuse is $AB = \sqrt{9^2 + 12^2} = \sqrt{81 + 144} = \sqrt{225} = 15$. Since angle $A$'s opposite side is $BC = 12$: $\sin(A) = \dfrac{\text{opposite}}{\text{hypotenuse}} = \dfrac{12}{15} = \dfrac{4}{5}$.
+
+**Misconception addressed:** Students often use the side adjacent to angle $A$ ($AC = 9$) as the numerator instead of the side opposite angle $A$ ($BC = 12$), confusing sine with cosine.
+
+---
+
+### GT-067
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** In right triangle $DEF$, angle $F$ is the right angle, angle $D$ measures $35^\circ$, and side $DF$ (adjacent to angle $D$) measures $18$. Which of the following is closest to the length of side $EF$ (opposite angle $D$)?
+
+A) $10.3$
+B) $12.6$
+C) $14.9$
+D) $17.1$
+
+**Correct Answer:** B) $12.6$
+
+**Rationale:** $\tan(35^\circ) = \dfrac{EF}{DF} \Rightarrow EF = 18 \tan(35^\circ) \approx 18 \times 0.7002 \approx 12.6$.
+
+**Misconception addressed:** Students sometimes use sine or cosine of angle $D$ instead of tangent, since the problem relates the two legs (opposite and adjacent) rather than a leg and the hypotenuse.
+
+---
+
+### GT-068
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** A triangular plot of land has two sides measuring $80$ meters and $95$ meters, with an included angle of $62^\circ$ between them. Which of the following is closest to the length, in meters, of the third side?
+
+A) $83.4$
+B) $87.9$
+C) $91.0$
+D) $95.7$
+
+**Correct Answer:** C) $91.0$
+
+**Rationale:** By the Law of Cosines: $c^2 = 80^2 + 95^2 - 2(80)(95)\cos(62^\circ) = 6{,}400 + 9{,}025 - 15{,}200(0.4695) \approx 15{,}425 - 7{,}136 = 8{,}289$. So $c \approx \sqrt{8{,}289} \approx 91.0$.
+
+**Misconception addressed:** Students often try to apply the Pythagorean theorem directly to a non-right triangle, ignoring the given angle; this item requires recognizing that the Law of Cosines is needed when the triangle is not a right triangle.
+
+---
+
+### 2.18 Standards-Aligned Gap-Closing Batch III — Algebra / Advanced Math Domain-Balance Top-Up (Geometry and PSDA frozen)
+
+### A-097
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** A school fundraiser sells raffle tickets. The relationship between the number of tickets sold, $t$, and the total funds raised, $R(t)$, in SAR, is $R(t) = 15t + 200$. What is the meaning of the value $15$ in this context?
+
+A) The fixed amount raised before any tickets are sold
+B) The total number of tickets available
+C) The amount raised, in SAR, per ticket sold
+D) The number of tickets needed to break even
+
+**Correct Answer:** C) The amount raised, in SAR, per ticket sold
+
+**Rationale:** In $R(t) = 15t + 200$, the coefficient $15$ is the slope — the amount added to total funds for each additional ticket sold — while $200$ is the fixed amount already raised (donations, entry fees) before any tickets are sold.
+
+**Misconception addressed:** Students often assign the slope's meaning to the constant term or vice versa, rather than recognizing the coefficient of the variable as the per-unit rate.
+
+---
+
+### A-098
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** A hiking trail rises steadily in elevation. At a distance of $2$ km from the trailhead, the elevation is $340$ meters. At a distance of $6$ km, the elevation is $620$ meters. What is the rate of elevation gain, in meters per kilometer?
+
+A) $46$
+B) $60$
+C) $70$
+D) $80$
+
+**Correct Answer:** C) $70$
+
+**Rationale:** Rate $= \dfrac{620 - 340}{6 - 2} = \dfrac{280}{4} = 70$ meters per kilometer.
+
+**Misconception addressed:** Students sometimes divide the elevation change by the wrong quantity (e.g., by $6$ instead of by the change in distance, $4$), or subtract the distances in the wrong order.
+
+---
+
+### A-099
+
+**Skill:** Linear functions | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** A car rental company charges a linear fee based on the number of days rented. Renting for $3$ days costs SAR $450$, and renting for $7$ days costs SAR $850$. What is the daily rate, in SAR, charged by the company?
+
+**Correct Answer:** $100$
+
+**Rationale:** The daily rate is the rate of change: $\dfrac{850 - 450}{7 - 3} = \dfrac{400}{4} = 100$ SAR per day.
+
+**Misconception addressed:** Students sometimes divide the total cost by the number of days directly (e.g., $850 \div 7$) instead of finding the rate of change between the two given data points, which also includes a fixed fee.
+
+---
+
+### A-100
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** Function $p$ is defined by $p(x) = 4x + 6$. Function $q$ is defined by the table below.
+
+| $x$ | $0$ | $3$ | $6$ |
+|---|---|---|---|
+| $q(x)$ | $10$ | $25$ | $40$ |
+
+Which statement is true about the rates of change of $p$ and $q$?
+
+A) $p$ has a greater rate of change than $q$.
+B) $q$ has a greater rate of change than $p$.
+C) $p$ and $q$ have the same rate of change.
+D) The rates of change cannot be compared.
+
+**Correct Answer:** B) $q$ has a greater rate of change than $p$.
+
+**Rationale:** The rate of change of $p$ is its slope, $4$. The rate of change of $q$ is $\dfrac{25-10}{3-0} = 5$, confirmed by $\dfrac{40-25}{6-3} = 5$. Since $5 > 4$, $q$ has the greater rate of change.
+
+**Misconception addressed:** Students sometimes compare the functions' output values at a single point instead of their rates of change, or fail to verify that the table's rate of change is constant before comparing it to $p$'s slope.
+
+---
+
+### A-101
+
+**Skill:** Linear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear functions); not reproduced from any specific real item
+
+**Question:** For the linear function $h$, $h(2) = 9$ and the slope of the graph of $y = h(x)$ is $4$. What is the value of $x$ for which $h(x) = 33$?
+
+**Correct Answer:** $8$
+
+**Rationale:** Using $h(x) = 4x + b$ with $h(2) = 9$: $9 = 4(2) + b \Rightarrow b = 1$, so $h(x) = 4x + 1$. Setting $h(x) = 33$: $33 = 4x + 1 \Rightarrow x = 8$.
+
+**Misconception addressed:** Students sometimes substitute the target output ($33$) for $x$ instead of solving the equation in reverse for $x$.
+
+---
+
+### A-102
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** A school orders a combination of tablets and laptops for a new digital-learning lab. Tablets cost SAR $1{,}200$ each and laptops cost SAR $3{,}000$ each. The school orders $40$ devices in total for SAR $66{,}000$. How many laptops did the school order?
+
+A) $8$
+B) $10$
+C) $12$
+D) $15$
+
+**Correct Answer:** B) $10$
+
+**Rationale:** Let $t + l = 40$ and $1{,}200t + 3{,}000l = 66{,}000$. Substituting $t = 40 - l$: $1{,}200(40-l) + 3{,}000l = 66{,}000 \Rightarrow 48{,}000 + 1{,}800l = 66{,}000 \Rightarrow l = 10$.
+
+**Misconception addressed:** Students sometimes solve for the number of tablets and report that value instead of the number of laptops actually asked for.
+
+---
+
+### A-103
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** If $4x - y = 9$ and $2x + y = 15$, what is the value of $x$?
+
+A) $2$
+B) $3$
+C) $4$
+D) $5$
+
+**Correct Answer:** C) $4$
+
+**Rationale:** Adding the two equations eliminates $y$: $(4x - y) + (2x + y) = 9 + 15 \Rightarrow 6x = 24 \Rightarrow x = 4$.
+
+**Misconception addressed:** Students sometimes subtract the equations instead of adding them, failing to notice that the $y$-terms have opposite signs and cancel on addition.
+
+---
+
+### A-104
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** At a school play, adult tickets cost SAR $25$ and student tickets cost SAR $10$. A total of $180$ tickets were sold for SAR $3{,}150$. How many adult tickets were sold?
+
+**Correct Answer:** $90$
+
+**Rationale:** Let $a + s = 180$ and $25a + 10s = 3{,}150$. Substituting $s = 180 - a$: $25a + 10(180-a) = 3{,}150 \Rightarrow 15a + 1{,}800 = 3{,}150 \Rightarrow a = 90$.
+
+**Misconception addressed:** Students sometimes set up the value equation using the total ticket count as a price (e.g., $25a + 10s = 180$) instead of the total revenue.
+
+---
+
+### A-105
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** A jar contains only $25$-halala and $50$-halala coins, worth a total of SAR $21.50$. There are $52$ coins in total. How many $50$-halala coins are in the jar?
+
+A) $18$
+B) $26$
+C) $34$
+D) $40$
+
+**Correct Answer:** C) $34$
+
+**Rationale:** Let $x$ be the number of $50$-halala coins and $y$ the number of $25$-halala coins. Then $x + y = 52$ and $0.50x + 0.25y = 21.50$. Substituting $y = 52 - x$: $0.50x + 0.25(52-x) = 21.50 \Rightarrow 0.25x + 13 = 21.50 \Rightarrow x = 34$.
+
+**Misconception addressed:** Students often forget to convert halala coin values to SAR before writing the value equation, or mix up which coin count is being solved for.
+
+---
+
+### A-106
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Systems of two linear equations in two variables); not reproduced from any specific real item
+
+**Question:** The solution to the system of equations below is $(x, y)$. What is the value of $2x - y$?
+
+$$5x + 2y = 38$$
+$$3x - 2y = 10$$
+
+**Correct Answer:** $8$
+
+**Rationale:** Adding the two equations eliminates $y$: $8x = 48 \Rightarrow x = 6$. Substituting into $3x - 2y = 10$: $18 - 2y = 10 \Rightarrow y = 4$. Then $2x - y = 12 - 4 = 8$.
+
+**Misconception addressed:** Students sometimes report $x$ or $y$ alone instead of evaluating the requested expression $2x - y$.
+
+---
+
+### A-107
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** A line representing monthly electricity savings, in SAR, from installing solar panels has a slope of $45$ and passes through the point $(4, 260)$, where $x$ is the number of months since installation. Which of the following is an equation of this line?
+
+A) $y = 45x + 80$
+B) $y = 45x + 180$
+C) $y = 80x + 45$
+D) $y = 45x - 80$
+
+**Correct Answer:** A) $y = 45x + 80$
+
+**Rationale:** Using $y = 45x + b$ with the point $(4, 260)$: $260 = 45(4) + b \Rightarrow 260 = 180 + b \Rightarrow b = 80$. The equation is $y = 45x + 80$.
+
+**Misconception addressed:** Students sometimes swap the roles of the slope and $y$-value when solving for $b$, or make an arithmetic slip computing $45 \times 4$.
+
+---
+
+### A-108
+
+**Skill:** Linear equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Linear equations in two variables); not reproduced from any specific real item
+
+**Question:** A line segment has endpoints $(2, 3)$ and $(10, 11)$. What is the equation of the line containing this segment?
+
+A) $y = x + 1$
+B) $y = x - 1$
+C) $y = 2x - 1$
+D) $y = 2x + 1$
+
+**Correct Answer:** A) $y = x + 1$
+
+**Rationale:** Slope $= \dfrac{11-3}{10-2} = \dfrac{8}{8} = 1$. Using point $(2,3)$: $y - 3 = 1(x-2) \Rightarrow y = x + 1$.
+
+**Misconception addressed:** Students sometimes compute the slope correctly but then substitute incorrectly when finding the $y$-intercept, or miscompute the slope as $2$ by dividing the coordinates rather than the differences.
+
+---
+
+### AM-071
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** A farmer has $80$ meters of fencing to enclose a rectangular plot, with one side against an existing wall (so fencing is needed only on the other three sides). If $x$ represents the width of the plot (perpendicular to the wall), which function $A(x)$ models the area of the plot, in square meters?
+
+A) $A(x) = 80x - 2x^2$
+B) $A(x) = 80x - x^2$
+C) $A(x) = 40x - 2x^2$
+D) $A(x) = 80 - 2x^2$
+
+**Correct Answer:** A) $A(x) = 80x - 2x^2$
+
+**Rationale:** The three fenced sides are two widths and one length: $2x + \text{length} = 80$, so length $= 80 - 2x$. Area $= x(80 - 2x) = 80x - 2x^2$.
+
+**Misconception addressed:** Students often fence all four sides (using $2x + 2(\text{length}) = 80$) instead of recognizing that one side needs no fencing since it is against the wall.
+
+---
+
+### AM-072
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** The amount of a medication remaining in a patient's bloodstream is modeled by $M(t) = 200(0.85)^t$, where $t$ is the number of hours since the dose was taken and $M(t)$ is measured in milligrams. Which of the following is closest to the amount remaining after $6$ hours?
+
+A) $65.5$
+B) $75.5$
+C) $85.5$
+D) $95.5$
+
+**Correct Answer:** B) $75.5$
+
+**Rationale:** $M(6) = 200(0.85)^6 \approx 200 \times 0.3771 \approx 75.4$, closest to $75.5$.
+
+**Misconception addressed:** Students sometimes compute $200 \times 0.85 \times 6$ (treating the decay as linear) instead of raising $0.85$ to the power $6$.
+
+---
+
+### AM-073
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** A company's weekly revenue, in thousands of SAR, from selling a product priced at $x$ SAR is modeled by $R(x) = -3x^2 + 150x$. What price $x$ maximizes the weekly revenue?
+
+A) $15$
+B) $20$
+C) $25$
+D) $30$
+
+**Correct Answer:** C) $25$
+
+**Rationale:** The maximum of $R(x) = -3x^2 + 150x$ occurs at $x = -\dfrac{b}{2a} = -\dfrac{150}{2(-3)} = 25$.
+
+**Misconception addressed:** Students sometimes forget to divide by $2a$ (using $x = -b/a$ instead), or drop the negative sign when computing $-b/(2a)$.
+
+---
+
+### AM-074
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear functions); not reproduced from any specific real item
+
+**Question:** The equation $x^2 - 12x + c = 0$ has two equal (repeated) roots. What is the value of $c$?
+
+**Correct Answer:** $36$
+
+**Rationale:** A quadratic has repeated roots when its discriminant is zero: $(-12)^2 - 4(1)(c) = 0 \Rightarrow 144 - 4c = 0 \Rightarrow c = 36$.
+
+**Misconception addressed:** Students sometimes set the discriminant expression equal to a nonzero value or forget the factor of $4a$ when applying $b^2 - 4ac = 0$.
+
+---
+
+### AM-075
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear equations in one variable and systems of equations in two variables); not reproduced from any specific real item
+
+**Question:** The height of a triangle is $4$ cm more than its base. If the area of the triangle is $30$ cm², what is the length of the base, in cm?
+
+A) $4$
+B) $5$
+C) $6$
+D) $8$
+
+**Correct Answer:** C) $6$
+
+**Rationale:** Let the base be $b$; the height is $b+4$. The area equation is $\dfrac{1}{2}b(b+4) = 30 \Rightarrow b^2 + 4b - 60 = 0 \Rightarrow (b+10)(b-6) = 0$. Since a length must be positive, $b = 6$.
+
+**Misconception addressed:** Students sometimes keep the negative root ($b=-10$) as a valid answer, or set up the area equation without the factor of $\dfrac{1}{2}$.
+
+---
+
+### AM-076
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear equations in one variable and systems of equations in two variables); not reproduced from any specific real item
+
+**Question:** What is the solution to the equation $\dfrac{x+5}{x-1} = 3$, for $x \neq 1$?
+
+**Correct Answer:** $4$
+
+**Rationale:** Multiplying both sides by $(x-1)$: $x + 5 = 3(x-1) \Rightarrow x + 5 = 3x - 3 \Rightarrow 8 = 2x \Rightarrow x = 4$. Checking: $\dfrac{4+5}{4-1} = \dfrac{9}{3} = 3$, which is valid.
+
+**Misconception addressed:** Students sometimes cross-multiply incorrectly, distributing $3$ only to the $x$ term and not to $-1$.
+
+---
+
+### AM-077
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Nonlinear equations in one variable and systems of equations in two variables); not reproduced from any specific real item
+
+**Question:** A system of equations is given below, where $x$ represents the number of years since a company's founding and $y$ represents its annual revenue, in millions of SAR.
+
+$$y = x^2 - 5x + 20$$
+$$y = 3x + 8$$
+
+For how many values of $x$, with $x \geq 0$, are the two models equal?
+
+A) $0$
+B) $1$
+C) $2$
+D) $3$
+
+**Correct Answer:** C) $2$
+
+**Rationale:** Setting the expressions equal: $x^2 - 5x + 20 = 3x + 8 \Rightarrow x^2 - 8x + 12 = 0 \Rightarrow (x-2)(x-6) = 0$, giving $x = 2$ or $x = 6$. Both are nonnegative, so there are $2$ values.
+
+**Misconception addressed:** Students sometimes discard one valid root after factoring, or fail to check whether both roots satisfy the given restriction $x \geq 0$.
+
+---
+
+### AM-078
+
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Equivalent expressions); not reproduced from any specific real item
+
+**Question:** Which of the following is equivalent to $\dfrac{2x^2 + 8x}{2x}$, for $x \neq 0$?
+
+A) $x + 4$
+B) $x + 8$
+C) $2x + 4$
+D) $x^2 + 4$
+
+**Correct Answer:** A) $x + 4$
+
+**Rationale:** Factoring the numerator: $2x^2 + 8x = 2x(x+4)$. Dividing by $2x$ (valid since $x \neq 0$) leaves $x + 4$.
+
+**Misconception addressed:** Students sometimes cancel only the $x^2$ term with the denominator's $x$ instead of factoring out the full common factor $2x$ first.
+
+---
+
+### 2.19 Standards-Aligned Gap-Closing Batch IV — Geometry and Trigonometry Back Into Rotation (Algebra, Advanced Math, PSDA frozen)
+
+### GT-069
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** In right triangle $ABC$, angle $C$ is the right angle, $AB = 13$ (the hypotenuse), and $BC = 5$. What is $\cos(A)$?
+
+A) $\dfrac{5}{13}$
+B) $\dfrac{12}{13}$
+C) $\dfrac{5}{12}$
+D) $\dfrac{12}{5}$
+
+**Correct Answer:** B) $\dfrac{12}{13}$
+
+**Rationale:** By the Pythagorean theorem, $AC = \sqrt{13^2 - 5^2} = \sqrt{144} = 12$. Since $AC$ is adjacent to angle $A$: $\cos(A) = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{12}{13}$.
+
+**Misconception addressed:** Students often use the given side $BC$ (opposite angle $A$) as the numerator instead of finding and using the adjacent side, confusing cosine with sine.
+
+---
+
+### GT-070
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** From a point on the ground $40$ meters from the base of a communications tower, the angle of elevation to the top of the tower is $58^\circ$. Which of the following is closest to the height, in meters, of the tower?
+
+A) $33.9$
+B) $47.1$
+C) $64.0$
+D) $75.5$
+
+**Correct Answer:** C) $64.0$
+
+**Rationale:** The height, the horizontal distance, and the angle of elevation form a right triangle where $\tan(58^\circ) = \dfrac{\text{height}}{40}$. Solving: height $= 40 \tan(58^\circ) \approx 40 \times 1.600 \approx 64.0$.
+
+**Misconception addressed:** Students sometimes use sine or cosine of $58^\circ$ instead of tangent, since the problem relates the two legs (height and horizontal distance) rather than a leg and the hypotenuse.
+
+---
+
+### GT-071
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** In triangle $DEF$, angle $D = 40^\circ$, angle $E = 65^\circ$, and side $DE = 22$. Which of the following is closest to the length of side $EF$ (opposite angle $D$)?
+
+A) $12.6$
+B) $14.6$
+C) $16.9$
+D) $19.4$
+
+**Correct Answer:** B) $14.6$
+
+**Rationale:** Angle $F = 180^\circ - 40^\circ - 65^\circ = 75^\circ$. By the Law of Sines, $\dfrac{EF}{\sin D} = \dfrac{DE}{\sin F}$, so $EF = 22 \times \dfrac{\sin 40^\circ}{\sin 75^\circ} \approx 22 \times \dfrac{0.6428}{0.9659} \approx 14.6$.
+
+**Misconception addressed:** Students often pair the given side $DE$ with the wrong angle when setting up the Law of Sines ratio, instead of matching each side with the angle directly opposite it.
+
+---
+
+### GT-072
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Right triangles and trigonometry); not reproduced from any specific real item
+
+**Question:** In right triangle $PQR$, angle $R$ is the right angle. If $\sin(P) = \dfrac{7}{25}$, what is the value of $\cos(Q)$?
+
+A) $\dfrac{7}{25}$
+B) $\dfrac{24}{25}$
+C) $\dfrac{25}{7}$
+D) $\dfrac{25}{24}$
+
+**Correct Answer:** A) $\dfrac{7}{25}$
+
+**Rationale:** Since angle $R$ is the right angle, angles $P$ and $Q$ are complementary ($P + Q = 90^\circ$). For complementary angles, $\cos(Q) = \sin(90^\circ - Q) = \sin(P) = \dfrac{7}{25}$.
+
+**Misconception addressed:** Students often try to compute a third side length before recognizing that the co-function identity $\cos(Q) = \sin(P)$ makes that unnecessary for complementary angles.
+
+---
+
+### GT-073
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Circles); not reproduced from any specific real item
+
+**Question:** A circle in the $xy$-plane has equation $(x+2)^2 + (y-5)^2 = 49$. What is the radius of the circle?
+
+A) $7$
+B) $14$
+C) $24.5$
+D) $49$
+
+**Correct Answer:** A) $7$
+
+**Rationale:** In the standard form $(x-h)^2 + (y-k)^2 = r^2$, the right-hand side equals $r^2$. Since $r^2 = 49$, $r = 7$.
+
+**Misconception addressed:** Students sometimes report the value of $r^2$ itself as the radius instead of taking its square root.
+
+---
+
+### GT-074
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Circles); not reproduced from any specific real item
+
+**Question:** A circle has a radius of $9$ cm. What is the length, in cm, of an arc that subtends a central angle of $80^\circ$? (Use $\pi \approx 3.14$.)
+
+A) $9.4$
+B) $12.6$
+C) $15.7$
+D) $18.8$
+
+**Correct Answer:** B) $12.6$
+
+**Rationale:** The circumference is $2\pi(9) = 18\pi \approx 56.52$ cm. The arc is $\dfrac{80}{360} = \dfrac{2}{9}$ of the full circle: $56.52 \times \dfrac{2}{9} \approx 12.6$ cm.
+
+**Misconception addressed:** Students sometimes use the radius directly in place of the circumference when finding the fractional arc length, skipping the $2\pi r$ step.
+
+---
+
+### GT-075
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Circles); not reproduced from any specific real item
+
+**Question:** A circle has a radius of $12$ meters. What is the area, in square meters, of a sector with a central angle of $150^\circ$? (Use $\pi \approx 3.14$.)
+
+A) $150.8$
+B) $172.3$
+C) $188.4$
+D) $205.6$
+
+**Correct Answer:** C) $188.4$
+
+**Rationale:** The full circle's area is $\pi(12)^2 = 144\pi \approx 452.16$ m². The sector is $\dfrac{150}{360} = \dfrac{5}{12}$ of the full circle: $452.16 \times \dfrac{5}{12} \approx 188.4$ m².
+
+**Misconception addressed:** Students sometimes apply the central-angle fraction to the radius or circumference instead of to the full circle's area.
+
+---
+
+### GT-076
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Circles); not reproduced from any specific real item
+
+**Question:** A circle in the $xy$-plane is defined by the equation $x^2 + y^2 - 6x + 10y + 18 = 0$. What is the center of the circle?
+
+A) $(3, -5)$
+B) $(-3, 5)$
+C) $(6, -10)$
+D) $(3, 5)$
+
+**Correct Answer:** A) $(3, -5)$
+
+**Rationale:** Completing the square: $(x^2 - 6x + 9) + (y^2 + 10y + 25) = -18 + 9 + 25 \Rightarrow (x-3)^2 + (y+5)^2 = 16$. The center is $(3, -5)$.
+
+**Misconception addressed:** Students often keep the sign from the original equation instead of flipping it when reading the center from $(x-h)^2 + (y-k)^2$, reporting $(-3, 5)$ or $(3, 5)$ instead.
+
+---
+
+### GT-077
+
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Area and volume); not reproduced from any specific real item
+
+**Question:** A cylindrical water tank has a radius of $3$ meters and a height of $8$ meters. Which of the following is closest to the volume of the tank, in cubic meters? (Use $\pi \approx 3.14$.)
+
+A) $150.7$
+B) $188.4$
+C) $226.1$
+D) $254.3$
+
+**Correct Answer:** C) $226.1$
+
+**Rationale:** $V = \pi r^2 h = 3.14 \times 3^2 \times 8 = 3.14 \times 9 \times 8 \approx 226.1$ cubic meters.
+
+**Misconception addressed:** Students sometimes use the diameter in place of the radius when squaring, quadrupling the intended value.
+
+---
+
+### GT-078
+
+**Skill:** Area and volume | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Area and volume); not reproduced from any specific real item
+
+**Question:** A trapezoid has parallel sides of length $14$ cm and $22$ cm, and a height of $9$ cm. What is the area of the trapezoid, in cm²?
+
+A) $144$
+B) $153$
+C) $162$
+D) $171$
+
+**Correct Answer:** C) $162$
+
+**Rationale:** Area $= \dfrac{1}{2}(b_1 + b_2)h = \dfrac{1}{2}(14 + 22)(9) = \dfrac{1}{2}(36)(9) = 162$ cm².
+
+**Misconception addressed:** Students sometimes forget the factor of $\dfrac{1}{2}$, or average the two parallel sides incorrectly before multiplying by the height.
+
+---
+
+### GT-079
+
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Area and volume); not reproduced from any specific real item
+
+**Question:** A conical grain storage silo has a radius of $6$ meters and a height of $10$ meters. Which of the following is closest to the volume of the silo, in cubic meters? (Use $\pi \approx 3.14$.)
+
+A) $282.6$
+B) $376.8$
+C) $452.2$
+D) $565.2$
+
+**Correct Answer:** B) $376.8$
+
+**Rationale:** $V = \dfrac{1}{3}\pi r^2 h = \dfrac{1}{3}(3.14)(6^2)(10) = \dfrac{1}{3}(3.14)(36)(10) \approx 376.8$ cubic meters.
+
+**Misconception addressed:** Students often forget the factor of $\dfrac{1}{3}$, computing the volume as if the silo were a cylinder instead of a cone.
+
+---
+
+### GT-080
+
+**Skill:** Area and volume | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Area and volume); not reproduced from any specific real item
+
+**Question:** A spherical water tank has a radius of $5$ meters. Which of the following is closest to the surface area of the tank, in square meters? (Use $\pi \approx 3.14$ and the formula $SA = 4\pi r^2$.)
+
+A) $235.5$
+B) $261.7$
+C) $314.0$
+D) $392.5$
+
+**Correct Answer:** C) $314.0$
+
+**Rationale:** $SA = 4\pi r^2 = 4(3.14)(5^2) = 4(3.14)(25) \approx 314.0$ square meters.
+
+**Misconception addressed:** Students sometimes use the volume formula for a sphere instead of the surface-area formula, or omit the factor of $4$.
+
+---
+
+### GT-081
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** Two lines intersect, forming four angles. One angle measures $(5x + 10)^\circ$ and the angle vertical to it measures $(3x + 30)^\circ$. What is the value of $x$?
+
+A) $8$
+B) $10$
+C) $12$
+D) $15$
+
+**Correct Answer:** B) $10$
+
+**Rationale:** Vertical angles are congruent: $5x + 10 = 3x + 30 \Rightarrow 2x = 20 \Rightarrow x = 10$.
+
+**Misconception addressed:** Students sometimes treat vertical angles as supplementary (summing to $180^\circ$) instead of congruent, which applies to a linear pair instead.
+
+---
+
+### GT-082
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** A triangle has side lengths of $7$, $10$, and $x$, where $x$ is an integer. What is the greatest possible value of $x$?
+
+A) $15$
+B) $16$
+C) $17$
+D) $18$
+
+**Correct Answer:** B) $16$
+
+**Rationale:** By the Triangle Inequality, the third side must be less than the sum of the other two: $x < 7 + 10 = 17$. The greatest integer less than $17$ is $16$.
+
+**Misconception addressed:** Students often include $17$ itself as a valid value, forgetting that the inequality is strict (a triangle cannot have a side exactly equal to the sum of the other two).
+
+---
+
+### GT-083
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** In isosceles triangle $ABC$, $AB = AC$, and the measure of angle $A$ is $30^\circ$ more than the measure of angle $B$. What is the measure, in degrees, of angle $C$?
+
+**Correct Answer:** $50$
+
+**Rationale:** Since $AB = AC$, the angles opposite these sides are equal: angle $B$ = angle $C$. Let angle $B = $ angle $C = b$; then angle $A = b + 30$. The angles sum to $180^\circ$: $(b+30) + b + b = 180 \Rightarrow 3b = 150 \Rightarrow b = 50$. So angle $C = 50^\circ$.
+
+**Misconception addressed:** Students sometimes assume the wrong pair of angles is equal (e.g., $A = B$) instead of identifying that the base angles opposite the two equal sides are the congruent pair.
+
+---
+
+### GT-084
+
+**Skill:** Lines, angles, and triangles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, aligned to the official College Board SAT Math skill definition (Lines, angles, and triangles); not reproduced from any specific real item
+
+**Question:** In triangle $ABC$, points $M$ and $N$ are the midpoints of sides $AB$ and $AC$, respectively. If $MN = 3x - 4$ and $BC = 5x + 2$, what is the length of $BC$?
+
+A) $42$
+B) $47$
+C) $52$
+D) $56$
+
+**Correct Answer:** C) $52$
+
+**Rationale:** By the Midsegment Theorem, $MN = \dfrac{1}{2}BC$. So $3x - 4 = \dfrac{1}{2}(5x+2) \Rightarrow 6x - 8 = 5x + 2 \Rightarrow x = 10$. Then $BC = 5(10) + 2 = 52$.
+
+**Misconception addressed:** Students sometimes set $MN = BC$ directly, forgetting that the midsegment is half the length of the side it is parallel to.
+
+---
+
+---
+
+### 2.20 Simulated Batch 16 — Systems of Linear Inequalities, Equation Interpretation, and Rate/Budget Word Problems (6 items — A-109 to A-114)
+
+*Source note: this batch closes a genuine coverage gap surfaced while reviewing a third-party SAT prep PDF the teacher uploaded (a paywalled, copyrighted "Strategic Test Prep" product captured via Scribd screenshots). Per the bank's standing provenance rule, **no question, number, wording, or figure was extracted or reproduced from that PDF** — it was used only to identify question-format types not yet present in this bank. Cross-checked against the existing 339 items first: no-solution/infinite-solutions systems (multiple surface forms), linear-function-from-table items, and equivalent-rational-expression simplification were all already well covered (see A-008, A-076, A-077, A-085, A-093, A-024, A-025, AM-011, AM-012, AM-058 and others) and are **not** repeated here. The genuinely missing pattern was **systems of two linear inequalities** — this bank had zero items testing that skill format (point-testing, table-matching, or a real-world optimization constraint) even though "Linear inequalities in one or two variables" already carries single-inequality items. This batch adds that format, plus two adjacent formats seen repeatedly in the source (interpreting one term of an equation in context; setting up a system from two combined rates), each entirely original in numbers, context, and phrasing.*
+
+### A-109
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear inequalities in one or two variables (Medium) — closes the "systems of inequalities" format gap
+
+**Question:** Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities below?
+
+$$y \geq 3x - 4$$
+$$y < -2x + 6$$
+
+A) $(1, 2)$
+B) $(2, 5)$
+C) $(0, -5)$
+D) $(3, -2)$
+
+**Correct Answer:** A) $(1, 2)$
+
+**Rationale:** Testing $(1,2)$: $3(1)-4={-1}$, and $2 \geq {-1}$ ✓. Also $-2(1)+6=4$, and $2<4$ ✓. Both inequalities hold. Testing $(2,5)$ fails the second inequality ($-2(2)+6=2$, and $5<2$ is false); testing $(0,{-5})$ fails the first ($3(0)-4={-4}$, and ${-5}\geq{-4}$ is false); testing $(3,{-2})$ fails the first ($3(3)-4=5$, and ${-2}\geq5$ is false).
+
+**Misconception addressed:** Students often check only one inequality and stop, selecting the first point that satisfies it without confirming the point also satisfies the second.
+
+---
+
+### A-110
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear inequalities in one or two variables (Hard) — table-matching format, not previously in this bank
+
+**Question:** Which table below shows only points $(x, y)$ that satisfy the system of inequalities?
+
+$$y > -x + 2$$
+$$y \leq 3x - 1$$
+
+A) $\begin{array}{c|cc}x&2&4\\\hline y&3&6\end{array}$
+
+B) $\begin{array}{c|cc}x&2&0\\\hline y&3&1\end{array}$
+
+C) $\begin{array}{c|cc}x&1&4\\\hline y&{-3}&6\end{array}$
+
+D) $\begin{array}{c|cc}x&2&4\\\hline y&3&15\end{array}$
+
+**Correct Answer:** A
+
+**Rationale:** For $(2,3)$: $-2+2=0$, $3>0$ ✓, and $3(2)-1=5$, $3\leq5$ ✓. For $(4,6)$: $-4+2={-2}$, $6>{-2}$ ✓, and $3(4)-1=11$, $6\leq11$ ✓. Both points in table A satisfy both inequalities. Table B's point $(0,1)$ fails the first inequality ($1>2$ is false). Table C's point $(1,{-3})$ fails the first inequality (${-3}>1$ is false). Table D's point $(4,15)$ fails the second inequality ($15\leq11$ is false).
+
+**Misconception addressed:** Students often check only the first point in a candidate table and, once it satisfies the system, assume the second point does too without testing it separately.
+
+---
+
+### A-111
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear inequalities in one or two variables (Hard) — real-world optimization-under-constraints format
+
+**Question:** A charity bazaar in Jeddah is preparing gift baskets for a Vision 2030 community outreach event. A small basket costs SAR $8$ to prepare and a large basket costs SAR $20$. The organizers have a materials budget of SAR $2{,}500$ and must prepare at least $150$ baskets in total. What is the maximum number of large baskets the organizers can prepare while meeting both requirements?
+
+A) $100$
+B) $104$
+C) $108$
+D) $125$
+
+**Correct Answer:** C) $108$
+
+**Rationale:** Let $x$ = small baskets and $y$ = large baskets. The constraints are $8x+20y\leq2{,}500$ and $x+y\geq150$. To maximize $y$, use the minimum baskets needed, $x=150-y$, and substitute into the budget constraint: $8(150-y)+20y\leq2{,}500 \Rightarrow 1{,}200+12y\leq2{,}500 \Rightarrow y\leq108.33$. Since $y$ must be a whole number, $y=108$ (checked: $x=42$, cost $=8(42)+20(108)=336+2{,}160=2{,}496\leq2{,}500$, and total $=150$, both requirements met). $y=109$ would require $x=41$, costing SAR $2{,}508$, over budget.
+
+**Misconception addressed:** Students often optimize using only one constraint (e.g., $2{,}500\div20=125$, option D, ignoring the minimum-basket requirement) instead of combining both constraints before maximizing, or round the boundary value up instead of down.
+
+---
+
+### A-112
+
+**Skill:** Linear equations in two variables | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear equations in two variables (Medium) — interpreting a term of an equation in context, a format not previously in this bank
+
+**Question:** A recycling program in Dammam pays SAR $0.50$ for every kilogram of paper collected and gives a SAR $60$ bonus to every school team that meets its monthly collection target. In one month, the total amount paid, in SAR, to all participating teams is modeled by
+
+$$0.50k + 60t = 900$$
+
+where $k$ is the total kilograms of paper collected and $t$ is the number of teams that met their target. What does the term $60t$ represent in this equation?
+
+A) The total number of teams participating in the program
+B) The total bonus amount, in SAR, paid to the teams that met their target
+C) The average number of kilograms collected per team
+D) The total number of kilograms collected by teams that met their target
+
+**Correct Answer:** B) The total bonus amount, in SAR, paid to the teams that met their target
+
+**Rationale:** Each team that meets its target earns a fixed SAR $60$ bonus, so $t$ teams earn a combined bonus of $60t$ SAR — this is the portion of the total payment coming from bonuses, separate from the $0.50k$ portion paid for paper weight.
+
+**Misconception addressed:** Students often interpret a constant coefficient times a variable as a count of items (option A) rather than as a monetary total, confusing the variable $t$ itself with the term $60t$.
+
+---
+
+### A-113
+
+**Skill:** Systems of two linear equations in two variables | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Systems of two linear equations in two variables (Medium) — combined-rate word problem in a two-speed setup, a format not previously in this bank
+
+**Question:** Sara trains along the Jeddah Corniche by walking part of the distance at $5$ kilometers per hour and jogging the rest at $9$ kilometers per hour. She exercises for a total of $2$ hours and covers a total distance of $14$ kilometers. How many hours did she spend walking?
+
+**Correct Answer:** $1$
+
+**Rationale:** Let $w$ = hours walking and $j$ = hours jogging. Then $w+j=2$ and $5w+9j=14$. Substituting $w=2-j$: $5(2-j)+9j=14 \Rightarrow 10+4j=14 \Rightarrow j=1$, so $w=2-1=1$.
+
+**Misconception addressed:** Students sometimes set up the distance equation with the speeds attached to the wrong variable (e.g., $9w+5j=14$), reversing which rate belongs to walking versus jogging.
+
+---
+
+### A-114
+
+**Skill:** Linear inequalities in one or two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), coverage top-up for Algebra — Linear inequalities in one or two variables (Hard) — least-integer-solution variant of the systems-of-inequalities format
+
+**Question:** In the $xy$-plane, the point $(4, k)$ satisfies the system of inequalities below, where $k$ is the least possible integer value.
+
+$$y > 2x - 9$$
+$$y \geq -x + 6$$
+
+What is the value of $k$?
+
+**Correct Answer:** $2$
+
+**Rationale:** At $x=4$: the first inequality gives $y>2(4)-9={-1}$, so the least integer satisfying it alone would be $0$. The second gives $y\geq-4+6=2$, which is the stricter (binding) constraint. Combining both, $y\geq2$ is required, and $y=2$ also satisfies $y>{-1}$. So the least possible integer value is $k=2$.
+
+**Misconception addressed:** Students often solve only the inequality that looks simpler (usually the first one they read) and stop, missing that the second inequality is the binding constraint that actually determines the least value.
+
+---
+
+
+### 2.21 Simulated Batch 17 — Circle Equations, Exponential/Exponent Forms, and Polynomial Root-Counting (11 items — GT-085 to GT-086, AM-079 to AM-087)
+
+*Source note: the teacher shared a further set of screenshots from the same third-party "Strategic Test Prep" PDF reviewed in §2.20 and said he liked the item styles. As before, per the bank's standing provenance rule, **no question, number, wording, or figure was copied** from that copyrighted material — only the underlying skill patterns (non-standard circle-equation forms, exponential/exponent-equation manipulation, and polynomial root/multiplicity counting) were used as a style guide. Every item below is entirely original in numbers, phrasing, and context, and every answer was independently verified by hand before being written in. Two items from the source (a table-style circle radius problem and a graph-matching exponential problem) were adapted into figure-free equivalents, consistent with this bank's standing rule against unverified hand-drawn diagrams — the underlying reasoning skill is unchanged.*
+
+### GT-085
+
+**Skill:** Circles | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a non-standard "product form" circle equation
+
+**Question:** The equation of a circle in the $xy$-plane is $x\left(x-8\right)+y\left(y+6\right)=39$. What is the radius of the circle?
+
+A) $6$
+
+B) $7$
+
+C) $8$
+
+D) $9$
+
+**Correct Answer:** C) $8$
+
+**Rationale:** Distributing first: $x^{2}-8x+y^{2}+6y=39$. Completing the square: $\left(x-4\right)^{2}-16+\left(y+3\right)^{2}-9=39$, so $\left(x-4\right)^{2}+\left(y+3\right)^{2}=64$. The radius is $\sqrt{64}=8$.
+
+**Misconception addressed:** Students often try to complete the square directly on the product form without distributing first, or mistake the right-hand side of the final equation ($64$) for the radius itself instead of taking its square root.
+
+---
+
+### GT-086
+
+**Skill:** Circles | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a circle-equation-from-center-and-point problem
+
+**Question:** A circle in the $xy$-plane has center $\left(0,3\right)$ and passes through the point $\left(5,15\right)$. Which of the following is an equation of the circle?
+
+A) $x^{2}+\left(y-3\right)^{2}=144$
+
+B) $x^{2}+\left(y-3\right)^{2}=169$
+
+C) $\left(x-5\right)^{2}+\left(y-3\right)^{2}=169$
+
+D) $x^{2}+\left(y-3\right)^{2}=13$
+
+**Correct Answer:** B) $x^{2}+\left(y-3\right)^{2}=169$
+
+**Rationale:** The radius is the distance from the center to the given point: $r=\sqrt{\left(5-0\right)^{2}+\left(15-3\right)^{2}}=\sqrt{25+144}=\sqrt{169}=13$, so $r^{2}=169$. Using center $\left(0,3\right)$: $x^{2}+\left(y-3\right)^{2}=169$.
+
+**Misconception addressed:** Students sometimes report $r$ itself ($13$) as the constant on the right-hand side instead of $r^{2}$, or build the equation around the given point as the center instead of the stated center $\left(0,3\right)$.
+
+---
+
+### AM-079
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a shifted-exponential y-intercept problem
+
+**Question:** The function $f$ is defined by $f\left(x\right)=\left(-5\right)\left(3\right)^{x}+7$. What is the $y$-intercept of the graph of $y=f\left(x\right)$ in the $xy$-plane?
+
+A) $\left(0,{-5}\right)$
+
+B) $\left(0,2\right)$
+
+C) $\left(0,7\right)$
+
+D) $\left(0,{-12}\right)$
+
+**Correct Answer:** B) $\left(0,2\right)$
+
+**Rationale:** The $y$-intercept occurs at $x=0$: $f\left(0\right)=\left(-5\right)\left(3^{0}\right)+7=\left(-5\right)\left(1\right)+7=2$.
+
+**Misconception addressed:** Students often read off the coefficient ($-5$) or the added constant ($7$) directly as the $y$-intercept instead of substituting $x=0$ and evaluating the full expression.
+
+---
+
+### AM-080
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a real-world percent-growth exponential-model-selection problem
+
+**Question:** The population of a coastal town near Yanbu has grown at an average rate of $2.4\%$ per year since $2010$. There were approximately $60{,}000$ residents in $2010$. Which of the following functions best models the town's population $P$, in thousands of residents, $t$ years after $2010$?
+
+A) $P\left(t\right)=60\left(1.024\right)^{t}$
+
+B) $P\left(t\right)=60\left(2.4\right)^{t}$
+
+C) $P\left(t\right)=1.024t+60$
+
+D) $P\left(t\right)=2.4t+60$
+
+**Correct Answer:** A) $P\left(t\right)=60\left(1.024\right)^{t}$
+
+**Rationale:** A constant percent growth rate corresponds to an exponential model with growth factor $1+\dfrac{2.4}{100}=1.024$, applied each year to the initial population of $60$ thousand: $P\left(t\right)=60\left(1.024\right)^{t}$.
+
+**Misconception addressed:** Students often use the raw percent ($2.4$) as the base of the exponential (option B) instead of converting it to a growth factor close to $1$, or default to a linear model (options C, D) when the problem describes a constant percent rate rather than a constant amount.
+
+---
+
+### AM-081
+
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to an exponent-equation problem
+
+**Question:** If $\dfrac{x^{a^{2}}}{x^{b^{2}}}=x^{20}$, $x>1$, and $a+b=4$, what is the value of $a-b$?
+
+**Correct Answer:** $5$
+
+**Rationale:** Using the quotient rule for exponents, $\dfrac{x^{a^{2}}}{x^{b^{2}}}=x^{a^{2}-b^{2}}$, so $a^{2}-b^{2}=20$. Factoring, $\left(a-b\right)\left(a+b\right)=20$. Since $a+b=4$: $\left(a-b\right)\left(4\right)=20 \Rightarrow a-b=5$.
+
+**Misconception addressed:** Students often try to solve for $a$ and $b$ individually before subtracting, rather than recognizing that $a^{2}-b^{2}$ factors directly into $\left(a-b\right)\left(a+b\right)$, a much faster route to the answer.
+
+---
+
+### AM-082
+
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a nested-radical-exponent problem
+
+**Question:** If $x>0$ and $\sqrt{x\sqrt{x}}=x^{a}$, what is the value of $a$?
+
+**Correct Answer:** $\dfrac{3}{4}$
+
+**Rationale:** Rewrite $\sqrt{x}=x^{1/2}$, so $x\sqrt{x}=x^{1}\cdot x^{1/2}=x^{3/2}$. Then $\sqrt{x^{3/2}}=\left(x^{3/2}\right)^{1/2}=x^{3/4}$. So $a=\dfrac{3}{4}$.
+
+**Misconception addressed:** Students often add the exponents incorrectly (treating the outer square root as adding $\dfrac{1}{2}$ rather than multiplying by it), arriving at $a=2$ instead of $a=\dfrac{3}{4}$.
+
+---
+
+### AM-083
+
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a variable-exponent equation problem
+
+**Question:** If $a^{b/5}=32$ for positive integers $a$ and $b$, where $a$ is a prime number, what is the value of $b$?
+
+**Correct Answer:** $25$
+
+**Rationale:** Since $32=2^{5}$ and $a$ must be prime, $a=2$. Then $2^{b/5}=2^{5}$, so $\dfrac{b}{5}=5$, giving $b=25$.
+
+**Misconception addressed:** Students often try non-prime bases (such as $a=4$ or $a=32$) that also satisfy the equation, missing that the "prime" condition forces a unique value of $a$ before solving for $b$.
+
+---
+
+### AM-084
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a rational-function end-behavior problem
+
+**Question:** The function $f$ is defined by $f\left(x\right)=\dfrac{12-x}{2+x}$, where $x\neq{-2}$. As the value of $x$ increases without bound, the value of $f\left(x\right)$ approaches which of the following?
+
+A) ${-2}$
+
+B) ${-1}$
+
+C) $1$
+
+D) $12$
+
+**Correct Answer:** B) ${-1}$
+
+**Rationale:** Dividing numerator and denominator by $x$: $f\left(x\right)=\dfrac{\frac{12}{x}-1}{1+\frac{2}{x}}$. As $x\to\infty$, $\dfrac{12}{x}\to0$ and $\dfrac{2}{x}\to0$, so $f\left(x\right)\to\dfrac{-1}{1}={-1}$.
+
+**Misconception addressed:** Students often assume any rational function with $x$ in the denominator approaches $0$ for large $x$, without checking that the numerator here also has degree $1$, so the ratio approaches the ratio of leading coefficients instead.
+
+---
+
+### AM-085
+
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a "which is a factor" polynomial problem
+
+**Question:** Which of the following is a factor of the polynomial $\left(x^{2}-9\right)\left(x+7\right)$?
+
+A) $x-2$
+
+B) $x+3$
+
+C) $x-4$
+
+D) $x+5$
+
+**Correct Answer:** B) $x+3$
+
+**Rationale:** The first factor is a difference of squares: $x^{2}-9=\left(x-3\right)\left(x+3\right)$. So the full factorization is $\left(x-3\right)\left(x+3\right)\left(x+7\right)$, and $x+3$ is one of its factors.
+
+**Misconception addressed:** Students sometimes test each answer choice as a possible zero of the *expanded* polynomial by guessing, rather than factoring the given expression directly to read off its factors.
+
+---
+
+### AM-086
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a distinct-x-intercepts-from-multiplicity problem
+
+**Question:** $y=\left(x-p\right)^{2}\left(x+p\right)\left(x-q\right)$, where $p$ and $q$ are positive constants and $p\neq q$. How many distinct $x$-intercepts does the graph of this equation have in the $xy$-plane?
+
+A) $1$
+
+B) $2$
+
+C) $3$
+
+D) $4$
+
+**Correct Answer:** C) $3$
+
+**Rationale:** Setting each factor to zero gives $x=p$ (multiplicity $2$), $x=-p$, and $x=q$. Since $p$ is positive, $p\neq-p$; and since $p\neq q$ and $q$ is positive while $-p$ is negative, $q\neq-p$ either. So there are exactly $3$ distinct $x$-values, even though $x=p$ is a repeated root.
+
+**Misconception addressed:** Students often count the repeated factor $\left(x-p\right)^{2}$ as contributing two distinct intercepts instead of recognizing that a multiplicity greater than $1$ still corresponds to only one distinct $x$-value.
+
+---
+
+### AM-087
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a sum-of-solutions problem with a repeated root
+
+**Question:** $x^{2}\left(x+5\right)\left(x-b\right)=0$
+
+In the given equation, $b$ is a positive constant. The sum of the solutions of the equation is $7$. What is the value of $b$?
+
+**Correct Answer:** $12$
+
+**Rationale:** The distinct solutions to the equation are $x=0$ (from $x^{2}$, counted once as a solution), $x=-5$, and $x=b$. Their sum is $0+\left({-5}\right)+b=7$, so $b=12$.
+
+**Misconception addressed:** Students sometimes count the repeated root $x=0$ twice when summing the solutions, or set up the sum with the wrong sign on $-5$.
+
+---
+
+
+### 2.22 Simulated Batch 18 — Legacy-Style Algebraic Reasoning: Sequences, Custom Operations, Percent Chains, and Radical/Exponent Puzzles (16 items — A-115 to A-119, AM-088 to AM-095, GT-087, PS-070 to PS-071)
+
+*Source note: the teacher shared screenshots from a set of older, paper-format SAT practice tests (a "testprofessors.com" commercial product, five-option A–E legacy format) and asked to simulate the valuable questions among them. As always, **no question, number, wording, or figure was copied** — only the underlying reasoning patterns were used, and every item below is entirely original, re-numbered to this bank's four-option Digital SAT format, and independently verified by hand. Figure-dependent items from the source (coordinate-plane rays, function graphs, geometric diagrams) were skipped rather than risk an unverified hand-drawn diagram, consistent with this bank's standing rule.*
+
+### A-115
+
+**Skill:** Linear equations in one variable | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a consecutive-integer sum/count problem
+
+**Question:** The smallest integer in a set of consecutive integers is ${-11}$. If the sum of the integers in the set is $12$, what is the total number of integers in the set?
+
+**Correct Answer:** $24$
+
+**Rationale:** For $n$ consecutive integers starting at $-11$, the sum is $n\left({-11}\right)+\dfrac{n\left(n-1\right)}{2}$. Setting this equal to $12$ and testing $n=24$: the integers run from $-11$ to $12$, and pairing $-11$ with $11$ through $-1$ with $1$ cancels to $0$, leaving only $12$ unpaired — a sum of $12$. So $n=24$.
+
+**Misconception addressed:** Students often compute the difference between the last and first term (giving $23$) instead of the total count of integers, forgetting to add $1$ to include both endpoints.
+
+---
+
+### AM-088
+
+**Skill:** Nonlinear functions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a recursive-sequence-threshold problem
+
+**Question:** In a sequence, the first term is ${-4}$. Each term after the first is three less than double the preceding term. Which term is the first one whose absolute value is greater than $150$?
+
+A) $3$
+
+B) $4$
+
+C) $5$
+
+D) $6$
+
+**Correct Answer:** D) $6$
+
+**Rationale:** Applying the rule $a_{n+1}=2a_{n}-3$: $a_1={-4}$, $a_2={-11}$, $a_3={-25}$, $a_4={-53}$, $a_5={-109}$, $a_6={-221}$. The absolute value first exceeds $150$ at $a_6=221$.
+
+**Misconception addressed:** Students often apply the recursive rule to the term number $n$ instead of the previous term's value (e.g., computing $2n-3$), producing a sequence that grows far too slowly.
+
+---
+
+### AM-089
+
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a chained-equality radical/exponent problem
+
+**Question:** If $x>0$ and $\sqrt{x}=x\sqrt{x}=x^{2}=\sqrt{x^{2}}$, what is the value of $x$?
+
+**Correct Answer:** $1$
+
+**Rationale:** From $x\sqrt{x}=x^{2}$ (and $x\neq0$), divide both sides by $x$: $\sqrt{x}=x$. Squaring: $x=x^{2} \Rightarrow x^{2}-x=0 \Rightarrow x\left(x-1\right)=0$. Since $x>0$, $x=1$. Checking: $\sqrt{1}=1$, $1\cdot\sqrt{1}=1$, $1^{2}=1$, $\sqrt{1^{2}}=1$ — all four expressions equal $1$.
+
+**Misconception addressed:** Students often try to solve each equality in the chain separately instead of recognizing that any two of the four expressions being equal is enough to pin down $x$, then verifying against the rest.
+
+---
+
+### AM-090
+
+**Skill:** Equivalent expressions | **Difficulty:** Hard | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a chained rational-exponent problem
+
+**Question:** If $s^{2}=t^{-1}$ and $t^{1/3}=u^{-1/2}$, then what is the value of $s$ in terms of $u$, for $s>0$?
+
+A) $u^{-3/4}$
+
+B) $u^{-1/2}$
+
+C) $u^{1/2}$
+
+D) $u^{3/4}$
+
+**Correct Answer:** D) $u^{3/4}$
+
+**Rationale:** From $t^{1/3}=u^{-1/2}$, raise both sides to the third power: $t=u^{-3/2}$. Then $s^{2}=t^{-1}=u^{3/2}$, so $s=\left(u^{3/2}\right)^{1/2}=u^{3/4}$ (taking the positive root since $s>0$).
+
+**Misconception addressed:** Students often forget to take the square root of both sides when going from $s^2$ to $s$, or mishandle the negative exponent when inverting $t^{-3/2}$ to get $t^{3/2}$... equivalently $u^{3/2}$, halving the exponent incorrectly.
+
+---
+
+### PS-070
+
+**Skill:** One-variable data: mean, median, range, standard deviation | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a pairwise-average problem
+
+**Question:** If the average (arithmetic mean) of $w$ and $x$ is $40$, the average of $p$ and $q$ is $40$, and the average of $m$ and $n$ is $40$, what is the average of $w$, $x$, $p$, $q$, $m$, and $n$?
+
+**Correct Answer:** $40$
+
+**Rationale:** Each pair sums to $80$ (since its average is $40$), so all three pairs sum to $3\left(80\right)=240$ across $6$ numbers. The overall average is $\dfrac{240}{6}=40$ — the same as each pair's individual average.
+
+**Misconception addressed:** Students often assume more computation is needed, not recognizing that when every sub-group has the same average, the average of the combined group must equal that same value.
+
+---
+
+### AM-091
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a consecutive-integers-with-square-root problem
+
+**Question:** $a$ and $b$ are positive consecutive integers, and $b>a$. If $b$ is thirteen more than $\sqrt{a}$, what is the value of $a$?
+
+**Correct Answer:** $16$
+
+**Rationale:** Since $a$ and $b$ are consecutive, $b=a+1$. Substituting into $b=13+\sqrt{a}$: $a+1=13+\sqrt{a} \Rightarrow a-\sqrt{a}-12=0$. Letting $u=\sqrt{a}$: $u^{2}-u-12=0 \Rightarrow \left(u-4\right)\left(u+3\right)=0$. Since $u=\sqrt{a}\geq0$, $u=4$, so $a=16$ (and $b=17$, confirmed: $13+\sqrt{16}=13+4=17$).
+
+**Misconception addressed:** Students often substitute $u=\sqrt{a}$ but then forget to square $u$ back to find $a$, reporting $a=4$ instead of $a=16$.
+
+---
+
+### AM-092
+
+**Skill:** Nonlinear functions | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a direct-proportionality-with-a-square problem
+
+**Question:** $x$ and $y^{2}$ are directly proportional. If $x=6$ when $y^{2}=8$, what is the value of $y^{2}$ when $x=15$?
+
+**Correct Answer:** $20$
+
+**Rationale:** Since $x$ and $y^2$ are directly proportional, $x=k y^2$ for a constant $k$. Using $6=k\left(8\right)$: $k=\dfrac{3}{4}$. When $x=15$: $15=\dfrac{3}{4}y^{2} \Rightarrow y^{2}=20$.
+
+**Misconception addressed:** Students often set up an inverse proportion ($xy^2=\text{constant}$) instead of a direct one, or solve for $y$ instead of $y^2$ and then forget to square it back.
+
+---
+
+### AM-093
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a parabola–line intersection problem
+
+**Question:** If the graphs of $y=x^{2}+1$ and $y={-5x}+p$ intersect at the point $\left(2,r\right)$, what is the value of $\dfrac{p}{r}$?
+
+**Correct Answer:** $3$
+
+**Rationale:** Since $\left(2,r\right)$ is on $y=x^2+1$: $r=2^{2}+1=5$. Since $\left(2,r\right)$ is also on $y={-5x}+p$: $5={-5}\left(2\right)+p \Rightarrow 5={-10}+p \Rightarrow p=15$. So $\dfrac{p}{r}=\dfrac{15}{5}=3$.
+
+**Misconception addressed:** Students sometimes substitute $x=2$ into only one of the two equations, or solve for $p$ and $r$ using two different, inconsistent $x$-values.
+
+---
+
+### A-116
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a custom-operation-notation problem
+
+**Question:** If $x\circledast y=5y-3\left(x+y\right)$, what is the value of $2\circledast6$?
+
+**Correct Answer:** $6$
+
+**Rationale:** Substituting $x=2$ and $y=6$: $2\circledast6=5\left(6\right)-3\left(2+6\right)=30-3\left(8\right)=30-24=6$.
+
+**Misconception addressed:** Students sometimes substitute the values into the operation in the wrong order (swapping which value plays the role of $x$ versus $y$), since the custom symbol gives no visual cue about order the way $+$ or $\times$ would.
+
+---
+
+### AM-094
+
+**Skill:** Nonlinear equations in one variable and systems of equations in two variables | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a composed-function equation problem
+
+**Question:** The functions $f$ and $h$ are defined by $f\left(x\right)=x^{2}+3x-40$ and $h\left(x\right)=x^{2}$. If $3h\left(x\right)=f\left(2x\right)$, what is the positive value of $x$?
+
+**Correct Answer:** $4$
+
+**Rationale:** $3h\left(x\right)=3x^{2}$, and $f\left(2x\right)=\left(2x\right)^{2}+3\left(2x\right)-40=4x^{2}+6x-40$. Setting these equal: $3x^{2}=4x^{2}+6x-40 \Rightarrow 0=x^{2}+6x-40 \Rightarrow \left(x+10\right)\left(x-4\right)=0$, so $x=4$ or $x={-10}$. The positive value is $x=4$.
+
+**Misconception addressed:** Students often substitute $2x$ into $f$ but forget to also square the coefficient $2$ inside $\left(2x\right)^2$, writing $2x^2$ instead of $4x^2$.
+
+---
+
+### PS-071
+
+**Skill:** Percentages | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a nested-percent-chain problem
+
+**Question:** If $30$ percent of $40$ percent of $x$ is equal to $50$ percent of $y$ minus $20$ percent of $y$, what is the value of $x$ in terms of $y$?
+
+A) $x=2y$
+
+B) $x=2.5y$
+
+C) $x=3y$
+
+D) $x=5y$
+
+**Correct Answer:** B) $x=2.5y$
+
+**Rationale:** $30\%$ of $40\%$ of $x$ is $\left(0.3\right)\left(0.4\right)x=0.12x$. The right side is $0.5y-0.2y=0.3y$. Setting $0.12x=0.3y$ gives $x=\dfrac{0.3}{0.12}y=2.5y$.
+
+**Misconception addressed:** Students often multiply the two percentages on the left incorrectly (adding them, or multiplying by $100$ instead of the decimal form), or subtract the percentages on the right in the wrong order.
+
+---
+
+### A-117
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a consecutive-even-integers problem
+
+**Question:** $a$, $b$, and $c$ are positive consecutive even integers, and $c>b>a$. What is the value of $b^{2}$ in terms of $a$?
+
+A) $a^{2}+2$
+
+B) $\left(a+1\right)^{2}$
+
+C) $\left(a+2\right)^{2}$
+
+D) $a^{2}+4$
+
+**Correct Answer:** C) $\left(a+2\right)^{2}$
+
+**Rationale:** Since $a$, $b$, $c$ are consecutive even integers with $c>b>a$, they differ by $2$ each: $b=a+2$ and $c=a+4$. So $b^{2}=\left(a+2\right)^{2}$.
+
+**Misconception addressed:** Students often use a spacing of $1$ (as for consecutive integers) instead of $2$ (for consecutive *even* integers), reporting $\left(a+1\right)^{2}$.
+
+---
+
+### GT-087
+
+**Skill:** Right triangles and trigonometry | **Difficulty:** Hard | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a coordinate-distance/rate word problem
+
+**Question:** Layla walked from Noor's house $4$ miles due north, then $3$ miles due east, while Noor walked $2$ miles due south and $5$ miles due west. If Noor were to walk directly to Layla's location, how many hours would it take her, if Noor walks at a rate of $5$ miles per hour?
+
+**Correct Answer:** $2$
+
+**Rationale:** Taking Noor's house as the origin, Layla ends at $\left(3,4\right)$ and Noor ends at $\left({-5},{-2}\right)$. The straight-line distance between them is $\sqrt{\left(3-\left({-5}\right)\right)^{2}+\left(4-\left({-2}\right)\right)^{2}}=\sqrt{8^{2}+6^{2}}=\sqrt{64+36}=\sqrt{100}=10$ miles. At $5$ miles per hour, the time is $\dfrac{10}{5}=2$ hours.
+
+**Misconception addressed:** Students often add the two people's individual walking distances together directly, instead of finding the straight-line (hypotenuse) distance between their two final positions.
+
+---
+
+### AM-095
+
+**Skill:** Equivalent expressions | **Difficulty:** Medium | **Format:** Multiple Choice
+
+**Source:** House-authored, simulated (original), style-matched to a "scaling a product of squares" problem
+
+**Question:** If $k=m^{2}n^{2}$, $k$ is not $0$, and the values of $m$ and $n$ are both tripled, then the value of $k$ increases by which of the following factors?
+
+A) $3$
+
+B) $9$
+
+C) $27$
+
+D) $81$
+
+**Correct Answer:** D) $81$
+
+**Rationale:** Replacing $m$ with $3m$ and $n$ with $3n$: the new value is $\left(3m\right)^{2}\left(3n\right)^{2}=9m^{2}\cdot9n^{2}=81m^{2}n^{2}=81k$. So $k$ increases by a factor of $81$.
+
+**Misconception addressed:** Students often multiply the scale factor ($3$) by the number of variables scaled ($2$) to get $6$, or square it only once instead of once for each squared variable, undercounting the total factor.
+
+---
+
+### A-118
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to a consecutive-odd-integers-product problem
+
+**Question:** $m$, $n$, and $p$ are three consecutive positive odd integers such that $m<n<p$. If their sum is $63$, what is the value of $mp$?
+
+**Correct Answer:** $437$
+
+**Rationale:** For three consecutive odd integers, the sum equals $3$ times the middle term: $3n=63 \Rightarrow n=21$. So $m=19$ and $p=23$, and $mp=19\times23=437$.
+
+**Misconception addressed:** Students often divide the sum by $3$ and use that result as $m$ (the smallest term) rather than $n$ (the middle term), then build the wrong set of three integers.
+
+---
+
+### A-119
+
+**Skill:** Linear equations in one variable | **Difficulty:** Medium | **Format:** Student-Produced Response
+
+**Source:** House-authored, simulated (original), style-matched to an age-difference word problem
+
+**Question:** Yousef is now five times as old as his sister Lama. In $20$ years, he will be $16$ years older than Lama. What is Yousef's age now?
+
+**Correct Answer:** $20$
+
+**Rationale:** Let Lama's current age be $x$, so Yousef's is $5x$. Since the age difference between two people never changes over time, the "$16$ years older in $20$ years" condition is the same as the current difference: $5x-x=16 \Rightarrow 4x=16 \Rightarrow x=4$. Yousef's age is $5\left(4\right)=20$.
+
+**Misconception addressed:** Students often set up the future ages as $5x+20$ and $x+20$ and solve a needlessly complex equation, not recognizing that the age difference is constant, so the "$20$ years" detail doesn't change the answer.
+
+---
+
+
+### 2.23 Simulated Batch 20 — Style-Matched from "SAT Math Hard Practice Quiz" (erikthered.com/tutor)
+
+*Source note: The teacher shared a legacy paper-format practice quiz ("SAT Math Hard Practice Quiz," erikthered.com/tutor, 18 pages, five-option A–E format spanning Numbers and Operations, Algebra and Functions, Geometry, and Data/Statistics/Probability). Per house policy, no numbers, wording, or figures from this source are reproduced. The 20 items below are original, house-authored items that simulate the underlying skill and reasoning pattern of selected source questions, converted to the Digital SAT's four-option MC or Student-Produced Response (SPR) format. Every figure-dependent Geometry item in the source (a parabola/line graph read-off, a 30-60-90 triangle figure, an altitude-in-a-right-triangle construction, a square-inscribed-in-a-circle shaded-region problem, a coordinate right-triangle figure, and a two-intersecting-lines sketch) was skipped rather than risk an unverified hand-drawn diagram; only items solvable from given numeric/algebraic conditions alone were simulated. One item (a "greatest difference of digit rearrangements" puzzle) was skipped because its answer is a fixed constant independent of the specific digits chosen, leaving no room for an original variant.*
+
+---
+
+### PS-072
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Source:** House-authored, simulated (original), style-matched to a ratio/removal word problem from a legacy SAT-prep source; numbers and context are original.
+
+**Question:** A gift box contains dates that are either Ajwa or Sukkari, in a ratio of $7$ to $5$. When $8$ Ajwa dates and $8$ Sukkari dates are removed from the box, the ratio of Ajwa to Sukkari dates becomes $3$ to $2$. How many Sukkari dates were originally in the box?
+
+(A) 24
+(B) 32
+(C) 40
+(D) 48
+
+**Correct Answer:** (C) 40
+
+**Rationale:** Let Ajwa $=7k$ and Sukkari $=5k$. After removal, $\dfrac{7k-8}{5k-8}=\dfrac{3}{2}$, so $2(7k-8)=3(5k-8) \Rightarrow 14k-16=15k-24 \Rightarrow k=8$. Original Sukkari count $=5k=40$. Check: $(56-8):(40-8)=48:32=3:2$. ✓
+
+**Misconception addressed:** Students often apply the new ratio directly to the *original* amounts instead of to the amounts *after* removal, or forget that both quantities lose the same fixed number (8), not the same proportional share.
+
+---
+
+### A-120
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** For a particular number $c$, the sequence above begins $c,\ 2c+3,\ 3c+6,\ 4c+9,\ \ldots$, and each term thereafter continues the same pattern. What is the value of the $12^{\text{th}}$ term?
+
+(A) $11c+30$
+(B) $12c+30$
+(C) $12c+33$
+(D) $13c+33$
+
+**Correct Answer:** (C) $12c+33$
+
+**Rationale:** The common difference between consecutive terms is $(2c+3)-c=c+3$, confirmed by $(3c+6)-(2c+3)=c+3$. This is an arithmetic sequence with first term $c$ and common difference $c+3$, so the $n^{\text{th}}$ term is $c+(n-1)(c+3)$. For $n=12$: $c+11(c+3)=c+11c+33=12c+33$.
+
+**Misconception addressed:** Students often try to find a single numeric answer, not realizing the sequence's terms are linear expressions in $c$ — the answer must also be expressed in terms of $c$.
+
+---
+
+### A-121
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** $M$ is a set of five consecutive odd integers. When the least two integers in set $M$ are summed, the result is $x$. When the greatest two integers in set $M$ are summed, the result is $y$. Which of the following is true?
+
+(A) $y = x + 8$
+(B) $y = x + 10$
+(C) $y = x + 12$
+(D) $y = 2x$
+
+**Correct Answer:** (C) $y = x + 12$
+
+**Rationale:** Let the integers be $a,\ a+2,\ a+4,\ a+6,\ a+8$. Then $x=a+(a+2)=2a+2$ and $y=(a+6)+(a+8)=2a+14$. So $y-x=12$, giving $y=x+12$.
+
+**Misconception addressed:** Students often assume the gap between $x$ and $y$ equals the number of terms skipped rather than tracking the actual sum of the shifted terms.
+
+---
+
+### AM-096
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** Let $m$ be an even integer. How many possible values of $m$ satisfy $\sqrt{m+11} \leq 4$?
+
+**Correct Answer:** 8
+
+**Rationale:** Squaring requires $0 \leq m+11 \leq 16$, so $-11 \leq m \leq 5$. The even integers in this range are $-10,-8,-6,-4,-2,0,2,4$ — eight values.
+
+**Misconception addressed:** Students often forget the lower bound $m+11\geq0$ (needed for the square root to be real) and only apply the upper bound from squaring, overcounting the valid integers.
+
+---
+
+### AM-097
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** Let $\langle x \rangle$ be defined by $\langle x \rangle = \dfrac{x+5}{x-2}$ for any $x$ such that $x \neq 2$. Which of the following is equivalent to $\langle x \rangle - 1$?
+
+(A) $\dfrac{x+3}{x-2}$
+(B) $\dfrac{7}{x-2}$
+(C) $\dfrac{2x+3}{x-2}$
+(D) $\dfrac{7}{x-2}-1$
+
+**Correct Answer:** (B) $\dfrac{7}{x-2}$
+
+**Rationale:** $\langle x \rangle - 1 = \dfrac{x+5}{x-2}-1 = \dfrac{(x+5)-(x-2)}{x-2}=\dfrac{7}{x-2}$.
+
+**Misconception addressed:** Students often subtract 1 only from the numerator without first writing $1$ as $\dfrac{x-2}{x-2}$, producing $\dfrac{x+4}{x-2}$ instead of correctly combining over the common denominator.
+
+---
+
+### AM-098
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** Let $a$ and $b$ be numbers such that $a^4=b^3$. Which of the following is equivalent to $a\sqrt{b}$?
+
+(A) $b^{5/4}$
+(B) $b^{7/6}$
+(C) $b^{4/3}$
+(D) $b^{3/2}$
+
+**Correct Answer:** (A) $b^{5/4}$
+
+**Rationale:** From $a^4=b^3$, $a=b^{3/4}$. Then $a\sqrt{b}=a \cdot b^{1/2}=b^{3/4}\cdot b^{1/2}=b^{3/4+1/2}=b^{5/4}$.
+
+**Misconception addressed:** Students often add the exponents $3/4$ and $1/2$ incorrectly (a common slip is $b^{3/4+1/2}\to b^{4/6}$ from mismatched denominators) instead of finding the common denominator $4$.
+
+---
+
+### A-122
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** Let $m$ and $n$ be positive integers such that one-third of $m$ is $n$ less than one-half of $m$. Which of the following is a possible value of $m$?
+
+(A) 16
+(B) 20
+(C) 24
+(D) 28
+
+**Correct Answer:** (C) 24
+
+**Rationale:** The condition translates to $\dfrac{1}{3}m = \dfrac{1}{2}m - n$, so $n = \left(\dfrac{1}{2}-\dfrac{1}{3}\right)m = \dfrac{1}{6}m$. For $n$ to be a positive integer, $m$ must be a multiple of $6$. Among the choices, only $24$ is a multiple of $6$ (giving $n=4$).
+
+**Misconception addressed:** Students often solve for $n$ in terms of $m$ correctly but forget to apply the integer constraint to check which answer choice actually works.
+
+---
+
+### AM-099
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** Let $f(x)=ax^3$ and $g(x)=bx^5$ for any value of $x$. If $a$ and $b$ are positive constants, for how many values of $x$ is $f(x)=g(x)$?
+
+(A) None
+(B) One
+(C) Two
+(D) Three
+
+**Correct Answer:** (D) Three
+
+**Rationale:** $ax^3=bx^5 \Rightarrow x^3(bx^2-a)=0$, so $x=0$ or $x^2=\dfrac{a}{b}$, giving $x=\pm\sqrt{a/b}$. Since $a,b>0$, both square roots are real and distinct from $0$, giving $3$ distinct solutions.
+
+**Misconception addressed:** Students often divide both sides by $x^3$ immediately, silently discarding the solution $x=0$.
+
+---
+
+### A-123
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** Let $a$ and $b$ be numbers such that $20 < a < 30$ and $45 < b < 60$. Which of the following represents all possible values of $a-b$?
+
+(A) $-40 < a-b < -15$
+(B) $-40 < a-b < -25$
+(C) $-15 < a-b < 15$
+(D) $-25 < a-b < -15$
+
+**Correct Answer:** (A) $-40 < a-b < -15$
+
+**Rationale:** The minimum of $a-b$ occurs as $a$ approaches its lower bound and $b$ its upper bound: $a-b \to 20-60=-40$. The maximum occurs as $a$ approaches its upper bound and $b$ its lower bound: $a-b \to 30-45=-15$. Both bounds are strict since the original inequalities are strict, giving $-40 < a-b < -15$.
+
+**Misconception addressed:** Students often pair the bounds incorrectly (e.g., using $a$'s upper bound with $b$'s upper bound) instead of recognizing that minimizing/maximizing a difference requires pairing opposite extremes.
+
+---
+
+### AM-100
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** In the equation $\sqrt{200}+\sqrt{200}=m\sqrt{n}$, $m$ and $n$ are integers such that $m > n$. What is the value of $m$?
+
+**Correct Answer:** 20
+
+**Rationale:** $\sqrt{200}=\sqrt{100\cdot2}=10\sqrt{2}$, so $\sqrt{200}+\sqrt{200}=20\sqrt{2}$. This matches $m\sqrt{n}$ with $m=20,\ n=2$ (and indeed $m>n$).
+
+**Misconception addressed:** Students often fail to simplify $\sqrt{200}$ to $10\sqrt2$ first and instead try to combine the radicals without a common simplified radicand.
+
+---
+
+### AM-101
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** The table below shows some values of the function $N$.
+
+| $t$ | 0 | 1 | 2 |
+|---|---|---|---|
+| $N(t)$ | 100 | 25 | $\dfrac{25}{4}$ |
+
+If $N(t)=k\cdot2^{-at}$ for positive constants $k$ and $a$, what is the value of $a$?
+
+**Correct Answer:** 2
+
+**Rationale:** From $N(0)=k=100$. From $N(1)=100\cdot2^{-a}=25 \Rightarrow 2^{-a}=\dfrac{25}{100}=\dfrac{1}{4}=2^{-2} \Rightarrow a=2$. Check with $N(2)$: $100\cdot2^{-4}=100/16=25/4$. ✓
+
+**Misconception addressed:** Students often set up $2^{-a}$ as $\dfrac{N(1)}{N(0)}$ correctly but then solve $2^{-a}=\frac14$ as $a=4$ (confusing the exponent with the denominator) instead of recognizing $\frac14=2^{-2}$.
+
+---
+
+### A-124
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** Layla is 4 years older than Noura. The square of Layla's age, in years, is 64 greater than the square of Noura's age. What is the sum, in years, of Layla's and Noura's ages?
+
+**Correct Answer:** 16
+
+**Rationale:** Let Layla $=$ Noura $+4$. Then $\text{Layla}^2-\text{Noura}^2=64 \Rightarrow (\text{Layla}-\text{Noura})(\text{Layla}+\text{Noura})=64 \Rightarrow 4\cdot(\text{sum})=64 \Rightarrow \text{sum}=16$.
+
+**Misconception addressed:** Students often set up two equations and solve for each age individually (a longer path prone to arithmetic slips) instead of recognizing the difference-of-squares factoring shortcut, which bypasses ever finding the individual ages.
+
+---
+
+### AM-102
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** If $(x+3)^2=1$ and $(x-4)^2=36$, what is the value of $x$?
+
+**Correct Answer:** -2
+
+**Rationale:** From $(x+3)^2=1$: $x+3=\pm1$, so $x=-2$ or $x=-4$. From $(x-4)^2=36$: $x-4=\pm6$, so $x=10$ or $x=-2$. The value satisfying both equations is $x=-2$.
+
+**Misconception addressed:** Students often solve only one equation and stop, without checking that the value also satisfies the second equation — a single quadratic alone would yield two solutions, but only one satisfies both.
+
+---
+
+### AM-103
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** The value of $y$ decreased by $5$ is directly proportional to the value of $x$ increased by $3$. If $y=7$ when $x=1$, what is the value of $x$ when $y=19$?
+
+**Correct Answer:** 25
+
+**Rationale:** Write $y-5=k(x+3)$. At $x=1,\ y=7$: $2=k(4) \Rightarrow k=\dfrac{1}{2}$. When $y=19$: $14=\dfrac{1}{2}(x+3) \Rightarrow x+3=28 \Rightarrow x=25$.
+
+**Misconception addressed:** Students often write the proportionality as $y=kx$ directly, ignoring the required shifts ("decreased by 5," "increased by 3") stated in the problem.
+
+---
+
+### PS-073
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** Two cars are racing at constant speeds around a circular track. Car A requires $12$ seconds to travel once around the track, and Car B requires $20$ seconds to travel once around the track. If Car A passes Car B at a certain moment, how many seconds will elapse before Car A next passes Car B?
+
+**Correct Answer:** 30
+
+**Rationale:** Car A's rate is $\dfrac{1}{12}$ lap/sec and Car B's rate is $\dfrac{1}{20}$ lap/sec. Car A gains on Car B at $\dfrac{1}{12}-\dfrac{1}{20}=\dfrac{5-3}{60}=\dfrac{2}{60}=\dfrac{1}{30}$ lap/sec. Car A must gain exactly $1$ full lap to pass Car B again, which takes $\dfrac{1}{1/30}=30$ seconds.
+
+**Misconception addressed:** Students often try to use the difference in lap times ($20-12=8$ seconds) directly, rather than working in rates (laps per second) and finding when the gain reaches one full lap.
+
+---
+
+### AM-104
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** The curve $y=\dfrac{x^2}{3}$ and the line $y=\dfrac{2x}{3}$ intersect at the origin and at the point $(a,b)$. What is the value of $b$?
+
+**Correct Answer:** $\dfrac{4}{3}$
+
+**Rationale:** Set $\dfrac{x^2}{3}=\dfrac{2x}{3} \Rightarrow x^2=2x \Rightarrow x(x-2)=0 \Rightarrow x=0$ or $x=2$. At $x=2$: $y=\dfrac{2(2)}{3}=\dfrac{4}{3}=b$.
+
+**Misconception addressed:** Students often divide both sides of $x^2=2x$ by $x$ immediately, losing the origin solution and only recovering $x=2$ — which still works here but is unsound method that fails on other problems.
+
+---
+
+### GT-088
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** In $\triangle PQR$, $PQ=8$, $QR=10$, and $m\angle Q = 60^{\circ}$. What is the area of $\triangle PQR$?
+
+(A) $20$
+(B) $20\sqrt{2}$
+(C) $20\sqrt{3}$
+(D) $40\sqrt{3}$
+
+**Correct Answer:** (C) $20\sqrt{3}$
+
+**Rationale:** Area $=\dfrac{1}{2}\cdot PQ \cdot QR \cdot \sin(\angle Q) = \dfrac{1}{2}(8)(10)\sin60^{\circ}=40\cdot\dfrac{\sqrt3}{2}=20\sqrt3$.
+
+**Misconception addressed:** Students often try to force a base-and-height computation without a right angle given, not recognizing the $\frac12ab\sin C$ area formula applies to any triangle given two sides and the included angle.
+
+---
+
+### GT-089
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** In $\triangle XYZ$, the side lengths are $a$, $b$, and $c$, where $4 < a < 6$ and $9 < b < 11$. Which of the following represents all possible values of $c$?
+
+(A) $3 < c < 15$
+(B) $3 < c < 17$
+(C) $5 < c < 15$
+(D) $5 < c < 17$
+
+**Correct Answer:** (B) $3 < c < 17$
+
+**Rationale:** By the triangle inequality, $c$ must satisfy $|a-b| < c < a+b$ for the given $a,b$. Minimizing $|a-b|$: as $a\to6$ and $b\to9$, $|a-b|\to3$. Maximizing $a+b$: as $a\to6$ and $b\to11$, $a+b\to17$. Both bounds are approached but not reached, giving $3 < c < 17$.
+
+**Misconception addressed:** Students often use a single pair of $(a,b)$ values (e.g., the midpoints) instead of recognizing that the bounds on $c$ come from the extreme combinations of $a$ and $b$ across their full ranges.
+
+---
+
+### GT-090
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** For a particular square, the perimeter is numerically equal to the area. What is the perimeter of the square?
+
+**Correct Answer:** 16
+
+**Rationale:** Let the side length be $s$. Perimeter $=4s$ and area $=s^2$. Setting them equal: $4s=s^2 \Rightarrow s^2-4s=0 \Rightarrow s(s-4)=0$. Since $s\neq0$ for a square, $s=4$, so the perimeter is $4(4)=16$.
+
+**Misconception addressed:** Students often divide both sides by $s$ too early, missing the need to verify $s\neq0$, or they compute the area (16) and mistake it for the perimeter without re-checking that perimeter $=4s$ also equals $16$.
+
+---
+
+### PS-074
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** Let $a$, $b$, and $c$ be positive integers. If the average (arithmetic mean) of $a$, $b$, and $c$ is $100$, which of the following is NOT a possible value of any of the three integers?
+
+(A) 150
+(B) 250
+(C) 298
+(D) 299
+
+**Correct Answer:** (D) 299
+
+**Rationale:** Since the mean is $100$, $a+b+c=300$. To maximize one integer while keeping the other two positive integers, set the other two to their minimum value of $1$ each: the maximum possible value for any one integer is $300-1-1=298$. A value of $299$ would require the other two integers to sum to $1$, which is impossible since each must be at least $1$ (minimum sum $2$).
+
+**Misconception addressed:** Students often reason only about the mean itself (e.g., assuming no value can exceed $100$) instead of recognizing that individual values can range widely as long as the total sum is preserved and the other values stay positive.
+
+---
+
+
+### 2.24 Simulated Batch 21 — Style-Matched from a Legacy Five-Option SAT Practice Set
+
+*Source note: The teacher shared 25 questions (3 page images) from another legacy paper-format SAT practice set, five-option A–E format, spanning algebra, exponents/radicals, quadratics, and geometry (circles, similar triangles, solids, polygons). Per house policy, no numbers or wording from this source are reproduced — every item below is original and house-authored, with new numeric values chosen to verify cleanly, converted to the Digital SAT's four-option MC or Student-Produced Response (SPR) format. One source item (a parallelogram cut by two transversals with angles $9x+5$ and $16x$) was skipped because the figure's exact angle relationships could not be pinned down unambiguously without risking a misread diagram.*
+
+---
+
+### AM-105
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** Each term in the sequence below is $6$ times the previous term. What is the $9^{\text{th}}$ term in the sequence?
+$$3,\ 18,\ 108,\ 648,\ \ldots$$
+
+(A) $648 \times 9$
+(B) $3^9$
+(C) $3 \times 6^8$
+(D) $6 \times 3^8$
+
+**Correct Answer:** (C) $3 \times 6^8$
+
+**Rationale:** The sequence is geometric with first term $3$ and common ratio $6$, so the $n^{\text{th}}$ term is $3 \times 6^{n-1}$. For $n=9$: $3\times6^8$.
+
+**Misconception addressed:** Students often use the term number itself as the exponent ($6^9$) instead of $n-1$, forgetting the first term already uses $6^0$.
+
+---
+
+### GT-091
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** A circle has an area of $144\pi$ ft$^2$. What is the circumference of the circle?
+
+(A) $12$ ft
+(B) $12\pi$ ft
+(C) $24\pi$ ft
+(D) $48\pi$ ft
+
+**Correct Answer:** (C) $24\pi$ ft
+
+**Rationale:** Area $=\pi r^2=144\pi \Rightarrow r^2=144 \Rightarrow r=12$. Circumference $=2\pi r=2\pi(12)=24\pi$ ft.
+
+**Misconception addressed:** Students often use the area value directly as $r^2$ but then forget to take the square root, or confuse the area and circumference formulas.
+
+---
+
+### A-125
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** Which of the following is true of $y=5$?
+
+(A) It is not a function.
+(B) It has a range of $5$.
+(C) It has no domain.
+(D) It has a slope of $5$.
+
+**Correct Answer:** (B) It has a range of $5$.
+
+**Rationale:** $y=5$ is a constant function: every input $x$ maps to the single output $5$, so its range is $\{5\}$. It is a valid function (passes the vertical line test), its domain is all real numbers, and its graph is a horizontal line with slope $0$, not $5$.
+
+**Misconception addressed:** Students often assume a horizontal line "has no slope" (confusing it with a vertical line, which is undefined) or that a constant function isn't a function at all.
+
+---
+
+### AM-106
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** What is the value of $\left(\dfrac{3x}{y}\right)\left(\dfrac{x^{-1}}{(3y)^{-1}}\right)$?
+
+(A) $1$
+(B) $3$
+(C) $6$
+(D) $9$
+
+**Correct Answer:** (D) $9$
+
+**Rationale:** $\dfrac{x^{-1}}{(3y)^{-1}}=\dfrac{1/x}{1/(3y)}=\dfrac{3y}{x}$. Multiplying: $\dfrac{3x}{y}\cdot\dfrac{3y}{x}=\dfrac{9xy}{xy}=9$.
+
+**Misconception addressed:** Students often mishandle the negative exponent in the denominator's denominator, forgetting that dividing by $(3y)^{-1}$ is the same as multiplying by $3y$.
+
+---
+
+### A-126
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** The inequality $-5(x-1) \leq 3(x+3)$ is equivalent to
+
+(A) $x \geq -\dfrac{1}{2}$
+(B) $x \leq -\dfrac{1}{2}$
+(C) $x \geq \dfrac{1}{2}$
+(D) $x \leq \dfrac{1}{2}$
+
+**Correct Answer:** (A) $x \geq -\dfrac{1}{2}$
+
+**Rationale:** $-5(x-1)\leq3(x+3) \Rightarrow -5x+5 \leq 3x+9 \Rightarrow 5-9 \leq 3x+5x \Rightarrow -4 \leq 8x \Rightarrow x \geq -\dfrac{1}{2}$.
+
+**Misconception addressed:** Students often lose track of the inequality direction when collecting variable terms on the side with the larger coefficient, or forget the sign only flips when *both* sides are multiplied/divided by a negative — not when a negative term is simply moved across the inequality.
+
+---
+
+### GT-092
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** Side $AB$ of rectangle $ABCD$ measures $8$ units. Side $BC$ of the rectangle is shared with side $BC$ of square $BCEF$. If the area of square $BCEF$ is $45$ square units, what is the area of rectangle $ABCD$?
+
+(A) $12\sqrt{5}$ square units
+(B) $24\sqrt{5}$ square units
+(C) $45+8\sqrt{5}$ square units
+(D) $80$ square units
+
+**Correct Answer:** (B) $24\sqrt{5}$ square units
+
+**Rationale:** Since square $BCEF$ has area $45$, its side $BC=\sqrt{45}=3\sqrt5$. Rectangle $ABCD$ has sides $AB=8$ and $BC=3\sqrt5$, so its area $=8\cdot3\sqrt5=24\sqrt5$.
+
+**Misconception addressed:** Students often multiply $AB$ by the square's *area* (45) instead of first extracting the square's side length from that area.
+
+---
+
+### GT-093
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** A circular coaster has a diameter of $10$ cm and a height (thickness) of $3$ mm. If $8$ coasters are stacked on top of each other, what is the volume of the stack?
+
+(A) $60\pi$ cm$^3$
+(B) $75\pi$ cm$^3$
+(C) $120\pi$ cm$^3$
+(D) $150\pi$ cm$^3$
+
+**Correct Answer:** (A) $60\pi$ cm$^3$
+
+**Rationale:** Radius $=5$ cm, height $=3$ mm $=0.3$ cm. Volume of one coaster $=\pi r^2h=\pi(25)(0.3)=7.5\pi$ cm$^3$. For $8$ coasters: $8(7.5\pi)=60\pi$ cm$^3$.
+
+**Misconception addressed:** Students often forget to convert millimeters to centimeters before applying the volume formula, since the diameter is given in cm.
+
+---
+
+### AM-107
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** For what values of $x$ is the expression $2x^2-2x-24$ equal to $0$?
+
+(A) $x=-4,\ x=3$
+(B) $x=4,\ x=-3$
+(C) $x=4,\ x=3$
+(D) $x=-4,\ x=-3$
+
+**Correct Answer:** (B) $x=4,\ x=-3$
+
+**Rationale:** Divide by $2$: $x^2-x-12=0 \Rightarrow (x-4)(x+3)=0 \Rightarrow x=4$ or $x=-3$.
+
+**Misconception addressed:** Students often factor the signs backward (e.g., writing $(x+4)(x-3)$) without checking that the middle term ($-x$) and constant ($-12$) both come out correctly.
+
+---
+
+### GT-094
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** Triangles $ABC$ and $DEF$ are similar. Side $AB$ of triangle $ABC$ corresponds to side $DE$ of triangle $DEF$. If the length of $\overline{AB}$ is $12$ units and the length of $\overline{DE}$ is $8$ units, then the area of triangle $DEF$ is equal to
+
+(A) $\dfrac{2}{3}$ (area of triangle $ABC$)
+(B) $\dfrac{4}{9}$ (area of triangle $ABC$)
+(C) $\dfrac{9}{4}$ (area of triangle $ABC$)
+(D) $\dfrac{16}{9}$ (area of triangle $ABC$)
+
+**Correct Answer:** (B) $\dfrac{4}{9}$ (area of triangle $ABC$)
+
+**Rationale:** The ratio of corresponding sides is $\dfrac{DE}{AB}=\dfrac{8}{12}=\dfrac{2}{3}$. The ratio of areas is the square of the ratio of sides: $\left(\dfrac{2}{3}\right)^2=\dfrac{4}{9}$.
+
+**Misconception addressed:** Students often apply the linear side ratio directly to areas, forgetting that area scales with the *square* of the linear scale factor.
+
+---
+
+### AM-108
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** Which of the following parabolas has its turning point in the second quadrant of the coordinate plane?
+
+(A) $y=(x+2)^2-3$
+(B) $y=(x-3)^2-1$
+(C) $y=-(x+3)^2-1$
+(D) $y=-(x+1)^2+2$
+
+**Correct Answer:** (D) $y=-(x+1)^2+2$
+
+**Rationale:** The vertex form $y=a(x-h)^2+k$ has turning point $(h,k)$. For (D), $y=-(x+1)^2+2$ has vertex $(-1,2)$, where $x<0$ and $y>0$ — the second quadrant. The other vertices are $(-2,-3)$, $(3,-1)$, and $(-3,-1)$, none of which have $x<0,\ y>0$.
+
+**Misconception addressed:** Students often misread the vertex's $x$-coordinate sign from $(x+h)^2$, writing the vertex as $(h,k)$ instead of $(-h,k)$.
+
+---
+
+### A-127
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** If $p=\dfrac{5q-3}{6}$, then $q=$
+
+(A) $\dfrac{6p+3}{5}$
+(B) $\dfrac{6p-3}{5}$
+(C) $\dfrac{5p+3}{6}$
+(D) $\dfrac{p}{5}+3$
+
+**Correct Answer:** (A) $\dfrac{6p+3}{5}$
+
+**Rationale:** $p=\dfrac{5q-3}{6} \Rightarrow 6p=5q-3 \Rightarrow 5q=6p+3 \Rightarrow q=\dfrac{6p+3}{5}$.
+
+**Misconception addressed:** Students often isolate $q$ correctly up to $5q=6p+3$ but then divide only part of the right side by $5$, or drop the $+3$ when rearranging.
+
+---
+
+### GT-095
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** A hexagon is formed by arranging $6$ equilateral triangles, each of which has a vertex at the center of the hexagon. If the length of one side of a triangle is $6$, what is the area, in square units, of the hexagon?
+
+**Correct Answer:** $54\sqrt{3}$
+
+**Rationale:** Each equilateral triangle has side $6$, so its area is $\dfrac{\sqrt3}{4}(6)^2=9\sqrt3$. The hexagon is made of $6$ such triangles, so its total area is $6(9\sqrt3)=54\sqrt3$.
+
+**Misconception addressed:** Students often use the equilateral triangle area formula with the wrong side length, or forget to multiply by all $6$ triangles.
+
+---
+
+### GT-096
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** If the surface area of a cube is $150$ square centimeters, what is the volume of the cube, in cubic centimeters?
+
+**Correct Answer:** 125
+
+**Rationale:** Surface area $=6s^2=150 \Rightarrow s^2=25 \Rightarrow s=5$. Volume $=s^3=125$ cm$^3$.
+
+**Misconception addressed:** Students often solve for $s^2$ correctly but then cube $s^2$ instead of first taking the square root to find $s$.
+
+---
+
+### GT-097
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** What is the distance between the points $(-3,-9)$ and $(9,-4)$?
+
+**Correct Answer:** 13
+
+**Rationale:** Distance $=\sqrt{(9-(-3))^2+(-4-(-9))^2}=\sqrt{12^2+5^2}=\sqrt{144+25}=\sqrt{169}=13$.
+
+**Misconception addressed:** Students often subtract coordinates in inconsistent order between the $x$- and $y$-terms, or make a sign error when both coordinates are negative.
+
+---
+
+### AM-109
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** Find the value of $\dfrac{\sqrt{c+7}}{c}\cdot c\sqrt{c}$ if $c=9$.
+
+**Correct Answer:** 12
+
+**Rationale:** The factor of $c$ cancels: $\dfrac{\sqrt{c+7}}{c}\cdot c\sqrt{c}=\sqrt{c+7}\cdot\sqrt{c}$. At $c=9$: $\sqrt{16}\cdot\sqrt{9}=4\cdot3=12$.
+
+**Misconception addressed:** Students often substitute $c=9$ into the unsimplified expression and get tangled in the division by $c$, instead of first canceling the $c$ in the denominator against the $c$ in the numerator.
+
+---
+
+### GT-098
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** In triangle $ABC$, sides $AC$ and $AB$ are congruent. Points $D$, $C$, and $B$ are collinear, with $C$ between $D$ and $B$. If the measure of angle $DCA$ is $130°$, what is the measure, in degrees, of angle $A$?
+
+**Correct Answer:** 80
+
+**Rationale:** Angle $DCA$ and angle $ACB$ are supplementary (they form a straight line along $DCB$), so angle $ACB=180°-130°=50°$. Since $AC=AB$, the base angles opposite these sides are equal: angle $B=$ angle $ACB=50°$. Then angle $A=180°-50°-50°=80°$.
+
+**Misconception addressed:** Students often treat the given exterior angle ($130°$) as if it were the triangle's interior angle at $C$, skipping the supplementary-angle step.
+
+---
+
+### A-128
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** Student-Produced Response
+
+**Question:** If $\dfrac{3m}{4}+2=8$, what is the value of $\dfrac{5}{2m}$?
+
+**Correct Answer:** $\dfrac{5}{16}$
+
+**Rationale:** $\dfrac{3m}{4}+2=8 \Rightarrow \dfrac{3m}{4}=6 \Rightarrow 3m=24 \Rightarrow m=8$. Then $\dfrac{5}{2m}=\dfrac{5}{16}$.
+
+**Misconception addressed:** Students often solve for $m$ correctly but then substitute it back into the *original* equation instead of the requested expression, or invert the requested fraction.
+
+---
+
+### A-129
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** If $\dfrac{3x+5}{4}=\dfrac{4x-1}{5}$, what is the value of $x$?
+
+**Correct Answer:** 29
+
+**Rationale:** Cross-multiplying: $5(3x+5)=4(4x-1) \Rightarrow 15x+25=16x-4 \Rightarrow 25+4=16x-15x \Rightarrow x=29$. Check: $\dfrac{3(29)+5}{4}=\dfrac{92}{4}=23$ and $\dfrac{4(29)-1}{5}=\dfrac{115}{5}=23$. ✓
+
+**Misconception addressed:** Students often cross-multiply but distribute only to the first term inside the parentheses, dropping the constant.
+
+---
+
+### GT-099
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** $O$ is the center of a circle. Chords $\overline{AC}$ and $\overline{BD}$ are diameters that intersect at $O$ (so $A$, $O$, $C$ are collinear, and $B$, $O$, $D$ are collinear). $OB$ and $OC$ are radii of the circle. If the measure of angle $OBC$ is $64°$, what is the measure, in degrees, of arc $AD$?
+
+**Correct Answer:** 52
+
+**Rationale:** Since $OB=OC$ (radii), triangle $OBC$ is isosceles, so angle $OCB=$ angle $OBC=64°$. Then central angle $BOC=180°-64°-64°=52°$. Because $\overline{AC}$ and $\overline{BD}$ are diameters through $O$, angle $AOD$ and angle $BOC$ are vertical angles, so angle $AOD=52°$ as well. A central angle's measure equals the measure of its intercepted arc, so arc $AD=52°$.
+
+**Misconception addressed:** Students often assume the base angles of the isosceles triangle are opposite the equal sides rather than adjacent to the base, misidentifying which two angles are equal.
+
+---
+
+### AM-110
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Student-Produced Response
+
+**Question:** Evaluate $\left(\dfrac{5}{a^2}+\dfrac{4}{3a}\right)^{a}$ for $a={-3}$.
+
+**Correct Answer:** 729
+
+**Rationale:** At $a=-3$: $a^2=9$, so $\dfrac{5}{a^2}=\dfrac{5}{9}$. Also $3a=-9$, so $\dfrac{4}{3a}=-\dfrac{4}{9}$. Summing: $\dfrac{5}{9}-\dfrac{4}{9}=\dfrac{1}{9}$. Raising to the power $a=-3$: $\left(\dfrac{1}{9}\right)^{-3}=9^3=729$.
+
+**Misconception addressed:** Students often apply the negative exponent to only part of the base, or compute $\left(\frac19\right)^{-3}$ as $-9^3$ instead of $9^3$.
+
+---
+
+### AM-111
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** The expression $\dfrac{11p^2+11q^2}{9p^2+30p+9}$ is undefined when
+
+(A) $p=-\dfrac13$ or $p=-3$
+(B) $p=0$ or $q=0$
+(C) $q=-\dfrac13$ or $q=-3$
+(D) $p=-3$ or $q=-\dfrac13$
+
+**Correct Answer:** (A) $p=-\dfrac13$ or $p=-3$
+
+**Rationale:** The expression is undefined exactly when its denominator equals $0$: $9p^2+30p+9=3(3p^2+10p+3)=3(3p+1)(p+3)=0 \Rightarrow p=-\dfrac13$ or $p=-3$. Since the denominator contains no $q$, the value of $q$ never affects whether the expression is defined.
+
+**Misconception addressed:** Students often assume every variable appearing anywhere in the expression (including the numerator) can independently cause it to be undefined, rather than checking only the denominator.
+
+---
+
+
+### 2.25 Simulated Batch 22 — Style-Matched from *411 SAT Algebra and Geometry Questions*
+
+*Source note: The teacher uploaded the legacy five-option book* 411 SAT Algebra and Geometry Questions *to the project. A screening pass kept only the items with multi-step reasoning or a real trap; most of the book is one-step drill and was skipped, as were all figure-dependent items. Per house policy, no numbers or wording are reproduced — every item below is original, uses new values, is converted to the Digital SAT four-option MC or SPR format, and was machine-checked. Per the SAT Bank exception, items are written in neutral, universal SAT style (no Saudi context).*
+
+---
+
+### AM-112
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** What value of $x$ satisfies the equation below?
+$$\dfrac{x}{x-3}+\dfrac{2}{x}=\dfrac{3}{x-3}$$
+
+**Correct Answer:** $-2$
+
+**Rationale:** Multiply both sides by $x(x-3)$: $x^2+2(x-3)=3x \Rightarrow x^2-x-6=0 \Rightarrow (x-3)(x+2)=0$. The value $x=3$ makes two denominators $0$, so it is extraneous. The only solution is $x=-2$.
+
+**Misconception addressed:** Students report both roots of the cleared equation without checking them against the original denominators.
+
+---
+
+### AM-113
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** If $(x-3)(x+7)=-25$, what is the value of $x$?
+
+**Correct Answer:** $-2$
+
+**Rationale:** $x^2+4x-21=-25 \Rightarrow x^2+4x+4=0 \Rightarrow (x+2)^2=0 \Rightarrow x=-2$.
+
+**Misconception addressed:** Students set each factor equal to $-25$ (the zero-product property only works when the product is $0$).
+
+---
+
+### AM-114
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** The square of a positive number is $12$ more than $4$ times the number. What is the number?
+
+**Correct Answer:** $6$
+
+**Rationale:** $x^2=4x+12 \Rightarrow x^2-4x-12=0 \Rightarrow (x-6)(x+2)=0$. Since the number is positive, $x=6$.
+
+**Misconception addressed:** Students translate "12 more than 4 times the number" as $12x+4$, or keep the negative root.
+
+---
+
+### AM-115
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** For $x\neq {-3}$ and $x\neq 2$, the expression $\dfrac{x^2-2x-15}{x^2+x-6}$ is equivalent to $\dfrac{x+a}{x+b}$, where $a$ and $b$ are constants. What is the value of $a-b$?
+
+**Correct Answer:** $-3$
+
+**Rationale:** $\dfrac{(x-5)(x+3)}{(x+3)(x-2)}=\dfrac{x-5}{x-2}$, so $a=-5$ and $b=-2$. Then $a-b=-5-(-2)=-3$.
+
+**Misconception addressed:** Students cancel terms ($x^2$ with $x^2$) instead of common factors, or lose the sign when subtracting a negative $b$.
+
+---
+
+### AM-116
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** The graph of $y=2x^2+12x+11$ in the $xy$-plane is a parabola. What are the coordinates of its vertex?
+
+(A) $({-3},\,{-7})$
+(B) $(3,\,65)$
+(C) $({-3},\,11)$
+(D) $({-6},\,11)$
+
+**Correct Answer:** (A) $({-3},\,{-7})$
+
+**Rationale:** $x=-\dfrac{b}{2a}=-\dfrac{12}{4}=-3$, and $y=2(9)+12(-3)+11=-7$.
+
+**Misconception addressed:** Students use $-\dfrac{b}{a}$ (giving $-6$) or read the constant term as the vertex's $y$-coordinate.
+
+---
+
+### AM-117
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** For $x>0$, which expression is equivalent to $\sqrt{\left(9x^{2}\right)^{3}\cdot x^{6}}$?
+
+(A) $27x^{6}$
+(B) $27x^{9}$
+(C) $81x^{6}$
+(D) $3x^{6}$
+
+**Correct Answer:** (A) $27x^{6}$
+
+**Rationale:** $\left(9x^2\right)^3=729x^6$, so the radicand is $729x^{12}$ and $\sqrt{729x^{12}}=27x^{6}$.
+
+**Misconception addressed:** Students add exponents inside the power ($x^{5}$) instead of multiplying, or take the square root of only one factor.
+
+---
+
+### AM-118
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** If $a^{\frac{3}{4}}=5$ and $a>0$, what is the value of $a^{-\frac{3}{2}}$?
+
+**Correct Answer:** $\dfrac{1}{25}$ (or $0.04$)
+
+**Rationale:** $a^{-\frac{3}{2}}=\left(a^{\frac{3}{4}}\right)^{-2}=5^{-2}=\dfrac{1}{25}$.
+
+**Misconception addressed:** Students solve for $a$ first and lose accuracy, or ignore the negative sign and answer $25$.
+
+---
+
+### AM-119
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** If $\left(\sqrt{p}\right)^{6}=q^{-3}$ and $q=\dfrac{1}{4}$, what is the value of $p$?
+
+**Correct Answer:** $4$
+
+**Rationale:** $\left(\sqrt{p}\right)^6=p^3$ and $\left(\dfrac14\right)^{-3}=64$, so $p^3=64 \Rightarrow p=4$.
+
+**Misconception addressed:** Students treat $q^{-3}$ as $-\dfrac{3}{4}$ or as a negative number.
+
+---
+
+### AM-120
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** What value of $x$ satisfies the equation $2^{3x}\cdot 4^{x+1}=8^{x+3}$?
+
+**Correct Answer:** $\dfrac{7}{2}$ (or $3.5$)
+
+**Rationale:** Rewrite in base $2$: $2^{3x}\cdot2^{2x+2}=2^{3x+9} \Rightarrow 5x+2=3x+9 \Rightarrow x=\dfrac72$.
+
+**Misconception addressed:** Students multiply the bases ($2\cdot4=8$) and then equate exponents of different expressions.
+
+---
+
+### AM-121
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** The first term of a geometric sequence is $2$ and the fourth term is $54$. What is the sum of the first five terms of the sequence?
+
+**Correct Answer:** $242$
+
+**Rationale:** $2r^3=54 \Rightarrow r=3$. The first five terms are $2,\ 6,\ 18,\ 54,\ 162$, with sum $242$.
+
+**Misconception addressed:** Students use $r^4$ for the fourth term, or give the fifth term ($162$) instead of the sum.
+
+---
+
+### AM-122
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:**
+$$xy=48$$
+$$3x-y=0$$
+If $(x,\,y)$ is a solution to the system above and $x>0$, what is the value of $y$?
+
+**Correct Answer:** $12$
+
+**Rationale:** $y=3x$, so $3x^2=48 \Rightarrow x^2=16 \Rightarrow x=4$ (since $x>0$), and $y=12$.
+
+**Misconception addressed:** Students stop at $x=4$ and grid the wrong variable.
+
+---
+
+### AM-123
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:**
+$$y=x^2-4x+1$$
+$$y=2x-8$$
+How many solutions does the system above have?
+
+(A) Zero
+(B) Exactly one
+(C) Exactly two
+(D) Infinitely many
+
+**Correct Answer:** (B) Exactly one
+
+**Rationale:** $x^2-4x+1=2x-8 \Rightarrow x^2-6x+9=0 \Rightarrow (x-3)^2=0$. The discriminant is $0$, so the line is tangent to the parabola at $(3,\,{-2})$.
+
+**Misconception addressed:** Students assume a line and a parabola always meet twice.
+
+---
+
+### AM-124
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** The functions $f$ and $g$ are defined by $f(x)=2x-3$ and $g(x)=x^2+1$. Which expression is equivalent to $g\!\left(f(x)\right)$?
+
+(A) $4x^2-12x+10$
+(B) $4x^2-12x+9$
+(C) $2x^2-1$
+(D) $4x^2+10$
+
+**Correct Answer:** (A) $4x^2-12x+10$
+
+**Rationale:** $g\!\left(f(x)\right)=(2x-3)^2+1=4x^2-12x+9+1=4x^2-12x+10$.
+
+**Misconception addressed:** Students compute $f\!\left(g(x)\right)$ (choice C), drop the $+1$ (choice B), or square as $4x^2+9$ (choice D).
+
+---
+
+### AM-125
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** The function $f$ is defined by $f(x)=3x+k$, where $k$ is a constant. If $f\!\left(f(2)\right)=38$, what is the value of $k$?
+
+**Correct Answer:** $5$
+
+**Rationale:** $f(2)=6+k$, so $f(6+k)=3(6+k)+k=18+4k=38 \Rightarrow k=5$.
+
+**Misconception addressed:** Students forget that $k$ is added again in the outer function and write $18+3k=38$.
+
+---
+
+### AM-126
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** The function $g$ is defined by $g(x)=\dfrac{5}{(x-2)^2-9}$. For which values of $x$ is $g(x)$ undefined?
+
+(A) $x=2$ only
+(B) $x={-1}$ and $x=5$
+(C) $x={-5}$ and $x=1$
+(D) $x=11$ only
+
+**Correct Answer:** (B) $x={-1}$ and $x=5$
+
+**Rationale:** $g$ is undefined when $(x-2)^2=9$, so $x-2=\pm3 \Rightarrow x=5$ or $x=-1$.
+
+**Misconception addressed:** Students set only $x-2=0$ (choice A), or take only the positive square root.
+
+---
+
+### AM-127
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied ("Think Critically"), restated by the teacher; five original options reduced to four in digital-SAT format.
+
+**Question:** If $a^2+b^2=4ab$, where $a\ne b$ and $b\ne0$, what is the value of $\dfrac{a+b}{a-b}$?
+
+(A) $2$
+(B) $3$
+(C) $6$
+(D) $\pm\sqrt{3}$
+
+**Correct Answer:** (D) $\pm\sqrt{3}$
+
+**Rationale:** Square the expression instead of solving for $a$ or $b$: $\left(\dfrac{a+b}{a-b}\right)^2=\dfrac{a^2+b^2+2ab}{a^2+b^2-2ab}=\dfrac{4ab+2ab}{4ab-2ab}=\dfrac{6ab}{2ab}=3$. Therefore $\dfrac{a+b}{a-b}=\pm\sqrt{3}$. Check: the condition gives $\dfrac ab=2\pm\sqrt3$, and for $a=2+\sqrt3,\ b=1$ the ratio is $\sqrt3$, while for $a=2-\sqrt3,\ b=1$ it is $-\sqrt3$; both signs occur.
+
+**Misconception addressed:** Students stop at $3$ (the value of the squared expression) and forget the $\pm$ when taking the square root, or try to solve for $a$ and $b$ individually, which is far longer than recognizing the expression as a ratio of $(a\pm b)^2$.
+
+---
+
+### A-130
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:**
+$$3x-ky=7$$
+$$12x-20y=5$$
+In the system above, $k$ is a constant. For what value of $k$ does the system have no solution?
+
+**Correct Answer:** $5$
+
+**Rationale:** No solution requires parallel lines with different intercepts: $\dfrac{3}{12}=\dfrac{k}{20} \Rightarrow k=5$. The constants give $\dfrac{7}{5}\neq\dfrac14$, so the lines are distinct.
+
+**Misconception addressed:** Students set the constant ratio equal as well, which is the condition for infinitely many solutions.
+
+---
+
+### A-131
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:**
+$$3x+2y=19$$
+$$x+4y=13$$
+If $(x,\,y)$ satisfies the system above, what is the value of $4x+6y$?
+
+**Correct Answer:** $32$
+
+**Rationale:** Adding the equations gives $4x+6y=32$ directly. (Check: $x=5$, $y=2$.)
+
+**Misconception addressed:** Students solve for $x$ and $y$ separately when the target expression is the sum of the equations.
+
+---
+
+### A-132
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:**
+$$2x+5y=23$$
+$$5x+2y=26$$
+If $(x,\,y)$ is the solution to the system above, what is the value of $(x-y)^2$?
+
+**Correct Answer:** $1$
+
+**Rationale:** Subtract the first equation from the second: $3x-3y=3 \Rightarrow x-y=1$, so $(x-y)^2=1$. (Check: $x=4$, $y=3$.)
+
+**Misconception addressed:** Students expand $(x-y)^2$ and try to find $x^2$, $y^2$ and $xy$ instead of spotting the symmetric structure.
+
+---
+
+### A-133
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:**
+$$ax+6y=15$$
+$$4x+8y=20$$
+In the system above, $a$ is a constant. For what value of $a$ does the system have infinitely many solutions?
+
+**Correct Answer:** $3$
+
+**Rationale:** The first equation must be a multiple of the second. $\dfrac{6}{8}=\dfrac{15}{20}=\dfrac34$, so $a=\dfrac34(4)=3$.
+
+**Misconception addressed:** Students match only the $x$-coefficients ($a=4$) without checking the common multiplier.
+
+---
+
+### A-134
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** Line $\ell$ passes through the point $({-2},\,5)$ and is perpendicular to the line $3x-4y=12$. What is the $y$-intercept of line $\ell$?
+
+**Correct Answer:** $\dfrac{7}{3}$ (or $2.333$)
+
+**Rationale:** The given line has slope $\dfrac34$, so $\ell$ has slope $-\dfrac43$. Then $5=-\dfrac43(-2)+b \Rightarrow b=5-\dfrac83=\dfrac73$.
+
+**Misconception addressed:** Students use the slope $-\dfrac34$ (negative only) or read the slope as $3$ from the standard form.
+
+---
+
+### A-135
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** In an arithmetic sequence, the $3^{\text{rd}}$ term is $17$ and the $10^{\text{th}}$ term is $52$. What is the $20^{\text{th}}$ term?
+
+**Correct Answer:** $102$
+
+**Rationale:** $d=\dfrac{52-17}{10-3}=5$, so $a_1=17-2(5)=7$ and $a_{20}=7+19(5)=102$.
+
+**Misconception addressed:** Students divide by $10$ instead of the $7$ steps between the terms, or use $20d$ instead of $19d$.
+
+---
+
+### GT-100
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** The legs of a right triangle have lengths $x+1$ and $x+8$, and the hypotenuse has length $x+9$. What is the area of the triangle?
+
+**Correct Answer:** $30$
+
+**Rationale:** $(x+1)^2+(x+8)^2=(x+9)^2 \Rightarrow x^2=16 \Rightarrow x=4$ (a length must be positive). The legs are $5$ and $12$, so the area is $\dfrac12(5)(12)=30$.
+
+**Misconception addressed:** Students stop at $x=4$, or multiply the legs without the factor $\dfrac12$.
+
+---
+
+### GT-101
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Question:** A $30^\circ$-$60^\circ$-$90^\circ$ triangle has a perimeter of $18+6\sqrt{3}$. What is the length of its hypotenuse?
+
+(A) $6$
+(B) $6\sqrt{3}$
+(C) $12$
+(D) $12\sqrt{3}$
+
+**Correct Answer:** (C) $12$
+
+**Rationale:** With shorter leg $s$, the sides are $s$, $s\sqrt3$ and $2s$, so $3s+s\sqrt3=18+6\sqrt3 \Rightarrow s=6$. The hypotenuse is $2s=12$.
+
+**Misconception addressed:** Students give the shorter leg (choice A) or the longer leg (choice B).
+
+---
+
+### GT-102
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** In triangle $ABC$, angle $B$ is a right angle and the measure of angle $A$ is twice the measure of angle $C$. If $AB=5$, what is the length of $BC$?
+
+(A) $5$
+(B) $5\sqrt{2}$
+(C) $5\sqrt{3}$
+(D) $10$
+
+**Correct Answer:** (C) $5\sqrt{3}$
+
+**Rationale:** $A+C=90^\circ$ and $A=2C$, so $C=30^\circ$ and $A=60^\circ$. $AB$ is opposite the $30^\circ$ angle (shorter leg), and $BC$ is opposite the $60^\circ$ angle, so $BC=5\sqrt3$.
+
+**Misconception addressed:** Students match the side to the wrong angle, or treat the triangle as $45^\circ$-$45^\circ$-$90^\circ$ (choice B).
+
+---
+
+### GT-103
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** A sector of a circle with radius $9$ has an area of $18\pi$. The central angle of the sector measures $k\pi$ radians. What is the value of $k$?
+
+**Correct Answer:** $\dfrac{4}{9}$ (or $0.444$)
+
+**Rationale:** Sector area $=\dfrac12r^2\theta$, so $\dfrac12(81)\theta=18\pi \Rightarrow \theta=\dfrac{4\pi}{9}$, giving $k=\dfrac49$. (Check: $\dfrac{4\pi}{9}$ radians $=80^\circ$, and $\dfrac{80}{360}\cdot81\pi=18\pi$.)
+
+**Misconception addressed:** Students use the degree formula and answer $80$, or mix radians with degrees.
+
+---
+
+### GT-104
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** A circle has radius $2x-3$ and circumference $(3x+4)\pi$. What is the area of the circle?
+
+(A) $17\pi$
+(B) $34\pi$
+(C) $196\pi$
+(D) $289\pi$
+
+**Correct Answer:** (D) $289\pi$
+
+**Rationale:** $2\pi(2x-3)=(3x+4)\pi \Rightarrow 4x-6=3x+4 \Rightarrow x=10$. The radius is $17$, so the area is $289\pi$.
+
+**Misconception addressed:** Students use $C=\pi r$ (dropping the $2$), or stop at the radius (choice A) or the circumference (choice B).
+
+---
+
+### GT-105
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** The equation $x^2+y^2-8x+10y=8$ defines a circle in the $xy$-plane. What is the radius of the circle?
+
+**Correct Answer:** $7$
+
+**Rationale:** Complete the square: $(x-4)^2+(y+5)^2=8+16+25=49$, so the radius is $7$.
+
+**Misconception addressed:** Students take $\sqrt8$ as the radius without completing the square, or forget to add $16$ and $25$ to the right side.
+
+---
+
+
+### 2.26 Teacher-Supplied Screenshot Batch — Linear Intercepts, Exponent Factoring, Root Relationships, Substitution, Rational Identity, Parameter Systems, Factored-Form Minimum (8 items — A-136 to A-137, AM-128 to AM-133)
+
+*Source note: Eight items supplied by the teacher as screenshots (digital-SAT four-option MC or SPR), re-typeset in LaTeX and re-solved independently. No Saudi context, per the SAT Bank exception.*
+
+---
+
+### A-136
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** In the $xy$-plane, line $\ell$ passes through the point $(-3,8)$. The $y$-coordinate of the $y$-intercept of line $\ell$ is positive, and the $x$-coordinate of the $x$-intercept of line $\ell$ is between $0$ and $1$ (not inclusive). Which of the following could be the slope of line $\ell$?
+
+(A) $-\dfrac{3}{2}$
+(B) $-\dfrac{5}{2}$
+(C) $-\dfrac{8}{3}$
+(D) $-3$
+
+**Correct Answer:** (B) $-\dfrac{5}{2}$
+
+**Rationale:** The line is $y=m(x+3)+8$. The $y$-intercept is $3m+8>0$, so $m>-\dfrac{8}{3}$. The $x$-intercept is $x=-3-\dfrac{8}{m}$; requiring $0<x<1$ gives $3<-\dfrac{8}{m}<4$, so $-4<\dfrac{8}{m}<-3$ and $-\dfrac{8}{3}<m<-2$. Only $-\dfrac{5}{2}=-2.5$ lies in that interval. Check: $m=-\dfrac52$ gives $y$-intercept $0.5>0$ and $x$-intercept $0.2$.
+
+**Misconception addressed:** Students use only one condition: $-\dfrac32$ satisfies the $y$-intercept condition but gives an $x$-intercept greater than $1$; $-\dfrac83$ and $-3$ are boundary/out-of-range values (endpoint $-\dfrac83$ gives a $y$-intercept of exactly $0$, which is not positive).
+
+---
+
+### AM-128
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** If $2^{x+3}-2^{x}=56$, what is the value of $x$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $2^{x+3}=8\cdot2^{x}$, so $8\cdot2^{x}-2^{x}=7\cdot2^{x}=56$. Then $2^{x}=8$ and $x=3$.
+
+**Misconception addressed:** Students cannot factor out $2^{x}$ and instead split $2^{x+3}$ as $2^{x}+2^{3}$ or $2^{x}\cdot 3$; others stop at $2^{x}=8$ and submit $8$.
+
+---
+
+### AM-129
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The equation $2x^{2}-12x+k=0$, where $k$ is a constant, has two real solutions. One solution is twice the other solution. What is the value of $k$?
+
+**Correct Answer:** $16$
+
+**Rationale:** Let the solutions be $r$ and $2r$. Their sum is $-\dfrac{-12}{2}=6$, so $3r=6$ and $r=2$; the solutions are $2$ and $4$. Their product is $\dfrac{k}{2}=8$, so $k=16$. Check: $2x^2-12x+16=2(x-2)(x-4)$.
+
+**Misconception addressed:** Students use the product of roots as $k$ rather than $\dfrac{k}{a}$ (answer $8$), or set the sum equal to $12$ instead of $\dfrac{12}{2}=6$.
+
+---
+
+### AM-130
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** What is the product of the positive solutions to the equation $x^{4}-13x^{2}+36=0$?
+
+**Correct Answer:** $6$
+
+**Rationale:** Let $u=x^{2}$: $u^{2}-13u+36=0$, so $(u-4)(u-9)=0$ and $u=4$ or $u=9$. Hence $x=\pm2$ or $x=\pm3$. The positive solutions are $2$ and $3$, with product $6$.
+
+**Misconception addressed:** Students report the $u$-values ($4$ and $9$, product $36$) without taking square roots, or include the negative solutions (product of all four is $36$).
+
+---
+
+### AM-131
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The equation $\dfrac{ax+b}{x+2}=3-\dfrac{11}{x+2}$ is true for all values of $x$ not equal to $-2$, where $a$ and $b$ are constants. What is the value of $ab$?
+
+**Correct Answer:** $-15$
+
+**Rationale:** Write the right side over the common denominator: $3-\dfrac{11}{x+2}=\dfrac{3(x+2)-11}{x+2}=\dfrac{3x-5}{x+2}$. Matching numerators, $a=3$ and $b=-5$, so $ab=-15$.
+
+**Misconception addressed:** Students forget to multiply the $3$ by $(x+2)$, getting $b=-11$ and $ab=-33$, or report $a+b$ instead of $ab$.
+
+---
+
+### A-137
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** In the given system of equations, $k$ is a constant. If the system has no solution, what is the value of $k$?
+
+$$\dfrac{2}{3}x-\dfrac{1}{2}y=5$$
+$$kx-3y=7$$
+
+(A) $-4$
+(B) $\dfrac{1}{9}$
+(C) $\dfrac{14}{15}$
+(D) $4$
+
+**Correct Answer:** (D) $4$
+
+**Rationale:** No solution requires parallel, distinct lines. Multiply the first equation by $6$: $4x-3y=30$. The $y$-coefficients already match ($-3$), so the $x$-coefficients must match: $k=4$. The constants differ ($30\neq7$), so the lines are distinct and the system has no solution.
+
+**Misconception addressed:** Students compare ratios incorrectly (e.g. $\dfrac{2/3}{k}=\dfrac{3}{1/2}$ gives $\dfrac19$, choice B) or flip a sign and choose $-4$.
+
+---
+
+### AM-132
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $f$ is defined by $f(x)=a(x+4)(x-10)$, where $a$ is a constant. The minimum value of $f$ is $-98$. What is the value of $f(0)$?
+
+(A) $-98$
+(B) $-80$
+(C) $-40$
+(D) $80$
+
+**Correct Answer:** (B) $-80$
+
+**Rationale:** A minimum exists only if $a>0$. The vertex lies midway between the zeros: $x=\dfrac{-4+10}{2}=3$. Then $f(3)=a(7)(-7)=-49a=-98$, so $a=2$. Therefore $f(0)=2(4)(-10)=-80$.
+
+**Misconception addressed:** Students answer $-98$ (the minimum) as if it were $f(0)$, or take the vertex at $x=0$ or $x=-4$ instead of the midpoint of the zeros.
+
+---
+
+### AM-133
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The expression $10x^{4}+33x^{2}+20$ can be rewritten as $(5x^{2}+a)(2x^{2}+b)$, where $a$ and $b$ are positive integers, or as $(5x^{2}+c)(2x^{2}+d)$, where $c$ and $d$ are positive nonintegers. What is the value of $a+d$?
+
+**Correct Answer:** $\dfrac{28}{5}$ (or $5.6$)
+
+**Rationale:** Expanding $(5x^2+a)(2x^2+b)=10x^4+(5b+2a)x^2+ab$ requires $5b+2a=33$ and $ab=20$. The positive-integer solution is $a=4,\ b=5$ ($25+8=33$). For $c,d$: $5d+2c=33$ and $cd=20$ give $d=\dfrac{33-2c}{5}$ and $2c^{2}-33c+100=0$, so $c=4$ or $c=\dfrac{25}{2}$. The nonintegral pair is $c=\dfrac{25}{2},\ d=\dfrac{8}{5}$ (the other root gives the integers again). Thus $a+d=4+\dfrac{8}{5}=\dfrac{28}{5}$.
+
+**Misconception addressed:** Students find only the integer pair and reuse $b=5$ for $d$ (answer $9$), or take the other root $c=4$ and so $d=5$, which is an integer.
+
+---
+
+
+### 2.27 Teacher-Supplied and Gap-Closing Batch — Percent Difference, Salt/Acid Mixtures with Fixed Totals, Altitude to the Hypotenuse, Intersecting Chords, Thales (9 items — PS-075 to PS-076, A-138 to A-140, GT-106 to GT-109)
+
+*Source note: PS-075 is teacher-supplied (screenshot), re-typeset and re-solved. The other items close two gaps found in the coverage check: mixtures that give a fixed total mass and fixed solute amount, and circle items on the altitude to the hypotenuse, intersecting chords and the right angle in a semicircle. All values were machine-checked. No Saudi context, per the SAT Bank exception.*
+
+---
+
+### PS-075
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** The mass of object $A$ is $k$ grams. The mass of object $B$ is $130\%$ of the mass of object $A$. If the mass of object $B$ is $66$ grams greater than the mass of object $A$, what is the value of $k$?
+
+**Correct Answer:** $220$
+
+**Rationale:** The mass of $B$ is $1.3k$, and it exceeds the mass of $A$ by $66$: $1.3k-k=66$, so $0.3k=66$ and $k=220$. Check: $B=286$ and $286-220=66$.
+
+**Misconception addressed:** Students solve $1.3k=66$ (giving $k\approx50.8$), forgetting that $66$ is the difference between the masses, or take $30\%$ of $66$.
+
+---
+
+### A-138
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** A technician mixed a solution that is $0.4\%$ sodium chloride by mass with a solution that is $0.1\%$ sodium chloride by mass. The mixture weighs a total of $60$ grams and contains a total of $0.12$ grams of sodium chloride. How many grams of the $0.4\%$ solution were used?
+
+**Correct Answer:** $20$
+
+**Rationale:** Let $x$ be the grams of the $0.4\%$ solution, so $60-x$ grams of the $0.1\%$ solution were used. Salt mass: $0.004x+0.001(60-x)=0.12$, so $0.003x+0.06=0.12$ and $x=20$. Check: $0.08+0.04=0.12$.
+
+**Misconception addressed:** Students write the percentages as $0.4$ and $0.1$ instead of $0.004$ and $0.001$, or answer with the grams of the $0.1\%$ solution ($40$).
+
+---
+
+### A-139
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** A chemist mixes a $2\%$ acid solution with an $8\%$ acid solution to make $40$ milliliters of mixture that contains $1.4$ milliliters of pure acid. How many milliliters of the $8\%$ solution were used?
+
+(A) $10$
+(B) $15$
+(C) $25$
+(D) $30$
+
+**Correct Answer:** (A) $10$
+
+**Rationale:** Let $y$ be the milliliters of the $8\%$ solution, so $40-y$ milliliters of the $2\%$ solution were used. Then $0.08y+0.02(40-y)=1.4$, so $0.06y+0.8=1.4$ and $y=10$. Check: $0.8+0.6=1.4$.
+
+**Misconception addressed:** Students solve for the wrong unknown: $30$ is the volume of the $2\%$ solution (choice D). Others set the pure-acid amount equal to $0.05\cdot40=2$, assuming equal volumes.
+
+---
+
+### A-140
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** One solution is $0.5\%$ salt by mass and another solution is $0.1\%$ salt by mass. A mixture of the two weighs $80$ grams in total and contains $0.2$ grams of salt. How many grams of the $0.1\%$ solution are in the mixture?
+
+**Correct Answer:** $50$
+
+**Rationale:** Let $x$ be the grams of the $0.5\%$ solution; then $80-x$ is the grams of the $0.1\%$ solution. $0.005x+0.001(80-x)=0.2 \Rightarrow 0.004x=0.12 \Rightarrow x=30$. The $0.1\%$ solution is $80-30=50$ grams. Check: $0.15+0.05=0.2$.
+
+**Misconception addressed:** Students stop at $x=30$, the grams of the $0.5\%$ solution, instead of subtracting from the total to answer what was asked.
+
+---
+
+### PS-076
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** A lab combines $40$ grams of a solution that is $0.3\%$ sodium chloride by mass with $60$ grams of a solution that is $0.05\%$ sodium chloride by mass. What is the percent of sodium chloride by mass in the combined $100$ grams of mixture?
+
+**Correct Answer:** $0.15$
+
+**Rationale:** Salt in the first solution: $0.003(40)=0.12$ g. Salt in the second: $0.0005(60)=0.03$ g. Total salt is $0.15$ g in $100$ g, which is $0.15\%$.
+
+**Misconception addressed:** Students average the two percents ($\dfrac{0.3+0.05}{2}=0.175$) instead of weighting by mass, or leave the answer as the decimal $0.0015$ rather than a percent.
+
+---
+
+### GT-106
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Question:** Points $A$, $B$, and $C$ lie on a circle, and $\angle ABC$ is a right angle. Point $D$ lies on segment $AC$ such that $BD\perp AC$, with $BD=6$. The diameter of the circle is $13$ and $AB<BC$. What is the value of $\dfrac{CD}{AD}$?
+
+**Correct Answer:** $\dfrac{9}{4}$ (or $2.25$)
+
+**Rationale:** Since $\angle ABC=90^\circ$, $AC$ is a diameter, so $AD+CD=13$. In right triangle $ABC$ the altitude $BD$ satisfies $BD^2=AD\cdot CD$, so $AD\cdot CD=36$. Then $AD$ and $CD$ are the roots of $t^2-13t+36=0$, which are $4$ and $9$. Because $AB<BC$, $AD<CD$ ($AB^2=AD\cdot AC$), so $AD=4$ and $CD=9$ and the ratio is $\dfrac94$.
+
+**Misconception addressed:** Students do not notice that $\angle ABC=90^\circ$ forces $AC$ to be the diameter, or give $\dfrac{4}{9}$ by assigning the roots to $AD$ and $CD$ in the wrong order.
+
+---
+
+### GT-107
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** In right triangle $ABC$, the right angle is at $B$, and $BD$ is the altitude drawn to hypotenuse $AC$ (with $D$ on $AC$). If $AD=3$ and $DC=12$, what is the length of $BD$?
+
+(A) $4$
+(B) $6$
+(C) $7.5$
+(D) $9$
+
+**Correct Answer:** (B) $6$
+
+**Rationale:** The altitude to the hypotenuse is the geometric mean of the two segments: $BD^2=AD\cdot DC=3(12)=36$, so $BD=6$. Check: $AB=\sqrt{45}$, $BC=\sqrt{180}$, and $AB^2+BC^2=225=15^2$.
+
+**Misconception addressed:** Students average the segments ($\dfrac{3+12}{2}=7.5$), subtract them ($12-3=9$), or divide them ($\dfrac{12}{3}=4$) instead of using $BD^2=AD\cdot DC$.
+
+---
+
+### GT-108
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Question:** Chords $\overline{AC}$ and $\overline{BE}$ of a circle intersect at point $D$ inside the circle. If $AD=4$, $DC=15$, and $BD=6$, what is the length of $\overline{BE}$?
+
+**Correct Answer:** $16$
+
+**Rationale:** For chords that intersect inside a circle, $AD\cdot DC=BD\cdot DE$. So $4(15)=6\cdot DE$ and $DE=10$. Then $BE=BD+DE=6+10=16$.
+
+**Misconception addressed:** Students stop at $DE=10$ and forget to add $BD$, or multiply $AD\cdot BD$ and $DC\cdot DE$ (pairing the wrong segments).
+
+---
+
+### GT-109
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Question:** Segment $AC$ is a diameter of a circle, and point $B$ lies on the circle. If $AC=26$ and $AB=10$, what is the length of $BC$?
+
+(A) $16$
+(B) $24$
+(C) $\sqrt{776}$
+(D) $26$
+
+**Correct Answer:** (B) $24$
+
+**Rationale:** An angle inscribed in a semicircle is a right angle, so $\angle ABC=90^\circ$ and $AC$ is the hypotenuse. Then $BC=\sqrt{26^2-10^2}=\sqrt{576}=24$.
+
+**Misconception addressed:** Students subtract the lengths ($26-10=16$) or treat $AC$ as a leg and add the squares ($\sqrt{26^2+10^2}=\sqrt{776}$), missing that the diameter is the hypotenuse.
+
+---
+
+
+### 2.28 Teacher-Supplied Screenshot Batch — Parameter Equations, Similar Solids, Circle Equations, Rational and Radical Expressions (33 items — A-141 to A-148, GT-110 to GT-117, AM-134 to AM-150)
+### A-141
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $\dfrac{48x+144}{8}-\dfrac{c}{15}=d(x-2)$ In the equation above, $c$ and $d$ are constants. If the equation has infinitely many solutions, what is the value of $c$?
+
+**Correct Answer:** $450$
+
+**Rationale:** $\dfrac{48x+144}{8}=6x+18$. Infinitely many solutions require identical sides: $d=6$ and $18-\dfrac{c}{15}=-2d=-12$, so $\dfrac{c}{15}=30$ and $c=450$.
+
+**Misconception addressed:** Students match only the $x$-coefficients, or forget the $-2d$ constant term after distributing $d(x-2)$.
+
+---
+
+### A-142
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $7(wx+17)=\dfrac{21}{2}x+182$ In the equation above, $w$ is a constant. If the equation has no solution, what is the value of $w$?
+
+**Correct Answer:** $\dfrac{3}{2}$ (or $1.5$)
+
+**Rationale:** Distribute: $7wx+119=\dfrac{21}{2}x+182$. No solution requires equal $x$-coefficients and unequal constants: $7w=\dfrac{21}{2}$, so $w=\dfrac32$; the constants $119\ne182$.
+
+**Misconception addressed:** Students solve for $x$ instead of comparing coefficients, or forget to distribute the $7$ to the $17$.
+
+---
+
+### A-143
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $L(w)=1.7729w+8.4$ models a quantity $L$ as a function of $w$. According to the model, by how much does $L$ increase for a $120.5$-point increase in $w$? (Round to the nearest tenth.)
+
+**Correct Answer:** $213.6$
+
+**Rationale:** The change in $L$ is slope $\times$ change in $w$: $1.7729\times120.5=213.63\ldots\approx213.6$. The $8.4$ cancels in a difference.
+
+**Misconception addressed:** Students substitute $120.5$ into $L$ and add the $8.4$ intercept ($222.0$), which is the value of $L$, not the increase.
+
+---
+
+### A-144
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** $7x+4=c(x+d)$ In the equation above, $c$ and $d$ are constants. If the equation has no solutions, which of the following must be true? I. $c=7$  II. $d=\dfrac{4}{7}$  III. $cd\ne4$
+
+(A) None
+(B) I only
+(C) I and II only
+(D) I and III only
+
+**Correct Answer:** (D) I and III only
+
+**Rationale:** Expand: $7x+4=cx+cd$. No solution requires $c=7$ and $cd\ne4$, i.e. $d\ne\dfrac47$. So I and III must be true; II is exactly the case that gives infinitely many solutions.
+
+**Misconception addressed:** Students confuse the no-solution condition ($d
+erac47$) with the infinitely-many condition ($d=rac47$).
+
+---
+
+### A-145
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The line $4x+y=k$ contains the point $(a,b)$, and the line $2x+k=3y$ contains the point $(3a,5b)$, where $k$ is a constant. Which of the following expresses $a$ in terms of $b$?
+
+(A) $\dfrac{5b}{7}$
+(B) $\dfrac{7b}{5}$
+(C) $\dfrac{14b}{5}$
+(D) $\dfrac{5b}{14}$
+
+**Correct Answer:** (B) $\dfrac{7b}{5}$
+
+**Rationale:** From the first line $k=4a+b$. The second line at $(3a,5b)$: $6a+k=15b$. Substitute: $6a+4a+b=15b$, so $10a=14b$ and $a=\dfrac{7b}{5}$.
+
+**Misconception addressed:** Students swap the coefficients ($\frac{5b}{7}$) or fail to substitute $k$ consistently into both equations.
+
+---
+
+### A-146
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** Solution $X$ contains $1$ millimole (mmol) of chloride in every $8.0$ mL, and solution $Y$ contains $1$ mmol of chloride in every $2.5$ mL. A mixture of $x$ mL of $X$ and $y$ mL of $Y$ contains a total of $7.6$ mmol of chloride. Which equation represents this situation?
+
+(A) $8.0x+2.5y=7.6$
+(B) $0.125x+0.40y=7.6$
+(C) $8.0x+2.5y=1$
+(D) $0.125x+0.40y=1$
+
+**Correct Answer:** (B) $0.125x+0.40y=7.6$
+
+**Rationale:** Concentration of $X$: $\dfrac{1}{8.0}=0.125$ mmol/mL; of $Y$: $\dfrac{1}{2.5}=0.40$ mmol/mL. Total chloride $=0.125x+0.40y=7.6$.
+
+**Misconception addressed:** Students use the volumes ($8.0$, $2.5$) as coefficients instead of the reciprocal rates.
+
+---
+
+### A-147
+
+**Skill:** Algebra — Function notation
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** For the linear function $f$, the table gives $f(5)=52$, $f(6)=78$, $f(7)=104$. The function $g$ is defined by $f(x)=g(x+1)+5x$. What is the value of $g(12)$?
+
+**Correct Answer:** $153$
+
+**Rationale:** The table gives slope $26$, so $f(11)=104+4(26)=208$. From $f(x)=g(x+1)+5x$ with $x=11$: $208=g(12)+55$, so $g(12)=153$.
+
+**Misconception addressed:** Students evaluate at $x=12$ (using $f(12)$) instead of $x=11$, forgetting the shift in $g(x+1)$.
+
+---
+
+### A-148
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The linear function $f$ satisfies $f(2)=7$ and $f(6)=19$. What is the value of $f(10)$?
+
+(A) 22
+(B) 28
+(C) 31
+(D) 34
+
+**Correct Answer:** (C) $31$
+
+**Rationale:** Slope $=\dfrac{19-7}{6-2}=3$. $f(10)=19+3(4)=31$.
+
+**Misconception addressed:** Students add the same amount ($12$) as the first jump of $+12$ without noticing the $x$-steps are both $4$, or double $f(6)$ ($38$ trap).
+
+---
+
+### GT-110
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** Two similar rectangular prisms have volumes $972$ and $36$. An edge of the larger prism has length $12$. What is the length of the corresponding edge of the smaller prism?
+
+**Correct Answer:** $4$
+
+**Rationale:** Volume ratio $=\dfrac{972}{36}=27$, so the scale factor is $\sqrt[3]{27}=3$. Corresponding edge: $\dfrac{12}{3}=4$.
+
+**Misconception addressed:** Students use the volume ratio ($27$) or its square root as the linear scale factor.
+
+---
+
+### GT-111
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** In a circle with center $O$, segment $AC$ is a diameter and $AC=426$. Point $D$ lies outside the circle with $OD=AC$, and $\overline{CD}$ is tangent to the circle at $C$. Segment $OD$ intersects the circle at $E$. The length of minor arc $AE$ is $b\pi$. What is the value of $b$?
+
+**Correct Answer:** $142$
+
+**Rationale:** $OC=213$ and $OD=426$; since $\overline{CD}\perp\overline{OC}$, $\cos\angle COD=\dfrac{213}{426}$, so $\angle COD=60^\circ$ and $\angle AOE=180^\circ-60^\circ=120^\circ$. Arc $AE=\dfrac{120}{360}(2\pi)(213)=142\pi$, so $b=142$.
+
+**Misconception addressed:** Students use $ngle COD=60^\circ$ as the arc $AE$ angle, or use $426$ as the radius.
+
+---
+
+### GT-112
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** In right triangle $PQR$, the right angle is at $Q$, $PQ=18$, and $PR=30$. Point $S$ lies on $\overline{PR}$ such that $\overline{QS}\perp\overline{PR}$. What is the value of $\dfrac{QR}{QS}$?
+
+**Correct Answer:** $\dfrac{5}{3}$ (or $1.667$)
+
+**Rationale:** $QR=\sqrt{30^2-18^2}=24$. Area: $\tfrac12(18)(24)=\tfrac12(30)(QS)$, so $QS=14.4$. $\dfrac{QR}{QS}=\dfrac{24}{14.4}=\dfrac53$.
+
+**Misconception addressed:** Students treat $QS$ as a leg or take $PR$ as a leg when finding $QR$.
+
+---
+
+### GT-113
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** Two similar rectangles have areas $630$ and $2{,}520$. The perimeter of the smaller rectangle is $210$, and the perimeter of the larger is $n$. What is the value of $n$?
+
+(A) $2{,}100$
+(B) $1{,}680$
+(C) $840$
+(D) $420$
+
+**Correct Answer:** (D) $420$
+
+**Rationale:** Area ratio $=\dfrac{2520}{630}=4$, so the scale factor is $2$. Perimeter scales linearly: $n=2(210)=420$.
+
+**Misconception addressed:** Students apply the area ratio ($4$) to perimeter ($840$).
+
+---
+
+### GT-114
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** The edges of cubes $A$ and $B$ are in the ratio $\dfrac{3}{88}$ (edge of $A$ to edge of $B$). What is the ratio of the surface area of $B$ to the surface area of $A$?
+
+(A) $\dfrac{9}{7{,}744}$
+(B) $\dfrac{3}{88}$
+(C) $\dfrac{88}{3}$
+(D) $\dfrac{7{,}744}{9}$
+
+**Correct Answer:** (D) $\dfrac{7{,}744}{9}$
+
+**Rationale:** Edge ratio $B:A=\dfrac{88}{3}$. Surface area scales with the square: $\left(\dfrac{88}{3}\right)^2=\dfrac{7744}{9}$.
+
+**Misconception addressed:** Students use the edge ratio unsquared, or invert the ratio.
+
+---
+
+### GT-115
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** Circle $A$ in the $xy$-plane has equation $x^2+y^2-8x+6y-8n=0$, where $n$ is a constant. Circle $B$ has the same center as circle $A$, has twice the diameter of circle $A$, and passes through $(10,-3)$. What is the value of $n$?
+
+**Correct Answer:** $-2$
+
+**Rationale:** Center $(4,-3)$. Circle $B$ has radius $|10-4|=6$, so circle $A$ has radius $3$. $r_A^2=25+8n=9$, so $n=-2$.
+
+**Misconception addressed:** Students use radius $6$ for circle $A$ ($25+8n=36$), forgetting circle $B$ is the larger circle.
+
+---
+
+### GT-116
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** A right square pyramid has a base area of $100$ and a total surface area of $100+100\sqrt5$. What is the height of the pyramid?
+
+**Correct Answer:** $10$
+
+**Rationale:** Base side $=10$. Lateral area $=4\cdot\tfrac12(10)\ell=20\ell=100\sqrt5$, so slant height $\ell=5\sqrt5$. Height $h=\sqrt{\ell^2-5^2}=\sqrt{125-25}=10$.
+
+**Misconception addressed:** Students use the slant height $5\sqrt5$ as the height, or use half-diagonal instead of half-side ($5$).
+
+---
+
+### GT-117
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The equation $x^2-18x+y^2-6y=-38$ represents a circle in the $xy$-plane. What is the radius of the circle?
+
+(A) $4$
+(B) $6$
+(C) $\sqrt{47}$
+(D) $\sqrt{52}$
+
+**Correct Answer:** (D) $\sqrt{52}$
+
+**Rationale:** Complete the square: $(x-9)^2+(y-3)^2=-38+81+9=52$. Radius $=\sqrt{52}$.
+
+**Misconception addressed:** Students stop at $52$ or forget to add $81$ and $9$ to the right side.
+
+---
+
+### AM-134
+
+**Skill:** Advanced Math — Nonlinear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $57x^2+(57b+a)x+ab=0$ In the equation above, $a$ and $b$ are positive constants. The product of the solutions is $kab$, where $k$ is a constant. What is the value of $k$?
+
+**Correct Answer:** $\dfrac{1}{57}$
+
+**Rationale:** The left side factors as $(57x+a)(x+b)$, so the solutions are $-\dfrac{a}{57}$ and $-b$, with product $\dfrac{ab}{57}$. Hence $k=\dfrac1{57}$. (Vieta: $\dfrac{c}{a}=\dfrac{ab}{57}$.)
+
+**Misconception addressed:** Students give $k=57$ (the leading coefficient) instead of its reciprocal.
+
+---
+
+### AM-135
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $\dfrac{\sqrt[3]{x^7}}{\sqrt{x}}=x^{a/b}$ for $x>1$, where $a$ and $b$ are positive integers with no common factor. What is the value of $\dfrac{a}{b}$?
+
+**Correct Answer:** $\dfrac{11}{6}$
+
+**Rationale:** $x^{7/3}\div x^{1/2}=x^{7/3-1/2}=x^{14/6-3/6}=x^{11/6}$.
+
+**Misconception addressed:** Students add the exponents ($\frac{17}{6}$) or divide $7$ by $2$.
+
+---
+
+### AM-136
+
+**Skill:** Advanced Math — Function notation
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $g$ satisfies $g(kn)=n+10$ for every real number $n$, where $k$ is a constant. If $g(4)=82$, what is the value of $k$?
+
+**Correct Answer:** $\dfrac{1}{18}$
+
+**Rationale:** Set $kn=4$, so $n=\dfrac4k$. Then $g(4)=\dfrac4k+10=82$, so $\dfrac4k=72$ and $k=\dfrac1{18}$.
+
+**Misconception addressed:** Students set $n=4$ (instead of $kn=4$), giving $4k=\ldots$ errors.
+
+---
+
+### AM-137
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** If $x+\dfrac1x=5$, what is the value of $x^2+\dfrac1{x^2}$?
+
+**Correct Answer:** $23$
+
+**Rationale:** Square both sides: $x^2+2+\dfrac1{x^2}=25$, so $x^2+\dfrac1{x^2}=23$.
+
+**Misconception addressed:** Students square termwise and get $25$, missing the cross term $2$.
+
+---
+
+### AM-138
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $h(x)=a^x+b$, where $a>0$ and $b$ is a constant, passes through $(0,10)$ and $(2,13)$. What is the value of $ab$?
+
+(A) $13$
+(B) $18$
+(C) $20$
+(D) $26$
+
+**Correct Answer:** (B) $18$
+
+**Rationale:** $h(0)=1+b=10$, so $b=9$. $h(2)=a^2+9=13$, so $a=2$. $ab=18$.
+
+**Misconception addressed:** Students forget $a^0=1$ and take $b=10$, or report $a^2$ or $a+b$.
+
+---
+
+### AM-139
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $\dfrac{2}{x-2}+\dfrac{3}{x+5}=\dfrac{rx+t}{(x-2)(x+5)}$ The equation above is true for all $x\ne2,-5$, where $r$ and $t$ are constants. What is the value of $rt$?
+
+(A) $-20$
+(B) $15$
+(C) $20$
+(D) $60$
+
+**Correct Answer:** (C) $20$
+
+**Rationale:** Combine: $2(x+5)+3(x-2)=5x+4$. So $r=5$, $t=4$, $rt=20$.
+
+**Misconception addressed:** Sign error on $3(x-2)$ gives $t=16$; adding instead of multiplying gives $r+t=9$.
+
+---
+
+### AM-140
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $h(x)=2(x-4)^2-32$ has $x$-intercepts at $(0,0)$ and $(t,0)$. What is the value of $t$?
+
+**Correct Answer:** $8$
+
+**Rationale:** $2(x-4)^2=32\Rightarrow x-4=\pm4$, so $x=0$ or $x=8$. $t=8$.
+
+**Misconception addressed:** Students report the vertex value $4$ or $-4$ instead of the second root.
+
+---
+
+### AM-141
+
+**Skill:** Advanced Math — Nonlinear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $(ax+3)(5x^2-bx+4)=20x^3-9x^2-2x+12$ In the equation above, $a$ and $b$ are constants. What is the value of $ab$?
+
+(A) $18$
+(B) $20$
+(C) $24$
+(D) $40$
+
+**Correct Answer:** (C) $24$
+
+**Rationale:** Matching $x^3$: $5a=20$, so $a=4$. Matching $x^2$: $-ab+15=-9$, so $ab=24$ (and $b=6$).
+
+**Misconception addressed:** Students find $a+b$ ($10$) or drop the $3\cdot5x^2$ contribution to the $x^2$ term.
+
+---
+
+### AM-142
+
+**Skill:** Advanced Math — Nonlinear equations in one variable
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $\dfrac{1}{x^2+10x+25}=4$ Which of the following could be the value of $x+5$?
+
+(A) $\dfrac12$
+(B) $\dfrac52$
+(C) $\dfrac92$
+(D) $\dfrac{11}{2}$
+
+**Correct Answer:** (A) $\dfrac12$
+
+**Rationale:** $x^2+10x+25=(x+5)^2$, so $(x+5)^2=\dfrac14$ and $x+5=\pm\dfrac12$. Only $\dfrac12$ is listed.
+
+**Misconception addressed:** Students solve for $x$ instead of $x+5$, or forget to take the reciprocal ($(x+5)^2=4$).
+
+---
+
+### AM-143
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $\dfrac{\sqrt{x^5}}{\sqrt[3]{x^4}}=x^{a/b}$ for $x>1$, where $a$ and $b$ are positive integers with no common factor. What is the value of $\dfrac ab$?
+
+**Correct Answer:** $\dfrac76$
+
+**Rationale:** $x^{5/2}\div x^{4/3}=x^{5/2-4/3}=x^{15/6-8/6}=x^{7/6}$.
+
+**Misconception addressed:** Students subtract numerators and denominators separately ($\frac{1}{-1}$).
+
+---
+
+### AM-144
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** A theater's revenue, in SAR, from selling $t$ tickets is $R(t)=t(320-10t)$. For which of the following values of $t$ is the revenue $2{,}400$ SAR?
+
+(A) $14$
+(B) $18$
+(C) $20$
+(D) $26$
+
+**Correct Answer:** (C) $20$
+
+**Rationale:** $t(320-10t)=2400\Rightarrow t^2-32t+240=0\Rightarrow(t-12)(t-20)=0$. Only $t=20$ is listed.
+
+**Misconception addressed:** Students divide $2400$ by $320$ or set $320-10t=2400$.
+
+---
+
+### AM-145
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $m(z)=-\sqrt{z^2+pz+q}$ has graph passing through $(6,0)$ and $\left(0,-\sqrt{252}\right)$, where $p$ and $q$ are constants. What is the greatest value of $t$ for which $m(t)=0$?
+
+**Correct Answer:** $42$
+
+**Rationale:** $m(0)=-\sqrt q=-\sqrt{252}$, so $q=252$. $m(6)=0$: $36+6p+252=0$, so $p=-48$. Solve $z^2-48z+252=0$: $(z-6)(z-42)=0$. Greatest $t=42$.
+
+**Misconception addressed:** Students stop at the given zero $6$ or use $q=\sqrt{252}$.
+
+---
+
+### AM-146
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $g(x)=\dfrac{2x-4}{(x+11)(x-6)}$ If $g(a+5)=0$, what is the value of $a$?
+
+**Correct Answer:** $-3$
+
+**Rationale:** A fraction is $0$ when its numerator is $0$ (denominator nonzero): $2(a+5)-4=0$, so $a+5=2$ and $a=-3$. The denominator is $(8)(-3)\ne0$.
+
+**Misconception addressed:** Students set $a=2$ (solving for the argument only) or set the denominator to $0$.
+
+---
+
+### AM-147
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** $y=\dfrac{5(x+3)(x-9)(x+2)}{(x-5)(x-5c)}$ In the equation above, $c$ is a positive constant. The expression is undefined at $x=10$ (and $x=5$). What is the value of $c$?
+
+(A) $-3$
+(B) $-2$
+(C) $2$
+(D) $3$
+
+**Correct Answer:** (C) $2$
+
+**Rationale:** The denominator is $0$ at $x=10$: $10-5c=0$, so $c=2$.
+
+**Misconception addressed:** Students use the numerator factors ($-3$, $9$, $-2$) or sign-flip to $\pm3$.
+
+---
+
+### AM-148
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot, re-typeset.
+
+**Question:** The function $h(x)=-\sqrt{x^2+bx+c}$ has a graph passing through $(2,0)$ and $\left(0,-\sqrt{314}\right)$, where $b$ and $c$ are constants. What is the greatest value of $m$ for which $h(m)=0$?
+
+**Correct Answer:** $157$
+
+**Rationale:** $c=314$. $h(2)=0$: $4+2b+314=0$, so $b=-159$. Solve $x^2-159x+314=0$: $(x-2)(x-157)=0$. Greatest $m=157$.
+
+**Misconception addressed:** Students stop at the given zero $2$ or take the sum of roots ($159$).
+
+---
+
+### AM-149
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** $\dfrac{40x+100}{2x^2-5x-25}+\dfrac{x^2y-5xy}{4xy}$ Which of the following is equivalent to the expression above for $x>5$, $y>0$?
+
+(A) $5$
+(B) $\dfrac{x-1}{x+15}$
+(C) $\dfrac{x^2-10x+105}{4(x-5)}$
+(D) $\dfrac{x^2-10x+105}{4(2x+5)}$
+
+**Correct Answer:** (C) $\dfrac{x^2-10x+105}{4(x-5)}$
+
+**Rationale:** Factor: $\dfrac{20(2x+5)}{(2x+5)(x-5)}=\dfrac{20}{x-5}$ and $\dfrac{xy(x-5)}{4xy}=\dfrac{x-5}{4}$. Sum: $\dfrac{80+(x-5)^2}{4(x-5)}=\dfrac{x^2-10x+105}{4(x-5)}$.
+
+**Misconception addressed:** Students cancel across the sum or use denominator $4(2x+5)$ (not a common denominator).
+
+---
+
+### AM-150
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** Teacher-supplied screenshot, re-typeset; answer options/statements reconstructed and independently solved.
+
+**Question:** The function $f(x)=ax^2+bx+c$ has $a>0$ and $c<0$. Which of the following must be true? I. $f$ has two distinct real zeros  II. The zeros of $f$ have opposite signs  III. The vertex of the graph of $f$ lies in the fourth quadrant
+
+(A) I only
+(B) I and III only
+(C) I and II only
+(D) I, II and III
+
+**Correct Answer:** (C) I and II only
+
+**Rationale:** $ac<0$ gives discriminant $b^2-4ac>0$ (I true) and product of zeros $\dfrac ca<0$ (II true). The vertex $x=-\dfrac{b}{2a}$ can be positive, zero or negative, so III need not hold.
+
+**Misconception addressed:** Students assume the vertex is in the fourth quadrant because $c<0$, confusing the $y$-intercept with the vertex.
+
+---
+
+### 2.29 Teacher-Supplied Screenshot Batch — Rational-Plus-Exponential Parameter Table (1 item — AM-151)
+
+### AM-151
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** Teacher-supplied screenshot (PolyPrep SAT question 17), re-typeset.
+
+**Question:**
+
+| $x$ | $g(x)$ |
+|---|---|
+| $-12$ | $-\dfrac{17}{4}$ |
+| $-9$ | $-\dfrac{10}{3}$ |
+| $3$ | $258$ |
+
+The table above shows three values of $x$ and their corresponding values of $g(x)$. If $g(x)=\dfrac{x^{2}+a}{bx}+2^{(cx-1)}$, what is the value of $abc$?
+
+**Correct Answer:** $81$
+
+**Rationale:** For $x=3$ the target $258=2+256=2+2^{8}$ suggests $cx-1=8$, so $c=3$ and $\dfrac{9+a}{3b}=2$, i.e. $9+a=6b$. For $x=-12$ and $x=-9$ the exponential term $2^{-37}$ and $2^{-28}$ is negligible, so $\dfrac{144+a}{-12b}\approx-\dfrac{17}{4}$ gives $144+a=51b$. Subtract: $135=45b$, so $b=3$, $a=9$. Check $x=-9$: $\dfrac{81+9}{-27}=-\dfrac{10}{3}$ ✓. Then $abc=9\cdot3\cdot3=81$.
+
+**Misconception addressed:** Students try to solve three simultaneous equations containing $2^{cx}$ symbolically instead of reading structure: a large output signals a large exponent, and a very negative input makes the exponential term vanish.
+
+**Teacher note:** Table values for $x=-12,-9$ hold only approximately (the exponential term is not exactly $0$), so use as a structure-recognition item, not an exact system. Do not use on a worksheet without this being discussed.
+
+---
+
+### 2.30 Gap-Closing Batch — Equivalent Exponential Forms, Exponential Rescaling, Vertex in Context, Mean/Median Changes, Successive Percents, Unit Conversions (28 items — AM-152 to AM-165, PS-077 to PS-090)
+
+### AM-152
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=5(3)^{x+2}$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the $y$-coordinate of the $y$-intercept of the graph of the function it defines in the $xy$-plane?
+
+I. $g(x)=45(3)^{x}$
+II. $h(x)=15(3)^{x+1}$
+
+(A) I only
+(B) II only
+(C) I and II
+(D) Neither I nor II
+
+**Correct Answer:** (A) I only
+
+**Rationale:** The $y$-intercept is $f(0)=5(3)^2=45$. Form I rewrites $5\cdot 3^{2}\cdot 3^{x}=45(3)^x$, so $45$ is the coefficient. Form II, $15(3)^{x+1}$, is equivalent to $f$ but its constant $15$ is not the $y$-coordinate: $h(0)=15\cdot3=45$ only after evaluating.
+
+**Misconception addressed:** Students assume any equivalent form shows the intercept. A form displays the intercept only when the exponent is $x$ alone, so the leading factor equals the value at $x=0$.
+
+---
+
+### AM-153
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=96(2)^{x-3}$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the $y$-coordinate of the $y$-intercept of the graph of the function it defines in the $xy$-plane?
+
+I. $g(x)=48(2)^{x-2}$
+II. $h(x)=12(2)^{x}$
+
+(A) I only
+(B) II only
+(C) I and II
+(D) Neither I nor II
+
+**Correct Answer:** (B) II only
+
+**Rationale:** $f(0)=96(2)^{-3}=12$. Form II writes $96\cdot2^{-3}\cdot2^{x}=12(2)^x$, displaying $12$. Form I, $48(2)^{x-2}$, is equivalent ($48\cdot2^{-2}=12$) but displays $48$, and $g(0)=12$ only after evaluating the exponent.
+
+**Misconception addressed:** Students see a different coefficient on an equivalent form and assume it is the intercept. The exponent must be $x$ alone.
+
+---
+
+### AM-154
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=3(4)^{x+2}$, where $x\ge 0$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where $x\ge0$?
+
+I. $g(x)=48(4)^{x}$
+II. $h(x)=48(2)^{2x}$
+
+(A) I only
+(B) II only
+(C) I and II
+(D) Neither I nor II
+
+**Correct Answer:** (C) I and II
+
+**Rationale:** Because the base is greater than $1$, $f$ increases, so its minimum on $x\ge0$ is $f(0)=3(4)^2=48$. Form I is $3\cdot16\cdot4^{x}=48(4)^x$. Form II uses $2^{2x}=4^{x}$, so $48(2)^{2x}$ is equivalent too. Both show $48$ as the coefficient.
+
+**Misconception addressed:** Students think changing the base representation ($2^{2x}$ for $4^x$) changes the structure. It does not change the coefficient, which is still the value at $x=0$.
+
+---
+
+### AM-155
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=6(2)^{x+3}$, where $x\ge 0$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where $x\ge0$?
+
+I. $g(x)=12(2)^{x+2}$
+II. $h(x)=24(2)^{x+1}$
+
+(A) I only
+(B) II only
+(C) I and II
+(D) Neither I nor II
+
+**Correct Answer:** (D) Neither I nor II
+
+**Rationale:** The minimum on $x\ge0$ is $f(0)=6(2)^3=48$. Form I is equivalent ($12\cdot4=48$) but displays $12$. Form II is equivalent ($24\cdot2=48$) but displays $24$. Neither shows $48$; the exponent would have to be $x$ alone.
+
+**Misconception addressed:** Students pick the form whose coefficient looks "simplified" without computing the value at $x=0$.
+
+---
+
+### AM-156
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f(x)=200(1.5)^{\frac{x}{2}}$ is defined for all $x$. For every increase of $x$ by $4$, the value of $f(x)$ increases by $p\%$. What is the value of $p$?
+
+**Correct Answer:** $125$
+
+**Rationale:** An increase of $4$ in $x$ multiplies $f$ by $(1.5)^{4/2}=(1.5)^2=2.25$. A factor of $2.25$ is an increase of $125\%$.
+
+**Misconception addressed:** Students report the factor as the percent ($225$), forget to divide the exponent by $2$ ($1.5^4$), or give $50$ (the base's own percent).
+
+---
+
+### AM-157
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f(t)=2400(0.8)^{\frac{t}{5}}$ models the value, in dollars, of a machine $t$ years after it was bought. For every increase of $t$ by $10$, the value of $f(t)$ decreases by $p\%$. What is the value of $p$?
+
+(A) $20$
+(B) $36$
+(C) $40$
+(D) $64$
+
+**Correct Answer:** (B) $36$
+
+**Rationale:** An increase of $10$ years multiplies the value by $(0.8)^{10/5}=(0.8)^2=0.64$. The value keeps $64\%$ of itself, so it decreases by $36\%$.
+
+**Misconception addressed:** Students choose $64$ (remaining percent) or double the $20\%$ to get $40$, ignoring compounding.
+
+---
+
+### AM-158
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $N(t)=500(2)^{\frac{t}{3}}$ models the number of bacteria in a culture $t$ hours after the start. Which of the following gives the number of bacteria $m$ minutes after the start?
+
+(A) $N(m)=500(2)^{\frac{m}{180}}$
+(B) $N(m)=500(2)^{180m}$
+(C) $N(m)=500(2)^{20m}$
+(D) $N(m)=500(2)^{\frac{m}{20}}$
+
+**Correct Answer:** (A) $N(m)=500(2)^{\frac{m}{180}}$
+
+**Rationale:** Since $t=\dfrac{m}{60}$ hours, $\dfrac{t}{3}=\dfrac{m}{60\cdot3}=\dfrac{m}{180}$.
+
+**Misconception addressed:** Students convert minutes to hours in the wrong direction: $t=60m$ gives $2^{20m}$, and multiplying by $3$ instead of dividing gives $2^{m/20}$.
+
+---
+
+### AM-159
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f(x)=12{,}000(0.85)^{x}$ models the number of visitors a museum had each year, where $x$ is the number of years since the start of $2018$ and $0\le x\le6$. If $y=f(x)$ is graphed in the $xy$-plane, which of the following is the best interpretation of the $y$-intercept of the graph in this context?
+
+(A) The minimum estimated number of visitors during the $6$ years was $4{,}526$.
+(B) The minimum estimated number of visitors during the $6$ years was $12{,}000$.
+(C) The estimated number of visitors in $2018$ was $4{,}526$.
+(D) The estimated number of visitors in $2018$ was $12{,}000$.
+
+**Correct Answer:** (D)
+
+**Rationale:** The $y$-intercept is $f(0)=12{,}000$, the estimate at $x=0$, which is $2018$. Since $0.85<1$ the function decreases, so $12{,}000$ is the maximum, not the minimum; $f(6)\approx4{,}526$ is the minimum.
+
+**Misconception addressed:** Students call the intercept the minimum because the function decays, or evaluate at $x=6$ and attach it to the starting year.
+
+---
+
+### AM-160
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The exponential function $f(x)=ab^{x}$, where $a$ and $b$ are positive constants, satisfies $f(2)=18$ and $f(5)=486$. What is the value of $f(4)$?
+
+**Correct Answer:** $162$
+
+**Rationale:** Dividing: $\dfrac{f(5)}{f(2)}=b^{3}=27$, so $b=3$. Then $a(3)^2=18$ gives $a=2$. So $f(4)=2(3)^4=162$.
+
+**Misconception addressed:** Students solve for $b^3$ but stop at $27$, or assume the function is linear and interpolate ($f(4)=354$).
+
+---
+
+### AM-161
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A town's population is modeled by $P(t)=50(3)^{\frac{t}{4}}$, where $t$ is the number of years since $2010$. According to the model, in how many years after $2010$ will the population be $1{,}350$?
+
+**Correct Answer:** $12$
+
+**Rationale:** Set $50(3)^{t/4}=1350$, so $3^{t/4}=27=3^3$. Then $\dfrac t4=3$ and $t=12$.
+
+**Misconception addressed:** Students stop at the exponent $3$ and forget the $\dfrac t4$ rescaling, giving $3$ instead of $12$.
+
+---
+
+### AM-162
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The amount of a medicine in a patient's body is modeled by $A(t)=640\left(\dfrac12\right)^{\frac{t}{8}}$ milligrams, where $t$ is the number of hours after the dose. After how many hours does the model estimate exactly $40$ milligrams remain?
+
+**Correct Answer:** $32$
+
+**Rationale:** Set $640\left(\tfrac12\right)^{t/8}=40$, so $\left(\tfrac12\right)^{t/8}=\tfrac1{16}=\left(\tfrac12\right)^4$. Then $\dfrac t8=4$ and $t=32$.
+
+**Misconception addressed:** Students think of $8$ as the answer for the first halving, or give $4$ (the number of halvings) instead of $4\times 8$ hours.
+
+---
+
+### AM-163
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $h(t)=-16t^{2}+96t+4$ models the height, in feet, of a ball $t$ seconds after it is launched. The graph of $y=h(t)$ in the $ty$-plane has a vertex at $(3,148)$. Which of the following is the best interpretation of the vertex in this context?
+
+(A) The ball was launched from a height of $148$ feet.
+(B) The ball reached its maximum height of $148$ feet $3$ seconds after it was launched.
+(C) The ball hit the ground $148$ seconds after it was launched.
+(D) The ball was $3$ feet above the ground $148$ seconds after it was launched.
+
+**Correct Answer:** (B)
+
+**Rationale:** Because the leading coefficient is negative, the vertex is the maximum point: at $t=3$ seconds the height is $h(3)=-144+288+4=148$ feet. Axes: $t$ is time, $y$ is height.
+
+**Misconception addressed:** Students swap the coordinates (time and height), or call the vertex the launch point or landing point.
+
+---
+
+### AM-164
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A theater sells $600$ tickets when the price is $\$20$. For each $\$1$ increase in price, $20$ fewer tickets are sold. Which ticket price, in dollars, gives the greatest revenue?
+
+(A) $5$
+(B) $25$
+(C) $12{,}000$
+(D) $12{,}500$
+
+**Correct Answer:** (B) $25$
+
+**Rationale:** Let $x$ be the number of $\$1$ increases. Revenue is $R(x)=(20+x)(600-20x)=-20x^2+200x+12{,}000$, with maximum at $x=-\dfrac{200}{2(-20)}=5$. The price is $20+5=\$25$ and the revenue is $\$12{,}500$.
+
+**Misconception addressed:** Students answer the vertex $x=5$ (number of increases) or the revenue $12{,}500$ instead of the price.
+
+---
+
+### AM-165
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The cost, in dollars, of making each unit when a factory produces $n$ units is modeled by $C(n)=0.02n^{2}-3.2n+210$. What is the minimum cost per unit, in dollars, according to the model?
+
+**Correct Answer:** $82$
+
+**Rationale:** The vertex has $n=-\dfrac{-3.2}{2(0.02)}=80$. Then $C(80)=0.02(6400)-3.2(80)+210=128-256+210=82$.
+
+**Misconception addressed:** Students stop at $n=80$ (the number of units that minimizes cost) instead of evaluating the function at it.
+
+---
+
+### PS-077
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The mean of $10$ numbers is $38$. After one number is removed, the mean of the remaining $9$ numbers is $36$. What is the value of the number that was removed?
+
+**Correct Answer:** $56$
+
+**Rationale:** The sum of the $10$ numbers is $10(38)=380$ and the sum of the remaining $9$ is $9(36)=324$. The removed number is $380-324=56$.
+
+**Misconception addressed:** Students subtract the means ($38-36=2$) or divide totals incorrectly.
+
+---
+
+### PS-078
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A data set is $10,\ 14,\ 18,\ 22,\ 36$. A new value of $18$ is added to the set. Which of the following statements about the new data set is (are) true?
+
+I. The mean is less than the mean of the original set.
+II. The median is the same as the median of the original set.
+III. The range is the same as the range of the original set.
+
+(A) I only
+(B) I and II only
+(C) II and III only
+(D) I, II and III
+
+**Correct Answer:** (D) I, II and III
+
+**Rationale:** Original: mean $=\dfrac{100}{5}=20$, median $=18$, range $=26$. New set $10,14,18,18,22,36$: mean $=\dfrac{118}{6}\approx19.67<20$; median $=\dfrac{18+18}{2}=18$; range $=36-10=26$. All three are true.
+
+**Misconception addressed:** Students believe adding a value must change the median, or forget the new value is below the mean so the mean falls.
+
+---
+
+### PS-079
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The mean of $5$ numbers is $14$. One of the numbers, $20$, is replaced by $8$. What is the mean of the new set of $5$ numbers? (Enter as a decimal.)
+
+**Correct Answer:** $11.6$
+
+**Rationale:** The original sum is $5(14)=70$. The new sum is $70-20+8=58$, so the mean is $\dfrac{58}{5}=11.6$.
+
+**Misconception addressed:** Students subtract only $8$ from the mean or forget to divide the new total by $5$.
+
+---
+
+### PS-080
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A group of $30$ people has a mean age of $70$ years. When a second group of $20$ people is added, the mean age of all $50$ people is $76$ years. What is the mean age, in years, of the second group?
+
+**Correct Answer:** $85$
+
+**Rationale:** Total age of all $50$ people is $50(76)=3800$ and of the first group is $30(70)=2100$. The second group's total is $1700$, so its mean is $\dfrac{1700}{20}=85$.
+
+**Misconception addressed:** Students average the means or subtract ($76-70=6$) without weighting by group size.
+
+---
+
+### PS-081
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The frequency table shows the scores of $30$ students on a $5$-point quiz.
+
+| Score | $1$ | $2$ | $3$ | $4$ | $5$ |
+|---|---|---|---|---|---|
+| Frequency | $3$ | $5$ | $8$ | $9$ | $5$ |
+
+What is the median score?
+
+(A) $2.5$
+(B) $3$
+(C) $3.5$
+(D) $4$
+
+**Correct Answer:** (B) $3$
+
+**Rationale:** With $30$ scores the median is the average of the $15$th and $16$th. The cumulative counts are $3,8,16,25,30$, so both the $15$th and $16$th scores are $3$. The median is $3$.
+
+**Misconception addressed:** Students take the median of the frequencies ($5$) or of the scores ($3$ by accident), or average two different scores.
+
+---
+
+### PS-082
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The price of an item is increased by $30\%$, and then the new price is decreased by $30\%$. The final price is what percent of the original price?
+
+(A) $9\%$
+(B) $91\%$
+(C) $100\%$
+(D) $109\%$
+
+**Correct Answer:** (B) $91\%$
+
+**Rationale:** Multipliers: $1.30\times0.70=0.91$. The final price is $91\%$ of the original, a net decrease of $9\%$.
+
+**Misconception addressed:** Students assume equal increase and decrease cancel, giving $100\%$, or give the net change ($9\%$).
+
+---
+
+### PS-083
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A store sells an item at $40\%$ above its cost, then offers a $25\%$ discount. The discounted selling price is $\$210$. What was the store's cost, in dollars?
+
+**Correct Answer:** $200$
+
+**Rationale:** The selling price is $\text{cost}\times1.40\times0.75=1.05\times\text{cost}$. So $\text{cost}=\dfrac{210}{1.05}=200$.
+
+**Misconception addressed:** Students add $40\%-25\%=15\%$ and divide by $1.15$ ($182.61$), instead of multiplying the multipliers.
+
+---
+
+### PS-084
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A town's population increased by $10\%$ in $2023$ and then decreased by $20\%$ in $2024$, ending at $8{,}800$. What was the population before the $2023$ increase?
+
+**Correct Answer:** $10000$
+
+**Rationale:** The population was multiplied by $1.10\times0.80=0.88$, so the original was $\dfrac{8800}{0.88}=10{,}000$.
+
+**Misconception addressed:** Students net the percents as $-10\%$ and divide by $0.90$ (about $9{,}778$), or undo $-20\%$ by adding $20\%$ to the final value.
+
+---
+
+### PS-085
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The number $x$ is $50\%$ greater than $y$, and $y$ is $20\%$ less than $z$, where $z>0$. The number $x$ is what percent of $z$?
+
+**Correct Answer:** $120$
+
+**Rationale:** $x=1.5y$ and $y=0.8z$, so $x=1.5(0.8)z=1.2z$, which is $120\%$ of $z$.
+
+**Misconception addressed:** Students combine $+50\%$ and $-20\%$ as $+30\%$ and answer $130$.
+
+---
+
+### PS-086
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A quantity increases by $10\%$, then increases by $10\%$ again, and then decreases by $20\%$. By what percent has the quantity decreased from its original value? (Enter as a decimal.)
+
+**Correct Answer:** $3.2$
+
+**Rationale:** The multiplier is $1.1\times1.1\times0.8=0.968$. The quantity is $96.8\%$ of the original, a decrease of $3.2\%$.
+
+**Misconception addressed:** Students net the percents ($10+10-20=0$) and answer $0$.
+
+---
+
+### PS-087
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A rectangular banner is $2.4$ meters by $1.5$ meters. Printing costs $\$0.05$ per square centimeter. What is the cost, in dollars, to print the banner? ($1$ meter $=100$ centimeters.)
+
+**Correct Answer:** $1800$
+
+**Rationale:** The banner is $240\text{ cm}\times150\text{ cm}=36{,}000$ square centimeters. The cost is $36{,}000\times0.05=\$1{,}800$.
+
+**Misconception addressed:** Students convert the area with the length factor ($3.6\times100=360$) instead of squaring it ($100^2=10{,}000$).
+
+---
+
+### PS-088
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A pump fills a rectangular tank at a rate of $0.8$ cubic meter per minute. The tank is $12$ meters long, $5$ meters wide and $2$ meters deep. How many hours does it take to fill the tank completely? (Enter as a decimal.)
+
+**Correct Answer:** $2.5$
+
+**Rationale:** Volume is $12\cdot5\cdot2=120$ cubic meters. At $0.8$ cubic meter per minute it takes $\dfrac{120}{0.8}=150$ minutes, which is $\dfrac{150}{60}=2.5$ hours.
+
+**Misconception addressed:** Students leave the answer in minutes ($150$) or multiply the rate by $60$ instead of dividing the minutes.
+
+---
+
+### PS-089
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A car travels at a constant speed of $90$ kilometers per hour. What is the car's speed, in meters per second?
+
+(A) $1.5$
+(B) $25$
+(C) $90$
+(D) $324$
+
+**Correct Answer:** (B) $25$
+
+**Rationale:** $90\dfrac{\text{km}}{\text{h}}=\dfrac{90\times1000\text{ m}}{3600\text{ s}}=25\dfrac{\text{m}}{\text{s}}$.
+
+**Misconception addressed:** Students multiply by $3.6$ instead of dividing ($324$), or divide by $60$ ($1.5$).
+
+---
+
+### PS-090
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A rectangular mat is $1.2$ meters long and $0.5$ meter wide. What is the area of the mat, in square centimeters? ($1$ meter $=100$ centimeters.)
+
+**Correct Answer:** $6000$
+
+**Rationale:** The mat is $120$ cm by $50$ cm, so its area is $120\times50=6000$ square centimeters.
+
+**Misconception addressed:** Students multiply the meter area ($0.6$) by $100$ and answer $60$, forgetting area scales by $100^2$.
+
+---
+
+### 2.31 Trick Pack 1 — 200 Original SAT Challenge Items (A-149 to A-172, AM-166 to AM-250, PS-091 to PS-126, GT-118 to GT-172)
+
+Imported from the Trick Pack 1 worksheets (Parts A–M). Every answer was recomputed in code when the worksheets were built. Skill labels were assigned from the item content on import; spot-check before sorting a worksheet by skill. Difficulty is the hardest tier (SAT Challenge).
+
+### AM-166
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part A, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Real numbers $x$ and $y$ satisfy $$\sqrt[3]{2^{x}}\cdot4^{y}=256\qquad\text{and}\qquad\frac{16^{x}}{\sqrt[3]{4^{y}}}=2^{22}.$$ What is the value of $xy$?
+
+**Correct Answer:** $18$
+
+**Rationale (worked solution):**
+
+1. Write everything as powers of $2$: $\sqrt[3]{2^x}=2^{x/3}$, $4^y=2^{2y}$, $256=2^8$. First equation: $2^{x/3+2y}=2^8$, so $\dfrac x3+2y=8$, i.e. $x+6y=24$.
+2. Second equation: $16^x=2^{4x}$ and $\sqrt[3]{4^y}=2^{2y/3}$, so $2^{4x-2y/3}=2^{22}$, giving $4x-\dfrac{2y}3=22$, i.e. $6x-y=33$.
+3. From $6x-y=33$: $y=6x-33$. Substitute: $x+6(6x-33)=24\Rightarrow37x=222\Rightarrow x=6$, so $y=3$.
+4. Check: $\dfrac63+2(3)=8$ and $4(6)-\dfrac{2(3)}3=22$.
+5. $xy=6\cdot3=18$.
+
+---
+
+### A-149
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part A, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A science department orders microscopes at $\$240$ each and slide kits at $\$15$ each. The order must include at least $6$ slide kits for every microscope, the total cost may not exceed $\$2{,}500$, and the storage cabinet holds at most $46$ items (microscopes and kits combined). What is the greatest number of microscopes the department can order?
+
+**Correct Answer:** $6$
+
+**Rationale (worked solution):**
+
+1. Let $m$ = microscopes and $k$ = kits. Constraints: $k\ge6m$, $240m+15k\le2500$, $m+k\le46$.
+2. Taking the fewest kits allowed, $k=6m$, makes both the cost and the item count as small as possible for a given $m$, so test $k=6m$.
+3. Budget: $240m+90m=330m\le2500\Rightarrow m\le7.57$, so $m\le7$.
+4. Cabinet: $m+6m=7m\le46\Rightarrow m\le6.57$, so $m\le6$. This is the tighter limit.
+5. Check $m=6$, $k=36$: cost $1440+540=1980\le2500$, items $42\le46$. For $m=7$ the cabinet needs at least $49$ items, which fails.
+6. The greatest number is $6$.
+
+---
+
+### A-150
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part A, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A utility charges a $\$15$ service fee each month. Usage is billed at $\$2.40$ per unit for the first $20$ units and $\$3.60$ for each unit beyond $20$. A $10\%$ fuel surcharge is added to the usage charge only (not to the service fee). Then $5\%$ tax is applied to the sum of the service fee and the surcharged usage charge. For $u>20$ units, which function gives the total monthly bill $B(u)$, in dollars?
+
+(A) $B(u)=3.78u-9.45$
+(B) $B(u)=4.158u-11.97$
+(C) $B(u)=4.158u-10.395$
+(D) $B(u)=4.158u-12.72$
+
+**Correct Answer:** (B) $B(u)=4.158u-11.97$
+
+**Rationale (worked solution):**
+
+1. Usage charge for $u>20$: $2.40(20)+3.60(u-20)=48+3.6u-72=3.6u-24$.
+2. Surcharge on usage only: $1.10(3.6u-24)=3.96u-26.4$.
+3. Add the service fee: $15+3.96u-26.4=3.96u-11.4$.
+4. Tax on that sum: $1.05(3.96u-11.4)=4.158u-11.97$.
+5. Check with $u=30$: usage $48+36=84$; surcharged $92.40$; plus fee $107.40$; with tax $112.77$. And $4.158(30)-11.97=112.77$.
+
+---
+
+### GT-118
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In triangle $ABC$, the angle at $C$ is a right angle. Point $D$ lies on $\overline{AB}$ so that $\overline{CD}\perp\overline{AB}$. The area of triangle $ACD$ is $48$ and the area of triangle $CDB$ is $108$. What is the length of $\overline{AB}$?
+
+**Correct Answer:** $26$
+
+**Rationale (worked solution):**
+
+1. Triangles $ACD$ and $CDB$ share the height $CD$, so their areas are in the ratio of their bases: $\dfrac{AD}{DB}=\dfrac{48}{108}=\dfrac49$.
+2. Let $AD=4k$ and $DB=9k$. In the right triangle $ABC$ the altitude satisfies $CD^2=AD\cdot DB=36k^2$, so $CD=6k$.
+3. Area of $ACD$: $\dfrac12(4k)(6k)=12k^2=48\Rightarrow k^2=4\Rightarrow k=2$.
+4. $AB=AD+DB=13k=26$. (Check: $[CDB]=\dfrac12(18)(12)=108$.)
+
+---
+
+### AM-167
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For real numbers $p$ and $q$ with $p^2+4q^2=72$, the product $(2x+p)(x+q)$ is equivalent to $2x^2+bx+c$, where $b$ and $c$ are constants. What is the greatest possible value of $c$?
+
+**Correct Answer:** $18$
+
+**Rationale (worked solution):**
+
+1. Expand: $(2x+p)(x+q)=2x^2+(2q+p)x+pq$, so $c=pq$.
+2. Write $p^2+4q^2=p^2+(2q)^2$. Since $(p-2q)^2\ge0$, we have $p^2+(2q)^2\ge2p(2q)=4pq$.
+3. Therefore $4pq\le72$, so $pq\le18$.
+4. Equality needs $p=2q$: $p=6$, $q=3$ gives $36+36=72$ and $pq=18$. The greatest value of $c$ is $18$.
+
+---
+
+### AM-168
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f(x)=ax^2+bx+c$, where $a$, $b$ and $c$ are constants, has two distinct real zeros. It is known that $f(2)=f(8)$, $f(0)<0$ and $f(5)>0$. Consider the following statements.\par\medskip I.\ $b>0$\par II.\ The product of the two zeros is greater than $25$.\par III.\ Both zeros are positive.\par\medskip Which of the statements must be true?
+
+(A) I only
+(B) II and III only
+(C) I and III only
+(D) I, II, and III
+
+**Correct Answer:** (C) I and III only
+
+**Rationale (worked solution):**
+
+1. $f(2)=f(8)$ puts the axis at $x=5$, so $-\dfrac b{2a}=5$ and $b=-10a$. The zeros sum to $-\dfrac ba=10$.
+2. $f(5)>0$ says the vertex is above the $x$-axis. A parabola with two zeros and a vertex above the axis opens downward, so $a<0$.
+3. I: $b=-10a>0$. True.
+4. II: zeros $r$, $s$ with $r+s=10$ and $r\ne s$ give $rs<\left(\dfrac{r+s}2\right)^2=25$. False (the product is always less than $25$).
+5. III: $f(0)=c<0$ and $a<0$, so $rs=\dfrac ca>0$; with $r+s=10>0$ both zeros are positive. True.
+6. Only I and III must be true.
+
+---
+
+### PS-091
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A data set has eight values: $12,\ 15,\ 18,\ 20,\ 20,\ 22,\ 25,\ 28$. The values $12$ and $28$ are removed and the values $19$ and $21$ are added in their place. Which of the following describes the mean and the standard deviation (SD) of the new data set compared with the original data set?
+
+(A) Mean smaller, SD smaller
+(B) Mean same, SD larger
+(C) Mean same, SD smaller
+(D) Mean same, SD same
+
+**Correct Answer:** (C) Mean same, SD smaller
+
+**Rationale (worked solution):**
+
+1. Total removed: $12+28=40$. Total added: $19+21=40$. The sum is still $160$, so the mean is still $20$ (unchanged).
+2. The two extreme values, $8$ below and $8$ above the mean, were replaced by values only $1$ from the mean. With the mean fixed, the data are more tightly clustered, so the standard deviation is smaller. (Check: original SD $\approx4.27$, new SD $\approx2.87$.)
+3. Mean unchanged, standard deviation smaller.
+
+---
+
+### PS-092
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A conference has $300$ participants. Each participant attended either the Technical track or the Business track, and either in person or online. Some of the data are shown.\par\begin{center}\begin{tabular}{|l|c|c|c|}\hline &Technical&Business&Total\\\hline In person&$70$& & \\\hline Online&$50$& & \\\hline Total&$120$& &$300$\\\hline\end{tabular}\end{center} Of the participants in the Business track, $35\%$ attended online. How many of the $300$ participants attended in person?
+
+(A) $187$
+(B) $63$
+(C) $113$
+(D) $145$
+
+**Correct Answer:** (A) $187$
+
+**Rationale (worked solution):**
+
+1. Business track total: $300-120=180$.
+2. Business participants online: $0.35\times180=63$, so Business participants in person: $180-63=117$.
+3. In person overall: $70+117=187$.
+4. (The percentage applies to the $180$ Business participants, not to all $300$.)
+
+---
+
+### GT-119
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Two similar rectangular crates have surface areas of $144$ square feet and $400$ square feet. The smaller crate has a volume of $108$ cubic feet. What is the volume, in cubic feet, of the larger crate?
+
+(A) $1500$
+(B) $180$
+(C) $300$
+(D) $500$
+
+**Correct Answer:** (D) $500$
+
+**Rationale (worked solution):**
+
+1. Areas scale by $k^2$: $k^2=\dfrac{400}{144}=\dfrac{25}{9}$, so the linear scale factor is $k=\dfrac53$.
+2. Volumes scale by $k^3=\dfrac{125}{27}$.
+3. $108\cdot\dfrac{125}{27}=4\cdot125=500$.
+4. (Check with dimensions $3\times6\times6$: surface area $144$, volume $108$; scaled by $\frac53$: $5\times10\times10$, surface area $400$, volume $500$.)
+
+---
+
+### AM-169
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For a real number $x$, $4^{x}-2^{x+2}-32=0$. What is the value of $2^{x+1}$?
+
+(A) $-8$
+(B) $8$
+(C) $16$
+(D) $32$
+
+**Correct Answer:** (C) $16$
+
+**Rationale (worked solution):**
+
+1. Write $4^x=(2^x)^2$ and $2^{x+2}=4\cdot2^x$. Let $u=2^x$ (so $u>0$): $u^2-4u-32=0$.
+2. Factor: $(u-8)(u+4)=0$, so $u=8$ or $u=-4$.
+3. $2^x$ is always positive, so $u=-4$ is rejected. $u=8$, i.e. $x=3$.
+4. $2^{x+1}=2u=16$.
+
+---
+
+### AM-170
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For constants $p$, $q$ and $c$, the equation $$(2x-3)(x^2+px+q)=2x^3-5x^2+cx+9$$ is true for all real values of $x$. What is the value of $c$?
+
+**Correct Answer:** $-3$
+
+**Rationale (worked solution):**
+
+1. The left side is $0$ when $x=\dfrac32$, so the right side must be $0$ there too.
+2. $2\left(\dfrac{27}8\right)-5\left(\dfrac94\right)+c\left(\dfrac32\right)+9=0$.
+3. $\dfrac{27}4-\dfrac{45}4+9+\dfrac32c=0\Rightarrow\dfrac92+\dfrac32c=0\Rightarrow c=-3$.
+4. (Check: $p=-1$, $q=-3$ gives $(2x-3)(x^2-x-3)=2x^3-5x^2-3x+9$.)
+
+---
+
+### GT-120
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Two similar solid blocks have surface areas of $208$ square centimeters and $325$ square centimeters. The larger block has a volume of $375$ cubic centimeters. What is the volume, in cubic centimeters, of the smaller block?
+
+**Correct Answer:** $192$
+
+**Rationale (worked solution):**
+
+1. Going from the larger to the smaller block, areas scale by $\dfrac{208}{325}=\dfrac{16}{25}$.
+2. So the linear factor is $\sqrt{\dfrac{16}{25}}=\dfrac45$.
+3. Volume scales by $\left(\dfrac45\right)^3=\dfrac{64}{125}$.
+4. $375\cdot\dfrac{64}{125}=3\cdot64=192$.
+
+---
+
+### A-151
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$k(x+3)-5x=3x+2m$$ In the equation above, $k$ and $m$ are constants. If the equation has infinitely many solutions, what is the value of $m-k$?
+
+(A) $20$
+(B) $4$
+(C) $8$
+(D) $12$
+
+**Correct Answer:** (B) $4$
+
+**Rationale (worked solution):**
+
+1. Expand and collect: $(k-5)x+3k=3x+2m$.
+2. Infinitely many solutions require the $x$-terms to match and the constants to match: $k-5=3\Rightarrow k=8$, and $3k=2m\Rightarrow24=2m\Rightarrow m=12$.
+3. $m-k=12-8=4$. (The options $8$, $12$ and $20$ are $k$, $m$ and $k+m$.)
+
+---
+
+### AM-171
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The equation $|x+6|-7=\dfrac{x}{3}+c$, where $c$ is a constant, has exactly one solution $x$. What is the value of $2c+x$?
+
+(A) $-11$
+(B) $-6$
+(C) $-5$
+(D) $-16$
+
+**Correct Answer:** (D) $-16$
+
+**Rationale (worked solution):**
+
+1. The graph of $y=|x+6|-7$ is a V with vertex $(-6,-7)$ and arms of slope $\pm1$. The line $y=\dfrac x3+c$ is less steep than either arm.
+2. Such a line meets the V twice if it passes above the vertex, never if it passes below, and exactly once only if it passes through the vertex.
+3. Through $(-6,-7)$: $-7=\dfrac{-6}3+c\Rightarrow c=-5$, and the solution is $x=-6$.
+4. $2c+x=-10-6=-16$.
+5. (Algebra check: for $x\ge-6$, $x=\dfrac{3(c+1)}2$ is valid when $c\ge-5$; for $x<-6$, $x=-\dfrac{3(c+13)}4$ is valid when $c>-5$. Exactly one solution occurs only at $c=-5$.)
+
+---
+
+### A-152
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part A, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$3x+2y=12$$ $$9x+6y=36$$ For the system above, which of the following ordered pairs $(x,y)$, where $t$ is any real number, is a solution to the system?
+
+(A) $(2t+4,\ -3t)$
+(B) $(2t+4,\ 3t)$
+(C) $(3t+4,\ -2t)$
+(D) $(4-2t,\ -3t)$
+
+**Correct Answer:** (A) $(2t+4,\ -3t)$
+
+**Rationale (worked solution):**
+
+1. The second equation is $3$ times the first, so the two equations describe the same line. A pair is a solution exactly when it satisfies $3x+2y=12$ for every $t$.
+2. (A): $3(2t+4)+2(-3t)=6t+12-6t=12$. The $t$-terms cancel. \checkmark
+3. (B): $3(2t+4)+2(3t)=12t+12$. Not constant. (C): $3(3t+4)+2(-2t)=5t+12$. Not constant. (D): $3(4-2t)+2(-3t)=12-12t$. Not constant.
+4. Only $(2t+4,\,-3t)$ works.
+
+---
+
+### GT-121
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In triangle $PQR$, the angle at $Q$ is a right angle. Point $S$ lies on side $\overline{PR}$ so that $\overline{QS}\perp\overline{PR}$. If $\tan\angle QRP=\dfrac43$ and $PS=16$, what is the length of $\overline{SR}$?
+
+(A) $25$
+(B) $9$
+(C) $12$
+(D) $15$
+
+**Correct Answer:** (B) $9$
+
+**Rationale (worked solution):**
+
+1. $\tan\angle QRP=\dfrac{PQ}{QR}=\dfrac43$, so the legs are in the ratio $4:3$ and the triangle is a $3$-$4$-$5$ triangle: $PQ=4k$, $QR=3k$, $PR=5k$.
+2. Altitude relation $PQ^2=PS\cdot PR$: $16k^2=16\cdot5k\Rightarrow k=5$. So $PR=25$.
+3. $SR=PR-PS=25-16=9$.
+4. Check: $QR^2=SR\cdot PR$ gives $15^2=9\cdot25$. The other values are $QS=12$, $QR=15$, $PR=25$, which are different segments.
+
+---
+
+### PS-093
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part B, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A test vehicle accelerates at a constant $22$ feet per second squared. Which of the following is equal to this acceleration in miles per minute squared? ($1$ mile $=5280$ feet)
+
+(A) $\dfrac14$
+(B) $\dfrac1{240}$
+(C) $15$
+(D) $79{,}200$
+
+**Correct Answer:** (C) $15$
+
+**Rationale (worked solution):**
+
+1. Distance: $1\text{ ft}=\dfrac1{5280}\text{ mi}$, used once.
+2. Time: $1\text{ s}=\dfrac1{60}\text{ min}$, so $\dfrac1{\text{s}^2}=60^2\cdot\dfrac1{\text{min}^2}$; the time factor is squared.
+3. $22\cdot\dfrac{3600}{5280}=\dfrac{79{,}200}{5280}=15$ miles per minute squared.
+4. Check by speeds: after $1$ min the speed is $22\cdot60=1320$ ft/s $=15$ mi/min.
+
+---
+
+### AM-172
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For a positive real number $x$, $\dfrac{\sqrt[3]{x}\cdot\sqrt[4]{x^{3}}}{\sqrt[6]{x}}=\sqrt[3]{k}$, where $k=2^{11}$. Which of the following is equal to $x$?
+
+(A) $2^{4}$
+(B) $2^{\frac{11}{3}}$
+(C) $2^{\frac{121}{36}}$
+(D) $2^{\frac{44}{3}}$
+
+**Correct Answer:** (A) $2^{4}$
+
+**Rationale (worked solution):**
+
+1. Rational exponents: $x^{1/3}\cdot x^{3/4}\cdot x^{-1/6}$.
+2. Add: $\dfrac13+\dfrac34-\dfrac16=\dfrac{4+9-2}{12}=\dfrac{11}{12}$, so the left side is $x^{11/12}$.
+3. Right side: $\sqrt[3]{2^{11}}=2^{11/3}$.
+4. $x^{11/12}=2^{11/3}$. Raise both sides to the reciprocal power $\dfrac{12}{11}$: $x=2^{\frac{11}{3}\cdot\frac{12}{11}}=2^{4}$.
+
+---
+
+### A-153
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part B, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A utility computes a customer's monthly water bill $B$, in dollars, for $u$ units of water in this order: a service fee of $\$18$ plus $\$2.40$ for each unit used; then a one-time credit of $\$12$ is subtracted; then a $5\%$ surcharge is added to the amount at that point; and finally a fixed $\$3.50$ fee is added. Which of the following defines $B$ for $u$ units?
+
+(A) $B=2.52u+10.4$
+(B) $B=2.52u+9.975$
+(C) $B=2.52u+22.4$
+(D) $B=2.52u+9.8$
+
+**Correct Answer:** (D) $B=2.52u+9.8$
+
+**Rationale (worked solution):**
+
+1. After fee and usage: $18+2.4u$. After the credit: $6+2.4u$.
+2. A $5\%$ surcharge multiplies this amount by $1.05$: $1.05(6+2.4u)=6.3+2.52u$.
+3. The fixed fee is added last, after the surcharge: $B=2.52u+6.3+3.5=2.52u+9.8$.
+4. Check with $u=10$: $18+24=42$, $42-12=30$, $30\cdot1.05=31.5$, $31.5+3.5=35$, and $2.52(10)+9.8=35$.
+
+---
+
+### PS-094
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part B, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A data set consists of the five values $5,\ 8,\ 17,\ x,\ x$, where $x$ is a real number. The variance of a data set is the mean of the squared deviations of its values from their mean. What is the least possible value of the variance of this data set?
+
+(A) $26$
+(B) $78$
+(C) $15.6$
+(D) $10$
+
+**Correct Answer:** (C) $15.6$
+
+**Rationale (worked solution):**
+
+1. $\sum v=30+2x$ and $\sum v^2=378+2x^2$, so $\sigma^2=\dfrac{378+2x^2}{5}-\left(\dfrac{30+2x}{5}\right)^2$.
+2. Expand: $\sigma^2=\dfrac{1890+10x^2-900-120x-4x^2}{25}=\dfrac{6x^2-120x+990}{25}$.
+3. This quadratic opens upward; its vertex is at $x=\dfrac{120}{12}=10$, the mean of $5,8,17$.
+4. $\sigma^2_{\min}=\dfrac{600-1200+990}{25}=\dfrac{390}{25}=15.6$. (Check: mean $=10$, $\dfrac{25+4+49+0+0}{5}=15.6$.)
+
+---
+
+### AM-173
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part B, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The size of a bacterial colony, in thousands of cells, is modeled by $V(t)=500\cdot2^{t/2}\cdot4^{t/3}\cdot16^{-t/12}$, where $t$ is the number of hours since the start of observation. The size of the colony is multiplied by a constant factor $c$ every $6$ hours. What is the value of $c$?
+
+**Correct Answer:** $32$
+
+**Rationale (worked solution):**
+
+1. Write every base as a power of $2$: $4^{t/3}=2^{2t/3}$ and $16^{-t/12}=2^{-t/3}$.
+2. Add the exponents: $\dfrac t2+\dfrac{2t}3-\dfrac t3=\dfrac{3t+4t-2t}{6}=\dfrac{5t}{6}$, so $V(t)=500\cdot2^{5t/6}$.
+3. Rewrite with the interval in the exponent: $2^{5t/6}=\left(2^{5}\right)^{t/6}=32^{t/6}$.
+4. $c=32$. (Check: $V(t+6)/V(t)=2^{5}=32$.)
+
+---
+
+### AM-174
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the line $y=mx-5$ intersects the parabola $y=x^{2}-6x+11$ at exactly one point, where $m$ is a negative constant. What is the value of $m$?
+
+(A) $14$
+(B) $-14$
+(C) $-2$
+(D) $2$
+
+**Correct Answer:** (B) $-14$
+
+**Rationale (worked solution):**
+
+1. Set the expressions equal: $x^2-6x+11=mx-5\Rightarrow x^2-(6+m)x+16=0$.
+2. Exactly one intersection means discriminant $0$: $(6+m)^2-4(1)(16)=0\Rightarrow(6+m)^2=64$.
+3. $6+m=8$ or $6+m=-8$, so $m=2$ or $m=-14$.
+4. The constant $m$ must be negative, so $m=-14$. (Then $x=\dfrac{6+m}{2}=-4$, and both sides equal $51$ there.)
+
+---
+
+### AM-175
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For $x>0$ and any positive integer $n$, which of the following is equivalent to $\dfrac{\left(x^{2n+1}\right)^{3}+4x^{6n+3}-2x\left(x^{3n+1}\right)^{2}}{x^{6n+1}}$?
+
+(A) $5x^{2}$
+(B) $3x^{4}$
+(C) $3x^{12n+4}$
+(D) $3x^{2}$
+
+**Correct Answer:** (D) $3x^{2}$
+
+**Rationale (worked solution):**
+
+1. Power of a power: $\left(x^{2n+1}\right)^3=x^{6n+3}$ and $x\left(x^{3n+1}\right)^2=x\cdot x^{6n+2}=x^{6n+3}$.
+2. The numerator is $x^{6n+3}\,(1+4-2)=3x^{6n+3}$.
+3. Divide, subtracting exponents: $3x^{(6n+3)-(6n+1)}=3x^{2}$.
+
+---
+
+### AM-176
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For real numbers $k\ne3$ and $x\ne0$: $$\dfrac{4(k-3)}{x(k-3)}+\dfrac2x-\dfrac34=\dfrac38$$ What is the value of $x$?
+
+**Correct Answer:** $\dfrac{16}{3}$
+
+**Rationale (worked solution):**
+
+1. Cancel the common factor $(k-3)$: $\dfrac4x+\dfrac2x-\dfrac34=\dfrac38$.
+2. Combine: $\dfrac6x=\dfrac38+\dfrac34=\dfrac98$.
+3. Solve for $\dfrac1x$: $\dfrac1x=\dfrac{9}{8\cdot6}=\dfrac{3}{16}$.
+4. Flip at the end: $x=\dfrac{16}{3}$.
+
+---
+
+### GT-122
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, a circle passes through the points $(-1,2)$, $(7,2)$ and $(6,3)$. Which of the following is an equation of the circle?
+
+(A) $(x-3)^2+(y+1)^2=25$
+(B) $(x-3)^2+(y-2)^2=16$
+(C) $(x-3)^2+(y+1)^2=5$
+(D) $(x-3)^2+(y-1)^2=17$
+
+**Correct Answer:** (A) $(x-3)^2+(y+1)^2=25$
+
+**Rationale (worked solution):**
+
+1. The points $(-1,2)$ and $(7,2)$ form a horizontal chord, so the center lies on the vertical line $x=\dfrac{-1+7}{2}=3$. (It is \emph{not} the midpoint $(3,2)$; the chord need not be a diameter.)
+2. Let the center be $(3,k)$. Equal distances to $(7,2)$ and $(6,3)$: $16+(2-k)^2=9+(3-k)^2\Rightarrow20-4k=18-6k\Rightarrow k=-1$.
+3. $r^2=(7-3)^2+(2+1)^2=16+9=25$.
+4. Equation: $(x-3)^2+(y+1)^2=25$. Check $(6,3)$: $9+16=25$.
+
+---
+
+### PS-095
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part B, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A rectangular banner has an area of $540$ square inches. The length of the banner is $150\%$ of its width, and the width is $c\sqrt{10}$ inches, where $c$ is a positive constant. What is the value of $c$?
+
+**Correct Answer:** $6$
+
+**Rationale (worked solution):**
+
+1. Length $=1.5\cdot\text{width}=\dfrac32\,c\sqrt{10}$.
+2. Area $=\text{length}\cdot\text{width}=\dfrac32\left(c\sqrt{10}\right)^2=\dfrac32\cdot10c^2=15c^2$.
+3. $15c^2=540\Rightarrow c^2=36$, and since $c>0$, $c=6$.
+
+---
+
+### A-154
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part B, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A crew spreads fertilizer on two kinds of turf. Type A turf receives $30$ grams per square meter, and Type B turf receives $4$ kilograms per $100$ square meters. In all, the crew treats $70{,}000$ square meters and uses $2.6$ metric tons of fertilizer ($1$ metric ton $=1000$ kilograms). How many square meters of Type A turf are treated?
+
+**Correct Answer:** $20000$
+
+**Rationale (worked solution):**
+
+1. Put both rates in kilograms per square meter: Type A $=\dfrac{30}{1000}=0.03$; Type B $=\dfrac{4}{100}=0.04$. Total fertilizer $=2.6\times1000=2600$ kg.
+2. Let $a$ be the area of Type A, so Type B has $70{,}000-a$: $0.03a+0.04(70{,}000-a)=2600$.
+3. $2800-0.01a=2600\Rightarrow a=20{,}000$.
+4. Check: $0.03(20{,}000)+0.04(50{,}000)=600+2000=2600$ kg.
+
+---
+
+### GT-123
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part B, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the line $x+y=4$ intersects the circle $x^{2}+y^{2}-4x+2y=24$ at two points. What is the distance between these two points?
+
+(A) $7$
+(B) $7\sqrt2$
+(C) $14$
+(D) $\dfrac{7\sqrt2}{2}$
+
+**Correct Answer:** (B) $7\sqrt2$
+
+**Rationale (worked solution):**
+
+1. Substitute $y=4-x$: $x^2+(4-x)^2-4x+2(4-x)=24$.
+2. Expand: $2x^2-8x+16-4x+8-2x=24\Rightarrow2x^2-14x=0\Rightarrow2x(x-7)=0$.
+3. $x=0$ gives $(0,4)$; $x=7$ gives $(7,-3)$.
+4. Distance $=\sqrt{(7-0)^2+(-3-4)^2}=\sqrt{98}=7\sqrt2$. (The horizontal difference $7$ alone is not the distance, and no halving is needed.)
+
+---
+
+### PS-096
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part B, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Two polls use the same confidence level. For a poll of $n$ people with sample proportion $\hat p$, the margin of error is proportional to $\sqrt{\dfrac{\hat p(1-\hat p)}{n}}$. Poll A surveyed $625$ people and had $\hat p=0.50$. Poll B had $\hat p=0.10$ and a margin of error half as large as the margin of error of Poll A. How many people did Poll B survey?
+
+**Correct Answer:** $900$
+
+**Rationale (worked solution):**
+
+1. Squaring $M\propto\sqrt{\hat p(1-\hat p)/n}$ gives $n\propto\dfrac{\hat p(1-\hat p)}{M^2}$.
+2. Ratio: $\dfrac{n_B}{n_A}=\dfrac{0.10\cdot0.90}{0.50\cdot0.50}\cdot\left(\dfrac{M_A}{M_B}\right)^2=\dfrac{0.09}{0.25}\cdot2^2=0.36\cdot4=1.44$.
+3. $n_B=625\cdot1.44=900$.
+
+---
+
+### AM-177
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part B, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$x^{2}+y^{2}=65$$ $$x-y=7$$ The solution $(a,b)$ to the system of equations above satisfies $a>0$. What is the value of $a+3b$?
+
+**Correct Answer:** $11$
+
+**Rationale (worked solution):**
+
+1. Write $y=x-7$ and substitute: $x^2+(x-7)^2=65\Rightarrow2x^2-14x-16=0\Rightarrow x^2-7x-8=0$.
+2. Factor: $(x-8)(x+1)=0$, so $x=8$ or $x=-1$.
+3. $x=8$ gives $y=1$; $x=-1$ gives $y=-8$. Only $(8,1)$ has $a>0$.
+4. $a+3b=8+3(1)=11$.
+
+---
+
+### AM-178
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part C, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=\dfrac{9^{x}\cdot12^{\,x+1}}{8^{x}}$. Which of the following expressions is equivalent to $f(x)$ and displays the value of $f(2)$ as a coefficient?
+
+(A) $\dfrac{729}{4}\left(\dfrac{27}{2}\right)^{x-2}$
+(B) $2187\left(\dfrac{27}{2}\right)^{x-2}$
+(C) $2187\left(\dfrac{27}{2}\right)^{x+2}$
+(D) $162\left(\dfrac{27}{2}\right)^{x-1}$
+
+**Correct Answer:** (B) $2187\left(\dfrac{27}{2}\right)^{x-2}$
+
+**Rationale (worked solution):**
+
+1. Prime factors: $9^x=3^{2x}$, $12^{x+1}=2^{2x+2}\cdot3^{x+1}$, $8^x=2^{3x}$.
+2. $f(x)=3^{2x+x+1}\cdot2^{2x+2-3x}=3^{3x+1}\cdot2^{2-x}=12\left(\dfrac{27}{2}\right)^{x}$.
+3. $f(2)=12\cdot\dfrac{729}{4}=2187$.
+4. Shift the exponent: $f(x)=f(2)\left(\dfrac{27}{2}\right)^{x-2}=2187\left(\dfrac{27}{2}\right)^{x-2}$.
+5. Other options: $162\left(\frac{27}{2}\right)^{x-1}$ is equivalent but shows $f(1)$; $\frac{729}{4}\left(\frac{27}{2}\right)^{x-2}$ and the $x+2$ form are not equivalent.
+
+---
+
+### PS-097
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part C, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A metalworker melts together $150$ g of alloy X, which is $20\%$ nickel by mass, and $m$ g of alloy Y, which is $50\%$ nickel by mass. Then $40$ g of pure nickel is stirred into the melt. The final alloy is $40\%$ nickel by mass. What is the value of $m$?
+
+(A) $250$
+(B) $460$
+(C) $60$
+(D) $100$
+
+**Correct Answer:** (C) $60$
+
+**Rationale (worked solution):**
+
+1. Final mass: $150+m+40=190+m$, and nickel is $40\%$ of it: $0.4(190+m)$.
+2. Nickel in: $0.20(150)+0.50m+40=70+0.5m$.
+3. Balance: $70+0.5m=76+0.4m\Rightarrow0.1m=6\Rightarrow m=60$.
+4. Check: total $250$ g, nickel $30+30+40=100$ g, and $100/250=40\%$.
+
+---
+
+### GT-124
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In convex pentagon $ABCDE$ shown (not drawn to scale), side $\overline{AB}$ is parallel to side $\overline{DC}$. The measures of four interior angles are $\angle A=(6x)^\circ$, $\angle B=(5x+5)^\circ$, $\angle C=(3x+15)^\circ$ and $\angle D=(7x-10)^\circ$. What is the measure, in degrees, of $\angle E$?
+
+**Figure (TikZ source, uses the Trick Pack colour definitions):**
+
+```latex
+\begin{center}\begin{tikzpicture}[x=0.38cm,y=0.38cm,scale=1.0]
+\tikzset{axisline/.style={-{Stealth[length=2.2mm]},thick,INK},gridl/.style={LINE!80,very thin},
+ ln/.style={very thick,BLUE},pt/.style={circle,fill=ORANGE,inner sep=1.6pt}}
+\draw[ln](0.000,0.000)--(6.000,0.000)--(8.071,7.727)--(3.071,7.727)--(-1.391,2.410)--cycle;\node[font=\small] at (-0.300,-0.300){$A$};\node[font=\small] at (6.300,-0.300){$B$};\node[font=\small] at (8.371,8.027){$C$};\node[font=\small] at (2.771,8.027){$D$};\node[font=\small] at (-1.741,2.410){$E$};\end{tikzpicture}\end{center}
+```
+
+(A) $110$
+(B) $70$
+(C) $105$
+(D) $130$
+
+**Correct Answer:** (A) $110$
+
+**Rationale (worked solution):**
+
+1. $\overline{AB}\parallel\overline{DC}$ with transversal $\overline{BC}$: $\angle B+\angle C=180^\circ$ (co-interior).
+2. $(5x+5)+(3x+15)=180\Rightarrow8x=160\Rightarrow x=20$.
+3. $\angle A=120^\circ$, $\angle B=105^\circ$, $\angle C=75^\circ$, $\angle D=130^\circ$.
+4. Pentagon angle sum $=(5-2)\cdot180^\circ=540^\circ$.
+5. $\angle E=540-(120+105+75+130)=110^\circ$.
+
+---
+
+### GT-125
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In right triangle $ABC$, $\angle C=90^\circ$, $AB=20$, and the area of the triangle is $96$. Square $CDEF$ is inscribed in the triangle, with $D$ on $\overline{BC}$, $F$ on $\overline{AC}$, and $E$ on $\overline{AB}$. What is the side length of the square?
+
+**Figure (TikZ source, uses the Trick Pack colour definitions):**
+
+```latex
+\begin{center}\begin{tikzpicture}[x=0.38cm,y=0.38cm,scale=1.0]
+\tikzset{axisline/.style={-{Stealth[length=2.2mm]},thick,INK},gridl/.style={LINE!80,very thin},
+ ln/.style={very thick,BLUE},pt/.style={circle,fill=ORANGE,inner sep=1.6pt}}
+\draw[ln](0,0)--(16,0)--(0,12)--cycle;\draw[ln](6.8571,0)--(6.8571,6.8571)--(0,6.8571);\node[below left,font=\small]at(0,0){$C$};\node[below,font=\small]at(16,0){$B$};\node[above,font=\small]at(0,12){$A$};\node[below,font=\small]at(6.8571,0){$D$};\node[left,font=\small]at(0,6.8571){$F$};\node[above right,font=\small]at(6.8571,6.8571){$E$};\draw(0.7,0)--(0.7,0.7)--(0,0.7);\end{tikzpicture}\end{center}
+```
+
+(A) $\dfrac{24}{7}$
+(B) $\dfrac{48}{5}$
+(C) $\dfrac{96}{7}$
+(D) $\dfrac{48}{7}$
+
+**Correct Answer:** (D) $\dfrac{48}{7}$
+
+**Rationale (worked solution):**
+
+1. Let the legs be $a=BC$, $b=AC$. Area: $\dfrac12ab=96\Rightarrow ab=192$. Pythagorean: $a^2+b^2=400$.
+2. $(a+b)^2=a^2+b^2+2ab=400+384=784\Rightarrow a+b=28$ (no quadratic needed).
+3. Triangle $FAE\sim$ triangle $CAB$ (since $\overline{FE}\parallel\overline{CB}$): $\dfrac{AF}{AC}=\dfrac{FE}{CB}$, i.e. $\dfrac{b-s}{b}=\dfrac sa$.
+4. This gives $s\left(\dfrac1a+\dfrac1b\right)=1$, so $s=\dfrac{ab}{a+b}=\dfrac{192}{28}=\dfrac{48}{7}$.
+5. (Legs are $12$ and $16$; $\dfrac{12\cdot16}{28}=\dfrac{48}7$.)
+
+---
+
+### AM-179
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=ax^2+bx+c$, where $a$, $b$, and $c$ are constants. The graph of $y=f(x)$ in the $xy$-plane passes through $(1,8)$ and $(-1,2)$ and has exactly one $x$-intercept. What is the greatest possible value of $a$?
+
+(A) $\dfrac52$
+(B) $9$
+(C) $\dfrac92$
+(D) $\dfrac12$
+
+**Correct Answer:** (C) $\dfrac92$
+
+**Rationale (worked solution):**
+
+1. $f(1)=a+b+c=8$ and $f(-1)=a-b+c=2$. Subtract: $2b=6\Rightarrow b=3$. Add: $a+c=5\Rightarrow c=5-a$.
+2. Exactly one $x$-intercept: $b^2-4ac=0\Rightarrow9=4a(5-a)$.
+3. $4a^2-20a+9=0\Rightarrow(2a-1)(2a-9)=0\Rightarrow a=\dfrac12$ or $a=\dfrac92$.
+4. The greatest possible value is $\dfrac92$.
+
+---
+
+### AM-180
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f$ has its vertex at $(3,-2)$, and $f(5)=6$. The function $g$ is defined by $g(x)=\dfrac34\,f\!\left(\dfrac12x-1\right)$. The graph of $y=f(x)$ has $y$-intercept $(0,p)$ and the graph of $y=g(x)$ has $y$-intercept $(0,q)$. What is the value of $q-p$?
+
+(A) $-\dfrac{23}{2}$
+(B) $\dfrac{13}{2}$
+(C) $-4$
+(D) $\dfrac{45}{2}$
+
+**Correct Answer:** (B) $\dfrac{13}{2}$
+
+**Rationale (worked solution):**
+
+1. Vertex form: $f(x)=a(x-3)^2-2$. From $f(5)=6$: $4a-2=6\Rightarrow a=2$, so $f(x)=2(x-3)^2-2$.
+2. $p=f(0)=2(9)-2=16$.
+3. $q=g(0)=\dfrac34f\!\left(\dfrac12\cdot0-1\right)=\dfrac34f(-1)$, and $f(-1)=2(16)-2=30$, so $q=\dfrac{45}{2}$.
+4. $q-p=\dfrac{45}{2}-16=\dfrac{13}{2}$.
+
+---
+
+### AM-181
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=2^{x}+k$, where $k$ is a constant. For a real number $p$, $f(p)=9$ and $f(-p)=\dfrac{21}{4}$. What is the value of $p$?
+
+**Correct Answer:** $2$
+
+**Rationale (worked solution):**
+
+1. Let $t=2^{p}$, so $t>0$ and $2^{-p}=\dfrac1t$. Then $t+k=9$ and $\dfrac1t+k=\dfrac{21}{4}$.
+2. Subtract to eliminate $k$: $t-\dfrac1t=\dfrac{15}{4}\Rightarrow4t^2-15t-4=0\Rightarrow(4t+1)(t-4)=0$.
+3. $t=-\dfrac14$ is rejected because $2^{p}>0$; so $t=4$.
+4. $2^{p}=4\Rightarrow p=2$. (Check: $k=5$; $f(2)=9$, $f(-2)=\dfrac14+5=\dfrac{21}{4}$.)
+
+---
+
+### AM-182
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For integers $a$, $b$, $c$, and $d$, $(ax+b)(cx+d)=6x^2+kx+5$ for all values of $x$, where $k$ is a constant. Which of the following must be true?\par\vspace{2pt}I.\ $k$ is odd\par II.\ When $k$ is divided by $4$, the remainder is $1$\par III.\ $k$ is not divisible by $5$
+
+(A) II and III only
+(B) I, II, and III
+(C) I only
+(D) I and III only
+
+**Correct Answer:** (D) I and III only
+
+**Rationale (worked solution):**
+
+1. Matching coefficients: $ac=6$, $bd=5$, $k=ad+bc$.
+2. Since $bd=5$ is odd, $b$ and $d$ are both odd. Since $ac=6$ is not divisible by $4$, exactly one of $a,c$ is even. Then $k=ad+bc\equiv a+c\equiv1\pmod2$. So I is true.
+3. Since $bd=5$, exactly one of $b,d$ is a multiple of $5$; say $5\mid b$. Then $k\equiv ad\pmod5$, and $a\mid6$ and $d=\pm1$ are not multiples of $5$. (Same if $5\mid d$.) So III is true.
+4. II: $(a,c,b,d)=(1,6,5,1)$ gives $k=1\cdot1+5\cdot6=31$, remainder $3$ on division by $4$. So II is false, even though $k=13$ and $k=17$ satisfy it.
+5. Possible values: $k=\pm11,\pm13,\pm17,\pm31$. Only I and III must be true.
+
+---
+
+### GT-126
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In trapezoid $ABCD$ shown (not drawn to scale), $\overline{AB}\parallel\overline{DC}$, $\angle D=108^\circ$, and $\angle C=94^\circ$. The bisector of $\angle DAB$ and the bisector of $\angle ABC$ intersect at point $P$ inside the trapezoid. What is the measure, in degrees, of the obtuse angle formed at $P$ by these two bisectors?
+
+**Figure (TikZ source, uses the Trick Pack colour definitions):**
+
+```latex
+\begin{center}\begin{tikzpicture}[x=0.5cm,y=0.5cm,scale=1.0]
+\tikzset{axisline/.style={-{Stealth[length=2.2mm]},thick,INK},gridl/.style={LINE!80,very thin},
+ ln/.style={very thick,BLUE},pt/.style={circle,fill=ORANGE,inner sep=1.6pt}}
+\draw[ln](0.000,0.000)--(9.000,0.000)--(8.608,5.600)--(1.820,5.600)--cycle;\draw[ORANGE,thick](0.000,0.000)--(5.059,3.675);\draw[ORANGE,thick](9.000,0.000)--(5.059,3.675);\node[below left,font=\small]at(0.000,0.000){$A$};\node[below right,font=\small]at(9.000,0.000){$B$};\node[above right,font=\small]at(8.608,5.600){$C$};\node[above left,font=\small]at(1.820,5.600){$D$};\node[above,font=\small]at(5.059,3.675){$P$};\end{tikzpicture}\end{center}
+```
+
+(A) $101$
+(B) $79$
+(C) $22$
+(D) $108$
+
+**Correct Answer:** (A) $101$
+
+**Rationale (worked solution):**
+
+1. $\overline{AB}\parallel\overline{DC}$: $\angle A+\angle D=180^\circ\Rightarrow\angle A=72^\circ$; $\angle B+\angle C=180^\circ\Rightarrow\angle B=86^\circ$.
+2. Half-angles: $\angle PAB=36^\circ$, $\angle PBA=43^\circ$.
+3. In triangle $APB$: $\angle APB=180-36-43=101^\circ$, which is obtuse.
+4. The vertical/supplementary angle is $79^\circ$ (acute), so the obtuse angle is $101^\circ$.
+
+---
+
+### GT-127
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the line $y=k(x-1)-2$, where $k$ is a positive constant, is tangent to the parabola $y=x^2+2x+4$. What is the value of $k$?
+
+(A) $8$
+(B) $10$
+(C) $-2$
+(D) $4$
+
+**Correct Answer:** (B) $10$
+
+**Rationale (worked solution):**
+
+1. Set equal: $x^2+2x+4=kx-k-2\Rightarrow x^2+(2-k)x+(k+6)=0$.
+2. Tangency means exactly one solution: $(2-k)^2-4(k+6)=0$.
+3. $k^2-8k-20=0\Rightarrow(k-10)(k+2)=0\Rightarrow k=10$ or $k=-2$.
+4. Since $k>0$, $k=10$. (The tangent point is $x=\dfrac{k-2}{2}=4$, which is not the answer.)
+
+---
+
+### AM-183
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part C, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The altitude $h$, in meters, of a small rocket $t$ seconds after launch is modeled by $h(t)=at^2+bt+c$, where $a$, $b$, and $c$ are constants. At launch the altitude is $3$ meters; $2$ seconds after launch it is $43$ meters; and $5$ seconds after launch it is $28$ meters. According to the model, what is the altitude, in meters, $3$ seconds after launch?
+
+**Correct Answer:** $48$
+
+**Rationale (worked solution):**
+
+1. Launch altitude: $h(0)=c=3$.
+2. $h(2)=4a+2b+3=43\Rightarrow2a+b=20$ (divide by $2$).
+3. $h(5)=25a+5b+3=28\Rightarrow5a+b=5$ (divide by $5$).
+4. Subtract: $3a=-15\Rightarrow a=-5$; then $b=20-2(-5)=30$.
+5. $h(3)=-5(9)+30(3)+3=-45+90+3=48$.
+
+---
+
+### AM-184
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f$ has zeros at $x=-2$ and $x=5$, and $f(1)=-24$. The function $h$ is defined by $h(x)=f(x+2)-3f(-x)$. What is the value of $h(1)$?
+
+**Correct Answer:** $16$
+
+**Rationale (worked solution):**
+
+1. $f(x)=a(x+2)(x-5)$; $f(1)=a(3)(-4)=-24\Rightarrow a=2$, so $f(x)=2(x+2)(x-5)$.
+2. Substitute $x=1$ first: $h(1)=f(3)-3f(-1)$.
+3. $f(3)=2(5)(-2)=-20$ and $f(-1)=2(1)(-6)=-12$.
+4. $h(1)=-20-3(-12)=-20+36=16$.
+
+---
+
+### GT-128
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In right triangle $PQR$, $\angle R=90^\circ$ and $\sin P+\sin Q=\dfrac{\sqrt6}{2}$. What is the value of $\tan P+\tan Q$?
+
+**Correct Answer:** $4$
+
+**Rationale (worked solution):**
+
+1. $\angle Q=90^\circ-\angle P$, so $\sin Q=\cos P$ and $\tan Q=\dfrac{1}{\tan P}$.
+2. Square the given sum: $\sin^2P+2\sin P\cos P+\cos^2P=\dfrac64\Rightarrow1+2\sin P\cos P=\dfrac32$.
+3. $\sin P\cos P=\dfrac14$.
+4. $\tan P+\tan Q=\dfrac{\sin P}{\cos P}+\dfrac{\cos P}{\sin P}=\dfrac{1}{\sin P\cos P}=4$.
+
+---
+
+### AM-185
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f$ has an axis of symmetry at $x=2$, and its graph passes through $(3,-3)$ and $(5,13)$. The functions $g$ and $h$ are defined by $g(x)=\dfrac{x-6}{2}$ and $h(x)=3-f(g(x))$. What is the $y$-coordinate of the $y$-intercept of the graph of $y=h(x)$?
+
+**Correct Answer:** $-42$
+
+**Rationale (worked solution):**
+
+1. Vertex form with axis $x=2$: $f(x)=a(x-2)^2+k$.
+2. $f(3)=a+k=-3$ and $f(5)=9a+k=13$. Subtract: $8a=16\Rightarrow a=2$, $k=-5$.
+3. $f(x)=2(x-2)^2-5$. The $y$-intercept of $h$ is $h(0)$.
+4. Inner value first: $g(0)=-3$. Then $f(-3)=2(-5)^2-5=45$.
+5. $h(0)=3-45=-42$.
+
+---
+
+### AM-186
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part C, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=c\cdot b^{\,x+3}$, where $c$ and $b$ are positive constants. If $f(1)=1296$ and $f(3)=729$, then for each increase of $1$ in the value of $x$, $f(x)$ decreases by $p\%$. What is the value of $p$?
+
+**Correct Answer:** $25$
+
+**Rationale (worked solution):**
+
+1. $f(1)=c\,b^{4}=1296$ and $f(3)=c\,b^{6}=729$.
+2. Divide to cancel $c$: $b^{2}=\dfrac{729}{1296}=\dfrac{9}{16}$. Since $b>0$, $b=\dfrac34$.
+3. Each unit increase in $x$ multiplies $f$ by $\dfrac34$, a decrease of $1-\dfrac34=\dfrac14=25\%$.
+4. $p=25$. (The value of $c$ is not needed.)
+
+---
+
+### AM-187
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The value $V$, in dollars, of a delivery van $x$ years after it is purchased is modeled by $V(x)=18{,}000(0.49)^{x/2}$. Which of the following best describes how the van's value changes each year?
+
+(A) It decreases by $24.5\%$ each year.
+(B) It decreases by $30\%$ each year.
+(C) It decreases by $70\%$ each year.
+(D) It decreases by $51\%$ each year.
+
+**Correct Answer:** (B) It decreases by $30\%$ each year.
+
+**Rationale (worked solution):**
+
+1. Rewrite the exponent: $(0.49)^{x/2}=\left((0.49)^{1/2}\right)^x=(0.7)^x$.
+2. So $V(x)=18{,}000(0.7)^x$ and each year the value is multiplied by $0.7$.
+3. The van keeps $70\%$ of its value, so it loses $1-0.7=0.30$, i.e. $30\%$, each year.
+4. Check: $\dfrac{V(3)}{V(2)}=\dfrac{(0.49)^{1.5}}{(0.49)^{1}}=0.49^{0.5}=0.7$. The option $51\%$ is $1-0.49$ (the two-year loss).
+
+---
+
+### GT-129
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Two lines intersect at point $O$, and the smallest of the four angles they form measures $50^\circ$. A ray from $O$ bisects each of the four angles. Together with the two lines, this gives eight rays from $O$, which divide the full turn into eight small angles. A \emph{span} is an angle formed by $1$, $2$ or $3$ consecutive small angles. Which of the following is NOT the measure of any span?
+
+(A) $130^\circ$
+(B) $155^\circ$
+(C) $140^\circ$
+(D) $115^\circ$
+
+**Correct Answer:** (C) $140^\circ$
+
+**Rationale (worked solution):**
+
+1. The lines cut the plane into angles of $50^\circ$ and $130^\circ$. Bisecting gives pieces of $25^\circ$ and $65^\circ$.
+2. Going around $O$ the small angles are $25,25,65,65,25,25,65,65$ (degrees), repeating.
+3. One small angle: $25$ or $65$. Two consecutive: $25+25=50$, $25+65=90$, $65+65=130$. Three consecutive: $25+25+65=115$, $25+65+65=155$ (and the same sums in the other order).
+4. The possible spans are $25,65,50,90,130,115,155$. The values $115$, $130$ and $155$ occur, but $140$ does not.
+
+---
+
+### PS-098
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A car's fuel economy is $40$ miles per gallon. Use $1$ mile $=1.6$ kilometers and $1$ gallon $=3.8$ liters. How many liters of fuel does the car need to drive $304$ kilometers?
+
+**Correct Answer:** $18.05$
+
+**Rationale (worked solution):**
+
+1. Convert the rate to kilometers per gallon: $40\cdot1.6=64$ km per gallon.
+2. Gallons needed: $\dfrac{304}{64}=4.75$ gallons.
+3. Liters: $4.75\cdot3.8=18.05$.
+4. (Equivalently invert first: $\dfrac{3.8\text{ L}}{64\text{ km}}\cdot304\text{ km}=18.05$ L.)
+
+---
+
+### GT-130
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A closed right circular cylinder has a volume of $48\pi$ cubic centimeters and a total surface area of $56\pi$ square centimeters. The height of the cylinder is greater than its diameter. What is the height, in centimeters, of the cylinder?
+
+(A) $12$
+(B) $2$
+(C) $3$
+(D) $4$
+
+**Correct Answer:** (A) $12$
+
+**Rationale (worked solution):**
+
+1. From $\pi r^2h=48\pi$: $h=\dfrac{48}{r^2}$.
+2. Surface area: $2\pi r^2+2\pi rh=56\pi\Rightarrow r^2+rh=28\Rightarrow r^2+\dfrac{48}{r}=28$.
+3. Multiply by $r$: $r^3-28r+48=0$. Test divisors of $48$: $r=2$ gives $8-56+48=0$, $r=4$ gives $64-112+48=0$. Factor: $(r-2)(r-4)(r+6)=0$, so the positive radii are $2$ and $4$.
+4. $r=2$: $h=12>4=2r$. $r=4$: $h=3<8=2r$, which violates the condition.
+5. The height is $12$ centimeters. (The other choices are the radii $2$ and $4$ and the height $3$ of the rejected solution.)
+
+---
+
+### PS-099
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A researcher surveys a random sample of $625$ workers in a city and calculates a $95\%$ confidence interval of $24.2$ to $27.8$ minutes for the mean one-way commute time of all workers in the city. Assume a second random sample of $2{,}500$ workers has similar variability and the same method is used. Which of the following statements must be true?
+
+(A) About $95\%$ of sampled commutes lie in the interval.
+(B) The new margin is about $0.45$ min.
+(C) The population mean cannot be $28.1$ min.
+(D) The new margin is about $0.9$ min.
+
+**Correct Answer:** (D) The new margin is about $0.9$ min.
+
+**Rationale (worked solution):**
+
+1. The interval's center is $26$ and its margin of error is $\dfrac{27.8-24.2}{2}=1.8$ minutes.
+2. Margin of error is proportional to $\dfrac{1}{\sqrt n}$. The sample is $4$ times as large, so the margin is divided by $\sqrt4=2$: $1.8\div2=0.9$ minutes. This matches the statement about $0.9$ minutes.
+3. The statement that the mean cannot be $28.1$ is false: a confidence interval gives plausible values; it does not make $28.1$ impossible. The statement about $95\%$ of sampled commutes is false: the interval is about the population mean, not the middle $95\%$ of individual commutes. The $0.45$ statement divides by $4$ instead of $\sqrt4$.
+
+---
+
+### PS-100
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The area covered by a coral colony increases by $33.1\%$ every $3$ years. If the colony grows by the same percent each year, by what percent does its area increase each year?
+
+**Correct Answer:** $10$
+
+**Rationale (worked solution):**
+
+1. Over $3$ years the area is multiplied by $1.331$. If the yearly factor is $b$, then $b^3=1.331$.
+2. Take the cube root: $b=\sqrt[3]{1.331}=1.1$, because $1.1^3=1.331$.
+3. A factor of $1.1$ is an increase of $1.1-1=0.10$, that is $10\%$ per year.
+
+---
+
+### GT-131
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$x^2+y^2-6x+8y=k$$ In the $xy$-plane, the graph of the equation above, where $k$ is a constant, is a circle that is tangent to the line $4x-3y=-11$. What is the value of $k$?
+
+**Correct Answer:** $24$
+
+**Rationale (worked solution):**
+
+1. Complete the square: $(x-3)^2+(y+4)^2=k+25$. The center is $(3,-4)$ and $r^2=k+25$.
+2. Distance from the center to $4x-3y+11=0$: $\dfrac{|4(3)-3(-4)+11|}{\sqrt{16+9}}=\dfrac{35}{5}=7$.
+3. Tangency means $r=7$, so $r^2=49=k+25$.
+4. $k=24$.
+
+---
+
+### A-155
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$kx+3y=12$$ $$4x+(k-1)y=12$$ In the system of equations above, $k$ is a constant. For which value of $k$ does the system have no solution?
+
+(A) $3$
+(B) $-4$
+(C) $-3$
+(D) $4$
+
+**Correct Answer:** (C) $-3$
+
+**Rationale (worked solution):**
+
+1. No solution requires parallel, distinct lines: equal slopes. Slopes are $-\dfrac k3$ and $-\dfrac{4}{k-1}$.
+2. $\dfrac k3=\dfrac4{k-1}\Rightarrow k(k-1)=12\Rightarrow k^2-k-12=0\Rightarrow(k-4)(k+3)=0$.
+3. $k=4$: the equations are $4x+3y=12$ and $4x+3y=12$, the same line, so infinitely many solutions.
+4. $k=-3$: $-3x+3y=12$ gives $y=x+4$, and $4x-4y=12$ gives $y=x-3$. Parallel and distinct, so no solution.
+5. The answer is $k=-3$.
+
+---
+
+### GT-132
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Sphere $A$ has a great circle with circumference $8\pi$ centimeters. The surface area of sphere $B$ is $80\pi$ square centimeters greater than the surface area of sphere $A$. What is the ratio of the volume of sphere $B$ to the volume of sphere $A$?
+
+(A) $\dfrac94$
+(B) $\dfrac{27}{8}$
+(C) $\dfrac54$
+(D) $\dfrac32$
+
+**Correct Answer:** (B) $\dfrac{27}{8}$
+
+**Rationale (worked solution):**
+
+1. A great circle of sphere $A$ has circumference $2\pi r_A=8\pi$, so $r_A=4$ and its surface area is $4\pi(16)=64\pi$.
+2. Sphere $B$: $4\pi r_B^2=64\pi+80\pi=144\pi\Rightarrow r_B^2=36\Rightarrow r_B=6$.
+3. Radius ratio $\dfrac64=\dfrac32$. Volumes scale with the cube: $\left(\dfrac32\right)^3=\dfrac{27}8$.
+4. (Other choices: $\frac32$ is the radius ratio, $\frac94$ is the area ratio, and $\frac54=\frac{80}{64}$ compares the area difference with sphere $A$'s area.)
+
+---
+
+### AM-188
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the graph of the quadratic function $p$ and the graph of the line $y=5-x$ intersect at exactly two points, one with $x$-coordinate $1$ and one with $x$-coordinate $4$. If $p(0)=-3$, what is the value of $p(6)$?
+
+**Correct Answer:** $-21$
+
+**Rationale (worked solution):**
+
+1. At the intersections $p(x)=5-x$, so $p(x)-(5-x)$ has zeros $1$ and $4$. Write $p(x)=5-x+a(x-1)(x-4)$.
+2. Use $p(0)=-3$: $5+a(-1)(-4)=-3\Rightarrow4a=-8\Rightarrow a=-2$.
+3. $p(6)=5-6-2(5)(2)=-1-20=-21$.
+4. (Check by expanding: $p(x)=-2x^2+9x-3$, and $p(6)=-72+54-3=-21$.)
+
+---
+
+### GT-133
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In right triangle $ABC$, the right angle is at $C$ and $AB=10$. Point $D$ lies on $\overline{AB}$ with $\overline{CD}\perp\overline{AB}$ and $CD=4$. If $AD>DB$, what is the value of $\cos A$?
+
+(A) $\dfrac{\sqrt5}{5}$
+(B) $\dfrac45$
+(C) $\dfrac12$
+(D) $\dfrac{2\sqrt5}{5}$
+
+**Correct Answer:** (D) $\dfrac{2\sqrt5}{5}$
+
+**Rationale (worked solution):**
+
+1. Let $AD=p$ and $DB=q$. Then $p+q=10$, and the altitude to the hypotenuse gives $CD^2=pq=16$.
+2. $p(10-p)=16\Rightarrow p^2-10p+16=0\Rightarrow(p-2)(p-8)=0$. Since $AD>DB$, $AD=8$ and $DB=2$.
+3. In right triangle $ACD$: $AC=\sqrt{8^2+4^2}=\sqrt{80}=4\sqrt5$.
+4. $\cos A=\dfrac{AD}{AC}=\dfrac{8}{4\sqrt5}=\dfrac2{\sqrt5}=\dfrac{2\sqrt5}5$.
+5. (Other choices: $\frac{\sqrt5}5=\sin A$, $\frac45=\frac{AD}{AB}$, $\frac12=\tan A$.)
+
+---
+
+### AM-189
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part D, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the graphs of $y=x^2+6x+4$ and $y=mx-4$ have no point in common, where $m$ is a constant. What is the sum of all integer values of $m$?
+
+**Correct Answer:** $66$
+
+**Rationale (worked solution):**
+
+1. Set the expressions equal: $x^2+6x+4=mx-4\Rightarrow x^2+(6-m)x+8=0$.
+2. No common point means no real roots: $\Delta=(6-m)^2-32<0$, so $|m-6|<\sqrt{32}\approx5.66$.
+3. Since $5^2=25<32<36=6^2$, $|m-6|\le5$, i.e. $1\le m\le11$. (At $m=0$ or $m=12$ we get $|m-6|=6$, which is too large.)
+4. Integers $1$ through $11$ sum to $\dfrac{11\cdot12}{2}=66$.
+
+---
+
+### A-156
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$6x-2(y-5)=2x+3y+1$$ $$ax+20y=b$$ In the system above, $a$ and $b$ are constants. If the system has infinitely many solutions, what is the value of $\dfrac ba$?
+
+**Correct Answer:** $-9/4$
+
+**Rationale (worked solution):**
+
+1. Simplify the first equation: $6x-2y+10=2x+3y+1\Rightarrow4x-5y=-9$.
+2. Infinitely many solutions means the second equation is a multiple of the first. The $y$-coefficients are $-5$ and $20$, so the multiplier is $\dfrac{20}{-5}=-4$.
+3. Then $a=-4\cdot4=-16$ and $b=-4\cdot(-9)=36$.
+4. $\dfrac ba=\dfrac{36}{-16}=-\dfrac94=-2.25$.
+
+---
+
+### GT-134
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A right pyramid has a square base. The diagonal of the base is $10\sqrt2$ centimeters and the volume of the pyramid is $400$ cubic centimeters. What is the lateral surface area, in square centimeters, of the pyramid (the four triangular faces, not the base)?
+
+(A) $260$
+(B) $240$
+(C) $130$
+(D) $360$
+
+**Correct Answer:** (A) $260$
+
+**Rationale (worked solution):**
+
+1. The base diagonal is $s\sqrt2=10\sqrt2$, so the side is $s=10$ and the base area is $100$.
+2. Volume $\dfrac13(100)h=400\Rightarrow h=12$.
+3. The slant height (apex to the midpoint of a base edge) is the hypotenuse of a right triangle with legs $h=12$ and $\dfrac s2=5$: $\ell=\sqrt{144+25}=13$.
+4. Each face has area $\dfrac12(10)(13)=65$, so the lateral area is $4\cdot65=260$.
+5. (Using the height $12$ instead of $13$ gives $240$; two faces give $130$; adding the base gives $360$.)
+
+---
+
+### GT-135
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part D, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$(x-a-2)^2+(y-2a+1)^2=25$$ In the $xy$-plane, the circle above is defined for each real number $a$. Which of the following points lies on the circle for every real value of $a$?
+
+(A) $(a-1,\ 2a+2)$
+(B) $(a+5,\ 2a+3)$
+(C) $(a+5,\ 2a+4)$
+(D) $(2a+5,\ 2a+3)$
+
+**Correct Answer:** (B) $(a+5,\ 2a+3)$
+
+**Rationale (worked solution):**
+
+1. The circle has center $(a+2,\,2a-1)$ and radius $5$. For a point $(x,y)$, compute the offsets $x-(a+2)$ and $y-(2a-1)$ and see whether the $a$-terms cancel.
+2. $(a+5,\,2a+3)$: offsets $3$ and $4$, and $3^2+4^2=25$. \checkmark
+3. $(a+5,\,2a+4)$: offsets $3$, $5$, sum of squares $34$. $(2a+5,\,2a+3)$: first offset $a+3$ still depends on $a$. $(a-1,\,2a+2)$: offsets $-3$, $3$, sum of squares $18$.
+4. Only $(a+5,\,2a+3)$ works.
+
+---
+
+### PS-101
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part D, item 16 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A commuter train accelerates at a constant rate of $0.5$ meters per second squared. What is this acceleration, in kilometers per hour squared? ($1$ kilometer $=1000$ meters and $1$ hour $=3600$ seconds.)
+
+**Correct Answer:** $6480$
+
+**Rationale (worked solution):**
+
+1. Write the acceleration with units: $0.5\,\dfrac{\text{m}}{\text{s}^2}$. Meters become kilometers once: multiply by $\dfrac{1\text{ km}}{1000\text{ m}}$.
+2. Seconds appear twice (squared), so the time factor must be applied twice: multiply by $\left(\dfrac{3600\text{ s}}{1\text{ h}}\right)^{2}$.
+3. $0.5\cdot\dfrac{1}{1000}\cdot3600^2=0.5\cdot\dfrac{12{,}960{,}000}{1000}=0.5\cdot12{,}960=6480$.
+4. The acceleration is $6480$ km/h$^2$.
+
+---
+
+### PS-102
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part E, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A data set has $10$ values: $31,\ 38,\ 42,\ 45,\ 47,\ 52,\ 53,\ 58,\ 65,\ 69$. The mean of the data set is $50$. The least value and the greatest value are removed, leaving $8$ values. Which of the following is true of the new data set compared with the original? (SD means standard deviation.)
+
+(A) Mean greater; SD smaller
+(B) Mean unchanged; SD smaller
+(C) Mean unchanged; SD unchanged
+(D) Mean smaller; SD smaller
+
+**Correct Answer:** (B) Mean unchanged; SD smaller
+
+**Rationale (worked solution):**
+
+1. The removed values sum to $31+69=100$, so they average $50$, exactly the mean. Removing them leaves the mean unchanged: the remaining sum is $500-100=400$ and $\dfrac{400}{8}=50$.
+2. The two removed values are the farthest from the mean ($19$ below and $19$ above), so every deviation that remains is smaller than $19$ in size. The sum of squared deviations drops sharply while $8$ values remain, so the standard deviation decreases.
+3. (Numerically, the population standard deviation falls from about $11.3$ to about $8.2$.)
+
+---
+
+### AM-190
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part E, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=ab^{x}+c$, where $a$, $b$, and $c$ are constants and $b>1$. The values $f(2)=14$, $f(4)=20$, and $f(6)=32$ are known. What is the value of $c$?
+
+**Correct Answer:** $8$
+
+**Rationale (worked solution):**
+
+1. The inputs $2,4,6$ are equally spaced, so $f(2)-c$, $f(4)-c$, $f(6)-c$ form a geometric sequence: $(20-c)^2=(14-c)(32-c)$.
+2. $400-40c+c^2=448-46c+c^2\Rightarrow6c=48\Rightarrow c=8$.
+3. Check: $6,12,24$ has constant ratio $2=b^2$, so $b=\sqrt2$ and $a=3$; indeed $3\cdot2+8=14$, $3\cdot4+8=20$, $3\cdot8+8=32$.
+
+---
+
+### A-157
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Line $p$ has equation $3x-ky=15$, where $k$ is a nonzero constant. Line $q$ is perpendicular to line $p$ and passes through the $y$-intercept of line $p$. Which of the following is an equation of line $q$?
+
+(A) $y=\dfrac{k}{3}x-\dfrac{15}{k}$
+(B) $y=-\dfrac{3}{k}x-\dfrac{15}{k}$
+(C) $y=-\dfrac{k}{3}x-\dfrac{15}{k}$
+(D) $y=-\dfrac{k}{3}x+\dfrac{15}{k}$
+
+**Correct Answer:** (C) $y=-\dfrac{k}{3}x-\dfrac{15}{k}$
+
+**Rationale (worked solution):**
+
+1. Solve for $y$: $y=\dfrac3kx-\dfrac{15}{k}$. Slope of $p$ is $\dfrac3k$ and the $y$-intercept is $\left(0,-\dfrac{15}k\right)$.
+2. A perpendicular slope is the negative reciprocal: $-\dfrac k3$.
+3. Line $q$ keeps the intercept $-\dfrac{15}k$: $y=-\dfrac k3x-\dfrac{15}k$.
+4. Check with $k=3$: $p$ has slope $1$, $q$ has slope $-1$, both cross the $y$-axis at $-5$.
+
+---
+
+### AM-191
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For $x\ge0$, let $f(x)=120-90(0.8)^{x}$ and $g(x)=-3(x-4)^{2}+125$. Which of the following statements is true?
+
+(A) Only $g$ attains a maximum, $125$
+(B) Neither attains a maximum
+(C) Both $f$ and $g$ attain a maximum
+(D) Only $f$ attains a maximum, $120$
+
+**Correct Answer:** (A) Only $g$ attains a maximum, $125$
+
+**Rationale (worked solution):**
+
+1. $g$ is a downward parabola with vertex $(4,125)$ and $x=4$ is in the domain, so $g$ attains its maximum value $125$.
+2. $(0.8)^x>0$ for every $x$, so $90(0.8)^x>0$ and $f(x)<120$ for every $x$. As $x$ grows $f(x)$ gets closer to $120$ but never equals it, so $f$ has no maximum value even though it is bounded above by $120$.
+3. Only the third statement is correct.
+
+---
+
+### A-158
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$ax+ay=15$$ $$3ax-2ay=20$$ In the system of equations above, $a$ is a nonzero constant. The ordered pair $(2,\,y)$ is a solution to the system. What is the value of $a$?
+
+**Correct Answer:** $5$
+
+**Rationale (worked solution):**
+
+1. Substitute $x=2$: $2a+ay=15$ and $6a-2ay=20$.
+2. Treat the product $ay$ as a single unknown $P$: $2a+P=15$ and $6a-2P=20$.
+3. Multiply the first by $2$: $4a+2P=30$. Add to the second: $10a=50$, so $a=5$.
+4. Check: $P=15-10=5$, so $y=1$; then $6(5)-2(5)=20$.
+
+---
+
+### GT-136
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part E, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In triangle $ABC$, angle $C$ is a right angle and angle $A$ measures $30^\circ$. The circle inscribed in the triangle has radius $5$. What is the length of $\overline{AC}$?
+
+(A) $10+10\sqrt3$
+(B) $10\sqrt3-10$
+(C) $5+5\sqrt3$
+(D) $15+5\sqrt3$
+
+**Correct Answer:** (D) $15+5\sqrt3$
+
+**Rationale (worked solution):**
+
+1. Let $BC=s$ (opposite $30^\circ$). Then $AC=s\sqrt3$ and $AB=2s$.
+2. Inradius of a right triangle: $r=\dfrac{BC+AC-AB}{2}=\dfrac{s+s\sqrt3-2s}{2}=\dfrac{s(\sqrt3-1)}2=5$.
+3. $s=\dfrac{10}{\sqrt3-1}=\dfrac{10(\sqrt3+1)}{2}=5\sqrt3+5$.
+4. $AC=s\sqrt3=5\sqrt3(\sqrt3+1)=15+5\sqrt3$.
+5. (Area check: $\tfrac12\cdot s\cdot s\sqrt3$ divided by the semiperimeter equals $5$.)
+
+---
+
+### AM-192
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$-2(x-5)^{2}+k=m(x-1)(x-r)$$ In the equation above, $k$, $m$, and $r$ are constants. The equation is true for all real values of $x$. What is the value of $k$?
+
+(A) $-32$
+(B) $18$
+(C) $32$
+(D) $50$
+
+**Correct Answer:** (C) $32$
+
+**Rationale (worked solution):**
+
+1. Leading coefficients: left side $-2x^2+\dots$, right side $mx^2+\dots$, so $m=-2$.
+2. The axis of the left side is $x=5$; the right side has roots $1$ and $r$, so $\dfrac{1+r}{2}=5$ and $r=9$.
+3. Substitute the root $x=1$, where the right side is $0$: $-2(1-5)^2+k=0\Rightarrow-32+k=0\Rightarrow k=32$.
+4. (Check: $-2(x-5)^2+32=-2x^2+20x-18=-2(x-1)(x-9)$.)
+
+---
+
+### AM-193
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For all real values of $x$, $$\frac{6^{\,2x+3}}{2^{\,2x-1}}=k\cdot9^{x}$$ where $k$ is a constant. What is the value of $k$?
+
+**Correct Answer:** $432$
+
+**Rationale (worked solution):**
+
+1. Factor the base: $6^{2x+3}=2^{2x+3}\cdot3^{2x+3}$.
+2. Divide by $2^{2x-1}$: the powers of $2$ give $2^{(2x+3)-(2x-1)}=2^{4}=16$.
+3. The powers of $3$ give $3^{2x+3}=3^3\cdot3^{2x}=27\cdot9^{x}$.
+4. So the left side equals $16\cdot27\cdot9^{x}=432\cdot9^x$ and $k=432$.
+
+---
+
+### AM-194
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$(x+p)(x+q)=x^{2}+bx+c$$ In the equation above, $p$ and $q$ are real constants and $b$ and $c$ are integers. Which of the following must be true?\\[2pt] I.\ \ $p+q$ is an integer\\ II.\ \ $p^{2}+q^{2}$ is an integer\\ III.\ \ $\dfrac{p^{2}+q^{2}}{2}$ is an integer
+
+(A) I only
+(B) I and II only
+(C) II and III only
+(D) I, II, and III
+
+**Correct Answer:** (B) I and II only
+
+**Rationale (worked solution):**
+
+1. Expand: $x^2+(p+q)x+pq$, so $p+q=-b$ and $pq=c$.
+2. I: $p+q=-b$ is an integer. True.
+3. II: $p^2+q^2=(p+q)^2-2pq=b^2-2c$, an integer. True.
+4. III: $\dfrac{b^2-2c}{2}$ is an integer only when $b^2$ is even. Counterexample: $b=3$, $c=1$ gives $x^2+3x+1$ with real roots $p,q=\dfrac{-3\pm\sqrt5}2$, and $\dfrac{p^2+q^2}{2}=\dfrac{9-2}{2}=\dfrac72$. Not necessarily true.
+5. Only I and II must be true.
+
+---
+
+### GT-137
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part E, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$(x-1)^{2}+(y+3)^{2}=40$$ $$x^{2}+y^{2}-4kx+2ky=9$$ In the $xy$-plane, the two equations above define circles. The center of the second circle lies on the first circle. If $k$ is a positive constant, what is the value of $k$?
+
+(A) $-1+\sqrt7$
+(B) $2+\sqrt7$
+(C) $1+2\sqrt7$
+(D) $1+\sqrt7$
+
+**Correct Answer:** (D) $1+\sqrt7$
+
+**Rationale (worked solution):**
+
+1. The second circle has center $(2k,-k)$, since $x^2-4kx=(x-2k)^2-4k^2$ and $y^2+2ky=(y+k)^2-k^2$.
+2. Substitute into the first equation: $(2k-1)^2+(-k+3)^2=40$.
+3. $4k^2-4k+1+k^2-6k+9=40\Rightarrow5k^2-10k-30=0\Rightarrow k^2-2k-6=0$.
+4. $k=\dfrac{2\pm\sqrt{4+24}}{2}=\dfrac{2\pm2\sqrt7}{2}=1\pm\sqrt7$.
+5. Since $k>0$, $k=1+\sqrt7$ (because $1-\sqrt7<0$).
+
+---
+
+### PS-103
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part E, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Last year a shop sold only mugs and plates. This year the number of mugs sold rose by $30\%$, the number of plates sold fell by $10\%$, and the total number of items sold rose by $6\%$. Of the items sold this year, what percent were mugs, to the nearest tenth of a percent?
+
+(A) $49.1\%$
+(B) $50.9\%$
+(C) $52.0\%$
+(D) $40.0\%$
+
+**Correct Answer:** (A) $49.1\%$
+
+**Rationale (worked solution):**
+
+1. Let last year's total be $100$ with $x$ mugs and $100-x$ plates.
+2. This year's total: $1.3x+0.9(100-x)=106\Rightarrow0.4x=16\Rightarrow x=40$.
+3. This year there are $1.3(40)=52$ mugs and $0.9(60)=54$ plates, a total of $106$.
+4. Share of mugs $=\dfrac{52}{106}\approx0.491$, i.e. $49.1\%$.
+5. (Distractors: $40\%$ is last year's share, $52\%$ is this year's count out of $100$, $50.9\%$ is the plates' share.)
+
+---
+
+### AM-195
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For all $x>1$, $$\frac{a}{x-1}-\frac{bx+c}{x^{2}+x+1}=\frac{3x^{2}+8x+4}{x^{3}-1}$$ where $a$, $b$, and $c$ are constants. What is the value of $c$?
+
+**Correct Answer:** $-1$
+
+**Rationale (worked solution):**
+
+1. Since $x^3-1=(x-1)(x^2+x+1)$, multiply both sides by $x^3-1$: $a(x^2+x+1)-(bx+c)(x-1)=3x^2+8x+4$.
+2. Expand the subtracted product with its whole sign: $(bx+c)(x-1)=bx^2+(c-b)x-c$. So the left side is $(a-b)x^2+(a-c+b)x+(a+c)$.
+3. Match: $x^2$: $a-b=3$; $x$: $a+b-c=8$; constant: $a+c=4$.
+4. From the constant equation $c=4-a$; from the first $b=a-3$. Then $a+(a-3)-(4-a)=8\Rightarrow3a=15$, $a=5$, so $b=2$ and $c=-1$.
+
+---
+
+### GT-138
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part E, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A metal pipe is a hollow cylinder of length $15$ centimeters and outer radius $10$ centimeters. The wall has a uniform thickness of $t$ centimeters, where $0<t<10$. The volume of metal in the pipe is $765\pi$ cubic centimeters. What is the value of $t$?
+
+**Correct Answer:** $3$
+
+**Rationale (worked solution):**
+
+1. The inner radius is $10-t$. Metal volume $=\pi(15)\left[10^2-(10-t)^2\right]=765\pi$.
+2. $100-(10-t)^2=\dfrac{765}{15}=51\Rightarrow(10-t)^2=49$.
+3. $10-t=7$ or $10-t=-7$, so $t=3$ or $t=17$.
+4. Only $t=3$ satisfies $0<t<10$.
+
+---
+
+### PS-104
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A table has $4$ legs, each with the same ground-contact area of $A$ square centimeters. With a box on it, the table presses on the floor with a pressure of $12$ newtons per square centimeter on each leg. A $120$-newton weight is then added to the box, and the table is tilted so that only $3$ legs touch the floor. The pressure on each of those $3$ legs is now $24$ newtons per square centimeter. (Pressure is force divided by contact area, and the load is shared equally by the legs touching the floor.) What is the value of $A$?
+
+**Correct Answer:** $5$
+
+**Rationale (worked solution):**
+
+1. Let $W$ be the total downward force (table plus box) at first. Each of $4$ legs carries $\dfrac W4$: $\dfrac{W}{4A}=12\Rightarrow W=48A$.
+2. Afterwards the force is $W+120$, shared by $3$ legs: $\dfrac{W+120}{3A}=24\Rightarrow W+120=72A$.
+3. Substitute $W=48A$: $48A+120=72A\Rightarrow24A=120\Rightarrow A=5$.
+4. Check: $W=240$; $\dfrac{240}{20}=12$ and $\dfrac{360}{15}=24$.
+
+---
+
+### GT-139
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A right pyramid has a rectangular base. Its height is $12$ centimeters, and the slant heights of its triangular faces are $13$ centimeters for one pair of opposite faces and $20$ centimeters for the other pair. What is the total surface area, in square centimeters, of the pyramid, including the base?
+
+(A) $866$
+(B) $936$
+(C) $1160$
+(D) $616$
+
+**Correct Answer:** (B) $936$
+
+**Rationale (worked solution):**
+
+1. The slant height of a face is the hypotenuse of a right triangle with legs $12$ and half the base side that face sits on.
+2. Slant height $13$: half-side $=\sqrt{13^2-12^2}=5$, so that face sits on a side of length $10$. Slant height $20$: half-side $=\sqrt{20^2-12^2}=16$, so that face sits on a side of length $32$.
+3. Base area: $10\cdot32=320$.
+4. Two faces with base $32$ and slant height $13$: $2\cdot\tfrac12\cdot32\cdot13=416$. Two faces with base $10$ and slant height $20$: $2\cdot\tfrac12\cdot10\cdot20=200$.
+5. Total: $320+416+200=936$.
+
+---
+
+### GT-140
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part E, item 16 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, a circle has equation $x^{2}+y^{2}+Dx+Ey+F=0$, where $D$, $E$, and $F$ are constants. The circle passes through the points $(2,7)$ and $(10,7)$, has radius $5$, and has its center below the line $y=7$. What is the value of $E+F$?
+
+**Correct Answer:** $19$
+
+**Rationale (worked solution):**
+
+1. The points $(2,7)$ and $(10,7)$ have the same $y$-coordinate, so the center lies on the perpendicular bisector $x=6$. The center is $\left(-\dfrac D2,-\dfrac E2\right)$, so $D=-12$.
+2. Center $(6,k)$ with distance $5$ to $(2,7)$: $16+(7-k)^2=25\Rightarrow(7-k)^2=9\Rightarrow k=4$ or $k=10$. Below $y=7$ means $k=4$.
+3. $E=-2k=-8$. Also $F=h^2+k^2-r^2=36+16-25=27$.
+4. $E+F=-8+27=19$.
+5. (Check with $(2,7)$: $4+49-24-56+27=0$.)
+
+---
+
+### PS-105
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** County P has $2{,}500$ adult residents and county Q has $900$. A random sample of county P residents found that $52\%$ support a proposed bike lane, with a margin of error of $3$ percentage points. A separate random sample of county Q residents found that $38\%$ support it, with a margin of error of $4$ percentage points. Based on the margins of error, what is the greatest possible value of (number of adult supporters in county P) $-$ (number of adult supporters in county Q)?
+
+(A) $1{,}033$
+(B) $1{,}069$
+(C) $525$
+(D) $958$
+
+**Correct Answer:** (B) $1{,}069$
+
+**Rationale (worked solution):**
+
+1. Each survey gives an interval for the true percent. Survey P: $52\pm3$, so $49\%$ to $55\%$. Survey Q: $38\pm4$, so $34\%$ to $42\%$.
+2. To make the difference as large as possible, use the top of P's interval and the bottom of Q's interval: $55\%$ and $34\%$.
+3. Convert each with its own population: $0.55(2500)=1375$ and $0.34(900)=306$.
+4. Difference: $1375-306=1069$.
+5. (Other options: $525=21\%$ of $2500$, applying the percent gap to one population; $958$ uses the survey percents $52\%$ and $38\%$ with no margins; $1033$ pairs the top of P with the centre of Q.)
+
+---
+
+### PS-106
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In 2020, the population of city M was $20\%$ greater than the population of city N. From 2020 to 2024, the population of city M increased by $15\%$ and the population of city N decreased by $8\%$. The population of city M in 2024 was $p\%$ greater than the population of city N in 2024. What is the value of $p$?
+
+**Correct Answer:** $50$
+
+**Rationale (worked solution):**
+
+1. Let the 2020 population of N be $100k$. Then M in 2020 is $1.20(100k)=120k$.
+2. 2024: M is $1.15(120k)=138k$; N is $0.92(100k)=92k$.
+3. $\dfrac{138k}{92k}=1.5$, so M is $50\%$ greater than N.
+4. $p=50$. (Subtracting the percent changes or the percents themselves gives wrong values; compare final values by division.)
+
+---
+
+### PS-107
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The positive quantities $a$, $b$, $c$ and $d$ satisfy the following: $b$ is $0.6\%$ of $a$, $c$ is $5\%$ of $b$, and $d$ is $150\%$ of $c$. If $b+c+d=27$, what is the value of $a$?
+
+**Correct Answer:** $4000$
+
+**Rationale (worked solution):**
+
+1. Set $a=1$ and push the percents down the chain: $b=0.006$.
+2. $c=0.05(0.006)=0.0003$.
+3. $d=1.5(0.0003)=0.00045$.
+4. $b+c+d=0.006+0.0003+0.00045=0.00675$ for each unit of $a$, so $0.00675\,a=27$.
+5. $a=\dfrac{27}{0.00675}=4000$.
+
+---
+
+### GT-141
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In equilateral triangle $ABC$, point $D$ lies on side $\overline{BC}$ such that $BD=\dfrac14\,BC$. What is the value of $\tan\angle DAC$?
+
+(A) $\dfrac{5\sqrt3}{9}$
+(B) $\dfrac{3\sqrt3}{7}$
+(C) $\dfrac{3\sqrt3}{5}$
+(D) $\dfrac{\sqrt3}{7}$
+
+**Correct Answer:** (C) $\dfrac{3\sqrt3}{5}$
+
+**Rationale (worked solution):**
+
+1. Place $B=(0,0)$ and $C=(4,0)$, so $A=(2,2\sqrt3)$ and $D=(1,0)$.
+2. Vectors from $A$: $\vec{AC}=(2,-2\sqrt3)$ and $\vec{AD}=(-1,-2\sqrt3)$.
+3. Cross product (magnitude): $|2(-2\sqrt3)-(-2\sqrt3)(-1)|=|-4\sqrt3-2\sqrt3|=6\sqrt3$.
+4. Dot product: $2(-1)+(-2\sqrt3)(-2\sqrt3)=-2+12=10$.
+5. $\tan\angle DAC=\dfrac{6\sqrt3}{10}=\dfrac{3\sqrt3}{5}$.
+6. (Check: $\tan\angle BAD=\dfrac{\sqrt3}{7}$ by the same method, and $\dfrac{\sqrt3/7+3\sqrt3/5}{1-\frac{9}{35}}=\sqrt3=\tan60^\circ$.)
+
+---
+
+### AM-196
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part F, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$2^{x}=3x+k$$ In the equation above, $k$ is a constant. What is the smallest integer value of $k$ for which the equation has two distinct real solutions?
+
+(A) $-2$
+(B) $-1$
+(C) $0$
+(D) $-3$
+
+**Correct Answer:** (A) $-2$
+
+**Rationale (worked solution):**
+
+1. Rewrite as $g(x)=2^x-3x=k$. The equation has two solutions exactly when the horizontal line $y=k$ lies strictly above the minimum of $g$.
+2. $g'(x)=2^x\ln2-3=0\Rightarrow2^x=\dfrac3{\ln2}\approx4.328$, so $x\approx2.115$. Then $g_{\min}\approx4.328-3(2.115)\approx-2.02$ (Desmos: minimum $\approx(2.115,\,-2.017)$).
+3. Two solutions need $k>-2.017$; the smallest integer is $-2$.
+4. Check: for $k=-3$ the graphs of $y=2^x$ and $y=3x-3$ never meet; for $k=-2$, $x=2$ is one solution ($4=6-2$) and a second lies near $x\approx2.2$.
+
+---
+
+### AM-197
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For $y\neq0$ and $y\neq\dfrac13$, which of the following is equivalent to $$\dfrac{\dfrac{1}{y^{3}}-27}{\dfrac1y-3}\ ?$$
+
+(A) $\dfrac1{y^2}-\dfrac3y+9$
+(B) $\dfrac1{y^2}+9$
+(C) $\dfrac1{y^2}+\dfrac6y+9$
+(D) $\dfrac1{y^2}+\dfrac3y+9$
+
+**Correct Answer:** (D) $\dfrac1{y^2}+\dfrac3y+9$
+
+**Rationale (worked solution):**
+
+1. Let $u=\dfrac1y$. The expression is $\dfrac{u^3-27}{u-3}=\dfrac{u^3-3^3}{u-3}$.
+2. Difference of cubes: $u^3-27=(u-3)(u^2+3u+9)$. The $u-3$ cancels (allowed because $y\ne\frac13$).
+3. Result: $u^2+3u+9=\dfrac1{y^2}+\dfrac3y+9$.
+4. Check with $y=1$: $\dfrac{1-27}{1-3}=13$ and $1+3+9=13$. Check with $y=-1$: $\dfrac{-1-27}{-1-3}=7$ and $1-3+9=7$.
+
+---
+
+### GT-142
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A raised garden bed is filled with soil. A vertical cross-section of the soil, perpendicular to the $12$-foot length of the bed, is a trapezoid: the bed is $8$ feet wide, and the soil is $1.5$ feet deep along one side and $3.5$ feet deep along the opposite side, with the surface sloping uniformly between them. Soil is sold at $\$45$ per cubic yard and billed for the exact volume ($1$ yard $=3$ feet). What is the cost, in dollars, of the soil needed?
+
+**Correct Answer:** $400$
+
+**Rationale (worked solution):**
+
+1. Trapezoid cross-section: parallel sides (depths) $1.5$ and $3.5$ ft, height (width) $8$ ft. Area $=\dfrac{1.5+3.5}{2}\cdot8=20$ ft$^2$.
+2. Volume $=20\cdot12=240$ ft$^3$.
+3. $1$ yd$^3=3^3=27$ ft$^3$, so the volume is $\dfrac{240}{27}=\dfrac{80}{9}$ yd$^3$.
+4. Cost $=\dfrac{80}{9}\cdot45=80\cdot5=400$ dollars.
+
+---
+
+### AM-198
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The polynomial $p(x)=x^3-9x^2+kx-12$ has a positive integer constant $k$. For some positive integer $n$, $x-n$ is a factor of $p(x)$. What is the sum of all possible values of $k$?
+
+**Correct Answer:** $65$
+
+**Rationale (worked solution):**
+
+1. If $x-n$ is a factor, then $p(n)=0$: $n^3-9n^2+kn-12=0$, so $kn=12+9n^2-n^3$ and $k=\dfrac{12}{n}+9n-n^2$.
+2. For $k$ to be an integer, $n$ must divide $12$ (the other terms are integers): $n\in\{1,2,3,4,6,12\}$.
+3. $n=1$: $k=12+9-1=20$. $\ n=2$: $6+18-4=20$. $\ n=3$: $4+27-9=22$. $\ n=4$: $3+36-16=23$. $\ n=6$: $2+54-36=20$. $\ n=12$: $1+108-144=-35$ (not positive).
+4. Distinct positive values of $k$: $20$, $22$, $23$.
+5. Sum: $20+22+23=65$.
+
+---
+
+### AM-199
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A patient takes a $100$-milligram dose of a medication at 8:00 a.m. and again at 8:00 p.m. every day, beginning at 8:00 a.m. on Monday. The dose is absorbed instantly, and between any two consecutive doses exactly half of the medication present in the body is eliminated. To the nearest tenth of a milligram, how much medication is in the body immediately after the 8:00 a.m. dose on Thursday?
+
+(A) $187.5$
+(B) $196.9$
+(C) $198.4$
+(D) $199.2$
+
+**Correct Answer:** (C) $198.4$
+
+**Rationale (worked solution):**
+
+1. Count the doses: Mon a.m., Mon p.m., Tue a.m., Tue p.m., Wed a.m., Wed p.m., Thu a.m. That is $7$ doses, with $6$ twelve-hour intervals (two per day).
+2. Let $a_n$ be the amount just after dose $n$: $a_1=100$ and $a_{n+1}=\dfrac12a_n+100$. Then $a_7=100\left(1+\dfrac12+\dfrac1{2^2}+\cdots+\dfrac1{2^6}\right)$.
+3. Geometric sum: $100\cdot\dfrac{1-(1/2)^7}{1-1/2}=200\left(1-\dfrac1{128}\right)=200\cdot\dfrac{127}{128}=198.4375$.
+4. To the nearest tenth: $198.4$ mg. (The options $196.9$ and $199.2$ correspond to $6$ and $8$ doses; $187.5$ to $4$ doses.)
+
+---
+
+### PS-108
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A box contains only red, green and blue flash drives, $140$ in all. The ratio of red drives to green drives is $7$ to $4$. The ratio of blue drives to drives that are not blue is $3$ to $11$. How many more red drives than blue drives are in the box?
+
+**Correct Answer:** $40$
+
+**Rationale (worked solution):**
+
+1. Blue to not-blue is $3:11$, so blue drives are $\dfrac{3}{14}$ of the total: $\dfrac3{14}(140)=30$.
+2. Not blue: $140-30=110$. These are red and green in the ratio $7:4$, so red $=7k$, green $=4k$, with $11k=110$ and $k=10$.
+3. Red $=70$, green $=40$, blue $=30$ (total $140$).
+4. Red minus blue: $70-30=40$.
+
+---
+
+### AM-200
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $P(t)=\dfrac{120}{1+5(0.8)^{t}}$ models the number of active users of an app, in thousands, $t$ weeks after launch, for $0\le t\le10$. Consider the following statements.\par\medskip I.\ $P$ is increasing on the interval $0\le t\le10$.\par II.\ There is a time $t$ in the interval at which $P(t)=60$.\par III.\ There is a time $t$ in the interval at which $P(t)=80$.\par\medskip Which of the statements must be true?
+
+(A) I only
+(B) I and II only
+(C) II and III only
+(D) I, II, and III
+
+**Correct Answer:** (B) I and II only
+
+**Rationale (worked solution):**
+
+1. I: as $t$ increases, $(0.8)^t$ decreases, so the denominator $1+5(0.8)^t$ decreases and $P$ increases. True.
+2. Since $P$ is continuous and increasing, it attains exactly the values between $P(0)=\dfrac{120}{6}=20$ and $P(10)=\dfrac{120}{1+5(0.8)^{10}}\approx\dfrac{120}{1.537}\approx78.1$.
+3. II: $60$ lies between $20$ and $78.1$. Directly: $1+5(0.8)^t=2\Rightarrow(0.8)^t=0.2\Rightarrow t=\dfrac{\ln0.2}{\ln0.8}\approx7.2$, inside the interval. True.
+4. III: $80>78.1$. Directly: $1+5(0.8)^t=1.5\Rightarrow(0.8)^t=0.1\Rightarrow t=\dfrac{\ln0.1}{\ln0.8}\approx10.3>10$. Outside the interval, so False (the bound of $120$ is never reached, and on this interval the maximum is only $\approx78.1$).
+5. Only I and II must be true.
+
+---
+
+### GT-143
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In right triangle $ABC$, the right angle is at $C$ and $\tan A=\dfrac{5}{12}$. The area of the triangle is $120$. Point $D$ lies on $\overline{AB}$ such that $\overline{CD}\perp\overline{AB}$. What is the length of $\overline{AD}$?
+
+(A) $\dfrac{50}{13}$
+(B) $\dfrac{288}{13}$
+(C) $\dfrac{120}{13}$
+(D) $24$
+
+**Correct Answer:** (B) $\dfrac{288}{13}$
+
+**Rationale (worked solution):**
+
+1. $\tan A=\dfrac{BC}{AC}=\dfrac5{12}$, so let $BC=5k$ and $AC=12k$. Then $AB=13k$.
+2. Area: $\dfrac12(12k)(5k)=30k^2=120\Rightarrow k=2$. So $AC=24$, $BC=10$, $AB=26$.
+3. In a right triangle, each leg squared equals the hypotenuse times the adjacent segment: $AC^2=AD\cdot AB$.
+4. $AD=\dfrac{24^2}{26}=\dfrac{576}{26}=\dfrac{288}{13}$.
+5. (Other options: $\dfrac{50}{13}=DB$, $\dfrac{120}{13}=CD$, and $24=AC$.)
+
+---
+
+### AM-201
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=a\cdot b^{x}$, where $a$ and $b$ are positive constants. For every value of $x$, $f(x+2)$ is $44\%$ greater than $f(x)$. For every value of $x$, $f(x+3)$ is $p\%$ greater than $f(x)$. What is the value of $p$?
+
+(A) $132$
+(B) $60$
+(C) $66$
+(D) $72.8$
+
+**Correct Answer:** (D) $72.8$
+
+**Rationale (worked solution):**
+
+1. $f(x+2)=1.44\,f(x)$, so $\dfrac{a\,b^{x+2}}{a\,b^{x}}=b^2=1.44$.
+2. Hence $b=1.2$ (since $b>0$).
+3. $f(x+3)=b^3f(x)=(1.2)^3f(x)=1.728\,f(x)$.
+4. $1.728$ is $72.8\%$ greater than $1$, so $p=72.8$. (Option $66=1.5\cdot44$ scales the percent linearly; $60=3\cdot20$ ignores compounding; $132=3\cdot44$.)
+
+---
+
+### A-159
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part F, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A contractor paints the walls of a room with total wall area $x$ square feet. Primer is applied to all of the wall area in one coat; one gallon of primer covers $400$ square feet and costs $\$20$. Then paint is applied to $\dfrac35$ of the wall area in two coats; one gallon of paint covers $300$ square feet per coat and costs $\$30$. The contractor buys $10\%$ more paint than the calculated amount, but buys exactly the calculated amount of primer. Gallons may be purchased in fractions. Which of the following functions gives the total cost $C(x)$, in dollars, of the primer and paint?
+
+(A) $C(x)=0.182x$
+(B) $C(x)=0.187x$
+(C) $C(x)=0.232x$
+(D) $C(x)=0.170x$
+
+**Correct Answer:** (A) $C(x)=0.182x$
+
+**Rationale (worked solution):**
+
+1. Primer cost: $\dfrac{x}{400}\cdot20=0.05x$.
+2. Paint needed (calculated): $\dfrac35x\cdot2\text{ coats}=1.2x$ square feet of coverage, which is $\dfrac{1.2x}{300}$ gallons.
+3. With the $10\%$ allowance on paint only: $1.1\cdot\dfrac{1.2x}{300}$ gallons, costing $30\cdot\dfrac{1.32x}{300}=0.132x$ dollars.
+4. Total: $C(x)=0.05x+0.132x=0.182x$.
+5. (Other options: $0.17x$ has no allowance; $0.187x$ applies the allowance to the primer as well; $0.232x$ uses two coats of primer.)
+
+---
+
+### PS-109
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A list of nine positive integers has a mean of $12$ and a median of $9$. What is the greatest possible value of the sum of the three largest integers in the list?
+
+**Correct Answer:** $86$
+
+**Rationale (worked solution):**
+
+1. Mean $\times$ count: the nine integers sum to $9\cdot12=108$.
+2. Order them $x_1\le x_2\le\cdots\le x_9$. The median is the middle value, so $x_5=9$. The three largest are $x_7,x_8,x_9$.
+3. To make $x_7+x_8+x_9$ as large as possible, make the other six values as small as possible. $x_1,x_2,x_3,x_4$ can each be $1$ (positive integers). $x_5=9$ is fixed. $x_6\ge x_5=9$, so the smallest choice is $9$.
+4. Sum of the other six: $4(1)+9+9=22$.
+5. Greatest possible sum of the three largest: $108-22=86$. (Attainable: $1,1,1,1,9,9,28,29,29$ has sum $108$, median $9$, and top three summing to $86$.)
+
+---
+
+### GT-144
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part F, item 16 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$x^2+y^2-4x+6y-12=0$$ In the $xy$-plane, the graph of the equation above is a circle. Line $\ell$ has slope $\dfrac34$ and is tangent to the circle at a point with a positive $y$-coordinate. What is the $y$-intercept of $\ell$?
+
+(A) $1$
+(B) $\dfrac74$
+(C) $-\dfrac13$
+(D) $-\dfrac{43}{4}$
+
+**Correct Answer:** (B) $\dfrac74$
+
+**Rationale (worked solution):**
+
+1. Complete the squares: $(x-2)^2+(y+3)^2=25$. Center $(2,-3)$, radius $5$.
+2. The radius to the point of tangency is perpendicular to $\ell$, so it has slope $-\frac43$. A radius of length $5$ with slope $-\frac43$ is $\pm(3,-4)$ from the center.
+3. Tangency points: $(2+3,\,-3-4)=(5,-7)$ and $(2-3,\,-3+4)=(-1,1)$. Only $(-1,1)$ has a positive $y$-coordinate.
+4. Line through $(-1,1)$ with slope $\frac34$: $y-1=\frac34(x+1)$, so $y=\frac34x+\frac74$.
+5. $y$-intercept $=\frac74$. (Other options: $-\frac{43}4$ is the other tangent line, $1$ is the $y$-coordinate of the tangency point, $-\frac13$ uses slope $-\frac43$.)
+
+---
+
+### AM-202
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part G, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For an integer $k$, the equation $$9-3\,|2x-8|=1-\frac{5k}{2}$$ has no real solution $x$. What is the greatest possible value of $k$?
+
+**Correct Answer:** $-4$
+
+**Rationale (worked solution):**
+
+1. The expression $9-3|2x-8|$ is largest when $2x-8=0$, where it equals $9$. So the left side is at most $9$.
+2. There is no solution exactly when the right side is greater than $9$: $1-\dfrac{5k}2>9$.
+3. $-\dfrac{5k}2>8\Rightarrow k<-\dfrac{16}5$ (dividing by $-\dfrac52$ reverses the inequality).
+4. The integers satisfying $k<-3.2$ are $\dots,-5,-4$. The greatest is $-4$.
+5. (Check: $k=-4$ gives right side $11>9$, no solution; $k=-3$ gives $8.5\le9$, and $|2x-8|=\frac16$ has solutions.)
+
+---
+
+### PS-110
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part G, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A site plan was drawn so that $1$ centimeter on the plan represents $40$ meters of ground. A copier then enlarged the plan to $125\%$ of its size. On the enlarged copy, the parcel appears as a rectangle measuring $7.5$ centimeters by $5$ centimeters. What is the actual area of the parcel, in hectares? ($1$ hectare $=10{,}000$ square meters.)
+
+(A) $384$
+(B) $3.84$
+(C) $6$
+(D) $38.4$
+
+**Correct Answer:** (B) $3.84$
+
+**Rationale (worked solution):**
+
+1. Undo the enlargement first: original plan lengths are $\dfrac{7.5}{1.25}=6$ cm and $\dfrac{5}{1.25}=4$ cm.
+2. Apply the drawing scale: $6\cdot40=240$ m and $4\cdot40=160$ m.
+3. Area $=240\cdot160=38{,}400$ square meters.
+4. Convert with the squared factor: $\dfrac{38{,}400}{10{,}000}=3.84$ hectares.
+5. (Skipping the first step gives $300\cdot200=60{,}000$ m$^2=6$ ha; mis-converting $38{,}400$ gives $384$ or $38.4$.)
+
+---
+
+### PS-111
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Nine positive integers, not necessarily distinct, have a sum of $100$ and a median of $9$. What is the greatest possible value of the mean of the four largest of these integers?
+
+(A) $25$
+(B) $20.25$
+(C) $21.75$
+(D) $23.75$
+
+**Correct Answer:** (C) $21.75$
+
+**Rationale (worked solution):**
+
+1. Order them $a_1\le a_2\le\dots\le a_9$. The median is $a_5=9$, and $a_6,\dots,a_9\ge9$.
+2. To make the top four as large as possible, make $a_1,\dots,a_4$ as small as possible. Repeats are allowed, so each can equal $1$.
+3. Then $a_6+a_7+a_8+a_9=100-(1+1+1+1)-9=87$ (for example $9,9,9,60$, which respects the ordering).
+4. Mean $=\dfrac{87}4=21.75$.
+5. (Forcing distinct values $1,2,3,4$ would give $\dfrac{81}4=20.25$.)
+
+---
+
+### GT-145
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part G, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Cylinder $P$ has radius $2$ centimeters and height $6$ centimeters. Cylinder $Q$ is similar to cylinder $P$ and has a total surface area of $200\pi$ square centimeters. What is the volume, in cubic centimeters, of cylinder $Q$?
+
+(A) $375\pi$
+(B) $600\pi$
+(C) $60\pi$
+(D) $150\pi$
+
+**Correct Answer:** (A) $375\pi$
+
+**Rationale (worked solution):**
+
+1. Total surface area of $P$: $2\pi r(r+h)=2\pi(2)(8)=32\pi$. Volume of $P$: $\pi r^2h=24\pi$.
+2. Area ratio $=\dfrac{200\pi}{32\pi}=\dfrac{25}4$, so the linear factor is $k=\sqrt{\dfrac{25}4}=\dfrac52$.
+3. Volume ratio $=k^3=\dfrac{125}8$.
+4. $V_Q=24\pi\cdot\dfrac{125}8=375\pi$.
+5. (Check: $Q$ has radius $5$, height $15$; surface area $2\pi(5)(20)=200\pi$, volume $\pi(25)(15)=375\pi$.)
+
+---
+
+### A-160
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$\frac{3x+2}{4}-\frac{x-7}{6}=\frac{5x-1}{12}+2$$ If $x$ is the solution to the equation above, which of the following intervals contains the value of $x^2+4x-1$?
+
+(A) Between $10$ and $50$
+(B) Greater than $50$
+(C) Between $0$ and $5$
+(D) Between $5$ and $10$
+
+**Correct Answer:** (D) Between $5$ and $10$
+
+**Rationale (worked solution):**
+
+1. Multiply every term by the LCM $12$: $3(3x+2)-2(x-7)=(5x-1)+24$.
+2. Distribute (the minus sign applies to both terms of $x-7$): $9x+6-2x+14=5x+23$, so $7x+20=5x+23$.
+3. $2x=3\Rightarrow x=\dfrac32$.
+4. $x^2+4x-1=\dfrac94+6-1=\dfrac{29}4=7.25$, which lies between $5$ and $10$.
+5. (A sign slip, $-2x-14$, gives $x=\frac{31}2$ and a value above $50$.)
+
+---
+
+### GT-146
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the circle with equation $(x-7)^2+(y+2)^2=9$ has two distinct tangent lines that pass through the point $(2,-2)$. What is the product of the slopes of these two lines?
+
+**Correct Answer:** $-9/16$
+
+**Rationale (worked solution):**
+
+1. The point $(2,-2)$ is level with the centre $(7,-2)$, so the situation is symmetric about the horizontal line $y=-2$: the two tangent slopes are $m$ and $-m$, and the product is $-m^2$.
+2. Distance from the point to the centre: $d=5$; radius $r=3$. The tangent makes angle $\theta$ with the line to the centre where $\sin\theta=\dfrac35$, so $\tan\theta=\dfrac34$ and $m^2=\dfrac9{16}$.
+3. Check by the discriminant: substituting $y=-2+m(x-2)$ gives $(1+m^2)x^2-(14+4m^2)x+(40+4m^2)=0$; its discriminant is $36-64m^2$, which is $0$ for $m^2=\dfrac9{16}$.
+4. Product $=-\dfrac9{16}$.
+
+---
+
+### GT-147
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In triangle $ABC$, point $D$ lies on $\overline{AB}$ and point $E$ lies on $\overline{AC}$ so that $\overline{DE}$ is parallel to $\overline{BC}$. The measure of $\angle ADE$ is $(4x-10)^\circ$, the measure of $\angle ABC$ is $(2x+30)^\circ$, and the measure of $\angle ACB$ is $(x+25)^\circ$. What is the measure, in degrees, of $\angle BAC$?
+
+(A) $115$
+(B) $45$
+(C) $65$
+(D) $70$
+
+**Correct Answer:** (C) $65$
+
+**Rationale (worked solution):**
+
+1. Since $\overline{DE}\parallel\overline{BC}$, with transversal $\overline{AB}$, the corresponding angles are equal: $\angle ADE=\angle ABC$.
+2. $4x-10=2x+30\Rightarrow x=20$.
+3. Then $\angle ABC=70^\circ$ and $\angle ACB=20+25=45^\circ$.
+4. Angle sum in triangle $ABC$: $\angle BAC=180-70-45=65^\circ$.
+5. (Pairing $\angle ADE$ with $\angle ACB$ instead would give $x=\frac{35}3$ and a wrong triangle.)
+
+---
+
+### AM-203
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part G, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$P=\frac{a}{\sqrt[5]{w^{2}}}$$ The formula above relates the positive quantities $P$ and $w$, where $a$ is a positive constant. Which of the following expresses $w$ in terms of $P$ and $a$?
+
+(A) $w=\left(\dfrac{P}{a}\right)^{2/5}$
+(B) $w=\left(\dfrac{a}{P}\right)^{5/2}$
+(C) $w=\left(\dfrac{P}{a}\right)^{5/2}$
+(D) $w=\left(\dfrac{a}{P}\right)^{2/5}$
+
+**Correct Answer:** (B) $w=\left(\dfrac{a}{P}\right)^{5/2}$
+
+**Rationale (worked solution):**
+
+1. Write the root as a power: $\sqrt[5]{w^2}=w^{2/5}$, so $P=a\,w^{-2/5}$.
+2. Multiply by $w^{2/5}$ and divide by $P$: $w^{2/5}=\dfrac aP$.
+3. Raise both sides to the reciprocal power $\dfrac52$: $w=\left(\dfrac aP\right)^{5/2}$.
+4. (Numerical check: $a=7$, $w=3.2$ gives $P=7\cdot3.2^{-0.4}$, and $\left(\frac aP\right)^{5/2}=3.2$.)
+
+---
+
+### AM-204
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part G, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For a constant $k$, the equation $$2\sqrt{x+1}+2\sqrt{15-x}=k$$ has exactly one real solution. What is the value of $k$?
+
+(A) $16$
+(B) $2+2\sqrt{15}$
+(C) $8$
+(D) $8\sqrt2$
+
+**Correct Answer:** (D) $8\sqrt2$
+
+**Rationale (worked solution):**
+
+1. The domain is $-1\le x\le15$. The two expressions under the radicals add to $16$ and are symmetric about $x=7$ ($x+1$ and $15-x$ swap when $x\to14-x$), so if $x$ is a solution then so is $14-x$.
+2. Exactly one solution forces $x=14-x$, i.e. $x=7$.
+3. $k=2\sqrt8+2\sqrt8=4\sqrt8=8\sqrt2$.
+4. (Check: the left side rises from $8$ at $x=-1$ to its maximum $8\sqrt2\approx11.3$ at $x=7$, then falls back to $8$. Only the peak value is reached once. Other options give $0$ or $2$ solutions.)
+
+---
+
+### PS-112
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A rectangular banner has width $w$ and length $1.8w$, where $w>0$. The banner is covered exactly, with no gaps or overlaps, by $4$ identical square tiles. The side length of each tile is $k\,w\sqrt5$, where $k$ is a positive constant. What is the value of $k$?
+
+**Correct Answer:** $0.3$
+
+**Rationale (worked solution):**
+
+1. Banner area: $w\cdot1.8w=1.8w^2$.
+2. Four tiles: $4\left(kw\sqrt5\right)^2=4\cdot5k^2w^2=20k^2w^2$.
+3. Set equal and cancel $w^2$ (the radical squares away): $20k^2=1.8\Rightarrow k^2=0.09$.
+4. $k>0$, so $k=0.3$.
+
+---
+
+### GT-148
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part G, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, a circle lies in the first quadrant and is tangent to both the $x$-axis and the $y$-axis. The line $3x+4y=20$ intersects the circle at two points $8$ units apart. What is the sum of all possible values of the radius of the circle?
+
+**Correct Answer:** $35/3$
+
+**Rationale (worked solution):**
+
+1. Tangent to both axes in the first quadrant: centre $(r,r)$ and radius $r$.
+2. Distance from the centre to the line: $d=\dfrac{|3r+4r-20|}{5}=\dfrac{|7r-20|}5$.
+3. The perpendicular from the centre bisects the chord, so $d^2+4^2=r^2$: $\dfrac{(7r-20)^2}{25}+16=r^2$.
+4. $49r^2-280r+400+400=25r^2\Rightarrow24r^2-280r+800=0\Rightarrow3r^2-35r+100=0$.
+5. Roots $r=5$ and $r=\dfrac{20}3$, both positive and both valid (check $d=3$ and $d=\dfrac{16}3$). Their sum is $\dfrac{35}3$ (Vieta: $-\dfrac{-35}{3}$).
+
+---
+
+### AM-205
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The value $V$, in dollars, of a piece of lab equipment $t$ years after it was purchased is modeled by $$V(t)=2400\,(0.64)^{t/2.5}.$$ Which of the following is the best interpretation of the model?
+
+(A) It falls $36\%$ every $2.5$ years.
+(B) It falls $36\%$ every $5$ years.
+(C) It falls $64\%$ every $2.5$ years.
+(D) It falls $2.5\%$ every year.
+
+**Correct Answer:** (A) It falls $36\%$ every $2.5$ years.
+
+**Rationale (worked solution):**
+
+1. The exponent is $\dfrac{t}{2.5}$, so it increases by $1$ each time $t$ increases by $2.5$ years.
+2. Each increase of $1$ in the exponent multiplies $V$ by $0.64$. So every $2.5$ years the value is multiplied by $0.64$.
+3. A factor of $0.64$ is a decrease of $1-0.64=0.36=36\%$.
+4. So the value decreases by $36\%$ every $2.5$ years.
+5. (Over $5$ years the factor is $0.64^2\approx0.41$, a $59\%$ drop, not $36\%$.)
+
+---
+
+### GT-149
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part G, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Rectangular box $P$ has dimensions $3$ inches by $4$ inches by $6$ inches. Box $Q$ is similar to box $P$ and has a volume of $1125$ cubic inches. What is the total surface area, in square inches, of box $Q$?
+
+**Correct Answer:** $675$
+
+**Rationale (worked solution):**
+
+1. Volume of $P$: $3\cdot4\cdot6=72$. Surface area of $P$: $2(12+18+24)=108$.
+2. Volume ratio $\dfrac{1125}{72}=\dfrac{125}8$, so the linear factor is $k=\sqrt[3]{\dfrac{125}8}=\dfrac52$.
+3. Areas scale by $k^2=\dfrac{25}4$: $108\cdot\dfrac{25}4=675$.
+4. (Check: $Q$ is $7.5\times10\times15$, volume $1125$, surface area $2(75+112.5+150)=675$.)
+
+---
+
+### AM-206
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Positive real numbers $x$ and $y$ satisfy $$\sqrt{x}-\sqrt{y}=2\qquad\text{and}\qquad x+y=26.$$ What is the value of $xy$?
+
+**Correct Answer:** $121$
+
+**Rationale (worked solution):**
+
+1. Let $a=\sqrt x$ and $b=\sqrt y$. Then $a-b=2$ and $a^2+b^2=26$.
+2. Square the first: $a^2-2ab+b^2=4$, so $26-2ab=4$ and $ab=11$.
+3. $xy=a^2b^2=(ab)^2=121$.
+4. (Check: $a=1+2\sqrt3$, $b=2\sqrt3-1$ gives $a-b=2$, $a^2+b^2=26$, $ab=12-1=11$.)
+
+---
+
+### GT-150
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part G, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the center of a circle lies on the $y$-axis. The circle passes through the points $(6,1)$ and $(-2,5)$. Which of the following is an equation of the circle?
+
+(A) $x^2+(y+1)^2=44$
+(B) $x^2+(y+1)^2=40$
+(C) $x^2+(y-1)^2=40$
+(D) $x^2+(y+1)^2=20$
+
+**Correct Answer:** (B) $x^2+(y+1)^2=40$
+
+**Rationale (worked solution):**
+
+1. The centre is $(0,k)$. Equal distances to the two points: $6^2+(1-k)^2=(-2)^2+(5-k)^2$.
+2. Expand: $36+1-2k+k^2=4+25-10k+k^2$, so $37-2k=29-10k$.
+3. $8k=-8\Rightarrow k=-1$. Centre $(0,-1)$.
+4. $r^2=6^2+(1-(-1))^2=36+4=40$. Check with the other point: $(-2)^2+(5+1)^2=4+36=40$.
+5. Equation: $x^2+(y+1)^2=40$.
+
+---
+
+### AM-207
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part G, item 16 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For all real numbers $x$, $$8^{x}\cdot4^{x/3}\cdot\left(\sqrt2\right)^{x}=b^{x},$$ where $b$ is a positive constant. Which of the following is equal to $2$?
+
+(A) $b^{25}$
+(B) $b^{-6/25}$
+(C) $b^{6/25}$
+(D) $b^{25/6}$
+
+**Correct Answer:** (C) $b^{6/25}$
+
+**Rationale (worked solution):**
+
+1. Write each factor as a power of $2$: $8^x=2^{3x}$, $4^{x/3}=2^{2x/3}$, $(\sqrt2)^x=2^{x/2}$.
+2. Multiply (add exponents): $2^{x\left(3+\frac23+\frac12\right)}=2^{\frac{25}6x}$.
+3. So $b^x=\left(2^{25/6}\right)^x$ for all $x$, which gives $b=2^{25/6}$.
+4. Raise both sides to the reciprocal power $\dfrac6{25}$: $b^{6/25}=2$.
+5. (Evaluating at $x=1$ gives $b$ directly: $8\cdot4^{1/3}\cdot\sqrt2$.)
+
+---
+
+### PS-113
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A survey of $240$ adults asked whether they commute by bicycle and whether they own a helmet. Of the adults who commute by bicycle, $\dfrac35$ own a helmet. Of the adults who do not commute by bicycle, $\dfrac14$ own a helmet. If one adult is selected at random from those who own a helmet, the probability that the selected adult commutes by bicycle is $\dfrac{12}{19}$. How many of the $240$ adults own a helmet?
+
+(A) $60$
+(B) $95$
+(C) $144$
+(D) $100$
+
+**Correct Answer:** (B) $95$
+
+**Rationale (worked solution):**
+
+1. Let $c$ be the number of bicycle commuters, so $240-c$ do not commute by bicycle. Helmet owners: $\dfrac35c$ commuters and $\dfrac14(240-c)$ non-commuters.
+2. The condition ``given a helmet owner'' makes all helmet owners the denominator: $\dfrac{\frac35c}{\frac35c+\frac14(240-c)}=\dfrac{12}{19}$.
+3. Cross-multiply: $19\cdot\dfrac35c=12\left(\dfrac35c+\dfrac14(240-c)\right)\Rightarrow\dfrac{57}{5}c-\dfrac{36}5c=720-3c$, so $\dfrac{21}5c+3c=720$ and $\dfrac{36}5c=720$, giving $c=100$.
+4. Helmet owners: $\dfrac35(100)+\dfrac14(140)=60+35=95$. Check: $\dfrac{60}{95}=\dfrac{12}{19}$.
+5. The number of helmet owners is $95$. (The options $60$, $144$ and $100$ are the commuters with helmets, $\frac35$ of $240$, and the number of commuters.)
+
+---
+
+### AM-208
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$x^2+y^2=45$$ $$y=mx+15$$ In the system above, $m$ is a negative constant. If the system has exactly one solution $(x,y)$, what is the value of $x$?
+
+(A) $-3$
+(B) $3$
+(C) $6$
+(D) $-6$
+
+**Correct Answer:** (C) $6$
+
+**Rationale (worked solution):**
+
+1. Substitute: $x^2+(mx+15)^2=45\Rightarrow(1+m^2)x^2+30mx+180=0$.
+2. Exactly one solution means $\Delta=0$: $900m^2-4(1+m^2)(180)=0\Rightarrow900m^2-720-720m^2=0\Rightarrow180m^2=720\Rightarrow m^2=4$.
+3. The condition $m<0$ gives $m=-2$ (not $m=2$).
+4. The quadratic becomes $5x^2-60x+180=0$, i.e. $x^2-12x+36=0$, so $(x-6)^2=0$ and $x=6$.
+5. Check: $y=-2(6)+15=3$ and $6^2+3^2=45$. The value of $x$ is $6$ (the choice $m=2$ would give $x=-6$).
+
+---
+
+### GT-151
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part H, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For $0<x<45$, the equation $$\sin\left((5x-20)^\circ\right)=\cos\left((x+14)^\circ\right)$$ has more than one solution. What is the sum of all solutions $x$ in this interval?
+
+**Correct Answer:** $47$
+
+**Rationale (worked solution):**
+
+1. Write the cosine as a sine: $\cos\left((x+14)^\circ\right)=\sin\left((76-x)^\circ\right)$.
+2. Equal sines give two branches. Branch 1: $5x-20=76-x+360n\Rightarrow6x=96+360n$. Only $n=0$ lies in $(0,45)$: $x=16$.
+3. Branch 2: $5x-20=180-(76-x)+360n=104+x+360n\Rightarrow4x=124+360n$. Only $n=0$ lies in $(0,45)$: $x=31$.
+4. Check: $x=16$ gives $\sin60^\circ=\cos30^\circ=\dfrac{\sqrt3}2$; $x=31$ gives $\sin135^\circ=\cos45^\circ=\dfrac{\sqrt2}2$. Both satisfy the equation.
+5. The sum is $16+31=47$.
+
+---
+
+### A-161
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, line $\ell$ has equation $5x-2y=11$ and line $m$ has equation $ax+by=d$, where $a$, $b$ and $d$ are positive constants and $a+b=21$. Lines $\ell$ and $m$ are perpendicular, and line $m$ passes through the point $(4,3)$. What is the value of $d$?
+
+**Correct Answer:** $69$
+
+**Rationale (worked solution):**
+
+1. Perpendicular lines in standard form satisfy $A_1A_2+B_1B_2=0$: $5a+(-2)b=0$, so $5a=2b$ and $b=\dfrac52a$.
+2. (Slope check: $\ell$ has slope $\dfrac52$, $m$ has slope $-\dfrac ab=-\dfrac25$, and the product is $-1$.)
+3. $a+b=21\Rightarrow a+\dfrac52a=21\Rightarrow\dfrac72a=21\Rightarrow a=6$, so $b=15$.
+4. Since $(4,3)$ lies on $m$: $d=6(4)+15(3)=24+45=69$.
+
+---
+
+### AM-209
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f$ has a zero at $x=2$. The graph of $y=f(x)$ in the $xy$-plane passes through the points $(0,-16)$ and $(5,54)$. What is the minimum value of $f$?
+
+(A) $-18$
+(B) $-16$
+(C) $-9$
+(D) $-1$
+
+**Correct Answer:** (A) $-18$
+
+**Rationale (worked solution):**
+
+1. Let the other zero be $s$ and write $f(x)=a(x-2)(x-s)$.
+2. $f(0)=a(-2)(-s)=2as=-16$ and $f(5)=a(3)(5-s)=54$.
+3. Divide the second equation by the first to cancel $a$: $\dfrac{3(5-s)}{2s}=\dfrac{54}{-16}=-\dfrac{27}8$. Then $24(5-s)=-54s$, so $120=-30s$ and $s=-4$.
+4. Then $2a(-4)=-16\Rightarrow a=2>0$, so the parabola opens upward and has a minimum.
+5. The vertex is at $x=\dfrac{2+(-4)}2=-1$: $f(-1)=2(-3)(3)=-18$.
+6. The minimum value is $-18$. (The options $-16$ and $-1$ are $f(0)$ and the vertex's $x$-coordinate.)
+
+---
+
+### AM-210
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The graph of the quadratic function $f$ in the $xy$-plane passes through the points $(0,1)$, $(1,-2)$ and $(3,4)$. The graph of $y=g(x)$ is obtained by translating the graph of $y=f(x)$ $3$ units to the right and $5$ units down. What is the $y$-coordinate of the $y$-intercept of the graph of $g$?
+
+(A) $34$
+(B) $39$
+(C) $-1$
+(D) $29$
+
+**Correct Answer:** (D) $29$
+
+**Rationale (worked solution):**
+
+1. Let $f(x)=ax^2+bx+c$. From $(0,1)$: $c=1$.
+2. From $(1,-2)$: $a+b+1=-2\Rightarrow a+b=-3$. From $(3,4)$: $9a+3b+1=4\Rightarrow3a+b=1$.
+3. Subtract: $2a=4$, so $a=2$ and $b=-5$. Thus $f(x)=2x^2-5x+1$.
+4. The translation gives $g(x)=f(x-3)-5$, so the $y$-intercept is $g(0)=f(-3)-5$.
+5. $f(-3)=2(9)+15+1=34$, so $g(0)=34-5=29$.
+6. The answer is $29$. (The options $34$ and $39$ forget the shift down or reverse it; $-1$ uses $f(3)-5$, the wrong direction of the horizontal shift.)
+
+---
+
+### GT-152
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Points $A$, $B$, $C$ and $D$ are consecutive vertices of a regular polygon with $n$ sides, and $\overline{AC}$ is a diagonal. The measure of $\angle BAC$ is $(x+3)^\circ$ and the measure of $\angle ACD$ is $(10x+15)^\circ$, where $x$ is a constant. What is the value of $n$?
+
+(A) $24$
+(B) $8$
+(C) $12$
+(D) $15$
+
+**Correct Answer:** (C) $12$
+
+**Rationale (worked solution):**
+
+1. Triangle $ABC$ is isosceles with $AB=BC$ and apex angle $\angle ABC$ equal to the interior angle $180^\circ-\dfrac{360^\circ}n$. So $\angle BAC=\angle BCA=\dfrac{180^\circ}n$.
+2. The interior angle at $C$ is $\angle BCD=180^\circ-\dfrac{360^\circ}n$, and it is split by the diagonal: $\angle ACD=\angle BCD-\angle BCA=180^\circ-\dfrac{540^\circ}n$.
+3. Equate with the given expressions: $x+3=\dfrac{180}n$ and $10x+15=180-\dfrac{540}n$.
+4. Substitute $x=\dfrac{180}n-3$: $\dfrac{1800}n-30+15=180-\dfrac{540}n\Rightarrow\dfrac{2340}n=195\Rightarrow n=12$.
+5. Check: $\angle BAC=15^\circ$ gives $x=12$; $\angle ACD=10(12)+15=135^\circ=180^\circ-\dfrac{540^\circ}{12}$.
+6. $n=12$. (Treating $135^\circ$ as the interior angle gives $8$; treating $15^\circ$ as the exterior angle gives $24$.)
+
+---
+
+### A-162
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is linear. The function $g$ is defined by $g(x)=-2f(x-1)+5$, and the graph of $y=g(x)$ passes through the points $(0,3)$ and $(2,-5)$. The graph of $y=h(x)$ is the graph of $y=f(x)$ translated $2$ units to the left and $6$ units up. What is the $y$-coordinate of the $y$-intercept of the graph of $h$?
+
+**Correct Answer:** $13$
+
+**Rationale (worked solution):**
+
+1. Undo the outside operations first. From $g(0)=3$: $-2f(-1)+5=3\Rightarrow f(-1)=1$.
+2. From $g(2)=-5$: $-2f(1)+5=-5\Rightarrow f(1)=5$. (The inputs of $f$ are $x-1$, not $x$.)
+3. Slope of $f$: $\dfrac{5-1}{1-(-1)}=2$. Then $f(x)=2x+b$ and $5=2(1)+b$ gives $b=3$: $f(x)=2x+3$.
+4. Translating left $2$ and up $6$ gives $h(x)=f(x+2)+6$.
+5. $h(0)=f(2)+6=7+6=13$.
+
+---
+
+### AM-211
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$y=3x^2+4$$ $$y=1-kx$$ In the system above, $k$ is a constant. For which of the following values of $k$ does the system have two distinct solutions $(x,y)$ whose $x$-coordinates are both negative?
+
+(A) $6$
+(B) $7$
+(C) $-7$
+(D) $2$
+
+**Correct Answer:** (B) $7$
+
+**Rationale (worked solution):**
+
+1. Set the expressions equal: $3x^2+4=1-kx\Rightarrow3x^2+kx+3=0$.
+2. Two distinct real solutions: $\Delta=k^2-36>0$, so $|k|>6$. This excludes $k=2$ and the tangent case $k=6$.
+3. Both roots negative: the sum $-\dfrac k3<0$ requires $k>0$. (The product $\dfrac33=1>0$ already makes the roots the same sign.)
+4. Together: $k>6$. Of the options only $k=7$ qualifies; $k=-7$ gives two distinct solutions that are both positive.
+
+---
+
+### AM-212
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$\frac{2}{a}-\frac{3}{b}=\frac{5}{c}$$ In the equation above, $a$, $b$ and $c$ are nonzero constants and $2c\neq5a$. Which of the following expresses $b$ in terms of $a$ and $c$?
+
+(A) $b=\dfrac{3ac}{5a-2c}$
+(B) $b=\dfrac{2c-5a}{3ac}$
+(C) $b=\dfrac{3ac}{2c+5a}$
+(D) $b=\dfrac{3ac}{2c-5a}$
+
+**Correct Answer:** (D) $b=\dfrac{3ac}{2c-5a}$
+
+**Rationale (worked solution):**
+
+1. Isolate the $b$-term: $\dfrac3b=\dfrac2a-\dfrac5c$.
+2. Common denominator on the right: $\dfrac2a-\dfrac5c=\dfrac{2c-5a}{ac}$.
+3. So $\dfrac3b=\dfrac{2c-5a}{ac}$. Take reciprocals and multiply by $3$: $b=\dfrac{3ac}{2c-5a}$.
+4. Check with $a=1$, $c=5$: $2-\dfrac3b=1\Rightarrow b=3$, and $\dfrac{3(5)}{10-5}=3$. The reversed-sign option gives $-3$, the inverted option gives $\dfrac13$, and $\dfrac{15}{15}=1$ for the last.
+
+---
+
+### GT-153
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part H, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A brass bushing is a solid right circular cylinder with diameter $60$ millimeters and height $40$ millimeters. A cylindrical hole of diameter $20$ millimeters is drilled into one flat face, along the axis, to a depth of $25$ millimeters. The density of brass is $7.8$ grams per cubic centimeter. Which of the following is closest to the mass of the bushing, in grams? ($1\text{ cm}=10\text{ mm}$)
+
+(A) $821$
+(B) $882$
+(C) $82{,}090$
+(D) $784$
+
+**Correct Answer:** (A) $821$
+
+**Rationale (worked solution):**
+
+1. Volume of the full cylinder: $\pi(30)^2(40)=36{,}000\pi$ mm$^3$.
+2. Volume of the hole (radius $10$, depth $25$): $\pi(10)^2(25)=2{,}500\pi$ mm$^3$.
+3. Remaining volume: $36{,}000\pi-2{,}500\pi=33{,}500\pi$ mm$^3$.
+4. Convert with the cube of the length factor: $1\text{ cm}^3=10^3=1000\text{ mm}^3$, so $V=33.5\pi\approx105.2$ cm$^3$.
+5. Mass $=7.8\times33.5\pi=261.3\pi\approx820.9\approx821$ grams.
+6. (Other options: $784$ drills the hole through the full height, $882$ ignores the hole, $82{,}090$ divides by $10$ instead of $1000$.)
+
+---
+
+### PS-114
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part H, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A retailer's total sales were the same in March and April. In March, online sales were $p$ percent of the total sales and came to $\$18{,}000$. In April, online sales were $(p+8)$ percent of the total sales and came to $\$25{,}200$. What were the retailer's total sales, in dollars, for one of these months?
+
+**Correct Answer:** $90000$
+
+**Rationale (worked solution):**
+
+1. Let $T$ be the total sales. March: $\dfrac p{100}T=18000$. April: $\dfrac{p+8}{100}T=25200$.
+2. Divide April by March; $T$ cancels: $\dfrac{p+8}p=\dfrac{25200}{18000}=\dfrac75$.
+3. Cross-multiply: $5p+40=7p\Rightarrow p=20$.
+4. Then $\dfrac{20}{100}T=18000\Rightarrow T=90{,}000$. Check: $28\%$ of $90{,}000$ is $25{,}200$.
+
+---
+
+### GT-154
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In right triangle $ABC$, the angle at $C$ is a right angle. Point $D$ lies on $\overline{AB}$ so that $\overline{CD}\perp\overline{AB}$. The length of $\overline{CD}$ is $6$, and $DB$ is $5$ units longer than $AD$. What is the value of $\sin B$?
+
+(A) $\dfrac{6}{13}$
+(B) $\dfrac{2\sqrt{13}}{13}$
+(C) $\dfrac{3\sqrt{13}}{13}$
+(D) $\dfrac{4}{13}$
+
+**Correct Answer:** (B) $\dfrac{2\sqrt{13}}{13}$
+
+**Rationale (worked solution):**
+
+1. Let $AD=t$, so $DB=t+5$. The altitude to the hypotenuse satisfies $CD^2=AD\cdot DB$: $36=t(t+5)$.
+2. $t^2+5t-36=0\Rightarrow(t+9)(t-4)=0$, so $t=4$ (lengths are positive). Then $AD=4$, $DB=9$, $AB=13$.
+3. Leg relation: $BC^2=DB\cdot AB=9\cdot13=117$, so $BC=3\sqrt{13}$.
+4. $\sin B=\dfrac{AC}{AB}$ or, in triangle $CDB$, $\dfrac{CD}{CB}=\dfrac6{3\sqrt{13}}=\dfrac2{\sqrt{13}}=\dfrac{2\sqrt{13}}{13}$.
+5. (Check: $AC^2=AD\cdot AB=52$, $AC=2\sqrt{13}$, and $\dfrac{2\sqrt{13}}{13}$ again. The option $\dfrac{3\sqrt{13}}{13}$ is $\sin A$, $\dfrac4{13}$ is $\cos^2 A$ and $\dfrac6{13}$ is $\dfrac{CD}{AB}$.)
+
+---
+
+### AM-213
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is linear. The function $g$ is defined by $g(x)=\dfrac{f(x+2)-x}{x-3}$ for $x\neq3$. Some values of $g$ are shown in the table below.\par\medskip\begin{center}\begin{tabular}{c|c|c}$x$&$1$&$5$\\\hline$g(x)$&$3$&$-11$\end{tabular}\end{center}\par What is the $y$-intercept of the graph of $y=f(x)$ in the $xy$-plane?
+
+(A) $-5$
+(B) $-4$
+(C) $4$
+(D) $-3$
+
+**Correct Answer:** (C) $4$
+
+**Rationale (worked solution):**
+
+1. At $x=1$: $3=\dfrac{f(3)-1}{1-3}=\dfrac{f(3)-1}{-2}\Rightarrow f(3)-1=-6\Rightarrow f(3)=-5$.
+2. At $x=5$: $-11=\dfrac{f(7)-5}{5-3}=\dfrac{f(7)-5}2\Rightarrow f(7)-5=-22\Rightarrow f(7)=-17$.
+3. Slope of $f$: $\dfrac{-17-(-5)}{7-3}=\dfrac{-12}4=-3$.
+4. $f(3)=-3(3)+b=-5\Rightarrow b=4$. So $f(x)=-3x+4$ and the $y$-intercept is $4$.
+5. (The option $-3$ is the slope, $-5$ is $f(3)$.)
+
+---
+
+### AM-214
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For how many integer values of $k$ with $-10\le k\le10$ does the equation $$\sqrt{x+k}=x-2$$ have exactly one real solution?
+
+**Correct Answer:** $12$
+
+**Rationale (worked solution):**
+
+1. Square both sides, remembering the condition $x-2\ge0$: $x+k=x^2-4x+4$, so $x^2-5x+(4-k)=0$ with roots $x=\dfrac{5\pm\sqrt{9+4k}}2$.
+2. Real roots need $9+4k\ge0$; for integers this means $k\ge-2$. For $k\le-3$ there are no solutions.
+3. The larger root is at least $\dfrac52>2$, so it is always valid. The smaller root is valid only if $\dfrac{5-\sqrt{9+4k}}2\ge2$, i.e. $\sqrt{9+4k}\le1$, i.e. $k\le-2$.
+4. $k=-2$: the roots are $2$ and $3$, and both work, so there are two solutions. For $k\ge-1$ the smaller root is below $2$ and is extraneous, leaving exactly one solution.
+5. The values are $k=-1,0,1,\dots,10$, which is $12$ integers.
+
+---
+
+### AM-215
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part H, item 16 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The polynomial $p(x)=x^3+bx^2+cx+12$ has integer coefficients $b$ and $c$, and $x+3$ is a factor of $p(x)$. If $p$ has exactly one real zero, what is the greatest possible value of $c$?
+
+**Correct Answer:** $13$
+
+**Rationale (worked solution):**
+
+1. $x+3$ is a factor, so $p(-3)=0$: $-27+9b-3c+12=0\Rightarrow c=3b-5$.
+2. Divide: $p(x)=(x+3)(x^2+ux+4)$ with $u=b-3$. (Expanding gives $x^3+(u+3)x^2+(3u+4)x+12$, so $b=u+3$ and $c=3u+4=3b-5$.)
+3. Exactly one real zero means the quadratic factor has no real zero: $u^2-16<0$, a strict inequality, so $-4<u<4$.
+4. $u=4$ is excluded: $x^2+4x+4=(x+2)^2$ has the real zero $-2$, giving two distinct real zeros of $p$ ($-3$ and $-2$).
+5. The greatest integer $u$ is $3$, so $b=6$ and $c=3(6)-5=13$. (Including the boundary $u=4$ would wrongly give $c=16$.)
+
+---
+
+### AM-216
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined for $x\ge0$ by $$f(x)=48\left(\frac18\right)^{\frac{2-x}{3}}.$$ Which of the following is equivalent to $f(x)$ for all $x\ge0$ and displays the value of $f(0)$ as a constant factor?
+
+(A) $f(x)=192\cdot\left(\dfrac12\right)^{x}$
+(B) $f(x)=12\cdot2^{x}$
+(C) $f(x)=48\cdot2^{x}$
+(D) $f(x)=12\cdot\left(\dfrac12\right)^{x}$
+
+**Correct Answer:** (B) $f(x)=12\cdot2^{x}$
+
+**Rationale (worked solution):**
+
+1. Write $\dfrac18=2^{-3}$. Then $\left(\dfrac18\right)^{(2-x)/3}=2^{-3\cdot(2-x)/3}=2^{-(2-x)}=2^{x-2}$.
+2. So $f(x)=48\cdot2^{x-2}=48\cdot\dfrac{2^x}{4}=12\cdot2^x$.
+3. Check: $f(0)=48\left(\dfrac18\right)^{2/3}=48\cdot\dfrac14=12$, which is the constant factor, and $f(1)=48\left(\dfrac18\right)^{1/3}=24=12\cdot2^1$.
+4. The negative exponent $\dfrac{2-x}{3}$ reverses the effect of the fractional base, so $f$ grows. Only $12\cdot2^x$ matches.
+
+---
+
+### A-163
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$\frac{x}{6}+\frac{y}{4}=2$$ Which of the following equations, when paired with the equation above, forms a system of two linear equations in $x$ and $y$ that has no solution?
+
+(A) $4x-6y=40$
+(B) $4x+6y=48$
+(C) $4x+6y=40$
+(D) $6x+4y=48$
+
+**Correct Answer:** (C) $4x+6y=40$
+
+**Rationale (worked solution):**
+
+1. Clear fractions in the given equation by multiplying by $12$: $2x+3y=24$.
+2. A system has no solution when the lines are parallel and distinct: the coefficients of $x$ and $y$ are proportional but the constants are not.
+3. (A) $4x+6y=48$ is exactly $2(2x+3y=24)$: the same line, so infinitely many solutions.
+4. (B) $4x+6y=40$: coefficients are $2\times$ those of $2x+3y$, but $40\neq2\cdot24=48$. Parallel and distinct lines: no solution.
+5. (C) $6x+4y=48$ and (D) $4x-6y=40$ have non-proportional coefficients (the determinants are $18-8=10$ and $-12-12=-24$, both nonzero), so each gives exactly one solution.
+
+---
+
+### GT-155
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Triangle $ABC$ is inscribed in a circle with circumference $52\pi$. Side $AC$ has length $52$ and side $AB$ has length $48$. What is the ratio of the length of the shortest side of the triangle to the radius of the circle?
+
+(A) $\dfrac{10}{13}$
+(B) $\dfrac{24}{13}$
+(C) $\dfrac{5}{12}$
+(D) $\dfrac{5}{13}$
+
+**Correct Answer:** (A) $\dfrac{10}{13}$
+
+**Rationale (worked solution):**
+
+1. Circumference $=2\pi r=52\pi$, so the radius is $r=26$ and the diameter is $52$.
+2. $AC=52$ equals the diameter, so $\overline{AC}$ is a diameter and the angle at $B$ is a right angle (inscribed in a semicircle).
+3. Pythagorean theorem: $BC=\sqrt{52^2-48^2}=\sqrt{(52-48)(52+48)}=\sqrt{400}=20$.
+4. The sides are $20$, $48$, $52$; the shortest is $BC=20$.
+5. Ratio to the radius: $\dfrac{20}{26}=\dfrac{10}{13}$. (Dividing by the diameter would give $\dfrac5{13}$.)
+
+---
+
+### AM-217
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The polynomial $6x^{4}+kx^{2}+24$, where $k$ is a constant, can be written as $(2x^{2}+a)(3x^{2}+b)$, where $a$ and $b$ are integers. What is the greatest possible value of $k$?
+
+**Correct Answer:** $74$
+
+**Rationale (worked solution):**
+
+1. Expand: $(2x^2+a)(3x^2+b)=6x^4+(2b+3a)x^2+ab$. So $ab=24$ and $k=3a+2b$.
+2. For a fixed product, $3a+2b$ is largest when the factor with the bigger weight takes the bigger share, and one factor is as small as possible. Integer pairs $(a,b)$ with $ab=24$ include $(1,24)$, $(24,1)$, $(4,6)$, $(6,4)$, $(8,3)$ and the negative pairs.
+3. $(a,b)=(1,24)$: $k=3+48=51$. $\ (a,b)=(24,1)$: $k=72+2=74$. Other positive pairs: $(2,12)$ gives $30$, $(12,2)$ gives $40$, $(3,8)$ gives $25$, $(8,3)$ gives $30$, $(4,6)$ gives $24$, $(6,4)$ gives $26$.
+4. Negative pairs make $k$ negative. The greatest value is $k=74$.
+
+---
+
+### PS-115
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part I, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A metalworker melts $x$ kilograms of an alloy that is $30\%$ tin and mixes in $15$ kilograms of pure tin. She then adds $25$ kilograms of a second alloy that is $10\%$ tin. The final alloy is $35\%$ tin. What is the total mass, in kilograms, of the final alloy?
+
+(A) $125$
+(B) $70$
+(C) $85$
+(D) $110$
+
+**Correct Answer:** (D) $110$
+
+**Rationale (worked solution):**
+
+1. Tin after each stage: $0.30x$ from the first alloy, $+15$ from pure tin, $+0.10(25)=2.5$ from the second alloy. Total tin: $0.30x+17.5$.
+2. Total mass of the final alloy: $x+15+25=x+40$, and it is $35\%$ tin: $0.30x+17.5=0.35(x+40)$.
+3. $0.30x+17.5=0.35x+14\Rightarrow3.5=0.05x\Rightarrow x=70$.
+4. Final mass: $70+40=110$ kg. (Check: tin $=21+15+2.5=38.5$ and $0.35(110)=38.5$.)
+5. The value $70$ is $x$, $85$ is the mass after the pure tin is added.
+
+---
+
+### A-164
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part I, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A contractor finishes a $96$-square-meter floor using two products. Primer P is applied in two coats, and each coat uses $125$ milliliters per square meter. Sealant Q is applied in one coat and covers $5$ square meters per liter. Every square meter receives exactly one of the two products, and the job used a total of $21.2$ liters. How many square meters did the contractor cover with primer P?
+
+**Correct Answer:** $40$
+
+**Rationale (worked solution):**
+
+1. Let $p$ be the area of primer P and $q$ the area of sealant Q, in square meters. Then $p+q=96$.
+2. Primer: two coats of $0.125$ L per square meter is $0.25$ L per square meter, so P uses $\dfrac p4$ liters. Sealant: $5$ square meters per liter means $\dfrac15$ liter per square meter, so Q uses $\dfrac q5$ liters.
+3. Volume: $\dfrac p4+\dfrac q5=21.2$. Multiply by $20$: $5p+4q=424$.
+4. Substitute $q=96-p$: $5p+384-4p=424\Rightarrow p=40$.
+5. Check: $q=56$, volume $=10+11.2=21.2$ L.
+
+---
+
+### AM-218
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For a real number $a$ with $|a|\neq1$, $$\frac{1}{1-a}+\frac{1}{1+a}+\frac{2}{1+a^{2}}+\frac{4}{1+a^{4}}=10.$$ What is the value of $a^{8}$?
+
+(A) $\dfrac54$
+(B) $\dfrac95$
+(C) $\dfrac15$
+(D) $\dfrac45$
+
+**Correct Answer:** (C) $\dfrac15$
+
+**Rationale (worked solution):**
+
+1. Pair the first two terms: $\dfrac1{1-a}+\dfrac1{1+a}=\dfrac{(1+a)+(1-a)}{1-a^2}=\dfrac2{1-a^2}$.
+2. Add the third term: $\dfrac2{1-a^2}+\dfrac2{1+a^2}=\dfrac{2(1+a^2)+2(1-a^2)}{1-a^4}=\dfrac4{1-a^4}$.
+3. Add the fourth term: $\dfrac4{1-a^4}+\dfrac4{1+a^4}=\dfrac{4(1+a^4)+4(1-a^4)}{1-a^8}=\dfrac8{1-a^8}$.
+4. So $\dfrac8{1-a^8}=10\Rightarrow1-a^8=\dfrac45\Rightarrow a^8=\dfrac15$.
+5. ($\dfrac45$ is the value of $1-a^8$, not of $a^8$.)
+
+---
+
+### GT-156
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part I, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the line $y=mx+10$, where $m$ is a constant, intersects the circle $x^{2}+y^{2}=12$ at exactly one point. What is the value of $m^{2}$?
+
+**Correct Answer:** $\dfrac{22}{3}$
+
+**Rationale (worked solution):**
+
+1. Substitute $y=mx+10$: $x^2+(mx+10)^2=12\Rightarrow(1+m^2)x^2+20mx+88=0$.
+2. One intersection point means the discriminant is $0$: $(20m)^2-4(1+m^2)(88)=0$.
+3. $400m^2-352-352m^2=0\Rightarrow48m^2=352\Rightarrow m^2=\dfrac{352}{48}=\dfrac{22}3$.
+4. Check by distance: $\dfrac{10}{\sqrt{1+m^2}}=\dfrac{10}{\sqrt{25/3}}=\sqrt{12}$, the radius.
+5. The question asks for $m^2$, so the answer is $\dfrac{22}{3}$ (about $7.33$), not $m$.
+
+---
+
+### PS-116
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Study room A has $x$ students and study room B has $72$ students. One-third of the students in room A move to room B. Then one-fourth of the students who are now in room B move to room A. After both moves, the ratio of the number of students in room A to the number in room B is $5$ to $7$. How many students were in room A originally?
+
+(A) $72$
+(B) $36$
+(C) $45$
+(D) $63$
+
+**Correct Answer:** (B) $36$
+
+**Rationale (worked solution):**
+
+1. After the first move: A has $\dfrac23x$ and B has $72+\dfrac x3$.
+2. Second move: one-fourth of B's students, $\dfrac14\left(72+\dfrac x3\right)=18+\dfrac x{12}$, go to A. A now has $\dfrac23x+18+\dfrac x{12}=\dfrac34x+18$. B keeps $\dfrac34\left(72+\dfrac x3\right)=54+\dfrac x4$.
+3. Ratio $5:7$: $7\left(\dfrac34x+18\right)=5\left(54+\dfrac x4\right)\Rightarrow5.25x+126=270+1.25x\Rightarrow4x=144\Rightarrow x=36$.
+4. Check: A: $36\to24\to24+21=45$; B: $72\to84\to63$; $45:63=5:7$.
+5. The values $45$ and $63$ are the final counts, and $72$ is the original count of room B.
+
+---
+
+### PS-117
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part I, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A tram increases its speed at a constant rate from $54$ kilometers per hour to $90$ kilometers per hour in $20$ seconds. What is the tram's acceleration, in meters per minute squared?
+
+**Correct Answer:** $1800$
+
+**Rationale (worked solution):**
+
+1. Convert the speeds to meters per minute: $54\ \text{km/h}=\dfrac{54{,}000}{60}=900$ m/min and $90\ \text{km/h}=1500$ m/min.
+2. Change in speed: $1500-900=600$ meters per minute.
+3. Elapsed time in minutes: $20\ \text{s}=\dfrac13$ min.
+4. Acceleration $=\dfrac{600}{1/3}=1800$ meters per minute squared.
+5. Check in seconds: $\dfrac{25-15}{20}=0.5$ m/s$^2$, and $0.5\cdot60^2=1800$.
+
+---
+
+### AM-219
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The number of bacteria in a colony $t$ years after January 1, 2020 is modeled by $A(t)=300\cdot4^{t/3}$. Which of the following gives the number of bacteria $m$ months after January 1, 2023?
+
+(A) $300\cdot2^{m/18}$
+(B) $1200\cdot2^{m/36}$
+(C) $900\cdot2^{m/18}$
+(D) $1200\cdot2^{m/18}$
+
+**Correct Answer:** (D) $1200\cdot2^{m/18}$
+
+**Rationale (worked solution):**
+
+1. January 1, 2023 is $3$ years after January 1, 2020, so $t=3+\dfrac m{12}$.
+2. $A=300\cdot4^{\left(3+\frac m{12}\right)/3}=300\cdot4^{1+\frac m{36}}=300\cdot4\cdot4^{m/36}=1200\cdot4^{m/36}$.
+3. Change the base: $4^{m/36}=\left(2^2\right)^{m/36}=2^{m/18}$. So $A=1200\cdot2^{m/18}$.
+4. Check: $m=0$ gives $1200=A(3)=300\cdot4$. $\ m=36$ gives $1200\cdot4=4800=A(6)=300\cdot16$.
+
+---
+
+### GT-157
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the circle $x^{2}+y^{2}+8x-2y-8=0$ and the line $5x+12y=44$ intersect at two points, $P$ and $Q$. What is the length of $\overline{PQ}$?
+
+(A) $6$
+(B) $2\sqrt{21}$
+(C) $8$
+(D) $3$
+
+**Correct Answer:** (A) $6$
+
+**Rationale (worked solution):**
+
+1. Complete the squares: $(x+4)^2+(y-1)^2=8+16+1=25$. Center $(-4,1)$, radius $r=5$.
+2. Distance from the center to the line $5x+12y-44=0$: $d=\dfrac{|5(-4)+12(1)-44|}{\sqrt{25+144}}=\dfrac{52}{13}=4$.
+3. The perpendicular from the center bisects the chord, forming a right triangle with legs $d=4$ and $\dfrac{PQ}2$ and hypotenuse $r=5$: $\dfrac{PQ}2=\sqrt{25-16}=3$.
+4. $PQ=2\cdot3=6$. ($3$ is the half-chord; $2\sqrt{21}=2\sqrt{25-4}$ comes from using $d=2$; $8=2d$.)
+
+---
+
+### GT-158
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A sphere is inscribed in a right circular cone whose base has radius $5$ and whose height is $12$, so that the sphere is tangent to the base and to the lateral surface of the cone. What fraction of the volume of the cone is occupied by the sphere? (Enter your answer as a fraction.)
+
+**Correct Answer:** $\dfrac{40}{81}$
+
+**Rationale (worked solution):**
+
+1. Slice through the axis: the cross-section is an isosceles triangle with base $10$, height $12$ and slant sides $\sqrt{5^2+12^2}=13$. The sphere appears as the circle inscribed in this triangle.
+2. Area $=\dfrac12(10)(12)=60$. Semiperimeter $s=\dfrac{13+13+10}2=18$. Inradius $r=\dfrac{60}{18}=\dfrac{10}3$.
+3. Sphere volume: $\dfrac43\pi\left(\dfrac{10}3\right)^3=\dfrac{4000\pi}{81}$. Cone volume: $\dfrac13\pi(5^2)(12)=100\pi$.
+4. Fraction $=\dfrac{4000/81}{100}=\dfrac{40}{81}$.
+5. Check: the center is at height $\dfrac{10}3$ on the axis and its distance to a slant side is $\dfrac{5\left(12-\frac{10}3\right)}{13}=\dfrac{10}{3}$.
+
+---
+
+### GT-159
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the circle shown, $O$ is the center, the radius is $12$, and chord $\overline{AB}$ has length $12\sqrt3$. What is the area of the region bounded by chord $\overline{AB}$ and the minor arc $AB$?
+
+**Figure (TikZ source, uses the Trick Pack colour definitions):**
+
+```latex
+\begin{center}\begin{tikzpicture}[x=0.6cm,y=0.6cm,scale=1.0]
+\tikzset{axisline/.style={-{Stealth[length=2.2mm]},thick,INK},gridl/.style={LINE!80,very thin},
+ ln/.style={very thick,BLUE},pt/.style={circle,fill=ORANGE,inner sep=1.6pt}}
+
+\draw[ln] (0,0) circle (4);
+\coordinate (O) at (0,0);\coordinate (A) at (-3.4641,-2.0000);\coordinate (B) at (3.4641,-2.0000);
+\draw[thick,INK] (A)--(B); \draw[thick,INK] (O)--(A); \draw[thick,INK] (O)--(B);
+\fill (O) circle (1.4pt);\fill (A) circle (1.4pt);\fill (B) circle (1.4pt);
+\node[above,font=\small] at (O) {$O$};
+\node[below left,font=\small] at (A) {$A$};\node[below right,font=\small] at (B) {$B$};
+\node[above left,font=\small] at (-1.7321,-1.0000) {$12$};
+\node[below,font=\small] at (0,-2.0000) {$12\sqrt3$};
+\end{tikzpicture}\end{center}
+```
+
+(A) $24\pi-36\sqrt3$
+(B) $48\pi-36\sqrt3$
+(C) $48\pi$
+(D) $96\pi+36\sqrt3$
+
+**Correct Answer:** (B) $48\pi-36\sqrt3$
+
+**Rationale (worked solution):**
+
+1. Triangle $OAB$ has $OA=OB=12$. Drop the perpendicular from $O$ to $\overline{AB}$: it bisects the chord into two segments of length $6\sqrt3$.
+2. In each half-triangle, $\sin\left(\dfrac{\angle AOB}2\right)=\dfrac{6\sqrt3}{12}=\dfrac{\sqrt3}2$, so $\dfrac{\angle AOB}2=60^\circ$ and $\angle AOB=120^\circ$.
+3. Sector area: $\dfrac{120}{360}\pi(12)^2=48\pi$.
+4. Triangle area: $\dfrac12(12)(12)\sin120^\circ=72\cdot\dfrac{\sqrt3}2=36\sqrt3$.
+5. Segment $=$ sector $-$ triangle $=48\pi-36\sqrt3$. (Option $48\pi$ omits the triangle; $96\pi+36\sqrt3$ is the major segment.)
+
+---
+
+### PS-118
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part I, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A data set has six values: $2,\ 3,\ 5,\ 12,\ 18,\ 20$. Every value is increased by $4$, and then a seventh value equal to the mean of the six increased values is added to the data set. Consider the following statements about the new data set of seven values compared with the original data set.\\[2pt] I.\ The mean is $4$ greater.\\ II.\ The standard deviation is smaller.\\ III.\ The median is $4$ greater.\\[2pt] Which of the statements must be true?
+
+(A) I, II and III
+(B) I only
+(C) I and II only
+(D) II and III only
+
+**Correct Answer:** (C) I and II only
+
+**Rationale (worked solution):**
+
+1. Original: sum $=60$, mean $=10$, median $=\dfrac{5+12}2=8.5$. After adding $4$ to each value: mean $14$, median $12.5$, values $6,7,9,16,22,24$.
+2. I: the appended value is the new mean, $14$, so the mean stays $14$, which is $4$ more than $10$. True.
+3. II: adding $4$ to each value does not change the sum of squared deviations ($306$). Appending the mean adds $0$ to it, while the number of values grows from $6$ to $7$, so the standard deviation falls. True.
+4. III: the seven values in order are $6,7,9,14,16,22,24$, so the median is $14$, not $8.5+4=12.5$. False.
+5. Statements I and II only.
+
+---
+
+### GT-160
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A convex polygon has $n$ sides. Its interior angles, listed from smallest to largest, form an arithmetic sequence with smallest angle $120^\circ$ and common difference $5^\circ$. How many sides does the polygon have?
+
+(A) $7$
+(B) $9$
+(C) $16$
+(D) $18$
+
+**Correct Answer:** (B) $9$
+
+**Rationale (worked solution):**
+
+1. Sum of the angles as an arithmetic series: $\dfrac n2\bigl(2\cdot120+(n-1)\cdot5\bigr)=\dfrac n2(235+5n)$.
+2. Angle sum of an $n$-gon: $180(n-2)$. Equate: $n(235+5n)=360(n-2)\Rightarrow5n^2-125n+720=0\Rightarrow n^2-25n+144=0$.
+3. Factor: $(n-9)(n-16)=0$, so $n=9$ or $n=16$.
+4. Convexity needs every angle below $180^\circ$. Largest angle: $120+5(n-1)$. For $n=16$ it is $195^\circ>180^\circ$, so reject.
+5. For $n=9$ the largest angle is $160^\circ<180^\circ$ and the sum is $\dfrac92(240+40)=1260=180\cdot7$. The polygon has $9$ sides.
+
+---
+
+### AM-220
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the line $y=kx+4$, where $k$ is a constant, is tangent to the parabola $y=x^2+4x+13$ for exactly two values of $k$. For each of these values the line touches the parabola at one point. What is the greatest $y$-coordinate of these two points of tangency?
+
+(A) $10$
+(B) $13$
+(C) $34$
+(D) $3$
+
+**Correct Answer:** (C) $34$
+
+**Rationale (worked solution):**
+
+1. Set the expressions equal: $x^2+4x+13=kx+4\Rightarrow x^2+(4-k)x+9=0$.
+2. Tangent means exactly one solution, so the discriminant is $0$: $(4-k)^2-36=0\Rightarrow4-k=\pm6\Rightarrow k=-2$ or $k=10$.
+3. The double root is $x=-\dfrac{4-k}{2}$: for $k=10$, $x=3$; for $k=-2$, $x=-3$.
+4. $y$-coordinates (use the parabola): $y(3)=9+12+13=34$ and $y(-3)=9-12+13=10$. Check with the line: $10(3)+4=34$ and $-2(-3)+4=10$.
+5. The greater $y$-coordinate is $34$.
+
+---
+
+### AM-221
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $g(x)=2x^2+bx+c$, where $b$ and $c$ are constants, has zeros $k+1$ and $3k-5$, where $k$ is a constant. If $g(2)=g(10)$, what is the value of $c$?
+
+(A) $70$
+(B) $140$
+(C) $24$
+(D) $35$
+
+**Correct Answer:** (A) $70$
+
+**Rationale (worked solution):**
+
+1. $g(2)=g(10)$ puts the axis of symmetry at $x=\dfrac{2+10}2=6$.
+2. The axis is also the midpoint of the zeros: $\dfrac{(k+1)+(3k-5)}2=2k-2=6\Rightarrow k=4$. The zeros are $5$ and $7$.
+3. $g(x)=2(x-5)(x-7)=2x^2-24x+70$, so $c=70$.
+4. Check: $g(2)=8-48+70=30$ and $g(10)=200-240+70=30$.
+
+---
+
+### PS-119
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part J, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A car uses fuel at a rate of $6.0$ liters per $100$ kilometers on a highway and $10.0$ liters per $100$ kilometers in the city. On one trip the car travels $240$ kilometers on the highway and $80$ kilometers in the city. Using $1$ mile $=1.6$ kilometers and $1$ gallon $=3.8$ liters, which of the following is closest to the car's fuel efficiency for the whole trip, in miles per gallon?
+
+(A) $87$
+(B) $6$
+(C) $30$
+(D) $34$
+
+**Correct Answer:** (D) $34$
+
+**Rationale (worked solution):**
+
+1. Highway fuel: $\dfrac{240}{100}\cdot6.0=14.4$ L. City fuel: $\dfrac{80}{100}\cdot10.0=8.0$ L. Total fuel: $22.4$ L.
+2. Total distance: $240+80=320$ km.
+3. Convert once at the end: distance $=\dfrac{320}{1.6}=200$ miles; fuel $=\dfrac{22.4}{3.8}\approx5.895$ gallons.
+4. Efficiency $=\dfrac{200}{5.895}\approx33.9$ miles per gallon, closest to $34$.
+5. (Averaging the two rates gives $8$ L/100 km and about $30$ mpg, which ignores that more distance is on the highway.)
+
+---
+
+### PS-120
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** On a map, $1$ inch represents $1{,}500$ feet. A rectangular parking lot appears on the map as $2.4$ inches by $1.6$ inches. Which of the following is the actual area of the lot, in square yards? ($1$ yard $=3$ feet)
+
+(A) $8{,}640{,}000$
+(B) $320{,}000$
+(C) $960{,}000$
+(D) $2{,}880{,}000$
+
+**Correct Answer:** (C) $960{,}000$
+
+**Rationale (worked solution):**
+
+1. Actual sides: $2.4\cdot1{,}500=3{,}600$ ft and $1.6\cdot1{,}500=2{,}400$ ft.
+2. Convert each side to yards: $\dfrac{3600}3=1200$ yd and $\dfrac{2400}3=800$ yd.
+3. Area $=1200\cdot800=960{,}000$ square yards.
+4. (Equivalent: $8{,}640{,}000\text{ ft}^2\div9=960{,}000\text{ yd}^2$, since $1\text{ yd}^2=9\text{ ft}^2$. Dividing by $3$ or $27$ gives the other options.)
+
+---
+
+### AM-222
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For a real number $k$, consider the equation $$x-4\sqrt{x}=k.$$ For how many integer values of $k$ from $-10$ to $10$, inclusive, does the equation have exactly one real solution $x$?
+
+**Correct Answer:** $11$
+
+**Rationale (worked solution):**
+
+1. Let $t=\sqrt x$ with $t\ge0$. The equation becomes $t^2-4t-k=0$; each root $t\ge0$ gives exactly one $x=t^2$.
+2. Discriminant: $16+4k$. Real roots need $k\ge-4$. Roots: $t=2\pm\sqrt{4+k}$.
+3. Case $k=-4$: double root $t=2$, one solution ($x=4$).
+4. Case $k>0$: product of roots $=-k<0$, so one root is negative (rejected) and one is positive: exactly one solution.
+5. Case $-4<k\le0$: product $-k\ge0$ and sum $4>0$, so both roots are nonnegative and distinct: two solutions. Case $k<-4$: none.
+6. Valid integers: $k=-4$ and $k=1,2,\dots,10$, which is $1+10=11$.
+
+---
+
+### PS-121
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A library's collection consists of fiction, nonfiction and reference books. Next year the number of fiction books will increase by $20\%$, the number of nonfiction books will decrease by $10\%$, and the number of reference books will not change. After these changes, the collection will contain $1\%$ more books than it does now, and the number of fiction books will equal the number of nonfiction books. What percent of the current collection is reference books?
+
+(A) $35\%$
+(B) $65\%$
+(C) $15\%$
+(D) $20\%$
+
+**Correct Answer:** (B) $65\%$
+
+**Rationale (worked solution):**
+
+1. Let $f$, $n$, $r$ be the fractions of the current collection that are fiction, nonfiction, reference: $f+n+r=1$.
+2. New total: $1.2f+0.9n+r=1.01$. Subtract the first equation: $0.2f-0.1n=0.01$.
+3. Equal counts after the change: $1.2f=0.9n\Rightarrow n=\dfrac43f$.
+4. Substitute: $0.2f-\dfrac{0.1\cdot4}{3}f=\dfrac{0.2}{3}f=0.01\Rightarrow f=0.15$, so $n=0.20$.
+5. $r=1-0.15-0.20=0.65$, i.e. $65\%$. (Check: $1.2(0.15)=0.18=0.9(0.20)$ and $0.18+0.18+0.65=1.01$.)
+
+---
+
+### A-165
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part J, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A ride service charges a fixed pickup fee plus a constant rate for each mile traveled. A $5$-mile ride costs $\$14.50$ and a $12$-mile ride costs $\$29.20$. The service then raises its per-mile rate by $20\%$ and leaves the pickup fee unchanged. Using $1$ mile $=1.6$ kilometers, what will a $20$-kilometer ride cost after the change?
+
+(A) $\$36.30$
+(B) $\$54.40$
+(C) $\$84.64$
+(D) $\$35.50$
+
+**Correct Answer:** (D) $\$35.50$
+
+**Rationale (worked solution):**
+
+1. Subtract the two fares to remove the fixed fee: $\dfrac{29.20-14.50}{12-5}=\dfrac{14.70}7=2.10$ dollars per mile.
+2. Pickup fee: $14.50-5(2.10)=4.00$ dollars.
+3. New rate (only the rate rises): $1.20\cdot2.10=2.52$ dollars per mile.
+4. Convert the distance: $20\text{ km}=\dfrac{20}{1.6}=12.5$ miles.
+5. Cost $=4.00+2.52(12.5)=4.00+31.50=\$35.50$.
+6. (Raising the whole fare by $20\%$ gives $\$36.30$; skipping the conversion gives $\$54.40$; multiplying by $1.6$ instead of dividing gives $\$84.64$.)
+
+---
+
+### AM-223
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part J, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Let $g(x)=2^x$ and $h(x)=3x-1$. For which values of $x$ is $g(x)>h(x)$?
+
+(A) $x<1$ or $x>3$
+(B) $1<x<3$
+(C) $x>3$ only
+(D) $x<3$
+
+**Correct Answer:** (A) $x<1$ or $x>3$
+
+**Rationale (worked solution):**
+
+1. Look for intersections at whole numbers: $g(1)=2=h(1)$ and $g(3)=8=h(3)$.
+2. The curve $y=2^x$ is concave up, so a line can meet it in at most two points; these are the only two. They split the number line into three regions.
+3. Test one value in each region. $x=0$: $g=1>h=-1$. $x=2$: $g=4<h=5$. $x=4$: $g=16>h=11$.
+4. So $g(x)>h(x)$ for $x<1$ and for $x>3$.
+
+---
+
+### A-166
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$3x+ky=12$$ $$21x+14y=6m$$ In the system of equations above, $k$ and $m$ are constants. If the system has infinitely many solutions $(x,y)$, what is the value of $km$?
+
+**Correct Answer:** $28$
+
+**Rationale (worked solution):**
+
+1. Infinitely many solutions means the second equation is a constant multiple of the first. Matching the $x$-coefficients: $\dfrac{21}3=7$.
+2. $y$-coefficients: $7k=14\Rightarrow k=2$.
+3. Constants: $7\cdot12=6m\Rightarrow m=14$. (The right side of the second equation is $6m$, not $m$.)
+4. $km=2\cdot14=28$. Check: $3x+2y=12$ times $7$ gives $21x+14y=84=6(14)$.
+
+---
+
+### AM-224
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For real numbers $a$ and $b$, $a^2-b^2=36$. What is the value of $(3a+b)^2-(a+3b)^2$?
+
+**Correct Answer:** $288$
+
+**Rationale (worked solution):**
+
+1. Do not expand. Treat it as $A^2-B^2$ with $A=3a+b$ and $B=a+3b$.
+2. $A-B=2a-2b=2(a-b)$ and $A+B=4a+4b=4(a+b)$.
+3. Product: $8(a-b)(a+b)=8(a^2-b^2)=8\cdot36=288$.
+4. (Expanding confirms it: $9a^2+6ab+b^2-a^2-6ab-9b^2=8a^2-8b^2$.)
+
+---
+
+### AM-225
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** If $2x+3y=8$, which of the following is equivalent to $2x^2+3xy-4x-6y$?
+
+(A) $8x-4y$
+(B) $8x-16$
+(C) $8x-8$
+(D) $16-8x$
+
+**Correct Answer:** (B) $8x-16$
+
+**Rationale (worked solution):**
+
+1. Group the terms: $(2x^2+3xy)-(4x+6y)=x(2x+3y)-2(2x+3y)$.
+2. Factor out the common binomial: $(2x+3y)(x-2)$.
+3. Substitute $2x+3y=8$: $8(x-2)=8x-16$.
+4. (Check with $x=1$, $y=2$, which satisfy $2x+3y=8$: the expression is $2+6-4-12=-8$ and $8(1)-16=-8$.)
+
+---
+
+### AM-226
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Let $t$ be a positive real number with $t\neq1$. Define $m=\sqrt[3]{t^{2}}$ and $n=\sqrt{t}$. If $$\dfrac{m^{p}\cdot n^{3}}{\sqrt[6]{t}}=t^{5},$$ what is the value of $p$?
+
+**Correct Answer:** $11/2$
+
+**Rationale (worked solution):**
+
+1. Rewrite as powers of $t$: $m=t^{2/3}$, $n=t^{1/2}$, $\sqrt[6]{t}=t^{1/6}$.
+2. Left side: $\dfrac{t^{2p/3}\cdot t^{3/2}}{t^{1/6}}=t^{\,2p/3+3/2-1/6}=t^{\,2p/3+4/3}$.
+3. Since $t>0$ and $t\ne1$, equal powers have equal exponents: $\dfrac{2p}3+\dfrac43=5\Rightarrow\dfrac{2p}3=\dfrac{11}3\Rightarrow p=\dfrac{11}2$.
+4. Enter $11/2$ or $5.5$.
+
+---
+
+### AM-227
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f(x)=2\left(3x+1-\sqrt5\right)\left(3x+1+\sqrt5\right)$ can be written as $f(x)=ax^2+bx+c$, where $a$, $b$ and $c$ are constants. What is the value of $\dfrac{b+c}{a}$?
+
+**Correct Answer:** $2/9$
+
+**Rationale (worked solution):**
+
+1. The factors are conjugates of the form $(u-v)(u+v)$ with $u=3x+1$ and $v=\sqrt5$, so the product is $u^2-v^2=(3x+1)^2-5=9x^2+6x-4$.
+2. Keep the leading factor $2$: $f(x)=2(9x^2+6x-4)=18x^2+12x-8$. So $a=18$, $b=12$, $c=-8$.
+3. $\dfrac{b+c}a=\dfrac{12-8}{18}=\dfrac{4}{18}=\dfrac29$.
+4. (Shortcut: the leading factor $2$ multiplies every coefficient, so it cancels in any ratio: $\dfrac{b+c}a=\dfrac{6-4}{9}=\dfrac29$.) Enter $2/9$.
+
+---
+
+### AM-228
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part J, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Let $g(x)=7+9\left(\dfrac14\right)^{x}$ for all real numbers $x$. Consider the following statements.\par\medskip I.\ $g(x)>7$ for every real number $x$.\par II.\ The minimum value of $g$ is $7$.\par III.\ $g$ is a decreasing function.\par\medskip Which of the statements must be true?
+
+(A) I and III only
+(B) I and II only
+(C) II and III only
+(D) I, II, and III
+
+**Correct Answer:** (A) I and III only
+
+**Rationale (worked solution):**
+
+1. $\left(\dfrac14\right)^x>0$ for every $x$, so $9\left(\dfrac14\right)^x>0$ and $g(x)>7$. Statement I is true.
+2. As $x$ grows, $\left(\dfrac14\right)^x\to0$, so $g(x)\to7$, but the term is never $0$, so $g(x)=7$ is never attained. There is no minimum value; $7$ is only a lower bound. Statement II is false.
+3. The base $\dfrac14$ is between $0$ and $1$, so $\left(\dfrac14\right)^x$ decreases as $x$ increases; multiplying by $9>0$ and adding $7$ keeps that. Statement III is true.
+4. Only I and III are true.
+
+---
+
+### AM-229
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The expression $\dfrac{(2x-3)^4(x+2)-7}{5}$ is equivalent to $ax^5+bx^4+cx^3+dx^2+ex+f$, where $a$, $b$, $c$, $d$, $e$ and $f$ are constants. What is the value of $a+b+c+d+e+f$?
+
+(A) $31$
+(B) $-\dfrac45$
+(C) $\dfrac35$
+(D) $-4$
+
+**Correct Answer:** (B) $-\dfrac45$
+
+**Rationale (worked solution):**
+
+1. The sum of all the coefficients of a polynomial $p(x)$ equals $p(1)$, because every power of $1$ is $1$.
+2. The expression is already equal to the polynomial, so evaluate it at $x=1$: $(2\cdot1-3)^4=(-1)^4=1$ and $(1+2)=3$.
+3. Numerator: $1\cdot3-7=-4$. Dividing by $5$: $\dfrac{-4}{5}$.
+4. $a+b+c+d+e+f=-\dfrac45$. (The other options are: $\dfrac35$ forgets the $-7$, $-4$ forgets the division by $5$, and $31$ is the constant term $f$, the value at $x=0$.)
+
+---
+
+### A-167
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part K, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A coffee shop blends Ethiopian beans, which cost $\$18$ per kilogram, with Colombian beans, which cost $\$11$ per $500$ grams. The blend has a total mass of $36$ kilograms, and its cost works out to $\$20.50$ per kilogram. How many kilograms of Ethiopian beans are in the blend?
+
+(A) $18$
+(B) $27$
+(C) $13.5$
+(D) $22.5$
+
+**Correct Answer:** (C) $13.5$
+
+**Rationale (worked solution):**
+
+1. Put both prices in dollars per kilogram: Colombian beans cost $\$11$ per $0.5$ kg, which is $\$22$ per kilogram.
+2. Let $x$ and $y$ be the kilograms of Ethiopian and Colombian beans. Mass: $x+y=36$. Cost: $18x+22y=20.50(36)=738$.
+3. Substitute $x=36-y$: $18(36-y)+22y=738\Rightarrow648+4y=738\Rightarrow y=22.5$, so $x=13.5$.
+4. Check: $18(13.5)+22(22.5)=243+495=738$.
+5. The question asks for the Ethiopian beans: $13.5$ kg. ($22.5$ is the Colombian mass.)
+
+---
+
+### A-168
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part K, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Plan P costs $\$25$ per month for up to $4$ gigabytes (GB) of data, plus $\$6$ for each additional GB. Plan Q costs $\$14$ per month for up to $2$ GB of data, plus $\$0.008$ for each additional megabyte (MB). Charges for additional data are prorated, and $1$ GB $=1000$ MB. For what amount of data, in MB, do the two plans cost the same?
+
+**Correct Answer:** $3375$
+
+**Rationale (worked solution):**
+
+1. Use one unit. Plan Q's extra charge is $\$0.008$ per MB, which is $\$8$ per GB.
+2. Compare at the breakpoints. At $2$ GB: P costs $\$25$, Q costs $\$14$. At $4$ GB: P costs $\$25$, Q costs $14+8(2)=\$30$. Q starts cheaper and is more expensive by $4$ GB, so the plans meet between $2$ and $4$ GB, where P is still the flat $\$25$.
+3. Solve in that interval: $14+8(g-2)=25\Rightarrow8(g-2)=11\Rightarrow g=3.375$ GB.
+4. Convert: $3.375\times1000=3375$ MB.
+5. (Solving with P's per-GB charge, $14+8(g-2)=25+6(g-4)$, gives $g=1.5<2$, outside the interval, so it is not valid.)
+
+---
+
+### AM-230
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The temperature $T$, in degrees Fahrenheit, of a sample $t$ minutes after it is placed in a chamber is modeled by one of the functions below for $t\ge0$. For which model is $85$ the greatest temperature the sample actually reaches?
+
+(A) $T=25+60(0.8)^t$
+(B) $T=85-60(0.8)^t$
+(C) $T=40+45(1.05)^t$
+(D) $T=25+85(0.8)^t$
+
+**Correct Answer:** (A) $T=25+60(0.8)^t$
+
+**Rationale (worked solution):**
+
+1. Test each model on $t\ge0$ and ask whether $85$ is reached, not merely approached.
+2. The model $T=85-60(0.8)^t$ increases toward $85$ but is always below it: $85$ is a horizontal asymptote, never attained. No maximum.
+3. The model $T=25+60(0.8)^t$ decreases, so its greatest value is at $t=0$: $25+60=85$. Attained. \checkmark
+4. The model $T=40+45(1.05)^t$ grows without bound, and $T=25+85(0.8)^t$ has maximum $25+85=110$ at $t=0$.
+5. Only $T=25+60(0.8)^t$ has $85$ as an attained greatest value.
+
+---
+
+### GT-161
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Two lines intersect and form four angles. The acute angles each measure $(2k+4)^\circ$, where $k$ is a constant. Each obtuse angle measures $4$ degrees more than $3$ times the measure of an acute angle. Which of the following CANNOT be the sum, in degrees, of the measures of two of the four angles?
+
+(A) $272$
+(B) $88$
+(C) $180$
+(D) $224$
+
+**Correct Answer:** (D) $224$
+
+**Rationale (worked solution):**
+
+1. An acute angle and an obtuse angle at an intersection are supplementary: $(2k+4)+\big[3(2k+4)+4\big]=180$.
+2. $4(2k+4)+4=180\Rightarrow8k+20=180\Rightarrow k=20$.
+3. Acute angles: $2(20)+4=44^\circ$. Obtuse angles: $3(44)+4=136^\circ$. Check: $44+136=180$.
+4. Sums of two of the four angles: acute $+$ acute $=88$; acute $+$ obtuse $=180$; obtuse $+$ obtuse $=272$.
+5. $224$ is not among them, so it cannot be a sum.
+
+---
+
+### GT-162
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In triangle $ABC$, the measure of angle $A$ is $(3x+11)^\circ$, the measure of angle $B$ is $(2x+4)^\circ$, and the measure of angle $C$ is $30^\circ$. What is the value of $$(\sin A\cos B+\cos A\sin B)(\cos A\cos B-\sin A\sin B)\,?$$
+
+(A) $-\dfrac14$
+(B) $\dfrac14$
+(C) $-\dfrac{\sqrt3}4$
+(D) $\dfrac{\sqrt3}4$
+
+**Correct Answer:** (C) $-\dfrac{\sqrt3}4$
+
+**Rationale (worked solution):**
+
+1. The angles of a triangle sum to $180^\circ$, so $A+B=180^\circ-30^\circ=150^\circ$. (Solving, $5x+15=150$, $x=27$, but the value of $x$ is not needed.)
+2. The first factor is $\sin(A+B)=\sin150^\circ=\dfrac12$.
+3. The second factor is $\cos(A+B)=\cos150^\circ=-\dfrac{\sqrt3}2$.
+4. Product: $\dfrac12\cdot\left(-\dfrac{\sqrt3}2\right)=-\dfrac{\sqrt3}4$. (Using $\sin30^\circ\cos30^\circ$ instead would give the wrong sign.)
+
+---
+
+### A-169
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The linear function $f$ satisfies $f\!\left(\dfrac23\right)=\dfrac14$ and $f\!\left(\dfrac83\right)=\dfrac{13}4$. What is the value of $f\!\left(\dfrac12+\dfrac35\right)$?
+
+**Correct Answer:** $\dfrac{9}{10}$
+
+**Rationale (worked solution):**
+
+1. Slope: $m=\dfrac{\frac{13}4-\frac14}{\frac83-\frac23}=\dfrac{3}{2}$.
+2. Combine the input first: $\dfrac12+\dfrac35=\dfrac{5}{10}+\dfrac{6}{10}=\dfrac{11}{10}$.
+3. Point-slope from $\left(\dfrac23,\dfrac14\right)$: $f(x)=\dfrac14+\dfrac32\left(x-\dfrac23\right)$.
+4. $x-\dfrac23=\dfrac{11}{10}-\dfrac23=\dfrac{33-20}{30}=\dfrac{13}{30}$, so $f\!\left(\dfrac{11}{10}\right)=\dfrac14+\dfrac32\cdot\dfrac{13}{30}=\dfrac14+\dfrac{13}{20}=\dfrac{18}{20}=\dfrac9{10}$.
+5. Answer: $\dfrac9{10}$ (or $0.9$). Note $f$ of a sum is not the sum of the $f$-values.
+
+---
+
+### AM-231
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$x^3+(3-k)x^2-(10+3k)x+10k=0$$ In the equation above, $k$ is a constant. The equation has exactly two distinct real solutions for exactly two values of $k$. What is the sum of these two values of $k$?
+
+**Correct Answer:** $-3$
+
+**Rationale (worked solution):**
+
+1. Group the terms with $k$ and the terms without: $\big(x^3+3x^2-10x\big)-k\big(x^2+3x-10\big)=0$.
+2. Factor $x^3+3x^2-10x=x(x^2+3x-10)$, so the equation is $(x^2+3x-10)(x-k)=0$.
+3. $x^2+3x-10=(x+5)(x-2)$, so the equation is $(x+5)(x-2)(x-k)=0$ with solutions $-5$, $2$ and $k$.
+4. There are two distinct solutions only when $k$ repeats one of the fixed roots: $k=2$ or $k=-5$. (Otherwise there are three.)
+5. Sum: $2+(-5)=-3$.
+
+---
+
+### AM-232
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part K, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$|2x-k|+k=x+6$$ In the equation above, $k$ is a constant. The equation has exactly one solution. What is the value of $k$?
+
+**Correct Answer:** $12$
+
+**Rationale (worked solution):**
+
+1. Graph $y=|2x-k|+k$: a V with vertex $\left(\dfrac k2,\,k\right)$ and arms of slope $\pm2$. The line $y=x+6$ has slope $1$, shallower than both arms.
+2. A shallower line meets such a V twice if it passes above the vertex, never if it passes below, and exactly once only if it passes through the vertex.
+3. Put the vertex on the line: $k=\dfrac k2+6\Rightarrow\dfrac k2=6\Rightarrow k=12$.
+4. Check: $|2x-12|+12=x+6$ gives $x=6$ from the right branch, and the left branch gives $x=6$ as well (the vertex), so there is one solution.
+
+---
+
+### AM-233
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The polynomial function $p$ is defined by $p(x)=-(x+3)^2(x-1)^3(x-4)^2$. Consider the following statements.\par\medskip I.\ $p(x)\ge0$ for all $x<1$.\par II.\ The graph of $y=p(x)$ crosses the $x$-axis at $x=4$.\par III.\ $p(x)\to\infty$ as $x\to-\infty$.\par\medskip Which of the statements must be true?
+
+(A) I only
+(B) I and II only
+(C) I and III only
+(D) II and III only
+
+**Correct Answer:** (C) I and III only
+
+**Rationale (worked solution):**
+
+1. Multiplicities: $(x+3)^2$ and $(x-4)^2$ are even, so the graph touches the axis at $-3$ and $4$ without crossing. $(x-1)^3$ is odd, so the graph crosses at $1$.
+2. I: for $x<1$, $(x-1)^3<0$, so $-(x-1)^3>0$, while the squares are $\ge0$. Hence $p(x)\ge0$, with $p(-3)=0$. True. (The sign does not change at $x=-3$, but $p(-3)=0$, so $\ge$ is needed.)
+3. II: $x=4$ has even multiplicity, so the graph touches and does not cross. False.
+4. III: the degree is $2+3+2=7$ (odd) and the leading coefficient is negative, so $p(x)\to+\infty$ as $x\to-\infty$ (and $-\infty$ as $x\to\infty$). True.
+5. I and III only.
+
+---
+
+### AM-234
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $h(x)=ax^2+bx+c$, where $a$, $b$ and $c$ are constants, satisfies $h(-3)=h(1)$, $h(0)>h(-1)$ and $h(-1)>0$. Consider the following statements.\par\medskip I.\ $b>0$\par II.\ $c>0$\par III.\ The equation $h(x)=0$ has two distinct real solutions.\par\medskip Which of the statements must be true?
+
+(A) I only
+(B) I and II only
+(C) II and III only
+(D) I, II, and III
+
+**Correct Answer:** (B) I and II only
+
+**Rationale (worked solution):**
+
+1. $h(-3)=h(1)$ puts the axis at $x=\dfrac{-3+1}2=-1$, so the vertex is $(-1,\,h(-1))$ and $-\dfrac b{2a}=-1$, i.e. $b=2a$.
+2. $h(0)=c$ is the $y$-intercept and $h(-1)$ is the vertex height. Since $h(0)>h(-1)$ the vertex is the lowest point, so the parabola opens upward: $a>0$.
+3. I: $b=2a>0$. True.
+4. II: $c=h(0)>h(-1)>0$. True.
+5. III: the minimum value $h(-1)$ is positive and the parabola opens upward, so the graph never reaches the $x$-axis: no real solutions. False.
+6. I and II only.
+
+---
+
+### PS-122
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part K, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A store raises the price of a jacket by $r$ percent. Later, it reduces the new price by $(r-13)$ percent. After both changes, the final price is $10\%$ higher than the original price. What is the value of $r$?
+
+**Correct Answer:** $25$
+
+**Rationale (worked solution):**
+
+1. Write each change as a multiplier. With $\rho=\dfrac r{100}$: increase by $r\%$ gives $1+\rho$; reduce by $(r-13)\%$ gives $1-(\rho-0.13)=1.13-\rho$. (The percent is reduced by $13$ before converting, not multiplied.)
+2. Net factor $1.10$: $(1+\rho)(1.13-\rho)=1.10$.
+3. Expand: $1.13-\rho+1.13\rho-\rho^2=1.10\Rightarrow\rho^2-0.13\rho-0.03=0$.
+4. Factor: $(\rho-0.25)(\rho+0.12)=0$, so $\rho=0.25$ or $\rho=-0.12$.
+5. A raise means $\rho>0$ (and $r>13$ for a reduction). Reject $\rho=-0.12$. Then $r=25$.
+6. Check: $1.25\times(1-0.12)=1.25\times0.88=1.10$.
+
+---
+
+### PS-123
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part K, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A cyclist rides a $90$-kilometer route. She covers the first $60\%$ of the distance at an average speed of $27$ kilometers per hour, rests for $30$ minutes, and then covers the rest of the route at an average speed of $24$ kilometers per hour. What was her average speed for the whole trip, including the rest, in meters per second?
+
+(A) $22.5$
+(B) $6.25$
+(C) $7.08$
+(D) $7.14$
+
+**Correct Answer:** (B) $6.25$
+
+**Rationale (worked solution):**
+
+1. Distances: first part $0.6\times90=54$ km, second part $36$ km.
+2. Times: $\dfrac{54}{27}=2$ h riding, $0.5$ h resting, $\dfrac{36}{24}=1.5$ h riding. Total time $=2+0.5+1.5=4$ h.
+3. Average speed $=\dfrac{90}{4}=22.5$ km/h.
+4. Convert: $22.5\times\dfrac{1000}{3600}=22.5\times\dfrac5{18}=6.25$ m/s.
+5. (Distractors: $7.14$ leaves out the rest, $7.08$ averages the two speeds, $22.5$ is not converted.)
+
+---
+
+### AM-235
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The polynomial $12x^4-84x^2+144$ can be written in the form $(ax^2+b)(cx^2+d)$, where $a$, $b$, $c$ and $d$ are integers with $a>0$ and $c>0$. What is the least possible value of $a+b+c+d$?
+
+(A) $-27$
+(B) $-22$
+(C) $-18$
+(D) $-38$
+
+**Correct Answer:** (D) $-38$
+
+**Rationale (worked solution):**
+
+1. Factor out the common $12$: $12(x^4-7x^2+12)=12(x^2-3)(x^2-4)$. Neither $x^2-3$ nor $x^2-4$ can be rewritten with a different pair of roots, so every valid form is $\alpha(x^2-3)\cdot\beta(x^2-4)$ with $\alpha\beta=12$.
+2. Then $a=\alpha$, $b=-3\alpha$, $c=\beta$, $d=-4\beta$, and $a+b+c+d=-2\alpha-3\beta$.
+3. Test the positive pairs $(\alpha,\beta)$ with $\alpha\beta=12$: $(1,12)\to-38$; $(2,6)\to-22$; $(3,4)\to-18$; $(4,3)\to-17$; $(6,2)\to-18$; $(12,1)\to-27$.
+4. The least is $-38$, from $(x^2-3)(12x^2-48)$. Check: $(x^2-3)(12x^2-48)=12x^4-48x^2-36x^2+144=12x^4-84x^2+144$ and $1-3+12-48=-38$.
+5. (Moving the whole $12$ onto the first binomial gives $(12x^2-36)(x^2-4)$, sum $-27$, which is not the least.)
+
+---
+
+### AM-236
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part K, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f$ has its vertex at $(3,4)$. The function $g$ is defined by $g(x)=-2f(x+1)+7$, and the graph of $y=g(x)$ passes through the point $(4,2)$. What is the value of $f(9)-f(2)$?
+
+**Correct Answer:** $-\dfrac{105}{8}$
+
+**Rationale (worked solution):**
+
+1. Vertex form: $f(x)=a(x-3)^2+4$.
+2. Use the point on $g$: $g(4)=-2f(5)+7=2\Rightarrow f(5)=\dfrac52$. (The shift gives $f(4+1)=f(5)$.)
+3. $f(5)=a(2)^2+4=\dfrac52\Rightarrow4a=-\dfrac32\Rightarrow a=-\dfrac38$.
+4. $f(9)=-\dfrac38(36)+4=-\dfrac{27}2+4=-\dfrac{19}2$ and $f(2)=-\dfrac38(1)+4=\dfrac{29}8$.
+5. $f(9)-f(2)=-\dfrac{76}8-\dfrac{29}8=-\dfrac{105}8$. (Shortcut: the $+4$ cancels, so the difference is $a(36-1)=35\cdot\left(-\dfrac38\right)=-\dfrac{105}8$.)
+
+---
+
+### AM-237
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part L, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The function $f$ is defined by $f(x)=\dfrac{6^{x+1}\cdot4^{x}}{3^{x-2}}$. It can be written in the form $f(x)=a\cdot b^{\,x-1}$, where $a$ and $b$ are positive constants. What is the value of $a+b$?
+
+(A) $62$
+(B) $440$
+(C) $456$
+(D) $3456$
+
+**Correct Answer:** (B) $440$
+
+**Rationale (worked solution):**
+
+1. Evaluate at $x=1$, where $b^{x-1}=1$: $a=f(1)=\dfrac{6^{2}\cdot4}{3^{-1}}=36\cdot4\cdot3=432$.
+2. Find $b$ from the per-unit multiplier: $\dfrac{f(x+1)}{f(x)}=\dfrac{6\cdot4}{3}=8$, so $b=8$.
+3. Check: $f(x)=6\cdot9\cdot\dfrac{6^x4^x}{3^x}=54\cdot8^x=432\cdot8^{x-1}$.
+4. $a+b=432+8=440$.
+
+---
+
+### GT-163
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part L, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A museum has a small solid model of a sculpture and a full-size copy; the two are similar solids. The sealant needed to coat the whole surface is proportional to surface area. The model needs $1.6$ liters of sealant and the full-size copy needs $14.4$ liters. The model has a volume of $2.5$ cubic feet. What is the volume, in cubic feet, of the full-size copy?
+
+(A) $7.5$
+(B) $22.5$
+(C) $67.5$
+(D) $202.5$
+
+**Correct Answer:** (C) $67.5$
+
+**Rationale (worked solution):**
+
+1. Sealant is proportional to surface area, so the area ratio is $\dfrac{14.4}{1.6}=9=k^2$.
+2. The linear scale factor is $k=\sqrt9=3$.
+3. Volumes scale by $k^3=27$: $2.5\cdot27=67.5$.
+4. (Using the area ratio $9$ directly would give $22.5$, the wrong quantity.)
+
+---
+
+### GT-164
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A circular clock face has radius $15$ centimeters. A shaded sector of the clock face has area $45\pi$ square centimeters. What is the perimeter, in centimeters, of the shaded sector (the arc together with the two bounding radii)?
+
+(A) $30+6\pi$
+(B) $15+6\pi$
+(C) $30+3\pi$
+(D) $30+45\pi$
+
+**Correct Answer:** (A) $30+6\pi$
+
+**Rationale (worked solution):**
+
+1. Area of the whole face: $\pi(15)^2=225\pi$. The sector is $\dfrac{45\pi}{225\pi}=\dfrac15$ of the circle.
+2. Circumference: $2\pi(15)=30\pi$, so the arc length is $\dfrac15\cdot30\pi=6\pi$.
+3. Perimeter of the sector $=$ arc $+$ two radii $=6\pi+2(15)=30+6\pi$.
+4. (Check with $A=\tfrac12r^2\theta$: $45\pi=\tfrac12(225)\theta\Rightarrow\theta=\dfrac{2\pi}{5}$, and arc $=r\theta=6\pi$.)
+
+---
+
+### AM-238
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A rocket's height, in feet, $t$ seconds after launch is modeled by $h(t)=-16t^2+bt+c$, where $b$ and $c$ are constants. The rocket is launched from a height of at most $94$ feet, and the maximum height it reaches is $130$ feet. For how many seconds is the rocket at a height of at least $94$ feet?
+
+**Correct Answer:** $3$
+
+**Rationale (worked solution):**
+
+1. Write the function in vertex form: $h(t)=-16(t-p)^2+130$, where $p$ is the time of the maximum.
+2. Height at least $94$: $-16(t-p)^2+130\ge94\Rightarrow(t-p)^2\le\dfrac{36}{16}=\dfrac94$.
+3. So $|t-p|\le\dfrac32$, i.e. $p-\dfrac32\le t\le p+\dfrac32$. The value of $p$ does not matter (launch height at most $94$ keeps the whole interval after $t=0$).
+4. Duration $=2\cdot\dfrac32=3$ seconds. (Check with $p=\dfrac52$: $h(1)=h(4)=94$.)
+
+---
+
+### AM-239
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For a positive real number $m$, let $a=\sqrt[3]{m}$ and $b=\sqrt[4]{m}$. If $ab=128$, what is the value of $ab^{2}$?
+
+**Correct Answer:** $1024$
+
+**Rationale (worked solution):**
+
+1. Write both with the same base: $a=m^{1/3}$, $b=m^{1/4}$.
+2. $ab=m^{1/3+1/4}=m^{7/12}=128=2^7$, so $m=2^{12}=4096$ (the function $m^{7/12}$ is increasing, so this is the only solution).
+3. $ab^{2}=m^{1/3+1/2}=m^{5/6}=2^{10}=1024$.
+4. (Check: $a=16$, $b=8$, $ab=128$, $ab^2=16\cdot64=1024$.)
+
+---
+
+### AM-240
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part L, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** An investment grows by $6\%$ every half-year. If $V_0$ is its initial value, the value after $t$ years is $V(t)$. After how many years will the value first reach three times the initial value? Round your answer to the nearest hundredth.
+
+**Correct Answer:** $9.43$
+
+**Rationale (worked solution):**
+
+1. A $6\%$ increase multiplies the value by $1.06$ every half-year, so in $t$ years there are $2t$ periods: $V(t)=V_0(1.06)^{2t}$.
+2. Set $V(t)=3V_0$ and divide by $V_0$ to cancel the constant: $(1.06)^{2t}=3$.
+3. Solve with Desmos: graph $y=1.06^{2x}$ and $y=3$ and tap the intersection, $x\approx9.43$.
+4. (Check: $(1.06)^{18.86}\approx3.00$.)
+
+---
+
+### GT-165
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Two aquariums are similar in shape. The smaller aquarium holds $250$ liters and has $400$ square decimeters of glass in total. The larger aquarium holds $432$ liters. How many square decimeters of glass does the larger aquarium have in total? (Note that $1$ liter $=1$ cubic decimeter.)
+
+**Correct Answer:** $576$
+
+**Rationale (worked solution):**
+
+1. Volumes scale by $k^3$: $k^3=\dfrac{432}{250}=\dfrac{216}{125}$, so $k=\sqrt[3]{\dfrac{216}{125}}=\dfrac65$.
+2. Glass area scales by $k^2=\dfrac{36}{25}$.
+3. $400\cdot\dfrac{36}{25}=576$ square decimeters.
+
+---
+
+### A-170
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part L, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Plan A charges a one-time enrollment fee of $\$85$ plus $\$18.50$ per month. Plan B has no enrollment fee and charges $\$28$ per month. For a whole number of months $m$, which of the following describes all values of $m$ for which Plan A costs strictly less than Plan B in total?
+
+(A) $m\le8$
+(B) $m\ge10$
+(C) $m\ge8$
+(D) $m\ge9$
+
+**Correct Answer:** (D) $m\ge9$
+
+**Rationale (worked solution):**
+
+1. Plan A is cheaper when $85+18.5m<28m$, i.e. $85<9.5m$.
+2. $m>\dfrac{85}{9.5}\approx8.95$.
+3. Plan A has the smaller monthly rate, so it becomes cheaper only after the break-even. Since $m$ must be a whole number, the smallest valid value is $9$: $m\ge9$.
+4. (Check: $m=8$: A $=233$, B $=224$, so B is cheaper. $m=9$: A $=251.5$, B $=252$, so A is cheaper.)
+
+---
+
+### GT-166
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Segment $\overline{AB}$ is a diameter of a circle and has length $20$. Point $C$ lies on the circle, and point $D$ lies on $\overline{AB}$ with $\overline{CD}\perp\overline{AB}$ and $CD=8$. If $AD<DB$, what is the value of $\dfrac{AC}{CB}$?
+
+(A) $\dfrac14$
+(B) $\dfrac25$
+(C) $\dfrac12$
+(D) $\dfrac45$
+
+**Correct Answer:** (C) $\dfrac12$
+
+**Rationale (worked solution):**
+
+1. $C$ lies on a circle with diameter $AB$, so $\angle ACB=90^\circ$ and $\overline{CD}$ is the altitude to the hypotenuse.
+2. $CD^2=AD\cdot DB$ and $AD+DB=20$: $AD\cdot DB=64$. Solving $x(20-x)=64$ gives $x=4$ or $16$; with $AD<DB$, $AD=4$ and $DB=16$.
+3. $AC^2=AD\cdot AB=4\cdot20=80$ and $CB^2=DB\cdot AB=16\cdot20=320$.
+4. $\dfrac{AC}{CB}=\sqrt{\dfrac{80}{320}}=\sqrt{\dfrac14}=\dfrac12$. (Note $\dfrac{AD}{DB}=\dfrac14$ is the ratio of the segments, not of the legs.)
+
+---
+
+### AM-241
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f(x)=2x^2+bx+c$ has $(x-9)$ as a factor. The function $g$ is defined by $g(x)=f(x+3)$, and the graph of $g$ in the $xy$-plane has its vertex at $x=1$. What is the other zero of $f$?
+
+**Correct Answer:** $-1$
+
+**Rationale (worked solution):**
+
+1. The graph of $g(x)=f(x+3)$ is the graph of $f$ shifted $3$ units left. So the vertex of $f$ is at $x=1+3=4$.
+2. The vertex lies midway between the zeros of $f$. One zero is $9$, so the other is $2(4)-9=-1$.
+3. (Check: $-\dfrac b4=4\Rightarrow b=-16$; $f(9)=0\Rightarrow c=-162+144=-18$; $f(x)=2(x-9)(x+1)$ and $g$ has vertex at $x=4-3=1$.)
+
+---
+
+### GT-167
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part L, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A circle has area $48\pi$. A square and an equilateral triangle are each inscribed in the circle (all vertices on the circle). By how much does the area of the square exceed the area of the triangle?
+
+(A) $96-27\sqrt3$
+(B) $96-36\sqrt3$
+(C) $96-12\sqrt3$
+(D) $192-36\sqrt3$
+
+**Correct Answer:** (B) $96-36\sqrt3$
+
+**Rationale (worked solution):**
+
+1. $\pi r^2=48\pi$, so $r^2=48$ and $r=4\sqrt3$.
+2. Square: its diagonal is the diameter, $2r=8\sqrt3$. Area $=\dfrac{d^2}{2}=\dfrac{192}{2}=96$.
+3. Triangle: the side is $r\sqrt3=12$, so the area is $\dfrac{\sqrt3}{4}\cdot12^2=36\sqrt3$.
+4. Difference: $96-36\sqrt3$.
+
+---
+
+### A-171
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part L, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$x\ge0,\qquad y\ge0,\qquad 2x+y\le10,\qquad x+3y\le15,\qquad 3x+2y>k$$ In the system of inequalities above, $k$ is a constant. What is the least value of $k$ for which the system has no solution $(x,y)$?
+
+**Correct Answer:** $17$
+
+**Rationale (worked solution):**
+
+1. The first four inequalities describe a polygon. Its vertices are $(0,0)$, $(5,0)$, $(0,5)$ and the intersection of $2x+y=10$ and $x+3y=15$, which is $(3,4)$.
+2. Evaluate $3x+2y$ at the vertices: $0$, $15$, $10$ and $9+8=17$. The greatest value over the region is $17$.
+3. $3x+2y>k$ has no solution in the region exactly when $k\ge17$ (for $k=17$ the strict inequality fails everywhere, since $3x+2y\le17$).
+4. The least such $k$ is $17$.
+
+---
+
+### PS-124
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A data set has a median of $52$ and an interquartile range (IQR) of $14$. Each value $x$ in the data set is replaced by $15-\dfrac{x}{2}$. What is the sum of the median and the IQR of the new data set?
+
+(A) $3$
+(B) $11$
+(C) $-18$
+(D) $-4$
+
+**Correct Answer:** (D) $-4$
+
+**Rationale (worked solution):**
+
+1. Median transforms like every value: $15-\dfrac{52}{2}=-11$.
+2. Spread (IQR) is multiplied by the absolute value of the multiplier and is not changed by the added constant: $\left|-\dfrac12\right|\cdot14=7$.
+3. Sum: $-11+7=-4$.
+4. (Check with the data $30,44,46,50,54,58,60,70$: median $52$, IQR $59-45=14$; new values give median $-11$, quartiles $-14.5$ and $-7.5$, IQR $7$.)
+
+---
+
+### AM-242
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$T(t)=24+66(0.85)^{t}$$ The function $T$ models the temperature, in degrees Celsius, of a cup of tea $t$ minutes after it is placed in a room. Which of the following is the best interpretation of the number $0.85$ in this context?
+
+(A) $T$ falls $15\%$ per minute
+(B) the gap $T-24$ falls $15\%$ per minute
+(C) $T(1)=0.85\,T(0)$
+(D) $T$ levels off at $85\%$ of $T(0)$
+
+**Correct Answer:** (B) the gap $T-24$ falls $15\%$ per minute
+
+**Rationale (worked solution):**
+
+1. The constant $24$ is the room temperature: the tea cools toward $24^\circ$C, not toward $0$.
+2. Subtract it: $T(t)-24=66(0.85)^t$. Each minute this difference is multiplied by $0.85$, so it decreases by $15\%$.
+3. The tea's own temperature does not decrease by $15\%$ per minute: $T(0)=90$ and $T(1)=80.1$, a drop of about $11\%$.
+4. So $0.85$ is the factor by which the difference between the tea and the room changes each minute.
+
+---
+
+### AM-243
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part L, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For all real numbers $x$, the function $g$ is defined by $g(x)=\dfrac{9^{x+2}\cdot10^{x+1}}{6^{x-1}}$. The function can be written in the form $g(x)=k\cdot15^{x+1}$, where $k$ is a constant. What is the value of $k$?
+
+**Correct Answer:** $324$
+
+**Rationale (worked solution):**
+
+1. Because $15^{x+1}=1$ when $x=-1$, the constant $k$ equals $g(-1)$.
+2. $g(-1)=\dfrac{9^{1}\cdot10^{0}}{6^{-2}}=9\cdot36=324$.
+3. (Check by primes: $g(x)=\dfrac{3^{2x+4}\,2^{x+1}5^{x+1}}{2^{x-1}3^{x-1}}=3^{x+5}\cdot2^{2}\cdot5^{x+1}=4\cdot3^{5}\cdot5\cdot15^{x}=4860\cdot15^x=324\cdot15^{x+1}$.)
+
+---
+
+### AM-244
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 1 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The quadratic function $f$ satisfies $f(-1)=f(7)$, $f(0)=-4$ and $f(4)=12$. What is the value of $f(10)$?
+
+(A) $-98$
+(B) $-84$
+(C) $0$
+(D) $98$
+
+**Correct Answer:** (B) $-84$
+
+**Rationale (worked solution):**
+
+1. Equal outputs at $x=-1$ and $x=7$ put the axis of symmetry at $x=\dfrac{-1+7}2=3$. Write $f(x)=a(x-3)^2+k$.
+2. $f(0)=-4$: $9a+k=-4$. $\ f(4)=12$: $a+k=12$.
+3. Subtract: $8a=-16$, so $a=-2$, and then $k=14$. So $f(x)=-2(x-3)^2+14$.
+4. $f(10)=-2(7)^2+14=-98+14=-84$.
+5. (Options $-98$ drops $k$; $0$ forgets to square.)
+
+---
+
+### PS-125
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 2 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Quantity $Q$ is $60\%$ greater than quantity $P$. Quantity $R$ is $25\%$ less than $Q$. Quantity $R$ is $50\%$ greater than quantity $S$. $P$ is what percent greater than $S$?
+
+**Correct Answer:** $25$
+
+**Rationale (worked solution):**
+
+1. Let $P=100$. Then $Q=1.6(100)=160$ and $R=0.75(160)=120$.
+2. $R=1.5S$, so $S=\dfrac{120}{1.5}=80$.
+3. $P$ compared with $S$: $\dfrac{100-80}{80}=0.25$, i.e. $25\%$ greater.
+4. (The base of the comparison is $S$; $20\%$ would be the percent by which $S$ is less than $P$.)
+
+---
+
+### AM-245
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 3 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** For nonzero real numbers $p$ and $q$, the equation $px^2+3qx+4p=0$ has exactly one real solution, and $pq=-48$. If $p>0$, what is the value of $p+q$?
+
+(A) $14$
+(B) $-14$
+(C) $-2$
+(D) $2$
+
+**Correct Answer:** (C) $-2$
+
+**Rationale (worked solution):**
+
+1. Exactly one real solution means the discriminant is $0$: $(3q)^2-4(p)(4p)=0$, so $9q^2=16p^2$.
+2. Taking square roots: $3q=4p$ or $3q=-4p$, i.e. $q=\dfrac{4p}3$ or $q=-\dfrac{4p}3$.
+3. If $q=\dfrac{4p}3$ then $pq=\dfrac{4p^2}3>0$, contradicting $pq=-48$. So $q=-\dfrac{4p}3$.
+4. Then $pq=-\dfrac{4p^2}3=-48\Rightarrow p^2=36$. Since $p>0$, $p=6$ and $q=-8$.
+5. $p+q=6-8=-2$. (Option $14$ comes from the rejected case $q=8$.)
+
+---
+
+### GT-168
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 4 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In triangle $PQR$, the measure of angle $P$ is $30^\circ$ and $PR=14$. The length $QR=a$ is a positive integer with $a\le20$. For how many values of $a$ does the given information determine exactly one triangle, up to congruence?
+
+**Correct Answer:** $8$
+
+**Rationale (worked solution):**
+
+1. Here the known angle is $P=30^\circ$, the adjacent side is $PR=14$ and the opposite side is $QR=a$ (an SSA situation). The height is $14\sin30^\circ=7$.
+2. $a<7$: side $QR$ is too short to reach line $PQ$, no triangle. $a=7$: it just touches, one right triangle.
+3. $7<a<14$: two different triangles (two positions for $Q$). $a\ge14$: only one position, since the second intersection lies on the opposite side of $P$.
+4. Exactly one triangle: $a=7$ and $a=14,15,\ldots,20$, which is $1+7=8$ values.
+
+---
+
+### GT-169
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** Trick Pack 1, Part M, item 5 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, the circle $x^2+y^2+8x-2y=8$ and the line $5x-12y=k$, where $k$ is a constant, intersect at exactly one point. What is the greatest possible value of $k$?
+
+(A) $33$
+(B) $-97$
+(C) $65$
+(D) $32$
+
+**Correct Answer:** (A) $33$
+
+**Rationale (worked solution):**
+
+1. Complete the square: $(x+4)^2+(y-1)^2=8+16+1=25$. Centre $(-4,1)$, radius $5$.
+2. One intersection point means the line is tangent, so the distance from the centre to the line equals $5$: $\dfrac{|5(-4)-12(1)-k|}{\sqrt{5^2+12^2}}=5$.
+3. $\dfrac{|-32-k|}{13}=5\Rightarrow|k+32|=65$.
+4. $k+32=65$ gives $k=33$; $k+32=-65$ gives $k=-97$. The greatest is $33$.
+5. (Option $-97$ is the other case; $65$ and $32$ come from not finishing the absolute-value equation.)
+
+---
+
+### AM-246
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 6 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The table gives values of a quadratic function $g$ at equally spaced inputs.\par\begin{center}\begin{tabular}{|c|c|c|c|c|}\hline $x$&$2$&$5$&$8$&$11$\\\hline $g(x)$&$44$&$95$&$200$&$359$\\\hline\end{tabular}\end{center} What is the value of $g(17)$?
+
+(A) $677$
+(B) $572$
+(C) $785$
+(D) $839$
+
+**Correct Answer:** (D) $839$
+
+**Rationale (worked solution):**
+
+1. Inputs step by $3$. First differences of $g$: $95-44=51$, $200-95=105$, $359-200=159$.
+2. Second differences: $105-51=54$ and $159-105=54$, constant, as expected for a quadratic.
+3. Next first difference: $159+54=213$, so $g(14)=359+213=572$.
+4. The one after that: $213+54=267$, so $g(17)=572+267=839$.
+5. (Check: $g(x)=3x^2-4x+40$ gives $g(17)=867-68+40=839$. Option $572$ is $g(14)$; $677$ keeps the last difference $159$ constant; $785$ adds $213$ twice.)
+
+---
+
+### A-172
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 7 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** $$k(3x-2)-(x-m)=8x+10$$ In the equation above, $k$ and $m$ are constants. The equation is true for every real value of $x$. What is the value of $k+m$?
+
+**Correct Answer:** $19$
+
+**Rationale (worked solution):**
+
+1. Expand the left side: $3kx-2k-x+m=(3k-1)x+(m-2k)$.
+2. True for every $x$ means the $x$-coefficients match and the constants match: $3k-1=8$ and $m-2k=10$.
+3. $k=3$, then $m=10+2(3)=16$.
+4. $k+m=3+16=19$.
+
+---
+
+### AM-247
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** Trick Pack 1, Part M, item 8 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** The concentration of a medication in the bloodstream, in milligrams per liter, is modeled by $C(t)=18\left(\dfrac13\right)^{\frac{t-4}{2}}$, where $t\ge0$ is the number of hours after the first measurement. Which of the following is an equivalent form of $C(t)$ that displays the maximum value of $C$ as a constant or coefficient?
+
+(A) $486\cdot3^{-\frac{t+2}{2}}$
+(B) $18\cdot3^{\frac{4-t}{2}}$
+(C) $162\cdot3^{-\frac t2}$
+(D) $54\cdot3^{\frac{2-t}{2}}$
+
+**Correct Answer:** (C) $162\cdot3^{-\frac t2}$
+
+**Rationale (worked solution):**
+
+1. $\left(\dfrac13\right)^{\frac{t-4}2}=3^{\frac{4-t}2}$, so $C$ is a decreasing function of $t$ and its maximum on $t\ge0$ occurs at $t=0$.
+2. $C(0)=18\cdot3^{2}=162$.
+3. Split the exponent: $18\cdot3^{\frac{4-t}2}=18\cdot3^{2}\cdot3^{-\frac t2}=162\cdot3^{-\frac t2}$. The coefficient is the value at $t=0$, i.e. the maximum.
+4. The other options are equivalent too, but their exponents equal $2$, $1$ and $-1$ at $t=0$, so their coefficients ($18$, $54$, $486$) are not the maximum.
+
+---
+
+### GT-170
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 9 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In a circle with center $O$, chord $\overline{AB}$ has $\angle AOB=120^\circ$ and lies at a perpendicular distance of $3$ from $O$. The lines tangent to the circle at $A$ and at $B$ intersect at point $P$. What is the length of $\overline{PA}$?
+
+(A) $6$
+(B) $6\sqrt3$
+(C) $12$
+(D) $3\sqrt3$
+
+**Correct Answer:** (B) $6\sqrt3$
+
+**Rationale (worked solution):**
+
+1. Triangle $OAB$ is isosceles with apex angle $120^\circ$. The perpendicular from $O$ to $AB$ bisects the apex angle, giving a right triangle with a $60^\circ$ angle at $O$, so $3=r\cos60^\circ$ and $r=6$.
+2. A tangent is perpendicular to the radius, so $\angle OAP=90^\circ$. By symmetry $OP$ bisects $\angle AOB$, so $\angle AOP=60^\circ$.
+3. $PA=r\tan60^\circ=6\sqrt3$. (Equal tangent segments: $PB=PA$.)
+4. (Option $3\sqrt3$ treats the distance $3$ as the radius; $6$ is $r$; $12$ is $OP$.)
+
+---
+
+### GT-171
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 10 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A roof ornament is a solid pyramid whose base is a square of area $100$ square inches. The apex is directly above the center of the base, and the volume of the pyramid is $400$ cubic inches. What is the combined area, in square inches, of the four triangular lateral faces?
+
+(A) $240$
+(B) $130$
+(C) $360$
+(D) $260$
+
+**Correct Answer:** (D) $260$
+
+**Rationale (worked solution):**
+
+1. Base area $100$ gives side $s=10$. From $V=\dfrac13Bh$: $400=\dfrac13(100)h$, so the vertical height is $h=12$.
+2. The height of a triangular face (the slant height) is the hypotenuse of a right triangle with legs $h=12$ and $\dfrac s2=5$: $\ell=\sqrt{144+25}=13$.
+3. Each face has area $\dfrac12(10)(13)=65$. Four faces: $4\cdot65=260$.
+4. (Option $240$ uses the vertical height $12$ as the face height; $130$ is two faces; $360$ adds the base.)
+
+---
+
+### PS-126
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 11 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A $84$-gram sample of an alloy contains only copper, zinc and tin. The mass of the copper is $5$ grams more than twice the mass of the zinc. The mass of the tin is half the combined mass of the copper and the zinc. What is the mass, in grams, of the tin in the sample?
+
+**Correct Answer:** $28$
+
+**Rationale (worked solution):**
+
+1. Let $z$ be the mass of zinc. Copper: $2z+5$. Combined copper and zinc: $3z+5$, so tin is $\dfrac{3z+5}2$.
+2. Total: $(3z+5)+\dfrac{3z+5}2=\dfrac32(3z+5)=84\Rightarrow3z+5=56$.
+3. Tin $=\dfrac{56}2=28$ grams. (Check: $z=17$, copper $39$, tin $28$, total $84$.)
+
+---
+
+### AM-248
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 12 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Positive real numbers $a$ and $b$, both greater than $1$, satisfy $a^{3}=b^{2}$. If $\dfrac{a^{9}}{\sqrt[3]{b}}=b^{k}$, what is the value of $k$?
+
+(A) $\dfrac{17}{3}$
+(B) $6$
+(C) $\dfrac{19}{3}$
+(D) $\dfrac{17}{2}$
+
+**Correct Answer:** (A) $\dfrac{17}{3}$
+
+**Rationale (worked solution):**
+
+1. From $a^3=b^2$: $a^9=(a^3)^3=(b^2)^3=b^6$.
+2. $\sqrt[3]{b}=b^{1/3}$, so $\dfrac{a^9}{\sqrt[3]b}=\dfrac{b^6}{b^{1/3}}=b^{6-\frac13}=b^{17/3}$.
+3. Since $b>1$, equal powers of $b$ have equal exponents: $k=\dfrac{17}3$.
+4. (Option $6$ ignores the cube root; $\dfrac{19}3$ adds instead of subtracting $\dfrac13$.)
+
+---
+
+### AM-249
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 13 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** A water balloon is launched upward from a rooftop. Its height above the ground, in feet, $t$ seconds after launch is modeled by a quadratic function $h$. The maximum height of $125$ feet is reached at a time between $t=1$ and $t=6$, and $h(1)=80$ and $h(6)=105$. What is the height, in feet, of the balloon at the moment of launch?
+
+(A) $80$
+(B) $45$
+(C) $75$
+(D) $37$
+
+**Correct Answer:** (B) $45$
+
+**Rationale (worked solution):**
+
+1. Write $h(t)=125-a(t-v)^2$, where $v$ is the time of maximum height. The drops below the maximum are $125-80=45$ at $t=1$ and $125-105=20$ at $t=6$.
+2. Divide: $\dfrac{a(v-1)^2}{a(6-v)^2}=\dfrac{45}{20}=\dfrac94$, so $\dfrac{v-1}{6-v}=\dfrac32$ (the maximum lies between the two times).
+3. $2v-2=18-3v\Rightarrow v=4$. Then $45=a(3)^2\Rightarrow a=5$.
+4. $h(0)=125-5(4)^2=125-80=45$.
+5. (Option $75$ continues the average rate of change from $t=1$ to $t=6$ backwards; $80$ is $h(1)$; $37$ places the vertex halfway at $t=3.5$.)
+
+---
+
+### GT-172
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard (SAT Challenge)
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 14 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** In the $xy$-plane, a circle is tangent to both the $x$-axis and the $y$-axis, has its center in the second quadrant, and passes through the point $(-2,9)$. The diameter of the circle is less than $15$. The circle has equation $x^2+y^2+Dx+Ey+F=0$, where $D$, $E$ and $F$ are constants. What is the value of $F$?
+
+**Correct Answer:** $25$
+
+**Rationale (worked solution):**
+
+1. Tangent to both axes with center in the second quadrant: center $(-r,r)$, radius $r>0$. Equation: $(x+r)^2+(y-r)^2=r^2$.
+2. Expand: $x^2+y^2+2rx-2ry+r^2=0$, so $F=r^2$.
+3. Point $(-2,9)$: $(-2+r)^2+(9-r)^2=r^2\Rightarrow r^2-22r+85=0\Rightarrow(r-5)(r-17)=0$.
+4. Diameter $<15$ means $r<7.5$, so $r=5$ and $F=25$. (The root $r=17$ gives diameter $34$.)
+
+---
+
+### AM-250
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard (SAT Challenge)
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** Trick Pack 1, Part M, item 15 — original item written from the idea pattern of the aniko.ai super-hard set; no verbatim copying.
+
+**Question:** Positive real numbers $x$ and $y$ satisfy $x\ne y$, $x+y=15$ and $xy=36$. What is the value of $$\dfrac{\dfrac1x-\dfrac1y}{\dfrac1{x^2}-\dfrac1{y^2}}\ ?$$
+
+(A) $1$
+(B) $4$
+(C) $\dfrac{12}{5}$
+(D) $\dfrac{5}{12}$
+
+**Correct Answer:** (C) $\dfrac{12}{5}$
+
+**Rationale (worked solution):**
+
+1. Factor the denominator as a difference of squares: $\dfrac1{x^2}-\dfrac1{y^2}=\left(\dfrac1x-\dfrac1y\right)\left(\dfrac1x+\dfrac1y\right)$.
+2. Since $x\ne y$, $\dfrac1x-\dfrac1y\ne0$ and cancels, leaving $\dfrac1{\dfrac1x+\dfrac1y}=\dfrac1{\dfrac{x+y}{xy}}=\dfrac{xy}{x+y}$.
+3. $\dfrac{xy}{x+y}=\dfrac{36}{15}=\dfrac{12}5$. (Check with $x=12$, $y=3$: $\dfrac{\frac1{12}-\frac13}{\frac1{144}-\frac19}=\dfrac{-\frac14}{-\frac{5}{48}}=\dfrac{12}{5}$.)
+4. (Option $\dfrac5{12}$ is the reciprocal.)
+
+---
+
+### 2.32 Gap-Closing Batch 2 — Hard Algebra, Function Composition and Transformations, Sum and Product of Solutions (30 items — A-173 to A-183, AM-251 to AM-269)
+
+### A-173
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$k(x+2)-3x=5x+4m$$ In the equation above, $k$ and $m$ are constants. If the equation has infinitely many solutions, what is the value of $k+m$?
+
+**Correct Answer:** $12$
+
+**Rationale:** Expand: $kx+2k-3x=(k-3)x+2k$. For infinitely many solutions the two sides must be identical: $k-3=5$, so $k=8$, and $2k=4m$, so $m=4$. Then $k+m=12$.
+
+**Misconception addressed:** Students match only the $x$-coefficients and forget the constant terms, or set $2k=m$.
+
+---
+
+### A-174
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3(2x-a)+5=bx-4$$ In the equation above, $a$ and $b$ are constants. Which of the following pairs of values for $a$ and $b$ gives an equation with no solution?
+
+(A) $a=3,\ b=6$
+(B) $a=2,\ b=6$
+(C) $a=5,\ b=3$
+(D) $a=6,\ b=-6$
+
+**Correct Answer:** (B) $a=2,\ b=6$
+
+**Rationale:** The left side is $6x-3a+5$. No solution needs equal $x$-coefficients ($b=6$) but different constants ($-3a+5\ne-4$, i.e. $a\ne3$). Choice A has $b=6$ and $a=3$, which makes the sides identical (infinitely many solutions). Choices C and D have $b\ne6$, so each has exactly one solution. Only B works.
+
+**Misconception addressed:** Students stop at $b=6$ and choose the pair that makes the sides identical.
+
+---
+
+### A-175
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Line $\ell$ has equation $3x-5y=20$. Line $m$ is perpendicular to $\ell$ and passes through $(6,-1)$. What is the $y$-intercept of line $m$?
+
+(A) $\left(0,-\dfrac{23}{5}\right)$
+(B) $(0,1)$
+(C) $(0,9)$
+(D) $(0,-11)$
+
+**Correct Answer:** (C) $(0,9)$
+
+**Rationale:** Line $\ell$ has slope $\dfrac35$, so $m$ has slope $-\dfrac53$. Then $y+1=-\dfrac53(x-6)$, so $y=-\dfrac53x+10-1=-\dfrac53x+9$ and the $y$-intercept is $(0,9)$.
+
+**Misconception addressed:** Students use the parallel slope $\dfrac35$ (giving $-\dfrac{23}{5}$) or the sign error $+\dfrac53$ (giving $-11$).
+
+---
+
+### A-176
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $y=-3x+12$ is translated $4$ units to the right and $3$ units up to form the graph of line $n$. What is the $x$-coordinate of the $x$-intercept of line $n$?
+
+**Correct Answer:** $9$
+
+**Rationale:** Shifting right $4$: $y=-3(x-4)+12=-3x+24$. Shifting up $3$: $y=-3x+27$. Set $y=0$: $x=9$.
+
+**Misconception addressed:** Students shift left instead of right, giving $-3(x+4)+12+3=-3x+3$ and $x=1$.
+
+---
+
+### A-177
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A rental company charges $\$30$ for the first day of a rental and $\$22$ for each additional day. A customer who rents for $d$ days, where $d\ge1$, uses a coupon that takes $10\%$ off the total rental charge. Which function gives the customer's total cost, in dollars?
+
+(A) $0.9(22d+8)$
+(B) $22d+8-0.1$
+(C) $0.9(22d)+8$
+(D) $0.1(22d+8)$
+
+**Correct Answer:** (A) $0.9(22d+8)$
+
+**Rationale:** The charge before the coupon is $30+22(d-1)=22d+8$. A $10\%$ discount leaves $90\%$ of the total, so the cost is $0.9(22d+8)$.
+
+**Misconception addressed:** Students discount only part of the charge (C), subtract $0.1$ dollars (B), or pay $10\%$ instead of $90\%$ (D).
+
+---
+
+### A-178
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ satisfies $f(2)=7$ and $f(6)=19$. The function $g$ is defined by $g(x)=f(x)+f(2x)$. What is the value of $g(5)$?
+
+**Correct Answer:** $47$
+
+**Rationale:** The slope is $\dfrac{19-7}{6-2}=3$, so $f(x)=3x+1$. Then $g(5)=f(5)+f(10)=16+31=47$.
+
+**Misconception addressed:** Students compute $f(5+10)$ or $2f(5)$ instead of evaluating $f$ at each input separately.
+
+---
+
+### A-179
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ satisfies $f(3)=5$. For every increase of $4$ in $x$, the value of $f(x)$ decreases by $10$. What is the $x$-intercept of the graph of $y=f(x)$ in the $xy$-plane? (Enter only the $x$-coordinate.)
+
+**Correct Answer:** $5$
+
+**Rationale:** The slope is $-\dfrac{10}{4}=-2.5$. Then $f(x)=5-2.5(x-3)$. Setting $f(x)=0$: $x-3=2$, so $x=5$.
+
+**Misconception addressed:** Students use a slope of $-4/10$ (inverting the rate) or give the $y$-intercept $12.5$.
+
+---
+
+### A-180
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** At a school fair, ride tickets cost $\$3$ each and food coupons cost $\$5$ each. Noura buys at least $3$ food coupons, buys at least twice as many ride tickets as food coupons, and spends at most $\$60$ in total. What is the greatest total number of tickets and coupons she can buy?
+
+**Correct Answer:** $18$
+
+**Rationale:** Let $r$ be ride tickets and $c$ coupons: $c\ge3$, $r\ge2c$, $3r+5c\le60$. Each coupon costs more than a ticket, so use the fewest coupons: $c=3$. Then $3r\le45$, so $r\le15$ (and $r\ge6$ holds). The total is $15+3=18$. Checking $c=4$ gives $r=13$ and total $17$.
+
+**Misconception addressed:** Students minimize coupons below the stated minimum ($c=0$) or ignore the ratio condition.
+
+---
+
+### A-181
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$x+2y\le8$$ $$3x-y>5$$ $$y\ge1$$ Which of the following ordered pairs $(x,y)$ is a solution to the system of inequalities above?
+
+(A) $(3,1)$
+(B) $(2,2)$
+(C) $(4,3)$
+(D) $(1,3)$
+
+**Correct Answer:** (A) $(3,1)$
+
+**Rationale:** Test each point. $(3,1)$: $3+2=5\le8$, $9-1=8>5$, $1\ge1$ \checkmark. $(2,2)$ fails $3x-y>5$ ($4>5$ is false). $(4,3)$ fails $x+2y\le8$ ($10\le8$ is false). $(1,3)$ fails $3x-y>5$ ($0>5$ is false).
+
+**Misconception addressed:** Students check only one inequality, or treat the strict inequality $3x-y>5$ as non-strict.
+
+---
+
+### A-182
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$5x+3y=19$$ $$2x-y=3$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $7x+2y$?
+
+**Correct Answer:** $22$
+
+**Rationale:** Add the equations: $(5x+3y)+(2x-y)=19+3$, so $7x+2y=22$. No need to solve for $x$ and $y$.
+
+**Misconception addressed:** Students solve for $x$ and $y$ separately ($x=\dfrac{28}{11}$) and make an arithmetic slip, instead of seeing that the target expression is the sum.
+
+---
+
+### A-183
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$2x+ky=8$$ $$kx+8y=16$$ In the system of equations above, $k$ is a constant. For which value of $k$ does the system have infinitely many solutions?
+
+(A) $-4$
+(B) $2$
+(C) $4$
+(D) $8$
+
+**Correct Answer:** (C) $4$
+
+**Rationale:** The lines are parallel or identical when $2\cdot8=k\cdot k$, so $k=\pm4$. For $k=4$ the equations are $2x+4y=8$ and $4x+8y=16$, which are the same line, so there are infinitely many solutions. For $k=-4$ they are $2x-4y=8$ and $-4x+8y=16$, which are parallel but different (no solution). So $k=4$.
+
+**Misconception addressed:** Students find $k=\pm4$ and choose $-4$ without checking the constants, or choose $k$ giving no solution.
+
+---
+
+### AM-269
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac{x}{x-4}=2+\frac{4}{x-4}$$ How many solutions does the equation above have?
+
+(A) Zero
+(B) Exactly one
+(C) Exactly two
+(D) Infinitely many
+
+**Correct Answer:** (A) Zero
+
+**Rationale:** Multiply by $x-4$ (with $x\ne4$): $x=2(x-4)+4=2x-4$, so $x=4$. But $x=4$ makes the denominators zero, so it is extraneous. There is no solution.
+
+**Misconception addressed:** Students solve to $x=4$ and report one solution without checking the excluded value.
+
+---
+
+### AM-251
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=x^2-4x+1$. The function $g$ is defined by $g(x)=f(x+3)$. What are the coordinates of the vertex of the graph of $g$ in the $xy$-plane?
+
+(A) $(5,-3)$
+(B) $(-1,-3)$
+(C) $(2,0)$
+(D) $(-1,0)$
+
+**Correct Answer:** (B) $(-1,-3)$
+
+**Rationale:** The vertex of $f$ is at $x=2$, $f(2)=4-8+1=-3$, so $(2,-3)$. Replacing $x$ by $x+3$ shifts the graph $3$ units left: $(-1,-3)$.
+
+**Misconception addressed:** Students shift right (A) because of the plus sign inside, or shift vertically (D).
+
+---
+
+### AM-252
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The functions $f$ and $g$ are defined by $f(x)=3x-2$ and $g(x)=x^2+1$. What is the value of $f(g(2))-g(f(2))$?
+
+**Correct Answer:** $-4$
+
+**Rationale:** $g(2)=5$, so $f(g(2))=f(5)=13$. $f(2)=4$, so $g(f(2))=g(4)=17$. The difference is $13-17=-4$.
+
+**Misconception addressed:** Students apply the functions in the wrong order or compute $f(g(2))$ as $f(2)\cdot g(2)$.
+
+---
+
+### AM-253
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $y=f(x)$ in the $xy$-plane has $x$-intercepts at $x=-2$ and $x=6$. Which of the following could be the $x$-intercepts of the graph of $y=f(2x)$?
+
+(A) $x=-4$ and $x=12$
+(B) $x=-1$ and $x=3$
+(C) $x=0$ and $x=8$
+(D) $x=-2$ and $x=6$
+
+**Correct Answer:** (B) $x=-1$ and $x=3$
+
+**Rationale:** $f(2x)=0$ exactly when $2x=-2$ or $2x=6$, so $x=-1$ or $x=3$. The graph is compressed horizontally by a factor of $2$.
+
+**Misconception addressed:** Students stretch instead of compress (A), or leave the intercepts unchanged (D).
+
+---
+
+### AM-254
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The quadratic function $f$ has a minimum value of $-5$ at $x=4$. The function $g$ is defined by $g(x)=-2f(x-3)+1$. What is the maximum value of $g$?
+
+**Correct Answer:** $11$
+
+**Rationale:** $f(x-3)$ has the same minimum value $-5$ (at $x=7$). Multiplying by $-2$ turns it into a maximum of $-2(-5)=10$, and adding $1$ gives $11$.
+
+**Misconception addressed:** Students report $x=7$ (the location) or forget that the negative factor flips minimum to maximum.
+
+---
+
+### AM-255
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=|x-3|$ and the function $g$ is defined by $g(x)=f(x+1)-2$. What are the coordinates of the vertex of the graph of $g$?
+
+(A) $(4,-2)$
+(B) $(2,-2)$
+(C) $(2,2)$
+(D) $(4,2)$
+
+**Correct Answer:** (B) $(2,-2)$
+
+**Rationale:** The vertex of $f$ is $(3,0)$. Replacing $x$ by $x+1$ moves it $1$ left to $(2,0)$, and subtracting $2$ moves it down to $(2,-2)$.
+
+**Misconception addressed:** Students move right for $x+1$ (giving $x=4$) or up for $-2$.
+
+---
+
+### AM-256
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=2x+1$. The function $g$ is defined by $g(x)=f(f(x))-f(x)$. What is the value of $g(3)$?
+
+**Correct Answer:** $8$
+
+**Rationale:** $f(f(x))=2(2x+1)+1=4x+3$. Then $g(x)=4x+3-(2x+1)=2x+2$ and $g(3)=8$.
+
+**Misconception addressed:** Students compute $f(f(3))=15$ and stop, or subtract $f(3)$ before composing.
+
+---
+
+### AM-257
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $h$ is defined by $h(x)=\sqrt{x-2}+1$. The function $g$ is defined by $g(x)=h(x+5)$. What is the domain of $g$?
+
+(A) $x\ge-3$
+(B) $x\ge2$
+(C) $x\ge7$
+(D) $x\ge-5$
+
+**Correct Answer:** (A) $x\ge-3$
+
+**Rationale:** $g(x)=\sqrt{(x+5)-2}+1=\sqrt{x+3}+1$, which needs $x+3\ge0$, so $x\ge-3$. Equivalently the domain of $h$ ($x\ge2$) shifts $5$ units left.
+
+**Misconception addressed:** Students shift right (C) or keep the domain of $h$ unchanged (B).
+
+---
+
+### AM-258
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=(x-1)^2+4$. The function $g$ is defined by $g(x)=f(x-k)+m$, where $k$ and $m$ are constants. The vertex of the graph of $g$ is $(6,-3)$. What is the value of $k+m$?
+
+**Correct Answer:** $-2$
+
+**Rationale:** The vertex of $f$ is $(1,4)$. Then $g$ has vertex $(1+k,\,4+m)=(6,-3)$, so $k=5$ and $m=-7$. Therefore $k+m=-2$.
+
+**Misconception addressed:** Students think $f(x-k)$ moves the vertex left by $k$ and get $k=-5$.
+
+---
+
+### AM-259
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The functions $f$ and $g$ are defined by $f(x)=x+3$ and $g(x)=2x-1$. For which values of $x$ is $f(g(x))=g(f(x))$?
+
+(A) Only $x=0$
+(B) Only $x=3$
+(C) All real numbers
+(D) No real numbers
+
+**Correct Answer:** (D) No real numbers
+
+**Rationale:** $f(g(x))=(2x-1)+3=2x+2$ and $g(f(x))=2(x+3)-1=2x+5$. Setting $2x+2=2x+5$ gives $2=5$, which is never true.
+
+**Misconception addressed:** Students assume composition is commutative (C) or solve incorrectly and pick a single value.
+
+---
+
+### AM-260
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ satisfies $f(1)=3$ and $f(3)=9$. The functions $g$ and $h$ are defined by $g(x)=f(x)+4$ and $h(x)=f(x-2)$. What is the value of $g(3)+h(3)$?
+
+**Correct Answer:** $16$
+
+**Rationale:** $g(3)=f(3)+4=13$ and $h(3)=f(3-2)=f(1)=3$. The sum is $16$.
+
+**Misconception addressed:** Students evaluate $h(3)$ as $f(3)-2=7$ instead of shifting the input.
+
+---
+
+### AM-261
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $y=f(x)$ in the $xy$-plane has its vertex at $(-2,5)$. What are the coordinates of the vertex of the graph of $y=-f(x+1)+3$?
+
+(A) $(-3,-2)$
+(B) $(-1,-2)$
+(C) $(-3,8)$
+(D) $(-1,8)$
+
+**Correct Answer:** (A) $(-3,-2)$
+
+**Rationale:** $f(x+1)$ shifts the vertex $1$ unit left to $(-3,5)$. The negative sign reflects it to $(-3,-5)$ and $+3$ raises it to $(-3,-2)$.
+
+**Misconception addressed:** Students move right for $x+1$ or forget to reflect before adding $3$ (giving $(-3,8)$).
+
+---
+
+### AM-262
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $g(x)=(x-h)^2+k$ in the $xy$-plane has a minimum value of $2$ and passes through the points $(1,6)$ and $(5,6)$. What is the value of $h+k$?
+
+**Correct Answer:** $5$
+
+**Rationale:** The minimum value is the vertex $y$-coordinate, so $k=2$. Points with equal $y$-values are symmetric about the axis, so $h=\dfrac{1+5}{2}=3$. Check: $g(1)=4+2=6$. Therefore $h+k=5$.
+
+**Misconception addressed:** Students use $(1+5)=6$ as $h$ (forgetting to halve) or add the wrong values.
+
+---
+
+### AM-263
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The equation $x^2-9x+k=0$, where $k$ is a constant, has two real solutions that differ by $3$. What is the value of $k$?
+
+**Correct Answer:** $18$
+
+**Rationale:** Let the solutions be $r$ and $r+3$. Their sum is $2r+3=9$, so $r=3$. The solutions are $3$ and $6$, so $k=3\cdot6=18$.
+
+**Misconception addressed:** Students use $k=9$ (the sum) or $k=3$ (the difference).
+
+---
+
+### AM-264
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The equation $2x^2-10x+c=0$, where $c$ is a constant, has a product of solutions equal to $6$. What is the sum of the reciprocals of the two solutions?
+
+(A) $\dfrac56$
+(B) $\dfrac65$
+(C) $\dfrac15$
+(D) $\dfrac{1}{30}$
+
+**Correct Answer:** (A) $\dfrac56$
+
+**Rationale:** Sum of solutions $=\dfrac{10}{2}=5$ and product $=\dfrac c2=6$. Then $\dfrac1r+\dfrac1s=\dfrac{r+s}{rs}=\dfrac56$.
+
+**Misconception addressed:** Students invert the fraction (B) or use the sum of the solutions alone.
+
+---
+
+### AM-265
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Let $r$ and $s$ be the two solutions of $x^2-7x+3=0$. What is the value of $r^2+s^2$?
+
+**Correct Answer:** $43$
+
+**Rationale:** $r+s=7$ and $rs=3$. Then $r^2+s^2=(r+s)^2-2rs=49-6=43$.
+
+**Misconception addressed:** Students stop at $(r+s)^2=49$ or add $2rs$ instead of subtracting it.
+
+---
+
+### AM-266
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The equation $x^2-5x+6=0$ has solutions $p$ and $q$. Which of the following equations has solutions $2p$ and $2q$?
+
+(A) $x^2-10x+24=0$
+(B) $x^2-10x+12=0$
+(C) $x^2-5x+12=0$
+(D) $2x^2-5x+6=0$
+
+**Correct Answer:** (A) $x^2-10x+24=0$
+
+**Rationale:** The solutions of $x^2-5x+6=0$ are $2$ and $3$, so the new solutions are $4$ and $6$ with sum $10$ and product $24$: $x^2-10x+24=0$.
+
+**Misconception addressed:** Students double only the middle coefficient (B) or only the constant (C).
+
+---
+
+### AM-267
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The equation $x^2-bx+27=0$, where $b$ is a positive constant, has two real solutions, and one solution is $3$ times the other. What is the value of $b$?
+
+**Correct Answer:** $12$
+
+**Rationale:** Let the solutions be $t$ and $3t$. Their product is $3t^2=27$, so $t=3$ (positive since $b>0$). The solutions are $3$ and $9$, so $b=3+9=12$.
+
+**Misconception addressed:** Students set $t+3t=27$ instead of using the product, or take the negative root of $t^2=9$.
+
+---
+
+### AM-268
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$x^2-6x=2|x-3|$$ What is the sum of all real solutions of the equation above?
+
+(A) $0$
+(B) $3$
+(C) $6$
+(D) $9$
+
+**Correct Answer:** (C) $6$
+
+**Rationale:** Write $x^2-6x=(x-3)^2-9$ and let $u=|x-3|$. Then $u^2-9=2u$, so $u^2-2u-9=0$ and $u=1\pm\sqrt{10}$. Only $u=1+\sqrt{10}$ is non-negative, giving $x=3\pm(1+\sqrt{10})$. These two solutions sum to $6$.
+
+**Misconception addressed:** Students keep only one solution of the absolute-value equation, or accept the negative value of $u$.
+
+---
+
+### 2.33 Gap-Closing Batch 3 — Algebra (Linear Equations, Lines, Linear Functions, Inequalities, Systems) (61 items — A-184 to A-244)
+
+### A-184
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$k(x-4)+3x=7x+m$$ In the equation above, $k$ and $m$ are constants. If the equation has infinitely many solutions, what is the value of $m$?
+
+**Correct Answer:** $-16$
+
+**Rationale:** Collect $x$-terms on the left: $(k+3)x-4k$. Matching $7x+m$ requires $k+3=7$, so $k=4$, and then $m=-4k=-16$.
+
+**Misconception addressed:** Students match only the $x$-coefficients, or give $k=4$ or $m=16$ by dropping the sign.
+
+---
+
+### A-185
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$4(ax-3)=10x+9$$ In the equation above, $a$ is a constant. If the equation has no solution, what is the value of $a$? (Enter as a decimal or fraction.)
+
+**Correct Answer:** $\dfrac52$
+
+**Rationale:** Expand: $4ax-12=10x+9$. No solution needs equal $x$-coefficients but unequal constants: $4a=10$, so $a=\dfrac52$, and $-12\ne9$ confirms the constants differ.
+
+**Misconception addressed:** Students solve for $x$ and get stuck, or equate the constants ($-12=9$).
+
+---
+
+### A-186
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3(4x-5)+2=7(4x-5)-18$$ What is the value of $4x-5$?
+
+**Correct Answer:** $5$
+
+**Rationale:** Let $u=4x-5$. Then $3u+2=7u-18$, so $20=4u$ and $u=5$. There is no need to solve for $x$.
+
+**Misconception addressed:** Students solve for $x$ ($x=\dfrac52$) and then substitute back, or answer $x$ instead of the expression.
+
+---
+
+### A-187
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac{2x-1}{3}-\frac{x+2}{4}=\frac12$$ What is the value of $5x$?
+
+**Correct Answer:** $16$
+
+**Rationale:** Multiply by $12$: $4(2x-1)-3(x+2)=6$, so $8x-4-3x-6=6$ and $5x=16$. The question asks for $5x$ directly.
+
+**Misconception addressed:** Students distribute the minus sign incorrectly ($-3x+2$) or find $x=\dfrac{16}{5}$ and answer that.
+
+---
+
+### A-188
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The sum of three consecutive odd integers is $15$ less than $4$ times the smallest of the three integers. What is the largest of the three integers?
+
+**Correct Answer:** $25$
+
+**Rationale:** Let the integers be $n$, $n+2$, $n+4$. Then $3n+6=4n-15$, so $n=21$. The largest is $n+4=25$.
+
+**Misconception addressed:** Students answer $21$ (the smallest) or use consecutive integers instead of consecutive odd integers.
+
+---
+
+### A-189
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Which of the following equations has no solution?
+
+(A) $5x-1=2(x+4)+x$
+(B) $4x-7=4(x-2)+3$
+(C) $3(x+2)=3x+6$
+(D) $2x+5=2(x+3)-1$
+
+**Correct Answer:** (B) $4x-7=4(x-2)+3$
+
+**Rationale:** Compare the $x$-coefficients and constants. $3(x+2)=3x+6$ becomes $3x+6=3x+6$ (true for all $x$). $2x+5=2(x+3)-1$ becomes $2x+5=2x+5$ (true for all $x$). $4x-7=4(x-2)+3$ becomes $4x-7=4x-5$, i.e. $-7=-5$, which is false, so it has no solution. $5x-1=2(x+4)+x$ becomes $5x-1=3x+8$, with the single solution $x=4.5$.
+
+**Misconception addressed:** Students stop when both sides are linear, or call identical sides 'no solution'.
+
+---
+
+### A-190
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3x+kx=2x+12$$ In the equation above, $k$ is a constant. For which of the following values of $k$ does the equation NOT have exactly one solution?
+
+(A) $0$
+(B) $1$
+(C) $-2$
+(D) $-1$
+
+**Correct Answer:** (D) $-1$
+
+**Rationale:** Collect terms: $(1+k)x=12$. This has exactly one solution unless $1+k=0$, i.e. $k=-1$, when it becomes $0=12$ (no solution).
+
+**Misconception addressed:** Students solve $k=2$ from the coefficient on the wrong side, or test only $k=0$.
+
+---
+
+### A-191
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A hiker walks $\dfrac25$ of a trail on the first day and $\dfrac13$ of the remaining distance on the second day. After the second day, $12$ kilometers of the trail remain. How long, in kilometers, is the whole trail?
+
+**Correct Answer:** $30$
+
+**Rationale:** After day 1, $\dfrac35$ of the trail remains. Day 2 covers $\dfrac13\cdot\dfrac35=\dfrac15$ of the trail, leaving $\dfrac35-\dfrac15=\dfrac25$. So $\dfrac25L=12$ and $L=30$.
+
+**Misconception addressed:** Students take $\dfrac13$ of the whole trail on day 2, or subtract the fractions of the wrong whole.
+
+---
+
+### A-192
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The length of a rectangle is $2$ less than $3$ times its width. The perimeter of the rectangle is $60$ centimeters. What is the width, in centimeters?
+
+**Correct Answer:** $8$
+
+**Rationale:** With width $w$ the length is $3w-2$, so $2(w+3w-2)=60$, giving $4w-2=30$ and $w=8$.
+
+**Misconception addressed:** Students write the length as $2-3w$ or $3(w-2)$, or answer the length ($22$).
+
+---
+
+### A-193
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The table shows three values of $x$ and their corresponding values of $y$ for the linear function $f$.
+
+| $x$ | $2$ | $5$ | $9$ |
+|---|---|---|---|
+| $f(x)$ | $7$ | $13$ | $k$ |
+
+What is the value of $k$?
+
+**Correct Answer:** $21$
+
+**Rationale:** The slope is $\dfrac{13-7}{5-2}=2$. From $x=5$ to $x=9$, $f$ increases by $2(4)=8$, so $k=13+8=21$.
+
+**Misconception addressed:** Students use the first gap ($3$) for the second step or add $4$ instead of multiplying by the slope.
+
+---
+
+### A-194
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line in the $xy$-plane passes through the points $(-2,8)$ and $(4,-4)$. What is the $x$-coordinate of the $x$-intercept of the line?
+
+**Correct Answer:** $2$
+
+**Rationale:** Slope $=\dfrac{-4-8}{4+2}=-2$. Then $y-8=-2(x+2)$, so $y=4-2x$. Setting $y=0$ gives $x=2$.
+
+**Misconception addressed:** Students give the $y$-intercept ($4$) or use the slope $+2$.
+
+---
+
+### A-195
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$ax+3y=12$$ In the equation above, $a$ is a constant. The graph of the equation in the $xy$-plane is parallel to the graph of $y=-\dfrac23x+5$. What is the value of $a$?
+
+**Correct Answer:** $2$
+
+**Rationale:** Solve for $y$: $y=-\dfrac a3x+4$. Parallel lines have equal slopes, so $-\dfrac a3=-\dfrac23$ and $a=2$.
+
+**Misconception addressed:** Students equate $a$ with the slope $-\dfrac23$ directly, or use the perpendicular slope.
+
+---
+
+### A-196
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$kx-4y=10$$ In the equation above, $k$ is a constant. The graph of the equation in the $xy$-plane is perpendicular to the graph of $2x+y=7$. What is the value of $k$?
+
+**Correct Answer:** $2$
+
+**Rationale:** The line $2x+y=7$ has slope $-2$. The line $kx-4y=10$ has slope $\dfrac k4$. Perpendicular slopes multiply to $-1$: $\dfrac k4(-2)=-1$, so $k=2$.
+
+**Misconception addressed:** Students use equal slopes ($k=-8$) or the negative reciprocal incorrectly ($k=-2$).
+
+---
+
+### A-197
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $3x+4y=24$ in the $xy$-plane and the two coordinate axes bound a triangle. What is the area of the triangle?
+
+**Correct Answer:** $24$
+
+**Rationale:** The intercepts are $(8,0)$ and $(0,6)$. The legs are $8$ and $6$, so the area is $\dfrac12(8)(6)=24$.
+
+**Misconception addressed:** Students use the coefficients $3$ and $4$ as the legs, or forget the factor $\dfrac12$ ($48$).
+
+---
+
+### A-198
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line in the $xy$-plane has $x$-intercept $-4$ and $y$-intercept $6$. Which of the following is an equation of the line?
+
+(A) $3x-2y=-12$
+(B) $2x+3y=12$
+(C) $2x-3y=-12$
+(D) $3x+2y=12$
+
+**Correct Answer:** (A) $3x-2y=-12$
+
+**Rationale:** Using the points $(-4,0)$ and $(0,6)$: slope $=\dfrac{6}{4}=\dfrac32$, so $y=\dfrac32x+6$, i.e. $3x-2y=-12$. Check: $3(-4)-0=-12$ and $0-2(6)=-12$.
+
+**Misconception addressed:** Students flip the slope ($\dfrac23$) or use the intercept signs incorrectly.
+
+---
+
+### A-199
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $y=2x-3$ is translated $2$ units to the left and $5$ units down to form the graph of line $q$. What is the $y$-intercept of line $q$?
+
+**Correct Answer:** $-4$
+
+**Rationale:** Shifting left $2$: $y=2(x+2)-3=2x+1$. Shifting down $5$: $y=2x-4$. The $y$-intercept is $-4$.
+
+**Misconception addressed:** Students shift right for 'left' ($2(x-2)-3-5=2x-12$) or forget the horizontal shift changes the intercept.
+
+---
+
+### A-200
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A gym charges a regular sign-up fee of $\$45$ plus $\$12$ per month. A student plan has a different sign-up fee and a monthly price that is $15\%$ less than the regular monthly price. After $7$ months, a student pays the same total as a regular member. What is the student sign-up fee, in dollars? (Enter as a decimal.)
+
+**Correct Answer:** $57.6$
+
+**Rationale:** Regular total after $7$ months: $45+12(7)=129$. Student monthly price: $0.85(12)=10.2$, so $7$ months cost $71.4$. The sign-up fee is $129-71.4=57.6$.
+
+**Misconception addressed:** Students apply $15\%$ to the sign-up fee too, or subtract $15\%$ from the total.
+
+---
+
+### A-201
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line in the $xy$-plane passes through the points $(a,5)$ and $(7,11)$ and has slope $\dfrac32$. What is the value of $a$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $\dfrac{11-5}{7-a}=\dfrac32$, so $7-a=4$ and $a=3$.
+
+**Misconception addressed:** Students write $\dfrac{5-11}{7-a}$ (sign slip) or solve $a-7=4$.
+
+---
+
+### A-202
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line passes through the point $(0,-4)$ and is parallel to the graph of $6x-2y=9$. What is the $x$-coordinate of the $x$-intercept of the line? (Enter as a fraction.)
+
+**Correct Answer:** $\dfrac43$
+
+**Rationale:** The line $6x-2y=9$ has slope $3$, so the new line is $y=3x-4$. Setting $y=0$ gives $x=\dfrac43$.
+
+**Misconception addressed:** Students use the coefficient $6$ as the slope or the perpendicular slope $-\dfrac13$.
+
+---
+
+### A-203
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Maya spends exactly $\$60$ on notebooks at $\$5$ each and pens at $\$3$ each. She buys $x$ notebooks and $y$ pens, so $5x+3y=60$. Which of the following could be $(x,y)$?
+
+(A) $(4,12)$
+(B) $(9,6)$
+(C) $(6,10)$
+(D) $(7,8)$
+
+**Correct Answer:** (C) $(6,10)$
+
+**Rationale:** Test each pair in $5x+3y=60$. $(6,10)$: $30+30=60$ \checkmark. $(7,8)$: $35+24=59$. $(4,12)$: $20+36=56$. $(9,6)$: $45+18=63$.
+
+**Misconception addressed:** Students test the $x$-value only or reverse the prices.
+
+---
+
+### A-204
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ satisfies $f(2)=9$ and $f(-1)=-3$. What is the value of $f(10)$?
+
+**Correct Answer:** $41$
+
+**Rationale:** The slope is $\dfrac{9-(-3)}{2-(-1)}=4$, so $f(x)=4x+1$ (since $f(2)=9$). Then $f(10)=41$.
+
+**Misconception addressed:** Students compute the slope with a sign error ($\dfrac{9-3}{3}=2$).
+
+---
+
+### A-205
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=5x+1$. The function $g$ is defined by $g(x)=f(2x)-3$. What is the value of $g(4)$?
+
+**Correct Answer:** $38$
+
+**Rationale:** $g(4)=f(8)-3=(5\cdot8+1)-3=41-3=38$.
+
+**Misconception addressed:** Students compute $2f(4)-3=39$ or $f(4)\cdot2$.
+
+---
+
+### A-206
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear functions $f$ and $g$ are defined by $f(x)=3x-2$ and $g(x)=-x+14$. The function $h$ is defined by $h(x)=f(x)+g(x)$. What is the $x$-coordinate of the $x$-intercept of the graph of $y=h(x)$?
+
+**Correct Answer:** $-6$
+
+**Rationale:** $h(x)=(3x-2)+(-x+14)=2x+12$. Setting $h(x)=0$ gives $x=-6$.
+
+**Misconception addressed:** Students solve $f(x)=g(x)$ ($x=4$) instead of $f(x)+g(x)=0$.
+
+---
+
+### A-207
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A company's profit, in dollars, from selling $n$ items is modeled by $P(n)=18n-540$. Which of the following is the best interpretation of the $n$-intercept of the graph of $y=P(n)$?
+
+(A) The company makes a profit of $\$540$ after selling $18$ items.
+(B) The company breaks even when it sells $30$ items.
+(C) The company earns $\$18$ on each item it sells.
+(D) The company loses $\$540$ when it sells no items, and $\$18$ more for each item.
+
+**Correct Answer:** (B) The company breaks even when it sells $30$ items.
+
+**Rationale:** The $n$-intercept is where $P(n)=0$: $18n=540$, so $n=30$. At $30$ items the profit is $0$, the break-even point. The option about losing \$540 describes the $P$-intercept instead.
+
+**Misconception addressed:** Students confuse the $P$-intercept ($-540$) with the $n$-intercept, or read the slope as the intercept.
+
+---
+
+### A-208
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A garage charges $\$5$ for the first hour and $\$3$ for each additional hour (whole hours only). Mr. Haddad pays $\$41$. For how many hours did he park?
+
+**Correct Answer:** $13$
+
+**Rationale:** For $h\ge1$ hours the charge is $5+3(h-1)=3h+2$. Setting $3h+2=41$ gives $h=13$.
+
+**Misconception addressed:** Students use $3h+5=41$ (charging the first hour at $\$3$ plus $\$5$), giving $h=12$.
+
+---
+
+### A-209
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Candle A is $12$ inches tall and burns down at $0.6$ inch per hour. Candle B is $10$ inches tall and burns down at $0.4$ inch per hour. After how many hours will the two candles have the same height?
+
+**Correct Answer:** $10$
+
+**Rationale:** Heights: $12-0.6t$ and $10-0.4t$. Setting them equal: $2=0.2t$, so $t=10$ hours.
+
+**Misconception addressed:** Students add the rates instead of subtracting, or compare starting heights only.
+
+---
+
+### A-210
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $g(m)=15-0.04m$ models the amount of fuel, in gallons, left in a car's tank after the car has driven $m$ miles. Which of the following is the best interpretation of the slope of the graph of $y=g(m)$?
+
+(A) The car uses $0.04$ gallon of fuel per mile driven.
+(B) The car travels $0.04$ mile on each gallon.
+(C) The tank holds $15$ gallons when full of fuel.
+(D) The tank holds $0.04$ gallon when it is empty.
+
+**Correct Answer:** (A) The car uses $0.04$ gallon of fuel per mile driven.
+
+**Rationale:** The slope $-0.04$ means the fuel decreases by $0.04$ gallon for each additional mile. The option saying $0.04$ mile per gallon inverts the rate ($\dfrac1{0.04}=25$ miles per gallon is the fuel economy), and the options about $15$ gallons or an empty tank describe the intercept, not the slope.
+
+**Misconception addressed:** Students invert units (miles per gallon vs gallons per mile) or describe the intercept.
+
+---
+
+### A-211
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ is defined by $f(x)=-2.5x+20$. The graph of $y=f(x)$ in the $xy$-plane has $x$-intercept $(a,0)$ and $y$-intercept $(0,b)$. What is the value of $a+b$?
+
+**Correct Answer:** $28$
+
+**Rationale:** $f(0)=20$, so $b=20$. $f(a)=0$ gives $a=8$. Then $a+b=28$.
+
+**Misconception addressed:** Students report only one intercept or divide $20$ by $2$.
+
+---
+
+### A-212
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ satisfies $f(4)=10$ and $f(10)=-2$. For what value of $x$ does $f(x)=0$?
+
+**Correct Answer:** $9$
+
+**Rationale:** Slope $=\dfrac{-2-10}{10-4}=-2$. So $f(x)=10-2(x-4)=18-2x$. Setting $f(x)=0$: $x=9$.
+
+**Misconception addressed:** Students use the slope $+2$ or stop at $f(0)=18$.
+
+---
+
+### A-213
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The table gives three values of the linear function $f$.
+
+| $x$ | $1$ | $3$ | $7$ |
+|---|---|---|---|
+| $f(x)$ | $5$ | $11$ | $23$ |
+
+Which of the following defines $f$?
+
+(A) $f(x)=6x-1$
+(B) $f(x)=2x+3$
+(C) $f(x)=3x+5$
+(D) $f(x)=3x+2$
+
+**Correct Answer:** (D) $f(x)=3x+2$
+
+**Rationale:** Slope $=\dfrac{11-5}{3-1}=3$. Then $5=3(1)+b$, so $b=2$ and $f(x)=3x+2$. Check: $3(7)+2=23$.
+
+**Misconception addressed:** Students use $f(1)=5$ as the intercept ($3x+5$).
+
+---
+
+### A-214
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=mx+4$, where $m$ is a positive constant. If $f(3)=m^2-6$, what is the value of $m$?
+
+**Correct Answer:** $5$
+
+**Rationale:** $3m+4=m^2-6$, so $m^2-3m-10=0$ and $(m-5)(m+2)=0$. Since $m>0$, $m=5$.
+
+**Misconception addressed:** Students keep $m=-2$ or do not rearrange to a quadratic.
+
+---
+
+### A-215
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=-3x+7$. The function $g$ is defined by $g(x)=f(x+2)-5$. What is the value of $g(0)$?
+
+**Correct Answer:** $-4$
+
+**Rationale:** $g(0)=f(2)-5=(-6+7)-5=-4$.
+
+**Misconception addressed:** Students compute $f(-2)-5=8$ or $f(0)+2-5$.
+
+---
+
+### A-216
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A town's population grew linearly from $4{,}200$ in $2015$ to $5{,}000$ in $2023$. According to this model, in what year will the population reach $6{,}000$?
+
+**Correct Answer:** $2033$
+
+**Rationale:** The rate is $\dfrac{800}{8}=100$ people per year. From $2015$: $4200+100t=6000$ gives $t=18$, so the year is $2033$.
+
+**Misconception addressed:** Students answer $t=18$ or start counting from $2023$.
+
+---
+
+### A-217
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line in the $xy$-plane has slope $-\dfrac34$ and passes through the point $(8,-1)$. What is the $y$-coordinate of the $y$-intercept of the line?
+
+**Correct Answer:** $5$
+
+**Rationale:** $y+1=-\dfrac34(x-8)$, so $y=-\dfrac34x+6-1=-\dfrac34x+5$. The $y$-intercept is $5$.
+
+**Misconception addressed:** Students forget to move the $-1$ across ($6$) or use $+\dfrac34$.
+
+---
+
+### A-218
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$x\ge0,\quad y\ge0,\quad 2x+y\le10,\quad x+2y\le8$$ For the ordered pairs $(x,y)$ that satisfy the system of inequalities above, what is the greatest possible value of $3x+4y$?
+
+**Correct Answer:** $20$
+
+**Rationale:** The feasible region is a quadrilateral with vertices $(0,0)$, $(5,0)$, $(0,4)$ and $(4,2)$ (where $2x+y=10$ meets $x+2y=8$). Evaluate $3x+4y$ at each: $0$, $15$, $16$, $20$. The greatest value is $20$.
+
+**Misconception addressed:** Students test only the axis intercepts ($(5,0)$ and $(0,4)$) and miss the corner where the two boundary lines meet.
+
+---
+
+### A-219
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A phone plan costs $\$20$ per month plus $\$0.05$ per minute of calls. An $8\%$ tax is applied to the whole monthly bill. A customer wants the bill, including tax, to be at most $\$50$. What is the greatest whole number of minutes the customer can use in a month?
+
+**Correct Answer:** $525$
+
+**Rationale:** The inequality is $1.08(20+0.05m)\le50$. Dividing by $1.08$: $20+0.05m\le46.296\ldots$, so $0.05m\le26.296\ldots$ and $m\le525.9\ldots$. The greatest whole number is $525$.
+
+**Misconception addressed:** Students tax only the per-minute charge, or round up to $526$.
+
+---
+
+### A-220
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$-4<3-2x\le9$$ How many integers $x$ satisfy the compound inequality above?
+
+**Correct Answer:** $7$
+
+**Rationale:** $-4<3-2x$ gives $x<3.5$. $3-2x\le9$ gives $x\ge-3$ (dividing by $-2$ flips the sign). So $-3\le x<3.5$, and the integers are $-3,-2,-1,0,1,2,3$: seven.
+
+**Misconception addressed:** Students forget to flip the inequality when dividing by $-2$, or exclude an endpoint.
+
+---
+
+### A-221
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The system of inequalities $y>2x+1$ and $y<-x+9$ is graphed in the $xy$-plane. For which of the following sets of values of $k$ is the point $(k,5)$ a solution to the system?
+
+(A) $2<k<4$
+(B) $k>2$
+(C) $k<2$
+(D) $k<4$
+
+**Correct Answer:** (C) $k<2$
+
+**Rationale:** Substitute $(k,5)$. First inequality: $5>2k+1$, so $k<2$. Second: $5<-k+9$, so $k<4$. Both must hold, so $k<2$.
+
+**Misconception addressed:** Students combine the two bounds as an interval ($2<k<4$) or use only the weaker condition.
+
+---
+
+### A-222
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3x-a<2x+5$$ In the inequality above, $a$ is a constant. If the solution set of the inequality is all $x$ with $x<9$, what is the value of $a$?
+
+**Correct Answer:** $4$
+
+**Rationale:** Subtract $2x$: $x-a<5$, so $x<5+a$. Setting $5+a=9$ gives $a=4$.
+
+**Misconception addressed:** Students move $a$ with the wrong sign and get $a=-4$.
+
+---
+
+### A-223
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$-3x+7>k$$ In the inequality above, $k$ is a constant. If the solution set is all $x$ with $x<2$, what is the value of $k$?
+
+**Correct Answer:** $1$
+
+**Rationale:** $-3x>k-7$, so dividing by $-3$ flips the sign: $x<\dfrac{7-k}{3}$. Setting $\dfrac{7-k}{3}=2$ gives $k=1$.
+
+**Misconception addressed:** Students forget the sign flip and get $x>\dfrac{k-7}{-3}$-type results or $k=13$.
+
+---
+
+### A-224
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Gym A charges a monthly fee of $\$35$ plus $\$4$ per class. Gym B charges a monthly fee of $\$15$ plus $\$9$ per class. What is the least whole number of classes in a month for which Gym A costs less than Gym B?
+
+**Correct Answer:** $5$
+
+**Rationale:** Gym A is cheaper when $35+4c<15+9c$, so $20<5c$ and $c>4$. The least whole number is $5$. (At exactly $4$ classes the costs are equal, $\$51$.)
+
+**Misconception addressed:** Students answer $4$ (the equal-cost point) because they use $\le$.
+
+---
+
+### A-225
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** How many ordered pairs $(x,y)$ of positive integers satisfy $x+2y\le9$?
+
+**Correct Answer:** $16$
+
+**Rationale:** For $y=1$: $x\le7$ (7 pairs). $y=2$: $x\le5$ (5). $y=3$: $x\le3$ (3). $y=4$: $x\le1$ (1). Total $7+5+3+1=16$.
+
+**Misconception addressed:** Students include $x=0$ or $y=0$, or stop after $y=3$.
+
+---
+
+### A-226
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A store takes $20\%$ off the price $p$ of a jacket, and then a customer uses a $\$5$ coupon. The customer pays less than $\$60$. What is the greatest whole-dollar value of $p$?
+
+**Correct Answer:** $81$
+
+**Rationale:** The cost is $0.8p-5<60$, so $0.8p<65$ and $p<81.25$. The greatest whole-dollar price is $81$.
+
+**Misconception addressed:** Students apply the coupon before the discount ($0.8(p-5)<60$) or round up to $82$.
+
+---
+
+### A-227
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, the graph of $3x+2y\le18$ together with $x\ge0$ and $y\ge0$ is a triangular region. What is the area of this region?
+
+**Correct Answer:** $27$
+
+**Rationale:** The boundary meets the axes at $(6,0)$ and $(0,9)$. The legs are $6$ and $9$, so the area is $\dfrac12(6)(9)=27$.
+
+**Misconception addressed:** Students use $3$ and $2$ as the legs or forget the factor $\dfrac12$.
+
+---
+
+### A-228
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A shipping container can hold at most $24$ tons. Crates weigh either $1.5$ tons or $2$ tons. A shipment includes at least $4$ crates of the $2$-ton type. What is the greatest number of $1.5$-ton crates the shipment can include?
+
+**Correct Answer:** $10$
+
+**Rationale:** With $h\ge4$ heavy crates and $c$ light crates, $2h+1.5c\le24$. The most light crates occurs at $h=4$: $1.5c\le16$, so $c\le10.67$ and the greatest whole number is $10$.
+
+**Misconception addressed:** Students round $10.67$ up to $11$ or use $h=0$.
+
+---
+
+### A-229
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$5<2x-1<k$$ In the compound inequality above, $k$ is a constant. If the solution set is all $x$ with $3<x<7$, what is the value of $k$?
+
+**Correct Answer:** $13$
+
+**Rationale:** Add $1$ and divide by $2$: $3<x<\dfrac{k+1}{2}$. Setting $\dfrac{k+1}{2}=7$ gives $k=13$.
+
+**Misconception addressed:** Students solve $2x-1=7$ ($x=4$) or set $k=7$.
+
+---
+
+### A-230
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3x+ky=7$$ $$9x+12y=m$$ In the system of equations above, $k$ and $m$ are constants. For which of the following values of $k$ and $m$ does the system have no solution?
+
+(A) $k=12,\ m=7$
+(B) $k=4,\ m=7$
+(C) $k=3,\ m=21$
+(D) $k=4,\ m=21$
+
+**Correct Answer:** (B) $k=4,\ m=7$
+
+**Rationale:** The equations are parallel when $\dfrac39=\dfrac k{12}$, so $k=4$. They are the same line only if $m=3\cdot7=21$. So $k=4$ with $m\ne21$ gives no solution: $k=4,\ m=7$. With $k=4,\ m=21$ there are infinitely many solutions, and $k=3$ or $k=12$ gives one solution.
+
+**Misconception addressed:** Students find $k=4$ and then choose the pair with $m=21$ (infinitely many solutions).
+
+---
+
+### A-231
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$ax+4y=14$$ $$3x+2y=7$$ In the system of equations above, $a$ is a constant. If the system has infinitely many solutions, what is the value of $a$?
+
+**Correct Answer:** $6$
+
+**Rationale:** The second equation times $2$ is $6x+4y=14$, which matches the first when $a=6$.
+
+**Misconception addressed:** Students compare only the $y$-coefficients and constants incorrectly, giving $a=3$.
+
+---
+
+### A-232
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3x+5y=17$$ $$5x+3y=23$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $x+y$?
+
+**Correct Answer:** $5$
+
+**Rationale:** Add the equations: $8x+8y=40$, so $x+y=5$. (Solving gives $x=4$, $y=1$.)
+
+**Misconception addressed:** Students solve a full elimination and make an arithmetic slip, or divide $40$ by $4$.
+
+---
+
+### A-233
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$2x-3y=7$$ $$4x+y=21$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $6x-2y$?
+
+**Correct Answer:** $28$
+
+**Rationale:** Add the equations: $(2x-3y)+(4x+y)=6x-2y=7+21=28$.
+
+**Misconception addressed:** Students try to isolate $x$ first, or add and get $6x-2y=14$ by mis-adding the constants.
+
+---
+
+### A-234
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$y=2x+k$$ $$y=-x+7$$ In the system of equations above, $k$ is a constant. The graphs of the two equations intersect at the point with $x$-coordinate $2$. What is the value of $k$?
+
+**Correct Answer:** $1$
+
+**Rationale:** At $x=2$ the second equation gives $y=5$. The first must also give $5$: $2(2)+k=5$, so $k=1$.
+
+**Misconception addressed:** Students substitute into the wrong equation or use $y=7$ as the intersection.
+
+---
+
+### A-235
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$ax+3y=7$$ $$2x-by=13$$ In the system of equations above, $a$ and $b$ are constants. If $(2,-1)$ is the solution to the system, what is the value of $ab$?
+
+**Correct Answer:** $45$
+
+**Rationale:** Substitute $(2,-1)$ into the first: $2a-3=7$, so $a=5$. Into the second: $4+b=13$, so $b=9$. Then $ab=45$.
+
+**Misconception addressed:** Students substitute $x=-1,\ y=2$ (swapped coordinates) or forget the sign on $-by$.
+
+---
+
+### A-236
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A chemist mixes $x$ liters of a $12\%$ saline solution with $y$ liters of a $30\%$ saline solution to make $18$ liters of a $24\%$ saline solution. How many liters of the $12\%$ solution are used?
+
+**Correct Answer:** $6$
+
+**Rationale:** $x+y=18$ and $0.12x+0.30y=0.24(18)=4.32$. Substitute $y=18-x$: $0.12x+5.4-0.30x=4.32$, so $-0.18x=-1.08$ and $x=6$.
+
+**Misconception addressed:** Students answer $y=12$ (the other solution) or use $0.24$ as an average of the two percents.
+
+---
+
+### A-237
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A boat travels $18$ kilometers downstream in $2$ hours and returns the same $18$ kilometers upstream in $3$ hours. What is the speed of the boat in still water, in kilometers per hour? (Enter as a decimal.)
+
+**Correct Answer:** $7.5$
+
+**Rationale:** Downstream speed $=9$ km/h and upstream speed $=6$ km/h. With boat speed $v$ and current $c$: $v+c=9$ and $v-c=6$, so $v=7.5$.
+
+**Misconception addressed:** Students average the two trip times or answer the current ($1.5$).
+
+---
+
+### A-238
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Sara is $4$ years older than twice Omar's age. In $6$ years, the sum of their ages will be $40$. How old is Sara now?
+
+**Correct Answer:** $20$
+
+**Rationale:** Let Omar be $o$ years old, so Sara is $2o+4$. In $6$ years: $(2o+4+6)+(o+6)=40$, so $3o+16=40$ and $o=8$. Sara is $2(8)+4=20$.
+
+**Misconception addressed:** Students forget to add $6$ to both ages, or answer Omar's age ($8$).
+
+---
+
+### A-239
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$4x-6y=9$$ One equation of a system of two linear equations is given above. Which of the following could be the second equation so that the system has no solution?
+
+(A) $2x-3y=10$
+(B) $6x+4y=9$
+(C) $3x-2y=9$
+(D) $2x-3y=\dfrac92$
+
+**Correct Answer:** (A) $2x-3y=10$
+
+**Rationale:** The given line has slope $\dfrac23$. The second equation must have the same slope but a different line. $2x-3y=10$ has slope $\dfrac23$, and multiplying by $2$ gives $4x-6y=20\ne9$, so the lines are parallel: no solution. $2x-3y=\dfrac92$ is the same line (infinitely many solutions). The other two have different slopes (one solution each).
+
+**Misconception addressed:** Students pick the equivalent equation (same line) instead of the parallel one.
+
+---
+
+### A-240
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac x2+\frac y3=5$$ $$\frac x4-\frac y6=\frac12$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $xy$?
+
+**Correct Answer:** $36$
+
+**Rationale:** Multiply the first by $6$: $3x+2y=30$. Multiply the second by $12$: $3x-2y=6$. Adding gives $6x=36$, so $x=6$, and then $y=6$. So $xy=36$.
+
+**Misconception addressed:** Students clear fractions inconsistently or add $x+y=12$.
+
+---
+
+### A-241
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A theater sold $150$ tickets for a performance. Adult tickets cost $\$12$ and child tickets cost $\$7$. The total ticket revenue was $\$1{,}380$. How many child tickets were sold?
+
+**Correct Answer:** $84$
+
+**Rationale:** Let $c$ be child tickets: $12(150-c)+7c=1380$, so $1800-5c=1380$ and $c=84$.
+
+**Misconception addressed:** Students answer the number of adult tickets ($66$) or mix up the prices.
+
+---
+
+### A-242
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The lines $2x+y=7$, $x-y=2$ and $ax+3y=12$ all pass through the same point in the $xy$-plane. What is the value of $a$?
+
+**Correct Answer:** $3$
+
+**Rationale:** Solve the first two: adding gives $3x=9$, so $x=3$ and $y=1$. The third line passes through $(3,1)$: $3a+3=12$, so $a=3$.
+
+**Misconception addressed:** Students use $x=1,\ y=3$ or solve all three equations at once.
+
+---
+
+### A-243
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$kx+4y=10$$ $$2x+(k+2)y=5$$ In the system of equations above, $k$ is a constant. What is the sum of all values of $k$ for which the system has no solution?
+
+**Correct Answer:** $-2$
+
+**Rationale:** The lines are parallel when $k(k+2)=8$, so $k^2+2k-8=0$ and $k=2$ or $k=-4$. For $k=2$: $2x+4y=10$ and $2x+4y=5$ are different parallel lines. For $k=-4$: $-4x+4y=10$ and $2x-2y=5$, whose multiple $-4x+4y=-10$ differs from $10$. Both give no solution, so the sum is $2+(-4)=-2$.
+
+**Misconception addressed:** Students find only the positive value or forget to check that the lines are not identical.
+
+---
+
+### A-244
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graphs of $y=2x-4$ and $y=-x+8$ and the $x$-axis bound a triangular region in the $xy$-plane. What is the area of the triangle?
+
+**Correct Answer:** $12$
+
+**Rationale:** The lines meet where $2x-4=-x+8$, i.e. $x=4$, $y=4$. Their $x$-intercepts are $2$ and $8$, so the base is $6$ and the height is $4$. Area $=\dfrac12(6)(4)=12$.
+
+**Misconception addressed:** Students use the $y$-intercepts as the base or forget the factor $\dfrac12$.
+
+---
+
+### 2.34 Gap-Closing Batch 4 — Geometry and Trigonometry (Right Triangles, Circles, Area and Volume, Lines, Angles and Triangles) (50 items — GT-173 to GT-222)
+
+Figure-free items: every diagram is described in words or coordinates so each item prints without a drawing.
+
+### GT-173
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\sin(x^\circ)=\cos\left((3x-10)^\circ\right)$$ In the equation above, $x$ is between $0$ and $30$. What is the value of $x$?
+
+**Correct Answer:** $25$
+
+**Rationale:** Sine and cosine of complementary angles are equal, so $x+(3x-10)=90$, giving $4x=100$ and $x=25$. Check: $3(25)-10=65$ and $25+65=90$.
+
+**Misconception addressed:** Students set the angles equal ($x=3x-10$, so $x=5$).
+
+---
+
+### GT-174
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In right triangle $ABC$, the right angle is at $C$, $\tan A=\dfrac{5}{12}$, and $AB=39$. What is the perimeter of triangle $ABC$?
+
+**Correct Answer:** $90$
+
+**Rationale:** $\tan A=\dfrac{BC}{AC}=\dfrac5{12}$, so the sides are $5k$, $12k$ and $13k$. With $13k=39$, $k=3$, and the legs are $15$ and $36$. The perimeter is $15+36+39=90$.
+
+**Misconception addressed:** Students treat $5$ and $12$ as the legs and use $AB=39$ as a leg.
+
+---
+
+### GT-175
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In right triangle $PQR$, the right angle is at $Q$, $PQ=9$ and $QR=12$. The altitude from $Q$ to hypotenuse $\overline{PR}$ has length $h$. What is the value of $h$? (Enter as a decimal.)
+
+**Correct Answer:** $7.2$
+
+**Rationale:** $PR=\sqrt{81+144}=15$. Equating two expressions for the area: $\dfrac12(9)(12)=\dfrac12(15)h$, so $h=\dfrac{108}{15}=7.2$.
+
+**Misconception addressed:** Students average the legs ($10.5$) or use $h=\dfrac{PQ\cdot QR}{2}$.
+
+---
+
+### GT-176
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** An isosceles right triangle has a hypotenuse of length $14$. What is the perimeter of the triangle?
+
+(A) $28$
+(B) $14+7\sqrt2$
+(C) $14+14\sqrt2$
+(D) $14+7\sqrt3$
+
+**Correct Answer:** (C) $14+14\sqrt2$
+
+**Rationale:** Each leg is $\dfrac{14}{\sqrt2}=7\sqrt2$. The perimeter is $14+7\sqrt2+7\sqrt2=14+14\sqrt2$.
+
+**Misconception addressed:** Students add only one leg ($14+7\sqrt2$) or use the $30$-$60$-$90$ ratio ($\sqrt3$).
+
+---
+
+### GT-177
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The height of an equilateral triangle is $6\sqrt3$. What is the perimeter of the triangle?
+
+**Correct Answer:** $36$
+
+**Rationale:** For an equilateral triangle with side $s$, the height is $\dfrac{s\sqrt3}{2}=6\sqrt3$, so $s=12$ and the perimeter is $36$.
+
+**Misconception addressed:** Students take the height as the side, or use $s=\dfrac{h}{\sqrt3}\cdot2$ incorrectly.
+
+---
+
+### GT-178
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In a right triangle, angle $\theta$ is acute and $\sin\theta=0.6$. What is the value of $\cos(90^\circ-\theta)+\tan\theta$?
+
+(A) $1.35$
+(B) $1.6$
+(C) $0.75$
+(D) $1.2$
+
+**Correct Answer:** (A) $1.35$
+
+**Rationale:** $\cos(90^\circ-\theta)=\sin\theta=0.6$. With $\sin\theta=\dfrac35$, $\cos\theta=\dfrac45$, so $\tan\theta=\dfrac34=0.75$. The sum is $1.35$.
+
+**Misconception addressed:** Students use $\cos(90^\circ-\theta)=\cos\theta=0.8$ (total $1.55$) or leave out the $\tan$ term.
+
+---
+
+### GT-179
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A $13$-foot ladder leans against a vertical wall. Its base is $5$ feet from the wall. The base is then pulled $2$ feet farther from the wall, so the ladder is $7$ feet from the wall. To the nearest tenth of a foot, how high up the wall does the ladder reach now?
+
+**Correct Answer:** $11.0$
+
+**Rationale:** Originally $\sqrt{169-25}=12$ feet. After the move, $\sqrt{169-49}=\sqrt{120}\approx10.95$, which is $11.0$ to the nearest tenth.
+
+**Misconception addressed:** Students subtract $2$ from the original height ($10$) instead of recomputing with the Pythagorean theorem.
+
+---
+
+### GT-180
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In right triangle $PQR$, the right angle is at $Q$, $PQ=8$ and $QR=15$. Point $S$ is on $\overline{PR}$ such that $\overline{QS}$ is perpendicular to $\overline{PR}$. What is the length of $\overline{QS}$? (Enter as a fraction.)
+
+**Correct Answer:** $\dfrac{120}{17}$
+
+**Rationale:** $PR=\sqrt{64+225}=17$. The area is $\dfrac12(8)(15)=60=\dfrac12(17)(QS)$, so $QS=\dfrac{120}{17}$.
+
+**Misconception addressed:** Students use $QS=\dfrac{8+15}{2}$ or $\dfrac{8\cdot15}{2}$.
+
+---
+
+### GT-181
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** What is the value of $\cos\dfrac{5\pi}{3}$?
+
+(A) $-\dfrac{\sqrt3}{2}$
+(B) $-\dfrac12$
+(C) $\dfrac{\sqrt3}{2}$
+(D) $\dfrac12$
+
+**Correct Answer:** (D) $\dfrac12$
+
+**Rationale:** $\dfrac{5\pi}{3}=2\pi-\dfrac\pi3$ is in the fourth quadrant, where cosine is positive. The reference angle is $\dfrac\pi3$, and $\cos\dfrac\pi3=\dfrac12$.
+
+**Misconception addressed:** Students give the sine value ($-\dfrac{\sqrt3}2$) or ignore the quadrant sign.
+
+---
+
+### GT-182
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** From a point on level ground $40$ meters from the base of a tower, the angle of elevation to the top of the tower is $62^\circ$. To the nearest meter, what is the height of the tower?
+
+**Correct Answer:** $75$
+
+**Rationale:** $\tan62^\circ=\dfrac{h}{40}$, so $h=40\tan62^\circ\approx75.2$, which rounds to $75$.
+
+**Misconception addressed:** Students use $\sin$ or $\cos$ ($40\sin62^\circ\approx35$), or leave the calculator in radian mode.
+
+---
+
+### GT-183
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In a right triangle, the sine of one acute angle is $\dfrac35$ and the area of the triangle is $24$. What is the length of the hypotenuse?
+
+**Correct Answer:** $10$
+
+**Rationale:** The sides are $3k$, $4k$ and $5k$. The area is $\dfrac12(3k)(4k)=6k^2=24$, so $k=2$ and the hypotenuse is $5k=10$.
+
+**Misconception addressed:** Students use $3$ or $4$ as the hypotenuse, or treat the area as one leg.
+
+---
+
+### GT-184
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In a right triangle, the hypotenuse is $50$ and the cosine of an acute angle $\theta$ is $\dfrac{7}{25}$. What is the area of the triangle?
+
+**Correct Answer:** $336$
+
+**Rationale:** The adjacent leg is $50\cdot\dfrac7{25}=14$. The opposite leg is $\sqrt{50^2-14^2}=48$. The area is $\dfrac12(14)(48)=336$.
+
+**Misconception addressed:** Students use $7$ and $25$ as the legs or forget the factor $\dfrac12$.
+
+---
+
+### GT-185
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The legs of a right triangle have lengths $x$ and $x+7$, and the hypotenuse is $13$. What is the area of the triangle?
+
+**Correct Answer:** $30$
+
+**Rationale:** $x^2+(x+7)^2=169$ gives $2x^2+14x-120=0$, so $x^2+7x-60=0$ and $x=5$. The legs are $5$ and $12$, so the area is $30$.
+
+**Misconception addressed:** Students accept $x=-12$ or compute the perimeter.
+
+---
+
+### GT-186
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The diagonal of a rectangle is $26$ and the ratio of its two side lengths is $5:12$. What is the area of the rectangle?
+
+**Correct Answer:** $240$
+
+**Rationale:** The sides are $5k$ and $12k$ and the diagonal is $13k=26$, so $k=2$. The sides are $10$ and $24$ and the area is $240$.
+
+**Misconception addressed:** Students take $26$ as a side or compute the perimeter ($68$).
+
+---
+
+### GT-187
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A circle has radius $15$. An arc of the circle subtends a central angle of $72^\circ$. What is the length of the arc?
+
+(A) $12\pi$
+(B) $6\pi$
+(C) $3\pi$
+(D) $30\pi$
+
+**Correct Answer:** (B) $6\pi$
+
+**Rationale:** The arc is $\dfrac{72}{360}=\dfrac15$ of the circumference $2\pi(15)=30\pi$, so the length is $6\pi$.
+
+**Misconception addressed:** Students use the area formula or $\dfrac{72}{360}\pi r^2=45\pi$.
+
+---
+
+### GT-188
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A sector of a circle with radius $6$ has area $12\pi$. What is the measure, in degrees, of the central angle of the sector?
+
+**Correct Answer:** $120$
+
+**Rationale:** The full circle has area $36\pi$. The sector is $\dfrac{12\pi}{36\pi}=\dfrac13$ of the circle, so the angle is $\dfrac13(360^\circ)=120^\circ$.
+
+**Misconception addressed:** Students use arc-length thinking ($\dfrac{12\pi}{12\pi}$ gives $360$) or answer in radians.
+
+---
+
+### GT-189
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$x^2+y^2+10x-24y=0$$ In the $xy$-plane, the graph of the equation above is a circle. What is the diameter of the circle?
+
+**Correct Answer:** $26$
+
+**Rationale:** Complete the square: $(x+5)^2+(y-12)^2=25+144=169$. The radius is $13$, so the diameter is $26$.
+
+**Misconception addressed:** Students answer the radius ($13$) or read the constant term as $r^2$ (giving $0$).
+
+---
+
+### GT-190
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, a circle has its center on the $x$-axis and passes through the points $(0,4)$ and $(8,4)$. What is the square of the radius of the circle?
+
+**Correct Answer:** $32$
+
+**Rationale:** The center is $(h,0)$ with equal distances to both points: $h^2+16=(8-h)^2+16$, so $h=4$. Then $r^2=4^2+4^2=32$.
+
+**Misconception addressed:** Students take the center as $(4,4)$ (midpoint) giving $r=4$.
+
+---
+
+### GT-191
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, the circle $(x-2)^2+(y+1)^2=25$ passes through the point $(6,2)$. What is the slope of the line tangent to the circle at $(6,2)$?
+
+(A) $-\dfrac34$
+(B) $\dfrac43$
+(C) $-\dfrac43$
+(D) $\dfrac34$
+
+**Correct Answer:** (C) $-\dfrac43$
+
+**Rationale:** The radius to $(6,2)$ has slope $\dfrac{2-(-1)}{6-2}=\dfrac34$. The tangent is perpendicular to the radius, so its slope is $-\dfrac43$.
+
+**Misconception addressed:** Students use the radius slope itself or its negative without taking the reciprocal.
+
+---
+
+### GT-192
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A chord of a circle with radius $13$ is $5$ units from the center of the circle. What is the length of the chord?
+
+**Correct Answer:** $24$
+
+**Rationale:** The perpendicular from the center bisects the chord, forming a right triangle with hypotenuse $13$ and leg $5$. The other leg is $12$, so the chord is $2(12)=24$.
+
+**Misconception addressed:** Students answer $12$ (half the chord) or $\sqrt{169-25}$ without doubling.
+
+---
+
+### GT-193
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Points $A$ and $B$ are the endpoints of a diameter of a circle, and point $C$ is on the circle. The measure of angle $CAB$ is $28^\circ$. What is the measure, in degrees, of angle $ABC$?
+
+**Correct Answer:** $62$
+
+**Rationale:** An angle inscribed in a semicircle is a right angle, so angle $ACB=90^\circ$. Then angle $ABC=180-90-28=62^\circ$.
+
+**Misconception addressed:** Students answer $56$ (doubling) or $152$ (forgetting the right angle).
+
+---
+
+### GT-194
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Point $P$ is $10$ units from the center $O$ of a circle with radius $6$. Segments $\overline{PA}$ and $\overline{PB}$ are tangent to the circle at $A$ and $B$. What is the area of quadrilateral $PAOB$?
+
+**Correct Answer:** $48$
+
+**Rationale:** Each tangent is perpendicular to its radius, so $PA=\sqrt{100-36}=8$. Triangle $PAO$ has area $\dfrac12(8)(6)=24$, and quadrilateral $PAOB$ is two such triangles: $48$.
+
+**Misconception addressed:** Students use only one triangle ($24$) or $PA\cdot OA$ only.
+
+---
+
+### GT-195
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, a circle has center $(-3,5)$ and is tangent to the $x$-axis. Which of the following is an equation of the circle?
+
+(A) $(x+3)^2+(y-5)^2=25$
+(B) $(x+3)^2+(y-5)^2=9$
+(C) $(x+3)^2+(y-5)^2=5$
+(D) $(x-3)^2+(y+5)^2=25$
+
+**Correct Answer:** (A) $(x+3)^2+(y-5)^2=25$
+
+**Rationale:** The distance from the center to the $x$-axis is $5$, so the radius is $5$ and $r^2=25$. The equation is $(x+3)^2+(y-5)^2=25$.
+
+**Misconception addressed:** Students use the $x$-coordinate ($3$) as the radius or flip the signs of the center.
+
+---
+
+### GT-196
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, the line $y=6$ intersects the circle $x^2+y^2=100$ at two points. What is the distance between the two points?
+
+**Correct Answer:** $16$
+
+**Rationale:** Substituting: $x^2+36=100$, so $x=\pm8$. The points are $(-8,6)$ and $(8,6)$, which are $16$ units apart.
+
+**Misconception addressed:** Students give $8$ (one $x$-value) or $20$ (the diameter).
+
+---
+
+### GT-197
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** An arc of a circle has length $10\pi$ centimeters and subtends a central angle of $\dfrac{2\pi}{3}$ radians. What is the radius of the circle, in centimeters?
+
+**Correct Answer:** $15$
+
+**Rationale:** Arc length $s=r\theta$, so $r=\dfrac{10\pi}{2\pi/3}=15$.
+
+**Misconception addressed:** Students multiply instead of divide ($r=\dfrac{20\pi^2}{3}$) or treat the angle as degrees.
+
+---
+
+### GT-198
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Two concentric circles have the same center. The outer circle has radius $7$, and the area of the region between the two circles is $48\pi$. What is the radius of the inner circle?
+
+**Correct Answer:** $1$
+
+**Rationale:** The ring area is $\pi(49-r^2)=48\pi$, so $r^2=1$ and $r=1$.
+
+**Misconception addressed:** Students subtract radii ($7-48$) or use circumference.
+
+---
+
+### GT-199
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A sector of a circle has radius $12$ and a central angle of $60^\circ$. What is the perimeter of the sector?
+
+(A) $24+24\pi$
+(B) $24+4\pi$
+(C) $12+4\pi$
+(D) $4\pi$
+
+**Correct Answer:** (B) $24+4\pi$
+
+**Rationale:** The curved edge is $\dfrac{60}{360}(2\pi\cdot12)=4\pi$. The perimeter adds the two radii: $24+4\pi$.
+
+**Misconception addressed:** Students leave out the two straight edges ($4\pi$) or add only one radius.
+
+---
+
+### GT-200
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A circle has area $50\pi$. A square is inscribed in the circle so that all four vertices lie on the circle. What is the area of the square?
+
+**Correct Answer:** $100$
+
+**Rationale:** $r^2=50$, so the diameter is $2\sqrt{50}=10\sqrt2$. The diameter is the square's diagonal, so the side is $10$ and the area is $100$.
+
+**Misconception addressed:** Students use the diameter as the side or the radius as the diagonal.
+
+---
+
+### GT-201
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A right circular cylinder has volume $90\pi$ and height $10$. The lateral surface area (excluding the bases) of the cylinder is $k\pi$. What is the value of $k$?
+
+**Correct Answer:** $60$
+
+**Rationale:** $\pi r^2(10)=90\pi$ gives $r=3$. Lateral area $=2\pi r h=2\pi(3)(10)=60\pi$.
+
+**Misconception addressed:** Students include the bases ($78$) or use the wrong radius.
+
+---
+
+### GT-202
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A right circular cone has base radius $6$ and slant height $10$. The volume of the cone is $k\pi$. What is the value of $k$?
+
+**Correct Answer:** $96$
+
+**Rationale:** The height is $\sqrt{10^2-6^2}=8$. Volume $=\dfrac13\pi(36)(8)=96\pi$.
+
+**Misconception addressed:** Students use the slant height as the height ($120$) or omit the $\dfrac13$ ($288$).
+
+---
+
+### GT-203
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A sphere has surface area $144\pi$. The volume of the sphere is $k\pi$. What is the value of $k$?
+
+**Correct Answer:** $288$
+
+**Rationale:** $4\pi r^2=144\pi$ gives $r=6$. Volume $=\dfrac43\pi(6)^3=288\pi$.
+
+**Misconception addressed:** Students use $\pi r^2=144\pi$ ($r=12$) or confuse the formulas.
+
+---
+
+### GT-204
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Two similar rectangular prisms have volumes in the ratio $8:27$. The smaller prism has a surface area of $40$. What is the surface area of the larger prism?
+
+**Correct Answer:** $90$
+
+**Rationale:** The volume ratio $8:27$ means a linear ratio $2:3$. Surface areas scale by $\left(\dfrac32\right)^2=\dfrac94$, so $40\cdot\dfrac94=90$.
+
+**Misconception addressed:** Students scale the area by the volume ratio ($\dfrac{27}{8}$, giving $135$) or by the linear ratio ($60$).
+
+---
+
+### GT-205
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A rectangular box has a base that measures $6$ by $8$. The distance from one corner of the box to the opposite corner (the space diagonal) is $26$. What is the height of the box?
+
+**Correct Answer:** $24$
+
+**Rationale:** The space diagonal satisfies $6^2+8^2+h^2=26^2$, so $h^2=676-100=576$ and $h=24$.
+
+**Misconception addressed:** Students use $\sqrt{26^2-8^2}$ or the base diagonal ($10$) with only $2$D reasoning.
+
+---
+
+### GT-206
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A rectangular tank has a base that is $40$ centimeters by $30$ centimeters. A solid cube with edge $12$ centimeters is placed in the tank and sinks to the bottom, fully under water. By how many centimeters does the water level rise?
+
+**Correct Answer:** $1.44$
+
+**Rationale:** The cube displaces its volume, $12^3=1728$ cm$^3$. The rise is $\dfrac{1728}{40\cdot30}=1.44$ cm.
+
+**Misconception addressed:** Students divide by the cube's base area ($144$) or use the tank volume.
+
+---
+
+### GT-207
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A square pyramid has a base with side length $12$ and a height of $8$. What is the lateral surface area of the pyramid (the four triangular faces, excluding the base)?
+
+**Correct Answer:** $240$
+
+**Rationale:** The slant height of each face is $\sqrt{6^2+8^2}=10$. Each face has area $\dfrac12(12)(10)=60$, so four faces give $240$.
+
+**Misconception addressed:** Students use the pyramid height ($8$) as the slant height ($192$).
+
+---
+
+### GT-208
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The space diagonal of a cube (the segment joining opposite vertices) has length $9\sqrt3$. What is the volume of the cube?
+
+**Correct Answer:** $729$
+
+**Rationale:** For edge $e$ the space diagonal is $e\sqrt3$, so $e=9$ and the volume is $9^3=729$.
+
+**Misconception addressed:** Students use the face diagonal $e\sqrt2$ or the edge as the diagonal.
+
+---
+
+### GT-209
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A box has interior dimensions $10$ cm by $12$ cm by $16$ cm. Cubes with edge length $2$ cm are packed into the box with no gaps. How many cubes fit?
+
+**Correct Answer:** $240$
+
+**Rationale:** Along each dimension: $\dfrac{10}{2}=5$, $\dfrac{12}{2}=6$, $\dfrac{16}{2}=8$. The total is $5\cdot6\cdot8=240$.
+
+**Misconception addressed:** Students divide volumes by $2$ instead of by $2^3=8$ ($960$).
+
+---
+
+### GT-210
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A cone and a cylinder each have radius $5$ and height $12$. The cone is filled with water and the water is poured into the cylinder, repeatedly, until the cylinder is full. How many full cones of water does it take to fill the cylinder?
+
+**Correct Answer:** $3$
+
+**Rationale:** The cylinder's volume is $\pi(25)(12)=300\pi$ and the cone's is $\dfrac13$ of that, $100\pi$. So it takes $3$ cones.
+
+**Misconception addressed:** Students answer $\dfrac13$ or compare surface areas.
+
+---
+
+### GT-211
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The radius of a sphere is increased by $20\%$. By what percent does the volume of the sphere increase? (Enter as a decimal.)
+
+**Correct Answer:** $72.8$
+
+**Rationale:** Volume scales with the cube of the radius: $(1.2)^3=1.728$, an increase of $72.8\%$.
+
+**Misconception addressed:** Students give $20\%$ or $44\%$ (squared).
+
+---
+
+### GT-212
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A solid is formed by placing a hemisphere of radius $3$ on top of a right circular cylinder of radius $3$ and height $7$. The volume of the solid is $k\pi$. What is the value of $k$?
+
+**Correct Answer:** $81$
+
+**Rationale:** Cylinder: $\pi(9)(7)=63\pi$. Hemisphere: $\dfrac23\pi(27)=18\pi$. Total $81\pi$.
+
+**Misconception addressed:** Students use a full sphere ($36\pi$, total $99\pi$) or forget the cylinder.
+
+---
+
+### GT-213
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Two parallel lines are cut by a transversal. A pair of alternate interior angles measure $(3x+10)^\circ$ and $(5x-30)^\circ$. What is the measure, in degrees, of each of these angles?
+
+**Correct Answer:** $70$
+
+**Rationale:** Alternate interior angles are equal: $3x+10=5x-30$, so $x=20$ and each angle is $3(20)+10=70^\circ$.
+
+**Misconception addressed:** Students treat the angles as supplementary or answer $x=20$.
+
+---
+
+### GT-214
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** An exterior angle of a triangle measures $(7x-4)^\circ$. The two remote interior angles measure $(2x+15)^\circ$ and $(3x+9)^\circ$. What is the measure, in degrees, of the exterior angle?
+
+**Correct Answer:** $94$
+
+**Rationale:** An exterior angle equals the sum of the two remote interior angles: $7x-4=5x+24$, so $x=14$ and the exterior angle is $7(14)-4=94^\circ$.
+
+**Misconception addressed:** Students use the angle sum $180$ for the three listed angles or give $x$.
+
+---
+
+### GT-215
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In an isosceles triangle, the two base angles each measure $(x+20)^\circ$ and the vertex angle measures $(4x-10)^\circ$. What is the measure, in degrees, of the vertex angle?
+
+**Correct Answer:** $90$
+
+**Rationale:** The angles sum to $180$: $(4x-10)+2(x+20)=180$, so $6x+30=180$ and $x=25$. The vertex angle is $4(25)-10=90^\circ$.
+
+**Misconception addressed:** Students give $x=25$ or forget there are two base angles.
+
+---
+
+### GT-216
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In triangle $ABC$, point $D$ lies on $\overline{AB}$ and point $E$ lies on $\overline{AC}$ such that $\overline{DE}$ is parallel to $\overline{BC}$. If $AD=6$, $DB=4$ and $AE=9$, what is the length of $\overline{EC}$?
+
+**Correct Answer:** $6$
+
+**Rationale:** Since $DE\parallel BC$, $\dfrac{AD}{AB}=\dfrac{AE}{AC}$: $\dfrac{6}{10}=\dfrac{9}{AC}$, so $AC=15$ and $EC=15-9=6$.
+
+**Misconception addressed:** Students answer $AC=15$ or set $\dfrac{AD}{DB}=\dfrac{AE}{AC}$.
+
+---
+
+### GT-217
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In triangle $ABC$, $AB=12$ and $AC=18$. The bisector of angle $A$ meets $\overline{BC}$ at $D$, and $BC=20$. What is the length of the longer of the two segments $BD$ and $DC$?
+
+**Correct Answer:** $12$
+
+**Rationale:** By the angle bisector theorem $\dfrac{BD}{DC}=\dfrac{12}{18}=\dfrac23$, so $BD=8$ and $DC=12$. The longer segment is $12$.
+
+**Misconception addressed:** Students split $20$ in half or assign the larger part to the shorter side.
+
+---
+
+### GT-218
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Each interior angle of a regular polygon measures $140^\circ$. How many sides does the polygon have?
+
+**Correct Answer:** $9$
+
+**Rationale:** Each exterior angle is $40^\circ$, and the exterior angles sum to $360^\circ$, so $n=\dfrac{360}{40}=9$.
+
+**Misconception addressed:** Students use $\dfrac{360}{140}$ or $\dfrac{180}{140}$.
+
+---
+
+### GT-219
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A trapezoid has parallel sides of length $10$ and $24$. A segment joins the midpoints of the two non-parallel sides. What is the length of this segment?
+
+(A) $34$
+(B) $14$
+(C) $7$
+(D) $17$
+
+**Correct Answer:** (D) $17$
+
+**Rationale:** The midsegment of a trapezoid is parallel to the bases and equals their average: $\dfrac{10+24}{2}=17$.
+
+**Misconception addressed:** Students subtract ($14$) or add ($34$) the bases.
+
+---
+
+### GT-220
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Two sides of a triangle have lengths $7$ and $12$. The third side has an integer length. How many different integer lengths are possible for the third side?
+
+**Correct Answer:** $13$
+
+**Rationale:** The third side $t$ satisfies $12-7<t<12+7$, i.e. $5<t<19$. The integers are $6$ through $18$: thirteen values.
+
+**Misconception addressed:** Students include the endpoints ($15$) or subtract wrongly ($t<5$).
+
+---
+
+### GT-221
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, a triangle has vertices $(0,0)$, $(8,0)$ and $(3,k)$, where $k>0$. The area of the triangle is $20$. What is the value of $k$?
+
+**Correct Answer:** $5$
+
+**Rationale:** The base along the $x$-axis is $8$ and the height is $k$, so $\dfrac12(8)k=20$ and $k=5$. The $x$-coordinate $3$ does not matter.
+
+**Misconception addressed:** Students use $3$ as the base or compute $\dfrac12(3)k=20$.
+
+---
+
+### GT-222
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In triangle $ABC$, $AB=AC$ and angle $A$ measures $40^\circ$. Point $D$ lies on $\overline{AC}$ such that $BD=BC$. What is the measure, in degrees, of angle $ABD$?
+
+**Correct Answer:** $30$
+
+**Rationale:** The base angles of triangle $ABC$ are $70^\circ$. In isosceles triangle $BCD$ with $BD=BC$, angle $BDC=\angle C=70^\circ$, so angle $CBD=40^\circ$. Then angle $ABD=70-40=30^\circ$.
+
+**Misconception addressed:** Students assume $BD$ bisects angle $B$ ($35$) or treat angle $BDC$ as $40$.
+
+---
+
+### 2.35 Gap-Closing Batch 5 — Algebra Top-Up (Linear Equations, Lines, Linear Functions, Inequalities, Systems) (48 items — A-245 to A-292)
+
+Figure-free items; all answers verified programmatically.
+
+### A-245
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Pump A can fill an empty tank in $6$ hours working alone. Pump B can fill the same tank in $9$ hours working alone. How many hours will it take the two pumps, working together, to fill the empty tank? (Enter as a decimal.)
+
+**Correct Answer:** $3.6$
+
+**Rationale:** In one hour the pumps fill $\dfrac16+\dfrac19=\dfrac5{18}$ of the tank. The time is $\dfrac{18}{5}=3.6$ hours.
+
+**Misconception addressed:** Students average the times ($7.5$) or add them ($15$).
+
+---
+
+### A-246
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** When $3$ is subtracted from $5$ times a number $n$, the result is $1$ less than twice the sum of $n$ and $8$. What is the value of $n$?
+
+**Correct Answer:** $6$
+
+**Rationale:** $5n-3=2(n+8)-1=2n+15$, so $3n=18$ and $n=6$.
+
+**Misconception addressed:** Students write $2n+8-1$ (dropping the parentheses) and get $n=\dfrac{12}{3}\ldots$ a different value.
+
+---
+
+### A-247
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The three sides of a triangle have lengths $x$, $x+3$ and $2x-1$. The perimeter of the triangle is $38$. What is the length of the longest side?
+
+**Correct Answer:** $17$
+
+**Rationale:** $x+(x+3)+(2x-1)=4x+2=38$, so $x=9$. The sides are $9$, $12$ and $17$, and the longest is $17$.
+
+**Misconception addressed:** Students answer $x=9$ or the middle side $x+3$.
+
+---
+
+### A-248
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $40\%$ of a number $n$ equals $25\%$ of $64$. What is the value of $n$?
+
+**Correct Answer:** $40$
+
+**Rationale:** $0.4n=0.25(64)=16$, so $n=40$.
+
+**Misconception addressed:** Students find $25\%$ of $64$ and stop ($16$).
+
+---
+
+### A-249
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac{5x-2}{3}=7$$ What is the value of $10x-4$?
+
+**Correct Answer:** $42$
+
+**Rationale:** Multiply by $3$: $5x-2=21$. Then $10x-4=2(5x-2)=42$. No need to find $x$.
+
+**Misconception addressed:** Students solve $x=\dfrac{23}{5}$ and make an arithmetic slip, or answer $21$.
+
+---
+
+### A-250
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=2x+b$, where $b$ is a constant. If $f(f(1))=13$, what is the value of $b$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $f(1)=2+b$. Then $f(f(1))=2(2+b)+b=4+3b=13$, so $b=3$.
+
+**Misconception addressed:** Students compute $f(f(1))=2f(1)+b$ without substituting $f(1)$ correctly, or give $f(1)$.
+
+---
+
+### A-251
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The point $(k,2k)$ lies on the line $3x-2y=14$ in the $xy$-plane. What is the value of $k$?
+
+**Correct Answer:** $-14$
+
+**Rationale:** Substitute: $3k-2(2k)=14$, so $-k=14$ and $k=-14$.
+
+**Misconception addressed:** Students treat $(k,2k)$ as $x=k$, $y=2$ or lose the sign.
+
+---
+
+### A-252
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line in the $xy$-plane passes through $(1,2)$, and its $x$-intercept is twice its $y$-intercept. What is the $y$-intercept of the line? (Enter as a fraction or decimal.)
+
+**Correct Answer:** $\dfrac52$
+
+**Rationale:** Let the $y$-intercept be $b$, so the $x$-intercept is $2b$ and $\dfrac{x}{2b}+\dfrac yb=1$. Substituting $(1,2)$: $\dfrac1{2b}+\dfrac2b=\dfrac5{2b}=1$, so $b=\dfrac52$.
+
+**Misconception addressed:** Students assume the intercepts are $(2,0)$ and $(0,1)$ or use $b=2$.
+
+---
+
+### A-253
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The lines $2x+3y=12$ and $x-y=1$ intersect at a point. The two lines and the $y$-axis form a triangle. What is the area of the triangle? (Enter as a decimal.)
+
+**Correct Answer:** $7.5$
+
+**Rationale:** The intersection is $(3,2)$. The $y$-intercepts are $4$ and $-1$, so the base along the $y$-axis is $5$ and the height is $3$. Area $=\dfrac12(5)(3)=7.5$.
+
+**Misconception addressed:** Students use the $x$-intercepts or the wrong base ($3$).
+
+---
+
+### A-254
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The segment with endpoints $(2,-3)$ and $(8,9)$ has its midpoint on the line $y=mx-1$ in the $xy$-plane. What is the value of $m$? (Enter as a fraction.)
+
+**Correct Answer:** $\dfrac45$
+
+**Rationale:** The midpoint is $\left(\dfrac{2+8}2,\dfrac{-3+9}2\right)=(5,3)$. Then $3=5m-1$, so $m=\dfrac45$.
+
+**Misconception addressed:** Students add instead of averaging, or use an endpoint.
+
+---
+
+### A-255
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Points $A(1,2)$ and $B(7,6)$ are given in the $xy$-plane. Which of the following is an equation of the line that is perpendicular to $\overline{AB}$ and passes through its midpoint?
+
+(A) $2x+3y=20$
+(B) $3x-2y=4$
+(C) $3x+2y=20$
+(D) $2x-3y=-4$
+
+**Correct Answer:** (C) $3x+2y=20$
+
+**Rationale:** The midpoint is $(4,4)$ and the slope of $AB$ is $\dfrac23$, so the perpendicular slope is $-\dfrac32$: $y-4=-\dfrac32(x-4)$, i.e. $3x+2y=20$.
+
+**Misconception addressed:** Students use the slope $\dfrac23$ itself (the line through the midpoint parallel to $AB$) or the wrong sign.
+
+---
+
+### A-256
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The line through the points $(a,3)$ and $(5,a)$ has slope $-\dfrac12$. What is the value of $a$?
+
+**Correct Answer:** $1$
+
+**Rationale:** $\dfrac{a-3}{5-a}=-\dfrac12$, so $2a-6=a-5$ and $a=1$. Check: the points $(1,3)$ and $(5,1)$ have slope $\dfrac{-2}{4}=-\dfrac12$.
+
+**Misconception addressed:** Students write the slope as $\dfrac{5-a}{a-3}$ (inverted).
+
+---
+
+### A-257
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A print shop charges a per-copy price plus a flat setup fee. An order of $3$ copies costs $\$19$ and an order of $8$ copies costs $\$39$. What is the cost, in dollars, of an order of $12$ copies?
+
+**Correct Answer:** $55$
+
+**Rationale:** The per-copy price is $\dfrac{39-19}{8-3}=4$, so the setup fee is $19-12=7$. Twelve copies cost $4(12)+7=55$.
+
+**Misconception addressed:** Students find the unit price from $\dfrac{39}{8}$ or ignore the setup fee.
+
+---
+
+### A-258
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The lines $y=2x-3$ and $y=-x+6$ intersect at the point $P$. A third line passes through $P$ and is perpendicular to $y=2x-3$. What is the $y$-intercept of the third line? (Enter as a fraction or decimal.)
+
+**Correct Answer:** $\dfrac92$
+
+**Rationale:** Solve $2x-3=-x+6$: $x=3$, $y=3$, so $P=(3,3)$. The perpendicular slope is $-\dfrac12$, so $y-3=-\dfrac12(x-3)$ and $y=-\dfrac12x+\dfrac92$.
+
+**Misconception addressed:** Students use the wrong perpendicular slope ($-2$) or use the second line for the intercept.
+
+---
+
+### A-259
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A line in the $xy$-plane passes through $(2,5)$ and has a slope equal to its $y$-intercept. What is the $x$-coordinate of its $x$-intercept?
+
+**Correct Answer:** $-1$
+
+**Rationale:** The line is $y=mx+m=m(x+1)$. Through $(2,5)$: $5=3m$, so $m=\dfrac53$. Setting $y=0$ gives $x+1=0$, so $x=-1$ (for any nonzero slope).
+
+**Misconception addressed:** Students try to find the intercept using the point $(2,5)$ only.
+
+---
+
+### A-260
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3x-2y=12$$ Line $\ell$ in the $xy$-plane is defined by the equation above. Line $m$ has the same $y$-intercept as $\ell$ and is perpendicular to $\ell$. What is the $x$-coordinate of the $x$-intercept of $m$?
+
+**Correct Answer:** $-9$
+
+**Rationale:** Line $\ell$: $y=\dfrac32x-6$, so its $y$-intercept is $-6$. Line $m$ has slope $-\dfrac23$ and equation $y=-\dfrac23x-6$. Setting $y=0$ gives $x=-9$.
+
+**Misconception addressed:** Students use the parallel slope $\dfrac32$ ($x=4$) or the intercept $-6$ itself.
+
+---
+
+### A-261
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=3x-7$. For what value of $x$ is $f(x)=5$?
+
+**Correct Answer:** $4$
+
+**Rationale:** $3x-7=5$, so $x=4$.
+
+**Misconception addressed:** Students evaluate $f(5)=8$ instead of solving $f(x)=5$.
+
+---
+
+### A-262
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $g$ is defined by $g(x)=ax+b$, where $a$ and $b$ are constants and $a>0$. If $g(g(x))=9x+8$ for all $x$, what is the value of $g(1)$?
+
+**Correct Answer:** $5$
+
+**Rationale:** $g(g(x))=a(ax+b)+b=a^2x+ab+b$. So $a^2=9$, giving $a=3$ (since $a>0$), and $ab+b=4b=8$, so $b=2$. Then $g(1)=3+2=5$.
+
+**Misconception addressed:** Students match only the $x$-coefficient ($a=9$) or take $a=-3$.
+
+---
+
+### A-263
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ satisfies $f(x+3)=2x+1$ for all real numbers $x$. What is the value of $f(5)$?
+
+**Correct Answer:** $5$
+
+**Rationale:** Since $5=2+3$, set $x=2$: $f(5)=2(2)+1=5$.
+
+**Misconception addressed:** Students substitute $x=5$ into $2x+1$ and get $11$.
+
+---
+
+### A-264
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The function $f$ satisfies $f(2x-1)=6x+4$ for all real numbers $x$. What is the value of $f(7)$?
+
+**Correct Answer:** $28$
+
+**Rationale:** Set $2x-1=7$, so $x=4$, and $f(7)=6(4)+4=28$.
+
+**Misconception addressed:** Students substitute $x=7$ ($46$) or solve $2x-1=28$.
+
+---
+
+### A-265
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A tank holds $480$ liters of water and drains at a constant rate. The function $N(t)=480-12t$ gives the number of liters in the tank $t$ minutes after draining begins. Which of the following is the best interpretation of the $t$-intercept of the graph of $y=N(t)$?
+
+(A) The tank is completely empty $40$ minutes after draining begins.
+(B) The tank loses $12$ liters every minute.
+(C) The tank is half empty $20$ minutes after draining begins.
+(D) The tank held $480$ liters when draining began.
+
+**Correct Answer:** (A) The tank is completely empty $40$ minutes after draining begins.
+
+**Rationale:** The $t$-intercept is where $N(t)=0$: $480-12t=0$, so $t=40$. The tank is empty after $40$ minutes. The statement about $12$ liters per minute is the slope, and the statement about $480$ liters is the $N$-intercept.
+
+**Misconception addressed:** Students confuse the $t$-intercept with the slope or the $N$-intercept.
+
+---
+
+### A-266
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** An employee earns $\$18$ per hour for the first $40$ hours worked in a week and $1.5$ times that rate for each hour beyond $40$. How much, in dollars, does the employee earn in a week in which $46$ hours are worked?
+
+**Correct Answer:** $882$
+
+**Rationale:** Regular pay: $40(18)=720$. Overtime rate: $1.5(18)=27$, so $6$ overtime hours earn $162$. Total $720+162=882$.
+
+**Misconception addressed:** Students pay all $46$ hours at the overtime rate or add $1.5$ dollars.
+
+---
+
+### A-267
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The formula $F=1.8C+32$ converts a temperature of $C$ degrees Celsius to $F$ degrees Fahrenheit. At what temperature, in degrees, are the two scales equal?
+
+**Correct Answer:** $-40$
+
+**Rationale:** Set $F=C$: $C=1.8C+32$, so $-0.8C=32$ and $C=-40$.
+
+**Misconception addressed:** Students solve $1.8C+32=0$ ($-17.8$) or give $32$.
+
+---
+
+### A-268
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A machine is worth $\$24{,}000$ when new. Its value decreases linearly, and after $3$ years it is worth $\$16{,}500$. After how many years from new will the machine be worth $\$4{,}000$?
+
+**Correct Answer:** $8$
+
+**Rationale:** The rate is $\dfrac{24000-16500}{3}=2500$ per year. Solve $24000-2500t=4000$: $t=8$.
+
+**Misconception addressed:** Students use the value after $3$ years as the starting value or give $t=3\cdot\dfrac{4000}{...}$.
+
+---
+
+### A-269
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The functions $f$ and $g$ are defined by $f(x)=2x-8$ and $g(x)=-x+k$, where $k$ is a constant. The graphs of $y=f(x)$ and $y=g(x)$ have the same $x$-intercept. What is the value of $k$?
+
+**Correct Answer:** $4$
+
+**Rationale:** The $x$-intercept of $f$ is $x=4$. Then $g(4)=0$ gives $-4+k=0$, so $k=4$.
+
+**Misconception addressed:** Students equate the $y$-intercepts ($-8=k$).
+
+---
+
+### A-270
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The functions $f$ and $g$ are defined by $f(x)=3x+1$ and $g(x)=ax-7$, where $a$ is a constant. The function $h(x)=f(x)+g(x)$ has the same value for every $x$. What is the value of $a$?
+
+**Correct Answer:** $-3$
+
+**Rationale:** $h(x)=(3+a)x-6$ is constant only if $3+a=0$, so $a=-3$.
+
+**Misconception addressed:** Students set $h(x)=0$ or equate $f$ and $g$.
+
+---
+
+### A-271
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The table shows values of the linear function $f$.
+
+| $x$ | $0$ | $2$ | $4$ |
+|---|---|---|---|
+| $f(x)$ | $5$ | $11$ | $17$ |
+
+The function $g$ is defined by $g(x)=f(2x)$. What is the value of $g(3)$?
+
+**Correct Answer:** $23$
+
+**Rationale:** The slope is $\dfrac{11-5}{2}=3$ and $f(0)=5$, so $f(x)=3x+5$. Then $g(3)=f(6)=23$.
+
+**Misconception addressed:** Students read $g(3)$ as $2f(3)=2(14)=28$.
+
+---
+
+### A-272
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ satisfies $f(3)+f(7)=20$. What is the value of $f(5)$?
+
+**Correct Answer:** $10$
+
+**Rationale:** For a linear function, $f(5)$ is the average of $f(3)$ and $f(7)$ because $5$ is the midpoint of $3$ and $7$. So $f(5)=\dfrac{20}{2}=10$.
+
+**Misconception addressed:** Students assume $f(5)=\dfrac{20}{5}$ or $f(3)=f(7)=10$ and then $f(5)=5$.
+
+---
+
+### A-273
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Which of the following describes all values of $x$ that are within $4$ units of $9$ on the number line?
+
+(A) $x\le5$ or $x\ge13$
+(B) $-5\le x\le13$
+(C) $4\le x\le9$
+(D) $5\le x\le13$
+
+**Correct Answer:** (D) $5\le x\le13$
+
+**Rationale:** Within $4$ units of $9$ means $|x-9|\le4$, so $-4\le x-9\le4$ and $5\le x\le13$.
+
+**Misconception addressed:** Students use $x\le5$ or $x\ge13$ (the 'farther than' case) or subtract from $4$ instead of $9$.
+
+---
+
+### A-274
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** What is the greatest integer $x$ that satisfies $5-2x\ge3x-10$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $15\ge5x$, so $x\le3$. The greatest integer is $3$.
+
+**Misconception addressed:** Students divide by $-5$ and flip the direction incorrectly.
+
+---
+
+### A-275
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** How many integers $x$ satisfy $|2x-6|<8$?
+
+**Correct Answer:** $7$
+
+**Rationale:** $-8<2x-6<8$, so $-2<2x<14$ and $-1<x<7$. The integers are $0$ through $6$: seven values.
+
+**Misconception addressed:** Students include the endpoints $-1$ and $7$ ($9$) or forget the lower bound.
+
+---
+
+### A-276
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$y\le-x+6$$ $$y\ge x-2$$ $$x\ge0$$ The system of inequalities above is graphed in the $xy$-plane. What is the area of the region of solutions?
+
+**Correct Answer:** $16$
+
+**Rationale:** The boundary lines meet at $(4,2)$. The region is a triangle with vertices $(0,-2)$, $(0,6)$ and $(4,2)$. Its base on the $y$-axis is $8$ and its height is $4$, so the area is $\dfrac12(8)(4)=16$.
+
+**Misconception addressed:** Students use the wrong base ($6$) or forget the $x\ge0$ boundary.
+
+---
+
+### A-277
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A bakery makes cakes, which earn a profit of $\$10$ each, and pies, which earn a profit of $\$8$ each. A cake needs $3$ hours of oven time and a pie needs $2$ hours. The oven is available for at most $24$ hours, and the bakery can make at most $8$ pies. If the bakery makes only whole cakes and pies, what is the greatest possible total profit, in dollars?
+
+**Correct Answer:** $88$
+
+**Rationale:** Maximise $10c+8p$ with $3c+2p\le24$ and $p\le8$. Checking the corner cases: $p=8$, $c=2$ gives $84$; $p=7$, $c=3$ gives $86$; $p=6$, $c=4$ gives $88$; $p=5$, $c=4$ gives $80$; $p=4$, $c=5$ gives $82$. The greatest is $88$.
+
+**Misconception addressed:** Students take the maximum number of pies ($8$) and then fill with cakes ($84$).
+
+---
+
+### A-278
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** What is the sum of all integers $x$ that satisfy both $3x-7>2$ and $2x+5\le19$?
+
+**Correct Answer:** $22$
+
+**Rationale:** $3x>9$ gives $x>3$, and $2x\le14$ gives $x\le7$. The integers are $4,5,6,7$, with sum $22$.
+
+**Misconception addressed:** Students include $3$ (treating $>$ as $\ge$) or exclude $7$.
+
+---
+
+### A-279
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, the point $(2,3)$ is a solution to the inequality $y>ax-1$, where $a$ is a constant. Which of the following could be the value of $a$?
+
+(A) $4$
+(B) $1$
+(C) $2$
+(D) $3$
+
+**Correct Answer:** (B) $1$
+
+**Rationale:** Substitute: $3>2a-1$, so $a<2$. Only $a=1$ satisfies this; $a=2$ gives $3>3$, which is false.
+
+**Misconception addressed:** Students use $\ge$ and accept $a=2$.
+
+---
+
+### A-280
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** What is the least positive integer $x$ that satisfies $|3x-1|\ge11$?
+
+**Correct Answer:** $4$
+
+**Rationale:** $|3x-1|\ge11$ means $3x-1\ge11$ or $3x-1\le-11$. The first gives $x\ge4$; the second gives $x\le-\dfrac{10}{3}$, which has no positive integers. The least positive integer is $4$.
+
+**Misconception addressed:** Students pick $3$ (from $3x-1\ge8$) or use $|3x-1|\le11$.
+
+---
+
+### A-281
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac x3-1<\frac{x+2}{4}$$ What is the greatest integer $x$ that satisfies the inequality above?
+
+**Correct Answer:** $17$
+
+**Rationale:** Multiply by $12$: $4x-12<3x+6$, so $x<18$. The greatest integer is $17$.
+
+**Misconception addressed:** Students answer $18$ (using $\le$) or clear fractions incorrectly.
+
+---
+
+### A-282
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$x+y=10$$ $$y+z=14$$ $$x+z=12$$ The system of equations above has solution $(x,y,z)$. What is the value of $x+y+z$?
+
+**Correct Answer:** $18$
+
+**Rationale:** Add all three equations: $2(x+y+z)=36$, so $x+y+z=18$. (The solution is $x=4$, $y=6$, $z=8$.)
+
+**Misconception addressed:** Students solve each variable separately and make an arithmetic slip, or add only two equations ($12$ or $13$).
+
+---
+
+### A-283
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The digits of a two-digit positive integer add up to $11$. If the digits are reversed, the new number is $27$ greater than the original number. What is the original number?
+
+**Correct Answer:** $47$
+
+**Rationale:** Let the number be $10a+b$. Then $a+b=11$ and $(10b+a)-(10a+b)=9(b-a)=27$, so $b-a=3$. Therefore $a=4$ and $b=7$, and the number is $47$.
+
+**Misconception addressed:** Students answer the reversed number ($74$) or reverse the roles of $a$ and $b$.
+
+---
+
+### A-284
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A jar contains $35$ coins, all nickels and dimes. The total value of the coins is $\$2.60$. How many dimes are in the jar?
+
+**Correct Answer:** $17$
+
+**Rationale:** Let $n$ be nickels and $d$ dimes: $n+d=35$ and $5n+10d=260$. Then $5(35-d)+10d=260$, so $175+5d=260$ and $d=17$.
+
+**Misconception addressed:** Students answer the number of nickels ($18$) or use dollars and cents inconsistently.
+
+---
+
+### A-285
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A person invests a total of $\$8{,}000$ in two accounts. One earns $5\%$ simple interest per year and the other earns $7\%$ simple interest per year. After one year the total interest is $\$490$. How much, in dollars, was invested at $5\%$?
+
+**Correct Answer:** $3500$
+
+**Rationale:** Let $x$ be invested at $5\%$: $0.05x+0.07(8000-x)=490$. So $560-0.02x=490$ and $x=3500$.
+
+**Misconception addressed:** Students answer the amount at $7\%$ ($4500$).
+
+---
+
+### A-286
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Two trains start at the same time from stations $360$ kilometers apart and travel toward each other on parallel tracks, meeting after $2.5$ hours. One train is $20$ kilometers per hour faster than the other. What is the speed, in kilometers per hour, of the faster train?
+
+**Correct Answer:** $82$
+
+**Rationale:** The combined speed is $\dfrac{360}{2.5}=144$ km/h. With speeds $v$ and $v-20$: $2v-20=144$, so $v=82$.
+
+**Misconception addressed:** Students answer $62$ (the slower train) or $72$ (half of $144$).
+
+---
+
+### A-287
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$y=2x-1$$ $$3x-2y=-4$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $x$?
+
+**Correct Answer:** $6$
+
+**Rationale:** Substitute: $3x-2(2x-1)=-4$, so $-x+2=-4$ and $x=6$.
+
+**Misconception addressed:** Students distribute $-2$ incorrectly ($3x-4x-1$).
+
+---
+
+### A-288
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A shop mixes nuts that cost $\$12$ per kilogram with nuts that cost $\$18$ per kilogram to make $30$ kilograms of a mixture that costs $\$14$ per kilogram. How many kilograms of the $\$18$ nuts are in the mixture?
+
+**Correct Answer:** $10$
+
+**Rationale:** Let $x$ and $y$ be the kilograms: $x+y=30$ and $12x+18y=14(30)=420$. Then $12(30-y)+18y=420$, so $6y=60$ and $y=10$.
+
+**Misconception addressed:** Students answer the cheaper nuts ($20$) or average the prices.
+
+---
+
+### A-289
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$y=3x+c$$ $$y=-2x+8$$ In the system of equations above, $c$ is a constant. For which of the following values of $c$ is the solution $(x,y)$ in the second quadrant (where $x<0$ and $y>0$)?
+
+(A) $c=-2$
+(B) $c=4$
+(C) $c=12$
+(D) $c=8$
+
+**Correct Answer:** (C) $c=12$
+
+**Rationale:** Setting $3x+c=-2x+8$ gives $x=\dfrac{8-c}5$. The solution has $x<0$ only when $c>8$. For $c=12$: $x=-\dfrac45$ and $y=-2\left(-\dfrac45\right)+8=9.6>0$. For $c=8$: $x=0$. For $c=4$ and $c=-2$: $x>0$.
+
+**Misconception addressed:** Students allow $x=0$ (which is on the axis, not in a quadrant).
+
+---
+
+### A-290
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** If $(x,y)$ is the solution to the system $2x+y=13$ and $x+3y=14$, what is the value of $x-y$?
+
+**Correct Answer:** $2$
+
+**Rationale:** From the first equation $y=13-2x$. Then $x+3(13-2x)=14$, so $-5x=-25$ and $x=5$, $y=3$. Therefore $x-y=2$.
+
+**Misconception addressed:** Students add the equations ($3x+4y=27$) and stop, or swap $x$ and $y$ ($-2$).
+
+---
+
+### A-291
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac23x+\frac12y=7$$ $$x-\frac14y=2$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $y$? (Enter as a decimal.)
+
+**Correct Answer:** $8.5$
+
+**Rationale:** Multiply the first equation by $6$: $4x+3y=42$. Multiply the second by $4$: $4x-y=8$. Subtract: $4y=34$, so $y=8.5$.
+
+**Misconception addressed:** Students clear fractions inconsistently or answer $x$ ($4.125$).
+
+---
+
+### A-292
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$x-2y=5$$ $$2x-4y=c$$ In the system of equations above, $c$ is a constant. For which value of $c$ does the system have infinitely many solutions?
+
+(A) $10$
+(B) $5$
+(C) $-10$
+(D) $9$
+
+**Correct Answer:** (A) $10$
+
+**Rationale:** Multiplying the first equation by $2$ gives $2x-4y=10$. The equations describe the same line exactly when $c=10$.
+
+**Misconception addressed:** Students keep $c=5$ (not scaling the right-hand side).
+
+---
+
+### 2.36 Gap-Closing Batch 6 — Deduplicated Algebra Top-Up (Linear Equations, Lines, Linear Functions, Inequalities, Systems) (20 items — A-293 to A-312)
+
+Each item was screened against the whole bank for repeated wording, numbers and trick archetype; near-duplicates were discarded before inclusion.
+
+### A-293
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** In the equation $kx-7=2x+5$, $k$ is a constant. If $x=3$ is the solution, what is the value of $k$?
+
+**Correct Answer:** $6$
+
+**Rationale:** Substitute $x=3$: $3k-7=11$, so $3k=18$ and $k=6$.
+
+**Misconception addressed:** Students solve for $x$ in terms of $k$ first, or forget to evaluate the right side at $x=3$ ($2\cdot3+5=11$).
+
+---
+
+### A-294
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Cyclist A leaves a town riding at a constant $12$ kilometers per hour. One hour later, cyclist B leaves the same town on the same road at a constant $18$ kilometers per hour. How many hours after cyclist B starts does B catch up with A?
+
+**Correct Answer:** $2$
+
+**Rationale:** At time $t$ hours after B starts, A has ridden for $t+1$ hours. They meet when $12(t+1)=18t$, so $12=6t$ and $t=2$.
+
+**Misconception addressed:** Students measure time from A's start ($t=3$) or forget A's one-hour head start.
+
+---
+
+### A-295
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The points $(-2,1)$, $(1,k)$ and $(7,-11)$ lie on the same line in the $xy$-plane. What is the value of $k$?
+
+**Correct Answer:** $-3$
+
+**Rationale:** The slope between the outer points is $\dfrac{-11-1}{7-(-2)}=-\dfrac43$. Moving from $x=-2$ to $x=1$ is $3$ units, so $k=1+3\left(-\dfrac43\right)=-3$.
+
+**Misconception addressed:** Students use the midpoint idea ($k$ halfway between $1$ and $-11$) even though $x=1$ is not halfway between $-2$ and $7$.
+
+---
+
+### A-296
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The graph of $5x+12y=60$ in the $xy$-plane crosses the $x$-axis at point $P$ and the $y$-axis at point $Q$. What is the distance between $P$ and $Q$?
+
+(A) $\sqrt{119}$
+(B) $17$
+(C) $13$
+(D) $60$
+
+**Correct Answer:** (C) $13$
+
+**Rationale:** Setting $y=0$ gives $P=(12,0)$ and setting $x=0$ gives $Q=(0,5)$. Then $PQ=\sqrt{12^2+5^2}=13$.
+
+**Misconception addressed:** Students add the intercepts ($12+5=17$) instead of applying the distance formula.
+
+---
+
+### A-297
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A ride-share charges a base fare of $\$3$ plus $\$0.40$ for every $\dfrac15$ of a mile traveled. What is the fare, in dollars, for a trip of $4.5$ miles? (Ignore the dollar sign when entering your answer.)
+
+**Correct Answer:** $12$
+
+**Rationale:** There are $5$ fifths in each mile, so the charge is $\$0.40\cdot5=\$2$ per mile. The fare is $3+2(4.5)=12$ dollars.
+
+**Misconception addressed:** Students apply $\$0.40$ per mile and get $3+0.4(4.5)=4.80$.
+
+---
+
+### A-298
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The functions $f(x)=3x+2$ and $g(x)=-x+14$ are graphed in the $xy$-plane and intersect at the point $(a,b)$. What is the value of $a+b$?
+
+**Correct Answer:** $14$
+
+**Rationale:** Setting $3x+2=-x+14$ gives $4x=12$, so $a=3$. Then $b=3(3)+2=11$, so $a+b=14$.
+
+**Misconception addressed:** Students stop after finding $a=3$ or take $b$ from only one function incorrectly.
+
+---
+
+### A-299
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $g(x)=ax+b$ has a slope equal to $\dfrac13$ of the slope of the line through the points $(0,0)$ and $(3,6)$. The graph of $g$ passes through $(2,3)$. What is the value of $g(0)$? (Enter as a fraction or a decimal rounded to the nearest hundredth.)
+
+**Correct Answer:** $\dfrac53$ (or $1.67$)
+
+**Rationale:** The line through $(0,0)$ and $(3,6)$ has slope $2$, so $a=\dfrac23$. Using $(2,3)$: $3=\dfrac23(2)+b$, so $b=\dfrac53$. Thus $g(0)=\dfrac53$.
+
+**Misconception addressed:** Students use the slope $2$ unchanged or take $\dfrac13$ of the point's coordinates.
+
+---
+
+### A-300
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A plant's height is recorded each week. The height was $14$ cm at the end of week $2$ and $26$ cm at the end of week $6$. If the height grows at a constant rate, in which week will the height first reach $41$ cm?
+
+**Correct Answer:** $11$
+
+**Rationale:** The growth rate is $\dfrac{26-14}{6-2}=3$ cm per week, so $h=14+3(w-2)$. Setting $h=41$ gives $w-2=9$, so $w=11$.
+
+**Misconception addressed:** Students divide $41$ by $3$ or count $9$ weeks from the start instead of from week $2$.
+
+---
+
+### A-301
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Dana's scores on her first four tests are $78$, $90$, $82$ and $88$. To get an average of at least $85$ on all five tests, what is the least score she can earn on the fifth test?
+
+**Correct Answer:** $87$
+
+**Rationale:** The four scores total $338$. She needs a total of at least $5\cdot85=425$, so the fifth score is at least $425-338=87$.
+
+**Misconception addressed:** Students average the first four scores ($84.5$) or divide by $4$ instead of $5$.
+
+---
+
+### A-302
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$3x+2y=20$$ $$5x-ky=12$$ In the system above, $k$ is a constant. The solution $(x,y)$ to the system has $x=y$. What is the value of $k$?
+
+**Correct Answer:** $2$
+
+**Rationale:** With $x=y$, the first equation gives $5x=20$, so $x=y=4$. The second equation becomes $20-4k=12$, so $k=2$.
+
+**Misconception addressed:** Students find $x$ but substitute it into the wrong equation or forget that $y=x$ also appears in $-ky$.
+
+---
+
+### A-303
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Three books and two notebooks weigh $1.9$ kilograms. Two books and three notebooks weigh $1.6$ kilograms. What is the combined weight, in kilograms, of one book and one notebook?
+
+**Correct Answer:** $0.7$
+
+**Rationale:** Adding the two equations $3b+2n=1.9$ and $2b+3n=1.6$ gives $5b+5n=3.5$. Dividing by $5$ gives $b+n=0.7$. No need to solve for each weight.
+
+**Misconception addressed:** Students solve for $b$ and $n$ separately and make an arithmetic slip, or answer $b$ alone ($0.5$).
+
+---
+
+### A-304
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The ratio of $x$ to $y$ is $3$ to $2$, and $x+2y=28$. What is the value of $x$?
+
+**Correct Answer:** $12$
+
+**Rationale:** Write $x=3k$ and $y=2k$. Then $3k+4k=28$, so $k=4$ and $x=12$.
+
+**Misconception addressed:** Students use $x=2k$ and $y=3k$ (reversing the ratio) or answer $y=8$.
+
+---
+
+### A-305
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** Car rental company A charges a $\$30$ fee plus $\$0.20$ per mile. Company B charges an $\$18$ fee plus $\$0.35$ per mile. For how many miles driven do the two companies charge the same total?
+
+**Correct Answer:** $80$
+
+**Rationale:** Set $30+0.20m=18+0.35m$. Then $12=0.15m$, so $m=80$. (Both charge $\$46$.)
+
+**Misconception addressed:** Students report the common cost ($46$) or subtract the fees in the wrong direction.
+
+---
+
+### A-306
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The sum of two numbers is $46$. One of the numbers is $6$ more than $3$ times the other number. What is the larger number?
+
+**Correct Answer:** $36$
+
+**Rationale:** Let the smaller number be $x$. Then $x+(3x+6)=46$, so $x=10$ and the larger number is $3(10)+6=36$.
+
+**Misconception addressed:** Students give the smaller number ($10$) or write the larger as $3x-6$.
+
+---
+
+### A-307
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The linear function $f$ is defined by $f(x)=\dfrac23x+4$. For what value of $x$ is $f(x)=x$?
+
+**Correct Answer:** $12$
+
+**Rationale:** Set $\dfrac23x+4=x$. Then $4=x-\dfrac23x=\dfrac13x$, so $x=12$. Check: $f(12)=8+4=12$.
+
+**Misconception addressed:** Students solve $f(x)=0$ ($x=-6$) or compute $f(4)$ instead of equating $f(x)$ with $x$.
+
+---
+
+### A-308
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The lines $y=2x+a$ and $y=-3x+b$ intersect at the point $(4,0)$ on the $x$-axis. What is the value of $a-b$?
+
+**Correct Answer:** $-20$
+
+**Rationale:** Substituting $(4,0)$ into the first line: $0=8+a$, so $a=-8$. In the second: $0=-12+b$, so $b=12$. Then $a-b=-8-12=-20$.
+
+**Misconception addressed:** Students compute $b-a=20$ or use $x=0$ instead of the point's coordinates.
+
+---
+
+### A-309
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** $$\frac{x+k}{3}=\frac{2x-1}{4}$$ In the equation above, $k$ is a constant. If $x=5$ is a solution, what is the value of $k$? (Enter as a decimal.)
+
+**Correct Answer:** $1.75$ (or $\dfrac74$)
+
+**Rationale:** Substituting $x=5$: $\dfrac{5+k}{3}=\dfrac94$. Cross-multiplying gives $4(5+k)=27$, so $5+k=6.75$ and $k=1.75$.
+
+**Misconception addressed:** Students compute $2x-1$ as $2(5-1)=8$, or cross-multiply as $3(5+k)=4\cdot9$ with the denominators swapped.
+
+---
+
+### A-310
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A rectangular garden has a perimeter of at most $60$ meters, and its length is at least twice its width. What is the greatest possible whole-number width of the garden, in meters?
+
+**Correct Answer:** $10$
+
+**Rationale:** Let the width be $w$ and the length $\ell$. The perimeter gives $\ell+w\le30$ and the length condition gives $\ell\ge2w$. Then $3w\le2w+w\le\ell+w\le30$, so $w\le10$. A width of $10$ with length $20$ works.
+
+**Misconception addressed:** Students forget the length condition and take $w=15$ (a square), or use $2\ell+w\le60$.
+
+---
+
+### A-311
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** The average (arithmetic mean) of two numbers $x$ and $y$ is $12$, and $2x-y=3$. What is the value of $x$?
+
+**Correct Answer:** $9$
+
+**Rationale:** The average gives $x+y=24$. Adding $2x-y=3$ eliminates $y$: $3x=27$, so $x=9$.
+
+**Misconception addressed:** Students use $x+y=12$ (the average instead of the sum) or report $y=15$.
+
+---
+
+### A-312
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
+
+**Question:** A group of friends splits a restaurant bill equally. If $2$ more friends had joined, every person would have paid $\$6$ less. The group originally had $4$ friends. What was the total bill, in dollars?
+
+**Correct Answer:** $72$
+
+**Rationale:** With the total $T$: $\dfrac T4-\dfrac T6=6$, so $\dfrac{T}{12}=6$ and $T=72$. Check: $\dfrac{72}{4}=18$ and $\dfrac{72}{6}=12$.
+
+**Misconception addressed:** Students use $4\cdot6=24$ (assuming each originally paid $\$6$) or forget the group grows to $6$ people.
+
+---
+
+## 3. Bank Index (for worksheet sourcing)
+
+### Bank summary (all 929 items)
+
+| Domain | Skill | Medium | Hard | Total |
+|---|---|---:|---:|---:|
+| Advanced Math | Equivalent expressions | 22 | 47 | 69 |
+| Advanced Math | Function notation | 0 | 2 | 2 |
+| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 25 | 48 | 73 |
+| Advanced Math | Nonlinear functions | 31 | 96 | 127 |
+| Algebra | Linear equations in one variable | 23 | 28 | 51 |
+| Algebra | Linear equations in two variables | 22 | 36 | 58 |
+| Algebra | Linear functions | 34 | 39 | 73 |
+| Algebra | Linear inequalities in one or two variables | 22 | 27 | 49 |
+| Algebra | Systems of two linear equations in two variables | 31 | 48 | 79 |
+| Geometry and Trigonometry | Area and volume | 22 | 35 | 57 |
+| Geometry and Trigonometry | Circles | 25 | 44 | 69 |
+| Geometry and Trigonometry | Lines, angles, and triangles | 19 | 24 | 43 |
+| Geometry and Trigonometry | Right triangles and trigonometry | 23 | 30 | 53 |
+| Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | 2 | 4 | 6 |
+| Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | 7 | 5 | 12 |
+| Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | 5 | 15 | 20 |
+| Problem-Solving and Data Analysis | Percentages | 13 | 23 | 36 |
+| Problem-Solving and Data Analysis | Probability and conditional probability | 3 | 6 | 9 |
+| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 11 | 20 | 31 |
+| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 7 | 5 | 12 |
+| **Total** | | **347** | **582** | **929** |
+
+### Full index
+
+| ID | Domain | Skill | Difficulty | Format |
+|---|---|---|---|---|
+| A-001 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-002 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-003 | Algebra | Linear functions | Medium | Student-Produced Response |
+| A-004 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-005 | Algebra | Linear functions | Hard | Student-Produced Response |
+| A-006 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-007 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-008 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-009 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-010 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-011 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-012 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-013 | Algebra | Linear equations in two variables | Hard | Student-Produced Response |
+| A-014 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-015 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-016 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| A-017 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-018 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-019 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-020 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-021 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-022 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| A-023 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| AM-001 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-002 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-003 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-004 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-005 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-006 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-007 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-008 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-009 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-010 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Student-Produced Response |
+| AM-011 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-012 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-013 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-014 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-015 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-016 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-017 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| GT-001 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-002 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Student-Produced Response |
+| GT-003 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-004 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-005 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
+| GT-006 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-007 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-008 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-009 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-010 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-011 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-012 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Student-Produced Response |
+| GT-013 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Student-Produced Response |
+| GT-014 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-015 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-016 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| PS-001 | Problem-Solving and Data Analysis | Percentages | Hard | Student-Produced Response |
+| PS-002 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-003 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Student-Produced Response |
+| PS-004 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-005 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-006 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-007 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-008 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Medium | Multiple Choice |
+| PS-009 | Problem-Solving and Data Analysis | Probability and conditional probability | Medium | Multiple Choice |
+| PS-010 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Student-Produced Response |
+| PS-011 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-012 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-013 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Student-Produced Response |
+| PS-014 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-015 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| A-024 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-025 | Algebra | Linear functions | Hard | Student-Produced Response |
+| A-026 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-027 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-028 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-029 | Algebra | Linear equations in two variables | Hard | Student-Produced Response |
+| A-030 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-031 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| AM-018 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-019 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-020 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-021 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-022 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-023 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-017 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-018 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
+| GT-019 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-020 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| PS-016 | Problem-Solving and Data Analysis | Percentages | Hard | Student-Produced Response |
+| PS-017 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-018 | Problem-Solving and Data Analysis | Probability and conditional probability | Medium | Multiple Choice |
+| PS-019 | Problem-Solving and Data Analysis | Probability and conditional probability | Medium | Student-Produced Response |
+| PS-020 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Student-Produced Response |
+| PS-021 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Student-Produced Response |
+| PS-022 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Student-Produced Response |
+| PS-023 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-024 | Problem-Solving and Data Analysis | Percentages | Medium | Student-Produced Response |
+| PS-025 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-026 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-027 | Problem-Solving and Data Analysis | Percentages | Hard | Student-Produced Response |
+| PS-028 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-029 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Medium | Multiple Choice |
+| PS-030 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Medium | Multiple Choice |
+| PS-031 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-032 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Student-Produced Response |
+| PS-033 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-034 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-035 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-036 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-037 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-038 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Student-Produced Response |
+| PS-039 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-040 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-041 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-042 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-043 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-044 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-045 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-046 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-047 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-048 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-049 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-050 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-051 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-052 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Student-Produced Response |
+| PS-053 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Multiple Choice |
+| PS-054 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-055 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-056 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Student-Produced Response |
+| PS-057 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-058 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-059 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-060 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-061 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Student-Produced Response |
+| PS-062 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-063 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-064 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-065 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-066 | Problem-Solving and Data Analysis | Percentages | Medium | Student-Produced Response |
+| PS-067 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-068 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-069 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-070 | Problem-Solving and Data Analysis | One-variable data: mean, median, range, standard deviation | Medium | Student-Produced Response |
+| PS-071 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-072 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | MC |
+| PS-073 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| PS-074 | Problem-Solving and Data Analysis | One-variable data: distributions and measures of center and spread | Hard | MC |
+| A-032 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-033 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-034 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-035 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-036 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-037 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| AM-024 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-025 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-026 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-027 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-028 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-029 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| GT-021 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
+| GT-022 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-023 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-024 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| A-038 | Algebra | Linear equations in one variable | Medium | Multiple Choice |
+| A-039 | Algebra | Linear equations in one variable | Hard | Student-Produced Response |
+| A-040 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-041 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-042 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-043 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| AM-030 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-031 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-032 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-033 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-034 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-035 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| GT-025 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-026 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-027 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-028 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| A-044 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-045 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-046 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-047 | Algebra | Linear equations in one variable | Medium | Multiple Choice |
+| AM-036 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-037 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-038 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-039 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| GT-029 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-030 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-031 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-032 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| A-048 | Algebra | Linear equations in one variable | Medium | Multiple Choice |
+| A-049 | Algebra | Linear equations in two variables | Medium | Student-Produced Response |
+| A-050 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| A-051 | Algebra | Systems of two linear equations in two variables | Medium | Student-Produced Response |
+| A-052 | Algebra | Systems of two linear equations in two variables | Medium | Student-Produced Response |
+| A-053 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-054 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-055 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-056 | Algebra | Linear inequalities in one or two variables | Hard | Student-Produced Response |
+| A-057 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| AM-040 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-041 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-042 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-043 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-044 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| GT-033 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-034 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Student-Produced Response |
+| GT-035 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Student-Produced Response |
+| GT-036 | Geometry and Trigonometry | Area and volume | Hard | Student-Produced Response |
+| GT-037 | Geometry and Trigonometry | Area and volume | Hard | Student-Produced Response |
+| GT-038 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
+| GT-039 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-040 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
+| GT-041 | Geometry and Trigonometry | Area and volume | Medium | Student-Produced Response |
+| GT-042 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Student-Produced Response |
+| GT-043 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Student-Produced Response |
+| GT-044 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-045 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Student-Produced Response |
+| GT-046 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-047 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Student-Produced Response |
+| GT-048 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Student-Produced Response |
+| GT-049 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-050 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Student-Produced Response |
+| GT-051 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-052 | Geometry and Trigonometry | Circles | Medium | Student-Produced Response |
+| GT-053 | Geometry and Trigonometry | Circles | Medium | Student-Produced Response |
+| GT-054 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-055 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-056 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-057 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
+| GT-058 | Geometry and Trigonometry | Area and volume | Medium | Student-Produced Response |
+| GT-059 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-060 | Geometry and Trigonometry | Area and volume | Medium | Student-Produced Response |
+| GT-061 | Geometry and Trigonometry | Area and volume | Medium | Student-Produced Response |
+| GT-062 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-063 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-064 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Student-Produced Response |
+| GT-065 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-066 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-067 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-068 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-069 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-070 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-071 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-072 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-073 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-074 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-075 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-076 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-077 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-078 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-079 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-080 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-081 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-082 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-083 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Student-Produced Response |
+| GT-084 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-085 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-086 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-087 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Student-Produced Response |
+| GT-088 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | MC |
+| GT-089 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | MC |
+| GT-090 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-091 | Geometry and Trigonometry | Circles | Medium | MC |
+| GT-092 | Geometry and Trigonometry | Area and volume | Hard | MC |
+| GT-093 | Geometry and Trigonometry | Area and volume | Medium | MC |
+| GT-094 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | MC |
+| GT-095 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-096 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-097 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-098 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-099 | Geometry and Trigonometry | Circles | Hard | SPR |
+| AM-045 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-046 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-047 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-048 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-049 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-050 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-051 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-052 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-053 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Student-Produced Response |
+| AM-054 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-055 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-056 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-057 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-058 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-059 | Advanced Math | Equivalent expressions | Medium | Student-Produced Response |
+| AM-060 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-061 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-062 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-063 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-064 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-065 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-066 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-067 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-068 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-069 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Student-Produced Response |
+| AM-070 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-071 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-072 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-073 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-074 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-075 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Multiple Choice |
+| AM-076 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | Student-Produced Response |
+| AM-077 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-078 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-079 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-080 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-081 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
+| AM-082 | Advanced Math | Equivalent expressions | Medium | Student-Produced Response |
+| AM-083 | Advanced Math | Equivalent expressions | Medium | Student-Produced Response |
+| AM-084 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-085 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-086 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-087 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-088 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-089 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
+| AM-090 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-091 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-092 | Advanced Math | Nonlinear functions | Medium | Student-Produced Response |
+| AM-093 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-094 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-095 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-096 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-097 | Advanced Math | Equivalent expressions | Hard | MC |
+| AM-098 | Advanced Math | Equivalent expressions | Hard | MC |
+| AM-099 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | MC |
+| AM-100 | Advanced Math | Equivalent expressions | Medium | SPR |
+| AM-101 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-102 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-103 | Advanced Math | Equivalent expressions | Medium | SPR |
+| AM-104 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-105 | Advanced Math | Nonlinear functions | Medium | MC |
+| AM-106 | Advanced Math | Equivalent expressions | Hard | MC |
+| AM-107 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | MC |
+| AM-108 | Advanced Math | Nonlinear functions | Medium | MC |
+| AM-109 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-110 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-111 | Advanced Math | Equivalent expressions | Medium | MC |
+| A-058 | Algebra | Linear equations in one variable | Medium | Multiple Choice |
+| A-059 | Algebra | Linear equations in one variable | Hard | Student-Produced Response |
+| A-060 | Algebra | Linear equations in one variable | Medium | Multiple Choice |
+| A-061 | Algebra | Linear equations in one variable | Hard | Student-Produced Response |
+| A-062 | Algebra | Linear equations in two variables | Medium | Student-Produced Response |
+| A-063 | Algebra | Linear equations in two variables | Medium | Student-Produced Response |
+| A-064 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-065 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-066 | Algebra | Linear functions | Medium | Student-Produced Response |
+| A-067 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-068 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-069 | Algebra | Linear functions | Hard | Student-Produced Response |
+| A-070 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-071 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-072 | Algebra | Linear inequalities in one or two variables | Hard | Student-Produced Response |
+| A-073 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-074 | Algebra | Systems of two linear equations in two variables | Medium | Student-Produced Response |
+| A-075 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-076 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-077 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-078 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-079 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-080 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-081 | Algebra | Linear functions | Hard | Student-Produced Response |
+| A-082 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-083 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-084 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-085 | Algebra | Linear equations in two variables | Hard | Student-Produced Response |
+| A-086 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-087 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-088 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-089 | Algebra | Linear functions | Hard | Student-Produced Response |
+| A-090 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-091 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-092 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-093 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-094 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-095 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-096 | Algebra | Linear equations in two variables | Hard | Student-Produced Response |
+| A-097 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-098 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-099 | Algebra | Linear functions | Medium | Student-Produced Response |
+| A-100 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-101 | Algebra | Linear functions | Hard | Student-Produced Response |
+| A-102 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-103 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-104 | Algebra | Systems of two linear equations in two variables | Medium | Student-Produced Response |
+| A-105 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-106 | Algebra | Systems of two linear equations in two variables | Hard | Student-Produced Response |
+| A-107 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-108 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-109 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-110 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-111 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-112 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-113 | Algebra | Systems of two linear equations in two variables | Medium | Student-Produced Response |
+| A-114 | Algebra | Linear inequalities in one or two variables | Hard | Student-Produced Response |
+| A-115 | Algebra | Linear equations in one variable | Hard | Student-Produced Response |
+| A-116 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| A-117 | Algebra | Linear equations in one variable | Medium | Multiple Choice |
+| A-118 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| A-119 | Algebra | Linear equations in one variable | Medium | Student-Produced Response |
+| A-120 | Algebra | Linear functions | Hard | MC |
+| A-121 | Algebra | Linear equations in two variables | Medium | MC |
+| A-122 | Algebra | Linear equations in one variable | Hard | MC |
+| A-123 | Algebra | Linear inequalities in one or two variables | Medium | MC |
+| A-124 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| A-125 | Algebra | Linear functions | Medium | MC |
+| A-126 | Algebra | Linear inequalities in one or two variables | Medium | MC |
+| A-127 | Algebra | Linear equations in one variable | Medium | MC |
+| A-128 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-129 | Algebra | Linear equations in one variable | Hard | SPR |
+| AM-112 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-113 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-114 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-115 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-116 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-117 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-118 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-119 | Advanced Math | Equivalent expressions | Medium | SPR |
+| AM-120 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-121 | Advanced Math | Nonlinear functions | Medium | SPR |
+| AM-122 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-123 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-124 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-125 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-126 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-127 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| A-130 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-131 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-132 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-133 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-134 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-135 | Algebra | Linear functions | Medium | SPR |
+| GT-100 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-101 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-102 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-103 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-104 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-105 | Geometry and Trigonometry | Circles | Hard | SPR |
+| A-136 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| AM-128 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-129 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-130 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-131 | Advanced Math | Equivalent expressions | Hard | SPR |
+| A-137 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| AM-132 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-133 | Advanced Math | Equivalent expressions | Hard | SPR |
+| PS-075 | Problem-Solving and Data Analysis | Percentages | Medium | SPR |
+| A-138 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-139 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-140 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| PS-076 | Problem-Solving and Data Analysis | Percentages | Medium | SPR |
+| GT-106 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-107 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-108 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-109 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| A-141 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-142 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-143 | Algebra | Linear functions | Medium | SPR |
+| A-144 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-145 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-146 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-147 | Algebra | Function notation | Hard | SPR |
+| A-148 | Algebra | Linear functions | Medium | Multiple Choice |
+| GT-110 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-111 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-112 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-113 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-114 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-115 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-116 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-117 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| AM-134 | Advanced Math | Nonlinear equations in one variable | Medium | SPR |
+| AM-135 | Advanced Math | Equivalent expressions | Medium | SPR |
+| AM-136 | Advanced Math | Function notation | Hard | SPR |
+| AM-137 | Advanced Math | Equivalent expressions | Medium | SPR |
+| AM-138 | Advanced Math | Nonlinear functions | Medium | Multiple Choice |
+| AM-139 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| AM-140 | Advanced Math | Nonlinear functions | Medium | SPR |
+| AM-141 | Advanced Math | Nonlinear equations in one variable | Hard | Multiple Choice |
+| AM-142 | Advanced Math | Nonlinear equations in one variable | Medium | Multiple Choice |
+| AM-143 | Advanced Math | Equivalent expressions | Medium | SPR |
+| AM-144 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-145 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-146 | Advanced Math | Nonlinear functions | Medium | SPR |
+| AM-147 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-148 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-149 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-150 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-151 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-152 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-153 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-154 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-155 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-156 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-157 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-158 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-159 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-160 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-161 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-162 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-163 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-164 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-165 | Advanced Math | Nonlinear functions | Hard | SPR |
+| PS-077 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| PS-078 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-079 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Medium | SPR |
+| PS-080 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| PS-081 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-082 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-083 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-084 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-085 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-086 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-087 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | SPR |
+| PS-088 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| PS-089 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-090 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | SPR |
+| AM-166 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| A-149 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-150 | Algebra | Linear functions | Hard | Multiple Choice |
+| GT-118 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| AM-167 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-168 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| PS-091 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-092 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Multiple Choice |
+| GT-119 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| AM-169 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-170 | Advanced Math | Equivalent expressions | Hard | SPR |
+| GT-120 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| A-151 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| AM-171 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| A-152 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| GT-121 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| PS-093 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| AM-172 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| A-153 | Algebra | Linear functions | Hard | Multiple Choice |
+| PS-094 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| AM-173 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-174 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-175 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-176 | Advanced Math | Equivalent expressions | Hard | SPR |
+| GT-122 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| PS-095 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| A-154 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| GT-123 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| PS-096 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | SPR |
+| AM-177 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-178 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| PS-097 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| GT-124 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-125 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| AM-179 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-180 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-181 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-182 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-126 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-127 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-183 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-184 | Advanced Math | Nonlinear functions | Hard | SPR |
+| GT-128 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| AM-185 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-186 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-187 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-129 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| PS-098 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| GT-130 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| PS-099 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Multiple Choice |
+| PS-100 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| GT-131 | Geometry and Trigonometry | Circles | Hard | SPR |
+| A-155 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| GT-132 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| AM-188 | Advanced Math | Nonlinear functions | Hard | SPR |
+| GT-133 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| AM-189 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| A-156 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| GT-134 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-135 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| PS-101 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| PS-102 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| AM-190 | Advanced Math | Nonlinear functions | Hard | SPR |
+| A-157 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| AM-191 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| A-158 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| GT-136 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| AM-192 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-193 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-194 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-137 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| PS-103 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| AM-195 | Advanced Math | Equivalent expressions | Hard | SPR |
+| GT-138 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| PS-104 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| GT-139 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-140 | Geometry and Trigonometry | Circles | Hard | SPR |
+| PS-105 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Multiple Choice |
+| PS-106 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-107 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| GT-141 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| AM-196 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-197 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-142 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| AM-198 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-199 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| PS-108 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| AM-200 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-143 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| AM-201 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| A-159 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| PS-109 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| GT-144 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-202 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| PS-110 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-111 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| GT-145 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| A-160 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| GT-146 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-147 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| AM-203 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-204 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| PS-112 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| GT-148 | Geometry and Trigonometry | Circles | Hard | SPR |
+| AM-205 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-149 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| AM-206 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| GT-150 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-207 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| PS-113 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Multiple Choice |
+| AM-208 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| GT-151 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| A-161 | Algebra | Linear equations in two variables | Hard | SPR |
+| AM-209 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-210 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-152 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| A-162 | Algebra | Linear functions | Hard | SPR |
+| AM-211 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-212 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-153 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| PS-114 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| GT-154 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| AM-213 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-214 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-215 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-216 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| A-163 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| GT-155 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-217 | Advanced Math | Equivalent expressions | Hard | SPR |
+| PS-115 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| A-164 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| AM-218 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-156 | Geometry and Trigonometry | Circles | Hard | SPR |
+| PS-116 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-117 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | SPR |
+| AM-219 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-157 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-158 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-159 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| PS-118 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| GT-160 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| AM-220 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-221 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| PS-119 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-120 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| AM-222 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| PS-121 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| A-165 | Algebra | Linear functions | Hard | Multiple Choice |
+| AM-223 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| A-166 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| AM-224 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-225 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-226 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-227 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-228 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-229 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| A-167 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-168 | Algebra | Linear functions | Hard | SPR |
+| AM-230 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-161 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-162 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| A-169 | Algebra | Linear functions | Hard | SPR |
+| AM-231 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-232 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-233 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-234 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| PS-122 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-123 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| AM-235 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-236 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-237 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| GT-163 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-164 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-238 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-239 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-240 | Advanced Math | Nonlinear functions | Hard | SPR |
+| GT-165 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| A-170 | Algebra | Linear functions | Hard | Multiple Choice |
+| GT-166 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-241 | Advanced Math | Nonlinear functions | Hard | SPR |
+| GT-167 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| A-171 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| PS-124 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| AM-242 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-243 | Advanced Math | Equivalent expressions | Hard | SPR |
+| AM-244 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| PS-125 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| AM-245 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| GT-168 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-169 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| AM-246 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| A-172 | Algebra | Linear equations in one variable | Hard | SPR |
+| AM-247 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-170 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-171 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| PS-126 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| AM-248 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-249 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| GT-172 | Geometry and Trigonometry | Circles | Hard | SPR |
+| AM-250 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| A-173 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-174 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-175 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-176 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-177 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-178 | Algebra | Linear functions | Hard | SPR |
+| A-179 | Algebra | Linear functions | Hard | SPR |
+| A-180 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-181 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-182 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-183 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| AM-269 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-251 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-252 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-253 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-254 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-255 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-256 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-257 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-258 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-259 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-260 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-261 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-262 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-263 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-264 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-265 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-266 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-267 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-268 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| A-184 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-185 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-186 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-187 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-188 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-189 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-190 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-191 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-192 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-193 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-194 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-195 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-196 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-197 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-198 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-199 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-200 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-201 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-202 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-203 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-204 | Algebra | Linear functions | Medium | SPR |
+| A-205 | Algebra | Linear functions | Medium | SPR |
+| A-206 | Algebra | Linear functions | Hard | SPR |
+| A-207 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-208 | Algebra | Linear functions | Hard | SPR |
+| A-209 | Algebra | Linear functions | Hard | SPR |
+| A-210 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-211 | Algebra | Linear functions | Medium | SPR |
+| A-212 | Algebra | Linear functions | Medium | SPR |
+| A-213 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-214 | Algebra | Linear functions | Hard | SPR |
+| A-215 | Algebra | Linear functions | Medium | SPR |
+| A-216 | Algebra | Linear functions | Medium | SPR |
+| A-217 | Algebra | Linear functions | Medium | SPR |
+| A-218 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-219 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-220 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-221 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-222 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-223 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-224 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-225 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-226 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-227 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-228 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-229 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-230 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-231 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-232 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-233 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-234 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-235 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-236 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-237 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-238 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-239 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-240 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-241 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-242 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-243 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-244 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| GT-173 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-174 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-175 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-176 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-177 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-178 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-179 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-180 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-181 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | Multiple Choice |
+| GT-182 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-183 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-184 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-185 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-186 | Geometry and Trigonometry | Right triangles and trigonometry | Medium | SPR |
+| GT-187 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-188 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-189 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-190 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-191 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-192 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-193 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-194 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-195 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-196 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-197 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-198 | Geometry and Trigonometry | Circles | Medium | SPR |
+| GT-199 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-200 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-201 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-202 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-203 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-204 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-205 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-206 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-207 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-208 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-209 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-210 | Geometry and Trigonometry | Area and volume | Medium | SPR |
+| GT-211 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-212 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-213 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
+| GT-214 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
+| GT-215 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
+| GT-216 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
+| GT-217 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-218 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
+| GT-219 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-220 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-221 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
+| GT-222 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| A-245 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-246 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-247 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-248 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-249 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-250 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-251 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-252 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-253 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-254 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-255 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-256 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-257 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-258 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-259 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-260 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-261 | Algebra | Linear functions | Hard | SPR |
+| A-262 | Algebra | Linear functions | Hard | SPR |
+| A-263 | Algebra | Linear functions | Hard | SPR |
+| A-264 | Algebra | Linear functions | Hard | SPR |
+| A-265 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-266 | Algebra | Linear functions | Hard | SPR |
+| A-267 | Algebra | Linear functions | Hard | SPR |
+| A-268 | Algebra | Linear functions | Hard | SPR |
+| A-269 | Algebra | Linear functions | Hard | SPR |
+| A-270 | Algebra | Linear functions | Hard | SPR |
+| A-271 | Algebra | Linear functions | Medium | SPR |
+| A-272 | Algebra | Linear functions | Hard | SPR |
+| A-273 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-274 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-275 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-276 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-277 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-278 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-279 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-280 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-281 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-282 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-283 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-284 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-285 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-286 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-287 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-288 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-289 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-290 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-291 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-292 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-293 | Algebra | Linear equations in one variable | Medium | SPR |
+| A-294 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-295 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-296 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-297 | Algebra | Linear functions | Medium | SPR |
+| A-298 | Algebra | Linear functions | Medium | SPR |
+| A-299 | Algebra | Linear functions | Hard | SPR |
+| A-300 | Algebra | Linear functions | Medium | SPR |
+| A-301 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-302 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-303 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-304 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-305 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-306 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
+| A-307 | Algebra | Linear functions | Medium | SPR |
+| A-308 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-309 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-310 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
+| A-311 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-312 | Algebra | Linear equations in one variable | Hard | SPR |
+
+---
+
+## 4. Next Step
+
+Per the standing instruction ("Complete the question bank first then focus on Week 4 worksheets"), this bank is now the source for:
+- **Grade 10 SAT&GAT Week 4 worksheet** (`satgat_g10w4.js`)
+- **Grade 11 SAAT&SAT Week 4 worksheet** (`saatsat_g11w4.js`)
+
+Both worksheets will be regenerated next, drawing items proportionally from this bank (Domain weighting: Algebra ~36%, Advanced Math ~28%, Geometry & Trig ~26%, PSDA ~10%), consistent with the verified real-exam distribution above.
