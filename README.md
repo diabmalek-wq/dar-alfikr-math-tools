@@ -59,3 +59,8 @@ All presentations use the Prezi-style design of the Lesson 6-5 Properties of Log
 Engine: engines/prezi/ (engine.js builds a deck from one lesson config; build.sh renders the math, builds, injects Morph, validates and makes a contact sheet; BRIEF.md is the authoring brief). Lesson configs: builders/lessons/prezi/cfg/ with figures in builders/lessons/prezi/figs/. Finished Week 6 decks (pptx and PDF): presentations/week-06/.
 
 To add a lesson: write builders/lessons/prezi/cfg/ID.json (see _example_L2-4_abridged.json and BRIEF.md), run validate_cfg.py, then build.sh ID. Objectives, vocabulary and standards are quoted verbatim; never invent essential questions or practices.
+
+
+## Standing rule: Mawhiba deliverables
+
+For every Mawhiba (Grade 9) task, deliver only two files: the PowerPoint (.pptx) and the activity worksheet (PDF). No pre-session decks, sheets, notes PDFs, plans or other extras unless asked.
