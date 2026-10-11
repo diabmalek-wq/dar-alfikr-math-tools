@@ -1,0 +1,466 @@
+[
+{
+"id": "AM-136",
+"part": "In class",
+"d": "Hard",
+"q": "The function $g$ satisfies $g(kn)=n+10$ for every real number $n$, where $k$ is a constant. If $g(4)=82$, what is the value of $k$?",
+"ans": "$\\dfrac{1}{18}$",
+"rat": "Set $kn=4$, so $n=\\dfrac4k$. Then $g(4)=\\dfrac4k+10=82$, so $\\dfrac4k=72$ and $k=\\dfrac1{18}$."
+},
+{
+"id": "AM-001",
+"part": "In class",
+"d": "Hard",
+"q": "A decorative fountain in a public park in Riyadh shoots a jet of water whose height above the ground, in meters, is modeled by\n$$h(t) = -4\\left(t-3\\right)^{2} + 45,$$\nwhere $t$ is the time, in seconds, after the jet is activated. For which values of $t$ does the water reach a height of $29$ meters?\n\nA) $t = 1$ only\nB) $t = 5$ only\nC) $t = 1$ and $t = 5$\nD) $t = 2$ and $t = 4$",
+"ans": "C",
+"rat": "Set $h(t)=29$: $-4(t-3)^2 = -16$, so $(t-3)^2 = 4$, giving $t - 3 = \\pm 2$. Thus $t = 1$ or $t = 5$. Both values are valid times after launch, so both are solutions."
+},
+{
+"id": "AM-003",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by\n$$f(x) = a\\left(x-2\\right)\\left(x+6\\right),$$\nwhere $a$ is a constant. The graph of $y = f(x)$ in the $xy$-plane passes through the point $\\left(0, {-24}\\right)$. What is the value of $f(5)$?",
+"ans": "$66$",
+"rat": "Substituting $\\left(0,{-24}\\right)$: $-24 = a(-2)(6) = -12a$, so $a = 2$. Then $f(5) = 2(5-2)(5+6) = 2(3)(11) = 66$."
+},
+{
+"id": "AM-005",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x) = a\\cdot 2^{x}$, where $a$ is a constant. If $f(3) = 40$, what is the value of $f(5)$?\n\nA) $64$\nB) $128$\nC) $160$\nD) $200$",
+"ans": "C",
+"rat": "From $f(3) = a\\cdot 2^{3} = 8a = 40$, we get $a = 5$. Then $f(5) = 5\\cdot 2^{5} = 5\\left(32\\right) = 160$."
+},
+{
+"id": "AM-006",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $h$ is defined by $h(x) = 2x^{2} - 12x + 7$. What is the $x$-coordinate of the vertex of the graph of $y = h(x)$ in the $xy$-plane?\n\nA) ${-3}$\nB) $2$\nC) $3$\nD) $6$",
+"ans": "C",
+"rat": "For $h(x)=ax^2+bx+c$, the vertex occurs at $x = -\\dfrac{b}{2a} = -\\dfrac{-12}{2(2)} = \\dfrac{12}{4} = 3$."
+},
+{
+"id": "AM-013",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $f$ is defined by $f(x) = a\\cdot 3^{x}$, where $a$ is a constant. If $f(2) = 45$, what is the value of $f(4)$?\n\nA) $135$\nB) $225$\nC) $405$\nD) $450$",
+"ans": "C",
+"rat": "From $f(2) = a\\cdot 3^{2} = 9a = 45$, we get $a = 5$. Then $f(4) = 5\\cdot 3^{4} = 5\\left(81\\right) = 405$."
+},
+{
+"id": "AM-016",
+"part": "In class",
+"d": "Hard",
+"q": "A ball is thrown upward, and its height above the ground, in meters, is modeled by\n$$h(t) = -5\\left(t-2\\right)^{2} + 30,$$\nwhere $t$ is the time, in seconds, after the ball is thrown. For which values of $t$ does the ball reach a height of $10$ meters?\n\nA) $t=0$ only\nB) $t=4$ only\nC) $t=0$ and $t=4$\nD) $t=1$ and $t=3$",
+"ans": "C",
+"rat": "Set $h(t)=10$: $-5(t-2)^2 = -20$, so $(t-2)^2 = 4$, giving $t-2 = \\pm 2$. Thus $t=0$ or $t=4$; both are valid times after the throw."
+},
+{
+"id": "AM-018",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "If $f(x) = x^{2} - 4x + k$ and $f(1) = 9$, what is the value of $k$?\n\nA) $6$\nB) $9$\nC) $12$\nD) $14$",
+"ans": "C",
+"rat": "Substituting $x=1$: $f(1) = 1 - 4 + k = k - 3 = 9$, so $k = 12$."
+},
+{
+"id": "AM-019",
+"part": "In class",
+"d": "Hard",
+"q": "The function $h$ is defined by $h(x) = \\left(x-a\\right)\\left(x-b\\right)$, where $a$ and $b$ are constants and $a < b$. The graph of $y=h(x)$ crosses the $x$-axis at $x={-3}$ and $x=7$. What is the minimum value of $h$?\n\nA) ${-25}$\nB) ${-20}$\nC) ${-10}$\nD) $25$",
+"ans": "A",
+"rat": "The vertex occurs midway between the roots: $x = \\dfrac{-3+7}{2} = 2$. The minimum value is $h(2) = \\left(2-\\left({-3}\\right)\\right)\\left(2-7\\right) = 5\\left({-5}\\right) = {-25}$."
+},
+{
+"id": "AM-020",
+"part": "In class",
+"d": "Hard",
+"q": "The function $p$ is defined by $p(x) = a\\cdot x^{3}$, where $a$ is a nonzero constant. If $p(2) = 40$, what is the value of $p(-2)$?",
+"ans": "${-40}$",
+"rat": "From $p(2) = a\\left(2\\right)^{3} = 8a = 40$, we get $a = 5$. Then $p({-2}) = 5\\left({-2}\\right)^{3} = 5\\left({-8}\\right) = {-40}$."
+},
+{
+"id": "AM-026",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "Let $f(x) = ax^{2}$ and $g(x) = bx^{4}$ for any value of $x$, where $a$ and $b$ are positive constants. For how many values of $x$ is $f(x) = g(x)$?\n\nA) None\nB) One\nC) Two\nD) Three",
+"ans": "D",
+"rat": "Setting $ax^{2} = bx^{4}$: $x^{2}\\left(a - bx^{2}\\right) = 0$, so $x=0$ or $x^{2} = \\dfrac{a}{b}$, giving $x = \\pm\\sqrt{\\dfrac{a}{b}}$. That's three distinct values: $0$, $\\sqrt{a/b}$, and $-\\sqrt{a/b}$."
+},
+{
+"id": "AM-028",
+"part": "In class",
+"d": "Hard",
+"q": "The function $N$ is defined by $N(t) = k \\cdot 2^{-at}$ for positive constants $k$ and $a$. The table shows values of $N$ for select values of $t$.\n\n| $t$ | $0$ | $1$ | $2$ |\n|---|---|---|---|\n| $N(t)$ | $200$ | $50$ | $12.5$ |\n\nWhat is the value of $a$?",
+"ans": "$2$",
+"rat": "At $t=0$: $N(0) = k = 200$. At $t=1$: $N(1) = 200 \\cdot 2^{-a} = 50 \\Rightarrow 2^{-a} = \\dfrac{1}{4} = 2^{-2} \\Rightarrow a = 2$. (Check at $t=2$: $200\\cdot 2^{-4} = 12.5$, which matches the table.)"
+},
+{
+"id": "AM-032",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The variable $y$ varies inversely with $x$. When $x=6$, $y=15$. What is the value of $y$ when $x=10$?\n\nA) $5$\nB) $6$\nC) $9$\nD) $25$",
+"ans": "C",
+"rat": "For inverse variation, $y = \\dfrac{k}{x}$. From $x=6, y=15$: $k = 6\\left(15\\right) = 90$. When $x=10$: $y = \\dfrac{90}{10} = 9$."
+},
+{
+"id": "AM-033",
+"part": "In class",
+"d": "Hard",
+"q": "The variable $z$ varies jointly with $x$ and the square of $y$. If $z=48$ when $x=3$ and $y=4$, what is the value of $z$ when $x=5$ and $y=2$?\n\nA) $10$\nB) $16$\nC) $20$\nD) $25$",
+"ans": "C",
+"rat": "Joint variation: $z = kxy^{2}$. From $z=48, x=3, y=4$: $48 = k\\left(3\\right)\\left(16\\right) = 48k \\Rightarrow k=1$. When $x=5, y=2$: $z = 1\\left(5\\right)\\left(4\\right) = 20$."
+},
+{
+"id": "AM-036",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "If $f(x) = x^{2} + 1$ and $g(x) = 2x - 3$, what is the value of $f\\left(g(2)\\right)$?\n\nA) $1$\nB) $2$\nC) $3$\nD) $5$",
+"ans": "B",
+"rat": "$g(2) = 2(2)-3 = 1$. Then $f\\left(g(2)\\right) = f(1) = 1^{2}+1 = 2$."
+},
+{
+"id": "AM-037",
+"part": "In class",
+"d": "Hard",
+"q": "The graph of $y=h(x)$ is the graph of $y=x^{2}$ shifted right $3$ units and down $5$ units. What is the value of $h(7)$?\n\nA) $6$\nB) $11$\nC) $14$\nD) $16$",
+"ans": "B",
+"rat": "$h(x) = \\left(x-3\\right)^{2} - 5$. Then $h(7) = \\left(7-3\\right)^{2} - 5 = 16-5 = 11$."
+},
+{
+"id": "AM-040",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $C$ gives the Celsius equivalent of a temperature reading $x$, and the function $P$ gives the predicted crop yield, in tons, at temperature $x$\u00b0C for a NEOM greenhouse. Suppose $C(30) = 30$ and $P(30) = 18$. What is the value of $P(C(30))$?\n\nA) $30$\nB) $18$\nC) $48$\nD) $540$",
+"ans": "B",
+"rat": "Since $C(30) = 30$, $P(C(30)) = P(30) = 18$."
+},
+{
+"id": "AM-041",
+"part": "In class",
+"d": "Hard",
+"q": "A ball's height above the ground, in meters, $t$ seconds after being launched from a platform in Al-Ula is modeled by $h(t) = -5t^2 + 20t + c$, where $c$ is the platform height. If $h(1) = 35$, what is the value of $h(3)$?",
+"ans": "35",
+"rat": "$h(1) = -5(1)^2 + 20(1) + c = 15 + c = 35 \\rightarrow c = 20$. Then $h(3) = -5(3)^2 + 20(3) + 20 = -45 + 60 + 20 = 35$. (The parabola's vertex is at $t = 2$, and $t=1$ and $t=3$ are symmetric about it, so $h(1) = h(3)$ without needing to solve for $c$ at all.)"
+},
+{
+"id": "AM-042",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "For which value of $x$ is the function $f(x) = \\dfrac{2x - 1}{x^2 - 2x - 24}$ undefined?\n\nA) $-6$\nB) $-4$\nC) $2$\nD) $5$",
+"ans": "B",
+"rat": "$f$ is undefined where the denominator equals zero: $x^2 - 2x - 24 = (x - 6)(x + 4) = 0 \\rightarrow x = 6$ or $x = {-4}$. Of the given choices, only $x = {-4}$ makes the denominator zero."
+},
+{
+"id": "AM-046",
+"part": "In class",
+"d": "Hard",
+"q": "The function $g$ is defined by\n$$g(x) = a\\left(x-3\\right)\\left(x+4\\right),$$\nwhere $a$ is a constant. The graph of $y = g(x)$ in the $xy$-plane passes through the point $\\left(0, {-36}\\right)$. What is the value of $g(6)$?",
+"ans": "$90$",
+"rat": "Substituting $(0,-36)$: $-36 = a(-3)(4) = -12a$, so $a = 3$. Then $g(6) = 3(6-3)(6+4) = 3(3)(10) = 90$."
+},
+{
+"id": "AM-047",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $h$ is defined by $h(x) = 3x^{2} - 24x + 10$. What is the $x$-coordinate of the vertex of the graph of $y = h(x)$ in the $xy$-plane?\n\nA) ${-4}$\nB) $3$\nC) $4$\nD) $8$",
+"ans": "C",
+"rat": "For $h(x) = ax^2+bx+c$, the vertex occurs at $x = -\\dfrac{b}{2a} = -\\dfrac{-24}{2(3)} = \\dfrac{24}{6} = 4$."
+},
+{
+"id": "AM-048",
+"part": "In class",
+"d": "Hard",
+"q": "A cooperative in Al-Ahsa tracks its annual date export tonnage with the function $f(x) = a\\cdot 3^{x}$, where $a$ is a constant and $x$ is the number of years since record-keeping began. If $f(2) = 54$, what is the value of $f(4)$?\n\nA) $108$\nB) $162$\nC) $324$\nD) $486$",
+"ans": "D",
+"rat": "From $f(2) = a\\cdot 3^{2} = 9a = 54$, so $a = 6$. Then $f(4) = 6\\cdot 3^{4} = 6(81) = 486$."
+},
+{
+"id": "AM-049",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "During a scheduled maintenance check, the water level change in a Jeddah desalination reservoir is modeled by $f(x) = x^{3} - 5x + 12$, where $f(x)$ is the change in level, in centimeters, and $x$ is the number of hours after maintenance begins, for $-3 \\leq x \\leq 3$. What is the value of $f({-2})$?\n\nA) $6$\nB) $10$\nC) $14$\nD) $18$",
+"ans": "C",
+"rat": "$f({-2}) = {(-2)}^{3} - 5({-2}) + 12 = {-8} + 10 + 12 = 14$."
+},
+{
+"id": "AM-060",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "A decorative fountain shoots a stream of water whose height, in meters, is modeled by $h(t) = -5t^2 + 20t$, where $t$ is the time in seconds after the water leaves the nozzle. What is the maximum height, in meters, reached by the stream of water?\n\nA) $10$\nB) $15$\nC) $20$\nD) $25$",
+"ans": "C) $20$",
+"rat": "The maximum of a downward-opening parabola $h(t) = -5t^2 + 20t$ occurs at $t = -\\dfrac{b}{2a} = -\\dfrac{20}{2(-5)} = 2$. Then $h(2) = -5(2)^2 + 20(2) = -20 + 40 = 20$ meters."
+},
+{
+"id": "AM-062",
+"part": "In class",
+"d": "Hard",
+"q": "The height, in meters, of a ball above the ground $t$ seconds after being thrown is given by $h(t) = -4.9t^2 + 14.7t + 2$. Which of the following is closest to the number of seconds it takes for the ball to hit the ground ($h(t) = 0$)?\n\nA) $2.1$\nB) $2.6$\nC) $3.1$\nD) $3.6$",
+"ans": "C) $3.1$",
+"rat": "Using the quadratic formula on $-4.9t^2 + 14.7t + 2 = 0$ (equivalently $4.9t^2 - 14.7t - 2 = 0$): $t = \\dfrac{14.7 \\pm \\sqrt{14.7^2 + 4(4.9)(2)}}{2(4.9)} = \\dfrac{14.7 \\pm \\sqrt{255.29}}{9.8} \\approx \\dfrac{14.7 \\pm 15.98}{9.8}$. Taking the positive root: $t \\approx \\dfrac{30.68}{9.8} \\approx 3.13$, closest to $3.1$."
+},
+{
+"id": "AM-064",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "If $f(x) = 2x^2 - 5x + 3$, what is the value of $f(4)$?\n\nA) $11$\nB) $13$\nC) $15$\nD) $17$",
+"ans": "C) $15$",
+"rat": "$f(4) = 2(4)^2 - 5(4) + 3 = 2(16) - 20 + 3 = 32 - 20 + 3 = 15$."
+},
+{
+"id": "AM-066",
+"part": "In class",
+"d": "Hard",
+"q": "The graph of the function $g(x) = (x-3)^2 - 7$ is the same as the graph of $y = x^2$ after which of the following transformations?\n\nA) Shifted left $3$ and up $7$\nB) Shifted right $3$ and down $7$\nC) Shifted right $3$ and up $7$\nD) Shifted left $3$ and down $7$",
+"ans": "B) Shifted right $3$ and down $7$",
+"rat": "In $g(x) = (x-h)^2 + k$, the graph of $y = x^2$ is shifted right by $h$ and up by $k$. Here $h = 3$ and $k = -7$, so the shift is right $3$ and down $7$."
+},
+{
+"id": "AM-067",
+"part": "In class",
+"d": "Hard",
+"q": "If $x = 5$ is one solution to the equation $x^2 - kx + 20 = 0$, what is the value of $k$?",
+"ans": "$9$",
+"rat": "Substituting $x = 5$: $25 - 5k + 20 = 0 \\Rightarrow 45 = 5k \\Rightarrow k = 9$."
+},
+{
+"id": "AM-071",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "A farmer has $80$ meters of fencing to enclose a rectangular plot, with one side against an existing wall (so fencing is needed only on the other three sides). If $x$ represents the width of the plot (perpendicular to the wall), which function $A(x)$ models the area of the plot, in square meters?\n\nA) $A(x) = 80x - 2x^2$\nB) $A(x) = 80x - x^2$\nC) $A(x) = 40x - 2x^2$\nD) $A(x) = 80 - 2x^2$",
+"ans": "A) $A(x) = 80x - 2x^2$",
+"rat": "The three fenced sides are two widths and one length: $2x + \\text{length} = 80$, so length $= 80 - 2x$. Area $= x(80 - 2x) = 80x - 2x^2$."
+},
+{
+"id": "AM-073",
+"part": "In class",
+"d": "Hard",
+"q": "A company's weekly revenue, in thousands of SAR, from selling a product priced at $x$ SAR is modeled by $R(x) = -3x^2 + 150x$. What price $x$ maximizes the weekly revenue?\n\nA) $15$\nB) $20$\nC) $25$\nD) $30$",
+"ans": "C) $25$",
+"rat": "The maximum of $R(x) = -3x^2 + 150x$ occurs at $x = -\\dfrac{b}{2a} = -\\dfrac{150}{2(-3)} = 25$."
+},
+{
+"id": "AM-074",
+"part": "In class",
+"d": "Hard",
+"q": "The equation $x^2 - 12x + c = 0$ has two equal (repeated) roots. What is the value of $c$?",
+"ans": "$36$",
+"rat": "A quadratic has repeated roots when its discriminant is zero: $(-12)^2 - 4(1)(c) = 0 \\Rightarrow 144 - 4c = 0 \\Rightarrow c = 36$."
+},
+{
+"id": "AM-079",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $f$ is defined by $f\\left(x\\right)=\\left(-5\\right)\\left(3\\right)^{x}+7$. What is the $y$-intercept of the graph of $y=f\\left(x\\right)$ in the $xy$-plane?\n\nA) $\\left(0,{-5}\\right)$\n\nB) $\\left(0,2\\right)$\n\nC) $\\left(0,7\\right)$\n\nD) $\\left(0,{-12}\\right)$",
+"ans": "B) $\\left(0,2\\right)$",
+"rat": "The $y$-intercept occurs at $x=0$: $f\\left(0\\right)=\\left(-5\\right)\\left(3^{0}\\right)+7=\\left(-5\\right)\\left(1\\right)+7=2$."
+},
+{
+"id": "AM-084",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f\\left(x\\right)=\\dfrac{12-x}{2+x}$, where $x\\neq{-2}$. As the value of $x$ increases without bound, the value of $f\\left(x\\right)$ approaches which of the following?\n\nA) ${-2}$\n\nB) ${-1}$\n\nC) $1$\n\nD) $12$",
+"ans": "B) ${-1}$",
+"rat": "Dividing numerator and denominator by $x$: $f\\left(x\\right)=\\dfrac{\\frac{12}{x}-1}{1+\\frac{2}{x}}$. As $x\\to\\infty$, $\\dfrac{12}{x}\\to0$ and $\\dfrac{2}{x}\\to0$, so $f\\left(x\\right)\\to\\dfrac{-1}{1}={-1}$."
+},
+{
+"id": "AM-086",
+"part": "In class",
+"d": "Hard",
+"q": "$y=\\left(x-p\\right)^{2}\\left(x+p\\right)\\left(x-q\\right)$, where $p$ and $q$ are positive constants and $p\\neq q$. How many distinct $x$-intercepts does the graph of this equation have in the $xy$-plane?\n\nA) $1$\n\nB) $2$\n\nC) $3$\n\nD) $4$",
+"ans": "C) $3$",
+"rat": "Setting each factor to zero gives $x=p$ (multiplicity $2$), $x=-p$, and $x=q$. Since $p$ is positive, $p\\neq-p$; and since $p\\neq q$ and $q$ is positive while $-p$ is negative, $q\\neq-p$ either. So there are exactly $3$ distinct $x$-values, even though $x=p$ is a repeated root."
+},
+{
+"id": "AM-092",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "$x$ and $y^{2}$ are directly proportional. If $x=6$ when $y^{2}=8$, what is the value of $y^{2}$ when $x=15$?",
+"ans": "$20$",
+"rat": "Since $x$ and $y^2$ are directly proportional, $x=k y^2$ for a constant $k$. Using $6=k\\left(8\\right)$: $k=\\dfrac{3}{4}$. When $x=15$: $15=\\dfrac{3}{4}y^{2} \\Rightarrow y^{2}=20$."
+},
+{
+"id": "AM-101",
+"part": "In class",
+"d": "Hard",
+"q": "The table below shows some values of the function $N$.\n\n| $t$ | 0 | 1 | 2 |\n|---|---|---|---|\n| $N(t)$ | 100 | 25 | $\\dfrac{25}{4}$ |\n\nIf $N(t)=k\\cdot2^{-at}$ for positive constants $k$ and $a$, what is the value of $a$?",
+"ans": "2",
+"rat": "From $N(0)=k=100$. From $N(1)=100\\cdot2^{-a}=25 \\Rightarrow 2^{-a}=\\dfrac{25}{100}=\\dfrac{1}{4}=2^{-2} \\Rightarrow a=2$. Check with $N(2)$: $100\\cdot2^{-4}=100/16=25/4$. \u2713"
+},
+{
+"id": "AM-108",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "Which of the following parabolas has its turning point in the second quadrant of the coordinate plane?\n\n(A) $y=(x+2)^2-3$\n(B) $y=(x-3)^2-1$\n(C) $y=-(x+3)^2-1$\n(D) $y=-(x+1)^2+2$",
+"ans": "(D) $y=-(x+1)^2+2$",
+"rat": "The vertex form $y=a(x-h)^2+k$ has turning point $(h,k)$. For (D), $y=-(x+1)^2+2$ has vertex $(-1,2)$, where $x<0$ and $y>0$ \u2014 the second quadrant. The other vertices are $(-2,-3)$, $(3,-1)$, and $(-3,-1)$, none of which have $x<0,\\ y>0$."
+},
+{
+"id": "AM-116",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The graph of $y=2x^2+12x+11$ in the $xy$-plane is a parabola. What are the coordinates of its vertex?\n\n(A) $({-3},\\,{-7})$\n(B) $(3,\\,65)$\n(C) $({-3},\\,11)$\n(D) $({-6},\\,11)$",
+"ans": "(A) $({-3},\\,{-7})$",
+"rat": "$x=-\\dfrac{b}{2a}=-\\dfrac{12}{4}=-3$, and $y=2(9)+12(-3)+11=-7$."
+},
+{
+"id": "AM-124",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The functions $f$ and $g$ are defined by $f(x)=2x-3$ and $g(x)=x^2+1$. Which expression is equivalent to $g\\!\\left(f(x)\\right)$?\n\n(A) $4x^2-12x+10$\n(B) $4x^2-12x+9$\n(C) $2x^2-1$\n(D) $4x^2+10$",
+"ans": "(A) $4x^2-12x+10$",
+"rat": "$g\\!\\left(f(x)\\right)=(2x-3)^2+1=4x^2-12x+9+1=4x^2-12x+10$."
+},
+{
+"id": "AM-125",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x)=3x+k$, where $k$ is a constant. If $f\\!\\left(f(2)\\right)=38$, what is the value of $k$?",
+"ans": "$5$",
+"rat": "$f(2)=6+k$, so $f(6+k)=3(6+k)+k=18+4k=38 \\Rightarrow k=5$."
+},
+{
+"id": "AM-126",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $g$ is defined by $g(x)=\\dfrac{5}{(x-2)^2-9}$. For which values of $x$ is $g(x)$ undefined?\n\n(A) $x=2$ only\n(B) $x={-1}$ and $x=5$\n(C) $x={-5}$ and $x=1$\n(D) $x=11$ only",
+"ans": "(B) $x={-1}$ and $x=5$",
+"rat": "$g$ is undefined when $(x-2)^2=9$, so $x-2=\\pm3 \\Rightarrow x=5$ or $x=-1$."
+},
+{
+"id": "AM-132",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x)=a(x+4)(x-10)$, where $a$ is a constant. The minimum value of $f$ is $-98$. What is the value of $f(0)$?\n\n(A) $-98$\n(B) $-80$\n(C) $-40$\n(D) $80$",
+"ans": "(B) $-80$",
+"rat": "A minimum exists only if $a>0$. The vertex lies midway between the zeros: $x=\\dfrac{-4+10}{2}=3$. Then $f(3)=a(7)(-7)=-49a=-98$, so $a=2$. Therefore $f(0)=2(4)(-10)=-80$."
+},
+{
+"id": "AM-138",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $h(x)=a^x+b$, where $a>0$ and $b$ is a constant, passes through $(0,10)$ and $(2,13)$. What is the value of $ab$?\n\n(A) $13$\n(B) $18$\n(C) $20$\n(D) $26$",
+"ans": "(B) $18$",
+"rat": "$h(0)=1+b=10$, so $b=9$. $h(2)=a^2+9=13$, so $a=2$. $ab=18$."
+},
+{
+"id": "AM-140",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "The function $h(x)=2(x-4)^2-32$ has $x$-intercepts at $(0,0)$ and $(t,0)$. What is the value of $t$?",
+"ans": "$8$",
+"rat": "$2(x-4)^2=32\\Rightarrow x-4=\\pm4$, so $x=0$ or $x=8$. $t=8$."
+},
+{
+"id": "AM-144",
+"part": "In class",
+"d": "Hard",
+"q": "A theater's revenue, in SAR, from selling $t$ tickets is $R(t)=t(320-10t)$. For which of the following values of $t$ is the revenue $2{,}400$ SAR?\n\n(A) $14$\n(B) $18$\n(C) $20$\n(D) $26$",
+"ans": "(C) $20$",
+"rat": "$t(320-10t)=2400\\Rightarrow t^2-32t+240=0\\Rightarrow(t-12)(t-20)=0$. Only $t=20$ is listed."
+},
+{
+"id": "AM-146",
+"part": "Self-assessment",
+"d": "Medium",
+"q": "$g(x)=\\dfrac{2x-4}{(x+11)(x-6)}$ If $g(a+5)=0$, what is the value of $a$?",
+"ans": "$-3$",
+"rat": "A fraction is $0$ when its numerator is $0$ (denominator nonzero): $2(a+5)-4=0$, so $a+5=2$ and $a=-3$. The denominator is $(8)(-3)\\ne0$."
+},
+{
+"id": "AM-147",
+"part": "In class",
+"d": "Hard",
+"q": "$y=\\dfrac{5(x+3)(x-9)(x+2)}{(x-5)(x-5c)}$ In the equation above, $c$ is a positive constant. The expression is undefined at $x=10$ (and $x=5$). What is the value of $c$?\n\n(A) $-3$\n(B) $-2$\n(C) $2$\n(D) $3$",
+"ans": "(C) $2$",
+"rat": "The denominator is $0$ at $x=10$: $10-5c=0$, so $c=2$."
+},
+{
+"id": "AM-150",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f(x)=ax^2+bx+c$ has $a>0$ and $c<0$. Which of the following must be true? I. $f$ has two distinct real zeros  II. The zeros of $f$ have opposite signs  III. The vertex of the graph of $f$ lies in the fourth quadrant\n\n(A) I only\n(B) I and III only\n(C) I and II only\n(D) I, II and III",
+"ans": "(C) I and II only",
+"rat": "$ac<0$ gives discriminant $b^2-4ac>0$ (I true) and product of zeros $\\dfrac ca<0$ (II true). The vertex $x=-\\dfrac{b}{2a}$ can be positive, zero or negative, so III need not hold."
+},
+{
+"id": "AM-151",
+"part": "In class",
+"d": "Hard",
+"q": "| $x$ | $g(x)$ |\n|---|---|\n| $-12$ | $-\\dfrac{17}{4}$ |\n| $-9$ | $-\\dfrac{10}{3}$ |\n| $3$ | $258$ |\n\nThe table above shows three values of $x$ and their corresponding values of $g(x)$. If $g(x)=\\dfrac{x^{2}+a}{bx}+2^{(cx-1)}$, what is the value of $abc$?",
+"ans": "$81$",
+"rat": "For $x=3$ the target $258=2+256=2+2^{8}$ suggests $cx-1=8$, so $c=3$ and $\\dfrac{9+a}{3b}=2$, i.e. $9+a=6b$. For $x=-12$ and $x=-9$ the exponential term $2^{-37}$ and $2^{-28}$ is negligible, so $\\dfrac{144+a}{-12b}\\approx-\\dfrac{17}{4}$ gives $144+a=51b$. Subtract: $135=45b$, so $b=3$, $a=9$. Check $x=-9$: $\\dfrac{81+9}{-27}=-\\dfrac{10}{3}$ \u2713. Then $abc=9\\cdot3\\cdot3=81$."
+},
+{
+"id": "AM-152",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x)=5(3)^{x+2}$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the $y$-coordinate of the $y$-intercept of the graph of the function it defines in the $xy$-plane?\n\nI. $g(x)=45(3)^{x}$\nII. $h(x)=15(3)^{x+1}$\n\n(A) I only\n(B) II only\n(C) I and II\n(D) Neither I nor II",
+"ans": "(A) I only",
+"rat": "The $y$-intercept is $f(0)=5(3)^2=45$. Form I rewrites $5\\cdot 3^{2}\\cdot 3^{x}=45(3)^x$, so $45$ is the coefficient. Form II, $15(3)^{x+1}$, is equivalent to $f$ but its constant $15$ is not the $y$-coordinate: $h(0)=15\\cdot3=45$ only after evaluating."
+},
+{
+"id": "AM-153",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x)=96(2)^{x-3}$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the $y$-coordinate of the $y$-intercept of the graph of the function it defines in the $xy$-plane?\n\nI. $g(x)=48(2)^{x-2}$\nII. $h(x)=12(2)^{x}$\n\n(A) I only\n(B) II only\n(C) I and II\n(D) Neither I nor II",
+"ans": "(B) II only",
+"rat": "$f(0)=96(2)^{-3}=12$. Form II writes $96\\cdot2^{-3}\\cdot2^{x}=12(2)^x$, displaying $12$. Form I, $48(2)^{x-2}$, is equivalent ($48\\cdot2^{-2}=12$) but displays $48$, and $g(0)=12$ only after evaluating the exponent."
+},
+{
+"id": "AM-154",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x)=3(4)^{x+2}$, where $x\\ge 0$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where $x\\ge0$?\n\nI. $g(x)=48(4)^{x}$\nII. $h(x)=48(2)^{2x}$\n\n(A) I only\n(B) II only\n(C) I and II\n(D) Neither I nor II",
+"ans": "(C) I and II",
+"rat": "Because the base is greater than $1$, $f$ increases, so its minimum on $x\\ge0$ is $f(0)=3(4)^2=48$. Form I is $3\\cdot16\\cdot4^{x}=48(4)^x$. Form II uses $2^{2x}=4^{x}$, so $48(2)^{2x}$ is equivalent too. Both show $48$ as the coefficient."
+},
+{
+"id": "AM-155",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f$ is defined by $f(x)=6(2)^{x+3}$, where $x\\ge 0$. The functions $g$ and $h$ are equivalent to $f$. Which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where $x\\ge0$?\n\nI. $g(x)=12(2)^{x+2}$\nII. $h(x)=24(2)^{x+1}$\n\n(A) I only\n(B) II only\n(C) I and II\n(D) Neither I nor II",
+"ans": "(D) Neither I nor II",
+"rat": "The minimum on $x\\ge0$ is $f(0)=6(2)^3=48$. Form I is equivalent ($12\\cdot4=48$) but displays $12$. Form II is equivalent ($24\\cdot2=48$) but displays $24$. Neither shows $48$; the exponent would have to be $x$ alone."
+},
+{
+"id": "AM-156",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f(x)=200(1.5)^{\\frac{x}{2}}$ is defined for all $x$. For every increase of $x$ by $4$, the value of $f(x)$ increases by $p\\%$. What is the value of $p$?",
+"ans": "$125$",
+"rat": "An increase of $4$ in $x$ multiplies $f$ by $(1.5)^{4/2}=(1.5)^2=2.25$. A factor of $2.25$ is an increase of $125\\%$."
+},
+{
+"id": "AM-157",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f(t)=2400(0.8)^{\\frac{t}{5}}$ models the value, in dollars, of a machine $t$ years after it was bought. For every increase of $t$ by $10$, the value of $f(t)$ decreases by $p\\%$. What is the value of $p$?\n\n(A) $20$\n(B) $36$\n(C) $40$\n(D) $64$",
+"ans": "(B) $36$",
+"rat": "An increase of $10$ years multiplies the value by $(0.8)^{10/5}=(0.8)^2=0.64$. The value keeps $64\\%$ of itself, so it decreases by $36\\%$."
+},
+{
+"id": "AM-158",
+"part": "In class",
+"d": "Hard",
+"q": "The function $N(t)=500(2)^{\\frac{t}{3}}$ models the number of bacteria in a culture $t$ hours after the start. Which of the following gives the number of bacteria $m$ minutes after the start?\n\n(A) $N(m)=500(2)^{\\frac{m}{180}}$\n(B) $N(m)=500(2)^{180m}$\n(C) $N(m)=500(2)^{20m}$\n(D) $N(m)=500(2)^{\\frac{m}{20}}$",
+"ans": "(A) $N(m)=500(2)^{\\frac{m}{180}}$",
+"rat": "Since $t=\\dfrac{m}{60}$ hours, $\\dfrac{t}{3}=\\dfrac{m}{60\\cdot3}=\\dfrac{m}{180}$."
+},
+{
+"id": "AM-159",
+"part": "In class",
+"d": "Hard",
+"q": "The function $f(x)=12{,}000(0.85)^{x}$ models the number of visitors a museum had each year, where $x$ is the number of years since the start of $2018$ and $0\\le x\\le6$. If $y=f(x)$ is graphed in the $xy$-plane, which of the following is the best interpretation of the $y$-intercept of the graph in this context?\n\n(A) The minimum estimated number of visitors during the $6$ years was $4{,}526$.\n(B) The minimum estimated number of visitors during the $6$ years was $12{,}000$.\n(C) The estimated number of visitors in $2018$ was $4{,}526$.\n(D) The estimated number of visitors in $2018$ was $12{,}000$.",
+"ans": "(D)",
+"rat": "The $y$-intercept is $f(0)=12{,}000$, the estimate at $x=0$, which is $2018$. Since $0.85<1$ the function decreases, so $12{,}000$ is the maximum, not the minimum; $f(6)\\approx4{,}526$ is the minimum."
+},
+{
+"id": "AM-161",
+"part": "Self-assessment",
+"d": "Hard",
+"q": "A town's population is modeled by $P(t)=50(3)^{\\frac{t}{4}}$, where $t$ is the number of years since $2010$. According to the model, in how many years after $2010$ will the population be $1{,}350$?",
+"ans": "$12$",
+"rat": "Set $50(3)^{t/4}=1350$, so $3^{t/4}=27=3^3$. Then $\\dfrac t4=3$ and $t=12$."
+}
+]
