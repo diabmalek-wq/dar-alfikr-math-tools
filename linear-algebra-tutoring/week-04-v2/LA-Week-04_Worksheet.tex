@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.9cm,top=2.4cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,fontspec,microtype,fancyhdr,lastpage,enumitem,needspace}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{1F3A5F}\definecolor{soft}{HTML}{EEF3F9}\definecolor{ans}{HTML}{F3F8F1}\definecolor{ansb}{HTML}{3C7A3C}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\color{ink}\textbf{Linear Algebra I} \textperiodcentered\ Week 4 --- Row Reduction, Solving Linear Systems \& Bases from RREF}
+\rhead{}\cfoot{\small Mr Malek Thiab \textperiodcentered\ Worksheet \textperiodcentered\ Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\newcommand{\lv}[1]{\textsc{\small #1}}
+\begin{document}
+{\Large\bfseries\color{ink} Linear Algebra I --- Week 4}\\[2pt]
+{\large\bfseries\color{ink} Row Reduction, Solving Linear Systems \& Bases from RREF}\\[3pt]
+{\small Name: \underline{\hspace{5cm}}\hfill Date: \underline{\hspace{3cm}}\qquad All work \textbf{by hand} --- no calculator, no software.}
+\vspace{4pt}\hrule\vspace{8pt}
+
+\begin{tcolorbox}[colback=soft,colframe=ink,title={\bfseries Key Facts}]
+\textbf{Elementary row operations.} (i) swap two rows $R_i\leftrightarrow R_j$; (ii) scale a row $R_i\to cR_i$ with $c\neq0$; (iii) add a multiple of one row to another $R_i\to R_i+\lambda R_j$. They do not change the solution set of a system, and they can be undone, so they do not change the span of the rows.
+
+\textbf{REF and RREF.} A matrix is in \emph{row echelon form} (REF) if the zero rows are at the bottom and the first nonzero entry (the \emph{leading entry}) of each row lies strictly to the right of the leading entry of the row above. It is in \emph{reduced} row echelon form (RREF) if moreover every leading entry is $1$ and is the only nonzero entry in its column. The RREF of a matrix is unique. A \emph{pivot column} is a column containing a leading entry.
+
+\textbf{Solving $A\mathbf x=\mathbf b$.} Reduce $\bigl(A\mid\mathbf b\bigr)$ to RREF. If a row reads $(0\ \cdots\ 0\mid1)$ the system is \emph{inconsistent}. Otherwise variables in pivot columns are \emph{basic}, the others are \emph{free}. No free variable: a unique solution. At least one free variable: infinitely many solutions, written as $\mathbf p+s\,\mathbf v_1+t\,\mathbf v_2+\cdots$ (parametric vector form).
+
+\textbf{Homogeneous systems.} $A\mathbf x=\mathbf 0$ is always consistent ($\mathbf x=\mathbf 0$). Its solution set is a subspace, the span of the vectors multiplying the free parameters. If there are more unknowns than equations there is a free variable, hence a nonzero solution. If $\mathbf p$ solves $A\mathbf x=\mathbf b$, every solution is $\mathbf p+\mathbf h$ with $A\mathbf h=\mathbf 0$.
+
+\textbf{Columns, rows and RREF.} The columns of $A$ at the pivot positions of its RREF form a basis of $\operatorname{col}(A)$ (take them from the original $A$, not from the RREF). The nonzero rows of the RREF form a basis of $\operatorname{row}(A)$. The entries of a non-pivot column of the RREF are the coefficients expressing that column of $A$ through the pivot columns. Vectors $v_1,\dots,v_k$ are independent exactly when the matrix with these columns has a pivot in every column.
+\end{tcolorbox}
+
+\newpage
+\section*{\large\color{ink} Worked Examples}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 1 \textperiodcentered\ Reducing a matrix to RREF}]Reduce $\begin{pmatrix}1 & 2 & 1 \\ 2 & 5 & 3 \\ 1 & 3 & 4\end{pmatrix}$ to RREF.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Go column by column. Column 1: the top entry is already $1$, so use it as the pivot and clear the entries below.
+\item Apply $R_2\to R_2-2R_1,\ R_3\to R_3-R_1$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 2 & 1 \\ 0 & 1 & 1 \\ 0 & 1 & 3\end{pmatrix}$
+\item Apply $R_1\to R_1-2R_2,\ R_3\to R_3-R_2$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & -1 \\ 0 & 1 & 1 \\ 0 & 0 & 2\end{pmatrix}$
+\item Apply $R_3\to \dfrac{1}{2} R_3$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & -1 \\ 0 & 1 & 1 \\ 0 & 0 & 1\end{pmatrix}$
+\item Apply $R_1\to R_1+R_3,\ R_2\to R_2-R_3$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$
+\item Every column has a pivot; the result is the identity matrix, which is in RREF.
+\end{enumerate}\textbf{Answer:} RREF $=\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 2 \textperiodcentered\ A system with a unique solution}]Solve $\begin{cases}x+y=3\\ 2x-y=0\end{cases}$
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 1 & 3 \\ 2 & -1 & 0\end{array}\right)$
+\item Apply $R_2\to R_2-2R_1$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 1 & 3 \\ 0 & -3 & -6\end{array}\right)$
+\item Apply $R_2\to \dfrac{1}{-3} R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 1 & 3 \\ 0 & 1 & 2\end{array}\right)$
+\item Apply $R_1\to R_1-R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 0 & 1 \\ 0 & 1 & 2\end{array}\right)$
+\item Every column of the coefficient part holds a pivot, so there are no free variables and the solution is unique.
+\item Read each nonzero row as an equation for its basic variable:\par\smallskip $\displaystyle\begin{aligned}x&=1\\ y&=2\end{aligned}$
+\item Check by substituting $(x,y)=(1,2)$ into the original equations: the left sides give $(3,0)$, the right-hand sides \checkmark.
+\end{enumerate}\textbf{Answer:} Unique solution: $(x,y)=(1,2)$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 3 \textperiodcentered\ A system with infinitely many solutions}]Solve $\begin{cases}x+y+z=3\\ 2x+y=3\end{cases}$
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 1 & 1 & 3 \\ 2 & 1 & 0 & 3\end{array}\right)$
+\item Apply $R_2\to R_2-2R_1$:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 1 & 1 & 3 \\ 0 & -1 & -2 & -3\end{array}\right)$
+\item Apply $R_2\to \dfrac{1}{-1} R_2$:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 1 & 1 & 3 \\ 0 & 1 & 2 & 3\end{array}\right)$
+\item Apply $R_1\to R_1-R_2$:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 0 & -1 & 0 \\ 0 & 1 & 2 & 3\end{array}\right)$
+\item Pivot columns are the columns of the basic variables: $x$, $y$. The remaining variable(s) $z$ are \emph{free}: call them $z=s$.
+\item Read each nonzero row as an equation for its basic variable:\par\smallskip $\displaystyle\begin{aligned}x&=s\\ y&=3-2s\\ z&=s\end{aligned}$
+\item Write this as a vector: $\displaystyle \mathbf x=\begin{pmatrix}0\\3\\0\end{pmatrix}+s\begin{pmatrix}1\\-2\\1\end{pmatrix}$ (the parameters $s$ may be any numbers).
+\item Check with $s=1$: $\mathbf x=\begin{pmatrix}1\\1\\1\end{pmatrix}$, and substituting into the original equations gives the right-hand sides $(3,3)$ \checkmark.
+\end{enumerate}\textbf{Answer:} Infinitely many solutions: $\mathbf x=\begin{pmatrix}0\\3\\0\end{pmatrix}+s\begin{pmatrix}1\\-2\\1\end{pmatrix}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 4 \textperiodcentered\ An inconsistent system}]Solve $\begin{cases}x+y+2z=1\\ 2x+2y+5z=3\\ x+y=2\end{cases}$
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 1 & 2 & 1 \\ 2 & 2 & 5 & 3 \\ 1 & 1 & 0 & 2\end{array}\right)$
+\item Apply $R_2\to R_2-2R_1,\ R_3\to R_3-R_1$:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 1 & 2 & 1 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & -2 & 1\end{array}\right)$
+\item Apply $R_1\to R_1-2R_2,\ R_3\to R_3+2R_2$:\par\smallskip $\displaystyle \left(\begin{array}{ccc|c}1 & 1 & 0 & -1 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 3\end{array}\right)$
+\item Row 3 reads $0=1$, a contradiction. No numbers $x,y,z$ can satisfy it, so the system is \emph{inconsistent}.
+\end{enumerate}\textbf{Answer:} No solution (inconsistent).
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 5 \textperiodcentered\ A homogeneous system}]Solve $\begin{cases}x+y+2w=0\\ 2x+2y+z+5w=0\end{cases}$ and write the solution set as a span.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{cccc|c}1 & 1 & 0 & 2 & 0 \\ 2 & 2 & 1 & 5 & 0\end{array}\right)$
+\item Apply $R_2\to R_2-2R_1$:\par\smallskip $\displaystyle \left(\begin{array}{cccc|c}1 & 1 & 0 & 2 & 0 \\ 0 & 0 & 1 & 1 & 0\end{array}\right)$
+\item Pivot columns are the columns of the basic variables: $x$, $z$. The remaining variable(s) $y$, $w$ are \emph{free}: call them $y=s$, $w=t$.
+\item Read each nonzero row as an equation for its basic variable:\par\smallskip $\displaystyle\begin{aligned}x&=-s-2t\\ y&=s\\ z&=-t\\ w&=t\end{aligned}$
+\item Write this as a vector: $\displaystyle \mathbf x=s\begin{pmatrix}-1\\1\\0\\0\end{pmatrix}+t\begin{pmatrix}-2\\0\\-1\\1\end{pmatrix}$ (the parameters $s$, $t$ may be any numbers).
+\item Check with $s=1$, $t=1$: $\mathbf x=\begin{pmatrix}-3\\1\\-1\\1\end{pmatrix}$, and substituting into the original equations gives the right-hand sides $(0,0)$ \checkmark.
+\end{enumerate}\textbf{Answer:} Infinitely many solutions: $\mathbf x=s\begin{pmatrix}-1\\1\\0\\0\end{pmatrix}+t\begin{pmatrix}-2\\0\\-1\\1\end{pmatrix}$. The solution set is $\operatorname{span}$ of the two vectors above.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 6 \textperiodcentered\ Column space basis and column relations}]For $A=\begin{pmatrix}1 & 3 & 0 & 2 \\ 2 & 6 & 1 & 5 \\ 1 & 3 & 1 & 3\end{pmatrix}$ find a basis of $\operatorname{col}(A)$ and express the other columns using it.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Reduce $A$ to RREF.
+\item Apply $R_2\to R_2-2R_1,\ R_3\to R_3-R_1$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 3 & 0 & 2 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 1\end{pmatrix}$
+\item Apply $R_3\to R_3-R_2$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 3 & 0 & 2 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0\end{pmatrix}$
+\item Pivot columns: 1,3. By the pivot-column rule, a basis of $\operatorname{col}(A)$ is formed by columns 1,3 \emph{of the original $A$}: $\left\{\begin{pmatrix}1\\2\\1\end{pmatrix},\ \begin{pmatrix}0\\1\\1\end{pmatrix}\right\}$.
+\item The non-pivot columns of the RREF give the coefficients: column 2 of $R$ is $\begin{pmatrix}3\\0\end{pmatrix}$, so $\text{col}_2=3\,\text{col}_1$; column 4 of $R$ is $\begin{pmatrix}2\\1\end{pmatrix}$, so $\text{col}_4=2\,\text{col}_1+1\,\text{col}_3$.
+\end{enumerate}\textbf{Answer:} Basis $\{\begin{pmatrix}1\\2\\1\end{pmatrix},\begin{pmatrix}0\\1\\1\end{pmatrix}\}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 7 \textperiodcentered\ A system over $\mathbb{C}$}]Solve $\begin{cases}x+iy=1+i\\ ix+2y=i\end{cases}$ over $\mathbb{C}$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & i & 1+i \\ i & 2 & i\end{array}\right)$
+\item Apply $R_2\to R_2-iR_1$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & i & 1+i \\ 0 & 3 & 1\end{array}\right)$
+\item Apply $R_2\to \dfrac{1}{3} R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & i & 1+i \\ 0 & 1 & \dfrac{1}{3}\end{array}\right)$
+\item Apply $R_1\to R_1-iR_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 0 & 1+\dfrac{2}{3}i \\ 0 & 1 & \dfrac{1}{3}\end{array}\right)$
+\item Every column of the coefficient part holds a pivot, so there are no free variables and the solution is unique.
+\item Read each nonzero row as an equation for its basic variable:\par\smallskip $\displaystyle\begin{aligned}x&=1+\dfrac{2}{3}i\\ y&=\dfrac{1}{3}\end{aligned}$
+\item Check by substituting $(x,y)=(1+\dfrac{2}{3}i,\dfrac{1}{3})$ into the original equations: the left sides give $(1+i,i)$, the right-hand sides \checkmark.
+\end{enumerate}\textbf{Answer:} Unique solution: $(x,y)=(1+\dfrac{2}{3}i,\dfrac{1}{3})$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 8 \textperiodcentered\ Proof: row reduction does not change the solutions}]Prove: swapping two equations, scaling an equation by $c\neq0$, or adding a multiple of one equation to another does not change the solution set.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Swapping: the system is the same list of equations in a different order, and a vector solves a list of equations regardless of order.
+\item Scaling $E_i$ by $c\neq0$: if $E_i(\mathbf x)=\beta_i$ then $(cE_i)(\mathbf x)=c\beta_i$. Conversely, if $(cE_i)(\mathbf x)=c\beta_i$, multiply both sides by $c^{-1}$ (possible because $c\neq0$ in a field) to recover $E_i(\mathbf x)=\beta_i$.
+\item Adding $\lambda E_j$ to $E_i$: if $\mathbf x$ solves both $E_i,E_j$ it solves $E_i+\lambda E_j$. Conversely, if $\mathbf x$ solves $E_j$ and $E_i+\lambda E_j$, then $E_i(\mathbf x)=(E_i+\lambda E_j)(\mathbf x)-\lambda E_j(\mathbf x)=\beta_i$.
+\item Each operation is undone by an operation of the same kind, so solutions are preserved in both directions.
+\end{enumerate}\textbf{Answer:} The three operations preserve the solution set, so a system and its RREF have the same solutions.
+\end{tcolorbox}
+\newpage
+\section*{\large\color{ink} Practice Problems}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part A --- Echelon Forms and Row Reduction}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{1.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Classify each matrix as: in RREF, in REF but not RREF, or neither. For every matrix that is not in RREF, name the condition it violates. $$\text{(a) }\begin{pmatrix}1 & 0 & 2 \\ 0 & 1 & -1 \\ 0 & 0 & 0\end{pmatrix}\quad \text{(b) }\begin{pmatrix}1 & 0 & 2 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}\quad\text{(c) }\begin{pmatrix}0 & 1 & 3 \\ 1 & 0 & 2 \\ 0 & 0 & 0\end{pmatrix}\quad\text{(d) }\begin{pmatrix}1 & 3 & 0 & 2 \\ 0 & 0 & 1 & -1 \\ 0 & 0 & 0 & 0\end{pmatrix}$$
+\vspace{2.5cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{2.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Use elementary row operations to reduce $\begin{pmatrix}1 & 2 & 1 \\ 2 & 5 & 3 \\ 1 & 3 & 4\end{pmatrix}$ to RREF. Write each operation in the form $R_i\to R_i-cR_j$ and state the pivot columns.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{3.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Reduce $\begin{pmatrix}1 & 2 & -1 & 3 \\ 2 & 4 & 0 & 2 \\ 1 & 2 & 1 & -1\end{pmatrix}$ to RREF. State the pivot columns and explain why column 2 is not a pivot column.
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{4.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Reduce $\begin{pmatrix}0 & 2 & 4 \\ 1 & 1 & 1 \\ 2 & 0 & -2\end{pmatrix}$ to RREF. A row swap is needed: say why, and state the pivot columns.
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{5.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Over $\mathbb{C}$, reduce $\begin{pmatrix}1 & i & 0 \\ 2 & 2i & 1 \\ 1 & i & 1\end{pmatrix}$ to RREF. State the pivot columns.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{6.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak (Why row reduction works.) Let $S'$ be obtained from a system $S$ by one elementary row operation $R_i\to R_i+\lambda R_j$ ($i\neq j$). Prove that $S$ and $S'$ have the same solutions.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part B --- Solving Linear Systems}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{7.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Solve by row reduction: $\begin{cases}x+y=3\\ 2x-y=0\end{cases}$
+\vspace{3.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{8.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Solve by row reduction: $\begin{cases}x+y+2z=5\\ 2x-y+z=4\\ x+2y-z=3\end{cases}$
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{9.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Solve: $\begin{cases}x+2y-z=4\\ 2x+5y+z=9\end{cases}$ Describe the solution set in parametric vector form.
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{10.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Decide whether the system is consistent: $\begin{cases}x+2y+z=1\\ 2x+4y+3z=3\\ x+2y-z=2\end{cases}$
+\vspace{3.9cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{11.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Solve $\begin{cases}x+y+z+w=2\\ x+2y+3w=5\end{cases}$ and identify the basic and free variables.
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{12.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Solve the homogeneous system $\begin{cases}x+2y-w=0\\ 2x+4y+z+w=0\\ x+2y+z+2w=0\end{cases}$ and write the solution set as a span.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{13.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Over $\mathbb{C}$, solve $\begin{cases}x+iy=1+i\\ ix+2y=i\end{cases}$
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{14.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak For which real $k$ does the system $\begin{cases}x+y+z=1\\ x+2y+3z=2\\ x+3y+kz=4\end{cases}$ have (i) a unique solution, (ii) no solution, (iii) infinitely many solutions?
+\vspace{4.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{15.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak A homogeneous system has $m$ equations and $n$ unknowns with $n>m$. Prove it has a nonzero solution.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part C --- Column Spaces, Relations and Proofs}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{16.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak The matrix $R=\begin{pmatrix}1 & 0 & 3 & 0 & -2 \\ 0 & 1 & -1 & 0 & 4 \\ 0 & 0 & 0 & 1 & 5\end{pmatrix}$ is the RREF of the coefficient matrix of a homogeneous system. State the pivot columns, the basic and free variables (use $x_1,\dots,x_5$), and the general solution of $R\mathbf x=\mathbf 0$.
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{17.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $A=\begin{pmatrix}1 & 2 & 0 & 1 \\ 2 & 4 & 1 & 3 \\ 1 & 2 & 1 & 2\end{pmatrix}$. (a) Reduce $A$ to RREF. (b) Give a basis of the column space $\operatorname{col}(A)$ made of columns of $A$ itself. (c) Express each non-pivot column of $A$ as a linear combination of the pivot columns.
+\vspace{4.9cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{18.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak For $A=\begin{pmatrix}1 & 2 & 3 \\ 2 & 4 & 7 \\ 3 & 6 & 10\end{pmatrix}$, reduce to RREF and give a basis of the row space $\operatorname{row}(A)$ and the number of pivots.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{19.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Decide whether $\mathbf w=(3,2,1)$ lies in $\operatorname{span}\{(1,0,1),(2,1,0),(0,1,-2)\}\subseteq\mathbb{R}^{3}$ by row reducing one augmented matrix. Give the coefficients if it does.
+\vspace{4.3cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{20.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Place the vectors $(1,2,1,0),\ (1,0,1,1),\ (2,1,0,1)$ of $\mathbb{R}^{4}$ as columns of a matrix. Use RREF to decide whether they are linearly independent.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{21.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Show that $(1,0,1),(1,1,0),(0,1,1),(2,3,1)$ in $\mathbb{R}^{3}$ are linearly dependent, and use RREF to find an explicit relation among them.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{22.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak In $P_{2}(\mathbb{R})$, decide whether $q(x)=2+3x+x^{2}\in\operatorname{span}\{1+x,\ x+x^{2},\ 1+x^{2}\}$. Set up the system, reduce, and conclude.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{23.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $A\mathbf x=\mathbf b$ be consistent and let $\mathbf p$ be one solution. Prove that the solution set is exactly $\{\mathbf p+\mathbf h:\ A\mathbf h=\mathbf 0\}$.
+\vspace{3.9cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{24.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Find the condition on $a,b,c$ for the system $\begin{cases}x+2y-z=a\\ 2x+3y+z=b\\ x+y+2z=c\end{cases}$ to be consistent.
+\vspace{4.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{25.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $R$ be the RREF of $A$. Prove that every non-pivot column of $R$ is a linear combination of the pivot columns of $R$, and explain why the same relation holds among the corresponding columns of $A$.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\end{document}
