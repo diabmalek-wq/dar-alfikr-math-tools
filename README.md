@@ -9,8 +9,9 @@ Read `docs/HOUSE-RULES.md` and `docs/LESSONS-LEARNED.md` before changing an engi
 | Folder | What it holds |
 |---|---|
 | `calculus-2-tutoring/` | Calculus 2 course: `COURSE-MAP-15-WEEKS.md`, one `week-XX/` folder per week (worksheet PDF, with-solutions PDF, markdown source), `tools/` (build scripts), `_staged/` (older source copies) |
-| `linear-algebra-tutoring/` | Linear Algebra course: `00-Weekly-Schedule.md`, `week-XX/` source and `week-XX-v2/` current PDFs, `tools/`, `sources/`, `gap-analysis/` |
+| `linear-algebra-tutoring/` | Linear Algebra course: `00-Weekly-Schedule.md`, `week-XX/` source and `week-XX-v2/` current PDFs, `notes-summary/` (summary of the MATA22 lecture notes Weeks 0 to 12 and Homework 12), `tools/`, `sources/`, `gap-analysis/` |
 | `sat-math/` | `9-week-levelup/` (36 level-up PDFs, 36 Plus PDFs, README), `trick-pack/` (Trick Pack 1 A–M, 26 PDFs, README), older Week 1 files |
+| `presentations/` | Finished FIKR decks and lesson materials by week (`week-06/`, `week-07/`); week 7 also holds the Wayground kick-off PDFs |
 | `engines/` | Config-driven builders: lesson deck, lesson-plan docs, exam paper, pre-session, deck animation, GeoGebra embed |
 | `generators/` | LaTeX, figure and graph generators that feed the engines |
 | `builders/` | Per-product configs: `lessons`, `exam-prep`, `gat-bank`, `saat-bank`, `sat-bank`, `mawhiba`, `ap-precalculus` |
@@ -26,12 +27,17 @@ Read `docs/HOUSE-RULES.md` and `docs/LESSONS-LEARNED.md` before changing an engi
 |---|---|
 | Calculus 2 Week 3 | `calculus-2-tutoring/week-03/Week-03-worksheet-with-solutions.pdf` |
 | Calculus 2 Week 4 | `calculus-2-tutoring/week-04/Week-04-worksheet.pdf` and `Week-04-worksheet-with-solutions.pdf` |
+| Calculus 2 Week 5 | `calculus-2-tutoring/week-05/Week-05-worksheet.pdf` and `Week-05-worksheet-with-solutions.pdf` |
 | Linear Algebra Week 2 | `linear-algebra-tutoring/week-02-v2/` |
 | Linear Algebra Week 3 | `linear-algebra-tutoring/week-03-v2/` (fully detailed solutions) |
+| Linear Algebra Week 4 | `linear-algebra-tutoring/week-04-v2/` (Row Reduction, Solving Linear Systems and Bases from RREF; worksheet and with-answers PDFs, plus the builder `build.py`, `data.py`, `h4.py`, `zlib4.py`) |
+| Linear Algebra lecture notes | `linear-algebra-tutoring/notes-summary/` (`LA Notes Summary Weeks 0-12.pdf`, `00-Index.md`, one `Week-NN.md` per week, `Homework-12.md`) |
 | SAT Math sessions | `sat-math/9-week-levelup/` (level-up and Plus sheets, worksheet + answers pairs) |
 | SAT Trick Pack | `sat-math/trick-pack/` |
 
 Folders without a `-v2` suffix and the `_staged/` folder hold older copies and markdown sources. The old `Week-04-Trigonometric-...md` source in `calculus-2-tutoring/week-04/` has a wrong sign in the problem 8 key; the corrected solution is in `Week-04-worksheet-solutions.md`.
+
+The `notes-summary/` files summarize the MATA22 lecture notes (Prof. T. Kielstra, University of Toronto Scarborough) using only what the notes state. Weeks 2 to 12 were scanned pages read by text recognition, so a few passages are marked "[unclear in scan]".
 
 ## Rules for tutoring worksheets (SAT, Calculus 2, Linear Algebra)
 
@@ -49,17 +55,15 @@ Folders without a `-v2` suffix and the `_staged/` folder hold older copies and m
 
 ## Status
 
-Updated 3 Oct 2026. Tutoring materials now live in this repo alongside the engines. `docs/MIGRATION.md` still describes the engine migration plan.
-
+Updated 11 Oct 2026. Tutoring materials live in this repo alongside the engines. `docs/MIGRATION.md` still describes the engine migration plan.
 
 ## Presentations (Prezi style, from 4 Oct 2026)
 
 All presentations use the Prezi-style design of the Lesson 6-5 Properties of Logarithms deck: a dark journey map of six numbered stations, Morph zoom transitions into a top breadcrumb, light content slides with rounded white cards, and typeset math images. FIKR decks keep the 60-minute structure (Diagnose 6, Targeted Instruction 18, Practice 12, Production 12, Mastery Gate 6, Smart Production 6). Mawhiba activity decks are student-run and not FIKR.
 
-Engine: engines/prezi/ (engine.js builds a deck from one lesson config; build.sh renders the math, builds, injects Morph, validates and makes a contact sheet; BRIEF.md is the authoring brief). Lesson configs: builders/lessons/prezi/cfg/ with figures in builders/lessons/prezi/figs/. Finished Week 6 decks (pptx and PDF): presentations/week-06/.
+Engine: engines/prezi/ (engine.js builds a deck from one lesson config; build.sh renders the math, builds, injects Morph, validates and makes a contact sheet; BRIEF.md is the authoring brief). Lesson configs: builders/lessons/prezi/cfg/ with figures in builders/lessons/prezi/figs/. Finished Week 6 decks (pptx and PDF): presentations/week-06/; Week 7 decks and Wayground kick-offs: presentations/week-07/.
 
 To add a lesson: write builders/lessons/prezi/cfg/ID.json (see _example_L2-4_abridged.json and BRIEF.md), run validate_cfg.py, then build.sh ID. Objectives, vocabulary and standards are quoted verbatim; never invent essential questions or practices.
-
 
 ## Standing rule: Mawhiba deliverables
 
