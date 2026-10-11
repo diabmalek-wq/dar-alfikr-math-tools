@@ -10,3 +10,5 @@ Each session has two PDFs: a **Worksheet** and an **Answers** copy. The Answers 
 Sessions: 1A, 1B, 2A, 2B, 3A, 3B, 4A, 4B, 5A, 5B, 6A, 6B, 7A, 7B, 8A, 8B, 9A, 9B. Week 1B Plus is the 40-problem version.
 
 Trick Pack 1 (200 original Challenge items, Parts A–M) is in `../trick-pack/`.
+
+The remaining sessions (3B to 9B) are being redistributed into 11 three-hour sessions built from the 919-item bank: see `../11-session-plan/`.
