@@ -5,8 +5,8 @@
 **Teacher of Record:** Mr. Malek Thiab
 **Scope:** Grades 10–11 SAT preparation (Algebra II Semester 1)
 **Difficulty:** Medium and Hard only (no Easy items, per weekly work order)
-**Item count:** 929 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36; the earlier header total of 491 was one short of the 492 items actually present)
-**Status:** Complete — §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
+**Item count:** 919 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36; the earlier header total of 491 was one short of the 492 items actually present)
+**Status:** Complete — §2.35 was screened for repeated tricks and 10 near-duplicates (A-249, A-250, A-256, A-259, A-271, A-272, A-287, A-290, A-291, A-292) were removed; §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
 
 ---
 
@@ -18246,7 +18246,7 @@ Figure-free items: every diagram is described in words or coordinates so each it
 
 ---
 
-### 2.35 Gap-Closing Batch 5 — Algebra Top-Up (Linear Equations, Lines, Linear Functions, Inequalities, Systems) (48 items — A-245 to A-292)
+### 2.35 Gap-Closing Batch 5 — Algebra Top-Up (Linear Equations, Lines, Linear Functions, Inequalities, Systems) (38 items, A-245 to A-291 with gaps; 10 repeated-archetype items removed)
 
 Figure-free items; all answers verified programmatically.
 
@@ -18319,42 +18319,6 @@ Figure-free items; all answers verified programmatically.
 **Rationale:** $0.4n=0.25(64)=16$, so $n=40$.
 
 **Misconception addressed:** Students find $25\%$ of $64$ and stop ($16$).
-
----
-
-### A-249
-
-**Skill:** Algebra — Linear equations in one variable
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** $$\frac{5x-2}{3}=7$$ What is the value of $10x-4$?
-
-**Correct Answer:** $42$
-
-**Rationale:** Multiply by $3$: $5x-2=21$. Then $10x-4=2(5x-2)=42$. No need to find $x$.
-
-**Misconception addressed:** Students solve $x=\dfrac{23}{5}$ and make an arithmetic slip, or answer $21$.
-
----
-
-### A-250
-
-**Skill:** Algebra — Linear equations in one variable
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** The function $f$ is defined by $f(x)=2x+b$, where $b$ is a constant. If $f(f(1))=13$, what is the value of $b$?
-
-**Correct Answer:** $3$
-
-**Rationale:** $f(1)=2+b$. Then $f(f(1))=2(2+b)+b=4+3b=13$, so $b=3$.
-
-**Misconception addressed:** Students compute $f(f(1))=2f(1)+b$ without substituting $f(1)$ correctly, or give $f(1)$.
 
 ---
 
@@ -18453,24 +18417,6 @@ Figure-free items; all answers verified programmatically.
 
 ---
 
-### A-256
-
-**Skill:** Algebra — Linear equations in two variables
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** The line through the points $(a,3)$ and $(5,a)$ has slope $-\dfrac12$. What is the value of $a$?
-
-**Correct Answer:** $1$
-
-**Rationale:** $\dfrac{a-3}{5-a}=-\dfrac12$, so $2a-6=a-5$ and $a=1$. Check: the points $(1,3)$ and $(5,1)$ have slope $\dfrac{-2}{4}=-\dfrac12$.
-
-**Misconception addressed:** Students write the slope as $\dfrac{5-a}{a-3}$ (inverted).
-
----
-
 ### A-257
 
 **Skill:** Algebra — Linear equations in two variables
@@ -18504,24 +18450,6 @@ Figure-free items; all answers verified programmatically.
 **Rationale:** Solve $2x-3=-x+6$: $x=3$, $y=3$, so $P=(3,3)$. The perpendicular slope is $-\dfrac12$, so $y-3=-\dfrac12(x-3)$ and $y=-\dfrac12x+\dfrac92$.
 
 **Misconception addressed:** Students use the wrong perpendicular slope ($-2$) or use the second line for the intercept.
-
----
-
-### A-259
-
-**Skill:** Algebra — Linear equations in two variables
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** A line in the $xy$-plane passes through $(2,5)$ and has a slope equal to its $y$-intercept. What is the $x$-coordinate of its $x$-intercept?
-
-**Correct Answer:** $-1$
-
-**Rationale:** The line is $y=mx+m=m(x+1)$. Through $(2,5)$: $5=3m$, so $m=\dfrac53$. Setting $y=0$ gives $x+1=0$, so $x=-1$ (for any nonzero slope).
-
-**Misconception addressed:** Students try to find the intercept using the point $(2,5)$ only.
 
 ---
 
@@ -18725,48 +18653,6 @@ Figure-free items; all answers verified programmatically.
 **Rationale:** $h(x)=(3+a)x-6$ is constant only if $3+a=0$, so $a=-3$.
 
 **Misconception addressed:** Students set $h(x)=0$ or equate $f$ and $g$.
-
----
-
-### A-271
-
-**Skill:** Algebra — Linear functions
-**Difficulty:** Medium
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** The table shows values of the linear function $f$.
-
-| $x$ | $0$ | $2$ | $4$ |
-|---|---|---|---|
-| $f(x)$ | $5$ | $11$ | $17$ |
-
-The function $g$ is defined by $g(x)=f(2x)$. What is the value of $g(3)$?
-
-**Correct Answer:** $23$
-
-**Rationale:** The slope is $\dfrac{11-5}{2}=3$ and $f(0)=5$, so $f(x)=3x+5$. Then $g(3)=f(6)=23$.
-
-**Misconception addressed:** Students read $g(3)$ as $2f(3)=2(14)=28$.
-
----
-
-### A-272
-
-**Skill:** Algebra — Linear functions
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** The linear function $f$ satisfies $f(3)+f(7)=20$. What is the value of $f(5)$?
-
-**Correct Answer:** $10$
-
-**Rationale:** For a linear function, $f(5)$ is the average of $f(3)$ and $f(7)$ because $5$ is the midpoint of $3$ and $7$. So $f(5)=\dfrac{20}{2}=10$.
-
-**Misconception addressed:** Students assume $f(5)=\dfrac{20}{5}$ or $f(3)=f(7)=10$ and then $f(5)=5$.
 
 ---
 
@@ -19032,24 +18918,6 @@ The function $g$ is defined by $g(x)=f(2x)$. What is the value of $g(3)$?
 
 ---
 
-### A-287
-
-**Skill:** Algebra — Systems of two linear equations in two variables
-**Difficulty:** Medium
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** $$y=2x-1$$ $$3x-2y=-4$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $x$?
-
-**Correct Answer:** $6$
-
-**Rationale:** Substitute: $3x-2(2x-1)=-4$, so $-x+2=-4$ and $x=6$.
-
-**Misconception addressed:** Students distribute $-2$ incorrectly ($3x-4x-1$).
-
----
-
 ### A-288
 
 **Skill:** Algebra — Systems of two linear equations in two variables
@@ -19088,65 +18956,6 @@ The function $g$ is defined by $g(x)=f(2x)$. What is the value of $g(3)$?
 **Rationale:** Setting $3x+c=-2x+8$ gives $x=\dfrac{8-c}5$. The solution has $x<0$ only when $c>8$. For $c=12$: $x=-\dfrac45$ and $y=-2\left(-\dfrac45\right)+8=9.6>0$. For $c=8$: $x=0$. For $c=4$ and $c=-2$: $x>0$.
 
 **Misconception addressed:** Students allow $x=0$ (which is on the axis, not in a quadrant).
-
----
-
-### A-290
-
-**Skill:** Algebra — Systems of two linear equations in two variables
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** If $(x,y)$ is the solution to the system $2x+y=13$ and $x+3y=14$, what is the value of $x-y$?
-
-**Correct Answer:** $2$
-
-**Rationale:** From the first equation $y=13-2x$. Then $x+3(13-2x)=14$, so $-5x=-25$ and $x=5$, $y=3$. Therefore $x-y=2$.
-
-**Misconception addressed:** Students add the equations ($3x+4y=27$) and stop, or swap $x$ and $y$ ($-2$).
-
----
-
-### A-291
-
-**Skill:** Algebra — Systems of two linear equations in two variables
-**Difficulty:** Hard
-**Format:** SPR
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** $$\frac23x+\frac12y=7$$ $$x-\frac14y=2$$ If $(x,y)$ is the solution to the system of equations above, what is the value of $y$? (Enter as a decimal.)
-
-**Correct Answer:** $8.5$
-
-**Rationale:** Multiply the first equation by $6$: $4x+3y=42$. Multiply the second by $4$: $4x-y=8$. Subtract: $4y=34$, so $y=8.5$.
-
-**Misconception addressed:** Students clear fractions inconsistently or answer $x$ ($4.125$).
-
----
-
-### A-292
-
-**Skill:** Algebra — Systems of two linear equations in two variables
-**Difficulty:** Medium
-**Format:** Multiple Choice
-
-**Source:** House-authored, coverage-matched to a College Board Question Bank Hard archetype (archetype only; no official item, wording or numbers reproduced).
-
-**Question:** $$x-2y=5$$ $$2x-4y=c$$ In the system of equations above, $c$ is a constant. For which value of $c$ does the system have infinitely many solutions?
-
-(A) $10$
-(B) $5$
-(C) $-10$
-(D) $9$
-
-**Correct Answer:** (A) $10$
-
-**Rationale:** Multiplying the first equation by $2$ gives $2x-4y=10$. The equations describe the same line exactly when $c=10$.
-
-**Misconception addressed:** Students keep $c=5$ (not scaling the right-hand side).
 
 ---
 
@@ -19521,7 +19330,7 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 
 ## 3. Bank Index (for worksheet sourcing)
 
-### Bank summary (all 929 items)
+### Bank summary (all 919 items)
 
 | Domain | Skill | Medium | Hard | Total |
 |---|---|---:|---:|---:|
@@ -19529,11 +19338,11 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | Advanced Math | Function notation | 0 | 2 | 2 |
 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 25 | 48 | 73 |
 | Advanced Math | Nonlinear functions | 31 | 96 | 127 |
-| Algebra | Linear equations in one variable | 23 | 28 | 51 |
-| Algebra | Linear equations in two variables | 22 | 36 | 58 |
-| Algebra | Linear functions | 34 | 39 | 73 |
+| Algebra | Linear equations in one variable | 23 | 26 | 49 |
+| Algebra | Linear equations in two variables | 22 | 34 | 56 |
+| Algebra | Linear functions | 33 | 38 | 71 |
 | Algebra | Linear inequalities in one or two variables | 22 | 27 | 49 |
-| Algebra | Systems of two linear equations in two variables | 31 | 48 | 79 |
+| Algebra | Systems of two linear equations in two variables | 29 | 46 | 75 |
 | Geometry and Trigonometry | Area and volume | 22 | 35 | 57 |
 | Geometry and Trigonometry | Circles | 25 | 44 | 69 |
 | Geometry and Trigonometry | Lines, angles, and triangles | 19 | 24 | 43 |
@@ -19545,7 +19354,7 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | Problem-Solving and Data Analysis | Probability and conditional probability | 3 | 6 | 9 |
 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 11 | 20 | 31 |
 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 7 | 5 | 12 |
-| **Total** | | **347** | **582** | **929** |
+| **Total** | | **344** | **575** | **919** |
 
 ### Full index
 
@@ -20416,17 +20225,13 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | A-246 | Algebra | Linear equations in one variable | Medium | SPR |
 | A-247 | Algebra | Linear equations in one variable | Medium | SPR |
 | A-248 | Algebra | Linear equations in one variable | Medium | SPR |
-| A-249 | Algebra | Linear equations in one variable | Hard | SPR |
-| A-250 | Algebra | Linear equations in one variable | Hard | SPR |
 | A-251 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-252 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-253 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-254 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-255 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
-| A-256 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-257 | Algebra | Linear equations in two variables | Medium | SPR |
 | A-258 | Algebra | Linear equations in two variables | Hard | SPR |
-| A-259 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-260 | Algebra | Linear equations in two variables | Hard | SPR |
 | A-261 | Algebra | Linear functions | Hard | SPR |
 | A-262 | Algebra | Linear functions | Hard | SPR |
@@ -20438,8 +20243,6 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | A-268 | Algebra | Linear functions | Hard | SPR |
 | A-269 | Algebra | Linear functions | Hard | SPR |
 | A-270 | Algebra | Linear functions | Hard | SPR |
-| A-271 | Algebra | Linear functions | Medium | SPR |
-| A-272 | Algebra | Linear functions | Hard | SPR |
 | A-273 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
 | A-274 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
 | A-275 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
@@ -20454,12 +20257,8 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | A-284 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
 | A-285 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
 | A-286 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
-| A-287 | Algebra | Systems of two linear equations in two variables | Medium | SPR |
 | A-288 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
 | A-289 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
-| A-290 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
-| A-291 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
-| A-292 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
 | A-293 | Algebra | Linear equations in one variable | Medium | SPR |
 | A-294 | Algebra | Linear equations in one variable | Hard | SPR |
 | A-295 | Algebra | Linear equations in two variables | Medium | SPR |

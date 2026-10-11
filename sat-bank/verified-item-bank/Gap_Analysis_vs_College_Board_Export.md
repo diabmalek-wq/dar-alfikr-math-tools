@@ -163,3 +163,10 @@ The bank now holds 929 items. Algebra is 33.4% against 35.6% on the real exam, s
 | Advanced Math | 271 | 29.2% | 27.6% |
 | Geometry and Trigonometry | 222 | 23.9% | 26.2% |
 | Problem-Solving and Data Analysis | 126 | 13.6% | 10.6% |
+
+
+## 12. Correction — §2.35 deduplicated (10 items removed)
+
+A repeat screen of §2.35 against the rest of the bank found 10 items whose trick or archetype already existed: A-249 (value of a multiple of $x$), A-250 (composition with a parameter), A-256 (slope with unknown coordinates), A-259 (slope from a point), A-271 (table of a linear function), A-272 (sum of two function values), A-287 and A-290 and A-291 (value of a solved system), A-292 (parameter for infinitely many solutions). They were removed; IDs are not renumbered, so A-245 to A-291 has gaps.
+
+The bank now holds 919 items: Algebra 300 (32.6%), Advanced Math 271 (29.5%), Geometry and Trigonometry 222 (24.2%), Problem-Solving and Data Analysis 126 (13.7%). Algebra is 3.0 points under the real exam; Advanced Math and PSDA remain over target.
