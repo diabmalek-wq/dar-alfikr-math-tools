@@ -10,7 +10,8 @@ Read `docs/HOUSE-RULES.md` and `docs/LESSONS-LEARNED.md` before changing an engi
 |---|---|
 | `calculus-2-tutoring/` | Calculus 2 course: `COURSE-MAP-15-WEEKS.md`, one `week-XX/` folder per week (worksheet PDF, with-solutions PDF, markdown source), `tools/` (build scripts), `_staged/` (older source copies) |
 | `linear-algebra-tutoring/` | Linear Algebra course: `00-Weekly-Schedule.md`, `week-XX/` source and `week-XX-v2/` current PDFs, `notes-summary/` (summary of the MATA22 lecture notes Weeks 0 to 12 and Homework 12), `tools/`, `sources/`, `gap-analysis/` |
-| `sat-math/` | `9-week-levelup/` (36 level-up PDFs, 36 Plus PDFs, README), `trick-pack/` (Trick Pack 1 A–M, 26 PDFs, README), older Week 1 files |
+| `sat-math/` | `9-week-levelup/` (36 level-up PDFs, 36 Plus PDFs, README), `11-session-plan/` (11-session plan CSV, Session 1 worksheet and answers, builder), `trick-pack/` (Trick Pack 1 A–M, 26 PDFs, README), older Week 1 files |
+| `sat-bank/` | `verified-item-bank/` (919-item SAT bank, gap analysis, generator and dedupe scripts, README), `question-set/` (275-question set) |
 | `presentations/` | Finished FIKR decks and lesson materials by week (`week-06/`, `week-07/`); week 7 also holds the Wayground kick-off PDFs |
 | `engines/` | Config-driven builders: lesson deck, lesson-plan docs, exam paper, pre-session, deck animation, GeoGebra embed |
 | `generators/` | LaTeX, figure and graph generators that feed the engines |
@@ -33,6 +34,8 @@ Read `docs/HOUSE-RULES.md` and `docs/LESSONS-LEARNED.md` before changing an engi
 | Linear Algebra Week 4 | `linear-algebra-tutoring/week-04-v2/` (Row Reduction, Solving Linear Systems and Bases from RREF; worksheet and with-answers PDFs, plus the builder `build.py`, `data.py`, `h4.py`, `zlib4.py`) |
 | Linear Algebra lecture notes | `linear-algebra-tutoring/notes-summary/` (`LA Notes Summary Weeks 0-12.pdf`, `00-Index.md`, one `Week-NN.md` per week, `Homework-12.md`) |
 | SAT Math sessions | `sat-math/9-week-levelup/` (level-up and Plus sheets, worksheet + answers pairs) |
+| SAT 11-session plan | `sat-math/11-session-plan/` (`session_plan_11.csv`; Session 1 worksheet and answers) |
+| SAT item bank | `sat-bank/verified-item-bank/` (919 items) |
 | SAT Trick Pack | `sat-math/trick-pack/` |
 
 Folders without a `-v2` suffix and the `_staged/` folder hold older copies and markdown sources. The old `Week-04-Trigonometric-...md` source in `calculus-2-tutoring/week-04/` has a wrong sign in the problem 8 key; the corrected solution is in `Week-04-worksheet-solutions.md`.
@@ -55,7 +58,7 @@ The `notes-summary/` files summarize the MATA22 lecture notes (Prof. T. Kielstra
 
 ## Status
 
-Updated 11 Oct 2026. Tutoring materials live in this repo alongside the engines. `docs/MIGRATION.md` still describes the engine migration plan.
+Updated 11 Oct 2026 (SAT bank, 11-session plan). Tutoring materials live in this repo alongside the engines. `docs/MIGRATION.md` still describes the engine migration plan.
 
 ## Presentations (Prezi style, from 4 Oct 2026)
 
