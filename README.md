@@ -71,3 +71,12 @@ To add a lesson: write builders/lessons/prezi/cfg/ID.json (see _example_L2-4_abr
 ## Standing rule: Mawhiba deliverables
 
 For every Mawhiba (Grade 9) task, deliver only two files: the PowerPoint (.pptx) and the activity worksheet (PDF). No pre-session decks, sheets, notes PDFs, plans or other extras unless asked.
+
+## Quality and efficiency (working lessons, 11 Oct 2026)
+
+- Correct first time: verify every answer by script before it goes into a worksheet or bank; never trust a hand-computed key.
+- No repeated tricks or questions: screen every new SAT item with `sat-bank/verified-item-bank/generators/dedupe.py` (shingle similarity plus an archetype check) before adding it, and drop repeats at the source.
+- Reuse, do not rebuild: sessions and worksheets come from the existing builders (`sat-math/11-session-plan/session-01-builder/`); change the item data, not the layout code.
+- Token-light: read only the section or file needed (grep or targeted reads), keep banks and plans as compact tables or CSV, and send finished files once rather than drafts.
+- Keep memory, project docs and this README updated together at the end of a work block, with counts (bank size, session numbers) that match.
+- Pushing from the cloud session is blocked: update the repo by uploading through Chrome. Deleting files is done by the owner on GitHub, not by the session.
