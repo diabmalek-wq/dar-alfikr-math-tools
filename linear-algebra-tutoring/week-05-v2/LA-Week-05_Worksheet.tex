@@ -1,0 +1,176 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.9cm,top=2.4cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,fontspec,microtype,fancyhdr,lastpage,enumitem,needspace}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{1F3A5F}\definecolor{soft}{HTML}{EEF3F9}\definecolor{ans}{HTML}{F3F8F1}\definecolor{ansb}{HTML}{3C7A3C}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\color{ink}\textbf{Linear Algebra I} \textperiodcentered\ Week 5 --- Bases and Dimension}
+\rhead{}\cfoot{\small Mr Malek Thiab \textperiodcentered\ Worksheet \textperiodcentered\ Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\newcommand{\lv}[1]{\textsc{\small #1}}
+\begin{document}
+{\Large\bfseries\color{ink} Linear Algebra I --- Week 5}\\[2pt]
+{\large\bfseries\color{ink} Bases and Dimension}\\[3pt]
+{\small Name: \underline{\hspace{5cm}}\hfill Date: \underline{\hspace{3cm}}\qquad All work \textbf{by hand}: no calculator.}
+\vspace{4pt}\hrule\vspace{8pt}
+
+\begin{tcolorbox}[colback=soft,colframe=ink,title={\bfseries Key Facts}]
+\textbf{Basis.} A subset $S$ of a vector space $V$ is a \emph{basis} if it is linearly independent and spans $V$. Equivalently, every vector of $V$ can be written \emph{uniquely} as a linear combination of the vectors of $S$ (spanning gives existence, independence gives uniqueness). Independence and dimension depend on the field $F$ of scalars ($\mathbb{C}^{2}$ has dimension $2$ over $\mathbb{C}$ but $4$ over $\mathbb{R}$).
+
+\textbf{Dimension.} $V$ is \emph{finite-dimensional} if it has a finite basis; then every basis has the same number of elements, called $\dim V$. Standard bases: $\{e_1,\dots,e_n\}$ for $F^{n}$ (dim $n$); $\{E_{ij}\}$ for $M_{m\times n}(F)$ (dim $mn$); $\{1,x,\dots,x^{n}\}$ for $P_n(F)$ (dim $n+1$). $P(\mathbb{R})$, all polynomials, is not finite-dimensional.
+
+\textbf{Dimension Bound.} If $V$ is spanned by $n$ vectors, every linearly independent set in $V$ has at most $n$ elements. So in a space with $\dim V=n$: more than $n$ vectors are linearly dependent; fewer than $n$ vectors cannot span.
+
+\textbf{Extension Lemma.} If $S$ is linearly independent and $x\notin S$, then $S\cup\{x\}$ is linearly independent iff $x\notin\operatorname{span}(S)$. A linearly independent set can be extended to a basis by adding vectors from a spanning set one at a time, each outside the current span; a finite spanning set can be shrunk to a basis by discarding vectors lying in the span of the others.
+
+\textbf{Basis criterion.} If $\dim V=n$ and $S$ has $n$ elements, then $S$ is a basis iff $S$ is linearly independent iff $S$ spans $V$. If $W$ is a subspace of $V$ then $\dim W\le\dim V$, with equality only if $W=V$.
+
+\textbf{Computing.} Translate vectors, polynomials and matrices into coordinate vectors with respect to a standard basis, then row reduce. The pivot columns of the \emph{original} matrix are a basis of the span of the columns; each non-pivot column of the RREF gives the coefficients of that column in terms of the pivot columns. A subspace defined by linear conditions on the coordinates is the solution set of a homogeneous system: its dimension is the number of free variables, and the vectors multiplying the free parameters form a basis.
+\end{tcolorbox}
+
+\section*{\large\color{ink} Worked Examples}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 1 \textperiodcentered\ Standard bases and dimensions}]Prove that $\{1,x,x^{2}\}$ is a basis of $P_2(F)$ and that $\{E_{11},E_{12},E_{21},E_{22}\}$ is a basis of $M_2(F)$, for any field $F$. State the dimensions.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item $P_2(F)$ consists of the polynomials $a+bx+cx^{2}$ with $a,b,c\in F$. \emph{Spanning:} each such polynomial is $a\cdot1+b\cdot x+c\cdot x^{2}$, a combination of $1,x,x^{2}$.
+\item \emph{Independence:} if $a\cdot1+b\,x+c\,x^{2}$ is the zero polynomial, all its coefficients are $0$, so $a=b=c=0$. Hence $\{1,x,x^{2}\}$ is a basis and $\dim P_2(F)=3$. In general $\dim P_n(F)=n+1$.
+\item $M_2(F)$: $\begin{pmatrix}a&b\\c&d\end{pmatrix}=aE_{11}+bE_{12}+cE_{21}+dE_{22}$, so the four matrices span. If $aE_{11}+bE_{12}+cE_{21}+dE_{22}=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ is the zero matrix, then $a=b=c=d=0$, so they are independent.
+\item So $\dim M_2(F)=4$. In general $\dim M_{m\times n}(F)=mn$, $\dim F^{n}=n$. None of these dimensions depends on which field $F$ is used (as long as the scalars are $F$).
+\end{enumerate}\textbf{Answer:} $\dim P_2(F)=3$ with basis $\{1,x,x^{2}\}$; $\dim M_2(F)=4$ with basis $\{E_{ij}\}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 2 \textperiodcentered\ Is a set a basis of $\mathbb{R}^{3}$?}]Decide whether $\{(1,2,0),(0,1,1),(1,0,-2)\}$ is a basis of $\mathbb{R}^{3}$. If not, describe what it spans.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Put the vectors in the columns: $A=\begin{pmatrix}1 & 0 & 1 \\ 2 & 1 & 0 \\ 0 & 1 & -2\end{pmatrix}$. Reduce.
+\item Apply $R_2\to R_2-2R_1$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & 1 \\ 0 & 1 & -2 \\ 0 & 1 & -2\end{pmatrix}$
+\item Apply $R_3\to R_3-R_2$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & 1 \\ 0 & 1 & -2 \\ 0 & 0 & 0\end{pmatrix}$
+\item Pivots are in columns $1$ and $2$ only; column $3$ has no pivot, so the vectors are linearly dependent. Column $3$ of the RREF is $\begin{pmatrix}1\\-2\end{pmatrix}$, so $v_3=1\cdot v_1-2\cdot v_2$. Check: $(1,2,0)-2(0,1,1)=(1,0,-2)$ \checkmark.
+\item Three vectors that are dependent cannot be a basis. Since $v_1,v_2$ are independent (pivot columns) and span the same space, the set spans a $2$-dimensional subspace (a plane) of $\mathbb{R}^{3}$, with basis $\{(1,2,0),(0,1,1)\}$.
+\end{enumerate}\textbf{Answer:} Not a basis: $v_3=v_1-2v_2$. The span is a plane with basis $\{(1,2,0),(0,1,1)\}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 3 \textperiodcentered\ Basis of a constraint subspace}]Find a basis and the dimension of $W=\{p\in P_3(\mathbb{R}):\ p(1)=0,\ p(-1)=0\}$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Write $p(x)=a+bx+cx^{2}+dx^{3}$, coordinates $(a,b,c,d)$. Then $p(1)=a+b+c+d$ and $p(-1)=a-b+c-d$. The conditions give the homogeneous system $\begin{cases}a+b+c+d=0\\ a-b+c-d=0\end{cases}$.
+\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{cccc|c}1 & 1 & 1 & 1 & 0 \\ 1 & -1 & 1 & -1 & 0\end{array}\right)$
+\item Apply $R_2\to R_2-R_1$:\par\smallskip $\displaystyle \left(\begin{array}{cccc|c}1 & 1 & 1 & 1 & 0 \\ 0 & -2 & 0 & -2 & 0\end{array}\right)$
+\item Apply $R_2\to \dfrac{1}{-2} R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cccc|c}1 & 1 & 1 & 1 & 0 \\ 0 & 1 & 0 & 1 & 0\end{array}\right)$
+\item Apply $R_1\to R_1-R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cccc|c}1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0\end{array}\right)$
+\item Pivot columns are the columns of the basic variables: $a$, $b$. The remaining variable(s) $c$, $d$ are \emph{free}: call them $c=s$, $d=t$.
+\item Read each nonzero row as an equation for its basic variable:\par\smallskip $\displaystyle\begin{aligned}a&=-s\\ b&=-t\\ c&=s\\ d&=t\end{aligned}$
+\item Write this as a vector: $\displaystyle \mathbf x=s\begin{pmatrix}-1\\0\\1\\0\end{pmatrix}+t\begin{pmatrix}0\\-1\\0\\1\end{pmatrix}$ (the parameters $s$, $t$ may be any numbers).
+\item Check with $s=1$, $t=1$: $\mathbf x=\begin{pmatrix}-1\\-1\\1\\1\end{pmatrix}$, and substituting into the original equations gives the right-hand sides $(0,0)$ \checkmark.
+\item Translate each coordinate vector back into the original objects. Setting one parameter to $1$ and the others to $0$ in the vector form gives: $\begin{pmatrix}-1\\0\\1\\0\end{pmatrix}\leftrightarrow -1+x^{2}$; $\begin{pmatrix}0\\-1\\0\\1\end{pmatrix}\leftrightarrow -x+x^{3}$.
+\item These 2 vectors \emph{span} $W$: the vector form says every element of $W$ equals $s\,\mathbf b_1+t\,\mathbf b_2$ with the parameters free. They are \emph{linearly independent}: in this combination the entry in the position of the free variables $c$, $d$ equals the parameters $s$, $t$ (each basis vector has $1$ in its own free position and $0$ in the other free positions), so a combination equal to $\mathbf 0$ forces every parameter to be $0$.
+\item Hence the objects above form a basis of $W$, and $\dim W$ equals the number of free variables, namely $2$.
+\item Check: $q=-1+x^{2}$ has $q(1)=0$ and $q(-1)=0$ \checkmark; $r=-x+x^{3}$ has $r(1)=0$ and $r(-1)=0$ \checkmark.
+\end{enumerate}\textbf{Answer:} Basis: $\left\{-1+x^{2},\ -x+x^{3}\right\}$; $\dim W=2$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 4 \textperiodcentered\ Extracting a basis from a spanning set}]The set $S=\{(1,1,0),(0,1,1),(1,2,1),(1,0,-1)\}$ spans a subspace $U$ of $\mathbb{R}^{3}$. Find a basis of $U$ chosen from $S$, and write the other vectors through it.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item The columns of $A=\begin{pmatrix}1 & 0 & 1 & 1 \\ 1 & 1 & 2 & 0 \\ 0 & 1 & 1 & -1\end{pmatrix}$ are the vectors of $S$. Reduce.
+\item Apply $R_2\to R_2-R_1$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & 1 & 1 \\ 0 & 1 & 1 & -1 \\ 0 & 1 & 1 & -1\end{pmatrix}$
+\item Apply $R_3\to R_3-R_2$:\par\smallskip $\displaystyle \begin{pmatrix}1 & 0 & 1 & 1 \\ 0 & 1 & 1 & -1 \\ 0 & 0 & 0 & 0\end{pmatrix}$
+\item Pivot columns $1$ and $2$. Rule: the corresponding columns of the \emph{original} matrix form a basis of the span. So $\{(1,1,0),(0,1,1)\}$ is a basis of $U$ and $\dim U=2$.
+\item Column $3$ of the RREF is $\begin{pmatrix}1\\1\end{pmatrix}$: $v_3=v_1+v_2$; column $4$ is $\begin{pmatrix}1\\-1\end{pmatrix}$: $v_4=v_1-v_2$. Check: $(1,1,0)+(0,1,1)=(1,2,1)$ \checkmark and $(1,1,0)-(0,1,1)=(1,0,-1)$ \checkmark.
+\end{enumerate}\textbf{Answer:} Basis $\{(1,1,0),(0,1,1)\}$, $\dim U=2$; $v_3=v_1+v_2$, $v_4=v_1-v_2$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 5 \textperiodcentered\ Extending an independent set to a basis}]Extend the linearly independent set $\{(1,1,1),(1,2,3)\}$ to a basis of $\mathbb{R}^{3}$ using standard basis vectors.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item Put $v_1,v_2$ followed by $e_1,e_2,e_3$ in the columns and reduce; keep the pivot columns (Extension Lemma: each kept vector is outside the span of those before it). $B=\left(\begin{array}{cc|ccc}1 & 1 & 1 & 0 & 0 \\ 1 & 2 & 0 & 1 & 0 \\ 1 & 3 & 0 & 0 & 1\end{array}\right)$.
+\item Apply $R_2\to R_2-R_1,\ R_3\to R_3-R_1$:\par\smallskip $\displaystyle \left(\begin{array}{cc|ccc}1 & 1 & 1 & 0 & 0 \\ 0 & 1 & -1 & 1 & 0 \\ 0 & 2 & -1 & 0 & 1\end{array}\right)$
+\item Apply $R_1\to R_1-R_2,\ R_3\to R_3-2R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|ccc}1 & 0 & 2 & -1 & 0 \\ 0 & 1 & -1 & 1 & 0 \\ 0 & 0 & 1 & -2 & 1\end{array}\right)$
+\item Apply $R_1\to R_1-2R_3,\ R_2\to R_2+R_3$:\par\smallskip $\displaystyle \left(\begin{array}{cc|ccc}1 & 0 & 0 & 3 & -2 \\ 0 & 1 & 0 & -1 & 1 \\ 0 & 0 & 1 & -2 & 1\end{array}\right)$
+\item The pivot columns are $1,2,3$. Column $3$ is $e_1$, so $\{(1,1,1),(1,2,3),(1,0,0)\}$ is a basis (three independent vectors in $\mathbb{R}^{3}$). Columns $4$ and $5$ ($e_2,e_3$) have no pivot: each is already in the span of the previous vectors.
+\item Direct check that $e_1\notin\operatorname{span}\{v_1,v_2\}$: $a(1,1,1)+b(1,2,3)=(1,0,0)$ needs $a+2b=0$ and $a+3b=0$, so $b=0$, $a=0$, but then the first coordinate is $0\neq1$. Not in the span \checkmark.
+\end{enumerate}\textbf{Answer:} $\{(1,1,1),(1,2,3),(1,0,0)\}$ is a basis of $\mathbb{R}^{3}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 6 \textperiodcentered\ Coordinates in $\mathbb{C}^{2}$}]Show that $\beta=\{(1,i),(1,-i)\}$ is a basis of $\mathbb{C}^{2}$ over $\mathbb{C}$ and find $[w]_\beta$ for $w=(3,1+i)$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item We need $a(1,i)+b(1,-i)=(3,1+i)$, i.e.\ $a+b=3$ and $ia-ib=1+i$. The matrix has the basis vectors as columns.
+\item Write the system as an augmented matrix, one row per equation, with a bar before the right-hand side:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 1 & 3 \\ i & -i & 1+i\end{array}\right)$
+\item Apply $R_2\to R_2-iR_1$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 1 & 3 \\ 0 & -2i & 1-2i\end{array}\right)$
+\item Apply $R_2\to \dfrac{1}{-2i} R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 1 & 3 \\ 0 & 1 & 1+\dfrac{1}{2}i\end{array}\right)$
+\item Apply $R_1\to R_1-R_2$:\par\smallskip $\displaystyle \left(\begin{array}{cc|c}1 & 0 & 2-\dfrac{1}{2}i \\ 0 & 1 & 1+\dfrac{1}{2}i\end{array}\right)$
+\item Every column of the coefficient part holds a pivot, so there are no free variables and the solution is unique.
+\item Read each nonzero row as an equation for its basic variable:\par\smallskip $\displaystyle\begin{aligned}a&=2-\dfrac{1}{2}i\\ b&=1+\dfrac{1}{2}i\end{aligned}$
+\item Check by substituting $(a,b)=(2-\dfrac{1}{2}i,1+\dfrac{1}{2}i)$ into the original equations: the left sides give $(3,1+i)$, the right-hand sides \checkmark.
+\item The coefficient part reduced to $I_2$ (a pivot in every row and column), so for every $w$ there is exactly one solution: $\beta$ spans and is independent, hence is a basis, and coordinates are unique.
+\item So $[w]_\beta=(2-\tfrac12 i,\ 1+\tfrac12 i)^{T}$. Check: $a+b=3$ \checkmark and $i(a-b)=i(1-i)=i+1$ \checkmark.
+\end{enumerate}\textbf{Answer:} $\beta$ is a basis and $[w]_\beta=\begin{pmatrix}2-\frac12 i\\ 1+\frac12 i\end{pmatrix}$.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 7 \textperiodcentered\ Counting arguments}]Decide using dimensions only: (a) can $\{1,x\}$ span $P_2(\mathbb{R})$? (b) are three vectors in $\mathbb{C}^{2}$ (over $\mathbb{C}$) necessarily dependent? (c) can a set of $6$ vectors be a basis of $M_{2\times3}(\mathbb{R})$? (d) can $4$ independent vectors lie in a subspace of $\mathbb{R}^{5}$ of dimension $3$?
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item (a) $\dim P_2(\mathbb{R})=3$ and a spanning set has at least $3$ vectors. $\{1,x\}$ has $2$, so it cannot span.
+\item (b) $\dim_{\mathbb{C}}\mathbb{C}^{2}=2$, so $\mathbb{C}^{2}$ is spanned by $2$ vectors and every independent set has at most $2$ elements. So any $3$ vectors are dependent: yes.
+\item (c) $\dim M_{2\times3}(\mathbb{R})=6$, so a basis has exactly $6$ elements. A set of $6$ vectors \emph{can} be a basis (it is a basis iff it is independent, or iff it spans); the count alone does not decide it.
+\item (d) A subspace $U$ with $\dim U=3$ is spanned by $3$ vectors, so every independent set in $U$ has at most $3$ elements. $4$ independent vectors cannot lie in $U$: no.
+\end{enumerate}\textbf{Answer:} (a) No. (b) Yes. (c) Possibly (count is consistent; check independence). (d) No.
+\end{tcolorbox}
+\begin{tcolorbox}[breakable,colback=white,colframe=ink!60,title={\bfseries Example 8 \textperiodcentered\ Proof: the Extension Lemma}]Let $S$ be linearly independent in $V$ and $x\in V$ with $x\notin S$. Prove: $S\cup\{x\}$ is linearly independent if and only if $x\notin\operatorname{span}(S)$.
+\par\smallskip
+\textbf{Solution.} \begin{enumerate}[leftmargin=1.6em,itemsep=1pt,topsep=2pt,label=\arabic*.]\item ($\Rightarrow$) We prove the contrapositive. Suppose $x\in\operatorname{span}(S)$: $x=c_1s_1+\dots+c_ms_m$ with $s_i\in S$. Then $1\cdot x-c_1s_1-\dots-c_ms_m=\mathbf 0$ is a relation among distinct elements of $S\cup\{x\}$ with coefficient $1\neq0$ on $x$. So $S\cup\{x\}$ is dependent.
+\item ($\Leftarrow$) Suppose $x\notin\operatorname{span}(S)$ and $\alpha x+c_1s_1+\dots+c_ms_m=\mathbf 0$ with $s_i\in S$ distinct. If $\alpha\neq0$, divide by $\alpha$ (possible in a field): $x=-\alpha^{-1}(c_1s_1+\dots+c_ms_m)\in\operatorname{span}(S)$, contradicting $x\notin\operatorname{span}(S)$.
+\item So $\alpha=0$, leaving $c_1s_1+\dots+c_ms_m=\mathbf 0$. Since $S$ is independent, every $c_i=0$. All coefficients are $0$, so $S\cup\{x\}$ is independent.
+\end{enumerate}\textbf{Answer:} A relation involving $x$ with $\alpha\neq0$ would put $x$ in $\operatorname{span}S$; if $x\notin\operatorname{span}S$ then $\alpha=0$ and independence of $S$ kills the rest.
+\end{tcolorbox}
+\newpage
+\section*{\large\color{ink} Practice Problems}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part A --- Standard Bases, Counting and Dimension}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{1.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak State the standard basis and the dimension of each space: (a) $\mathbb{C}^{3}$ over $\mathbb{C}$; (b) $M_{2\times3}(\mathbb{R})$; (c) $P_{3}(\mathbb{R})$. Then write $A=\begin{pmatrix}2&-1&0\\5&3&4\end{pmatrix}$ and $p(x)=4-x+2x^{3}$ as combinations of the standard bases of (b) and (c).
+\vspace{3.0cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{2.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak For each statement decide whether it is true, using only a dimension count (state the dimension used and the theorem): (a) five matrices in $M_2(\mathbb{R})$ must be linearly dependent; (b) $\{(1,0,0),(0,1,0)\}$ spans $\mathbb{R}^{3}$; (c) any four polynomials in $P_2(\mathbb{R})$ are linearly dependent; (d) five matrices in $M_{3\times2}(\mathbb{R})$ can span $M_{3\times2}(\mathbb{R})$; (e) ten matrices in $M_3(\mathbb{R})$ can form a basis of $M_3(\mathbb{R})$; (f) three polynomials in $P_3(\mathbb{R})$ can span $P_3(\mathbb{R})$.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{3.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Is $\{(1,1,0),\ (1,2,1),\ (0,1,3)\}$ a basis of $\mathbb{R}^{3}$? Row reduce the matrix whose columns are these vectors.
+\vspace{3.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{4.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak (Dimension depends on the scalars.) (a) Find a basis and the dimension of $\mathbb{C}^{2}$ regarded as a vector space over $\mathbb{R}$, and prove your set is a basis. (b) What is $\dim\mathbb{C}^{2}$ over $\mathbb{C}$? (c) Why is $\{(1,0),(i,0)\}$ linearly independent over $\mathbb{R}$ but linearly dependent over $\mathbb{C}$?
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part B --- Bases of Subspaces Given by Constraints}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{5.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Let $W=\{(x,y,z)\in\mathbb{R}^{3}:\ x=2y\}$. Show that $W$ is a subspace by exhibiting a basis, and state $\dim W$.
+\vspace{3.3cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{6.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Find a basis and the dimension of $W=\{A\in M_2(\mathbb{R}):\ \operatorname{tr}A=0\}$.
+\vspace{3.3cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{7.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find a basis and the dimension of $W=\{f\in P_3(\mathbb{R}):\ f(0)=f(1)=0\}$.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{8.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find a basis and the dimension of $W=\{p\in P_3(\mathbb{R}):\ p(0)=p(1),\ p(2)=0\}$.
+\vspace{4.3cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{9.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find a basis and the dimension of $W=\{(x,y,z,w)\in\mathbb{R}^{4}:\ x+y-z=0,\ y+w=0\}$.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{10.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $W=\{A\in M_2(\mathbb{C}):\ a_{11}+i\,a_{12}=0,\ a_{21}=(1+i)\,a_{22}\}$, a subset of $M_2(\mathbb{C})$ over $\mathbb{C}$. Find a basis of $W$ and $\dim W$.
+\vspace{4.3cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{11.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Find a basis and the dimension of $W=\{A\in M_2(\mathbb{R}):\ \operatorname{tr}A=0\ \text{and}\ A=A^{T}\}$.
+\vspace{4.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part C --- Extracting, Extending and Coordinates}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{12.} \hfill{\scriptsize\color{ink}[Foundational]}\par\nopagebreak Find a linearly independent subset of $S=\{(1,2,1),\ (2,4,2),\ (1,1,0)\}\subseteq\mathbb{R}^{3}$ with the same span as $S$. State $\dim\operatorname{span}S$.
+\vspace{3.8cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{13.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak In $P_2(\mathbb{R})$ let $S=\{1+x,\ 2+2x,\ x+x^{2},\ 1+2x+x^{2},\ x^{2}\}$. Find a linearly independent subset of $S$ with the same span as $S$, express each remaining polynomial through it, and decide whether $S$ spans $P_2(\mathbb{R})$.
+\vspace{5.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{14.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $S=\{v_1,v_2,v_3\}=\{(1,2,3),\ (3,2,1),\ (1,1,1)\}\subseteq\mathbb{R}^{3}$. (a) Write the system that tests linear independence and row reduce it. (b) Decide whether $S$ is linearly independent; if not, find an explicit relation. (c) Give a linearly independent subset of $S$ that is a basis of $\operatorname{span}S$, and decide whether $S$ spans $\mathbb{R}^{3}$.
+\vspace{5.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{15.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Extend the linearly independent set $\left\{\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\1&0\end{pmatrix},\begin{pmatrix}0&1\\0&1\end{pmatrix}\right\}$ to a basis of $M_2(\mathbb{R})$ by adding one of $E_{11},E_{12},E_{21},E_{22}$. Justify your choice and say which of the four would \emph{not} work.
+\vspace{5.7cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{16.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Show that $\beta=\{1-x,\ 2+x^{2},\ x+2x^{2}\}$ is a basis of $P_2(\mathbb{R})$ and find the coordinate vector $[p]_\beta$ of $p(x)=5+2x+8x^{2}$.
+\vspace{5.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{17.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $A_1=\begin{pmatrix}1&i\\0&1\end{pmatrix}$, $A_2=\begin{pmatrix}i&-1\\0&i\end{pmatrix}$, $A_3=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ in $M_2(\mathbb{C})$. (a) Over $\mathbb{C}$, decide whether $\{A_1,A_2,A_3\}$ is linearly independent by row reducing, and give a basis of its span. (b) Regard $M_2(\mathbb{C})$ as a vector space over $\mathbb{R}$. Is $\{A_1,A_2,A_3\}$ linearly independent over $\mathbb{R}$? Prove your answer.
+\vspace{5.9cm}\end{minipage}\par\vspace{4pt}
+\Needspace{16\baselineskip}\subsection*{\normalsize\color{ink} Part D --- Proofs and Challenges}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{18.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $V$ be a vector space with $\dim V=n$ and let $W$ be a subspace of $V$. Prove: (a) $W$ is finite-dimensional with $\dim W\le n$; (b) if $\dim W=n$ then $W=V$.
+\vspace{5.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{19.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $W_1,W_2$ be subspaces of a vector space $V$. (a) Prove that $W_1\cap W_2$ is a subspace of $V$. (b) Prove that $W_1\cup W_2$ is a subspace of $V$ if and only if $W_1\subseteq W_2$ or $W_2\subseteq W_1$.
+\vspace{5.2cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{20.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $S_3$ be the set of symmetric matrices in $M_3(\mathbb{R})$ ($A^{T}=A$) and $K_3$ the set of skew-symmetric matrices ($A^{T}=-A$). Find a basis and the dimension of each, proving that your sets are bases.
+\vspace{6.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{21.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $W=\{A\in M_2(\mathbb{C}):\ A^{*}=A\}$ (here $A^{*}=\overline{A}^{\,T}$ is the conjugate transpose). (a) Show that $W$ is a vector space over $\mathbb{R}$ and find a basis and $\dim_{\mathbb{R}}W$. (b) Show that $W$ is \emph{not} a subspace of $M_2(\mathbb{C})$ over $\mathbb{C}$.
+\vspace{6.2cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{22.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak For which real numbers $k$ is $\{(1,1,k),\ (1,k,1),\ (k,1,1)\}$ a basis of $\mathbb{R}^{3}$?
+\vspace{5.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{23.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $V$ be a vector space with $\dim V=n$ and let $S\subseteq V$ have exactly $n$ elements. Prove: (a) if $S$ is linearly independent then $S$ is a basis of $V$; (b) if $S$ spans $V$ then $S$ is a basis of $V$. You may use: the Extension Lemma, the Dimension Bound, and that every basis of $V$ has exactly $n$ elements.
+\vspace{6.6cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{24.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $S$ be a linearly independent subset of a vector space $V$ and let $S'\subsetneq S$ be a proper subset. Prove that $\operatorname{span}(S')\neq\operatorname{span}(S)$.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{25.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $V$ be a vector space over $\mathbb{C}$ and $u,v,w\in V$. (a) Prove $\{u,v,w\}$ is linearly independent if and only if $\{u+v,\ u+w,\ v+w\}$ is. (b) Where did you use $2\neq0$? (c) Show that the statement fails over the field $\mathbb{F}_2=\{0,1\}$ (where $1+1=0$): give $u,v,w\in\mathbb{F}_2^{3}$.
+\vspace{7.1cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{26.} \hfill{\scriptsize\color{ink}[Intermediate]}\par\nopagebreak Let $S=\{v_1,\dots,v_n\}$ be a set of $n$ distinct vectors in a vector space $V$. Prove that $S$ is a basis of $V$ if and only if every vector of $V$ can be written \emph{uniquely} as $a_1v_1+\dots+a_nv_n$.
+\vspace{5.4cm}\end{minipage}\par\vspace{4pt}
+\Needspace{6\baselineskip}\begin{minipage}{\linewidth}\textbf{27.} \hfill{\scriptsize\color{ink}[Challenge]}\par\nopagebreak Let $P(\mathbb{R})$ be the vector space of all real polynomials (of any degree). Prove that $P(\mathbb{R})$ is not finite-dimensional.
+\vspace{4.4cm}\end{minipage}\par\vspace{4pt}
+\end{document}
