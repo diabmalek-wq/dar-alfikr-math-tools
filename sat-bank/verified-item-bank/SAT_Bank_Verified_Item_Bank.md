@@ -5,8 +5,8 @@
 **Teacher of Record:** Mr. Malek Thiab
 **Scope:** Grades 10–11 SAT preparation (Algebra II Semester 1)
 **Difficulty:** Medium and Hard only (no Easy items, per weekly work order)
-**Item count:** 919 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36; the earlier header total of 491 was one short of the 492 items actually present)
-**Status:** Complete — §2.35 was screened for repeated tricks and 10 near-duplicates (A-249, A-250, A-256, A-259, A-271, A-272, A-287, A-290, A-291, A-292) were removed; §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
+**Item count:** 994 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36 + 10 web-research Hard archetypes §2.37 + 20 web-research Hard archetypes (second sweep) §2.38; the earlier header total of 491 was one short of the 492 items actually present)
+**Status:** Complete — §2.38 adds 20 Hard items from a wider web sweep (horizontal-line count, equal outputs, root difference, Vieta cubic, substitution, quotient table, restricted-domain exponential, identities, composition through a maximum, average rate of change, complex product, circle transformation, inscribed equilateral triangle, area proportionality, gear chain, percent system, point-set and net-of-fees inequalities); §2.37 adds 10 Hard items (periodic functions, cubic root counting, complex division, three-solution absolute value, circle tangency from general form, inverse-square scaling, conditional probability, rate-times-time percent change, extraneous absolute-value root) from archetypes found on public prep pages and missing from the bank; §2.35 was screened for repeated tricks and 10 near-duplicates (A-249, A-250, A-256, A-259, A-271, A-272, A-287, A-290, A-291, A-292) were removed; §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
 
 ---
 
@@ -19328,33 +19328,1538 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 
 ---
 
+### 2.37 Web-Research Batch — Hard Archetypes Found in Public Prep Material and Missing from the Bank (10 items — A-313, AM-270 to AM-274, GT-223, PS-127 to PS-129)
+
+Archetypes were collected from public digital-SAT prep pages (a free hard grid-in set, a ranking of the top 60 digital-SAT math questions, and an article on the hardest SAT math questions), then each was checked against the bank by keyword search and the repeat screen (`dedupe.py`). Only archetypes absent from the bank were written up: sign-flip and period-5 table periodic functions, a cubic crossed by a horizontal line (count of integer $k$), complex division, an absolute-value parameter with exactly three solutions, circles in general form with external tangency, inverse-square scaling, conditional probability across two groups, a rate-times-time percent change, and an absolute-value equation with an extraneous root. No source item, wording or numbers were copied. Every answer was checked by script (root counting, complex arithmetic, exact fractions, brute-force case checks) before inclusion.
+
+### AM-270
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ satisfies $f(x+3)=-f(x)$ for all real numbers $x$, and $f(2)=7$. What is the value of $f(23)$?
+
+**Correct Answer:** $-7$
+
+**Rationale:** Each increase of $3$ in the input reverses the sign. Since $23=2+3\cdot7$, the sign is reversed $7$ times: $f(23)=(-1)^7\cdot7=-7$.
+
+**Misconception addressed:** Students assume the function repeats every $3$ units (answer $7$) or count $6$ sign changes instead of $7$.
+
+---
+
+### AM-271
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $g$ is defined for all integers and satisfies $g(x+5)=g(x)$. The table gives some values of $g$.
+
+| $x$ | $1$ | $2$ | $3$ | $4$ | $5$ |
+|---|---|---|---|---|---|
+| $g(x)$ | $4$ | $-1$ | $6$ | $0$ | $2$ |
+
+What is the value of $g(87)+g(103)+g(55)$?
+
+**Correct Answer:** $7$
+
+**Rationale:** The period is $5$, so reduce each input by multiples of $5$. $87=85+2$ gives $g(87)=g(2)=-1$. $103=100+3$ gives $g(103)=g(3)=6$. $55$ is a multiple of $5$, so $g(55)=g(5)=2$. The sum is $-1+6+2=7$.
+
+**Misconception addressed:** Students treat a remainder of $0$ as an undefined input, or shift the table by one position when reducing.
+
+---
+
+### AM-272
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Let $f(x)=x^3-12x$. For how many integer values of $k$ does the equation $f(x)=k$ have exactly three distinct real solutions?
+
+**Correct Answer:** $31$
+
+**Rationale:** $f'(x)=3x^2-12=0$ at $x=\pm2$. The local maximum is $f(-2)=16$ and the local minimum is $f(2)=-16$. The horizontal line $y=k$ meets the graph three times exactly when $-16<k<16$. The integers from $-15$ to $15$ give $31$ values. At $k=\pm16$ the line touches the graph and there are only two distinct solutions.
+
+**Misconception addressed:** Students include $k=\pm16$ (the line is tangent there), count only positive $k$, or forget the integer $k=0$.
+
+---
+
+### AM-273
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** $\dfrac{7+i}{1+i}=a+bi$, where $a$ and $b$ are real numbers and $i=\sqrt{-1}$. What is the value of $a-b$?
+
+**Correct Answer:** $7$
+
+**Rationale:** Multiply the numerator and denominator by the conjugate $1-i$. The numerator becomes $(7+i)(1-i)=7-7i+i-i^2=8-6i$ and the denominator $(1+i)(1-i)=2$. So $a+bi=4-3i$, with $a=4$ and $b=-3$, and $a-b=7$.
+
+**Misconception addressed:** Students forget $i^2=-1$, or read $b$ as $3$ and obtain $a-b=1$.
+
+---
+
+### AM-274
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** For what value of $k$ does the equation $|x^2-4|=k$ have exactly three distinct real solutions?
+
+**Correct Answer:** $4$
+
+**Rationale:** Sketch $y=|x^2-4|$: it touches the $x$-axis at $x=\pm2$, rises to a local peak of $4$ at $x=0$, and then rises again. A horizontal line meets it in four points when $0<k<4$, in two points when $k>4$, and in exactly three points at $k=4$ (the peak). Check: $x^2-4=4$ gives $x=\pm2\sqrt2$, and $x^2-4=-4$ gives $x=0$.
+
+**Misconception addressed:** Students choose $k=0$ (two solutions) or solve only $x^2-4=k$ and ignore the reflected branch.
+
+---
+
+### GT-223
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Circle $C_1$ has equation $x^2+y^2-6x+4y+4=0$. Circle $C_2$ has equation $x^2+y^2+2x-2y+k=0$, where $k$ is a constant. If the two circles are externally tangent, what is the value of $k$?
+
+(A) $-62$
+(B) $-7$
+(C) $-2$
+(D) $1$
+
+**Correct Answer:** (C) $-2$
+
+**Rationale:** Completing the square gives $C_1$: $(x-3)^2+(y+2)^2=9$, centre $(3,-2)$, radius $3$. For $C_2$: $(x+1)^2+(y-1)^2=2-k$, centre $(-1,1)$. The centres are $\sqrt{4^2+3^2}=5$ apart. External tangency needs $5=3+r_2$, so $r_2=2$ and $2-k=4$, giving $k=-2$.
+
+**Misconception addressed:** Choice A comes from internal tangency ($r_2=8$) and choice B from taking the second radius equal to $3$. Students also forget that the added numbers must be balanced when completing the square.
+
+---
+
+### PS-127
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The intensity of light from a small lamp is inversely proportional to the square of the distance from the lamp. A student moves $20\%$ closer to the lamp. By what percent does the intensity at the student's position increase?
+
+**Correct Answer:** $56.25$
+
+**Rationale:** Let the original distance be $d$. The new distance is $0.8d$, so the intensity is multiplied by $\dfrac{1}{0.8^2}=1.5625$. That is an increase of $56.25\%$.
+
+**Misconception addressed:** Students answer $20\%$ or $25\%$ (treating the relationship as inversely proportional to the distance, not its square), or give $1.5625$ without subtracting $1$.
+
+---
+
+### PS-128
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A school has $150$ students in two sessions: $90$ in the morning and $60$ in the afternoon. In the morning session $40\%$ of the students own a laptop, and in the afternoon session $70\%$ do. A student is chosen at random from all students who own a laptop. What is the probability that the student is in the morning session? (Give your answer as a fraction or a decimal.)
+
+**Correct Answer:** $\dfrac{6}{13}$ (or $0.4615$)
+
+**Rationale:** Morning laptop owners: $0.40\cdot90=36$. Afternoon laptop owners: $0.70\cdot60=42$. The condition restricts the sample to the $36+42=78$ laptop owners, so the probability is $\dfrac{36}{78}=\dfrac{6}{13}$.
+
+**Misconception addressed:** Students divide by $150$ (the whole school) or by the number in the morning session, or average $40\%$ and $70\%$.
+
+---
+
+### PS-129
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In a steady state, the average number of customers in a shop equals the average arrival rate multiplied by the average time a customer spends in the shop. A shop averages $12$ customers per hour arriving, and each stays $45$ minutes on average. After a promotion the arrival rate rises by $50\%$ and the average time spent falls by $20\%$. By what percent does the average number of customers in the shop increase?
+
+**Correct Answer:** $20$
+
+**Rationale:** Before: $12\cdot\dfrac34=9$ customers. After: the rate is $18$ per hour and the time is $0.8\cdot\dfrac34=0.6$ hour, so the number is $18\cdot0.6=10.8$. The increase is $\dfrac{10.8-9}{9}=20\%$. Equivalently the factor is $1.5\cdot0.8=1.2$.
+
+**Misconception addressed:** Students add the percents ($50\%-20\%=30\%$) or forget to convert minutes to hours.
+
+---
+
+### A-313
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a widely seen hard-SAT archetype found in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** What is the sum of all solutions of the equation $|x-4|=2x-5$?
+
+**Correct Answer:** $3$
+
+**Rationale:** Case $x-4=2x-5$ gives $x=1$, but then the right side is $-3<0$, which an absolute value cannot equal, so $x=1$ is extraneous. Case $4-x=2x-5$ gives $x=3$; check $|3-4|=1=2(3)-5$. The only solution is $3$, so the sum is $3$.
+
+**Misconception addressed:** Students keep both candidates and report $4$, or forget to check each solution in the original equation.
+
+---
+
+### 2.38 Web-Research Batch 2 — Hard Archetypes From a Wider Sweep of Public Prep Pages (20 items — A-314 to A-315, AM-275 to AM-287, GT-224 to GT-225, PS-130 to PS-132)
+
+A second, wider sweep read about 10 more public lists of hard digital-SAT questions (about 150 archetypes in total) and checked each against the bank. Most were already covered. The gaps written up here: a parabola against a horizontal line (least integer $k$ with no solution), equal outputs at inputs $4$ apart, difference of the roots of a quadratic, Vieta on a cubic with an unknown constant, substitution for a repeated rational expression, a linear function hidden inside a quotient table, an exponential maximum on a restricted domain, identities from a sum and a product ($x^3+y^3$, $(x-y)^2$), composition through a maximum value, average rate of change on a moving interval, complex multiplication, circle transformations, a triangle inscribed in a circle, area-proportional quantities, gear chains, a percent-plus-system word problem, a point-set inequality test and a net-of-fees inequality. One candidate (sum of squares of roots) was dropped as a repeat of AM-031. Every answer was checked by script before inclusion.
+
+### AM-275
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The equation $-2x^2+12x-5=k$, where $k$ is a constant, has no real solutions. What is the least integer value of $k$?
+
+**Correct Answer:** $14$
+
+**Rationale:** The parabola opens downward, so its maximum value is at $x=-\dfrac{12}{2(-2)}=3$: $f(3)=-18+36-5=13$. The horizontal line $y=k$ misses the parabola exactly when $k>13$. The least integer is $14$. (Discriminant check: $144+8(-5-k)=104-8k<0$ gives $k>13$.)
+
+**Misconception addressed:** Students answer $13$ (the maximum itself, where there is exactly one solution) or use the vertex $x$-value $3$.
+
+---
+
+### AM-276
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=4x^2-12x+5$. For a certain real number $a$, $f(a)=f(a+4)$. What is the value of $a$?
+
+**Correct Answer:** $-\dfrac12$ (or $-0.5$)
+
+**Rationale:** Equal outputs mean the inputs $a$ and $a+4$ are symmetric about the axis $x=-\dfrac{-12}{2(4)}=\dfrac32$. So $\dfrac{a+(a+4)}{2}=\dfrac32$, giving $2a+4=3$ and $a=-\dfrac12$. Check: $f(-\tfrac12)=1+6+5=12$ and $f(\tfrac72)=49-42+5=12$.
+
+**Misconception addressed:** Students expand and get lost in the algebra, or set $a+4=\dfrac32$ (treating one input as the axis).
+
+---
+
+### AM-277
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The solutions of $x^2-bx+12=0$, where $b>0$, differ by $4$. What is the value of $b$?
+
+**Correct Answer:** $8$
+
+**Rationale:** For $x^2+px+q=0$ the difference of the roots is $\sqrt{p^2-4q}$. So $b^2-48=16$, giving $b^2=64$ and $b=8$ (positive). Check: $x^2-8x+12=(x-2)(x-6)$, roots $2$ and $6$.
+
+**Misconception addressed:** Students use the sum or the product of the roots instead of their difference, or give $b=-8$.
+
+---
+
+### AM-278
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The polynomial $x^3-9x^2+bx-c$ has zeros $2$, $3$ and a third zero. What is the value of $b+c$?
+
+**Correct Answer:** $50$
+
+**Rationale:** The zeros add to $9$, so the third zero is $4$. Then $x^3-9x^2+bx-c=(x-2)(x-3)(x-4)=x^3-9x^2+26x-24$. So $b=26$, $c=24$ and $b+c=50$.
+
+**Misconception addressed:** Students write $-24$ for $c$ (forgetting the minus sign in front of $c$) and obtain $2$.
+
+---
+
+### AM-279
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** $$\left(\frac{x+3}{x-1}\right)^2-3\left(\frac{x+3}{x-1}\right)-10=0$$ What is the sum of all real solutions of the equation above?
+
+**Correct Answer:** $\dfrac53$ (or $1.667$)
+
+**Rationale:** Let $u=\dfrac{x+3}{x-1}$. Then $u^2-3u-10=0$, so $u=5$ or $u=-2$. For $u=5$: $x+3=5x-5$, so $x=2$. For $u=-2$: $x+3=-2x+2$, so $x=-\dfrac13$. Both are allowed ($x\ne1$). The sum is $2-\dfrac13=\dfrac53$.
+
+**Misconception addressed:** Students clear all denominators at once and get a quartic, or stop at the values of $u$ ($5+(-2)=3$).
+
+---
+
+### AM-280
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is linear and $g(x)=\dfrac{f(x)}{x+3}$. The table gives two values of $g$.
+
+| $x$ | $1$ | $3$ |
+|---|---|---|
+| $g(x)$ | $3$ | $\dfrac52$ |
+
+What is the $y$-intercept of the graph of $f$ in the $xy$-plane?
+
+**Correct Answer:** $\dfrac{21}{2}$ (or $10.5$)
+
+**Rationale:** Multiply back: $f(1)=3\cdot4=12$ and $f(3)=\dfrac52\cdot6=15$. The slope of $f$ is $\dfrac{15-12}{3-1}=\dfrac32$, so $f(x)=\dfrac32x+\dfrac{21}{2}$ and the $y$-intercept is $\dfrac{21}{2}$.
+
+**Misconception addressed:** Students treat the table as values of $f$ and read the intercept from $g$, or forget to multiply by $x+3$.
+
+---
+
+### AM-281
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** For $x\ge0$, the function $h$ is defined by $h(x)=12\left(\dfrac14\right)^{x-2}$. What is the maximum value of $h$ on this domain?
+
+**Correct Answer:** $192$
+
+**Rationale:** The base $\dfrac14$ is less than $1$, so $h$ is decreasing and its maximum on $x\ge0$ is at the left end, $x=0$: $h(0)=12\left(\dfrac14\right)^{-2}=12\cdot16=192$.
+
+**Misconception addressed:** Students read the coefficient $12$ as the maximum (it is $h(2)$) or forget that a negative exponent inverts the base.
+
+---
+
+### AM-282
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** If $x+y=5$ and $xy=6$, what is the value of $x^3+y^3$?
+
+**Correct Answer:** $35$
+
+**Rationale:** Use $x^3+y^3=(x+y)^3-3xy(x+y)=125-3\cdot6\cdot5=35$. Check with $x=2$, $y=3$: $8+27=35$.
+
+**Misconception addressed:** Students use $(x+y)^3=x^3+y^3$ and answer $125$, or forget the middle term $3xy(x+y)$.
+
+---
+
+### AM-283
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** If $(x+y)^2=49$ and $x^2+y^2=29$, what is the value of $(x-y)^2$?
+
+**Correct Answer:** $9$
+
+**Rationale:** Expanding, $x^2+2xy+y^2=49$, so $2xy=49-29=20$. Then $(x-y)^2=x^2+y^2-2xy=29-20=9$.
+
+**Misconception addressed:** Students try to solve for $x$ and $y$ individually, or subtract $49-29=20$ and stop.
+
+---
+
+### AM-284
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=-(x-2)^2+7$. Let $k$ be the maximum value of $f$. The table gives values of the function $g$.
+
+| $x$ | $4$ | $5$ | $6$ | $7$ | $8$ |
+|---|---|---|---|---|---|
+| $g(x)$ | $3$ | $11$ | $-2$ | $9$ | $14$ |
+
+What is the value of $g(k)$?
+
+**Correct Answer:** $9$
+
+**Rationale:** $f$ opens downward with vertex $(2,7)$, so the maximum value is $k=7$. From the table, $g(7)=9$.
+
+**Misconception addressed:** Students use the vertex $x$-value $2$ (not in the table) or read $g(2)$, or take $k=7$ as an input to $f$.
+
+---
+
+### AM-285
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=x^2-4x$. For what value of $a$ is the average rate of change of $f$ from $x=a$ to $x=a+2$ equal to $6$?
+
+**Correct Answer:** $4$
+
+**Rationale:** $f(a+2)=(a+2)^2-4(a+2)=a^2-4$ and $f(a)=a^2-4a$. The average rate of change is $\dfrac{(a^2-4)-(a^2-4a)}{2}=\dfrac{4a-4}{2}=2a-2$. Setting $2a-2=6$ gives $a=4$. Check: $f(6)=12$, $f(4)=0$, $\dfrac{12-0}{2}=6$.
+
+**Misconception addressed:** Students use the derivative at $a$ or divide by $a$ instead of by the interval width $2$.
+
+---
+
+### AM-286
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The average rate of change of $h(x)=x^3$ from $x=1$ to $x=k$, where $k>1$, is $13$. What is the value of $k$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $\dfrac{k^3-1}{k-1}=k^2+k+1=13$, so $k^2+k-12=0$ and $(k+4)(k-3)=0$. Since $k>1$, $k=3$. Check: $\dfrac{27-1}{2}=13$.
+
+**Misconception addressed:** Students divide $k^3-1$ by $k$ rather than $k-1$, or keep the negative root.
+
+---
+
+### AM-287
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** $(2+3i)(4-i)-(1+i)^2=a+bi$, where $a$ and $b$ are real numbers and $i=\sqrt{-1}$. What is the value of $ab$?
+
+**Correct Answer:** $88$
+
+**Rationale:** $(2+3i)(4-i)=8-2i+12i-3i^2=11+10i$. $(1+i)^2=1+2i+i^2=2i$. The difference is $11+8i$, so $a=11$, $b=8$ and $ab=88$.
+
+**Misconception addressed:** Students forget $i^2=-1$ in the product, or write $(1+i)^2=1+i^2=0$.
+
+---
+
+### GT-224
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In the $xy$-plane, circle $A$ has equation $(x-2)^2+(y+1)^2=9$. Circle $B$ is the image of circle $A$ after a translation $3$ units left and $4$ units up, followed by a dilation about its own centre that doubles the radius. Which is an equation of circle $B$?
+
+(A) $(x+1)^2+(y-3)^2=36$
+(B) $(x+1)^2+(y-3)^2=18$
+(C) $(x-5)^2+(y+5)^2=36$
+(D) $(x+1)^2+(y-3)^2=6$
+
+**Correct Answer:** (A) $(x+1)^2+(y-3)^2=36$
+
+**Rationale:** The centre moves from $(2,-1)$ to $(2-3,-1+4)=(-1,3)$. The radius doubles from $3$ to $6$, so $r^2=36$. The equation is $(x+1)^2+(y-3)^2=36$.
+
+**Misconception addressed:** Choice B doubles $r^2$ instead of $r$, choice C moves the centre the wrong way, and choice D doubles $r$ but forgets to square.
+
+---
+
+### GT-225
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** An equilateral triangle with perimeter $36$ is inscribed in a circle. What is the area of the circle divided by $\pi$?
+
+**Correct Answer:** $48$
+
+**Rationale:** The side is $12$. For an equilateral triangle the circumradius is $R=\dfrac{s}{\sqrt3}=\dfrac{12}{\sqrt3}=4\sqrt3$. The area is $\pi R^2=48\pi$, so the answer is $48$. (Check: the centre divides each median $2:1$, and the median is $6\sqrt3$, so $R=4\sqrt3$.)
+
+**Misconception addressed:** Students take $R=s/2=6$ and answer $36$, or use the inradius $2\sqrt3$ and answer $12$.
+
+---
+
+### PS-130
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The rainwater collected by a flat roof is proportional to the roof's area. A square roof with side $3$ m collects $18$ litres in a shower. In the same shower, how many litres, to the nearest tenth, does a circular roof with radius $2$ m collect?
+
+**Correct Answer:** $25.1$
+
+**Rationale:** The square has area $9\ \text{m}^2$, so the rate is $\dfrac{18}{9}=2$ litres per $\text{m}^2$. The circle has area $\pi\cdot2^2=4\pi\approx12.57\ \text{m}^2$, so it collects $8\pi\approx25.1$ litres.
+
+**Misconception addressed:** Students compare side with radius ($18\cdot\tfrac23=12$) or forget to square the radius.
+
+---
+
+### PS-131
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Gear $A$ has $24$ teeth and drives gear $B$, which has $8$ teeth. Gear $C$ is fixed on the same axle as gear $B$ and has $36$ teeth. Gear $C$ drives gear $D$, which has $12$ teeth. Gear $A$ turns at $90$ revolutions per minute. How many revolutions per minute does gear $D$ turn?
+
+**Correct Answer:** $810$
+
+**Rationale:** Meshing gears have equal tooth speed, so $B$ turns $\dfrac{24}{8}\cdot90=270$ rpm. $C$ shares $B$'s axle, so it also turns at $270$ rpm. Then $D$ turns $\dfrac{36}{12}\cdot270=810$ rpm.
+
+**Misconception addressed:** Students divide instead of multiplying (a larger gear drives a smaller one faster), or think $C$ turns at $90$ rpm.
+
+---
+
+### PS-132
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A bag of rice costs $40\%$ more than a bag of beans. Three bags of rice and two bags of beans cost a total of $\$111.60$. What is the cost, in dollars, of one bag of rice?
+
+**Correct Answer:** $25.2$ (or $25.20$)
+
+**Rationale:** Let a bag of beans cost $b$. Rice costs $1.4b$. Then $3(1.4b)+2b=6.2b=111.60$, so $b=18$ and rice costs $1.4\cdot18=25.20$.
+
+**Misconception addressed:** Students use $0.4b$ for the rice price, or give the cost of beans ($18$).
+
+---
+
+### A-314
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Which of the following sets of points $(x,y)$ contains only solutions to the inequality $y<2x-3$?
+
+(A) $(0,-4),\ (1,-2),\ (2,0)$
+(B) $(0,-3),\ (1,-2),\ (2,0)$
+(C) $(1,-3),\ (2,0),\ (3,4)$
+(D) $(0,-5),\ (1,-1),\ (2,2)$
+
+**Correct Answer:** (A) $(0,-4),\ (1,-2),\ (2,0)$
+
+**Rationale:** Substitute each point. Set A: $-4<-3$, $-2<-1$ and $0<1$ are all true. Set B fails at $(0,-3)$, which lies on the line $y=2x-3$, because $-3<-3$ is false. Set C fails at $(3,4)$ because $4<3$ is false. Set D fails at $(1,-1)$, which lies on the line, because $-1<-1$ is false.
+
+**Misconception addressed:** Students treat the strict inequality as $\le$ and accept points on the boundary line (sets B and D), or check only the first point of each set.
+
+---
+
+### A-315
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype seen in public prep material (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A freelancer keeps $85\%$ of every invoice after fees. She invoices $\$40$ plus $\$12$ for each hour worked, and she wants to keep at least $\$300$ in total. What is the least whole number of hours she must work?
+
+**Correct Answer:** $27$
+
+**Rationale:** Her take-home is $0.85(40+12h)\ge300$, so $40+12h\ge352.94\ldots$ and $12h\ge312.94\ldots$, giving $h\ge26.08\ldots$. The least whole number is $27$. Check: $0.85(40+324)=309.4\ge300$ and $0.85(40+312)=299.2<300$.
+
+**Misconception addressed:** Students forget the $85\%$, or round $26.08$ down to $26$.
+
+---
+
+### 2.39 Gap-Closing Batch 7 — Thin Skills and Open Archetypes (45 items — PS-133 to PS-156, AM-288 to AM-302, GT-226 to GT-231)
+
+Built after a gap review of the 11-session plan. Targets: evaluating statistical claims (4), inference and margin of error (6), probability and conditional probability (7), two-variable data (7), function composition and transformations (7), sum and product of solutions (4), and similar triangles with area ratios (6). A web sweep of public prep pages supplied archetypes only; every item is original, every answer was computed by script, and each item was screened against the whole bank (candidates that repeated an existing archetype were replaced).
+
+### PS-133
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A researcher recruited $120$ volunteers who responded to an online advertisement. She randomly assigned $60$ of them to study with method $X$ and $60$ to study with method $Y$ for a month. The method $X$ group had a higher mean score on a final test, and the difference was larger than would be expected from random assignment alone. Which conclusion is best supported by the study?
+
+(A) The study provides no evidence about either method.
+(B) Method $X$ caused higher scores for volunteers like those in the study.
+(C) Method $X$ is associated with higher scores, but no causal conclusion is possible.
+(D) Method $X$ causes higher scores for all students.
+
+**Correct Answer:** (B) Method $X$ caused higher scores for volunteers like those in the study.
+
+**Rationale:** Random assignment supports a cause-and-effect conclusion, but the participants were volunteers and not a random sample of all students. So the conclusion can be drawn only for volunteers like those in the study.
+
+**Misconception addressed:** Students think random assignment allows a conclusion about every student, or that volunteers make any causal statement impossible.
+
+---
+
+### PS-134
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A random sample of $500$ adults was selected from a large city, and each adult reported how many hours per week they exercise and how many hours they sleep each night. The adults who exercise more tend to sleep more. Which conclusion is best supported by this study?
+
+(A) Exercising more causes adults in the city to sleep more.
+(B) Sleeping more causes adults in the city to exercise more.
+(C) Among the $500$ adults only, exercise and sleep are associated; nothing can be said about the city.
+(D) Among adults in the city, exercise and sleep are positively associated, but exercise has not been shown to cause more sleep.
+
+**Correct Answer:** (D) Among adults in the city, exercise and sleep are positively associated, but exercise has not been shown to cause more sleep.
+
+**Rationale:** The random sample lets the result be generalized to adults in the city, but no one was assigned to exercise, so the study shows association only.
+
+**Misconception addressed:** Students see a random sample and jump to causation, or think the result cannot apply beyond the $500$ people sampled.
+
+---
+
+### PS-135
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A website for a cycling club posted a poll asking, ``Should the city spend more on bike lanes?'' Of the $1{,}850$ people who chose to respond, $91\%$ voted yes. Which is the main reason the poll result should not be used to estimate the opinion of all city residents?
+
+(A) Respondents selected themselves and are likely to hold similar views.
+(B) The sample size is too large.
+(C) The question has too few possible answers.
+(D) The poll was conducted online, and no online poll can be accurate.
+
+**Correct Answer:** (A) Respondents selected themselves and are likely to hold similar views.
+
+**Rationale:** Respondents chose themselves, and visitors to a cycling club's site are not representative of all residents. A large number of responses does not fix this bias.
+
+**Misconception addressed:** Students believe that a large sample ($1{,}850$) is enough to generalize.
+
+---
+
+### PS-136
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A random sample of $500$ adults reported their coffee consumption. The adults who drink coffee daily had a lower rate of a certain heart condition than those who do not. Which change to the study would make it possible to conclude that drinking coffee reduces the rate of the condition?
+
+(A) Increase the sample to $5{,}000$ adults.
+(B) Include only adults older than $40$.
+(C) Randomly assign the participants to drink coffee daily or not, then compare the rates.
+(D) Ask each adult about more lifestyle habits.
+
+**Correct Answer:** (C) Randomly assign the participants to drink coffee daily or not, then compare the rates.
+
+**Rationale:** A causal conclusion needs random assignment: randomly choosing who drinks coffee and who does not balances other factors across the groups.
+
+**Misconception addressed:** Students think more data or more measured variables turns an observational study into an experiment.
+
+---
+
+### PS-137
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In a poll of a random sample of voters, $51\%$ said they support a proposed tax. The margin of error was $2.5\%$ at the $95\%$ confidence level. Based on the poll, which statement is best supported?
+
+(A) A majority of all voters support the tax.
+(B) It is plausible that a majority support the tax, but less than half supporting it is also plausible.
+(C) Fewer than half of all voters support the tax.
+(D) Exactly $51\%$ of all voters support the tax.
+
+**Correct Answer:** (B) It is plausible that a majority support the tax, but less than half supporting it is also plausible.
+
+**Rationale:** The plausible population values run from $51-2.5=48.5\%$ to $51+2.5=53.5\%$. Because $50\%$ is inside this interval, a majority is plausible but not established.
+
+**Misconception addressed:** Students read $51>50$ and conclude a majority supports the tax.
+
+---
+
+### PS-138
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A random sample of students at a university reported a mean of $3.2$ hours of study per day, with a margin of error of $0.4$ hours. The university has $18{,}000$ students. Based on the sample, what is the greatest total number of study hours per day that is plausible for the whole student body?
+
+**Correct Answer:** $64{,}800$ (or $64800$)
+
+**Rationale:** The plausible values of the population mean run from $3.2-0.4=2.8$ to $3.2+0.4=3.6$ hours. The greatest total is $3.6\cdot18{,}000=64{,}800$ hours.
+
+**Misconception addressed:** Students multiply the sample mean by $18{,}000$ ($57{,}600$) and ignore the margin of error, or add $0.4$ to the total.
+
+---
+
+### PS-139
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Two independent random samples were taken from the same population to estimate a proportion at the same confidence level. The first sample had $400$ members and a margin of error of $6\%$. The second sample had $1{,}600$ members. Which is most likely the margin of error for the second sample?
+
+(A) $1.5\%$
+(B) $6\%$
+(C) $3\%$
+(D) $12\%$
+
+**Correct Answer:** (C) $3\%$
+
+**Rationale:** The margin of error shrinks in proportion to $\dfrac{1}{\sqrt n}$. The sample is $4$ times as large, so the margin of error is divided by $\sqrt4=2$, giving $3\%$.
+
+**Misconception addressed:** Students divide by the sample ratio $4$ (getting $1.5\%$) instead of its square root.
+
+---
+
+### PS-140
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A random sample of $500$ residents of Town $P$ gave an estimate of $30\%$ for the percent who favor a new park, with a margin of error of $4\%$. A random sample of $500$ residents of Town $Q$ gave an estimate of $38\%$, also with a margin of error of $4\%$. Which statement is best supported?
+
+(A) It is plausible that the percent in favor is the same in both towns.
+(B) The percent in favor in Town $P$ is exactly $4$ points less than that in Town $Q$.
+(C) Town $Q$ definitely has a greater percent in favor than Town $P$.
+(D) It is not possible for the percents to be equal.
+
+**Correct Answer:** (A) It is plausible that the percent in favor is the same in both towns.
+
+**Rationale:** Town $P$ plausible values: $26\%$ to $34\%$. Town $Q$: $34\%$ to $42\%$. The intervals share the value $34\%$, so it is plausible that the two towns have the same percent. Neither a difference nor equality is established.
+
+**Misconception addressed:** Students compare the two estimates ($30$ vs $38$) and declare a real difference.
+
+---
+
+### PS-141
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A school has $1{,}200$ seniors and $2{,}800$ students in other grades. A random sample of $300$ seniors was surveyed, and an estimated $62\%$ plan to attend college, with a margin of error of $5\%$. Which statement is best supported by the survey?
+
+(A) Exactly $62\%$ of the seniors at the school plan to attend college.
+(B) Between $57\%$ and $67\%$ of the $300$ surveyed seniors plan to attend college.
+(C) Between $57\%$ and $67\%$ of all students at the school plan to attend college.
+(D) It is plausible that between $57\%$ and $67\%$ of the seniors at the school plan to attend college.
+
+**Correct Answer:** (D) It is plausible that between $57\%$ and $67\%$ of the seniors at the school plan to attend college.
+
+**Rationale:** The sample was drawn only from seniors, so the interval $57\%$ to $67\%$ applies to seniors at the school and not to all $4{,}000$ students.
+
+**Misconception addressed:** Students apply the interval to the entire school population.
+
+---
+
+### PS-142
+
+**Skill:** Problem-Solving and Data Analysis — Inference from sample statistics and margin of error
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** To estimate the number of fish in a lake, a biologist caught and tagged $150$ fish and released them. A week later she caught a random sample of $60$ fish from the lake, and $9$ of them were tagged. Assuming the sample is representative and the tagged fish mixed evenly, what is the best estimate of the number of fish in the lake?
+
+**Correct Answer:** $1000$
+
+**Rationale:** The tagged fraction in the sample should match the tagged fraction in the lake: $\dfrac{9}{60}=\dfrac{150}{N}$, so $N=\dfrac{150\cdot60}{9}=1000$.
+
+**Misconception addressed:** Students compute $150\cdot\dfrac{9}{60}=22.5$ (inverting the proportion) or $150+60-9=201$.
+
+---
+
+### PS-143
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A company's customers were asked whether they renewed their contract. The results are shown in the table.
+
+| | Renewed | Did not renew |
+|---|---|---|
+| Plan $A$ | $84$ | $36$ |
+| Plan $B$ | $45$ | $35$ |
+
+If one of the customers who did not renew is chosen at random, what is the probability that the customer was on Plan $B$?
+
+**Correct Answer:** $\dfrac{35}{71}$ (or $0.493$)
+
+**Rationale:** There are $36+35=71$ customers who did not renew, and $35$ of them were on Plan $B$. The probability is $\dfrac{35}{71}\approx0.493$.
+
+**Misconception addressed:** Students divide by all $200$ customers ($0.175$) or by Plan $B$'s total ($\tfrac{35}{80}$), conditioning on the wrong group.
+
+---
+
+### PS-144
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Events $A$ and $B$ are independent. The probability of $A$ is $0.4$, and the probability that at least one of $A$ and $B$ occurs is $0.7$. What is the probability of $B$?
+
+**Correct Answer:** $0.5$ (or $\dfrac12$)
+
+**Rationale:** For independent events $P(A\text{ or }B)=P(A)+P(B)-P(A)P(B)$. So $0.7=0.4+b-0.4b$, giving $0.3=0.6b$ and $b=0.5$.
+
+**Misconception addressed:** Students add the probabilities ($b=0.3$), forgetting the overlap term.
+
+---
+
+### PS-145
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A bag holds $5$ red marbles and $3$ blue marbles. Two marbles are drawn at random, one after the other, without replacement. What is the probability that the two marbles are the same color?
+
+(A) $\dfrac{15}{28}$
+(B) $\dfrac{13}{28}$
+(C) $\dfrac{5}{14}$
+(D) $\dfrac{17}{32}$
+
+**Correct Answer:** (B) $\dfrac{13}{28}$
+
+**Rationale:** Same color means both red or both blue: $\dfrac{5}{8}\cdot\dfrac47+\dfrac38\cdot\dfrac27=\dfrac{20+6}{56}=\dfrac{13}{28}$.
+
+**Misconception addressed:** Students use replacement ($\tfrac{25}{64}+\tfrac{9}{64}=\tfrac{17}{32}$) or count only the red pair.
+
+---
+
+### PS-146
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Two fair six-sided dice are rolled. Given that at least one of the dice shows an even number, what is the probability that the sum of the two dice is $8$?
+
+**Correct Answer:** $\dfrac19$ (or $0.111$)
+
+**Rationale:** Among the $36$ outcomes, $9$ have both dice odd, so $27$ have at least one even die. Of the sums equal to $8$ ($(2,6),(3,5),(4,4),(5,3),(6,2)$), three include an even die. The probability is $\dfrac{3}{27}=\dfrac19$.
+
+**Misconception addressed:** Students use all five outcomes with sum $8$ over $27$ ($\tfrac{5}{27}$) or divide by $36$.
+
+---
+
+### PS-147
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Of $500$ residents surveyed, $240$ own a car, $180$ own a bicycle, and $70$ own both. If one of the surveyed residents is chosen at random, what is the probability that the resident owns neither a car nor a bicycle?
+
+**Correct Answer:** $0.3$ (or $\dfrac{3}{10}$)
+
+**Rationale:** The residents owning at least one are $240+180-70=350$, so $500-350=150$ own neither. The probability is $\dfrac{150}{500}=0.3$.
+
+**Misconception addressed:** Students forget to subtract the overlap and get $\dfrac{80}{500}$, or answer $\dfrac{350}{500}$.
+
+---
+
+### PS-148
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In a town, $30\%$ of the residents are over $60$ years old. Of the residents over $60$, $80\%$ vote in elections; of the residents who are not over $60$, $50\%$ vote. A voter is chosen at random from all residents who vote. What is the probability that the voter is over $60$?
+
+**Correct Answer:** $\dfrac{24}{59}$ (or $0.407$)
+
+**Rationale:** Per $100$ residents: voters over $60$ number $30\cdot0.8=24$; voters not over $60$ number $70\cdot0.5=35$. The probability is $\dfrac{24}{24+35}=\dfrac{24}{59}\approx0.407$.
+
+**Misconception addressed:** Students answer $0.8$ (the share of over-$60$s who vote) or $0.3$ (the share of residents over $60$).
+
+---
+
+### PS-149
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In a trial, $90$ of $120$ patients given Drug $X$ improved, and $60$ of $100$ patients given Drug $Y$ improved. How many times as likely is a patient given Drug $X$ to improve as a patient given Drug $Y$?
+
+**Correct Answer:** $1.25$ (or $\dfrac54$)
+
+**Rationale:** The improvement rates are $\dfrac{90}{120}=0.75$ for $X$ and $\dfrac{60}{100}=0.6$ for $Y$. The ratio is $\dfrac{0.75}{0.6}=1.25$.
+
+**Misconception addressed:** Students compare the counts ($\tfrac{90}{60}=1.5$) instead of the rates.
+
+---
+
+### PS-150
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A teacher modeled the final score $y$ of students in a course with the line of best fit $\hat y=82-1.6x$, where $x$ is the number of days the student was absent. Which statement is the best interpretation of the number $82$ in this model?
+
+(A) A student absent for $82$ days is predicted to score $0$.
+(B) The predicted score decreases by $82$ for each day absent.
+(C) The mean score of all students in the class is $82$.
+(D) The predicted score of a student with no absences is $82$.
+
+**Correct Answer:** (D) The predicted score of a student with no absences is $82$.
+
+**Rationale:** The $y$-intercept is the predicted value when $x=0$: a student with no absences is predicted to score $82$.
+
+**Misconception addressed:** Students read $82$ as the average score of the class or as the score lost per absence.
+
+---
+
+### PS-151
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The table shows values of $x$ and $y$ for a data set.
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|---|
+| $y$ | $8$ | $12$ | $18$ | $27$ | $40.5$ |
+
+Which equation fits all five pairs?
+
+(A) $y=8(1.5)^x$
+(B) $y=4x+8$
+(C) $y=2x^2+2x+8$
+(D) $y=8(1.2)^x$
+
+**Correct Answer:** (A) $y=8(1.5)^x$
+
+**Rationale:** The ratios of consecutive $y$-values are all $\dfrac{12}{8}=\dfrac{18}{12}=1.5$, so $y=8(1.5)^x$ fits. The linear and quadratic options fail at $x=2$, where they give $16$ and $20$, and $8(1.2)^x$ gives $11.52$.
+
+**Misconception addressed:** Students notice the first difference $4$ and choose a linear or quadratic model without testing the later values.
+
+---
+
+### PS-152
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A line of best fit for a data set is $\hat y=3.2x+14$. For the data point with $x=10$, the actual value is $y=51$. What is the residual for this point (actual value minus predicted value)?
+
+**Correct Answer:** $5$
+
+**Rationale:** The predicted value is $3.2(10)+14=46$. The residual is $51-46=5$.
+
+**Misconception addressed:** Students reverse the subtraction (answer $-5$) or give the predicted value $46$.
+
+---
+
+### PS-153
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Ten data points lie exactly on the line $y=2x+1$, at $x=1,2,\ldots,10$. A new data point $(11,40)$, far above that line, is added. How does the least-squares line for all eleven points compare with the line $y=2x+1$?
+
+(A) Smaller slope and greater $y$-intercept
+(B) The same slope and the same $y$-intercept
+(C) Greater slope and smaller $y$-intercept
+(D) Greater slope and greater $y$-intercept
+
+**Correct Answer:** (C) Greater slope and smaller $y$-intercept
+
+**Rationale:** The new point is above the line at the right end, so it pulls the right side of the line up. The slope increases above $2$, and the line pivots about the center of the data, so the $y$-intercept falls below $1$. (Computed: slope $\approx2.77$, intercept $\approx-2.09$.)
+
+**Misconception addressed:** Students think an outlier at the right end raises both the slope and the intercept.
+
+---
+
+### PS-154
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A model $y=0.85x+12$ was fitted to data in which $x$ ranged from $20$ to $80$. A student uses the model to predict $y$ when $x=150$. Which statement about this prediction is best?
+
+(A) It is reliable, because the slope is positive.
+(B) It is less reliable, because $150$ is outside the range of the data.
+(C) It is impossible, because $y$ cannot be computed for $x>80$.
+(D) It is reliable, because the model is linear.
+
+**Correct Answer:** (B) It is less reliable, because $150$ is outside the range of the data.
+
+**Rationale:** The value $x=150$ is far outside the range of the data ($20$ to $80$), so using the model there is extrapolation and the prediction is unreliable even though the arithmetic is simple.
+
+**Misconception addressed:** Students assume the line holds forever, or think any prediction is invalid.
+
+---
+
+### PS-155
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A least-squares line for a data set is $\hat y=1.5x+4$. The mean of the $x$-values is $10$. What is the mean of the $y$-values?
+
+**Correct Answer:** $19$
+
+**Rationale:** A least-squares line always passes through the point $(\bar x,\bar y)$ of the means. So $\bar y=1.5(10)+4=19$.
+
+**Misconception addressed:** Students think the mean of $y$ cannot be found without the data.
+
+---
+
+### PS-156
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The residuals for the first four of five data points about a least-squares line are $-2$, $3$, $1$ and $-4$. What is the residual for the fifth point?
+
+**Correct Answer:** $2$
+
+**Rationale:** The residuals about a least-squares line sum to $0$. So $-2+3+1-4+r=0$, giving $r=2$.
+
+**Misconception addressed:** Students think residuals should all be positive, or average to a nonzero value.
+
+---
+
+### AM-288
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The graph of $y=f(x)$ in the $xy$-plane has $x$-intercepts at $x=-2$ and $x=5$. The function $g$ is defined by $g(x)=f(2x)$. What are the $x$-intercepts of the graph of $y=g(x)$?
+
+(A) $x=-2$ and $x=\dfrac52$
+(B) $x=-4$ and $x=10$
+(C) $x=-1$ and $x=\dfrac52$
+(D) $x=0$ and $x=3$
+
+**Correct Answer:** (C) $x=-1$ and $x=\dfrac52$
+
+**Rationale:** $g(x)=0$ when $2x=-2$ or $2x=5$, so $x=-1$ or $x=\dfrac52$. Replacing $x$ by $2x$ compresses the graph horizontally by a factor of $2$.
+
+**Misconception addressed:** Students double the intercepts ($-4$ and $10$), as if the graph were stretched.
+
+---
+
+### AM-289
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The functions $f$ and $g$ are defined for the values in the table.
+
+| $x$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|
+| $f(x)$ | $3$ | $4$ | $1$ | $2$ |
+| $g(x)$ | $4$ | $1$ | $2$ | $3$ |
+
+What is the value of $g\left(f^{-1}(g(3))\right)$?
+
+**Correct Answer:** $3$
+
+**Rationale:** $g(3)=2$. The value $f^{-1}(2)$ is the input where $f$ equals $2$, which is $x=4$. Then $g(4)=3$.
+
+**Misconception addressed:** Students read $f^{-1}(2)$ as $f(2)=4$ or as $\dfrac{1}{f(2)}$.
+
+---
+
+### AM-290
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is odd, which means $f(-x)=-f(x)$ for every $x$. Which of the following functions must be even, meaning $h(-x)=h(x)$ for every $x$?
+
+(A) $[f(x)]^2$
+(B) $f(f(x))$
+(C) $f(x)+1$
+(D) $f(x)+x$
+
+**Correct Answer:** (A) $[f(x)]^2$
+
+**Rationale:** Squaring removes the sign: $[f(-x)]^2=[-f(x)]^2=[f(x)]^2$, so $[f(x)]^2$ is even. The function $f(f(x))$ is odd, $f(x)+x$ is odd, and $f(x)+1$ is neither.
+
+**Misconception addressed:** Students think a composition of odd functions is even, or confuse the two types.
+
+---
+
+### AM-291
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Medium
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=(x-1)(x-5)$. The graph of $g$ is the reflection of the graph of $f$ across the $y$-axis, shifted up $4$ units. What is the value of $g(2)$?
+
+**Correct Answer:** $25$
+
+**Rationale:** Reflecting across the $y$-axis gives $f(-x)$, and shifting up $4$ gives $g(x)=f(-x)+4$. Then $g(2)=f(-2)+4=(-3)(-7)+4=25$.
+
+**Misconception addressed:** Students compute $f(2)+4=1$ (no reflection) or reflect across the $x$-axis.
+
+---
+
+### AM-292
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Let $f(x)=\sqrt{x-1}$ and $g(x)=x^2-5$. Which describes all real values of $x$ for which $f(g(x))$ is defined?
+
+(A) $x\ge1$
+(B) $-\sqrt6\le x\le\sqrt6$
+(C) all real numbers
+(D) $x\le-\sqrt6$ or $x\ge\sqrt6$
+
+**Correct Answer:** (D) $x\le-\sqrt6$ or $x\ge\sqrt6$
+
+**Rationale:** $f(g(x))=\sqrt{x^2-5-1}=\sqrt{x^2-6}$, which needs $x^2\ge6$, so $x\le-\sqrt6$ or $x\ge\sqrt6$.
+
+**Misconception addressed:** Students use the domain of $f$ ($x\ge1$) or of $g$ (all reals) alone, or solve $x^2\ge6$ as $-\sqrt6\le x\le\sqrt6$.
+
+---
+
+### AM-293
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is defined by $f(x)=\dfrac{2x+1}{x-3}$ for $x\neq3$. What is the value of $f^{-1}(5)$?
+
+**Correct Answer:** $\dfrac{16}{3}$ (or $5.333$)
+
+**Rationale:** $f^{-1}(5)$ is the input $x$ for which $f(x)=5$. Solve $\dfrac{2x+1}{x-3}=5$: $2x+1=5x-15$, so $3x=16$ and $x=\dfrac{16}{3}$.
+
+**Misconception addressed:** Students compute $f(5)=\dfrac{11}{2}$ or the reciprocal $\dfrac{1}{f(5)}$.
+
+---
+
+### AM-294
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The graph of $y=f(x)$ passes through the point $(4,-2)$. Which point must lie on the graph of $y=3f(x-1)+5$?
+
+(A) $(5,11)$
+(B) $(5,-1)$
+(C) $(3,-1)$
+(D) $(3,11)$
+
+**Correct Answer:** (B) $(5,-1)$
+
+**Rationale:** If $x-1=4$, then $x=5$ and $y=3f(4)+5=3(-2)+5=-1$. So $(5,-1)$ lies on the graph.
+
+**Misconception addressed:** Students shift left to $x=3$ or apply the vertical changes in the wrong order.
+
+---
+
+### AM-295
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The equation $2x^2-7x+k=0$, where $k$ is a constant, has two real solutions $r$ and $s$ with $r^2+s^2=9$. What is the value of $k$?
+
+**Correct Answer:** $\dfrac{13}{4}$ (or $3.25$)
+
+**Rationale:** By Vieta, $r+s=\dfrac72$ and $rs=\dfrac k2$. Then $r^2+s^2=(r+s)^2-2rs=\dfrac{49}{4}-k=9$, so $k=\dfrac{13}{4}$. The discriminant $49-8k=23>0$, so the solutions are real.
+
+**Misconception addressed:** Students use $r^2+s^2=(r+s)^2$ and get $k=0$, or forget the factor $2$ on $rs$.
+
+---
+
+### AM-296
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** What is the product of all real solutions of $x^4-5x^2+4=0$?
+
+**Correct Answer:** $4$
+
+**Rationale:** Let $u=x^2$: $u^2-5u+4=0$ gives $u=1$ or $u=4$. So $x=\pm1$ or $x=\pm2$, and the product is $(1)(-1)(2)(-2)=4$.
+
+**Misconception addressed:** Students answer $0$ (the sum) or $\pm$ only the positive roots ($2$).
+
+---
+
+### AM-297
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** What is the sum of all real solutions of $2^{2x}-6\cdot2^{x}+8=0$?
+
+**Correct Answer:** $3$
+
+**Rationale:** Let $u=2^x$: $u^2-6u+8=0$ gives $u=2$ or $u=4$. So $x=1$ or $x=2$, and the sum is $3$.
+
+**Misconception addressed:** Students add the values of $u$ ($2+4=6$).
+
+---
+
+### GT-226
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Triangle $ABC$ is similar to triangle $DEF$. The area of triangle $ABC$ is $36$ and the area of triangle $DEF$ is $100$. The perimeter of triangle $ABC$ is $24$. What is the perimeter of triangle $DEF$?
+
+**Correct Answer:** $40$
+
+**Rationale:** The ratio of areas is $\dfrac{36}{100}$, so the ratio of lengths is $\dfrac{6}{10}=\dfrac35$. The perimeter of $DEF$ is $24\cdot\dfrac53=40$.
+
+**Misconception addressed:** Students use the area ratio directly and get $24\cdot\dfrac{100}{36}\approx66.7$.
+
+---
+
+### GT-227
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In triangle $ABC$, point $D$ lies on $\overline{AB}$ and point $E$ lies on $\overline{AC}$ so that $\overline{DE}$ is parallel to $\overline{BC}$. If $AD:DB=2:3$ and the area of triangle $ADE$ is $20$, what is the area of quadrilateral $DBCE$?
+
+**Correct Answer:** $105$
+
+**Rationale:** $AD:AB=2:5$, so the triangles $ADE$ and $ABC$ are similar with area ratio $\dfrac{4}{25}$. The area of $ABC$ is $20\cdot\dfrac{25}{4}=125$, so the quadrilateral has area $125-20=105$.
+
+**Misconception addressed:** Students use the ratio $2:3$ for the areas ($30$ or $50$) instead of squaring $2:5$.
+
+---
+
+### GT-228
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** Two similar triangles have areas $18$ and $50$. The altitude to the longest side of the larger triangle is $15$. What is the corresponding altitude of the smaller triangle?
+
+(A) $10.8$
+(B) $5.4$
+(C) $12.5$
+(D) $9$
+
+**Correct Answer:** (D) $9$
+
+**Rationale:** The area ratio is $\dfrac{18}{50}=\dfrac{9}{25}$, so lengths are in ratio $\dfrac35$. The smaller altitude is $15\cdot\dfrac35=9$.
+
+**Misconception addressed:** Students use the area ratio $\tfrac{9}{25}$ for lengths and get $5.4$.
+
+---
+
+### GT-229
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** In triangle $ABC$, point $D$ is on $\overline{AB}$ and point $E$ is on $\overline{AC}$ with $\overline{DE}\parallel\overline{BC}$. The segment $\overline{DE}$ divides the triangle into two regions of equal area. If $AB=20$, what is the length of $\overline{AD}$, to the nearest tenth?
+
+**Correct Answer:** $14.1$
+
+**Rationale:** Triangle $ADE$ has half the area of $ABC$, so $\left(\dfrac{AD}{AB}\right)^2=\dfrac12$ and $AD=\dfrac{20}{\sqrt2}=10\sqrt2\approx14.1$.
+
+**Misconception addressed:** Students answer $10$, halving the length instead of the area.
+
+---
+
+### GT-230
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A right triangle has legs of length $6$ and $8$. A larger, similar right triangle has area $150$. What is the length of the hypotenuse of the larger triangle?
+
+**Correct Answer:** $25$
+
+**Rationale:** The smaller triangle has area $24$ and hypotenuse $10$. The area ratio is $\dfrac{150}{24}=\dfrac{25}{4}$, so the scale factor is $\dfrac52$ and the hypotenuse is $10\cdot\dfrac52=25$.
+
+**Misconception addressed:** Students use the area ratio as the scale factor ($62.5$).
+
+---
+
+### GT-231
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** A square pyramid has a base with area $144$. A plane parallel to the base cuts the pyramid at a point one-third of the way from the apex to the base, forming a smaller square cross-section. What is the area of the cross-section?
+
+**Correct Answer:** $16$
+
+**Rationale:** The cross-section is similar to the base with scale factor $\dfrac13$, so its area is $144\cdot\dfrac19=16$.
+
+**Misconception addressed:** Students use the scale factor itself ($48$) for the area.
+
+---
+
+### AM-298
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The graph of the quadratic function $f$ has vertex $(4,-8)$ and passes through the point $(0,8)$. The function $g$ is defined by $g(x)=f(2x)$. What is the value of $g(1)$?
+
+**Correct Answer:** $-4$
+
+**Rationale:** Write $f(x)=a(x-4)^2-8$. Since $f(0)=16a-8=8$, $a=1$. Then $g(1)=f(2)=(2-4)^2-8=-4$.
+
+**Misconception addressed:** Students halve the input instead of doubling it ($f(0.5)$), or substitute into the vertex form without finding $a$.
+
+---
+
+### AM-299
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The graph of $y=f(x)$ has $x$-intercepts at $x=1$ and $x=6$. The function $g$ is defined by $g(x)=f(3-x)$. What is the greatest $x$-intercept of the graph of $y=g(x)$?
+
+**Correct Answer:** $2$
+
+**Rationale:** $g(x)=0$ when $3-x=1$ or $3-x=6$, so $x=2$ or $x=-3$. The graph of $g$ is a reflection in the $y$-axis followed by a shift of $3$ units to the right, so the greatest intercept is $2$.
+
+**Misconception addressed:** Students solve $x-3=1$ and $x-3=6$ and answer $9$, or treat $3-x$ as a plain shift.
+
+---
+
+### AM-300
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The function $f$ is even, so $f(-x)=f(x)$ for every $x$. The function $g$ is defined by $g(x)=f(x)+f(-x)$. If $f(3)=7$ and $f(-5)=2$, what is the value of $g(3)+g(5)$?
+
+**Correct Answer:** $18$
+
+**Rationale:** Since $f$ is even, $g(x)=2f(x)$. Then $g(3)=14$ and $g(5)=2f(5)=2f(-5)=4$, so the sum is $18$.
+
+**Misconception addressed:** Students treat $f(-x)$ as $-f(x)$ (so $g=0$) or cannot find $f(5)$.
+
+---
+
+### AM-301
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The solutions of $x^2-5x+2=0$ are $r$ and $s$. What is the value of $\dfrac{r}{s}+\dfrac{s}{r}$?
+
+**Correct Answer:** $\dfrac{21}{2}$ (or $10.5$)
+
+**Rationale:** By Vieta, $r+s=5$ and $rs=2$. Then $\dfrac rs+\dfrac sr=\dfrac{r^2+s^2}{rs}=\dfrac{(r+s)^2-2rs}{rs}=\dfrac{25-4}{2}=\dfrac{21}{2}$.
+
+**Misconception addressed:** Students compute $\dfrac{r+s}{rs}=\dfrac52$ (the sum of reciprocals).
+
+---
+
+### AM-302
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+
+**Source:** House-authored, coverage-matched to a hard-SAT archetype in the thin skills of the gap analysis (archetype only; no source item, wording or numbers reproduced).
+
+**Question:** The polynomial $p(x)=x^3-7x^2+14x-8$ has three real zeros. What is the sum of the squares of the zeros?
+
+**Correct Answer:** $21$
+
+**Rationale:** By Vieta, the zeros add to $7$ and the sum of the pairwise products is $14$. So the sum of squares is $7^2-2(14)=21$. (Check: the zeros are $1,2,4$, and $1+4+16=21$.)
+
+**Misconception addressed:** Students answer $49$ ($7^2$) or $7$, using the sum of the zeros.
+
+---
+
 ## 3. Bank Index (for worksheet sourcing)
 
-### Bank summary (all 919 items)
+### Bank summary (all 994 items)
 
 | Domain | Skill | Medium | Hard | Total |
 |---|---|---:|---:|---:|
-| Advanced Math | Equivalent expressions | 22 | 47 | 69 |
+| Advanced Math | Equivalent expressions | 22 | 52 | 74 |
 | Advanced Math | Function notation | 0 | 2 | 2 |
-| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 25 | 48 | 73 |
-| Advanced Math | Nonlinear functions | 31 | 96 | 127 |
-| Algebra | Linear equations in one variable | 23 | 26 | 49 |
+| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 25 | 57 | 82 |
+| Advanced Math | Nonlinear functions | 32 | 114 | 146 |
+| Algebra | Linear equations in one variable | 23 | 27 | 50 |
 | Algebra | Linear equations in two variables | 22 | 34 | 56 |
 | Algebra | Linear functions | 33 | 38 | 71 |
-| Algebra | Linear inequalities in one or two variables | 22 | 27 | 49 |
+| Algebra | Linear inequalities in one or two variables | 22 | 29 | 51 |
 | Algebra | Systems of two linear equations in two variables | 29 | 46 | 75 |
 | Geometry and Trigonometry | Area and volume | 22 | 35 | 57 |
-| Geometry and Trigonometry | Circles | 25 | 44 | 69 |
-| Geometry and Trigonometry | Lines, angles, and triangles | 19 | 24 | 43 |
+| Geometry and Trigonometry | Circles | 25 | 47 | 72 |
+| Geometry and Trigonometry | Lines, angles, and triangles | 20 | 29 | 49 |
 | Geometry and Trigonometry | Right triangles and trigonometry | 23 | 30 | 53 |
-| Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | 2 | 4 | 6 |
-| Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | 7 | 5 | 12 |
+| Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | 4 | 6 | 10 |
+| Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | 8 | 10 | 18 |
 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | 5 | 15 | 20 |
-| Problem-Solving and Data Analysis | Percentages | 13 | 23 | 36 |
-| Problem-Solving and Data Analysis | Probability and conditional probability | 3 | 6 | 9 |
-| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 11 | 20 | 31 |
-| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 7 | 5 | 12 |
-| **Total** | | **344** | **575** | **919** |
+| Problem-Solving and Data Analysis | Percentages | 13 | 24 | 37 |
+| Problem-Solving and Data Analysis | Probability and conditional probability | 5 | 12 | 17 |
+| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 11 | 24 | 35 |
+| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 9 | 10 | 19 |
+| **Total** | | **353** | **641** | **994** |
 
 ### Full index
 
@@ -20076,6 +21581,12 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | GT-170 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
 | GT-171 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
 | PS-126 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-127 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Student-Produced Response |
+| PS-128 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Student-Produced Response |
+| PS-129 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Student-Produced Response |
+| PS-130 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Student-Produced Response |
+| PS-131 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Student-Produced Response |
+| PS-132 | Problem-Solving and Data Analysis | Percentages | Hard | Student-Produced Response |
 | AM-248 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
 | AM-249 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
 | GT-172 | Geometry and Trigonometry | Circles | Hard | SPR |
@@ -20092,6 +21603,24 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | A-182 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
 | A-183 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
 | AM-269 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-270 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-271 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-272 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-273 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
+| AM-274 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-275 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-276 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-277 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-278 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
+| AM-279 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Student-Produced Response |
+| AM-280 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-281 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-282 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
+| AM-283 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
+| AM-284 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-285 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-286 | Advanced Math | Nonlinear functions | Hard | Student-Produced Response |
+| AM-287 | Advanced Math | Equivalent expressions | Hard | Student-Produced Response |
 | AM-251 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
 | AM-252 | Advanced Math | Nonlinear functions | Hard | SPR |
 | AM-253 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
@@ -20221,6 +21750,9 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | GT-220 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
 | GT-221 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | SPR |
 | GT-222 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-223 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-224 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-225 | Geometry and Trigonometry | Circles | Hard | Student-Produced Response |
 | A-245 | Algebra | Linear equations in one variable | Hard | SPR |
 | A-246 | Algebra | Linear equations in one variable | Medium | SPR |
 | A-247 | Algebra | Linear equations in one variable | Medium | SPR |
@@ -20279,6 +21811,54 @@ Each item was screened against the whole bank for repeated wording, numbers and 
 | A-310 | Algebra | Linear inequalities in one or two variables | Medium | SPR |
 | A-311 | Algebra | Linear equations in two variables | Medium | SPR |
 | A-312 | Algebra | Linear equations in one variable | Hard | SPR |
+| A-313 | Algebra | Linear equations in one variable | Hard | Student-Produced Response |
+| A-314 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-315 | Algebra | Linear inequalities in one or two variables | Hard | Student-Produced Response |
+| PS-133 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-134 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-135 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-136 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-137 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Multiple Choice |
+| PS-138 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | SPR |
+| PS-139 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Medium | Multiple Choice |
+| PS-140 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Multiple Choice |
+| PS-141 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | Multiple Choice |
+| PS-142 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | Hard | SPR |
+| PS-143 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | SPR |
+| PS-144 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | SPR |
+| PS-145 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Multiple Choice |
+| PS-146 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | SPR |
+| PS-147 | Problem-Solving and Data Analysis | Probability and conditional probability | Medium | SPR |
+| PS-148 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | SPR |
+| PS-149 | Problem-Solving and Data Analysis | Probability and conditional probability | Medium | SPR |
+| PS-150 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-151 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-152 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
+| PS-153 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-154 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-155 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
+| PS-156 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
+| AM-288 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-289 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-290 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-291 | Advanced Math | Nonlinear functions | Medium | SPR |
+| AM-292 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-293 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-294 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-295 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-296 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-297 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| GT-226 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-227 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-228 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| GT-229 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-230 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-231 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| AM-298 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-299 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-300 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-301 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-302 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
 
 ---
 
