@@ -136,7 +136,7 @@ cfg.blocks.forEach((b,bi)=>{b_title=b.title;const s=slide(b.title,1,'Speaker not
  txt(s,nxt,{x:7.1,y:5.55,w:5.4,h:0.9,fontSize:15,color:'BFD8D5'});
 }
 // ---------- EXAM
-{const e=cfg.exam; const s=slide('Exam connections',null,'Speaker notes: each exam item is worked in numbered steps.\n'+e.notes);
+if(!cfg.noExam){const e=cfg.exam; const s=slide('Exam connections',null,'Speaker notes: each exam item is worked in numbered steps.\n'+e.notes);
  [['SAT','sat',C.TEAL],['GAT','gat',C.OR],['SAAT','saat',C.NAVY]].forEach(([t,k,col],i)=>{const x=0.5+i*4.15; s.addShape('roundRect',{x,y:1.4,w:3.95,h:0.6,rectRadius:0.12,fill:{color:col},line:{color:C.WHITE}}); txt(s,t,{x:x+0.25,y:1.4,w:3.4,h:0.6,fontSize:20,bold:true,color:C.WHITE,valign:'middle'});
    card(s,x,2.1,3.95,4.8); const yq=stack(s,e[k].q.map(q=>({k:K(q)})),x+1.975,2.35,1.3,3.65,1.5,0.1); lab(s,'STEPS',x+0.25,Math.max(yq+0.1,3.55),2);
    let y=Math.max(yq+0.4,3.9); const room=6.7-y; const sg=Math.min(0.95,room/e[k].steps.length);
