@@ -1,0 +1,37 @@
+import numpy as np, matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+plt.rcParams.update({"font.family":"serif","mathtext.fontset":"cm"})
+T,N,O,G,I,B="#17A199","#1F3864","#E8762C","#F0B323","#222E2D","#3B5BA9"
+def base(ax,xl,yl,xt,yt):
+    ax.set_xlim(*xl);ax.set_ylim(*yl);ax.grid(alpha=0.3,lw=0.6);ax.set_xticks(xt);ax.set_yticks(yt)
+    for s in("top","right"):ax.spines[s].set_visible(False)
+    ax.spines["left"].set_position(("data",0));ax.spines["bottom"].set_position(("data",0))
+    ax.tick_params(labelsize=8,colors=I)
+    ax.plot(1,0,">k",transform=ax.get_yaxis_transform(),clip_on=False,ms=4)
+    ax.plot(0,1,"^k",transform=ax.get_xaxis_transform(),clip_on=False,ms=4)
+def branches(ax,f,edges,lo,hi,col,lw=2.2):
+    for a,b in zip(edges[:-1],edges[1:]):
+        x=np.linspace(a+0.035,b-0.035,2000);y=f(x);y=np.where(abs(y)>60,np.nan,y);ax.plot(x,y,color=col,lw=lw)
+# deck fig: r(x)=(x-4)/((x+2)(x-1))
+fig,ax=plt.subplots(figsize=(4.1,3.1));fig.patch.set_alpha(0);ax.patch.set_alpha(0)
+r=lambda x:(x-4)/((x+2)*(x-1))
+branches(ax,r,[-7,-2,1,8],-9,9,N)
+ax.axvline(-2,color=T,lw=1.4,ls="--");ax.axvline(1,color=T,lw=1.4,ls="--")
+ax.scatter([4],[0],color=O,s=28,zorder=6)
+base(ax,(-7,8),(-8,8),[-6,4,6],[-6,-3,3,6])
+ax.text(-2.25,7.0,r"$x=-2$",color=T,fontsize=10,ha="right",va="top")
+ax.text(1.25,7.0,r"$x=1$",color=T,fontsize=10,ha="left",va="top")
+ax.text(5.3,3.2,r"$r(x)$",color=N,fontsize=10.5)
+ax.text(4,1.0,r"$(4,0)$",color=O,fontsize=9.5,ha="center")
+fig.tight_layout();fig.savefig("/home/claude/fikr_pptx/prezi/figs/AP1-9_behavior.png",dpi=300,transparent=True)
+# worksheet fig: f(x)=-3/((x+1)(x-2)^2)
+fig,ax=plt.subplots(figsize=(3.4,3.0));fig.patch.set_alpha(0);ax.patch.set_alpha(0)
+f=lambda x:-3/((x+1)*(x-2)**2)
+branches(ax,f,[-5,-1,2,6],-9,9,N)
+ax.axvline(-1,color=T,lw=1.3,ls="--");ax.axvline(2,color=T,lw=1.3,ls="--")
+base(ax,(-5,6),(-8,8),[-4,-2,4],[6])
+ax.text(-1.25,-7.2,r"$x=-1$",color=T,fontsize=9,ha="right",va="bottom")
+ax.text(2.2,7.2,r"$x=2$",color=T,fontsize=9,ha="left",va="top")
+ax.text(4.2,-2.8,r"$f$",color=N,fontsize=10)
+fig.tight_layout();fig.savefig("/home/claude/w8ap/ws19/ws19_fig.png",dpi=300,transparent=True)

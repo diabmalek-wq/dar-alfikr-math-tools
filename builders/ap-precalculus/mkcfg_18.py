@@ -1,0 +1,78 @@
+import json, os, sys
+sys.path.insert(0,"/home/claude/w8ap")
+import numpy as np, matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+os.chdir("/home/claude/fikr_pptx/prezi")
+plt.rcParams.update({"font.family":"serif","mathtext.fontset":"cm"})
+T,N,O,G,I,B="#17A199","#1F3864","#E8762C","#F0B323","#222E2D","#3B5BA9"
+# ---- figure: r(x)=(x+2)(x-1)/(x-3)
+fig,ax=plt.subplots(figsize=(4.1,3.1));fig.patch.set_alpha(0);ax.patch.set_alpha(0)
+r=lambda x:(x+2)*(x-1)/(x-3)
+x1=np.linspace(-7,2.85,400);x2=np.linspace(3.35,8,400)
+ax.plot(x1,r(x1),color=N,lw=2.2);ax.plot(x2,r(x2),color=N,lw=2.2)
+ax.axvline(3,color=O,lw=1.4,ls="--")
+ax.set_xlim(-7,8.5);ax.set_ylim(-14,26);ax.set_xticks([-6,-4,-2,1,2,4,6,8]);ax.set_xticklabels(["","","","","2","4","6","8"]);ax.set_yticks([-10,10,20])
+ax.grid(alpha=0.3,lw=0.6)
+for s in("top","right"):ax.spines[s].set_visible(False)
+ax.spines["left"].set_position(("data",0));ax.spines["bottom"].set_position(("data",0))
+ax.tick_params(labelsize=8,colors=I)
+ax.plot(1,0,">k",transform=ax.get_yaxis_transform(),clip_on=False,ms=4)
+ax.plot(0,1,"^k",transform=ax.get_xaxis_transform(),clip_on=False,ms=4)
+ax.scatter([-2,1],[0,0],color=T,s=34,zorder=6)
+ax.plot([-2,1],[0,0],color=T,lw=5,alpha=0.55,solid_capstyle="butt",zorder=5)
+ax.plot([3.12,8.3],[0,0],color=T,lw=5,alpha=0.55,solid_capstyle="butt",zorder=5)
+ax.text(3.3,-6,r"$x=3$",color=O,fontsize=10.5,va="top")
+ax.text(-6.7,-10,r"$r(x)$",color=N,fontsize=10.5)
+ax.text(-2.0,3.2,r"$-2$",color=T,fontsize=9.5,ha="center")
+ax.text(1.4,3.2,r"$1$",color=T,fontsize=9.5,ha="center")
+fig.tight_layout();fig.savefig("figs/AP1-8_signs.png",dpi=300,transparent=True)
+
+EXAM={"sat":{"q":["\\text{not used}"],"steps":["\\text{not used}"]},"gat":{"q":["\\text{not used}"],"steps":["\\text{not used}"]},"saat":{"q":["\\text{not used}"],"steps":["\\text{not used}"]},"notes":"Not used in this deck."}
+d=dict(id="AP1-8",outName="AP Precalculus Topic 1.8 Rational Functions and Zeros presentation",grade="GRADE 9-10",course="AP PRECALCULUS",topicNo="UNIT 1",lessonNo="Topic 1.8",topicTitle="Polynomial and Rational Functions",eq=None,mps=None,exam=EXAM,noExam=True,
+ titleLines=["Rational Functions","and Zeros"],titleMath="r(x)=\\dfrac{p(x)}{q(x)}=0",codes="LO 1.8.A",
+ objectives=["Determine the zeros of rational functions."],
+ vocab=["zero","rational function","numerator","denominator","domain","hole","vertical asymptote","endpoint","inequality","sign chart"],
+ standards=[{"code":"LO 1.8.A","text":"Determine the zeros of rational functions."}])
+d["diagnose"]=dict(items=["\\text{Factor }x^{2}-x-12","\\text{Domain of }\\dfrac{3}{x-2}","\\text{Sign of }\\dfrac{x-1}{x+2}\\text{ at }x=0"],
+ doneWhen="All three answers are written without a calculator, and you can say what makes a fraction undefined and what makes it zero.",
+ notes="Speaker notes (Diagnose, 6 min, no calculator).\nSolutions: Q1 x^2 - x - 12 = (x - 4)(x + 3), because -4 and 3 multiply to -12 and add to -1. Q2 the denominator x - 2 is zero when x = 2, so the domain is all real numbers except 2. Q3 at x = 0: (0 - 1)/(0 + 2) = -1/2, which is negative.\nVerbal misconceptions: 'factor pairs only need the right product' (check the sum); 'a fraction is zero when the denominator is zero' (that makes it undefined); 'the sign is positive because the numbers look small'.\nAdaptive routing: if more than 30% miss Q1, route to slide 5 (factor first). If more than 30% miss Q2, route to slide 5 Example B (the domain decides). If more than 30% miss Q3, route to slide 7 (sign charts).")
+d["blocks"]=[
+ dict(title="Zeros of a rational function",rules=["r(x)=\\dfrac{p(x)}{q(x)}","r(a)=0\\iff p(a)=0\\text{ and }q(a)\\ne0"],
+  examples=[dict(q="r(x)=\\dfrac{(x-2)(x+3)}{(x+1)(x-4)}",steps=["p(x)=0\\Rightarrow x=2,\\ x=-3","q(2)=-6\\ne0,\\ q(-3)=14\\ne0","\\text{zeros: }x=-3,\\ x=2"]),
+            dict(q="r(x)=\\dfrac{x^{2}-x-12}{x^{2}-16}",steps=["r(x)=\\dfrac{(x-4)(x+3)}{(x-4)(x+4)}","q(4)=0:\\ x=4\\text{ is not in the domain}","\\text{zero: }x=-3\\text{ only}"]),
+            dict(q="r(x)=\\dfrac{x^{3}-4x}{x^{2}+1}",steps=["x(x-2)(x+2)=0","x^{2}+1\\ne0\\text{ for every real }x","\\text{zeros: }x=-2,\\ 0,\\ 2"])],fig=None,
+  notes="Speaker notes (Targeted Instruction, block 1 of 3, LO 1.8.A). Source: AP Precalculus Course and Exam Description (College Board), read via web fetch. EK 1.8.A.1: 'The real zeros of a rational function correspond to the real zeros of the numerator for such values in its domain.'\nWorked solutions: Example A: the numerator (x - 2)(x + 3) is zero at x = 2 and x = -3. The denominator at x = 2 is (3)(-2) = -6, and at x = -3 it is (-2)(-7) = 14, so neither value is excluded: zeros -3 and 2. Example B: x^2 - x - 12 = (x - 4)(x + 3) and x^2 - 16 = (x - 4)(x + 4). The numerator is zero at x = 4 and x = -3, but the denominator is also zero at x = 4, so 4 is not in the domain and is not a zero; the graph has a hole at (4, 7/8). The only zero is x = -3. Example C: x^3 - 4x = x(x^2 - 4) = x(x - 2)(x + 2). The denominator x^2 + 1 is at least 1, so it is never zero and all three numerator zeros count: -2, 0, 2.\nVerbal misconceptions: 'every zero of the numerator is a zero of the function' (check the domain); 'a zero of the denominator is a zero of the function'; 'a denominator with no real zeros means no zeros at all'.\nAdaptive routing: if more than 30% miss Gate Q1, return to this slide and redo Example B aloud, stating the domain before the zeros."),
+ dict(title="Rewrite first, then find the zeros",rules=["\\text{Write one fraction }\\dfrac{p(x)}{q(x)}","\\text{Zeros: }p(x)=0\\text{ and }q(x)\\ne0"],
+  examples=[dict(q="r(x)=\\dfrac{2}{x-1}-\\dfrac{3}{x+2}",steps=["r(x)=\\dfrac{2(x+2)-3(x-1)}{(x-1)(x+2)}","r(x)=\\dfrac{7-x}{(x-1)(x+2)}","7-x=0\\Rightarrow x=7"]),
+            dict(q="r(x)=x-\\dfrac{6}{x-1}",steps=["r(x)=\\dfrac{x^{2}-x-6}{x-1}","r(x)=\\dfrac{(x-3)(x+2)}{x-1}","\\text{zeros: }x=-2,\\ x=3"]),
+            dict(q="r(x)=\\dfrac{(x-1)^{2}(x+4)}{x-1}",steps=["p(x)=0\\Rightarrow x=1,\\ x=-4","q(1)=0:\\ x=1\\text{ is not in the domain}","\\text{zero: }x=-4\\text{; hole at }(1,0)"])],fig=None,
+  notes="Speaker notes (Targeted Instruction, block 2 of 3, LO 1.8.A). Zeros are read from the numerator of a single fraction, so a sum or difference must be combined first (EK 1.8.A.1).\nWorked solutions: Example A: common denominator (x - 1)(x + 2): 2(x + 2) - 3(x - 1) = 2x + 4 - 3x + 3 = 7 - x. The numerator is zero at x = 7, and the denominator there is (6)(9) = 54, not zero, so the zero is x = 7. Check: 2/6 - 3/9 = 1/3 - 1/3 = 0. Example B: x - 6/(x - 1) = (x(x - 1) - 6)/(x - 1) = (x^2 - x - 6)/(x - 1) = (x - 3)(x + 2)/(x - 1). The numerator is zero at 3 and -2, and the denominator is -2 at x = 3 and -3 at x = -2, so both are zeros. Check: r(3) = 3 - 6/2 = 0; r(-2) = -2 - 6/(-3) = 0. Example C: the numerator (x - 1)^2 (x + 4) is zero at x = 1 and x = -4, but r is undefined at x = 1 because the denominator is zero. So x = 1 is not in the domain and not a zero; the simplified form (x - 1)(x + 4) shows the graph passes through (1, 0) with an open circle there (a hole on the x-axis). The only zero is x = -4.\nVerbal misconceptions: 'set each fraction equal to zero separately'; 'subtract the numerators 2 - 3 and ignore the denominators'; 'a hole on the x-axis is still a zero'.\nAdaptive routing: if more than 30% miss Gate Q2, return to this slide and redo Example A, writing the common denominator first. If students list x = 1 in Example C, return to slide 5 Example B."),
+ dict(title="Sign charts and inequalities",rules=["\\text{Boundaries: zeros of }p\\text{ and of }q","\\text{Test one value in each interval}"],
+  examples=[dict(q="\\dfrac{(x+2)(x-1)}{x-3}\\ge0",steps=["\\text{boundaries: }-2,\\ 1,\\ 3","\\text{signs: }-\\ \\ +\\ \\ -\\ \\ +","[-2,1]\\cup(3,\\infty)"]),
+            dict(q="\\dfrac{(x-1)(x+3)}{(x-1)(x-2)}\\le0",steps=["\\dfrac{x+3}{x-2}\\le0,\\ x\\ne1,\\ x\\ne2","\\text{signs: }+\\ \\ -\\ \\ +","[-3,1)\\cup(1,2)"])],
+  fig=dict(file="figs/AP1-8_signs.png",w=1230,h=930),
+  notes="Speaker notes (Targeted Instruction, block 3 of 3, LO 1.8.A). EK 1.8.A.2 as printed in the CED text I could fetch (partly garbled, check against the CED PDF): 'The real zeros of both polynomial functions of a rational function r are endpoints or asymptotes for intervals satisfying the rational function inequalities r(x) >= 0 or r(x) <= 0.' The sentence appears to refer to the numerator and denominator.\nWorked solutions: Example A (graph on the slide): boundaries are the numerator zeros -2 and 1 and the denominator zero 3. Test x = -3: (-1)(-4)/(-6) = -2/3, negative. Test x = 0: (2)(-1)/(-3) = 2/3, positive. Test x = 2: (4)(1)/(-1) = -4, negative. Test x = 4: (6)(3)/1 = 18, positive. r(x) >= 0 on [-2, 1] (zeros included, closed) and on (3, infinity) (x = 3 is a vertical asymptote, never included). Example B: cancel x - 1 but keep x not equal to 1. Then (x + 3)/(x - 2) <= 0: test x = -4: (-1)/(-6) positive; x = 0: 3/(-2) negative; x = 3: 6/1 positive. So -3 <= x < 2, and x = 1 is removed because r(1) is undefined: [-3, 1) union (1, 2).\nVerbal misconceptions: 'include the endpoint where the denominator is zero'; 'the sign alternates at every boundary' (it does not change across a hole, and an even-multiplicity zero keeps the sign); 'cancelled factors can be forgotten when writing the answer'.\nAdaptive routing: if more than 30% miss Gate Q3, return to this slide and rebuild the sign chart for Example A on the board. If students include x = 3 in Example A, remind them that the denominator is zero there."),
+]
+d["practice"]=dict(
+ practice=dict(items=["r(x)=\\dfrac{x^{2}-3x}{x^{2}-9}"],done="Done when: you factor both parts, state every real zero, and say what happens at the other zero of the numerator."),
+ apply=dict(items=["h(t)=\\dfrac{3t-12}{t+2},\\ t\\ge0"],done="Done when: you find when h is zero and state the sign of h before that time using a test value."),
+ investigate=dict(items=["\\begin{array}{c}\\text{Why is }x=2\\text{ not a zero of}\\\\ r(x)=\\dfrac{x^{2}-4}{x-2}\\ ?\\end{array}"],done="Done when: your explanation names the domain, gives the actual zero, and gives the coordinates of the hole."),
+ notes="Speaker notes (Practice, 12 min; tierless: students choose the starting column and may move across).\nAnswers: Practice: x^2 - 3x = x(x - 3) and x^2 - 9 = (x - 3)(x + 3), so r(x) = x/(x + 3) with x not equal to 3. The numerator is zero at x = 0 and x = 3; x = 3 is not in the domain (hole at (3, 1/2)), so the only zero is x = 0. Apply: 3t - 12 = 0 gives t = 4, and the denominator is 6 there, so h(4) = 0. At t = 0: h(0) = -12/2 = -6, negative, and the sign does not change before t = 4, so h is negative on 0 <= t < 4. Investigate: (x^2 - 4)/(x - 2) = (x - 2)(x + 2)/(x - 2); the denominator is zero at x = 2, so 2 is not in the domain; the actual zero is x = -2, and the graph is the line y = x + 2 with a hole at (2, 4).\nUse 'done when' as a prompt in the 'Apply' column: ask what the zero of h means in a story you invent.\nVerbal misconceptions: 'if the numerator is zero the function is zero'; 'cancelling removes the problem at x = 3'.\nAdaptive routing: finished students move to Apply then Investigate; stuck students return to slide 5 Example B.")
+d["production"]=dict(title="break-even at a tile studio in Lisbon",
+ context="A tile studio in Lisbon sells hand-painted tile sets. The model gives the average profit per set, in euros, when x sets are sold in a week, after the studio's weekly fixed costs are spread over the sets. All numbers are model values for practice, not real accounts.",
+ given=["A(x)=\\dfrac{8(x-15)}{x+5}","x\\ge1"],
+ tasks=["Find the zero of A and say what it means for the studio.","Use a sign chart to state when the average profit per set is negative and when it is positive.","Find how many sets give an average profit of exactly 4 euros per set."],
+ doneWhen=["The zero is found from the numerator and checked against the domain.","The sign chart shows a test value for each interval.","Both the negative and positive intervals are written as inequalities.","The equation for 4 euros is solved and the answer checked in A."],
+ hint="Hint: the denominator is positive for every x in the domain, so the sign of A comes from the numerator alone.",
+ notes="Speaker notes (Production, 12 min).\nSolutions: Task 1: 8(x - 15) = 0 gives x = 15; the denominator is 20 there, so x = 15 is a zero. At 15 sets per week the average profit per set is zero euros: the studio breaks even. Task 2: the only boundary inside x >= 1 is 15 (x = -5 is outside the domain of the context). Test x = 1: 8(-14)/6 = -56/3, about -18.67, negative. Test x = 20: 8(5)/25 = 1.6, positive. So A(x) < 0 for 1 <= x < 15 and A(x) > 0 for x > 15. Task 3: 8(x - 15)/(x + 5) = 4 gives 8x - 120 = 4x + 20, so 4x = 140 and x = 35. Check: 8(20)/40 = 4.\nVerbal misconceptions: 'the zero of the denominator, x = -5, is also a break-even point'; 'multiplying through by x + 5 can change the answer' (it is allowed because x + 5 is not zero); 'negative profit means the studio should stop' (the model shows the loss shrinking as sales grow).\nAdaptive routing: if students cannot start, send them to slide 5 Example A and the hint. If Task 2 stalls, send them to slide 7 Example A.")
+d["gate"]=dict(items=["\\text{Zeros of }r(x)=\\dfrac{x^{2}-5x+6}{x-2}","\\text{Zeros of }r(x)=\\dfrac{2}{x-1}-\\dfrac{3}{x+1}","\\text{Solve }\\dfrac{x-1}{x+2}\\ge0"],
+ notes="Speaker notes (Mastery Gate, 6 min, no calculator).\nAnswers: Q1 x^2 - 5x + 6 = (x - 2)(x - 3); the numerator is zero at 2 and 3, but x = 2 makes the denominator zero, so the only zero is x = 3 (hole at (2, -1)). Q2 combine: (2(x + 1) - 3(x - 1))/((x - 1)(x + 1)) = (5 - x)/((x - 1)(x + 1)); the zero is x = 5. Q3 boundaries -2 and 1; test x = -3: (-4)/(-1) = 4, positive; x = 0: -1/2, negative; x = 2: 1/4, positive. Solution (-infinity, -2) union [1, infinity).\nVerbal misconceptions: Q1 'zeros are 2 and 3'; Q2 'the zero is where each fraction is zero' or 'x = 1 and x = -1'; Q3 'include -2' or 'answer [-2, 1]'.\nAdaptive routing: Q1 missed, route to slide 5 Example B; Q2 missed, route to slide 6 Example A; Q3 missed, route to slide 7 Example A.")
+d["smart"]=dict(create=["Write a rational function in factored form with zeros at x equal to negative 2 and 5, a hole where x is 1, and a vertical asymptote where x is negative 3.","Expand nothing: write the domain and the list of zeros directly from the factored form.","Swap with a partner: they check the zeros against the domain and find the hole."],
+ createDone="Done when: your partner confirms the two zeros, the hole and the asymptote from the factored form.",
+ exitIntro="Exit ticket: write your answer on a sticky note and place it on the door.",exit=["\\text{Zeros of }\\dfrac{x^{2}-4x}{x^{2}-16}"],
+ next="Next lesson: Topic 1.9 Rational Functions and Vertical Asymptotes.",
+ notes="Speaker notes (Smart Production, 6 min).\nCreate example: r(x) = (x + 2)(x - 5)(x - 1)/((x - 1)(x + 3)): zeros -2 and 5, hole at x = 1 (value (3)(-4)/(4) = -3, so the hole is (1, -3)), asymptote x = -3. Exit answer: x(x - 4)/((x - 4)(x + 4)); the numerator is zero at 0 and 4, but 4 is not in the domain (hole at (4, 1/2)); the only zero is x = 0.\nVerbal misconceptions: students list 0 and 4; ask: is r(4) defined?")
+d["recap"]="A zero of a rational function is a zero of the numerator that is also in the domain, and the zeros of the numerator and denominator are the boundaries when solving a rational inequality."
+json.dump(d,open("/home/claude/fikr_pptx/prezi/cfg/AP1-8.json","w"),indent=1,ensure_ascii=False)
+print("ok")
