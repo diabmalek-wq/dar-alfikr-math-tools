@@ -70,7 +70,7 @@ To add a lesson: write builders/lessons/prezi/cfg/ID.json (see _example_L2-4_abr
 
 ## Standing rule: Mawhiba deliverables
 
-For every Mawhiba (Grade 9) task, deliver only two files: the PowerPoint (.pptx) and the activity worksheet (PDF). No pre-session decks, sheets, notes PDFs, plans or other extras unless asked.
+For every Mawhiba (Grade 9) task, deliver only two files: the PowerPoint (.pptx, maximum 8 slides) and the activity worksheet (PDF, maximum 3 pages). No pre-session decks, sheets, notes PDFs, plans or other extras unless asked. A weekly session is 40 minutes. The thinking approaches below apply.
 
 ## Quality and efficiency (working lessons, 11 Oct 2026)
 
@@ -80,3 +80,18 @@ For every Mawhiba (Grade 9) task, deliver only two files: the PowerPoint (.pptx)
 - Token-light: read only the section or file needed (grep or targeted reads), keep banks and plans as compact tables or CSV, and send finished files once rather than drafts.
 - Keep memory, project docs and this README updated together at the end of a work block, with counts (bank size, session numbers) that match.
 - Pushing from the cloud session is blocked: update the repo by uploading through Chrome. Deleting files is done by the owner on GitHub, not by the session.
+
+## Standing rule: thinking approaches in all materials (from 19 Oct 2026)
+
+Applies to every future task: Mawhiba, Grade 10 and Grade 11 core decks and route PDFs, pre-session materials, SAT sessions and worksheets, and any new lesson package. Build these four approaches into the content, but NEVER print the words critical, creative, fluency or original (as skill labels) in a slide, speaker note or PDF. Mathematical uses of "original equation" are avoided too: write "starting equation". Quoted standards are the only exception.
+
+| Approach | How it shows up (labels the students see) |
+|---|---|
+| Compare and judge | Side-by-side route cards with a plus and a minus each; a "Judge the claim" card with TRUE / FALSE / SOMETIMES and a "Check the assumption" callout; students must give a counterexample for FALSE. |
+| Ask What if...? | A gold "What if...?" strip on key example slides, on the production slide and in the Smart Production step; students predict first, then test. Answers and routing go in the speaker notes. |
+| Many ideas fast | Multi-card grids (six short cards) in the Practice and route sheets; one concept, many quick tasks. Practice / Apply / Investigate with a "Done when" line (no tier names). |
+| Spotlight | A gold "Spotlight" card for a shortcut, an insight or the student's own idea ("An idea that is my own" on the route sheet). |
+
+Size limits: Mawhiba 8 slides and 3 PDF pages; core (Grade 10 and 11) 12 to 15 slides and a 3-page "Choose Your Route" PDF (page 1 Practice cards, working box and Find the error; page 2 Apply, Investigate and Spotlight; page 3 compare routes, judge claims, What if...? and Done when). Pre-session and SAT materials keep their existing page limits and use the same four approaches where they fit; SAT stays in authentic international style (no Saudi contexts).
+
+Build notes: the compare slide, What if...? strips and `hideStd` option are in the cloud workspace engine `fikr_pptx/prezi/engine2.js` (engine.js plus these blocks; configs use `compare`, `blocks[].whatif`/`whatifM`, `production.whatif`); route PDFs come from `core8/build_core8.py` and `core9/build_core9.py`. Verify every answer by script and check the slide and PDF text for the banned words before delivering. Weeks 8 core and Mawhiba, and Lessons 2-5 and 6-6, were rebuilt this way and replaced in place on Drive.
