@@ -5,7 +5,7 @@
 **Teacher of Record:** Mr. Malek Thiab
 **Scope:** Grades 10–11 SAT preparation (Algebra II Semester 1)
 **Difficulty:** Medium and Hard only (no Easy items, per weekly work order)
-**Item count:** 1078 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36 + 10 web-research Hard archetypes §2.37 + 20 web-research Hard archetypes (second sweep) §2.38 + 45 gap-closing §2.39 + 84 Trick Pack 2 web-research items §2.40; the earlier header total of 491 was one short of the 492 items actually present)
+**Item count:** 1146 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36 + 10 web-research Hard archetypes §2.37 + 20 web-research Hard archetypes (second sweep) §2.38 + 45 gap-closing §2.39 + 84 Trick Pack 2 web-research items §2.40 + 68 Trick Pack 3 web-research items §2.41; the earlier header total of 491 was one short of the 492 items actually present)
 **Status:** Complete — §2.38 adds 20 Hard items from a wider web sweep (horizontal-line count, equal outputs, root difference, Vieta cubic, substitution, quotient table, restricted-domain exponential, identities, composition through a maximum, average rate of change, complex product, circle transformation, inscribed equilateral triangle, area proportionality, gear chain, percent system, point-set and net-of-fees inequalities); §2.37 adds 10 Hard items (periodic functions, cubic root counting, complex division, three-solution absolute value, circle tangency from general form, inverse-square scaling, conditional probability, rate-times-time percent change, extraneous absolute-value root) from archetypes found on public prep pages and missing from the bank; §2.35 was screened for repeated tricks and 10 near-duplicates (A-249, A-250, A-256, A-259, A-271, A-272, A-287, A-290, A-291, A-292) were removed; §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
 
 ---
@@ -22703,33 +22703,1649 @@ Built 21 Oct 2026 from a five-agent web sweep of sources not used before: Bluebo
 
 ---
 
+### 2.41 Web Research Batch 4 — Trick Pack 3 (68 items — A-337 to A-342, AM-322 to AM-331, GT-258 to GT-274, PS-176 to PS-210)
+
+Built 21 Oct 2026 from a fourth web sweep aimed at the gaps in the bank evaluation (Hard Percentages, Right triangles and trigonometry, One-variable data, Evaluating statistical claims) plus Algebra and Advanced Math. Sources not used before: admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions. About 72 candidates were screened against the 1,078-item bank; 68 were kept. Archetype only; no source item, wording or numbers reproduced. Every answer was checked by script and re-solved by an independent check; the batch was screened again with dedupe.py. Mostly multiple choice (to rebalance the SPR share), and each item states its tool.
+
+### A-337
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The solution to the system $ax+by=31$ and $bx+ay=19$, where $a$ and $b$ are constants, is $(4,1)$. What is the value of $a^2-b^2$?
+
+(A) $16$
+(B) $40$
+(C) $10$
+(D) $58$
+
+**Correct Answer:** (B) $40$
+
+**Rationale:** $4a+b=31$ and $a+4b=19$. Adding: $5a+5b=50$, so $a+b=10$. Subtracting: $3a-3b=12$, so $a-b=4$. $a^2-b^2=(a+b)(a-b)=40$ ($a=7$, $b=3$).
+
+**Misconception addressed:** Students report $a+b=10$, $(a-b)^2=16$ or $a^2+b^2=58$.
+
+---
+
+### A-338
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, the graph of $3x-ky=12$, where $k$ is a nonzero constant, has an $x$-intercept equal to its $y$-intercept. What is the value of $k$?
+
+(A) $-4$
+(B) $3$
+(C) $4$
+(D) $-3$
+
+**Correct Answer:** (D) $-3$
+
+**Rationale:** $x$-intercept: $3x=12$, $x=4$. $y$-intercept: $-ky=12$, $y=-\dfrac{12}{k}$. Set $-\dfrac{12}{k}=4$: $k=-3$.
+
+**Misconception addressed:** Students drop the negative sign in $-ky$ and get $k=3$.
+
+---
+
+### A-339
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For every real number $m$, the graph of $y=mx+3m-2$ in the $xy$-plane passes through the point $P$. What are the coordinates of $P$?
+
+(A) $(-3,-2)$
+(B) $(0,-2)$
+(C) $(3,-2)$
+(D) $(-2,3)$
+
+**Correct Answer:** (A) $(-3,-2)$
+
+**Rationale:** Rewrite: $y+2=m(x+3)$. This holds for every $m$ only when $x+3=0$ and $y+2=0$, so $P=(-3,-2)$.
+
+**Misconception addressed:** Students test only $m=0$ and pick $(0,-2)$, or make a sign error.
+
+---
+
+### A-340
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A cafe sells juice for $4$ dollars each and sandwiches for $7$ dollars each. A customer spends exactly $112$ dollars and buys at least one juice and at least one sandwich. How many different combinations of juices and sandwiches are possible?
+
+(A) $5$
+(B) $4$
+(C) $3$
+(D) $28$
+
+**Correct Answer:** (C) $3$
+
+**Rationale:** $4x+7y=112$ with $x,y\ge1$ integers. $4x=112-7y$ needs $y$ to be a multiple of $4$: $y=4,x=21$; $y=8,x=14$; $y=12,x=7$ ($y=16$ gives $x=0$, not allowed). $3$ combinations.
+
+**Misconception addressed:** Students include $(28,0)$ or $(0,16)$ (answers $4$ or $5$) or divide $112$ by $4$.
+
+---
+
+### A-341
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Which inequality has the solution set $x\le-3$ or $x\ge11$?
+
+(A) $|x+4|\ge7$
+(B) $|x-4|\le7$
+(C) $|x-4|\ge7$
+(D) $|x-7|\ge4$
+
+**Correct Answer:** (C) $|x-4|\ge7$
+
+**Rationale:** The centre of $-3$ and $11$ is $4$ and the distance to each is $7$; the solutions lie outside: $|x-4|\ge7$.
+
+**Misconception addressed:** Students reverse the inequality, flip the sign of the centre, or swap centre and distance.
+
+---
+
+### A-342
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For how many integer values of $k$ does the point $(k,k)$ satisfy both $y\ge2x-5$ and $y>-x+1$?
+
+(A) $5$
+(B) $4$
+(C) Infinitely many
+(D) $6$
+
+**Correct Answer:** (A) $5$
+
+**Rationale:** $k\ge2k-5\Rightarrow k\le5$. $k>-k+1\Rightarrow k>\tfrac12$. Integers $1,2,3,4,5$: $5$ values.
+
+**Misconception addressed:** Students treat $\ge$ as $>$ (getting $4$) or use only one inequality.
+
+---
+
+### AM-322
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $\dfrac{ax}{x-2}=3+\dfrac{4}{x-2}$, $a$ is a constant. For which values of $a$ does the equation have no solution?
+
+(A) $3$ and $4$ only
+(B) $3$ only
+(C) $2$ only
+(D) $2$ and $3$ only
+
+**Correct Answer:** (D) $2$ and $3$ only
+
+**Rationale:** Multiply by $x-2$: $ax=3(x-2)+4$, so $(a-3)x=-2$. If $a=3$: $0=-2$, no solution. Otherwise $x=\dfrac{-2}{a-3}$, which is extraneous when it equals $2$: $a-3=-1$, $a=2$. So $a=2$ and $a=3$.
+
+**Misconception addressed:** Students find only the coefficient case ($a=3$) and forget the extraneous-root case.
+
+---
+
+### AM-323
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is defined by $f(x)=3x^2-5x+2$. Which expression is equivalent to $f(a+1)-f(a)$?
+
+(A) $0$
+(B) $6a-2$
+(C) $6a+3$
+(D) $6a+8$
+
+**Correct Answer:** (B) $6a-2$
+
+**Rationale:** $f(a+1)=3(a+1)^2-5(a+1)+2=3a^2+a$. $f(a)=3a^2-5a+2$. Difference: $6a-2$.
+
+**Misconception addressed:** Students assume $f(a+1)=f(a)+f(1)$, giving $0$ because $f(1)=0$, or drop the linear term.
+
+---
+
+### AM-324
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For how many integer values of $b$ does the equation $x^2+bx+36=0$ have two distinct integer solutions?
+
+**Correct Answer:** $8$
+
+**Rationale:** The roots $p,q$ satisfy $pq=36$ and $b=-(p+q)$. Distinct factor pairs: $(1,36),(2,18),(3,12),(4,9)$ and their negatives, giving $b=\pm37,\pm20,\pm15,\pm13$: $8$ values. $(6,6)$ is a repeated root.
+
+**Misconception addressed:** Students count positive $b$ only ($4$) or include $b=\pm12$ ($10$).
+
+---
+
+### AM-325
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The equations $x^2-x-12=0$ and $x^2+kx+8=0$ have a common solution, where $k$ is a positive constant. What is the value of $k$?
+
+(A) $-6$
+(B) $\dfrac{17}{3}$
+(C) $-\dfrac{17}{3}$
+(D) $6$
+
+**Correct Answer:** (B) $\dfrac{17}{3}$
+
+**Rationale:** $x^2-x-12=(x-4)(x+3)$. Common root $4$: $16+4k+8=0$, $k=-6$ (not positive). Common root $-3$: $9-3k+8=0$, $k=\tfrac{17}{3}$.
+
+**Misconception addressed:** Students test only the first root and answer $-6$, or ignore the condition $k>0$.
+
+---
+
+### AM-326
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** What is the sum of all distinct real solutions of $x^3-2x^2-15x+36=0$?
+
+(A) $2$
+(B) $7$
+(C) $-2$
+(D) $-1$
+
+**Correct Answer:** (D) $-1$
+
+**Rationale:** $x^3-2x^2-15x+36=(x-3)^2(x+4)$. The distinct solutions are $3$ and $-4$; sum $=-1$. (Vieta's sum, $2$, counts the double root twice.) Desmos: the graph touches the $x$-axis at $3$ and crosses at $-4$.
+
+**Misconception addressed:** Students use the sum of roots from the coefficients ($2$) without checking for a repeated root.
+
+---
+
+### AM-327
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** What is the solution set of the equation $2x^{2/3}-3=15$?
+
+(A) $\{-27,27\}$
+(B) $\{27\}$
+(C) $\{-9^{2/3},9^{2/3}\}$
+(D) $\{-6,6\}$
+
+**Correct Answer:** (A) $\{-27,27\}$
+
+**Rationale:** $x^{2/3}=9\Rightarrow\left(x^{1/3}\right)^2=9\Rightarrow x^{1/3}=\pm3\Rightarrow x=\pm27$. Check: $(-27)^{2/3}=\left((-27)^{1/3}\right)^2=9$.
+
+**Misconception addressed:** Students keep only the positive root, or invert the exponent the wrong way.
+
+---
+
+### AM-328
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The functions $f$ and $g$ are defined by $f(x)=7\cdot4^x$ and $g(x)=f(x-1.5)$. For all values of $x$, $g(x)=k\cdot f(x)$, where $k$ is a constant. What is the value of $k$?
+
+(A) $-6$
+(B) $\dfrac78$
+(C) $\dfrac18$
+(D) $8$
+
+**Correct Answer:** (C) $\dfrac18$
+
+**Rationale:** $g(x)=7\cdot4^{x-1.5}=7\cdot4^x\cdot4^{-1.5}=f(x)\cdot\dfrac18$. So $k=\dfrac18$.
+
+**Misconception addressed:** Students shift in the wrong direction ($k=8$) or subtract $1.5$ from the base.
+
+---
+
+### AM-329
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is defined by $f(x)=2(x-1)(x-7)$. For what value of $k$ does the graph of $y=f(x)+k$ have exactly one $x$-intercept?
+
+(A) $9$
+(B) $14$
+(C) $18$
+(D) $-18$
+
+**Correct Answer:** (C) $18$
+
+**Rationale:** The vertex is midway between the zeros, at $x=4$: $f(4)=2(3)(-3)=-18$. Shifting up by $18$ makes the vertex touch the $x$-axis: $k=18$.
+
+**Misconception addressed:** Students answer the minimum value $-18$, or forget the leading coefficient ($9$).
+
+---
+
+### AM-330
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $g$ is defined by $g(x)=3^x$. If $g(a)=4$, what is the value of $g(2a-1)$?
+
+(A) $\dfrac{16}{3}$
+(B) $15$
+(C) $\dfrac83$
+(D) $7$
+
+**Correct Answer:** (A) $\dfrac{16}{3}$
+
+**Rationale:** $g(2a-1)=3^{2a-1}=\dfrac{(3^a)^2}{3}=\dfrac{16}{3}$.
+
+**Misconception addressed:** Students apply the input operations to the output ($2\cdot4-1=7$) or compute $4^2-1$.
+
+---
+
+### AM-331
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** If $2a-3b=7$, what is the value of $\dfrac{4^a}{8^b}$?
+
+(A) $\dfrac{1}{128}$
+(B) $2^{14}$
+(C) $7$
+(D) $128$
+
+**Correct Answer:** (D) $128$
+
+**Rationale:** $\dfrac{4^a}{8^b}=\dfrac{2^{2a}}{2^{3b}}=2^{2a-3b}=2^7=128$.
+
+**Misconception addressed:** Students answer $7$, or subtract the exponents in the wrong order.
+
+---
+
+### GT-258
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Right triangles $PQR$ and $XYZ$ are similar, with $P$, $Q$ and $R$ corresponding to $X$, $Y$ and $Z$, and right angles at $Q$ and $Y$. If $\tan P=\dfrac{8}{15}$ and $XZ=51$, what is the length of $\overline{XY}$?
+
+(A) $27.2$
+(B) $45$
+(C) $24$
+(D) $95.625$
+
+**Correct Answer:** (B) $45$
+
+**Rationale:** $\tan X=\tan P=\dfrac{8}{15}=\dfrac{YZ}{XY}$, so the sides are $8k$, $15k$ and hypotenuse $17k$. $17k=51$, $k=3$, $XY=15k=45$.
+
+**Misconception addressed:** Students give the opposite side ($24$) or multiply the hypotenuse by the tangent ($27.2$) or divide by it ($95.625$).
+
+---
+
+### GT-259
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $ABC$, $AB=AC=17$ and $BC=16$. What is the value of $\tan B$?
+
+(A) $\dfrac{8}{15}$
+(B) $\dfrac{15}{8}$
+(C) $\dfrac{15}{17}$
+(D) $\dfrac{16}{17}$
+
+**Correct Answer:** (B) $\dfrac{15}{8}$
+
+**Rationale:** The altitude from $A$ bisects $\overline{BC}$: half-base $8$, altitude $\sqrt{17^2-8^2}=15$. $\tan B=\dfrac{15}{8}$.
+
+**Misconception addressed:** Students use the whole base, flip the ratio, or give $\sin B$.
+
+---
+
+### GT-260
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A rectangular box has a base that measures $9$ by $12$ and a height of $20$. Let $\theta$ be the angle between a diagonal of the box (from a bottom corner to the opposite top corner) and the base. What is the value of $\tan\theta$?
+
+(A) $\dfrac{20}{9}$
+(B) $\dfrac53$
+(C) $\dfrac34$
+(D) $\dfrac43$
+
+**Correct Answer:** (D) $\dfrac43$
+
+**Rationale:** The diagonal's projection on the base is the base diagonal, $\sqrt{9^2+12^2}=15$. $\tan\theta=\dfrac{20}{15}=\dfrac43$.
+
+**Misconception addressed:** Students use one base edge ($9$ or $12$) instead of the base diagonal, or flip the ratio.
+
+---
+
+### GT-261
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In right triangle $ABC$, angle $C$ is the right angle and $\cos A=k$. Which expression is equal to $\sin^2A+\sin^2B$?
+
+(A) $1$
+(B) The value cannot be determined from the information given.
+(C) $2-2k^2$
+(D) $2k^2$
+
+**Correct Answer:** (A) $1$
+
+**Rationale:** $A$ and $B$ are complementary, so $\sin B=\cos A$. $\sin^2A+\sin^2B=\sin^2A+\cos^2A=1$.
+
+**Misconception addressed:** Students think the value depends on $k$ or cannot be found.
+
+---
+
+### GT-262
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Right triangle $ABC$ has its right angle at $C$, $AC=9$ and $BC=12$. Each leg is lengthened by $3$ and the angle at $C$ stays a right angle. What is $\tan A$ in the new triangle?
+
+(A) $\dfrac45$
+(B) $\dfrac43$
+(C) $\dfrac54$
+(D) $\dfrac53$
+
+**Correct Answer:** (C) $\dfrac54$
+
+**Rationale:** New legs: $AC=12$, $BC=15$. $\tan A=\dfrac{BC}{AC}=\dfrac{15}{12}=\dfrac54$. Adding the same amount to each leg does not keep the triangle similar, so the ratio changes from $\dfrac43$.
+
+**Misconception addressed:** Students assume the trig ratio is unchanged ($\tfrac43$).
+
+---
+
+### GT-263
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A straight railway track up a hill has a constant grade of $75\%$, meaning it rises $75$ meters for every $100$ meters of horizontal distance. The track is $300$ meters long, measured along the slope. What is the vertical rise of the track, in meters?
+
+(A) $400$
+(B) $240$
+(C) $180$
+(D) $225$
+
+**Correct Answer:** (C) $180$
+
+**Rationale:** Grade is $\tan\theta=\dfrac34$, so the sides are in ratio $3:4:5$ and $\sin\theta=\dfrac35$. Rise $=300\cdot\dfrac35=180$.
+
+**Misconception addressed:** Students treat the grade as the sine ($300\cdot0.75=225$) or give the horizontal run ($240$).
+
+---
+
+### GT-264
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A drone flies $12$ kilometers in a direction $60^\circ$ north of east, then flies $12$ kilometers due west. How far, in kilometers, is the drone from its starting point?
+
+(A) $12$
+(B) $24$
+(C) $12\sqrt2$
+(D) $6\sqrt3$
+
+**Correct Answer:** (A) $12$
+
+**Rationale:** First leg ends at $(12\cos60^\circ,12\sin60^\circ)=(6,6\sqrt3)$. After moving $12$ west: $(-6,6\sqrt3)$. Distance $=\sqrt{36+108}=12$.
+
+**Misconception addressed:** Students assume the legs are perpendicular ($12\sqrt2$) or add them ($24$).
+
+---
+
+### GT-265
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $ABC$, the measure of angle $B$ is $45^\circ$ and the measure of angle $C$ is $30^\circ$. The altitude from $A$ to $\overline{BC}$ has length $6$. What is the length of $\overline{BC}$?
+
+(A) $12$
+(B) $6+2\sqrt3$
+(C) $12+6\sqrt2$
+(D) $6+6\sqrt3$
+
+**Correct Answer:** (D) $6+6\sqrt3$
+
+**Rationale:** The altitude meets $\overline{BC}$ at $D$. In the $45^\circ$ triangle, $BD=6$. In the $30^\circ$ triangle, $DC=\dfrac{6}{\tan30^\circ}=6\sqrt3$. $BC=6+6\sqrt3$.
+
+**Misconception addressed:** Students multiply by $\tan30^\circ$ instead of dividing ($6+2\sqrt3$).
+
+---
+
+### GT-266
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, the points $A(0,0)$, $B(6,3)$ and $C(4,7)$ are the vertices of a triangle. What is the value of $\tan(\angle CAB)$?
+
+(A) $\dfrac12$
+(B) $\dfrac23$
+(C) $\dfrac32$
+(D) $\dfrac74$
+
+**Correct Answer:** (B) $\dfrac23$
+
+**Rationale:** Slopes: $AB=\tfrac12$, $BC=\dfrac{7-3}{4-6}=-2$; their product is $-1$, so the right angle is at $B$. $AB=\sqrt{45}$, $BC=\sqrt{20}$, $\tan A=\dfrac{BC}{AB}=\sqrt{\dfrac{20}{45}}=\dfrac23$.
+
+**Misconception addressed:** Students give the slope of $\overline{AC}$ ($\tfrac74$) or of $\overline{AB}$ ($\tfrac12$) instead of a ratio of sides.
+
+---
+
+### GT-267
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A parallelogram has sides of lengths $12$ and $20$. The cosine of one of its acute angles is $0.8$. What is the area of the parallelogram?
+
+(A) $72$
+(B) $144$
+(C) $192$
+(D) $240$
+
+**Correct Answer:** (B) $144$
+
+**Rationale:** $\sin\theta=\sqrt{1-0.8^2}=0.6$. Height to the side of length $20$ is $12\cdot0.6=7.2$. Area $=20\cdot7.2=144$.
+
+**Misconception addressed:** Students use the cosine as the height ratio ($192$) or ignore the angle ($240$).
+
+---
+
+### GT-268
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** From the top of a cliff $45$ meters high, the angles of depression to two boats on opposite sides of the cliff are $30^\circ$ and $45^\circ$. The boats and the base of the cliff are on a straight line. What is the distance, in meters, between the boats?
+
+(A) $45\sqrt3-45$
+(B) $45+15\sqrt3$
+(C) $45\sqrt3$
+(D) $45+45\sqrt3$
+
+**Correct Answer:** (D) $45+45\sqrt3$
+
+**Rationale:** Horizontal distances: $\dfrac{45}{\tan30^\circ}=45\sqrt3$ and $\dfrac{45}{\tan45^\circ}=45$. Opposite sides, so add: $45+45\sqrt3$.
+
+**Misconception addressed:** Students subtract the distances (the same-side case) or multiply by $\tan30^\circ$.
+
+---
+
+### GT-269
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In a right triangle, the measure of acute angle $A$ is between $45^\circ$ and $90^\circ$. Which of the following is true?
+
+(A) $\cos A<\sin A<\tan A$
+(B) $\tan A<\sin A<\cos A$
+(C) $\sin A<\cos A<\tan A$
+(D) $\cos A<\tan A<\sin A$
+
+**Correct Answer:** (A) $\cos A<\sin A<\tan A$
+
+**Rationale:** Above $45^\circ$ the opposite leg is longer than the adjacent leg, so $\cos A<\sin A$, and $\tan A=\dfrac{\sin A}{\cos A}>1>\sin A$. Check $60^\circ$: $0.5<0.866<1.732$.
+
+**Misconception addressed:** Students use the ordering that holds below $45^\circ$ ($\sin A<\cos A$).
+
+---
+
+### GT-270
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A rectangle has side lengths $6$ and $6\sqrt3$. What is the measure, in degrees, of the acute angle formed by its diagonals?
+
+**Correct Answer:** $60$
+
+**Rationale:** Each diagonal makes an angle with the longer side whose tangent is $\dfrac{6}{6\sqrt3}=\dfrac1{\sqrt3}$, so $30^\circ$. The triangle formed by the longer side and the two half-diagonals has base angles $30^\circ$ and apex angle $120^\circ$. The adjacent angle at the centre, facing the shorter side, is $180^\circ-120^\circ=60^\circ$.
+
+**Misconception addressed:** Students give the diagonal-to-side angle ($30^\circ$) or the obtuse angle ($120^\circ$).
+
+---
+
+### GT-271
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, line $\ell$ has slope $\dfrac34$ and line $k$ is perpendicular to line $\ell$. Line $k$ makes an angle $\theta$ with the positive $x$-axis, measured counterclockwise, where $0^\circ<\theta<180^\circ$. What is the value of $\cos\theta$?
+
+(A) $-\dfrac45$
+(B) $\dfrac35$
+(C) $-\dfrac35$
+(D) $\dfrac45$
+
+**Correct Answer:** (C) $-\dfrac35$
+
+**Rationale:** Slope of $k$: $-\dfrac43$, so $\theta$ is obtuse with direction $(-3,4)$ (length $5$). $\cos\theta=-\dfrac35$.
+
+**Misconception addressed:** Students drop the negative sign or use the sine ($\tfrac45$).
+
+---
+
+### GT-272
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Parallel lines $\ell$ and $m$ are horizontal, with $\ell$ above $m$. Point $P$ lies between the lines. Point $A$ on $\ell$ and point $B$ on $m$ are both to the right of $P$. Segment $\overline{PA}$ makes a $38^\circ$ angle with line $\ell$, and segment $\overline{PB}$ makes a $47^\circ$ angle with line $m$, both angles opening toward $P$. What is the measure, in degrees, of angle $APB$?
+
+(A) $42.5$
+(B) $95$
+(C) $85$
+(D) $9$
+
+**Correct Answer:** (C) $85$
+
+**Rationale:** Draw a line through $P$ parallel to $\ell$ and $m$. Alternate interior angles give $38^\circ$ above it and $47^\circ$ below it, so $\angle APB=38^\circ+47^\circ=85^\circ$.
+
+**Misconception addressed:** Students compute $180-(38+47)=95$ or the difference $9$.
+
+---
+
+### GT-273
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $ABC$, the measure of angle $A$ is $52^\circ$. The bisectors of angles $B$ and $C$ intersect at point $I$. What is the measure, in degrees, of angle $BIC$?
+
+(A) $116$
+(B) $128$
+(C) $64$
+(D) $104$
+
+**Correct Answer:** (A) $116$
+
+**Rationale:** $B+C=128^\circ$, so $\tfrac B2+\tfrac C2=64^\circ$ and $\angle BIC=180^\circ-64^\circ=116^\circ$.
+
+**Misconception addressed:** Students compute $180-52=128$, or $2\cdot52=104$, or stop at $64$.
+
+---
+
+### GT-274
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $ABC$, $AB=2x+1$, $BC=x+6$ and $CA=3x-4$. The perimeter of the triangle is $45$. Which angle of the triangle has the greatest measure?
+
+(A) Angle $A$
+(B) It cannot be determined from the information given.
+(C) Angle $C$
+(D) Angle $B$
+
+**Correct Answer:** (D) Angle $B$
+
+**Rationale:** $6x+3=45\Rightarrow x=7$: $AB=15$, $BC=13$, $CA=17$. The greatest angle is opposite the longest side $\overline{CA}$, which is angle $B$.
+
+**Misconception addressed:** Students name a vertex of the longest side ($A$ or $C$) instead of the opposite angle.
+
+---
+
+### PS-176
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** If $18\%$ of $a$ is $24$, what is $a\%$ of $18$?
+
+(A) $4.32$
+(B) $24$
+(C) $2{,}400$
+(D) $133\tfrac13$
+
+**Correct Answer:** (B) $24$
+
+**Rationale:** $a\%$ of $18=\dfrac{a\cdot18}{100}=18\%$ of $a=24$. No need to find $a$.
+
+**Misconception addressed:** Students solve for $a$ ($133\tfrac13$) and stop, or multiply $0.18\cdot24$.
+
+---
+
+### PS-177
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The monthly rent of an apartment increased by $60\%$. By what percent must the new rent decrease to return to the original rent?
+
+(A) $62.5\%$
+(B) $37.5\%$
+(C) $60\%$
+(D) $40\%$
+
+**Correct Answer:** (B) $37.5\%$
+
+**Rationale:** New rent $=1.6R$. Decrease needed: $\dfrac{0.6R}{1.6R}=0.375=37.5\%$.
+
+**Misconception addressed:** Students reuse $60\%$ or compute $100-60=40$.
+
+---
+
+### PS-178
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A store's profit on each jacket is $37.5\%$ of the selling price. The profit is what percent of the cost of the jacket to the store?
+
+(A) $37.5\%$
+(B) $27.3\%$
+(C) $62.5\%$
+(D) $60\%$
+
+**Correct Answer:** (D) $60\%$
+
+**Rationale:** Let the price be $100$: profit $37.5$, cost $62.5$. $\dfrac{37.5}{62.5}=0.6=60\%$.
+
+**Misconception addressed:** Students keep the selling price as the base ($37.5\%$) or compute cost as a percent of price ($62.5\%$).
+
+---
+
+### PS-179
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A restaurant adds a $15\%$ tax and a $10\%$ service charge to a bill. Both are calculated on the original subtotal. The total paid is $250$ dollars. What was the subtotal, in dollars?
+
+(A) $200.00$
+(B) $217.39$
+(C) $197.63$
+(D) $187.50$
+
+**Correct Answer:** (A) $200.00$
+
+**Rationale:** Both percents use the same base, so they add: total $=1.25\cdot$subtotal. Subtotal $=\dfrac{250}{1.25}=200$.
+
+**Misconception addressed:** Students chain the percents ($\tfrac{250}{1.15\cdot1.10}\approx197.63$) or ignore one charge.
+
+---
+
+### PS-180
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A club has $40$ members, and $30\%$ of the members are girls. How many girls must join the club, with no one leaving, so that girls make up $60\%$ of the members?
+
+(A) $20$
+(B) $12$
+(C) $30$
+(D) $28$
+
+**Correct Answer:** (C) $30$
+
+**Rationale:** Girls now: $12$. $12+g=0.6(40+g)\Rightarrow0.4g=12\Rightarrow g=30$.
+
+**Misconception addressed:** Students take $60\%$ of the old total ($24-12=12$) and forget the total grows.
+
+---
+
+### PS-181
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A worker spends $30\%$ of her monthly salary on rent, then $25\%$ of the remaining amount on food, then $40\%$ of what is left after that on savings. She has $3{,}780$ dollars left. What is her monthly salary, in dollars?
+
+(A) $75{,}600$
+(B) $7{,}200$
+(C) $12{,}000$
+(D) $6{,}300$
+
+**Correct Answer:** (C) $12{,}000$
+
+**Rationale:** Remaining fraction: $0.7\cdot0.75\cdot0.6=0.315$. Salary $=\dfrac{3{,}780}{0.315}=12{,}000$.
+
+**Misconception addressed:** Students add the percents ($95\%$ spent) or skip a step.
+
+---
+
+### PS-182
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Two positive numbers $a$ and $b$ are in the ratio $a:b=9:5$. The number $b$ is what percent less than $a$, to the nearest tenth of a percent?
+
+(A) $44.4\%$
+(B) $80.0\%$
+(C) $55.6\%$
+(D) $28.6\%$
+
+**Correct Answer:** (A) $44.4\%$
+
+**Rationale:** $\dfrac{a-b}{a}=\dfrac49\approx44.4\%$.
+
+**Misconception addressed:** Students use $b$ as the base ($80\%$, which is how much greater $a$ is) or use the total parts.
+
+---
+
+### PS-183
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The number $y$ is $p\%$ less than the positive number $x$, where $0<p<100$. Which expression is equal to $x$?
+
+(A) $\dfrac{(100-p)y}{100}$
+(B) $\dfrac{100y}{100+p}$
+(C) $y\left(1+\dfrac{p}{100}\right)$
+(D) $\dfrac{100y}{100-p}$
+
+**Correct Answer:** (D) $\dfrac{100y}{100-p}$
+
+**Rationale:** $y=x\left(1-\dfrac{p}{100}\right)=x\cdot\dfrac{100-p}{100}$, so $x=\dfrac{100y}{100-p}$. Check $p=20$, $y=80$: $x=100$.
+
+**Misconception addressed:** Students add $p\%$ back to $y$ (using the wrong base).
+
+---
+
+### PS-184
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Fresh dates are $80\%$ water by mass. After drying, the dates are $50\%$ water by mass. How many kilograms of dried dates are produced from $60$ kilograms of fresh dates?
+
+(A) $30$
+(B) $24$
+(C) $42$
+(D) $12$
+
+**Correct Answer:** (B) $24$
+
+**Rationale:** The non-water part does not change: $0.2\cdot60=12$ kg. After drying it is $50\%$ of the mass: $\dfrac{12}{0.5}=24$ kg.
+
+**Misconception addressed:** Students subtract $30$ percentage points of the mass ($60\cdot0.7=42$) or halve the mass.
+
+---
+
+### PS-185
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In a survey, exactly $37.5\%$ of the people answered ``yes,'' exactly $20\%$ answered ``no,'' and the rest were undecided. What is the least possible number of people surveyed?
+
+(A) $5$
+(B) $40$
+(C) $8$
+(D) $1{,}000$
+
+**Correct Answer:** (B) $40$
+
+**Rationale:** $37.5\%=\dfrac38$ and $20\%=\dfrac15$, so the number surveyed must be a multiple of $8$ and of $5$: least is $40$ ($15$ yes, $8$ no, $17$ undecided).
+
+**Misconception addressed:** Students satisfy only one percent ($8$ or $5$).
+
+---
+
+### PS-186
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** At a school, $85\%$ of the boys and $60\%$ of the girls passed an exam, and $70\%$ of all the students passed. What percent of the students at the school are boys?
+
+(A) $25\%$
+(B) $50\%$
+(C) $60\%$
+(D) $40\%$
+
+**Correct Answer:** (D) $40\%$
+
+**Rationale:** Let $b$ be the fraction of boys: $0.85b+0.6(1-b)=0.7\Rightarrow0.25b=0.1\Rightarrow b=0.4=40\%$.
+
+**Misconception addressed:** Students assume equal groups ($50\%$) or swap the groups ($60\%$).
+
+---
+
+### PS-187
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A runner's pace is $6$ minutes $15$ seconds per kilometer. What is the runner's speed, in kilometers per hour?
+
+(A) $9.6$
+(B) $6.25$
+(C) $9.76$
+(D) $0.16$
+
+**Correct Answer:** (A) $9.6$
+
+**Rationale:** $6$ min $15$ s $=6.25$ min. Speed $=\dfrac{60}{6.25}=9.6$ km/h.
+
+**Misconception addressed:** Students read $6$ min $15$ s as $6.15$ min ($\approx9.76$).
+
+---
+
+### PS-188
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A pipe can fill an empty tank in $6$ hours, and a drain can empty the full tank in $9$ hours. Starting with the tank empty, the pipe and the drain are both open for $4$ hours, and then the drain is closed. How many more hours does it take the pipe to fill the tank?
+
+(A) $2$
+(B) $\dfrac{26}{3}$
+(C) $\dfrac{14}{3}$
+(D) $14$
+
+**Correct Answer:** (C) $\dfrac{14}{3}$
+
+**Rationale:** Net rate $\dfrac16-\dfrac19=\dfrac1{18}$ tank per hour; after $4$ hours: $\dfrac29$ full. Remaining $\dfrac79$ at $\dfrac16$ per hour: $\dfrac{7/9}{1/6}=\dfrac{14}{3}$ hours ($4$ h $40$ min).
+
+**Misconception addressed:** Students give the total time ($8\tfrac23$ h) or leave the drain open.
+
+---
+
+### PS-189
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A crew of $12$ workers can finish a job in $20$ days. After the crew has worked for $5$ days, $3$ more workers join, all working at the same rate. How many days in total does the job take?
+
+(A) $16$
+(B) $25$
+(C) $17$
+(D) $12$
+
+**Correct Answer:** (C) $17$
+
+**Rationale:** Total work $=12\cdot20=240$ worker-days. Done in $5$ days: $60$. Remaining $180$ with $15$ workers: $12$ days. Total $5+12=17$.
+
+**Misconception addressed:** Students give only the remaining days ($12$) or assume $15$ workers from the start ($16$).
+
+---
+
+### PS-190
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A driver travels from one city to another at an average speed of $60$ kilometers per hour. At what average speed, in kilometers per hour, must the driver return along the same road so that the average speed for the whole round trip is $80$ kilometers per hour?
+
+(A) $120$
+(B) $106.7$
+(C) $160$
+(D) $100$
+
+**Correct Answer:** (A) $120$
+
+**Rationale:** Let the distance be $d$. $\dfrac{2d}{d/60+d/v}=80\Rightarrow\dfrac2{80}=\dfrac1{60}+\dfrac1v\Rightarrow\dfrac1v=\dfrac1{120}$, $v=120$.
+
+**Misconception addressed:** Students average the speeds ($100$).
+
+---
+
+### PS-191
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A printer prints $p$ pages every $m$ seconds. Which expression gives the number of minutes the printer takes to print $n$ pages?
+
+(A) $\dfrac{60m}{pn}$
+(B) $\dfrac{60mn}{p}$
+(C) $\dfrac{pn}{60m}$
+(D) $\dfrac{mn}{60p}$
+
+**Correct Answer:** (D) $\dfrac{mn}{60p}$
+
+**Rationale:** Seconds per page $=\dfrac mp$; $n$ pages take $\dfrac{mn}{p}$ seconds $=\dfrac{mn}{60p}$ minutes. Check $p=10$, $m=5$, $n=120$: $60$ s $=1$ min.
+
+**Misconception addressed:** Students multiply by $60$ instead of dividing, or invert the rate.
+
+---
+
+### PS-192
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A bank sells US dollars at $3.77$ riyals per dollar. It first deducts a $1\%$ commission from the riyals a customer pays. How many US dollars does a customer receive for $5{,}655$ riyals?
+
+(A) $1{,}515$
+(B) $1{,}485$
+(C) $21{,}319$
+(D) $1{,}500$
+
+**Correct Answer:** (B) $1{,}485$
+
+**Rationale:** Riyals exchanged: $0.99\cdot5{,}655=5{,}598.45$. Dollars $=\dfrac{5{,}598.45}{3.77}=1{,}485$.
+
+**Misconception addressed:** Students ignore the commission ($1{,}500$), add it, or multiply by the rate.
+
+---
+
+### PS-193
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The data set $3,5,6,8,9,11,12,46$ has one outlier, $46$, which is removed. Which statement about the effect of removing $46$ is true?
+
+(A) Only the mean changes.
+(B) Both the mean and the median decrease, and the mean decreases more.
+(C) The mean decreases and the median increases.
+(D) The mean decreases and the median stays the same.
+
+**Correct Answer:** (B) Both the mean and the median decrease, and the mean decreases more.
+
+**Rationale:** Mean: $12.5\to\dfrac{54}{7}\approx7.71$. Median: $\dfrac{8+9}2=8.5\to8$ (the count changes from $8$ to $7$). Both decrease, and the mean decreases more.
+
+**Misconception addressed:** Students think the median cannot change when an outlier is removed.
+
+---
+
+### PS-194
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A data set consists of $12,15,18,21,24,27,30,33,36,40$. The value $40$ is mistakenly recorded as $400$. How do the median, the interquartile range (IQR) and the standard deviation of the recorded data compare with those of the correct data?
+
+(A) Only the median is unchanged.
+(B) The median, IQR and standard deviation are all unchanged.
+(C) The median is unchanged, but the IQR and standard deviation are greater.
+(D) The median and IQR are unchanged, but the standard deviation is greater.
+
+**Correct Answer:** (D) The median and IQR are unchanged, but the standard deviation is greater.
+
+**Rationale:** Only the maximum changed. The median ($25.5$) and the quartiles ($18$ and $33$) do not involve the maximum, so the median and IQR are unchanged. The standard deviation measures distance from the mean and grows greatly (about $8.8$ to about $113$).
+
+**Misconception addressed:** Students think every statistic changes with an outlier, or that the IQR is affected.
+
+---
+
+### PS-195
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Section $P$ has $60$ students and section $Q$ has $24$ students. Test-score summaries: Section $P$: minimum $55$, first quartile $68$, median $76$, third quartile $84$, maximum $97$. Section $Q$: minimum $62$, first quartile $77$, median $83$, third quartile $88$, maximum $95$. Which statement must be true?
+
+(A) At least $75\%$ of the students in $Q$ scored above the median of $P$.
+(B) The IQR of $Q$ is greater than the IQR of $P$.
+(C) More students in $Q$ than in $P$ scored above $84$.
+(D) The range of $Q$ is greater than the range of $P$.
+
+**Correct Answer:** (A) At least $75\%$ of the students in $Q$ scored above the median of $P$.
+
+**Rationale:** In $Q$, at least $75\%$ of the scores are at or above its first quartile, $77$, which is above $P$'s median, $76$. the statement about more students above $84$ cannot be decided (different section sizes; only percents are known); the range of $Q$ ($33$) is less than that of $P$ ($42$); the IQR of $Q$ ($11$) is less than that of $P$ ($16$).
+
+**Misconception addressed:** Students compare counts when only percents are known, or compare ranges by eye.
+
+---
+
+### PS-196
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** At a company, the median monthly salary is $9{,}000$ dollars and the mean monthly salary is $14{,}500$ dollars. Which statement must be true?
+
+(A) The most common salary is $9{,}000$ dollars.
+(B) The standard deviation of the salaries is $5{,}500$ dollars.
+(C) No more than half of the employees earn more than $14{,}500$ dollars.
+(D) More than half of the employees earn more than $14{,}500$ dollars.
+
+**Correct Answer:** (C) No more than half of the employees earn more than $14{,}500$ dollars.
+
+**Rationale:** Any employee earning more than $14{,}500$ also earns more than the median $9{,}000$, and at most half of the employees earn more than the median. So no more than half earn more than $14{,}500$.
+
+**Misconception addressed:** Students read the mean as the typical salary, or treat mean minus median as the standard deviation.
+
+---
+
+### PS-197
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In a data set, the values $1$, $2$, $3$, $4$ and $5$ occur with relative frequencies $10\%$, $15\%$, $20\%$, $30\%$ and $25\%$, respectively. What is the median of the data set minus the mean of the data set?
+
+**Correct Answer:** $0.55$ (or $\tfrac{11}{20}$)
+
+**Rationale:** Cumulative: $10\%,25\%,45\%,75\%$, so the $50\%$ point is at the value $4$: median $=4$. Mean $=0.1+0.3+0.6+1.2+1.25=3.45$. Difference $=0.55$.
+
+**Misconception addressed:** Students think the total count is needed, or take the median of the percents.
+
+---
+
+### PS-198
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A data set has six values. Their deviations from $40$ (value minus $40$) are $-7$, $3$, $12$, $-5$, $x$ and $2$. The mean of the data set is $42$. What is the value whose deviation from $40$ is $x$?
+
+(A) $35$
+(B) $7$
+(C) $47$
+(D) $52$
+
+**Correct Answer:** (C) $47$
+
+**Rationale:** The deviations from $40$ sum to $6(42-40)=12$, not $0$ (they sum to $0$ only around the mean). $5+x=12$, $x=7$; the value is $47$.
+
+**Misconception addressed:** Students set the deviations' sum to $0$ ($x=-5$, value $35$) or stop at $x=7$.
+
+---
+
+### PS-199
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A data set of $30$ values has a mean of $50$ and a standard deviation of $10$. The values $38$ and $62$ are added to the data set. Which statement is true?
+
+(A) The mean is unchanged and the standard deviation increases.
+(B) The mean is unchanged and the standard deviation decreases.
+(C) The mean and the standard deviation are both unchanged.
+(D) The mean and the standard deviation both increase.
+
+**Correct Answer:** (A) The mean is unchanged and the standard deviation increases.
+
+**Rationale:** The pair is symmetric about $50$, so the mean stays $50$. Each new value is $12$ from the mean, farther than the typical distance $10$, so the standard deviation increases (to about $10.1$).
+
+**Misconception addressed:** Students assume values inside the range lower the SD, or that a symmetric pair leaves it unchanged.
+
+---
+
+### PS-200
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Medium
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In a data set, a value is called a low outlier if it is less than $Q_1-1.5\cdot\text{IQR}$, where $Q_1$ is the first quartile and IQR is the interquartile range. For a data set, $Q_1=28$ and the third quartile is $40$. What is the greatest integer value that would be a low outlier?
+
+**Correct Answer:** $9$
+
+**Rationale:** IQR $=12$; fence $=28-18=10$. A low outlier is strictly less than $10$, so the greatest integer is $9$.
+
+**Misconception addressed:** Students include the boundary ($10$) or forget the factor $1.5$ ($16$).
+
+---
+
+### PS-201
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The recorded values of a data set are $18,22,27,30,33,36,41,47,52$. The value $52$ should have been $25$. After the correction, how do the mean and the median change?
+
+(A) The mean decreases by $3$ and the median is unchanged.
+(B) The median decreases and the mean is unchanged.
+(C) The mean decreases by $27$ and the median decreases by $3$.
+(D) The mean and the median both decrease by $3$.
+
+**Correct Answer:** (D) The mean and the median both decrease by $3$.
+
+**Rationale:** Mean: $34\to31$ (the sum drops by $27$ over $9$ values). Median: $33\to30$, because $25$ moves below the middle and the middle value shifts. Both decrease by $3$.
+
+**Misconception addressed:** Students assume the median is unchanged when one value is corrected.
+
+---
+
+### PS-202
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A company randomly selected $200$ of its employees and gave them new office chairs. Their average productivity rose $8\%$ during the next $3$ months. Which conclusion is best supported?
+
+(A) The new chairs caused the rise for all employees.
+(B) The rise cannot be attributed to the chairs, because there was no comparison group.
+(C) The new chairs had no effect on productivity.
+(D) The new chairs caused the rise for the $200$ employees only.
+
+**Correct Answer:** (B) The rise cannot be attributed to the chairs, because there was no comparison group.
+
+**Rationale:** There was no comparison group without new chairs, so the rise could come from other changes over the same months. Random selection allows generalization, not a causal claim.
+
+**Misconception addressed:** Students think a random sample alone supports cause and effect.
+
+---
+
+### PS-203
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In an experiment, garden plots were randomly assigned to receive $0$, $20$ or $40$ grams of a fertilizer. The plots given $40$ grams had the highest mean yield. Which conclusion is best supported?
+
+(A) Doubling the fertilizer doubles the yield.
+(B) For plots like these, increasing the fertilizer from $0$ to $40$ grams caused higher yields.
+(C) No causal conclusion is possible.
+(D) Using $80$ grams would give an even higher yield.
+
+**Correct Answer:** (B) For plots like these, increasing the fertilizer from $0$ to $40$ grams caused higher yields.
+
+**Rationale:** Random assignment supports a causal conclusion, but only within the tested doses and for plots like these.
+
+**Misconception addressed:** Students extrapolate a valid causal result beyond the tested doses.
+
+---
+
+### PS-204
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A survey was mailed to $1{,}200$ randomly selected households, and $180$ surveys were returned. Of these, $72\%$ supported a new fee. What is the main reason the $72\%$ may not represent all households?
+
+(A) There was no random assignment to treatments.
+(B) The households were selected at random.
+(C) The sample of $1{,}200$ is too small.
+(D) Many selected households did not respond, and those who responded may differ from those who did not.
+
+**Correct Answer:** (D) Many selected households did not respond, and those who responded may differ from those who did not.
+
+**Rationale:** Only $15\%$ responded. People who choose to return a survey may differ from those who do not (non-response bias), even though the original selection was random.
+
+**Misconception addressed:** Students think random selection guarantees a representative result.
+
+---
+
+### PS-205
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** An observational study found that children from homes with more books tend to have higher reading scores. Which of the following is the most plausible confounding variable?
+
+(A) Parents' education level
+(B) The scale used for the reading test
+(C) The number of pages per book
+(D) The number of children in the study
+
+**Correct Answer:** (A) Parents' education level
+
+**Rationale:** A confounder is related to both variables: parents' education level can affect both the number of books at home and the children's reading scores.
+
+**Misconception addressed:** Students choose a variable linked to only one of the two variables, or a feature of the study design.
+
+---
+
+### PS-206
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** To estimate the average weekly exercise time of adults in a city, a researcher randomly selected $400$ people from the membership lists of the city's gyms. Why is the estimate likely to be biased?
+
+(A) The sample size is too small.
+(B) The selection was random, so the estimate is not biased.
+(C) The list leaves out adults who are not gym members.
+(D) There was no random assignment.
+
+**Correct Answer:** (C) The list leaves out adults who are not gym members.
+
+**Rationale:** The sampling frame (gym members) leaves out adults who are not gym members, who probably exercise less. Random selection from a biased list is still biased.
+
+**Misconception addressed:** Students accept random selection without checking the list it came from.
+
+---
+
+### PS-207
+
+**Skill:** Problem-Solving and Data Analysis — Evaluating statistical claims: Observational studies and experiments
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A teacher randomly selected $50$ students and asked each one, face to face, ``Have you ever copied homework?'' Of the students, $6\%$ answered yes. Which is the most likely problem with this result?
+
+(A) The sample was not selected at random.
+(B) There was no control group.
+(C) Students may give untrue answers because the question is sensitive and asked in person.
+(D) A sample of $50$ students is too large.
+
+**Correct Answer:** (C) Students may give untrue answers because the question is sensitive and asked in person.
+
+**Rationale:** The question is sensitive and asked in person by a teacher, so students may under-report (response bias), even though the sample was random.
+
+**Misconception addressed:** Students check only how the sample was chosen and miss the measurement problem.
+
+---
+
+### PS-208
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For a data set, the correlation coefficient between height in centimeters and mass in kilograms is $r=0.72$. The heights are converted to inches, the masses to pounds, and the two variables are swapped between the axes. What is the correlation coefficient for the converted data?
+
+(A) $0.72$
+(B) $-0.72$
+(C) $0.72\cdot\dfrac{2.2}{2.54}$
+(D) $\dfrac{1}{0.72}$
+
+**Correct Answer:** (A) $0.72$
+
+**Rationale:** Correlation has no units and is symmetric: changing units (positive scale factors) and swapping the axes leave $r$ unchanged, $0.72$.
+
+**Misconception addressed:** Students scale $r$ by the conversion factors or take its reciprocal.
+
+---
+
+### PS-209
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For data set $P$, the line of best fit is $\hat y=4.2x+3$ and the correlation coefficient is $0.41$. For data set $Q$, the line of best fit is $\hat y=0.6x+10$ and the correlation coefficient is $0.93$. Which statement is true?
+
+(A) The associations cannot be compared because the slopes are different.
+(B) $P$ has the stronger linear association because its slope is greater.
+(C) $Q$ has a weaker association because its slope is less than $1$.
+(D) $Q$ has the stronger linear association.
+
+**Correct Answer:** (D) $Q$ has the stronger linear association.
+
+**Rationale:** The strength of a linear association is measured by $r$, not by the slope. $Q$ has $r$ closer to $1$, so its points fit a line more closely, relative to the spread of the data.
+
+**Misconception addressed:** Students think a steeper slope means a stronger association.
+
+---
+
+### PS-210
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the fourth web sweep (21 Oct 2026; admitstudio, themathdoctors, media4math, edisonos, quiz-tree, 1600.io topic lists, satsphere, prepedu, kaptest, nrich, uniontestprep, AP Statistics conventions). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A model for a data set is $\hat y=2.5x+10$. The data points are $(2,17)$, $(4,19.5)$, $(6,24)$, $(8,31)$ and $(10,34.5)$. For how many of the data points does the model underestimate the actual value of $y$?
+
+(A) $5$
+(B) $2$
+(C) $3$
+(D) $1$
+
+**Correct Answer:** (B) $2$
+
+**Rationale:** Residuals (actual $-$ predicted): $17-15=2$, $19.5-20=-0.5$, $24-25=-1$, $31-30=1$, $34.5-35=-0.5$. The model underestimates when the residual is positive: $2$ points.
+
+**Misconception addressed:** Students reverse ``underestimate'' and count the negative residuals ($3$).
+
+---
+
 ## 3. Bank Index (for worksheet sourcing)
 
-### Bank summary (all 1078 items)
+### Bank summary (all 1146 items)
 
 | Domain | Skill | Medium | Hard | Total |
 |---|---|---:|---:|---:|
-| Advanced Math | Equivalent expressions | 22 | 54 | 76 |
+| Advanced Math | Equivalent expressions | 23 | 54 | 77 |
 | Advanced Math | Function notation | 0 | 2 | 2 |
-| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 27 | 64 | 91 |
-| Advanced Math | Nonlinear functions | 32 | 122 | 154 |
+| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 27 | 69 | 96 |
+| Advanced Math | Nonlinear functions | 32 | 126 | 158 |
 | Algebra | Linear equations in one variable | 23 | 28 | 51 |
-| Algebra | Linear equations in two variables | 26 | 37 | 63 |
+| Algebra | Linear equations in two variables | 26 | 40 | 66 |
 | Algebra | Linear functions | 34 | 42 | 76 |
-| Algebra | Linear inequalities in one or two variables | 23 | 32 | 55 |
-| Algebra | Systems of two linear equations in two variables | 30 | 48 | 78 |
-| Geometry and Trigonometry | Area and volume | 24 | 42 | 66 |
+| Algebra | Linear inequalities in one or two variables | 24 | 33 | 57 |
+| Algebra | Systems of two linear equations in two variables | 30 | 49 | 79 |
+| Geometry and Trigonometry | Area and volume | 25 | 42 | 67 |
 | Geometry and Trigonometry | Circles | 26 | 53 | 79 |
-| Geometry and Trigonometry | Lines, angles, and triangles | 20 | 34 | 54 |
-| Geometry and Trigonometry | Right triangles and trigonometry | 23 | 35 | 58 |
-| Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | 4 | 6 | 10 |
+| Geometry and Trigonometry | Lines, angles, and triangles | 21 | 37 | 58 |
+| Geometry and Trigonometry | Right triangles and trigonometry | 23 | 47 | 70 |
+| Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | 7 | 9 | 16 |
 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | 8 | 10 | 18 |
-| Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | 6 | 22 | 28 |
-| Problem-Solving and Data Analysis | Percentages | 13 | 27 | 40 |
+| Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | 7 | 30 | 37 |
+| Problem-Solving and Data Analysis | Percentages | 14 | 37 | 51 |
 | Problem-Solving and Data Analysis | Probability and conditional probability | 5 | 15 | 20 |
-| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 12 | 25 | 37 |
-| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 9 | 13 | 22 |
-| **Total** | | **367** | **711** | **1078** |
+| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 13 | 30 | 43 |
+| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 10 | 15 | 25 |
+| **Total** | | **378** | **768** | **1146** |
 
 ### Full index
 
@@ -23813,6 +25429,74 @@ Built 21 Oct 2026 from a five-agent web sweep of sources not used before: Bluebo
 | PS-173 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | SPR |
 | PS-174 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
 | PS-175 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| A-337 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-338 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-339 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-340 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-341 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-342 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| AM-322 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-323 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-324 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-325 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-326 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-327 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-328 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-329 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-330 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-331 | Advanced Math | Equivalent expressions | Medium | Multiple Choice |
+| GT-258 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-259 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-260 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-261 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-262 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-263 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-264 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-265 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-266 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-267 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-268 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-269 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-270 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | SPR |
+| GT-271 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-272 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-273 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-274 | Geometry and Trigonometry | Lines, angles, and triangles | Medium | Multiple Choice |
+| PS-176 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-177 | Problem-Solving and Data Analysis | Percentages | Medium | Multiple Choice |
+| PS-178 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-179 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-180 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-181 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-182 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-183 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-184 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-185 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-186 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-187 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | Multiple Choice |
+| PS-188 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-189 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-190 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-191 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-192 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-193 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-194 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-195 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-196 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-197 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| PS-198 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-199 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-200 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Medium | SPR |
+| PS-201 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-202 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-203 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-204 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Hard | Multiple Choice |
+| PS-205 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-206 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-207 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | Medium | Multiple Choice |
+| PS-208 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Medium | Multiple Choice |
+| PS-209 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
+| PS-210 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | Multiple Choice |
 
 ---
 
