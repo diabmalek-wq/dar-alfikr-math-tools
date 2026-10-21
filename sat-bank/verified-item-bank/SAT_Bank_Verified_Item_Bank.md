@@ -5,7 +5,7 @@
 **Teacher of Record:** Mr. Malek Thiab
 **Scope:** Grades 10–11 SAT preparation (Algebra II Semester 1)
 **Difficulty:** Medium and Hard only (no Easy items, per weekly work order)
-**Item count:** 994 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36 + 10 web-research Hard archetypes §2.37 + 20 web-research Hard archetypes (second sweep) §2.38; the earlier header total of 491 was one short of the 492 items actually present)
+**Item count:** 1078 items (55 hand-authored + 16 top-up §2.5 + 20 top-up §2.6 + 16 top-up §2.7 + 16 top-up §2.8 + 12 top-up §2.9 + 25 top-up §2.10 + 15 deepening §2.11 + 16 deepening §2.12 + 24 deepening §2.13 + 20 deepening §2.14 + 16 deepening §2.15 + 28 gap-closing §2.16 + 24 gap-closing §2.17 + 20 gap-closing §2.18 + 16 gap-closing §2.19 + 6 format-gap-closing §2.20 + 11 style-matched §2.21 + 16 style-matched §2.22 + 20 style-matched §2.23 + 21 style-matched §2.24 + 27 style-matched §2.25 + 8 teacher-supplied §2.26 + 9 teacher-supplied/gap-closing §2.27 + 33 teacher-supplied §2.28 + 1 teacher-supplied §2.29 + 28 gap-closing §2.30; + 200 Trick Pack 1 challenge items §2.31 + 30 gap-closing §2.32 + 61 gap-closing Algebra §2.33 + 50 gap-closing Geometry and Trigonometry §2.34 + 48 gap-closing Algebra top-up §2.35 + 20 deduplicated Algebra top-up §2.36 + 10 web-research Hard archetypes §2.37 + 20 web-research Hard archetypes (second sweep) §2.38 + 45 gap-closing §2.39 + 84 Trick Pack 2 web-research items §2.40; the earlier header total of 491 was one short of the 492 items actually present)
 **Status:** Complete — §2.38 adds 20 Hard items from a wider web sweep (horizontal-line count, equal outputs, root difference, Vieta cubic, substitution, quotient table, restricted-domain exponential, identities, composition through a maximum, average rate of change, complex product, circle transformation, inscribed equilateral triangle, area proportionality, gear chain, percent system, point-set and net-of-fees inequalities); §2.37 adds 10 Hard items (periodic functions, cubic root counting, complex division, three-solution absolute value, circle tangency from general form, inverse-square scaling, conditional probability, rate-times-time percent change, extraneous absolute-value root) from archetypes found on public prep pages and missing from the bank; §2.35 was screened for repeated tricks and 10 near-duplicates (A-249, A-250, A-256, A-259, A-271, A-272, A-287, A-290, A-291, A-292) were removed; §2.36 adds 20 Algebra items screened against the whole bank for repeated tricks and wording (ride-share fare, relative-motion catch-up, fixed point of a linear function, concurrent lines on an axis, bill-splitting, parameter with a given solution, sum-of-equations shortcut, ratio, average, rectangle constraints); §2.35 adds 48 Algebra top-up items (linear equations, lines, linear functions, inequalities, systems); §2.34 adds 50 Geometry and Trigonometry items (right triangles, circles, area and volume, lines/angles/triangles); §2.33 adds 61 Algebra items (linear equations, lines, linear functions, inequalities, systems); §2.32 adds 30 Hard gap-closing items (Hard Algebra, function composition and transformations, sum and product of solutions); one bank holding the original house items, the teacher-supplied and gap-closing batches, and the 200 Trick Pack 1 challenge items (§2.31, hardest tier, original items written from the aniko.ai idea patterns); §2.30 adds 28 gap-closing items found by auditing the bank against the 611 Hard items of the official College Board Question Bank export (equivalent exponential forms that display a value, exponential rescaling and interpretation, vertex in context, mean/median after adding or removing a value, successive percents, area and rate unit conversions); §2.29 adds 1 teacher-supplied screenshot item (rational-plus-exponential parameter table); §2.28 adds 33 teacher-supplied screenshot items (parameter/no-solution equations, similar solids, circle equations, rational and radical expressions, zero-of-radical functions); §2.27 adds 9 items (percent difference, fixed-total salt/acid mixtures, altitude to the hypotenuse, intersecting chords, Thales); §2.26 adds 8 teacher-supplied screenshot items (intercept constraints, exponent factoring, root relationships, rational identity, parameter systems, factored-form minimum); §2.25 adds 27 Medium/Hard items (rational equations with extraneous roots, rational-exponent equations, tangent line–parabola systems, parameter systems, composition, special right triangles, sectors in radians, circle equations) simulated from *411 SAT Algebra and Geometry Questions*; universal SAT style, no Saudi context
 
 ---
@@ -20833,33 +20833,1903 @@ What is the value of $g\left(f^{-1}(g(3))\right)$?
 
 ---
 
+### 2.40 Web Research Batch 3 — Trick Pack 2 (84 items — A-316 to A-335, AM-303 to AM-321, GT-232 to GT-257, PS-157 to PS-175)
+
+Built 21 Oct 2026 from a five-agent web sweep of sources not used before: Bluebook Practice Tests 4–10 Module 2 walkthroughs (schoolofmath.us), real-test recaps for 2025–2026 administrations (test-ninjas.com exam-feedback pages, thetestadvantage.com August 2026 recap), and prep guides (outlierlearning, fiveable, targettestprep, magoosh, apguru, open-exam-prep, varsitytutors, quadeducationgroup, tigerway). About 87 candidate archetypes were screened against the 994-item bank by keyword search; 84 new tricks were kept. Archetype only: no source item, wording or numbers reproduced. Every answer was checked by script, and the batch was screened again with dedupe.py (no item shares a trick with an existing bank item). Each item states its tool.
+
+### A-316
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is linear, $f(3)=k$ and $f(k)=3$, where $k$ is a constant and $k\neq 3$. If $f(10)=-1$, what is the value of $k$?
+
+**Correct Answer:** $6$
+
+**Rationale:** The two points are $(3,k)$ and $(k,3)$. Slope $=\dfrac{3-k}{k-3}=-1$ for every $k\neq3$. So $f(x)=-x+b$. From $f(10)=-1$: $b=9$, so $f(x)=-x+9$ and $k=f(3)=6$. Check: $f(6)=3$ ✓.
+
+**Misconception addressed:** Students think two unknowns ($k$ and the slope) cannot be found, or assume the slope is $+1$ because the inputs and outputs are swapped.
+
+---
+
+### A-317
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is linear, $f(5)+f(-5)=14$, and $f(2)=13$. What is the value of $f(-2)$?
+
+(A) $-13$
+(B) $1$
+(C) $-1$
+(D) $7$
+
+**Correct Answer:** (B) $1$
+
+**Rationale:** For $f(x)=mx+b$: $f(c)+f(-c)=2b$ for every $c$. So $2b=14$ and $f(2)+f(-2)=14$, giving $f(-2)=14-13=1$. ($m=3$, $b=7$.)
+
+**Misconception addressed:** Students treat $f$ as odd and answer $-13$, or try to find $m$ and $b$ from one point.
+
+---
+
+### A-318
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is linear, $f(2)+f(8)=30$, and $f(11)=33$. What is the value of $f(0)$?
+
+**Correct Answer:** $0$
+
+**Rationale:** For a linear function the average of two outputs is the output at the average input: $f(5)=\dfrac{30}{2}=15$. Slope $=\dfrac{33-15}{11-5}=3$, so $f(0)=15-5\cdot3=0$.
+
+**Misconception addressed:** Students think a sum of two outputs gives no usable point and stop, or use $(2,30)$ as a point.
+
+---
+
+### A-319
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, what is the $y$-intercept of the graph of $x=4y-12$?
+
+(A) $(0,-12)$
+(B) $(0,-3)$
+(C) $(-12,0)$
+(D) $(0,3)$
+
+**Correct Answer:** (D) $(0,3)$
+
+**Rationale:** Set $x=0$: $4y=12$, so $y=3$. The $y$-intercept is $(0,3)$. (Solving for $y$: $y=\tfrac14x+3$, so the slope is $\tfrac14$, not $4$.)
+
+**Misconception addressed:** Students read the equation as if it were solved for $y$ and take $-12$ as the $y$-intercept or $4$ as the slope.
+
+---
+
+### A-320
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $ax+by=c$, $a$, $b$ and $c$ are constants with $a>0$, $b<0$ and $c>0$. The graph of the equation in the $xy$-plane does NOT pass through which quadrant?
+
+(A) Quadrant II
+(B) Quadrant III
+(C) Quadrant I
+(D) Quadrant IV
+
+**Correct Answer:** (A) Quadrant II
+
+**Rationale:** Solve for $y$: $y=-\dfrac ab x+\dfrac cb$. Since $b<0$: slope $-\dfrac ab>0$ and $y$-intercept $\dfrac cb<0$. A line with positive slope and negative $y$-intercept passes through Quadrants I, III and IV and misses Quadrant II. Test: $a=1,b=-1,c=1$ gives $y=x-1$.
+
+**Misconception addressed:** Students forget that dividing by the negative $b$ flips both signs, and read the slope as $-\dfrac ab<0$.
+
+---
+
+### A-321
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The system $2y-x>4$ and $y<5$ is graphed in the $xy$-plane. Which inequality describes all possible $x$-coordinates of points in the solution region?
+
+(A) $x>6$
+(B) $x<14$
+(C) $x<6$
+(D) $x<-4$
+
+**Correct Answer:** (C) $x<6$
+
+**Rationale:** From the first inequality, $x<2y-4$. Since $y<5$, $2y-4<6$, so every solution has $x<6$. Every $x<6$ is reached: for $x<6$ choose $y$ with $\dfrac{x+4}{2}<y<5$.
+
+**Misconception addressed:** Students solve each inequality on its own (for example $x<-4$ from $y=0$) instead of combining them through $y$.
+
+---
+
+### A-322
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For real numbers $x$ and $y$, $x+y<12$ and $x-y>4$. Which of the following must be true?
+
+(A) $y>4$
+(B) $x>8$
+(C) $y<4$
+(D) $x<8$
+
+**Correct Answer:** (C) $y<4$
+
+**Rationale:** Rewrite the second inequality so both point the same way: $y-x<-4$. Adding $x+y<12$ and $y-x<-4$ gives $2y<8$, so $y<4$. The value of $x$ is not bounded: $(100,-90)$ satisfies both.
+
+**Misconception addressed:** Students subtract the inequalities directly ($x+y-(x-y)<12-4$) or add them as written to get a false bound on $x$.
+
+---
+
+### A-323
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** If $-3\le x\le 2$ and $-5\le y\le 1$, what is the greatest possible value of $xy$?
+
+**Correct Answer:** $15$
+
+**Rationale:** Check the corner products: $(-3)(-5)=15$, $(-3)(1)=-3$, $2(-5)=-10$, $2(1)=2$. The greatest is $15$, from two negatives.
+
+**Misconception addressed:** Students multiply the two upper bounds and answer $2$.
+
+---
+
+### A-324
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A farm has $40$ hectares of date palms and $25$ hectares of olive trees. The equation $40x+25y=3{,}600$ represents the farm's total harvest, in tonnes, last season. What does $x$ represent?
+
+(A) The average date harvest per hectare, in tonnes
+(B) The number of tonnes harvested per date palm tree
+(C) The number of hectares of date palms
+(D) The total date harvest, in tonnes
+
+**Correct Answer:** (A) The average date harvest per hectare, in tonnes
+
+**Rationale:** $40$ is the number of date-palm hectares, so $40x$ is the date harvest in tonnes; $x$ is the date harvest per hectare, in tonnes.
+
+**Misconception addressed:** Because $x$ is usually a count, students choose ``the number of hectares'', missing that the coefficients are the counts here.
+
+---
+
+### A-325
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A line in the $xy$-plane has slope $3$ and passes through the points $(2,k)$ and $(k,14)$. What is the value of $k$?
+
+(A) $8$
+(B) $4$
+(C) $11$
+(D) $5$
+
+**Correct Answer:** (D) $5$
+
+**Rationale:** $\dfrac{14-k}{k-2}=3\Rightarrow14-k=3k-6\Rightarrow k=5$. Check: points $(2,5)$ and $(5,14)$, slope $\dfrac93=3$ ✓.
+
+**Misconception addressed:** Students write the slope as $\dfrac{k-2}{14-k}$ (run over rise) and get a wrong value such as $11$.
+
+---
+
+### A-326
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, the region with $x\ge0$, $y\ge0$ and $2x+y\le12$ is a triangle. The line $y=mx$ divides this triangle into two regions of equal area. What is the value of $m$?
+
+**Correct Answer:** $2$
+
+**Rationale:** The vertices are $(0,0)$, $(6,0)$ and $(0,12)$. A line through the vertex $(0,0)$ halves the area exactly when it passes through the midpoint of the opposite side, $(3,6)$. So $m=\dfrac63=2$. Check: the piece below the line, with vertices $(0,0)$, $(6,0)$ and $(3,6)$, has area $\tfrac12\cdot6\cdot6=18$, half of $36$ ✓.
+
+**Misconception addressed:** Students halve a leg (for example the line through $(3,0)$ or $(0,6)$) instead of using the midpoint of the side opposite the origin.
+
+---
+
+### A-327
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $V(t)=1{,}200-0.75t$ gives the volume, in liters, of water in a tank $t$ minutes after it starts draining. Which function gives the volume, in liters, $h$ hours after the tank starts draining?
+
+(A) $1{,}200-0.75(h+60)$
+(B) $1{,}200-45h$
+(C) $20-0.75h$
+(D) $1{,}200-0.0125h$
+
+**Correct Answer:** (B) $1{,}200-45h$
+
+**Rationale:** $t=60h$, so $V=1{,}200-0.75(60h)=1{,}200-45h$.
+
+**Misconception addressed:** Students divide the rate by $60$ instead of multiplying, or shift the input.
+
+---
+
+### A-328
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the system $y=2x+k$ and $y=-x+10$, $k$ is a constant. For how many integer values of $k$ is the solution $(x,y)$ in Quadrant I (that is, $x>0$ and $y>0$)?
+
+**Correct Answer:** $29$
+
+**Rationale:** $2x+k=-x+10\Rightarrow x=\dfrac{10-k}{3}$ and $y=\dfrac{20+k}{3}$. $x>0\Rightarrow k<10$; $y>0\Rightarrow k>-20$. Integers from $-19$ to $9$: $29$ values.
+
+**Misconception addressed:** Students include an endpoint ($k=10$ or $k=-20$) or count $9-(-19)=28$.
+
+---
+
+### A-329
+
+**Skill:** Algebra — Linear inequalities in one or two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the inequality $kx+4<10$, $k$ is a constant and $k<0$. Which describes the solution set?
+
+(A) $x<\dfrac6k$
+(B) $x>\dfrac6k$
+(C) $x>-\dfrac6k$
+(D) $x<-\dfrac6k$
+
+**Correct Answer:** (B) $x>\dfrac6k$
+
+**Rationale:** $kx<6$. Dividing by the negative $k$ reverses the inequality: $x>\dfrac6k$. Test $k=-2$: $-2x<6\Rightarrow x>-3=\dfrac{6}{-2}$ ✓.
+
+**Misconception addressed:** Students divide by $k$ without reversing the sign because the letter $k$ looks positive.
+
+---
+
+### A-330
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A shopper spends exactly $600$ dollars on $x$ kilograms of oranges at $4$ dollars per kilogram and $y$ kilograms of apples at $5$ dollars per kilogram, so $4x+5y=600$. If the shopper buys $10$ more kilograms of oranges and still spends $600$ dollars, by how many kilograms does $y$ decrease?
+
+**Correct Answer:** $8$
+
+**Rationale:** $4\Delta x+5\Delta y=0\Rightarrow 4(10)+5\Delta y=0\Rightarrow\Delta y=-8$: $y$ decreases by $8$ kg.
+
+**Misconception addressed:** Students answer $-10$ (one-for-one trade) or $-12.5$ (dividing by $4$ and multiplying by $5$).
+
+---
+
+### A-331
+
+**Skill:** Algebra — Linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** If $7x-2y=3x+6y$ and $x$ and $y$ are nonzero, what is the value of $\dfrac{x+y}{x-y}$?
+
+(A) The value cannot be determined from the information given.
+(B) $\dfrac13$
+(C) $2$
+(D) $3$
+
+**Correct Answer:** (D) $3$
+
+**Rationale:** $4x=8y$, so $x=2y$. Then $\dfrac{x+y}{x-y}=\dfrac{3y}{y}=3$.
+
+**Misconception addressed:** Students believe one equation in two unknowns cannot fix a value, and choose ``cannot be determined''.
+
+---
+
+### A-332
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Consider the system $3x-4y=10$ and $-6x+8y=-20$. Which point lies on the graphs of both equations for every real number $t$?
+
+(A) $\left(t,\dfrac{3t-10}{4}\right)$
+(B) $\left(t,\dfrac{10-3t}{4}\right)$
+(C) $\left(t,\dfrac{3t+10}{4}\right)$
+(D) $\left(\dfrac{4t-10}{3},t\right)$
+
+**Correct Answer:** (A) $\left(t,\dfrac{3t-10}{4}\right)$
+
+**Rationale:** The second equation is $-2$ times the first, so the graphs are the same line and every point of $3x-4y=10$ works. Let $x=t$: $4y=3t-10$, so the point is $\left(t,\dfrac{3t-10}{4}\right)$. (With $y=t$, $x=\dfrac{4t+10}{3}$, not $\dfrac{4t-10}{3}$.)
+
+**Misconception addressed:** Students make a sign error isolating $y$, or give up because the system has ``no single solution''.
+
+---
+
+### A-333
+
+**Skill:** Algebra — Linear equations in one variable
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A wall is $9x$ meters long, where $x$ is a positive integer. Lamps are placed at both ends of the wall and every $\dfrac97$ meters along it. Which expression gives the number of lamps?
+
+(A) $\dfrac{81x}{7}+1$
+(B) $7x$
+(C) $7x+1$
+(D) $9x+1$
+
+**Correct Answer:** (C) $7x+1$
+
+**Rationale:** Number of gaps $=\dfrac{9x}{9/7}=7x$. With a lamp at both ends, lamps $=$ gaps $+1=7x+1$. Check $x=7$: $63$ m, $49$ gaps, $50$ lamps.
+
+**Misconception addressed:** Students count gaps instead of lamps ($7x$), or divide the wrong way ($\dfrac{81x}{7}+1$).
+
+---
+
+### A-334
+
+**Skill:** Algebra — Systems of two linear equations in two variables
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** How many solutions does the system $2x+y=11$, $x-y=1$, $x+3y=-13$ have?
+
+(A) Exactly one
+(B) Exactly three
+(C) Zero
+(D) Exactly two
+
+**Correct Answer:** (C) Zero
+
+**Rationale:** The first two equations give $3x=12$, so $(4,3)$. Test it in the third: $4+3(3)=13\neq-13$. No point lies on all three lines: $0$ solutions.
+
+**Misconception addressed:** Students count the pairwise intersections ($3$) or stop after the first two equations ($1$).
+
+---
+
+### A-335
+
+**Skill:** Algebra — Linear functions
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** An oven's temperature is $70^\circ\text{F}$ when it is switched on at $t=0$. For $3\le t\le12$, where $t$ is the time in minutes, the temperature is modeled by $T=a+bt$, where $a$ and $b$ are constants. The model gives $T=200$ at $t=3$ and $T=380$ at $t=7$. What is the value of $a$?
+
+**Correct Answer:** $65$
+
+**Rationale:** $b=\dfrac{380-200}{7-3}=45$. $a=200-45(3)=65$. The model is valid only for $t\ge3$, so its intercept $65$ need not equal the real starting temperature $70$.
+
+**Misconception addressed:** Students assume the intercept must be the given starting value $70$.
+
+---
+
+### AM-303
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $(k-2)x^2+4x+1=0$, $k$ is a constant. The equation has exactly one real solution for exactly two values of $k$. What is the sum of these two values of $k$?
+
+(A) $8$
+(B) $4$
+(C) $2$
+(D) $6$
+
+**Correct Answer:** (A) $8$
+
+**Rationale:** Case 1: $k=2$ makes the equation linear, $4x+1=0$, one solution. Case 2: $k\neq2$ and $\Delta=16-4(k-2)=0$, so $k=6$. Sum $=2+6=8$.
+
+**Misconception addressed:** Students use only the discriminant and miss that a zero leading coefficient makes the equation linear.
+
+---
+
+### AM-304
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $g$ is defined by $g(x)=\dfrac{x^2-kx-18}{x+3}$, where $k$ is a constant. The graph of $y=g(x)$ in the $xy$-plane is a line with exactly one point removed. What is the $y$-coordinate of the removed point?
+
+**Correct Answer:** $-9$
+
+**Rationale:** The graph is a line only if $x+3$ cancels, so $x=-3$ is a zero of the numerator: $9+3k-18=0$, $k=3$. Then $x^2-3x-18=(x+3)(x-6)$ and $g(x)=x-6$ for $x\neq-3$. The removed point is $(-3,-9)$.
+
+**Misconception addressed:** Students give the $x$-coordinate $-3$, or answer $0$ because the function is undefined there.
+
+---
+
+### AM-305
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $h$ is defined by $h(x)=\dfrac{x^2-4x-12}{x^2-36}$. What is the sum of all values of $x$ for which $h(x)=0$?
+
+(A) $4$
+(B) $-8$
+(C) $6$
+(D) $-2$
+
+**Correct Answer:** (D) $-2$
+
+**Rationale:** The numerator is $(x-6)(x+2)$, but $x=6$ also makes the denominator $0$, so $h(6)$ is undefined. The only zero is $x=-2$; the sum is $-2$.
+
+**Misconception addressed:** Students set the numerator equal to $0$ and use the sum of its roots, $4$.
+
+---
+
+### AM-306
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $h$ is defined by $h(x)=x^2-9$ for $x<2$ and $h(x)=-2x+10$ for $x\ge2$. What is the sum of all values of $m$ for which $h(m)=0$?
+
+(A) $0$
+(B) $2$
+(C) $5$
+(D) $8$
+
+**Correct Answer:** (B) $2$
+
+**Rationale:** For $x<2$: $x^2=9$ gives $x=\pm3$, but $3$ is not less than $2$, so only $-3$. For $x\ge2$: $x=5$ ✓. Sum $=-3+5=2$.
+
+**Misconception addressed:** Students keep $x=3$ although it is outside its piece, giving $5$ or $8$.
+
+---
+
+### AM-307
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $\dfrac{x^2}{x-a}=\dfrac{9}{x-a}$, $a$ is a constant. For how many real values of $a$ does the equation have exactly one real solution?
+
+(A) Infinitely many
+(B) Exactly two
+(C) Exactly one
+(D) Zero
+
+**Correct Answer:** (B) Exactly two
+
+**Rationale:** Multiplying gives $x^2=9$, so $x=\pm3$, with the restriction $x\neq a$. The equation has exactly one solution when $a$ equals one of these roots: $a=3$ or $a=-3$. Two values.
+
+**Misconception addressed:** Students treat the two roots as fixed and answer $0$, or think every $a$ works.
+
+---
+
+### AM-308
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is defined by $f(x)=x^2-1$. How many distinct real solutions does the equation $f(f(x))=0$ have?
+
+(A) $1$
+(B) $4$
+(C) $2$
+(D) $3$
+
+**Correct Answer:** (D) $3$
+
+**Rationale:** $f(u)=0$ when $u=\pm1$. $f(x)=1\Rightarrow x^2=2\Rightarrow x=\pm\sqrt2$. $f(x)=-1\Rightarrow x^2=0\Rightarrow x=0$ (one solution only). Total: $3$.
+
+**Misconception addressed:** Students expect $2\times2=4$ solutions, or stop at the zeros of $f$ and answer $2$.
+
+---
+
+### AM-309
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** How many solutions $(x,y)$ does the system $x^2+y^2=25$ and $y=x^2-5$ have?
+
+(A) $3$
+(B) $4$
+(C) $1$
+(D) $2$
+
+**Correct Answer:** (A) $3$
+
+**Rationale:** Substitute $x^2=y+5$: $y+5+y^2=25\Rightarrow y^2+y-20=0\Rightarrow y=4$ or $y=-5$. $y=4$: $x=\pm3$ (two points). $y=-5$: $x^2=0$, $x=0$ (one point). Total $3$. Desmos: graph both and count the intersection points.
+
+**Misconception addressed:** Students give every $y$-value two $x$-values ($4$) or count $y$-values only ($2$).
+
+---
+
+### AM-310
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** How many real solutions does the equation $x^2=2^x$ have?
+
+(A) $1$
+(B) $2$
+(C) $3$
+(D) $4$
+
+**Correct Answer:** (C) $3$
+
+**Rationale:** $x=2$ and $x=4$ work by inspection. For $x<0$, $x^2$ grows to $\infty$ as $x\to-\infty$ while $2^x\to0$, and at $x=0$, $x^2=0<1=2^0$, so the graphs also cross once for $x<0$ (near $x\approx-0.77$). Total $3$. Desmos: graph $y=x^2$ and $y=2^x$ and zoom out.
+
+**Misconception addressed:** Students find $2$ and $4$ by testing integers and miss the negative root.
+
+---
+
+### AM-311
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** What is the sum of all solutions to the equation $(x-3)^2=(2x+1)^2$?
+
+**Correct Answer:** $-\dfrac{10}{3}$ (or $-3.333$)
+
+**Rationale:** $x-3=\pm(2x+1)$. With $+$: $x=-4$. With $-$: $x-3=-2x-1\Rightarrow x=\tfrac23$. Sum $=-4+\tfrac23=-\tfrac{10}{3}$.
+
+**Misconception addressed:** Students take square roots without $\pm$ and find only $x=-4$.
+
+---
+
+### AM-312
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** How many real solutions does the equation $\sqrt{x^2-10x+25}=5-x$ have?
+
+(A) Exactly two
+(B) Zero
+(C) Infinitely many
+(D) Exactly one
+
+**Correct Answer:** (C) Infinitely many
+
+**Rationale:** $\sqrt{x^2-10x+25}=\sqrt{(x-5)^2}=|x-5|$. And $|x-5|=5-x$ exactly when $x-5\le0$, that is, for every $x\le5$. Infinitely many solutions.
+
+**Misconception addressed:** Students write $\sqrt{(x-5)^2}=x-5$ and get only $x=5$, or square both sides, reach $0=0$ and panic.
+
+---
+
+### AM-313
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A kiosk's daily profit, in hundreds of dollars, is modeled by $P(x)=-2x^2+12x+5$, where $x$ is the price of an item in dollars. The model is used only for $4\le x\le7$. What is the greatest daily profit, in hundreds of dollars, predicted by the model on this interval?
+
+(A) $21$
+(B) $23$
+(C) $-9$
+(D) $5$
+
+**Correct Answer:** (A) $21$
+
+**Rationale:** The vertex is at $x=-\dfrac{12}{2(-2)}=3$, outside the interval. On $4\le x\le7$ the parabola is decreasing, so the maximum is $P(4)=-32+48+5=21$.
+
+**Misconception addressed:** Students use the vertex value $P(3)=23$ without checking the interval.
+
+---
+
+### AM-314
+
+**Skill:** Advanced Math — Equivalent expressions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The expression $\dfrac{6x^2+7x-5}{2x+3}$ is equivalent to $Ax+B+\dfrac{C}{2x+3}$, where $A$, $B$ and $C$ are constants. What is the value of $A+B+C$?
+
+(A) $-4$
+(B) $2$
+(C) $4$
+(D) $0$
+
+**Correct Answer:** (D) $0$
+
+**Rationale:** $(2x+3)(3x-1)=6x^2+7x-3$, so $6x^2+7x-5=(2x+3)(3x-1)-2$. $A=3$, $B=-1$, $C=-2$; sum $=0$.
+
+**Misconception addressed:** Students use synthetic division with $-\tfrac32$ and forget to divide the quotient by $2$, getting $A=6$, $B=-2$.
+
+---
+
+### AM-315
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** When the polynomial $p(x)$ is divided by $x-5$, the remainder is $8$. What is the remainder when $p(2x-1)$ is divided by $x-3$?
+
+(A) $15$
+(B) $8$
+(C) $5$
+(D) $3$
+
+**Correct Answer:** (B) $8$
+
+**Rationale:** By the remainder theorem, the remainder is the value of $p(2x-1)$ at $x=3$, which is $p(5)=8$.
+
+**Misconception addressed:** Students transform the remainder ($2\cdot8-1=15$) or answer the input $5$.
+
+---
+
+### AM-316
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For all real numbers $x$, $f(2x-1)=4x^2+3$. Which of the following defines $f(x)$?
+
+(A) $f(x)=x^2+4$
+(B) $f(x)=x^2+2x+4$
+(C) $f(x)=4x^2+3$
+(D) $f(x)=4x^2-4x+4$
+
+**Correct Answer:** (B) $f(x)=x^2+2x+4$
+
+**Rationale:** Let $u=2x-1$, so $x=\dfrac{u+1}{2}$ and $4x^2=(u+1)^2$. Then $f(u)=(u+1)^2+3=u^2+2u+4$. Check: $x=3$ gives $f(5)=39$ and $25+10+4=39$ ✓.
+
+**Misconception addressed:** Students copy the right side unchanged, or substitute $2x-1$ into it instead of inverting.
+
+---
+
+### AM-317
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Desmos
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, the graphs of $y=|x-2|$ and $y=mx+1$, where $m$ is a constant, intersect at exactly two points. Which of the following could be the value of $m$?
+
+(A) $-2$
+(B) $-\dfrac34$
+(C) $2$
+(D) $\dfrac12$
+
+**Correct Answer:** (D) $\dfrac12$
+
+**Rationale:** Right branch ($x\ge2$): $x=\dfrac{3}{1-m}\ge2$ needs $-\tfrac12\le m<1$. Left branch ($x<2$): $x=\dfrac1{1+m}<2$ needs $m>-\tfrac12$ (or $m<-1$). Both branches meet the line when $-\tfrac12<m<1$, so $m=\tfrac12$. Desmos: add a slider for $m$ and count intersections.
+
+**Misconception addressed:** Students think any line through $(0,1)$ with a slope between $-1$ and $1$ works, or check only one branch.
+
+---
+
+### AM-318
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Medium
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** How many integers $x$ satisfy the inequality $x(x-4)<2x$?
+
+**Correct Answer:** $5$
+
+**Rationale:** $x^2-6x<0\Rightarrow x(x-6)<0\Rightarrow0<x<6$. Integers: $1,2,3,4,5$, so $5$.
+
+**Misconception addressed:** Students divide both sides by $x$ (not allowed when $x$ may be negative or zero) and get $x<6$, which has infinitely many integers.
+
+---
+
+### AM-319
+
+**Skill:** Advanced Math — Nonlinear functions
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The function $f$ is defined by $f(x)=a\big((x-3)^2-b\big)\big((x-3)^2-c\big)$, where $a$, $b$ and $c$ are constants. If $f(1)=40$ and $f(6)=-14$, what is the value of $f(5)+f(0)$?
+
+**Correct Answer:** $26$
+
+**Rationale:** $x$ appears only in $(x-3)^2$, so the graph is symmetric about $x=3$. $f(5)$ uses $(5-3)^2=4$, the same as $f(1)$, so $f(5)=40$. $f(0)$ uses $9$, the same as $f(6)$, so $f(0)=-14$. Sum $=26$.
+
+**Misconception addressed:** Students try to solve for $a$, $b$ and $c$ (three unknowns, two equations) and decide it cannot be done.
+
+---
+
+### AM-320
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $\dfrac{x+a}{x^2-a^2}=-\dfrac{3}{20x}$, $a$ is a constant. If $x=6$ is a solution, what is the value of $a$?
+
+**Correct Answer:** $46$
+
+**Rationale:** For $x\neq\pm a$, $\dfrac{x+a}{(x+a)(x-a)}=\dfrac1{x-a}$. So $\dfrac1{x-a}=-\dfrac3{20x}\Rightarrow20x=-3x+3a\Rightarrow a=\dfrac{23x}{3}=46$. Check: $\dfrac{52}{36-2116}=-\dfrac1{40}=-\dfrac{3}{120}$ ✓.
+
+**Misconception addressed:** Students cross-multiply the full quadratic and lose signs, or stop at a value of $x$.
+
+---
+
+### AM-321
+
+**Skill:** Advanced Math — Nonlinear equations in one variable and systems of equations in two variables
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $\dfrac{x^2}{\sqrt{x^2-k^2}}=\dfrac{k^2}{\sqrt{x^2-k^2}}+24$, $k$ is a positive constant. Which of the following is a solution?
+
+(A) $-\sqrt{k^2+576}$
+(B) $\sqrt{576-k^2}$
+(C) $\sqrt{k^2+24}$
+(D) $k+24$
+
+**Correct Answer:** (A) $-\sqrt{k^2+576}$
+
+**Rationale:** $\dfrac{x^2-k^2}{\sqrt{x^2-k^2}}=24\Rightarrow\sqrt{x^2-k^2}=24\Rightarrow x^2=k^2+576\Rightarrow x=\pm\sqrt{k^2+576}$. Only the negative root is offered. Check $k=7$: $x=-25$.
+
+**Misconception addressed:** Students forget to square $24$ (choosing $\sqrt{k^2+24}$) or reject a negative answer.
+
+---
+
+### GT-232
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, a circle has equation $(x-4)^2+(y+2)^2=50$. Which point lies in the interior of the circle?
+
+(A) $(10,2)$
+(B) $(9,3)$
+(C) $(-1,-6)$
+(D) $(-3,0)$
+
+**Correct Answer:** (C) $(-1,-6)$
+
+**Rationale:** Compare $(x-4)^2+(y+2)^2$ with $50$: $(-3,0)\to53$; $(9,3)\to50$ (on the circle); $(10,2)\to52$; $(-1,-6)\to25+16=41<50$, inside.
+
+**Misconception addressed:** Students check each coordinate separately ($|x-4|<\sqrt{50}$ and $|y+2|<\sqrt{50}$), choose a point that is on the circle, or flip the centre's signs.
+
+---
+
+### GT-233
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The graph of $x^2+y^2+10x-8y+k=0$ in the $xy$-plane is a circle, where $k$ is a constant. What is the greatest possible integer value of $k$?
+
+**Correct Answer:** $40$
+
+**Rationale:** Complete the squares: $(x+5)^2+(y-4)^2=41-k$. A circle needs $r^2>0$, so $k<41$. Greatest integer: $40$. ($k=41$ gives a single point.)
+
+**Misconception addressed:** Students allow $r^2=0$ and answer $41$, or reverse the inequality.
+
+---
+
+### GT-234
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** For $0<t<\dfrac{\pi}{2}$, $\sin t=0.6$. What is the value of $\cos(\pi+t)+\sin(\pi-t)$?
+
+(A) $0.2$
+(B) $-1.4$
+(C) $-0.2$
+(D) $1.4$
+
+**Correct Answer:** (C) $-0.2$
+
+**Rationale:** $\cos t=0.8$. On the unit circle, $\pi+t$ is in Quadrant III, so $\cos(\pi+t)=-\cos t=-0.8$; $\pi-t$ is in Quadrant II, so $\sin(\pi-t)=\sin t=0.6$. Sum $=-0.2$.
+
+**Misconception addressed:** Students make both terms negative ($-1.4$) or both positive ($1.4$).
+
+---
+
+### GT-235
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Points $A$, $B$ and $C$ lie on a circle with radius $12$, and $C$ lies on the major arc $AB$. The measure of angle $ACB$ is $\dfrac{2\pi}{9}$ radians. What is the length of minor arc $AB$?
+
+(A) $\dfrac{16\pi}{3}$
+(B) $\dfrac{8\pi}{3}$
+(C) $\dfrac{64\pi}{3}$
+(D) $\dfrac{56\pi}{3}$
+
+**Correct Answer:** (A) $\dfrac{16\pi}{3}$
+
+**Rationale:** The central angle is twice the inscribed angle: $\dfrac{4\pi}{9}$. Arc length $=12\cdot\dfrac{4\pi}{9}=\dfrac{16\pi}{3}$.
+
+**Misconception addressed:** Students use the inscribed angle as the central angle and get $\dfrac{8\pi}{3}$.
+
+---
+
+### GT-236
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $ABC$, point $D$ lies on $\overline{AB}$ and point $E$ lies on $\overline{AC}$ so that the measure of angle $AED$ equals the measure of angle $ABC$. If $AD=4$, $DB=11$ and $AE=6$, what is the length of $\overline{EC}$?
+
+(A) $10$
+(B) $16.5$
+(C) $22.5$
+(D) $4$
+
+**Correct Answer:** (D) $4$
+
+**Rationale:** Triangles $AED$ and $ABC$ share angle $A$ and have $\angle AED=\angle ABC$, so $A\leftrightarrow A$, $E\leftrightarrow B$, $D\leftrightarrow C$. Then $\dfrac{AE}{AB}=\dfrac{AD}{AC}$: $\dfrac6{15}=\dfrac4{AC}$, $AC=10$, $EC=10-6=4$. $\overline{DE}$ is NOT parallel to $\overline{BC}$.
+
+**Misconception addressed:** Students assume $\overline{DE}\parallel\overline{BC}$ and use $\dfrac{AD}{DB}=\dfrac{AE}{EC}$, getting $16.5$.
+
+---
+
+### GT-237
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In right triangle $ABC$, angle $C$ is the right angle, $AC=16$ and $BC=12$. Point $E$ lies on $\overline{AC}$ with $AE=10$, and point $F$ lies on $\overline{AB}$ so that $\overline{EF}\perp\overline{AB}$. What is the length of $\overline{EF}$?
+
+(A) $8$
+(B) $6$
+(C) $7.5$
+(D) $12.5$
+
+**Correct Answer:** (B) $6$
+
+**Rationale:** $AB=20$. Triangles $AFE$ and $ACB$ are similar (shared angle $A$, right angles at $F$ and $C$), with hypotenuses $AE$ and $AB$. So $\dfrac{EF}{BC}=\dfrac{AE}{AB}$: $EF=12\cdot\dfrac{10}{20}=6$.
+
+**Misconception addressed:** Students match $AE$ with the leg $AC$ ($EF=12\cdot\tfrac{10}{16}=7.5$) or give $AF=8$.
+
+---
+
+### GT-238
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A triangle has two sides of lengths $10$ and $12$, and the angle between them measures $150^\circ$. What is the area of the triangle?
+
+(A) $30\sqrt3$
+(B) $30$
+(C) $15$
+(D) $60$
+
+**Correct Answer:** (B) $30$
+
+**Rationale:** The height to the side of length $10$ is $12\sin150^\circ=12\cdot\tfrac12=6$ (it falls outside the triangle). Area $=\tfrac12\cdot10\cdot6=30$.
+
+**Misconception addressed:** Students use $\sin60^\circ$ or treat the triangle as right ($\tfrac12\cdot10\cdot12=60$).
+
+---
+
+### GT-239
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A rhombus has side length $13$ and area $120$. What is the sum of the lengths of its diagonals?
+
+**Correct Answer:** $34$
+
+**Rationale:** Area $=\tfrac12d_1d_2=120\Rightarrow d_1d_2=240$. Half-diagonals and a side form a right triangle: $d_1^2+d_2^2=4(13^2)=676$. $(d_1+d_2)^2=676+480=1156$, so $d_1+d_2=34$ (diagonals $24$ and $10$).
+
+**Misconception addressed:** Students forget the $\tfrac12$ in the area formula or answer $2\cdot13=26$.
+
+---
+
+### GT-240
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A right circular cone stands with its vertex pointing up. Its base radius is $6$ and its height is $12$. Water fills the cone to a depth of $6$, measured from the base. What is the volume of the water?
+
+(A) $18\pi$
+(B) $72\pi$
+(C) $108\pi$
+(D) $126\pi$
+
+**Correct Answer:** (D) $126\pi$
+
+**Rationale:** The empty top part is a cone similar to the whole with scale $\tfrac12$, so its volume is $\tfrac18$ of the cone. Cone volume $=\tfrac13\pi(36)(12)=144\pi$. Water $=\tfrac78\cdot144\pi=126\pi$.
+
+**Misconception addressed:** Students take the water as the small cone ($18\pi$) or halve the volume ($72\pi$).
+
+---
+
+### GT-241
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A sector of a circle has radius $10$ and central angle $216^\circ$. The sector is rolled into a right circular cone so that its two straight edges meet. The volume of the cone is $k\pi$. What is the value of $k$?
+
+**Correct Answer:** $96$
+
+**Rationale:** Arc length $=10\cdot\dfrac{216}{360}\cdot2\pi=12\pi$, which is the base circumference, so $r=6$. The sector radius is the slant height: $h=\sqrt{10^2-6^2}=8$. $V=\tfrac13\pi(36)(8)=96\pi$.
+
+**Misconception addressed:** Students use $10$ as the cone's radius or height.
+
+---
+
+### GT-242
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Line $\ell$ passes through $(0,0)$ and $(a,12)$, where $a>0$. The acute angle between $\ell$ and the positive $y$-axis measures $60^\circ$. What is the value of $a$?
+
+(A) $12\sqrt3$
+(B) $4\sqrt3$
+(C) $24$
+(D) $6$
+
+**Correct Answer:** (A) $12\sqrt3$
+
+**Rationale:** The angle with the positive $x$-axis is $90^\circ-60^\circ=30^\circ$, so $\tan30^\circ=\dfrac{12}{a}$ and $a=\dfrac{12}{1/\sqrt3}=12\sqrt3$.
+
+**Misconception addressed:** Students use $60^\circ$ as the angle with the $x$-axis and get $a=4\sqrt3$.
+
+---
+
+### GT-243
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangles $PQR$ and $XYZ$, $PQ=XY=9$ and $m\angle R=m\angle Z=35^\circ$, where $\overline{PQ}$ is opposite angle $R$ and $\overline{XY}$ is opposite angle $Z$. Which additional fact is enough to prove that triangle $PQR$ is congruent to triangle $XYZ$?
+
+(A) $PR=XZ$
+(B) $QR=YZ=14$
+(C) $m\angle Q=m\angle Y$
+(D) $PR=QR$
+
+**Correct Answer:** (C) $m\angle Q=m\angle Y$
+
+**Rationale:** With $\angle Q=\angle Y$, the triangles have two angles and a non-included side equal (AAS). Choices with one more side give SSA, which can fit two different triangles (for $QR=14$ there are two triangles, with $PR\approx15.5$ or $PR\approx7.4$). $PR=QR$ is about one triangle only.
+
+**Misconception addressed:** Students accept side-side-angle as a congruence test.
+
+---
+
+### GT-244
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A square has one side on the diameter of a semicircle of radius $10$, and its other two vertices lie on the arc. What is the area of the square?
+
+(A) $100$
+(B) $50$
+(C) $80$
+(D) $200$
+
+**Correct Answer:** (C) $80$
+
+**Rationale:** Let the side be $s$. A top vertex is $\tfrac s2$ from the centre horizontally and $s$ up, so $s^2+\left(\tfrac s2\right)^2=100$, $\tfrac54s^2=100$, $s^2=80$.
+
+**Misconception addressed:** Students use the full-circle result (area $2r^2=200$) or half of it.
+
+---
+
+### GT-245
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the $xy$-plane, the endpoints of a diameter of a circle are $(-2,3)$ and $(6,-1)$. Which equation represents the circle?
+
+(A) $x^2+y^2-4x-2y-15=0$
+(B) $x^2+y^2-4x-2y-20=0$
+(C) $x^2+y^2-4x-2y-75=0$
+(D) $x^2+y^2+4x+2y-15=0$
+
+**Correct Answer:** (A) $x^2+y^2-4x-2y-15=0$
+
+**Rationale:** Centre $(2,1)$, $r^2=(6-2)^2+(-1-1)^2=20$. $(x-2)^2+(y-1)^2=20\Rightarrow x^2+y^2-4x-2y+5=20\Rightarrow x^2+y^2-4x-2y-15=0$.
+
+**Misconception addressed:** Students use the diameter squared ($80$) as $r^2$ or drop the constants $4+1$ when expanding.
+
+---
+
+### GT-246
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Triangle $ABC$ has area $60$. Point $D$ lies on $\overline{BC}$ with $BD:DC=2:3$, and point $E$ lies on $\overline{AD}$ with $AE:ED=3:1$. What is the area of triangle $BED$?
+
+(A) $15$
+(B) $18$
+(C) $10$
+(D) $6$
+
+**Correct Answer:** (D) $6$
+
+**Rationale:** Triangles $ABD$ and $ABC$ share the height from $A$: area $ABD=\tfrac25\cdot60=24$. Triangles $BED$ and $BAD$ share the height from $B$: area $BED=\tfrac14\cdot24=6$.
+
+**Misconception addressed:** Students use the wrong part of a ratio ($\tfrac34$ instead of $\tfrac14$, or $\tfrac23$ instead of $\tfrac25$).
+
+---
+
+### GT-247
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In a circle of radius $13$, two parallel chords have lengths $24$ and $10$. Which of the following could be the distance between the two chords?
+
+(A) $12$
+(B) $17$
+(C) $26$
+(D) $5$
+
+**Correct Answer:** (B) $17$
+
+**Rationale:** Distances from the centre: $\sqrt{169-144}=5$ and $\sqrt{169-25}=12$. Same side of the centre: $12-5=7$; opposite sides: $12+5=17$. Only $17$ is offered.
+
+**Misconception addressed:** Students picture only one case, or add the half-chord lengths.
+
+---
+
+### GT-248
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Medium
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The radius of a right circular cylinder is increased by $20\%$ and its height is decreased by $25\%$. What is the effect on the volume of the cylinder?
+
+(A) It does not change.
+(B) It increases by $8\%$.
+(C) It decreases by $5\%$.
+(D) It increases by $19\%$.
+
+**Correct Answer:** (B) It increases by $8\%$.
+
+**Rationale:** $V$ scales by $(1.2)^2(0.75)=1.08$: an increase of $8\%$.
+
+**Misconception addressed:** Students add percents ($20-25=-5$) or forget to square the radius factor.
+
+---
+
+### GT-249
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Sphere $Q$ has volume $36\pi$. Sphere $P$ has a radius $7$ times the radius of sphere $Q$. The spheres are externally tangent at point $T$. Segment $\overline{MT}$ is a diameter of sphere $P$ and segment $\overline{TN}$ is a diameter of sphere $Q$, with $M$, $T$ and $N$ on one line. What is the length of $\overline{MN}$?
+
+(A) $66$
+(B) $45$
+(C) $24$
+(D) $48$
+
+**Correct Answer:** (D) $48$
+
+**Rationale:** $\tfrac43\pi r^3=36\pi\Rightarrow r^3=27$, $r=3$. Sphere $P$ has radius $21$. $MN=2(21)+2(3)=48$.
+
+**Misconception addressed:** Students add the radii ($24$) or solve $r^2=27$.
+
+---
+
+### GT-250
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** Desmos
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In the equation $\sin\left(\dfrac{39\pi}{p}\right)=\dfrac{\sqrt3}{2}$, $p$ is a constant and $p>60$. What is the value of $p$?
+
+**Correct Answer:** $117$
+
+**Rationale:** $p>60$ means $0<\dfrac{39\pi}{p}<\dfrac{39\pi}{60}=0.65\pi$. The only angle in this interval with sine $\dfrac{\sqrt3}2$ is $\dfrac\pi3$ (the next, $\dfrac{2\pi}3$, gives $p=58.5$). So $\dfrac{39}{p}=\dfrac13$, $p=117$.
+
+**Misconception addressed:** Students take $\dfrac{2\pi}{3}$ and get $58.5$, ignoring the condition, or work in degrees.
+
+---
+
+### GT-251
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A rectangle is inscribed in a circle with area $676\pi$. The length of the rectangle's diagonal is twice the length of its shorter side. What is the perimeter of the rectangle?
+
+(A) $52+52\sqrt3$
+(B) $104$
+(C) $26+26\sqrt3$
+(D) $104+52\sqrt3$
+
+**Correct Answer:** (A) $52+52\sqrt3$
+
+**Rationale:** $r=26$, so the diagonal (a diameter) is $52$ and the short side is $26$. The diagonal is twice the short side, so the triangle is $30^\circ$–$60^\circ$–$90^\circ$ and the long side is $26\sqrt3$. Perimeter $=52+52\sqrt3$.
+
+**Misconception addressed:** Students assume a square, or use the radius as the diagonal.
+
+---
+
+### GT-252
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Two identical right rectangular prisms each have a square base with side length $s$ and a height of $35$. Each prism has surface area $K$. The prisms are glued together base to base, and the new solid has surface area $\dfrac{15}{8}K$. What is the value of $s$?
+
+**Correct Answer:** $10$
+
+**Rationale:** $K=2s^2+140s$. Gluing hides one base on each prism: new area $=2K-2s^2$. So $2K-2s^2=\tfrac{15}8K\Rightarrow\tfrac18K=2s^2\Rightarrow K=16s^2$. Then $2s^2+140s=16s^2\Rightarrow s=10$.
+
+**Misconception addressed:** Students subtract the glued face once, or set the new area to $2K$.
+
+---
+
+### GT-253
+
+**Skill:** Geometry and Trigonometry — Area and volume
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Square pyramids $X$ and $Y$ have the same base, a square with side length $10$. Pyramid $X$ has height $12$ and pyramid $Y$ has height $24$. The total surface area of $Y$ is approximately what percent greater than the total surface area of $X$?
+
+(A) $89\%$
+(B) $100\%$
+(C) $64\%$
+(D) $50\%$
+
+**Correct Answer:** (C) $64\%$
+
+**Rationale:** Slant heights: $X$: $\sqrt{12^2+5^2}=13$; $Y$: $\sqrt{24^2+5^2}=\sqrt{601}\approx24.52$. Areas: $X=100+20(13)=360$; $Y=100+20(24.52)\approx590.3$. $\dfrac{590.3}{360}\approx1.64$: about $64\%$ greater.
+
+**Misconception addressed:** Students expect doubling ($100\%$), use the height as the slant height, or compare lateral areas only ($89\%$).
+
+---
+
+### GT-254
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $ABC$, the measure of angle $A$ is $18^\circ$. Which additional fact is NOT sufficient to determine the measure of angle $B$?
+
+(A) $m\angle B=m\angle C$
+(B) $m\angle C=3\,m\angle B$
+(C) Triangle $ABC$ is isosceles.
+(D) $m\angle C=90^\circ$
+
+**Correct Answer:** (C) Triangle $ABC$ is isosceles.
+
+**Rationale:** If the triangle is isosceles, angle $A$ could be a base angle or the vertex angle, so $B$ could be $18^\circ$, $81^\circ$ or $144^\circ$. Each other fact fixes $B$: $B+3B=162\Rightarrow B=40.5^\circ$; $B=C\Rightarrow B=81^\circ$; $C=90^\circ\Rightarrow B=72^\circ$.
+
+**Misconception addressed:** Students think ``isosceles'' fixes the angles and stop at the first case.
+
+---
+
+### GT-255
+
+**Skill:** Geometry and Trigonometry — Circles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Model Earth as a sphere with radius $6{,}371$ kilometers. An observer's eye is $1$ kilometer above the surface. The line of sight from the eye to the horizon is tangent to Earth. Which is closest to the distance, in kilometers, from the eye to the point where the line of sight touches Earth?
+
+(A) $112.9$
+(B) $1.0$
+(C) $6{,}371.0$
+(D) $79.8$
+
+**Correct Answer:** (A) $112.9$
+
+**Rationale:** The radius to the point of tangency is perpendicular to the line of sight: $d=\sqrt{6{,}372^2-6{,}371^2}=\sqrt{12{,}743}\approx112.9$.
+
+**Misconception addressed:** Students compute $\sqrt{Rh}\approx79.8$ (dropping the factor $2$ in $2Rh$) or do not see the right triangle.
+
+---
+
+### GT-256
+
+**Skill:** Geometry and Trigonometry — Lines, angles, and triangles
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Parallel lines $m$ and $n$ are cut by a transversal. Angles $b$ and $c$ are same-side interior angles, and angle $a$ is one of the other angles formed. If $200<a+b+c<236$, where all measures are in degrees, which of the following could be the measure of angle $a$, in degrees?
+
+(A) $56$
+(B) $18$
+(C) $64$
+(D) $40$
+
+**Correct Answer:** (D) $40$
+
+**Rationale:** Same-side interior angles are supplementary: $b+c=180$. So $200<a+180<236$, giving $20<a<56$. Only $40$ works ($56$ is excluded by the strict inequality; $18$ and $64$ are outside).
+
+**Misconception addressed:** Students include an endpoint or do not use $b+c=180$.
+
+---
+
+### GT-257
+
+**Skill:** Geometry and Trigonometry — Right triangles and trigonometry
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In triangle $JKL$, the measure of angle $J$ is $(ab)^\circ$ and the measure of angle $K$ is $(cd)^\circ$, where $ab+cd=90$. If $\sin J=0.6$, what is the value of $\tan K$?
+
+(A) $\dfrac34$
+(B) $\dfrac43$
+(C) $\dfrac45$
+(D) The value cannot be determined from the information given.
+
+**Correct Answer:** (B) $\dfrac43$
+
+**Rationale:** $J+K=90^\circ$, so angle $L=90^\circ$ and $J$, $K$ are complementary: $\cos K=\sin J=0.6$, $\sin K=0.8$, $\tan K=\dfrac{0.8}{0.6}=\dfrac43$.
+
+**Misconception addressed:** Students decide there is not enough information because $a,b,c,d$ are unknown.
+
+---
+
+### PS-157
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Data sets $A$ and $B$ each contain $20$ values, all from the list $10,20,30,40,50$. The frequencies in $A$ are $2,3,10,3,2$ and the frequencies in $B$ are $5,3,4,3,5$, in that order. Which statement is true?
+
+(A) The standard deviations are equal because the means and ranges are equal.
+(B) The standard deviation of $B$ is greater.
+(C) The standard deviation of $A$ is greater.
+(D) The standard deviations cannot be compared without calculating them.
+
+**Correct Answer:** (B) The standard deviation of $B$ is greater.
+
+**Rationale:** Both sets have mean $30$ and range $40$. $B$ has more values at the extremes ($10$ and $50$) and fewer at the mean, so its values are farther from the mean on average: SD of $B$ ($\approx15.2$) is greater than SD of $A$ ($\approx10.5$).
+
+**Misconception addressed:** Students think equal means and ranges force equal standard deviations.
+
+---
+
+### PS-158
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Medium
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The daily high temperatures in a city for one week have a mean of $34^\circ\text{C}$ and a standard deviation of $4^\circ\text{C}$. Each temperature is converted to degrees Fahrenheit using $F=1.8C+32$. What is the standard deviation of the converted temperatures, in degrees Fahrenheit?
+
+**Correct Answer:** $7.2$
+
+**Rationale:** Multiplying every value by $1.8$ multiplies the SD by $1.8$; adding $32$ shifts the values but does not change the spread. SD $=1.8\cdot4=7.2$.
+
+**Misconception addressed:** Students apply the full conversion ($1.8\cdot4+32=39.2$) or think the SD does not change.
+
+---
+
+### PS-159
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The data set $12,15,19,24,30$ has a range of $18$. A sixth value, $x$, is added, and the range of the new data set is $1.5$ times the original range. What is the sum of all possible values of $x$?
+
+**Correct Answer:** $42$
+
+**Rationale:** New range $=27$. Either $x$ is the new maximum: $x-12=27$, $x=39$; or the new minimum: $30-x=27$, $x=3$. Sum $=42$.
+
+**Misconception addressed:** Students assume the new value is the maximum and answer $39$.
+
+---
+
+### PS-160
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The data set $2,6,9,15,x$ has a mean equal to its median, where $x$ is a real number. What is the sum of all possible values of $x$?
+
+**Correct Answer:** $19$
+
+**Rationale:** Mean $=\dfrac{32+x}5$. If $x\le6$, median $6$: $x=-2$ ✓. If $6\le x\le9$, median $x$: $32+x=5x$, $x=8$ ✓. If $x\ge9$, median $9$: $x=13$ ✓. Sum $=-2+8+13=19$.
+
+**Misconception addressed:** Students assume $x$ is the median, or reject the negative value.
+
+---
+
+### PS-161
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A data set contains the values $1,2,3,4,5$ with frequencies $4,k,6,3,5$, respectively, where $k$ is a positive integer. The median of the data set is $3$. What is the greatest possible value of $k$?
+
+**Correct Answer:** $9$
+
+**Rationale:** There are $18+k$ values, and $4+k$ of them are at most $2$. For $k=9$: $27$ values, the $14$th is $3$ ✓. For $k=10$: $28$ values, the $14$th is $2$ and the $15$th is $3$, so the median is $2.5$. Greatest $k=9$.
+
+**Misconception addressed:** Students ignore that the total changes with $k$, or forget that an even count averages the two middle values.
+
+---
+
+### PS-162
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The commute times, in whole minutes, of $20$ students are grouped: $10$ students took $0$ to $9$ minutes, $7$ took $10$ to $19$ minutes, and $3$ took $20$ to $29$ minutes. Which of the following could NOT be the median commute time?
+
+(A) $10$
+(B) $7.5$
+(C) $14$
+(D) $4$
+
+**Correct Answer:** (D) $4$
+
+**Rationale:** The median is the mean of the $10$th and $11$th values. The $10$th is in $0$–$9$ and the $11$th is in $10$–$19$, so the median is between $\tfrac{0+10}2=5$ and $\tfrac{9+19}2=14$. $4$ is impossible; $7.5$, $10$ and $14$ are possible.
+
+**Misconception addressed:** Students think the median must lie inside one bin, or that it cannot be bounded at all.
+
+---
+
+### PS-163
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Data set $A$ has $11$ values with median $40$. Data set $B$ has $11$ values with median $52$. The two data sets are combined. Which of the following could be the median of the combined $22$ values?
+
+(A) $46$
+(B) $38$
+(C) $60$
+(D) $54$
+
+**Correct Answer:** (A) $46$
+
+**Rationale:** At most $5$ values of $A$ and at most $5$ values of $B$ are less than $40$, so at most $10$ combined values are below $40$ and the $11$th value is at least $40$. Likewise at most $10$ combined values are greater than $52$, so the $12$th value is at most $52$. The median lies between $40$ and $52$; only $46$ is in this range.
+
+**Misconception addressed:** Students think nothing can be said, or believe the median must equal the average of the two medians.
+
+---
+
+### PS-164
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Electric vehicles made up $4\%$ of a country's new-car sales in one year and $6\%$ the next year. Total new-car sales increased by $10\%$ from the first year to the second. By what percent did the number of electric vehicles sold increase?
+
+(A) $2\%$
+(B) $60\%$
+(C) $65\%$
+(D) $50\%$
+
+**Correct Answer:** (C) $65\%$
+
+**Rationale:** Let first-year sales be $100$: EVs $=4$. Second year: $110$ cars, EVs $=0.06(110)=6.6$. Increase $=\dfrac{2.6}{4}=65\%$.
+
+**Misconception addressed:** Students answer $2$ (percentage points) or $50$ (ignoring the change in total sales).
+
+---
+
+### PS-165
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The number $a$ is $150\%$ more than the number $b$, and $b$ is $60\%$ less than the positive number $c$. The number $a$ is what percent of $c$?
+
+**Correct Answer:** $100$
+
+**Rationale:** $a=2.5b$ and $b=0.4c$, so $a=c$: $100\%$.
+
+**Misconception addressed:** Students read ``$150\%$ more than'' as $1.5b$, giving $60\%$.
+
+---
+
+### PS-166
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** District $A$ has $120{,}000$ residents and a population density of $4{,}000$ residents per square kilometer. District $B$ has $60{,}000$ residents and a population density of $1{,}500$ residents per square kilometer. Which is closest to the population density, in residents per square kilometer, of the two districts combined?
+
+(A) $5{,}500$
+(B) $3{,}167$
+(C) $2{,}571$
+(D) $2{,}750$
+
+**Correct Answer:** (C) $2{,}571$
+
+**Rationale:** Areas: $\tfrac{120{,}000}{4{,}000}=30$ and $\tfrac{60{,}000}{1{,}500}=40$ km². Combined density $=\tfrac{180{,}000}{70}\approx2{,}571$.
+
+**Misconception addressed:** Students average the densities ($2{,}750$) or weight them by population ($\approx3{,}167$).
+
+---
+
+### PS-167
+
+**Skill:** Problem-Solving and Data Analysis — Percentages
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** Calculator
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Bottle $B$ holds $20\%$ more juice than bottle $A$ and costs $15\%$ more. To the nearest tenth of a percent, by what percent is the price per liter of bottle $B$ less than the price per liter of bottle $A$?
+
+**Correct Answer:** $4.2$
+
+**Rationale:** Price per liter of $B$ relative to $A$: $\dfrac{1.15}{1.20}\approx0.9583$. It is about $4.2\%$ less.
+
+**Misconception addressed:** Students subtract the percents and answer $5$.
+
+---
+
+### PS-168
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In a school, a student is chosen at random. The probability that the student is in grade $10$, given that the student is in the robotics club, is $\dfrac38$. The probability that the student is in the robotics club, given that the student is in grade $10$, is $\dfrac14$. There are $96$ grade $10$ students. How many robotics club members are NOT in grade $10$?
+
+**Correct Answer:** $40$
+
+**Rationale:** Grade $10$ robotics members $=\tfrac14\cdot96=24$. These are $\tfrac38$ of the club, so the club has $\tfrac{24}{3/8}=64$ members. Not in grade $10$: $64-24=40$.
+
+**Misconception addressed:** Students use the same denominator for both conditional probabilities.
+
+---
+
+### PS-169
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In grade $10$, $12$ students are in a club and $28$ are not. In grade $11$, $k$ students are in the club and $42$ are not. Being in the club is independent of grade. What is the value of $k$?
+
+**Correct Answer:** $18$
+
+**Rationale:** Independence means the proportion in the club is the same in each grade: $\dfrac{12}{40}=\dfrac{k}{k+42}$. $0.3k+12.6=k\Rightarrow k=18$.
+
+**Misconception addressed:** Students set $k=12$ (equal counts) or compare with the wrong total.
+
+---
+
+### PS-170
+
+**Skill:** Problem-Solving and Data Analysis — Probability and conditional probability
+**Difficulty:** Hard
+**Format:** Multiple Choice
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** In grade $10$, $18$ students are in the robotics club and $42$ are not. In grade $11$, $30$ students are in the robotics club and $60$ are not. A student is chosen at random from the students who are in grade $10$ OR in the robotics club. What is the probability that the student is in grade $11$?
+
+(A) $\dfrac13$
+(B) $\dfrac15$
+(C) $\dfrac12$
+(D) $\dfrac{5}{8}$
+
+**Correct Answer:** (A) $\dfrac13$
+
+**Rationale:** The group is all $60$ grade $10$ students plus the $30$ grade $11$ robotics members: $90$ students. Grade $11$ students in it: $30$. Probability $=\dfrac{30}{90}=\dfrac13$.
+
+**Misconception addressed:** Students use only the robotics club ($\tfrac{30}{48}$) or all students ($\tfrac{30}{150}$) as the denominator.
+
+---
+
+### PS-171
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A line of best fit for a data set is $\hat y=2.5x+40$. For the data point with $x=24$, the predicted value of $y$ is $20\%$ less than the actual value. What is the residual for this data point?
+
+**Correct Answer:** $25$
+
+**Rationale:** Predicted $=2.5(24)+40=100$. $100=0.8\cdot$actual, so actual $=125$. Residual $=$ actual $-$ predicted $=25$.
+
+**Misconception addressed:** Students take $20\%$ of the predicted value ($20$) or get the sign of the residual wrong.
+
+---
+
+### PS-172
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The model $\hat y=4.8x+62$ estimates a town's population $y$, in thousands, where $x$ is the number of decades since $1980$. According to the model, what is the estimated increase in the population, in people, per year?
+
+**Correct Answer:** $480$
+
+**Rationale:** $4.8$ thousand per decade $=4{,}800$ people per $10$ years $=480$ people per year.
+
+**Misconception addressed:** Students report $4.8$, $48$ or $4{,}800$ by converting only one of the units.
+
+---
+
+### PS-173
+
+**Skill:** Problem-Solving and Data Analysis — Ratios, rates, proportional relationships, and units
+**Difficulty:** Medium
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** The ratio of grade $9$ students to grade $10$ students in a club is $3:5$, and the ratio of grade $10$ students to grade $11$ students is $4:7$. The club has $201$ students in grades $9$, $10$ and $11$. How many more grade $11$ students than grade $9$ students are in the club?
+
+**Correct Answer:** $69$
+
+**Rationale:** Make the grade $10$ terms equal: $12:20$ and $20:35$, so $12:20:35$ (sum $67$). $201\div67=3$: $36$, $60$ and $105$. Difference $=105-36=69$.
+
+**Misconception addressed:** Students write $3:5:7$ (sum $15$) and divide $201$ by $15$.
+
+---
+
+### PS-174
+
+**Skill:** Problem-Solving and Data Analysis — Two-variable data: Models and scatterplots
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** A line of best fit for a data set is $\hat y=2.4x+15$. A new data set is formed by adding $5$ to every $x$-value and keeping each $y$-value. What is the $y$-intercept of the line of best fit for the new data set?
+
+**Correct Answer:** $3$
+
+**Rationale:** Shifting every $x$ right by $5$ shifts the line right by $5$: $\hat y=2.4(x-5)+15=2.4x+3$. Same slope, new intercept $3$.
+
+**Misconception addressed:** Students add $5$ to the intercept ($20$) or change the slope.
+
+---
+
+### PS-175
+
+**Skill:** Problem-Solving and Data Analysis — One-variable data: Distributions and measures of center and spread
+**Difficulty:** Hard
+**Format:** SPR
+**Tool:** No calculator needed
+
+**Source:** House-authored from a trick archetype found in the October 2026 web sweep (Bluebook PT4–PT10 walkthroughs, 2025–2026 real-test reports, prep guides). Archetype only; no source item, wording or numbers reproduced.
+
+**Question:** Data set $A$ has $10$ integers: $4$ are from $10$ to $19$ and $6$ are from $20$ to $29$. Data set $B$ has $10$ integers: $3$ are from $30$ to $39$ and $7$ are from $40$ to $49$. What is the smallest possible value of (mean of $B$) $-$ (mean of $A$)?
+
+**Correct Answer:** $12$
+
+**Rationale:** Make $A$ as large as possible and $B$ as small as possible. Greatest mean of $A=\dfrac{4(19)+6(29)}{10}=25$. Least mean of $B=\dfrac{3(30)+7(40)}{10}=37$. Smallest difference $=12$.
+
+**Misconception addressed:** Students use bin midpoints (difference $21$) or think the means cannot be compared.
+
+---
+
 ## 3. Bank Index (for worksheet sourcing)
 
-### Bank summary (all 994 items)
+### Bank summary (all 1078 items)
 
 | Domain | Skill | Medium | Hard | Total |
 |---|---|---:|---:|---:|
-| Advanced Math | Equivalent expressions | 22 | 52 | 74 |
+| Advanced Math | Equivalent expressions | 22 | 54 | 76 |
 | Advanced Math | Function notation | 0 | 2 | 2 |
-| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 25 | 57 | 82 |
-| Advanced Math | Nonlinear functions | 32 | 114 | 146 |
-| Algebra | Linear equations in one variable | 23 | 27 | 50 |
-| Algebra | Linear equations in two variables | 22 | 34 | 56 |
-| Algebra | Linear functions | 33 | 38 | 71 |
-| Algebra | Linear inequalities in one or two variables | 22 | 29 | 51 |
-| Algebra | Systems of two linear equations in two variables | 29 | 46 | 75 |
-| Geometry and Trigonometry | Area and volume | 22 | 35 | 57 |
-| Geometry and Trigonometry | Circles | 25 | 47 | 72 |
-| Geometry and Trigonometry | Lines, angles, and triangles | 20 | 29 | 49 |
-| Geometry and Trigonometry | Right triangles and trigonometry | 23 | 30 | 53 |
+| Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | 27 | 64 | 91 |
+| Advanced Math | Nonlinear functions | 32 | 122 | 154 |
+| Algebra | Linear equations in one variable | 23 | 28 | 51 |
+| Algebra | Linear equations in two variables | 26 | 37 | 63 |
+| Algebra | Linear functions | 34 | 42 | 76 |
+| Algebra | Linear inequalities in one or two variables | 23 | 32 | 55 |
+| Algebra | Systems of two linear equations in two variables | 30 | 48 | 78 |
+| Geometry and Trigonometry | Area and volume | 24 | 42 | 66 |
+| Geometry and Trigonometry | Circles | 26 | 53 | 79 |
+| Geometry and Trigonometry | Lines, angles, and triangles | 20 | 34 | 54 |
+| Geometry and Trigonometry | Right triangles and trigonometry | 23 | 35 | 58 |
 | Problem-Solving and Data Analysis | Evaluating statistical claims: Observational studies and experiments | 4 | 6 | 10 |
 | Problem-Solving and Data Analysis | Inference from sample statistics and margin of error | 8 | 10 | 18 |
-| Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | 5 | 15 | 20 |
-| Problem-Solving and Data Analysis | Percentages | 13 | 24 | 37 |
-| Problem-Solving and Data Analysis | Probability and conditional probability | 5 | 12 | 17 |
-| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 11 | 24 | 35 |
-| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 9 | 10 | 19 |
-| **Total** | | **353** | **641** | **994** |
+| Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | 6 | 22 | 28 |
+| Problem-Solving and Data Analysis | Percentages | 13 | 27 | 40 |
+| Problem-Solving and Data Analysis | Probability and conditional probability | 5 | 15 | 20 |
+| Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | 12 | 25 | 37 |
+| Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | 9 | 13 | 22 |
+| **Total** | | **367** | **711** | **1078** |
 
 ### Full index
 
@@ -21859,6 +23729,90 @@ What is the value of $g\left(f^{-1}(g(3))\right)$?
 | AM-300 | Advanced Math | Nonlinear functions | Hard | SPR |
 | AM-301 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
 | AM-302 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| A-316 | Algebra | Linear functions | Hard | SPR |
+| A-317 | Algebra | Linear functions | Hard | Multiple Choice |
+| A-318 | Algebra | Linear functions | Hard | SPR |
+| A-319 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-320 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-321 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-322 | Algebra | Linear inequalities in one or two variables | Hard | Multiple Choice |
+| A-323 | Algebra | Linear inequalities in one or two variables | Hard | SPR |
+| A-324 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-325 | Algebra | Linear equations in two variables | Medium | Multiple Choice |
+| A-326 | Algebra | Linear equations in two variables | Hard | SPR |
+| A-327 | Algebra | Linear functions | Medium | Multiple Choice |
+| A-328 | Algebra | Systems of two linear equations in two variables | Hard | SPR |
+| A-329 | Algebra | Linear inequalities in one or two variables | Medium | Multiple Choice |
+| A-330 | Algebra | Linear equations in two variables | Medium | SPR |
+| A-331 | Algebra | Linear equations in two variables | Hard | Multiple Choice |
+| A-332 | Algebra | Systems of two linear equations in two variables | Hard | Multiple Choice |
+| A-333 | Algebra | Linear equations in one variable | Hard | Multiple Choice |
+| A-334 | Algebra | Systems of two linear equations in two variables | Medium | Multiple Choice |
+| A-335 | Algebra | Linear functions | Hard | SPR |
+| AM-303 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-304 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-305 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-306 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-307 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-308 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-309 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-310 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-311 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-312 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-313 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-314 | Advanced Math | Equivalent expressions | Hard | Multiple Choice |
+| AM-315 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-316 | Advanced Math | Nonlinear functions | Hard | Multiple Choice |
+| AM-317 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| AM-318 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Medium | SPR |
+| AM-319 | Advanced Math | Nonlinear functions | Hard | SPR |
+| AM-320 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | SPR |
+| AM-321 | Advanced Math | Nonlinear equations in one variable and systems of equations in two variables | Hard | Multiple Choice |
+| GT-232 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-233 | Geometry and Trigonometry | Circles | Hard | SPR |
+| GT-234 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-235 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-236 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-237 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-238 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-239 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-240 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-241 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-242 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| GT-243 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-244 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-245 | Geometry and Trigonometry | Circles | Medium | Multiple Choice |
+| GT-246 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-247 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-248 | Geometry and Trigonometry | Area and volume | Medium | Multiple Choice |
+| GT-249 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-250 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | SPR |
+| GT-251 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-252 | Geometry and Trigonometry | Area and volume | Hard | SPR |
+| GT-253 | Geometry and Trigonometry | Area and volume | Hard | Multiple Choice |
+| GT-254 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-255 | Geometry and Trigonometry | Circles | Hard | Multiple Choice |
+| GT-256 | Geometry and Trigonometry | Lines, angles, and triangles | Hard | Multiple Choice |
+| GT-257 | Geometry and Trigonometry | Right triangles and trigonometry | Hard | Multiple Choice |
+| PS-157 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-158 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Medium | SPR |
+| PS-159 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| PS-160 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| PS-161 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
+| PS-162 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-163 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | Multiple Choice |
+| PS-164 | Problem-Solving and Data Analysis | Percentages | Hard | Multiple Choice |
+| PS-165 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-166 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Hard | Multiple Choice |
+| PS-167 | Problem-Solving and Data Analysis | Percentages | Hard | SPR |
+| PS-168 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | SPR |
+| PS-169 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | SPR |
+| PS-170 | Problem-Solving and Data Analysis | Probability and conditional probability | Hard | Multiple Choice |
+| PS-171 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
+| PS-172 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
+| PS-173 | Problem-Solving and Data Analysis | Ratios, rates, proportional relationships, and units | Medium | SPR |
+| PS-174 | Problem-Solving and Data Analysis | Two-variable data: Models and scatterplots | Hard | SPR |
+| PS-175 | Problem-Solving and Data Analysis | One-variable data: Distributions and measures of center and spread | Hard | SPR |
 
 ---
 
