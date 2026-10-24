@@ -4,8 +4,10 @@ Usage: DESMOS_API_KEY=xxxx python3 build.py      (or: python3 build.py --desmos-
 The Desmos key is never stored in the repo."""
 import json,os,subprocess,sys,pathlib
 here=pathlib.Path(__file__).resolve().parent; os.chdir(here)
+DEMO='dcb31709b452b1cf9dc26972add0fda6'  # Desmos public demo/trial key from the API docs: fine for prototyping, shows a trial banner
 key=os.environ.get('DESMOS_API_KEY','')
 if '--desmos-key' in sys.argv: key=sys.argv[sys.argv.index('--desmos-key')+1]
+key=key or DEMO
 subprocess.run([sys.executable,'mkbank.py'],check=True)       # tpl_src.html -> bank_template.html
 t=open('bank_template.html').read()
 assert '</style>' in t
@@ -17,7 +19,9 @@ t=t.replace("\nrender();\n})();","\n"+boot,1)
 items=json.load(open('data/bank_all.json'))
 data=json.dumps(items,ensure_ascii=False).replace('</','<\\/').replace('<!--','<\\u0021--')
 t=t.replace('/*BANK*/[]',data,1).replace('{{TITLE}}','SAT Aceit · Question Bank').replace('{{DESMOS_KEY}}',key)
+if not t.lstrip().lower().startswith('<!doctype'):
+    t='<!doctype html>\n<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+t
 out=here/'dist'; out.mkdir(exist_ok=True); (out/'index.html').write_text(t)
 (out/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex\n')
 (out/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
-print('built',len(items),'questions ->',out/'index.html',len(t),'bytes', '(Desmos key set)' if key else '(no Desmos key: set DESMOS_API_KEY)')
+print('built',len(items),'questions ->',out/'index.html',len(t),'bytes','(demo Desmos key: set DESMOS_API_KEY for your own)' if key==DEMO else '(Desmos key set)')
