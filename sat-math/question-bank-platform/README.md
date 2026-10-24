@@ -31,3 +31,6 @@ Append items to `data/bank_all.json` (unique `id`, valid `domain|skill|sub`), ke
 ## Notes
 - Keys are in the page: for practice, not graded/secure exams.
 - Subtopic labels on the original 1,146 items come from keyword rules (`subtopics.py`) and may need manual fixes.
+
+## Exam integrity
+Proctor mode (fullscreen, leave detection, auto-submit, copy block, integrity report) and an optional Safe Exam Browser requirement are in `proctor.js`, patched in by `mkbank.py`. See HOW_TO_PUBLISH.md.

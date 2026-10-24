@@ -158,6 +158,31 @@ function between(){
 a=t.index("const PTS=[[0,200]"); b=t.index("document.addEventListener('keydown'")
 res=open('results_bank.js').read()
 t=t[:a]+res+t[b:]
+
+# ---- PROCTOR layer
+proc=open('proctor.js').read()
+rep("preset:'full'};","preset:'full',proc:true,maxLeave:3,seb:false};")
+rep("return {mods:m,secs,title:B.title||'Custom SAT Math exam'}}","return {mods:m,secs,title:B.title||'Custom SAT Math exam',pr:{on:!!B.proc,max:+B.maxLeave||0,seb:!!B.seb}}}")
+rep("function presetFrom(ex){return {m:ex.mods.map(x=>x.map(i=>i.id)),s:ex.secs,t:ex.title}}","function presetFrom(ex){return {m:ex.mods.map(x=>x.map(i=>i.id)),s:ex.secs,t:ex.title,pr:ex.pr}}")
+rep("title:p.t||'SAT Math exam'}}","title:p.t||'SAT Math exam',pr:p.pr||{on:false,max:3,seb:false}}}")
+for k in ("full","module","hard"):
+    rep("B.title='SAT Math "+{"full":"full mock exam","module":"module","hard":"hard module"}[k]+"'}","B.title='SAT Math "+{"full":"full mock exam","module":"module","hard":"hard module"}[k]+"';B.proc=true}")
+rep("B.title='SAT Math topic drill'}","B.title='SAT Math topic drill';B.proc=false}")
+rep("  <div class=\"sum ${short?'warn':''}\">",r"""  <h2>Exam integrity</h2><div class="set">
+   <div><label class="chk"><input type="checkbox" id="proc" ${B.proc?'checked':''}> Proctor mode: fullscreen, tab-switch detection, copy and right-click off, integrity report</label></div>
+   <div><label for="mxl">Auto-submit on leave number</label><select id="mxl" ${B.proc?'':'disabled'}>${[[0,'Never (warn and report only)'],[2,'2nd leave'],[3,'3rd leave (recommended)'],[5,'5th leave']].map(([v,l])=>`<option value="${v}" ${+B.maxLeave===v?'selected':''}>${l}</option>`).join('')}</select></div>
+   <div><label class="chk"><input type="checkbox" id="seb" ${B.seb?'checked':''} ${B.proc?'':'disabled'}> Require Safe Exam Browser <small>(a normal browser cannot start the exam)</small></label></div></div>
+  <p class="hint">A web page cannot block other apps or websites. Proctor mode detects and records leaving the exam. For a true lock, run the exam inside Safe Exam Browser or a Chromebook kiosk (see HOW_TO_PUBLISH.md).</p>
+  <div class="sum ${short?'warn':''}">""")
+rep("  $('#reshuf').onclick=","  $('#proc').onchange=e=>{B.proc=e.target.checked;builder()};$('#mxl').onchange=e=>{B.maxLeave=+e.target.value};$('#seb').onchange=e=>{B.seb=e.target.checked};\n  $('#reshuf').onclick=")
+rep("<div class=\"note\">Scores here are estimates, not official scores. Questions are Medium and Hard, so they run harder than a typical test.</div>","${PROC.startHTML()}<div class=\"note\">Scores here are estimates, not official scores. Questions are Medium and Hard, so they run harder than a typical test.</div>")
+rep("function startExam(){S.phase='exam';","function startExam(){if(!PROC.gate())return;PROC.begin();S.phase='exam';")
+rep("else {S.phase='results';render()}\n}\nfunction between","else {S.phase='results';PROC.end();render()}\n}\nfunction between")
+rep("  <h2>What to do next</h2>","  ${PROC.card()}\n  <h2>What to do next</h2>")
+rep("  typeset($('#app'));\n  document.querySelectorAll('.chip')","  typeset($('#app'));PROC.bind();\n  document.querySelectorAll('.chip')")
+# define PROC before startExam (inside builder block) 
+rep("function startExam(){",proc+"\nfunction startExam(){")
+
 open('bank_template.html','w').write(t)
 print('ok',len(t))
 
