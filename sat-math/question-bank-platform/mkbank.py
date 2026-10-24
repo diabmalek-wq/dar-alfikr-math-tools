@@ -159,51 +159,16 @@ a=t.index("const PTS=[[0,200]"); b=t.index("document.addEventListener('keydown'"
 res=open('results_bank.js').read()
 t=t[:a]+res+t[b:]
 
-# ---- PROCTOR layer
-proc=open('proctor.js').read()
-rep("preset:'full'};","preset:'full',proc:true,maxLeave:3,seb:false};")
-rep("return {mods:m,secs,title:B.title||'Custom SAT Math exam'}}","return {mods:m,secs,title:B.title||'Custom SAT Math exam',pr:{on:!!B.proc,max:+B.maxLeave||0,seb:!!B.seb}}}")
-rep("function presetFrom(ex){return {m:ex.mods.map(x=>x.map(i=>i.id)),s:ex.secs,t:ex.title}}","function presetFrom(ex){return {m:ex.mods.map(x=>x.map(i=>i.id)),s:ex.secs,t:ex.title,pr:ex.pr}}")
-rep("title:p.t||'SAT Math exam'}}","title:p.t||'SAT Math exam',pr:p.pr||{on:false,max:3,seb:false}}}")
-for k in ("full","module","hard"):
-    rep("B.title='SAT Math "+{"full":"full mock exam","module":"module","hard":"hard module"}[k]+"'}","B.title='SAT Math "+{"full":"full mock exam","module":"module","hard":"hard module"}[k]+"';B.proc=true}")
-rep("B.title='SAT Math topic drill'}","B.title='SAT Math topic drill';B.proc=false}")
-rep("  <div class=\"sum ${short?'warn':''}\">",r"""  <h2>Exam integrity</h2><div class="set">
-   <div><label class="chk"><input type="checkbox" id="proc" ${B.proc?'checked':''}> Proctor mode: fullscreen, tab-switch detection, copy and right-click off, integrity report</label></div>
-   <div><label for="mxl">Auto-submit on leave number</label><select id="mxl" ${B.proc?'':'disabled'}>${[[0,'Never (warn and report only)'],[2,'2nd leave'],[3,'3rd leave (recommended)'],[5,'5th leave']].map(([v,l])=>`<option value="${v}" ${+B.maxLeave===v?'selected':''}>${l}</option>`).join('')}</select></div>
-   <div><label class="chk"><input type="checkbox" id="seb" ${B.seb?'checked':''} ${B.proc?'':'disabled'}> Require Safe Exam Browser <small>(a normal browser cannot start the exam)</small></label></div></div>
-  <p class="hint">A web page cannot block other apps or websites. Proctor mode detects and records leaving the exam. For a true lock, run the exam inside Safe Exam Browser or a Chromebook kiosk (see HOW_TO_PUBLISH.md).</p>
-  <div class="sum ${short?'warn':''}">""")
-rep("  $('#reshuf').onclick=","  $('#proc').onchange=e=>{B.proc=e.target.checked;builder()};$('#mxl').onchange=e=>{B.maxLeave=+e.target.value};$('#seb').onchange=e=>{B.seb=e.target.checked};\n  $('#reshuf').onclick=")
-rep("<div class=\"note\">Scores here are estimates, not official scores. Questions are Medium and Hard, so they run harder than a typical test.</div>","${PROC.startHTML()}<div class=\"note\">Scores here are estimates, not official scores. Questions are Medium and Hard, so they run harder than a typical test.</div>")
+# ---- BUILDER (two modules, own topics), PROCTOR and hooks
+proc=open('proctor.js').read(); bld=open('builder.js').read()
+a=t.index("const DOMW="); b=t.index("function sub0(")
+t=t[:a]+bld+t[b:]
+rep("<div class=\"note\">Scores here are estimates, not official scores. Questions are Medium and Hard, so they run harder than a typical test.</div>","${PROC.startHTML()}")
 rep("function startExam(){S.phase='exam';","function startExam(){if(!PROC.gate())return;PROC.begin();S.phase='exam';")
 rep("else {S.phase='results';render()}\n}\nfunction between","else {S.phase='results';PROC.end();render()}\n}\nfunction between")
 rep("  <h2>What to do next</h2>","  ${PROC.card()}\n  <h2>What to do next</h2>")
 rep("  typeset($('#app'));\n  document.querySelectorAll('.chip')","  typeset($('#app'));PROC.bind();\n  document.querySelectorAll('.chip')")
-# define PROC before startExam (inside builder block) 
 rep("function startExam(){",proc+"\nfunction startExam(){")
-
-
-# ---- PLAN layer (no repeats, current topic + cumulative review)
-plan=open('plan.js').read()
-a=t.index("function makeExam(){"); b=t.index("const b64=s=>")
-t=t[:a]+plan+t[b:]
-rep("proc:true,maxLeave:3,seb:false};","proc:true,maxLeave:3,seb:false,avoid:true,layout:'std',cov:new Set(ALLKEYS.map(k=>k.split('|').slice(0,2).join('|')))};")
-rep("t:ex.title,pr:ex.pr}","t:ex.title,pr:ex.pr,nt:ex.note}")
-rep("pr:p.pr||{on:false,max:3,seb:false}}}","pr:p.pr||{on:false,max:3,seb:false},note:p.nt||''}}")
-rep("PRESETS[b.dataset.p].set();","B.layout='std';PRESETS[b.dataset.p].set();")
-rep(" topic:{label:'Topic drill'"," plan:{label:'Current topic + review',sub:'Module 1: topics you tick · Module 2: everything covered',set:()=>{B.sk=new Set();B.lv='MH';B.fmt='all';B.n=44;B.modules=2;B.mins='';B.balance=true;B.title='Current topic + cumulative review';B.proc=true;B.layout='plan'}},\n topic:{label:'Topic drill'")
-rep("B[g.dataset.g]=g.dataset.g==='modules'?+v:v;","B[g.dataset.g]=g.dataset.g==='modules'?+v:v;if(B.layout==='plan')B.modules=2;")
-rep("  <h2>Exam integrity</h2><div class=\"set\">",r"""  <h2>Exam layout</h2><div class="set">
-   <div><label>Layout</label><div class="seg" data-g="layout">${[['std','One set'],['plan','Module 1 current topic, Module 2 review']].map(([v,l])=>`<button data-v="${v}" aria-pressed="${B.layout===v}">${l}</button>`).join('')}</div></div>
-   <div><label class="chk"><input type="checkbox" id="avoid" ${B.avoid?'checked':''}> Avoid questions I have already seen <small>(including their rephrased twins; remembered on this device)</small></label><div class="small">Seen so far: <b>${SEEN.size}</b> of ${FAMN} <button class="chip" id="rstSeen">Reset history</button></div></div></div>
-  ${B.layout==='plan'?`<p class="hint"><b>Module 1</b> uses the topics ticked above (what you are studying now). <b>Module 2</b> is a comprehensive review drawn from the skills ticked here, plus the current topics.</p><div class="row" style="margin:0 0 8px"><button class="chip" id="covAll">All covered</button><button class="chip" id="covNone">Clear</button></div>${DOMS.map(d=>`<div class="covd"><b>${DOMSHORT[d]}</b><div class="covs">${Object.keys(byDom[d]||{}).map(sk=>`<label class="sk"><input type="checkbox" data-cov="${d}|${sk}" ${B.cov.has(d+'|'+sk)?'checked':''}> ${sk}</label>`).join('')}</div></div>`).join('')}`:''}
-  <h2>Exam integrity</h2><div class="set">""")
-rep("${short?`<br><span>Only ${P.length}","${B.layout==='plan'?'<br><span>Module 1: '+(ex.mods[0]||[]).length+' questions on the current topics · Module 2: '+(ex.mods[1]||[]).length+' questions of cumulative review</span>':''}${B.avoid?'<br><span>Unseen matching questions: '+new Set(P.filter(i=>!SEEN.has(FAM(i.id))).map(i=>FAM(i.id))).size+' of '+new Set(P.map(i=>FAM(i.id))).size+'</span>':''}${short?`<br><span>Only ${P.length}")
-rep("id=\"startB\" style=\"font-size:1.05rem;padding:11px 34px\" ${cn.n?'':'disabled'}>","id=\"startB\" style=\"font-size:1.05rem;padding:11px 34px\" ${cn.n&&!(B.layout==='plan'&&!P.length)?'':'disabled'}>")
-rep("  <div class=\"row\" style=\"margin-top:16px\"><button class=\"btn primary\" id=\"startB\"","  ${B.layout==='plan'&&!P.length?'<p class=\"hint\" style=\"color:#a4262c\">Tick the topic(s) you are studying now in the Topics list above to build Module 1.</p>':''}\n  <div class=\"row\" style=\"margin-top:16px\"><button class=\"btn primary\" id=\"startB\"")
-rep("  $('#proc').onchange=","  document.querySelectorAll('[data-cov]').forEach(c=>c.onchange=()=>{c.checked?B.cov.add(c.dataset.cov):B.cov.delete(c.dataset.cov);builder()});\n  const ca=$('#covAll');if(ca){ca.onclick=()=>{B.cov=new Set(ALLKEYS.map(k=>k.split('|').slice(0,2).join('|')));builder()};$('#covNone').onclick=()=>{B.cov=new Set();builder()}}\n  $('#avoid').onchange=e=>{B.avoid=e.target.checked;builder()};$('#rstSeen').onclick=()=>{SEEN=new Set();saveSeen();builder()};\n  $('#proc').onchange=")
-rep("${PROC.startHTML()}<div class=\"note\">Scores here","${EXAM.note?'<p class=\"lede\"><b>'+EXAM.note+'</b></p>':''}${PROC.startHTML()}<div class=\"note\">Scores here")
 rep("function finishModule(timeout){\n  clearInterval(S.tick);","function finishModule(timeout){\n  clearInterval(S.tick);markSeen(mods()[S.mod]);")
 rep("function results(){\n","function results(){\n  EXAM.mods.slice(0,S.mod+1).forEach(markSeen);\n")
 
