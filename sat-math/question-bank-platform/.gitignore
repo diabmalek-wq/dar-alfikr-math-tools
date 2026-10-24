@@ -1,0 +1,4 @@
+dist/
+bank_template.html
+__pycache__/
+*.pyc
