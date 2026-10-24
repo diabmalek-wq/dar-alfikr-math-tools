@@ -54,6 +54,17 @@ const PRESETS={
  plan:{label:'Current topic + review',sub:'Module 1: topics you pick · Module 2: all topics',set:()=>{B.sk=[new Set(),new Set(ALLKEYS)];B.tab=0;B.lv=['MH','MH'];B.fmt='all';B.n=25;B.mins='';B.balance=true;B.title='Current topic + cumulative review';B.proc=true}}
 };
 function builder(){
+  const sc=document.scrollingElement||document.documentElement,y=sc.scrollTop,wy=window.scrollY;
+  const box=[...document.querySelectorAll('#app *')].filter(e=>e.scrollTop>0).map(e=>[e,e.scrollTop]);
+  const op=[...document.querySelectorAll('details.dom,details.skg')].map(d=>d.open);
+  const pg=document.querySelector('.page'),pt=pg?pg.scrollTop:0;
+  builder0();
+  const pg2=document.querySelector('.page');if(pg2)pg2.scrollTop=pt;
+  const ds=[...document.querySelectorAll('details.dom,details.skg')];
+  if(op.length===ds.length)ds.forEach((d,i)=>{if(op[i])d.open=true});
+  window.scrollTo(0,wy);sc.scrollTop=y;
+}
+function builder0(){
   const ex=makeExam(),cn=counts(ex),m=B.tab,SK=B.sk[m];
   const byDom={};ALLKEYS.forEach(k=>{const [d,sk,sb]=k.split('|');((byDom[d]=byDom[d]||{})[sk]=byDom[d][sk]||[]).push(sb)});
   const domHTML=DOMS.map(d=>{const sks=byDom[d]||{};const dk=ALLKEYS.filter(k=>k.startsWith(d+'|'));const on=dk.filter(k=>SK.has(k)).length;
