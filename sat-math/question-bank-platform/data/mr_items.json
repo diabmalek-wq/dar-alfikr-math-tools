@@ -1,0 +1,2400 @@
+[
+{
+"id": "MR-004",
+"src_q": 4,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear equations in one variable",
+"sub": "Solving and rearranging",
+"q": "The monthly cost $C$ of a solar installation is modeled by $C=\\dfrac{3V}{1-\\dfrac{w}{h}}$, where $V$, $w$ and $h$ are positive and $h \\ne w$. Which expression gives $h$ in terms of $C$, $V$ and $w$?",
+"opts": [
+"$h=\\dfrac{wC}{C+3V}$",
+"$h=\\dfrac{wC}{C-3V}$",
+"$h=\\dfrac{w(C-3V)}{C}$",
+"$h=\\dfrac{wC}{3V-C}$"
+],
+"key": 1,
+"steps": [
+"Multiply both sides by $1-\\dfrac{w}{h}$ to get $C\\left(1-\\dfrac{w}{h}\\right)=3V$, then divide by $C$: $1-\\dfrac{w}{h}=\\dfrac{3V}{C}$.",
+"Isolate the fraction: $\\dfrac{w}{h}=1-\\dfrac{3V}{C}=\\dfrac{C-3V}{C}$.",
+"Take reciprocals and multiply by $w$: $h=\\dfrac{wC}{C-3V}$. Check in Desmos by typing <code>C=3V/(1-w/h)</code> with test values such as $w=2$, $V=1$, $h=6$ ($C=4.5$).",
+"Traps: dropping the sign when moving $1$ across (gives $C+3V$), swapping the order of subtraction, or forgetting to take the reciprocal."
+]
+},
+{
+"id": "MR-006",
+"src_q": 6,
+"lv": "M",
+"mc": false,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Rational expressions",
+"q": "If $p=\\dfrac{1-\\dfrac{x}{y}}{1-\\dfrac{x^{2}}{y^{2}}}$, $x=2z$ and $y=6z$ with $z \\ne 0$, what is the value of $p$?",
+"key": 0.75,
+"disp": "\\dfrac{3}{4}",
+"steps": [
+"Substitute: $\\dfrac{x}{y}=\\dfrac{2z}{6z}=\\dfrac{1}{3}$, so $\\dfrac{x^2}{y^2}=\\dfrac{1}{9}$ ($z$ cancels).",
+"In Desmos type <code>(1-1/3)/(1-1/9)</code>; it returns $0.75$.",
+"Algebra check: $\\dfrac{2/3}{8/9}=\\dfrac{2}{3}\\cdot\\dfrac{9}{8}=\\dfrac{3}{4}$. Factoring gives $p=\\dfrac{1}{1+x/y}=\\dfrac{3}{4}$ as well.",
+"Trap: squaring $\\dfrac{1}{3}$ as $\\dfrac{1}{6}$, or subtracting inside the wrong fraction. Grid in 3/4 or .75."
+]
+},
+{
+"id": "MR-008",
+"src_q": 8,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Exponents and radicals",
+"q": "What is the value of $\\left(\\dfrac{1}{x-5}\\right)^{-n}+x^{1-n}$ when $x=9$ and $n=\\dfrac{3}{2}$?",
+"opts": [
+"$-\\dfrac{23}{3}$",
+"$\\dfrac{11}{24}$",
+"$11$",
+"$\\dfrac{25}{3}$"
+],
+"key": 3,
+"steps": [
+"Substitute: $\\left(\\dfrac{1}{4}\\right)^{-3/2}+9^{-1/2}$.",
+"Negative exponent flips the base: $\\left(\\dfrac{1}{4}\\right)^{-3/2}=4^{3/2}=8$. Also $9^{-1/2}=\\dfrac{1}{3}$. In Desmos type <code>(1/4)^(-3/2)+9^(-1/2)</code>; it returns $8.333$.",
+"Sum: $8+\\dfrac{1}{3}=\\dfrac{25}{3}$.",
+"Traps: treating the negative exponent as a negative sign (gives $-8+\\dfrac{1}{3}=-\\dfrac{23}{3}$), ignoring the negative exponent ($\\dfrac{1}{8}+\\dfrac{1}{3}$ gives the $\\dfrac{11}{24}$ option), or reading $9^{-1/2}$ as $9^{1/2}$ (gives $8+3=11$)."
+]
+},
+{
+"id": "MR-010",
+"src_q": 10,
+"lv": "H",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Polynomial division and remainder",
+"q": "The polynomial $p(x)=x^{3}-5x^{2}+kx+12$, where $k$ is a constant, leaves a remainder of $6$ when divided by $x-2$. What is the remainder when $p(x)$ is divided by $x+1$?",
+"opts": [
+"$3$",
+"$11$",
+"$17$",
+"$5$"
+],
+"key": 0,
+"steps": [
+"Remainder theorem: $p(2)=6$, so $8-20+2k+12=6$, giving $2k=6$ and $k=3$. Desmos: type <code>2^3-5*2^2+2k+12=6</code> and solve for $k$.",
+"Divisor $x+1$ means evaluate at $x=-1$: $p(-1)=-1-5-3+12=3$. In Desmos type <code>(-1)^3-5(-1)^2+3(-1)+12</code>.",
+"The remainder is $3$.",
+"Traps: using $x=1$ for $x+1$ (gives $11$), using $x=-2$ for the first condition (gives $k=-11$ and then $17$), and sign slips on $(-1)^3$ (gives $5$)."
+]
+},
+{
+"id": "MR-017",
+"src_q": 17,
+"lv": "M",
+"mc": false,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "A two-digit locker number at a Jeddah sports club is $27$ more than the number formed by reversing its digits, and the sum of its digits is $11$. What is the number formed by reversing the digits of the locker number?",
+"key": 47,
+"disp": "47",
+"steps": [
+"Let the tens digit be $a$ and the units digit be $b$. Then $(10a+b)-(10b+a)=27$ simplifies to $9(a-b)=27$, so $a-b=3$.",
+"With $a+b=11$, add the equations: $2a=14$, so $a=7$ and $b=4$. In Desmos enter <code>a-b=3</code> and <code>a+b=11</code> as two lines and read the intersection $(7,4)$.",
+"The locker number is $74$, but the question asks for the reversed number: $47$.",
+"Trap: answering $74$ (wrong quantity asked), or writing the difference as $a-b=27$ instead of $9(a-b)=27$."
+]
+},
+{
+"id": "MR-018",
+"src_q": 18,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "What is the sum of all values of $x$ that satisfy $\\dfrac{x^{2}}{x-3}=\\dfrac{9}{x-3}+4$?",
+"opts": [
+"$4$",
+"$3$",
+"$1$",
+"$-1$"
+],
+"key": 2,
+"steps": [
+"Multiply by $x-3$ (with $x \\ne 3$): $x^2=9+4(x-3)$, so $x^2-4x+3=0$ and $(x-1)(x-3)=0$.",
+"Candidates are $x=1$ and $x=3$. Desmos: graph <code>y=x^2/(x-3)</code> and <code>y=9/(x-3)+4</code>; they meet only at $x=1$.",
+"Check $x=3$: it makes both denominators zero, so it is extraneous. Only $x=1$ works, so the sum is $1$.",
+"Traps: adding both candidates (gives $4$), reporting only the excluded value ($3$), and a sign slip on the root sum (gives $-1$)."
+]
+},
+{
+"id": "MR-021",
+"src_q": 21,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Rational expressions",
+"q": "For positive integers $a$, $b$, $c$ and $d$ with $3ab=cd$, which of the following is NOT necessarily true?",
+"opts": [
+"$\\dfrac{a}{c}=\\dfrac{d}{3b}$",
+"$\\dfrac{3b}{c}=\\dfrac{d}{a}$",
+"$\\dfrac{3ab}{d}=c$",
+"$\\dfrac{a}{d}=\\dfrac{3b}{c}$"
+],
+"key": 3,
+"steps": [
+"Cross-multiply each option and compare with $3ab=cd$. Option A gives $3ab=cd$. Option B gives $3ab=cd$. Option C gives $3ab=cd$.",
+"Option D gives $ac=3bd$, which is a different relationship.",
+"Test numbers in Desmos: $a=1$, $b=2$, $c=2$, $d=3$ satisfy $3ab=cd=6$. Type <code>1/3</code> and <code>3*2/2</code>: $\\dfrac{a}{d}=\\dfrac{1}{3}$ but $\\dfrac{3b}{c}=3$, so D fails.",
+"Trap: the question asks which is NOT necessarily true, so the three valid rearrangements are the distractors; D swaps the roles of $c$ and $d$ on one side."
+]
+},
+{
+"id": "MR-023",
+"src_q": 23,
+"lv": "M",
+"mc": false,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "The operation $\\star$ is defined by $a\\star b=a^{2}-b^{2}$. If $x\\star 5=\\dfrac{3x+15}{4}$ and $x \\ne -5$, what is the value of $x$?",
+"key": 5.75,
+"disp": "\\dfrac{23}{4}",
+"steps": [
+"Write the equation: $x^2-25=\\dfrac{3(x+5)}{4}$, and factor the left side: $(x-5)(x+5)=\\dfrac{3(x+5)}{4}$.",
+"Divide by $x+5$ (allowed since $x \\ne -5$): $x-5=\\dfrac{3}{4}$, so $x=\\dfrac{23}{4}$. Desmos: graph <code>y=x^2-25</code> and <code>y=(3x+15)/4</code>; the intersection with $x \\ne -5$ is $x=5.75$.",
+"Check: $5.75^2-25=8.0625$ and $\\dfrac{3(5.75)+15}{4}=8.0625$.",
+"Trap: dividing out $x+5$ without noting the second root $x=-5$ (which the problem excludes), or forgetting to square $5$ as $25$. Grid in 23/4 or 5.75."
+]
+},
+{
+"id": "MR-025",
+"src_q": 25,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Factoring and expanding",
+"q": "If $p$ and $q$ are integers and $pq=-13$, what is the value of $p^{2}+q^{2}$?",
+"opts": [
+"$118$",
+"$170$",
+"$144$",
+"$156$"
+],
+"key": 1,
+"steps": [
+"Since $13$ is prime, the integer pairs are $(1,-13)$, $(-1,13)$, $(13,-1)$ and $(-13,1)$; in every case $p+q=\\pm 12$.",
+"Use $p^2+q^2=(p+q)^2-2pq=144-2(-13)=170$. Desmos check: type <code>1^2+(-13)^2</code>; it returns $170$.",
+"Direct check: $1+169=170$.",
+"Traps: stopping at $(p+q)^2=144$ (wrong quantity), sign error on $-2pq$ (gives $144-26=118$), and multiplying $12\\cdot 13=156$."
+]
+},
+{
+"id": "MR-034",
+"src_q": 34,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "At a Jeddah juice bar, 3 shawarma wraps and 2 fresh juices cost 44 SAR, and 2 wraps and 3 fresh juices cost 41 SAR. All wraps cost the same and all juices cost the same. What is the cost, in SAR, of 1 wrap and 1 juice together?",
+"opts": [
+"$10$",
+"$17$",
+"$85$",
+"$7$"
+],
+"key": 1,
+"steps": [
+"Type <code>3w+2j=44</code> and <code>2w+3j=41</code> in Desmos as two lines in variables; or add the equations: $5w+5j=85$.",
+"Elimination shortcut: divide by 5 to get $w+j=17$. Desmos intersection gives $w=10$, $j=7$, so $w+j=17$.",
+"Check: $3(10)+2(7)=44$ and $2(10)+3(7)=41$.",
+"Trap: $85$ is the combined total of 5 wraps and 5 juices, and $10$ or $7$ is only one item's price."
+]
+},
+{
+"id": "MR-035",
+"src_q": 35,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "At a Red Sea football fan shop, the number of scarves sold was $4$ fewer than $3$ times the number of jerseys sold. Had $8$ more jerseys been sold, the number of jerseys would have equalled the number of scarves. How many scarves and jerseys were actually sold in total?",
+"opts": [
+"$14$",
+"$6$",
+"$20$",
+"$28$"
+],
+"key": 2,
+"steps": [
+"Let $j$ be jerseys and $s$ scarves: $s=3j-4$ and $j+8=s$.",
+"Substitute: $j+8=3j-4$, so $2j=12$ and $j=6$. In Desmos solve <code>x+8=3x-4</code>.",
+"Then $s=14$, and the actual total is $6+14=20$.",
+"Trap: $14$ and $6$ answer only part of the question, and $28$ counts the $8$ jerseys that were never sold."
+]
+},
+{
+"id": "MR-038",
+"src_q": 38,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "Salma is $7$ years older than Huda. In $4$ years, Salma will be twice as old as Huda was $3$ years ago. How old was Salma $6$ years ago?",
+"opts": [
+"$24$",
+"$17$",
+"$6$",
+"$18$"
+],
+"key": 3,
+"steps": [
+"Let Huda be $h$ now, so Salma is $h+7$. Equation: $(h+7)+4=2(h-3)$.",
+"Desmos: type <code>x+11=2(x-3)</code> and read the intersection at $x=17$. So Huda is $17$ and Salma is $24$.",
+"Salma $6$ years ago: $24-6=18$.",
+"Traps: $24$ is Salma's age now and $17$ is Huda's; $6$ comes from writing $2(h+3)$ for the past age."
+]
+},
+{
+"id": "MR-039",
+"src_q": 39,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear inequalities",
+"sub": "Compound and absolute value inequalities",
+"q": "What is the sum of all integers $x$ that satisfy $|2x-5|+4\\le 11$?",
+"opts": [
+"$20$",
+"$30$",
+"$15$",
+"$8$"
+],
+"key": 0,
+"steps": [
+"Isolate the absolute value first: $|2x-5|\\le 7$.",
+"Split: $-7\\le 2x-5\\le 7$, so $-1\\le x\\le 6$. Desmos: type <code>abs(2x-5)+4<=11</code> to see the shaded interval.",
+"Integers $-1,0,\\dots,6$ sum to $20$ (the $-1$ cancels the $1$).",
+"Traps: $30$ skips the subtraction of $4$, $15$ drops both endpoints, $8$ counts the integers instead of adding them."
+]
+},
+{
+"id": "MR-042",
+"src_q": 42,
+"lv": "H",
+"mc": false,
+"domain": "Algebra",
+"skill": "Linear equations in one variable",
+"sub": "Equations with constants and parameters",
+"q": "The equation $|2x-k|=10$ has $x=-3$ as one solution, where $k$ is a positive constant. What is the other solution?",
+"key": 7,
+"disp": "7",
+"steps": [
+"Substitute $x=-3$: $|-6-k|=10$, so $-6-k=10$ or $-6-k=-10$, giving $k=-16$ or $k=4$.",
+"Positive $k$ forces $k=4$. Desmos: type <code>abs(2x-4)=10</code> as a curve and read $x=-3$ and $x=7$.",
+"Solve $2x-4=10$ to get $x=7$.",
+"Trap: $k=-16$ also works for $x=-3$ but is rejected by the condition; it would give the other solution $-13$."
+]
+},
+{
+"id": "MR-044",
+"src_q": 44,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear inequalities",
+"sub": "Compound and absolute value inequalities",
+"q": "A water tank in Jeddah is safe to use when its pressure reading $p$ satisfies $|3p-12|\\le 15$, and $p$ must be an integer. How many different readings are safe?",
+"opts": [
+"$9$",
+"$10$",
+"$11$",
+"$12$"
+],
+"key": 2,
+"steps": [
+"Rewrite as $-15\\le 3p-12\\le 15$, then add $12$: $-3\\le 3p\\le 27$.",
+"Divide by $3$: $-1\\le p\\le 9$. Desmos: <code>abs(3x-12)<=15</code> shades the same interval.",
+"Count integers from $-1$ to $9$ inclusive: $9-(-1)+1=11$.",
+"Traps: $9$ drops both endpoints (strict inequality), $10$ is $9-(-1)$ without the $+1$, $12$ over-counts by one."
+]
+},
+{
+"id": "MR-047",
+"src_q": 47,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear inequalities",
+"sub": "Solving and solution sets",
+"q": "If $-3<x<-1$, which of the following must be true?<br>I. $x^2<9$<br>II. $x^2>4$<br>III. $x^3<x^2$",
+"opts": [
+"I only",
+"II and III only",
+"I, II and III",
+"I and III only"
+],
+"key": 3,
+"steps": [
+"Test the ends: $x=-2.9$ and $x=-1.2$ in Desmos with <code>x=-2.9</code> then evaluate <code>x^2</code>.",
+"I: $x^2$ lies between $1$ and $9$, so $x^2<9$ always. II fails at $x=-1.2$ since $x^2=1.44$. III: $x^3$ is negative and $x^2$ is positive, so it always holds.",
+"Answer: I and III only.",
+"Trap: squaring reverses the order for negative numbers, so test both extremes; $x^2>4$ looks true near $x=-2$ but fails near $x=-1$."
+]
+},
+{
+"id": "MR-048",
+"src_q": 48,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear inequalities",
+"sub": "Solving and solution sets",
+"q": "If $ab^2c^3>0$ and $a<0$, which of the following must be true?",
+"opts": [
+"$ac>0$",
+"$b<0$",
+"$c>0$",
+"$bc<0$"
+],
+"key": 0,
+"steps": [
+"Since $b^2\\ge 0$ and the product is nonzero, $b\\ne 0$ and $b^2>0$, so the sign of $ab^2c^3$ is the sign of $ac^3$.",
+"$ac^3>0$ with $a<0$ forces $c^3<0$, so $c<0$. Then $a$ and $c$ are both negative and $ac>0$.",
+"Desmos check: <code>a=-1</code>, <code>b=1</code>, <code>c=-1</code> gives $ab^2c^3=1>0$, and $b<0$, $c>0$ and $bc<0$ all fail.",
+"Trap: a squared term hides the sign of $b$, so nothing can be concluded about $b$."
+]
+},
+{
+"id": "MR-049",
+"src_q": 49,
+"lv": "H",
+"mc": false,
+"domain": "Algebra",
+"skill": "Linear inequalities",
+"sub": "Compound and absolute value inequalities",
+"q": "The integers $x$ and $y$ satisfy $2<x<7$ and $-4<y\\le 1$. How many different values can the expression $x+2y$ take?",
+"key": 12,
+"disp": "12",
+"steps": [
+"List the integers: $x\\in\\{3,4,5,6\\}$ and $y\\in\\{-3,-2,-1,0,1\\}$, giving $4\\times5=20$ pairs.",
+"In Desmos make a table with <code>x_1=[3,4,5,6]</code> and <code>y_1=[-3,-2,-1,0,1]</code>, then list <code>x_1+2y_1</code>; the sums run from $-3$ to $8$ with repeats.",
+"Different pairs repeat values (for example $4+2(-1)=2$ and $6+2(-2)=2$), leaving $12$ distinct values.",
+"Trap: answering $20$ counts pairs, not distinct values; also remember $y=1$ is allowed but $y=-4$ is not."
+]
+},
+{
+"id": "MR-050",
+"src_q": 50,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear functions",
+"sub": "Slope and graph features",
+"q": "The graph of $f(x)=3x-4$ is shifted $2$ units to the right and $1$ unit up to form the graph of $g$. What is the $x$-intercept of $g$?",
+"opts": [
+"$-1$",
+"$1$",
+"$3$",
+"$\\dfrac{11}{3}$"
+],
+"key": 2,
+"steps": [
+"Write $g(x)=f(x-2)+1=3(x-2)-4+1=3x-9$. In Desmos type <code>3(x-2)-4+1</code>.",
+"Set $3x-9=0$, so $x=3$ (Desmos shows the crossing at $(3,0)$).",
+"Check: $g(3)=3(1)-4+1=0$.",
+"Traps: $f(x+2)$ gives $x=-1$, ignoring the right shift gives $x=1$, and shifting down gives $\\dfrac{11}{3}$."
+]
+},
+{
+"id": "MR-057",
+"src_q": 57,
+"lv": "M",
+"mc": false,
+"domain": "Algebra",
+"skill": "Linear equations in one variable",
+"sub": "Equations with constants and parameters",
+"q": "The function $f$ is defined by $f(x)=4x-3$. For what value of $x$ is $3f(x)-5=f(2x+1)$?",
+"key": 3.75,
+"disp": "\\dfrac{15}{4}",
+"steps": [
+"Type <code>3(4x-3)-5=4(2x+1)-3</code> in Desmos; the two sides are lines, so read their intersection.",
+"Evaluate $f(2x+1)$ by replacing every $x$ with $2x+1$: $4(2x+1)-3=8x+1$. The left side is $12x-14$.",
+"Solve $12x-14=8x+1$ to get $4x=15$, so $x=\\dfrac{15}{4}=3.75$.",
+"Trap: writing $f(2x+1)$ as $2f(x)+1$ or $f(2x)+1$ gives a different value."
+]
+},
+{
+"id": "MR-060",
+"src_q": 60,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "An operation $\\otimes$ is defined by $x\\otimes y=\\dfrac{2x-y}{x+y}$ for all numbers $x$ and $y$ with $x\\ne -y$. If $p\\otimes q=3$ and $p\\ne 0$, what is $q$ in terms of $p$?",
+"opts": [
+"$\\dfrac{p}{4}$",
+"$-4p$",
+"$-\\dfrac{p}{4}$",
+"$-\\dfrac{p}{2}$"
+],
+"key": 2,
+"steps": [
+"Substitute: $\\dfrac{2p-q}{p+q}=3$. In Desmos, test $p=4$: type <code>(8-q)/(4+q)=3</code> and read $q=-1$.",
+"Clear the denominator: $2p-q=3p+3q$, so $-p=4q$ and $q=-\\dfrac{p}{4}$.",
+"Check with $p=4,q=-1$: $\\dfrac{8+1}{4-1}=3$. Correct.",
+"Traps: dropping the negative gives $\\dfrac{p}{4}$; combining $-q-3q$ as $-2q$ gives $-\\dfrac{p}{2}$; inverting gives $-4p$."
+]
+},
+{
+"id": "MR-061",
+"src_q": 61,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Rates and proportional relationships",
+"q": "Two crews clean the panels of a solar farm near Sakaka. Crew A alone would take 10 hours and Crew B alone would take 15 hours. Crew A works alone for 4 hours, and then Crew B joins and both crews work together until the job is finished. For how many hours do the two crews work together?",
+"opts": [
+"$7.6$",
+"$6$",
+"$9$",
+"$3.6$"
+],
+"key": 3,
+"steps": [
+"Rates: type <code>1/10+1/15</code> to get $\\dfrac{1}{6}$ of the farm per hour together.",
+"After 4 hours alone, Crew A finished $\\dfrac{4}{10}$, leaving $\\dfrac{3}{5}$ of the job.",
+"Time together: <code>(3/5)/(1/6)</code> returns $3.6$ hours.",
+"Traps: $7.6$ is the total time, $6$ ignores the head start, and $9$ assumes Crew B works the remainder alone."
+]
+},
+{
+"id": "MR-063",
+"src_q": 63,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Rates and proportional relationships",
+"q": "Working together, two pumps fill a water tank in 6 hours. Pump A alone would fill the tank in 15 hours. What percent of the tank would Pump B fill if it ran alone for 3 hours?",
+"opts": [
+"$30\\%$",
+"$50\\%$",
+"$20\\%$",
+"$70\\%$"
+],
+"key": 0,
+"steps": [
+"Type <code>1/6-1/15</code> in Desmos; it returns $0.1$, so Pump B fills $\\dfrac{1}{10}$ of the tank per hour.",
+"In 3 hours: <code>3*0.1</code> gives $0.3$, which is $30\\%$.",
+"Check: B alone needs 10 hours, and $\\dfrac{3}{10}=30\\%$.",
+"Traps: $50\\%$ uses the combined rate, $20\\%$ is Pump A's share in 3 hours, and $70\\%$ is the unfilled part."
+]
+},
+{
+"id": "MR-066",
+"src_q": 66,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Ratios and scale",
+"q": "A juice stand mixes mango pulp and water in the ratio $2:5$. The owner then adds 24 liters of pulp, and the pulp and water are now in the ratio $1:1$. What is the total volume of the mixture after the pulp is added?",
+"opts": [
+"$56$ liters",
+"$80$ liters",
+"$40$ liters",
+"$104$ liters"
+],
+"key": 1,
+"steps": [
+"Let the original amounts be $2k$ and $5k$. After adding pulp: $2k+24=5k$. Type <code>2k+24=5k</code> and solve: $k=8$.",
+"Original: pulp $16$, water $40$. New pulp $=40$, water $=40$.",
+"Total after adding $=40+40=80$ liters.",
+"Traps: $56$ is the original total, $40$ is only the water, and $104$ adds the 24 liters twice."
+]
+},
+{
+"id": "MR-067",
+"src_q": 67,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent of a quantity and parts",
+"q": "A cafe in Jeddah blends 240 milliliters of a drink that is $25\\%$ protein by volume with 160 milliliters of a second drink that is $10\\%$ protein by volume. What percent of the blend is protein?",
+"opts": [
+"$17.5\\%$",
+"$38\\%$",
+"$19\\%$",
+"$76\\%$"
+],
+"key": 2,
+"steps": [
+"Protein in each part: <code>0.25*240</code> gives $60$ and <code>0.10*160</code> gives $16$.",
+"Total protein is $76$ milliliters out of $400$ milliliters.",
+"<code>76/400</code> returns $0.19$, so $19\\%$.",
+"Traps: averaging $25$ and $10$ gives $17.5\\%$ and ignores the unequal volumes; $38\\%$ divides by only 200; $76\\%$ forgets to divide."
+]
+},
+{
+"id": "MR-068",
+"src_q": 68,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "A tour company in Makkah finds that $60\\%$ of its customers prefer SUVs and the rest prefer sedans. Of the customers who prefer SUVs, $30\\%$ want a Toyota. Two customers are chosen independently at random. What is the probability that exactly one of them prefers a Toyota SUV?",
+"opts": [
+"$0.36$",
+"$0.0324$",
+"$0.1476$",
+"$0.2952$"
+],
+"key": 3,
+"steps": [
+"One customer: $0.6\\times0.3=0.18$ prefers a Toyota SUV. Type <code>0.6*0.3</code>.",
+"Exactly one of two: either the first or the second, so $2\\times0.18\\times0.82$.",
+"<code>2*0.18*0.82</code> returns $0.2952$.",
+"Traps: $0.36$ adds $0.18+0.18$, $0.0324$ is the probability that both do, and $0.1476$ counts only one of the two orders."
+]
+},
+{
+"id": "MR-071",
+"src_q": 71,
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "Tariq has 3 times as many riyals as Salem. After Tariq gives 120 SAR to Salem, Salem has 3 times as many riyals as Tariq. How many SAR did Tariq have originally?",
+"opts": [
+"$180$",
+"$240$",
+"$60$",
+"$120$"
+],
+"key": 0,
+"steps": [
+"Let Salem have $s$ and Tariq $3s$. After the gift: $s+120=3(3s-120)$. Type this into Desmos as <code>x+120=3(3x-120)</code>.",
+"Solving gives $8s=480$, so $s=60$ and Tariq had $3s=180$.",
+"Check: Tariq $60$, Salem $180$ after the gift, and $180=3\\times60$.",
+"Traps: $240$ is the total, $60$ is Salem's amount, and $120$ is the amount transferred."
+]
+},
+{
+"id": "MR-074",
+"src_q": 74,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Conditional probability and two-way tables",
+"q": "A scholarship program received applications for a Red Sea marine-science course. Of all applicants, $\\dfrac{2}{5}$ were female, and $\\dfrac{1}{4}$ of all applicants were rejected. Also, $\\dfrac{1}{5}$ of the female applicants were rejected. Among the accepted applicants, what percent were female?",
+"opts": [
+"$32.0\\%$",
+"$42.7\\%$",
+"$40.0\\%$",
+"$80.0\\%$"
+],
+"key": 1,
+"steps": [
+"Use 100 applicants: $40$ female, so <code>40*(1/5)</code> gives $8$ rejected females and $32$ accepted females.",
+"Accepted overall: $100-25=75$.",
+"<code>32/75</code> returns $0.4267$, about $42.7\\%$.",
+"Traps: $32.0\\%$ divides by all 100, $40.0\\%$ uses the original female share, and $80.0\\%$ is the share of females accepted."
+]
+},
+{
+"id": "MR-062",
+"src_q": 62,
+"lv": "H",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "A shop buys 8 solar garden lamps for 60 SAR. It finds that 3 out of every 8 lamps are defective and cannot be sold. At what price, in SAR, must each usable lamp be sold for the shop to make a $20\\%$ profit on its cost per usable lamp?",
+"key": 14.4,
+"disp": "14.4",
+"steps": [
+"Cost per lamp: <code>60/8</code> returns $7.5$. Usable fraction: $\\dfrac{5}{8}$.",
+"Cost per usable lamp: <code>7.5/(5/8)</code> returns $12$ SAR.",
+"Add $20\\%$ profit: <code>12*1.2</code> returns $14.4$.",
+"Trap: stopping at $7.5$ or $12$ ignores the profit; adding $20\\%$ to $7.5$ gives $9$, which does not recover the defective lamps."
+]
+},
+{
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "A scouting quiz in Jeddah has 50 questions. A correct answer earns $4$ points, a wrong answer loses $1$ point, and a blank answer earns $0$ points. Faisal left exactly $6$ questions blank and scored $106$ points. How many more questions did he answer correctly than incorrectly?",
+"opts": [
+"$14$",
+"$16$",
+"$30$",
+"$44$"
+],
+"key": 1,
+"steps": [
+"Only $50-6=44$ questions were attempted, so $c+w=44$ and $4c-w=106$.",
+"In Desmos type <code>x+y=44</code> and <code>4x-y=106</code>; the intersection is $(30,14)$.",
+"Add the equations: $5c=150$, so $c=30$ and $w=14$. The question asks for $c-w=16$.",
+"Traps: $14$ is the wrong count, $30$ is the correct count, $44$ is the number attempted."
+],
+"src_q": 76,
+"id": "MR-076"
+},
+{
+"lv": "M",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "A factory near Jeddah makes brackets, clips and panels one after another. On average a bracket takes $12$ seconds, a clip takes $20$ seconds and a panel takes $90$ seconds. The factory makes brackets for $1.5$ hours, then clips for $1$ hour, then panels for $3$ hours. What percent of all items made are panels?",
+"key": 16,
+"disp": "16",
+"steps": [
+"Convert hours to seconds first: $5400$, $3600$ and $10800$ seconds.",
+"In Desmos type <code>5400/12</code>, <code>3600/20</code>, <code>10800/90</code>; it returns $450$, $180$, $120$ items.",
+"Total is $750$ items, so panels are $\\dfrac{120}{750}\\times 100=16$ percent.",
+"Trap: using time share ($\\dfrac{3}{5.5}$) instead of item count."
+],
+"src_q": 86,
+"id": "MR-086"
+},
+{
+"lv": "M",
+"mc": true,
+"domain": "Algebra",
+"skill": "Linear equations in one variable",
+"sub": "Equations with constants and parameters",
+"q": "A shuttle bus in Makkah has a fixed maintenance cost of $m$ SAR per day plus a fuel cost of $n$ SAR per mile driven. It operates $5$ days a week, making $4$ trips each day of $d$ miles per trip. The total operating cost for one week is $c$ SAR. Which expression gives the daily maintenance cost $m$?",
+"opts": [
+"$\\dfrac{c-4dn}{5}$",
+"$\\dfrac{c-20dn}{7}$",
+"$c-20dn$",
+"$\\dfrac{c-20dn}{5}$"
+],
+"key": 3,
+"steps": [
+"Weekly miles are $5\\cdot 4\\cdot d=20d$, so weekly fuel cost is $20dn$.",
+"Write $5m+20dn=c$; test with $d=1,n=1,m=2$: $c=30$, and $\\dfrac{30-20}{5}=2$ works.",
+"Solve: $m=\\dfrac{c-20dn}{5}$.",
+"Traps: forgetting the $5$ days in the mileage, dividing by $7$ days, or not dividing by the number of days."
+],
+"src_q": 88,
+"id": "MR-088"
+},
+{
+"lv": "M",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent change and growth",
+"q": "A solar panel needs $420$ cells to be placed with Method A, using a robot that places $35$ cells in $14$ minutes. Method B needs $300$ cells, using a robot that places $40$ cells in $14$ minutes. Assume the cells are placed with no other delay. By what percent is the assembly time reduced when Method A is replaced by Method B?",
+"key": 37.5,
+"disp": "37.5",
+"steps": [
+"Method A: $\\dfrac{420}{35}\\cdot 14=168$ minutes. Method B: $\\dfrac{300}{40}\\cdot 14=105$ minutes.",
+"In Desmos type <code>(168-105)/168*100</code>; it returns $37.5$.",
+"Check: $63$ minutes saved out of the original $168$.",
+"Trap: dividing by the new time $105$ (giving $60$) or reporting the remaining $62.5$ percent."
+],
+"src_q": 93,
+"id": "MR-093"
+},
+{
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent of a quantity and parts",
+"q": "A football club's fan app had $200$ thousand registered fans in 2024, and $60$ thousand of them were active. In 2025 the number of registered fans rose by $10$ thousand and the number of active fans rose by $9$ thousand. What percent of the registered fans were active in 2025, rounded to the nearest hundredth?",
+"opts": [
+"$30.00\\%$",
+"$32.86\\%$",
+"$34.50\\%$",
+"$90.00\\%$"
+],
+"key": 1,
+"steps": [
+"New totals: registered $200+10=210$ thousand, active $60+9=69$ thousand.",
+"In Desmos type <code>69/210*100</code>; it returns $32.857\\ldots$, which is $32.86\\%$.",
+"Traps: $30.00\\%$ is the 2024 rate, $34.50\\%$ divides by the old registered total, $90.00\\%$ divides the two increases."
+],
+"src_q": 94,
+"id": "MR-094"
+},
+{
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent of a quantity and parts",
+"q": "Of all applicants to a Red Sea training programme, $70\\%$ attend the interview. Of those who attend, $60\\%$ are offered a place. By what percent is the number of applicants who do not attend the interview less than the number of applicants offered a place?",
+"opts": [
+"$12.00\\%$",
+"$40.00\\%$",
+"$28.57\\%$",
+"$71.43\\%$"
+],
+"key": 2,
+"steps": [
+"Take $100$ applicants: $30$ do not attend, and $0.70\\cdot 0.60\\cdot 100=42$ are offered a place.",
+"In Desmos type <code>(42-30)/42*100</code>; it returns $28.571\\ldots$",
+"The base for 'less than' is the number offered a place ($42$).",
+"Traps: $12\\%$ is the difference in percentage points, $40\\%$ uses the base $30$, $71.43\\%$ is the ratio $\\dfrac{30}{42}$."
+],
+"src_q": 95,
+"id": "MR-095"
+},
+{
+"lv": "H",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Rational expressions",
+"q": "A cyclist rides $d$ kilometers up a mountain road in Abha at $v$ kilometers per hour, then returns down the same road at $(v+12)$ kilometers per hour. Which expression gives her average speed, in kilometers per hour, for the whole round trip?",
+"opts": [
+"$v+6$",
+"$\\dfrac{v(v+12)}{2(v+6)}$",
+"$\\dfrac{2}{v+(v+12)}$",
+"$\\dfrac{v(v+12)}{v+6}$"
+],
+"key": 3,
+"steps": [
+"Total distance is $2d$. Total time is $\\dfrac{d}{v}+\\dfrac{d}{v+12}=\\dfrac{d(2v+12)}{v(v+12)}$.",
+"Test in Desmos with $v=10$: <code>2/(1/10+1/22)</code> returns $13.75$, and $\\dfrac{10\\cdot 22}{16}=13.75$.",
+"Average speed $=\\dfrac{2d}{\\text{time}}=\\dfrac{v(v+12)}{v+6}$; the $d$ cancels.",
+"Traps: $v+6$ is the plain mean of speeds, the second option uses distance $d$ instead of $2d$, the third adds speeds in a denominator."
+],
+"src_q": 99,
+"id": "MR-099"
+},
+{
+"lv": "M",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "A runner on the Jeddah Corniche ramp goes up at $1.5$ meters per second and comes back down the same ramp at $2.5$ meters per second. The round trip takes $8$ minutes in total. How many meters long is the ramp, one way?",
+"key": 450,
+"disp": "450",
+"steps": [
+"Convert: $8$ minutes $=480$ seconds. Let the one-way length be $d$ meters.",
+"Equation: $\\dfrac{d}{1.5}+\\dfrac{d}{2.5}=480$. In Desmos type <code>x/1.5+x/2.5=480</code>; it returns $450$.",
+"Check: $\\dfrac{450}{1.5}=300$ s and $\\dfrac{450}{2.5}=180$ s, total $480$ s.",
+"Traps: leaving time in minutes, or giving the round-trip distance $900$."
+],
+"src_q": 100,
+"id": "MR-100"
+},
+{
+"id": "MR-101",
+"src_q": 101,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "A driver travels from Jeddah toward Madinah. She covers the first $d$ kilometers at $80$ km/h and the remaining $120$ kilometers at $40$ km/h. What is her average speed, in km/h, for the whole trip?",
+"steps": [
+"Average speed is total distance over total time, not the mean of the speeds. Total distance is $d+120$.",
+"Time is $\\dfrac{d}{80}+\\dfrac{120}{40}=\\dfrac{d}{80}+3$. In Desmos type <code>(d+120)/(d/80+3)</code> and test $d=40$: it returns $45.71$, which matches $\\dfrac{80(d+120)}{d+240}$.",
+"Multiply top and bottom by $80$ to get $\\dfrac{80(d+120)}{d+240}$.",
+"Trap: $\\dfrac{80+40}{2}=60$ ignores the time spent at each speed; $\\dfrac{d}{80}+3$ is the time, not the speed."
+],
+"mc": true,
+"opts": [
+"$\\dfrac{80(d+120)}{d+3}$",
+"$\\dfrac{80(d+120)}{d+240}$",
+"$60$",
+"$\\dfrac{d}{80}+3$"
+],
+"key": 1
+},
+{
+"id": "MR-102",
+"src_q": 102,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "At a Jeddah school, $36$ students joined the robotics club, $28$ joined the chess club, and $12$ joined both clubs. Exactly $8$ students joined neither club. If one student is chosen at random, what is the probability that the student belongs to exactly one of the two clubs?",
+"steps": [
+"Total students: $36+28-12+8=60$ (subtract the overlap once).",
+"Only robotics: $36-12=24$. Only chess: $28-12=16$. Exactly one club: $24+16=40$.",
+"In Desmos type <code>40/60</code> to get $0.6667=\\dfrac{2}{3}$.",
+"Trap: $\\dfrac{52}{60}=\\dfrac{13}{15}$ counts students in at least one club; $\\dfrac{20}{60}=\\dfrac{1}{3}$ counts both or neither."
+],
+"mc": true,
+"opts": [
+"$\\dfrac{13}{15}$",
+"$\\dfrac{1}{3}$",
+"$\\dfrac{2}{3}$",
+"$\\dfrac{2}{5}$"
+],
+"key": 2
+},
+{
+"id": "MR-104",
+"src_q": 104,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Ratios and scale",
+"q": "A stall at the Jeddah Corniche sells dates, figs, nuts, and raisins. The number of figs is $\\dfrac{2}{3}$ the number of dates, the number of nuts is $\\dfrac{3}{4}$ the number of figs, and the number of raisins is $\\dfrac{2}{3}$ the number of nuts. What fraction of all the items are not dates?",
+"steps": [
+"Let dates $=12k$ (a common multiple of the denominators). Figs $=8k$, nuts $=6k$, raisins $=4k$.",
+"Total $=12k+8k+6k+4k=30k$. Items that are not dates: $30k-12k=18k$.",
+"In Desmos type <code>18/30</code> to get $0.6=\\dfrac{3}{5}$.",
+"Trap: $\\dfrac{12}{30}=\\dfrac{2}{5}$ is the fraction that ARE dates, the quantity not asked for."
+],
+"mc": false,
+"key": 0.6,
+"disp": "\\dfrac{3}{5}"
+},
+{
+"id": "MR-106",
+"src_q": 106,
+"lv": "M",
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Other area and volume problems",
+"q": "A shipping crate is a rectangular box with outer dimensions $4.2$ m by $6.2$ m by $10.2$ m. Its walls, floor, and roof are each $0.1$ m thick, so the usable inside space is smaller. The crate is packed with boxes that measure $2$ m by $1.5$ m by $1$ m, all lined up the same way. What is the maximum number of these boxes that fit inside the crate?",
+"steps": [
+"Each of the three dimensions loses $0.1$ m at both ends, so the inside is $4$ m by $6$ m by $10$ m.",
+"Match the sides: $\\dfrac{4}{2}=2$, $\\dfrac{6}{1.5}=4$, $\\dfrac{10}{1}=10$ boxes along each edge.",
+"In Desmos type <code>2*4*10</code> to get $80$. Check by volume: $\\dfrac{240}{3}=80$.",
+"Trap: using the outer size gives $\\dfrac{4.2\\cdot 6.2\\cdot 10.2}{3}\\approx 88$, which is too many."
+],
+"mc": false,
+"key": 80,
+"disp": "80"
+},
+{
+"id": "MR-108",
+"src_q": 108,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent of a quantity and parts",
+"q": "A football academy in Riyadh pays $20$ senior coaches and $30$ junior coaches. A junior coach is paid $\\dfrac{2}{5}$ of what a senior coach is paid. The junior coaches' pay is what percent of the academy's total coaching pay? (Grid in the number without the percent sign.)",
+"steps": [
+"Let a senior coach be paid $c$. Senior total: $20c$. Junior total: $30\\cdot\\dfrac{2}{5}c=12c$.",
+"Total pay: $20c+12c=32c$.",
+"In Desmos type <code>12/32*100</code> to get $37.5$.",
+"Trap: $\\dfrac{30}{50}=60\\%$ uses headcount instead of pay; $\\dfrac{2}{5}=40\\%$ is the pay ratio, not the share of the total."
+],
+"mc": false,
+"key": 37.5,
+"disp": "37.5"
+},
+{
+"id": "MR-111",
+"src_q": 111,
+"lv": "H",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent change and growth",
+"q": "A Jeddah electronics store buys a tablet for $850$ SAR. It wants a $20\\%$ profit on its cost after giving customers a $15\\%$ discount off the listed price. What listed price, in SAR, achieves this?",
+"steps": [
+"Selling price needed: $850\\cdot 1.20=1020$ SAR. This is what remains after the discount.",
+"The customer pays $85\\%$ of the listed price $L$, so $0.85L=1020$.",
+"In Desmos type <code>850*1.2/0.85</code> to get $1200$.",
+"Trap: $1020\\cdot1.15=1173$ adds back the discount as a percent of the wrong base; $850\\cdot1.35=1147.50$ adds the percents; $1020$ forgets the discount."
+],
+"mc": true,
+"opts": [
+"1,020 SAR",
+"1,147.50 SAR",
+"1,200 SAR",
+"1,173 SAR"
+],
+"key": 2
+},
+{
+"id": "MR-114",
+"src_q": 114,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "A shop sells bottled water for $3$ SAR per bottle, or in cartons of $12$ bottles for $30$ SAR per carton. What is the minimum amount, in SAR, that a customer must pay to buy exactly $100$ bottles?",
+"steps": [
+"A carton costs $2.50$ SAR per bottle, cheaper than $3$ SAR, so use as many full cartons as possible: $\\left\\lfloor\\dfrac{100}{12}\\right\\rfloor=8$ cartons hold $96$ bottles.",
+"The other $4$ bottles are bought singly. In Desmos type <code>8*30+4*3</code> to get $252$.",
+"Buying $9$ cartons would give $108$ bottles, not exactly $100$.",
+"Trap: $270$ (9 cartons), $250$ ($100\\cdot2.50$ with fractional cartons) and $300$ (all singles)."
+],
+"mc": true,
+"opts": [
+"250 SAR",
+"270 SAR",
+"300 SAR",
+"252 SAR"
+],
+"key": 3
+},
+{
+"id": "MR-118",
+"src_q": 118,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Rates and proportional relationships",
+"q": "A Makkah souvenir shop sets its selling price so that the selling price of $8$ scarves equals the cost price of $10$ scarves. A customer buys $12$ scarves, and the shop's total profit on this sale is $90$ SAR. What is the cost price, in SAR, of one scarf?",
+"steps": [
+"Let the cost of one scarf be $c$. Then $8s=10c$, so the selling price is $s=1.25c$.",
+"Profit per scarf: $s-c=0.25c$. For $12$ scarves: $12\\cdot0.25c=3c$.",
+"In Desmos type <code>90/(12*0.25)</code> to get $30$.",
+"Trap: using $10c-8c$ or dividing by $12$ only gives $7.5$; the profit is $25\\%$ of cost on each scarf."
+],
+"mc": false,
+"key": 30,
+"disp": "30"
+},
+{
+"id": "MR-122",
+"src_q": 122,
+"lv": "M",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent change and growth",
+"q": "The price of a souvenir was a whole number of riyals. The shop raised the price by exactly $15\\%$. Which of the following could NOT be the new price, in SAR?",
+"steps": [
+"The new price is $1.15n=\\dfrac{23n}{20}$ with $n$ a whole number, so (new price) $\\div\\,1.15$ must be a whole number.",
+"In Desmos type <code>6.90/1.15</code>, <code>10.35/1.15</code>, <code>13.80/1.15</code>: they return $6$, $9$, $12$.",
+"Type <code>8.60/1.15</code>: it returns $7.478\\ldots$, not a whole number, so $8.60$ is impossible.",
+"Trap: checking only that the price has two decimals does not prove it came from a whole-riyal price."
+],
+"mc": true,
+"opts": [
+"6.90",
+"8.60",
+"10.35",
+"13.80"
+],
+"key": 1
+},
+{
+"id": "MR-124",
+"src_q": 124,
+"lv": "M",
+"domain": "Advanced Math",
+"skill": "Nonlinear functions",
+"sub": "Exponential growth and decay",
+"q": "Algae in a Red Sea research tank double in number every $3$ hours. After a treatment is added, the number of algae after $9$ hours is only $5$ times the starting number. By what percent is the population after $9$ hours smaller than it would have been without treatment? (Grid in the number without the percent sign.)",
+"steps": [
+"Without treatment: $2^{9/3}=2^3=8$ times the starting number.",
+"With treatment: $5$ times the starting number. Decrease: $8-5=3$ starting units.",
+"In Desmos type <code>(8-5)/8*100</code> to get $37.5$.",
+"Trap: $\\dfrac{5}{8}=62.5\\%$ is the remaining share, and $\\dfrac{3}{5}=60\\%$ divides by the wrong base."
+],
+"mc": false,
+"key": 37.5,
+"disp": "37.5"
+},
+{
+"id": "MR-125",
+"src_q": 125,
+"lv": "H",
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent change and growth",
+"q": "An investor places $5000$ SAR in an account for exactly one year. Which payment term gives the investor the greatest interest?",
+"steps": [
+"Compare the growth factors over one year. A: simple interest, $1+0.096=1.0960$.",
+"In Desmos type <code>(1+0.094/2)^2</code>, <code>(1+0.092/4)^4</code>, <code>(1+0.09/12)^12</code>: they return $1.0962$, $1.0954$, $1.0938$.",
+"The largest factor is $1.0962$ (semiannual), about $1$ SAR more than A on a $5000$ SAR deposit.",
+"Trap: picking the most frequent compounding (monthly) or ignoring compounding. A lower nominal rate compounded more often may or may not win, so compute."
+],
+"mc": true,
+"opts": [
+"$9.6\\%$ per year, paid once at the end of the year",
+"$9.2\\%$ per year, compounded every 3 months",
+"$9\\%$ per year, compounded every month",
+"$9.4\\%$ per year, compounded every 6 months"
+],
+"key": 3
+},
+{
+"id": "MR-126",
+"src_q": 126,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent change and growth",
+"q": "A depositor in Jeddah invests 50,000 SAR for one year. Plan A pays simple interest at $4.8\\%$ per year, paid once at the end of the year. Plan B pays $4.5\\%$ per year compounded semiannually. At the end of the year, how much more interest does Plan A pay than Plan B?",
+"steps": [
+"Plan A: type <code>50000*0.048</code> and get 2400. Plan B has two periods at $\\dfrac{4.5\\%}{2}=2.25\\%$ each.",
+"Type <code>50000*(1.0225^2-1)</code> and get 2275.3125, so Plan B interest is about 2,275.31 SAR.",
+"Difference: <code>2400-2275.3125</code> gives 124.69 SAR.",
+"Traps: 150.00 treats Plan B as simple $4.5\\%$; 1,275.00 uses only one $2.25\\%$ period; 2,275.31 is Plan B's interest, not the difference."
+],
+"opts": [
+"150.00 SAR",
+"124.69 SAR",
+"1,275.00 SAR",
+"2,275.31 SAR"
+],
+"key": 1
+},
+{
+"id": "MR-127",
+"src_q": 127,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent of a quantity and parts",
+"q": "An online electronics store in Riyadh offers two ways to buy a laptop. Plan X requires an immediate payment of $10\\%$ of the laptop price followed by 6 monthly installments, each equal to $15\\%$ of the price. Plan Y requires an immediate payment of $20\\%$ of the price followed by 8 monthly installments, each equal to $12.5\\%$ of the price. The total paid under Plan X is what percent less than the total paid under Plan Y?",
+"steps": [
+"Plan X total: <code>10+6*15</code> gives $100\\%$ of the price. Plan Y total: <code>20+8*12.5</code> gives $120\\%$.",
+"The base is Plan Y, so compute <code>(120-100)/120*100</code> and get $16.7\\%$.",
+"Check: $0.833\\times120=100$.",
+"Traps: $20\\%$ uses Plan X as the base; $120\\%$ is Plan Y as a percent of Plan X; $10\\%$ only compares the down payments."
+],
+"opts": [
+"20%",
+"10%",
+"16.7%",
+"120%"
+],
+"key": 2
+},
+{
+"id": "MR-128",
+"src_q": 128,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear functions",
+"sub": "Exponential growth and decay",
+"q": "A bacterial culture in a Jeddah laboratory grows by $12\\%$ each hour. During which one-hour interval does the culture first exceed $2.5$ times its initial size?",
+"steps": [
+"Model: $N=N_0(1.12)^t$. Solve $1.12^t>2.5$.",
+"In Desmos type <code>y=1.12^x</code> and <code>y=2.5</code> and find the intersection at $t\\approx8.08$.",
+"Check: <code>1.12^8</code> is 2.476 (below 2.5) and <code>1.12^9</code> is 2.773 (above), so the interval is 8 to 9 hours.",
+"Traps: $\\dfrac{150}{12}=12.5$ treats growth as linear; $\\dfrac{2.5}{1.12}$ is one division, not a power."
+],
+"opts": [
+"2 to 3 hours",
+"7 to 8 hours",
+"12 to 13 hours",
+"8 to 9 hours"
+],
+"key": 3
+},
+{
+"id": "MR-131",
+"src_q": 131,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "Three trucks travel from Jeddah to Makkah by routes P, Q and R, whose lengths are in the ratio $5:4:2$. The fuel used by the trucks on P, Q and R is in the ratio $10:6:3$. What is the ratio of the fuel used per kilometer by the trucks on P, Q and R, in that order?",
+"steps": [
+"Fuel per kilometer is fuel divided by distance: $\\dfrac{10}{5}:\\dfrac{6}{4}:\\dfrac{3}{2}$.",
+"Type <code>10/5</code>, <code>6/4</code>, <code>3/2</code> to get $2:1.5:1.5$.",
+"Multiply by 2 to clear decimals: $4:3:3$.",
+"Traps: $10:6:3$ is the raw fuel ratio; $3:4:4$ is the inverse (kilometers per unit of fuel); $50:24:6$ multiplies instead of dividing."
+],
+"opts": [
+"4:3:3",
+"10:6:3",
+"3:4:4",
+"50:24:6"
+],
+"key": 0
+},
+{
+"id": "MR-132",
+"src_q": 132,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Percentages",
+"sub": "Percent of a quantity and parts",
+"q": "A 60-liter tank holds a cleaning solution that is $75\\%$ active ingredient. A technician drains some liquid from the tank and refills it to 60 liters using a solution that is $30\\%$ active ingredient. The final mixture is $45\\%$ active ingredient. How many liters were drained?",
+"steps": [
+"Active ingredient now: $0.75(60)=45$ liters. Target: $0.45(60)=27$ liters.",
+"Let $x$ be liters drained: $45-0.75x+0.30x=27$, which gives $0.45x=18$.",
+"Type <code>solve(45-0.45x=27)</code> or compute <code>18/0.45</code> to get $x=40$.",
+"Traps: 24 assumes the refill is pure water; 18 is the drop in active liters, not the volume; 36 is $60\\%$ of 60 from $\\dfrac{45}{75}$."
+],
+"opts": [
+"24",
+"40",
+"18",
+"36"
+],
+"key": 1
+},
+{
+"id": "MR-145",
+"src_q": 145,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "A bag contains 24 identical tokens: 9 red, 7 blue and 8 white. Two tokens are drawn at random without replacement. What is the probability that at least one of the two tokens is red?",
+"steps": [
+"Use the complement: no red on both draws, so $\\dfrac{15}{24}\\cdot\\dfrac{14}{23}$.",
+"Type <code>1-(15/24)*(14/23)</code> and get $0.6196$, which equals $\\dfrac{57}{92}$.",
+"Check: <code>57/92</code> gives 0.6196.",
+"Traps: $\\dfrac{35}{92}$ is the probability of no red; $\\dfrac{39}{64}$ forgets the first token is not replaced; $\\dfrac{3}{8}$ counts only the first draw."
+],
+"opts": [
+"$\\dfrac{35}{92}$",
+"$\\dfrac{39}{64}$",
+"$\\dfrac{57}{92}$",
+"$\\dfrac{3}{8}$"
+],
+"key": 2
+},
+{
+"id": "MR-146",
+"src_q": 146,
+"lv": "M",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "On any weekday, a Riyadh Metro train arrives on time with probability $0.9$, independently of other days. A commuter rides once a day for 4 weekdays. What is the probability that the train is late on at least one of these days? Enter your answer as a decimal.",
+"steps": [
+"At least one late day is the complement of all four on time.",
+"Type <code>1-0.9^4</code> and get 0.3439.",
+"Check: $0.9^4=0.6561$ and $1-0.6561=0.3439$.",
+"Traps: $0.1^4=0.0001$ is all four late; $4(0.1)=0.4$ adds probabilities that overlap."
+],
+"key": 0.3439,
+"disp": "0.3439"
+},
+{
+"id": "MR-149",
+"src_q": 149,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "A box holds 4 gold coins and $s$ silver coins. Two coins are drawn at random without replacement, and the probability that both are silver is $\\dfrac{1}{3}$. What is the value of $s$?",
+"steps": [
+"Write $\\dfrac{s}{s+4}\\cdot\\dfrac{s-1}{s+3}=\\dfrac{1}{3}$ and cross-multiply: $3s^2-3s=s^2+7s+12$.",
+"This simplifies to $s^2-5s-6=0$. In Desmos type <code>y=x^2-5x-6</code> and read the zeros $x=-1$ and $x=6$.",
+"Reject $-1$ since a count is positive. Check: <code>6/10*5/9</code> gives $\\dfrac{1}{3}$.",
+"Traps: 2 solves $\\dfrac{s}{s+4}=\\dfrac13$ using only the first draw; 5 is a coefficient, not a root; 12 comes from dropping the 'without replacement' change."
+],
+"opts": [
+"6",
+"2",
+"5",
+"12"
+],
+"key": 0
+},
+{
+"id": "MR-151",
+"src_q": 151,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "A bag holds 3 green tickets and some white tickets for a Saudi Pro League match draw. Two tickets are drawn at random without replacement, and the probability that both are white is $\\dfrac{5}{12}$. How many tickets are in the bag in total?",
+"opts": [
+"6",
+"9",
+"12",
+"5"
+],
+"key": 1,
+"steps": [
+"Let $n$ be the number of white tickets. Then $\\dfrac{n}{n+3}\\cdot\\dfrac{n-1}{n+2}=\\dfrac{5}{12}$, which gives $7n^2-37n-30=0$.",
+"In Desmos type <code>y=12x(x-1)-5(x+3)(x+2)</code> and read the positive zero: $x=6$ (the other zero is negative).",
+"Check: $\\dfrac{6}{9}\\cdot\\dfrac{5}{8}=\\dfrac{5}{12}$. Total tickets are $6+3=9$.",
+"Trap: $6$ is only the white count; $12$ doubles it; $5$ is an off-by-one from the second draw."
+]
+},
+{
+"id": "MR-156",
+"src_q": 156,
+"lv": "H",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Probability",
+"sub": "Basic and compound probability",
+"q": "A circular target at a Riyadh fair has radius $10$ cm. Its centre is a black disc of radius $2$ cm. Around it is a white ring of width $3$ cm, then a black ring of width $2$ cm, and the rest out to the edge is white. A dart lands at a random point on the target. What is the probability it lands on a black region? Enter your answer as a decimal.",
+"key": 0.28,
+"disp": "0.28",
+"steps": [
+"Black areas: disc radius $2$ gives $4\\pi$; black ring runs from radius $5$ to radius $7$ (since $2+3=5$, $5+2=7$).",
+"In Desmos type <code>(pi*2^2+pi*(7^2-5^2))/(pi*10^2)</code> and it returns $0.28$.",
+"Algebra: $\\dfrac{4\\pi+24\\pi}{100\\pi}=\\dfrac{28}{100}=\\dfrac{7}{25}$.",
+"Trap: widths are not radii; using $2$ and $2$ as radii (or $3^2$ for the ring) gives a wrong area."
+]
+},
+{
+"id": "MR-157",
+"src_q": 157,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Mean, median and mode",
+"q": "The average (arithmetic mean) of $x$ and $y$ is $35$, and the average of $x$ and $z$ is $53$. What is the value of $\\dfrac{y-z}{4}$?",
+"opts": [
+"-36",
+"-18",
+"9",
+"-9"
+],
+"key": 3,
+"steps": [
+"Convert averages to sums: $x+y=70$ and $x+z=106$.",
+"Subtract the first from the second: $z-y=36$, so $y-z=-36$. In Desmos type <code>(70-106)/4</code> to get $-9$.",
+"Check with $x=0$: $y=70$, $z=106$, and $\\dfrac{70-106}{4}=-9$.",
+"Trap: $-36$ forgets to divide by $4$; $9$ reverses the order of subtraction; $-18$ subtracts the averages instead of the sums."
+]
+},
+{
+"id": "MR-161",
+"src_q": 161,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Mean, median and mode",
+"q": "A weather station in Jeddah recorded an average (arithmetic mean) of $18$ millimetres of rain per storm over its first $n$ storms. After one more storm of $42$ millimetres, the average rose to $20$ millimetres per storm. What is the value of $n$?",
+"opts": [
+"11",
+"10",
+"12",
+"22"
+],
+"key": 0,
+"steps": [
+"Total rain before: $18n$. Total after: $18n+42$ over $n+1$ storms, so $\\dfrac{18n+42}{n+1}=20$.",
+"In Desmos type <code>y=18x+42-20(x+1)</code> and read the zero at $x=11$.",
+"Check: $\\dfrac{18\\cdot 11+42}{12}=\\dfrac{240}{12}=20$.",
+"Trap: $12$ is the new number of storms, not $n$; $10$ is an off-by-one; $22$ comes from $42-20$."
+]
+},
+{
+"id": "MR-163",
+"src_q": 163,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Mean, median and mode",
+"q": "Set $A$ is $\\{-5, 14, 3, 9, -2, 7\\}$ and set $B$ is $\\{4, -6, 10, 1, 12, 9, -3, y\\}$. The two sets have equal medians. What is the value of $y$?",
+"opts": [
+"4",
+"6",
+"5",
+"9"
+],
+"key": 1,
+"steps": [
+"Order $A$: $-5,-2,3,7,9,14$. With six values the median is $\\dfrac{3+7}{2}=5$.",
+"Without $y$, $B$ sorted is $-6,-3,1,4,9,10,12$. With eight values the median is the mean of the 4th and 5th values, so $y$ must land between $4$ and $9$: $\\dfrac{4+y}{2}=5$.",
+"In Desmos type <code>median([-6,-3,1,4,6,9,10,12])</code> and it returns $5$, confirming $y=6$.",
+"Trap: setting $y=5$ (the median itself) gives $\\dfrac{4+5}{2}=4.5$; $4$ and $9$ are neighbouring values, not the missing one."
+]
+},
+{
+"id": "MR-169",
+"src_q": 169,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Mean, median and mode",
+"q": "Inspectors counted defective solar panels in eight of nine batches: $9, 4, 7, 5, 10, 6, 6, 3$. The median number of defects per batch for all nine batches equals the mean for all nine batches. How many defects were in the ninth batch?",
+"opts": [
+"6",
+"3",
+"4",
+"5"
+],
+"key": 2,
+"steps": [
+"The eight known values sum to $50$ and sort to $3,4,5,6,6,7,9,10$. Let the ninth value be $t$.",
+"If $t\\le 6$ the median of nine values is $6$, so the mean must be $6$: $\\dfrac{50+t}{9}=6$ gives $t=4$ (and $4\\le 6$ is consistent).",
+"In Desmos type <code>(50+4)/9</code> to get $6$ and <code>median([3,4,4,5,6,6,7,9,10])</code> to get $6$.",
+"Trap: $6$ reuses the old median; $3$ is the smallest value; $5$ is the middle position, not a data value that works. Values above $6$ fail because they force $t=4$."
+]
+},
+{
+"id": "MR-171",
+"src_q": 171,
+"lv": "M",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Data displays and distributions",
+"q": "A frequency table shows the goals scored per match across $40$ school football matches in Makkah: $0$ goals in $5$ matches, $1$ goal in $9$ matches, $2$ goals in $12$ matches, $3$ goals in $8$ matches, $4$ goals in $4$ matches, and $5$ goals in $2$ matches. What is the mean number of goals per match?",
+"key": 2.075,
+"disp": "2.075",
+"steps": [
+"Multiply each value by its frequency: $0+9+24+24+16+10=83$ total goals.",
+"In Desmos type <code>(0*5+1*9+2*12+3*8+4*4+5*2)/40</code> and it returns $2.075$.",
+"Check that the frequencies add to $5+9+12+8+4+2=40$.",
+"Trap: averaging the six goal values ($2.5$) or dividing by $6$ ignores the frequencies."
+]
+},
+{
+"id": "MR-172",
+"src_q": 172,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Spread: range and standard deviation",
+"q": "A set contains the numbers $-18$, $52$, $a$ and $b$. Which of the following could be the range of the set? I. $64$  II. $70$  III. $95$",
+"opts": [
+"II and III only",
+"II only",
+"I and III only",
+"I only"
+],
+"key": 0,
+"steps": [
+"The numbers $-18$ and $52$ are already in the set, so the range is at least $52-(-18)=70$.",
+"In Desmos type <code>52-(-18)</code> to get $70$. Choose $a=b=0$ for range $70$, and $a=77$ for range $95$.",
+"Range $64$ is below $70$ and is impossible for any $a,b$.",
+"Trap: 'could be' allows larger ranges, so II alone is incomplete; $64$ is tempting because it is close to $70$."
+]
+},
+{
+"id": "MR-173",
+"src_q": 173,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Spread: range and standard deviation",
+"q": "Each of the following sets has a mean of $15$. Which set has the greatest standard deviation?",
+"opts": [
+"$\\{0, 10, 20, 30\\}$",
+"$\\{0, 0, 30, 30\\}$",
+"$\\{0, 15, 15, 30\\}$",
+"$\\{10, 10, 20, 20\\}$"
+],
+"key": 1,
+"steps": [
+"Standard deviation measures typical distance from the mean $15$, so compare how far values sit from $15$.",
+"In Desmos type <code>stdev([0,0,30,30])</code> and it returns $15$; the others give about $11.2$, $10.6$ and $5$.",
+"Every value in $\\{0,0,30,30\\}$ is exactly $15$ from the mean, the largest possible distance for numbers between $0$ and $30$.",
+"Trap: evenly spaced values look 'most spread out' but have values near the mean; sets with equal range can differ in standard deviation."
+]
+},
+{
+"id": "MR-174",
+"src_q": 174,
+"lv": "M",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Spread: range and standard deviation",
+"q": "A data set has a standard deviation of $4.5$. Each value is replaced by $-3x+7$, where $x$ is the original value. What is the standard deviation of the new data set?",
+"opts": [
+"-13.5",
+"4.5",
+"13.5",
+"20.5"
+],
+"key": 2,
+"steps": [
+"Adding $7$ shifts every value equally, so it does not change the spread.",
+"Multiplying by $-3$ scales spread by $|-3|=3$. In Desmos type <code>abs(-3)*4.5</code> to get $13.5$.",
+"Standard deviation is never negative, so the sign of the multiplier is dropped.",
+"Trap: $-13.5$ keeps the sign; $4.5$ ignores the multiplier; $20.5$ adds the shift $7$ to the new spread."
+]
+},
+{
+"id": "MR-176",
+"src_q": 176,
+"lv": "H",
+"mc": true,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "One-variable data",
+"sub": "Mean, median and mode",
+"q": "Five players in a Jeddah youth football academy scored an average of $12$ goals each during the season. Every player scored a different whole number of goals, and the highest scorer had $16$ goals. What is the least number of goals that any of the five players could have scored?",
+"steps": [
+"Total goals: $5\\times12=60$. To make the smallest score as small as possible, make the other three players as large as allowed: $15$, $14$, $13$.",
+"Type <code>60-16-15-14-13</code> in Desmos. It returns $2$.",
+"Check: $2+13+14+15+16=60$, so the mean is $12$ and all scores are distinct.",
+"Trap: answering the mean ($12$), or choosing middle scores like $14,13,12$ (giving $5$), which does not minimise the lowest score."
+],
+"opts": [
+"$5$",
+"$2$",
+"$6$",
+"$12$"
+],
+"key": 1
+},
+{
+"id": "MR-193",
+"src_q": 193,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Factoring and expanding",
+"q": "Which of the following is equivalent to $(4x^4-2x^3+x-5)-(x^4+3x^3-2x+7)-(2x^4-x^3+5x)$?",
+"steps": [
+"Distribute both minus signs: $4x^4-2x^3+x-5-x^4-3x^3+2x-7-2x^4+x^3-5x$.",
+"Type the whole expression into Desmos and compare with each option at $x=2$: the value is $-32$.",
+"Combine like terms: $x^4$: $4-1-2=1$; $x^3$: $-2-3+1=-4$; $x$: $1+2-5=-2$; constants $-5-7=-12$.",
+"Trap: forgetting to flip every sign inside a subtracted bracket."
+],
+"opts": [
+"$5x^{4}-6x^{3}+8x-12$",
+"$3x^{4}+2x^{3}-6x+2$",
+"$x^{4}-4x^{3}-2x-12$",
+"$x^{4}-4x^{3}-2x+2$"
+],
+"key": 2
+},
+{
+"id": "MR-194",
+"src_q": 194,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Exponents and radicals",
+"q": "Which of the following is equivalent to $\\dfrac{(2x^{3}y^{-2})^{3}}{2x^{-1}y^{5}}$, for nonzero $x$ and $y$?",
+"steps": [
+"Cube the numerator: $(2x^3y^{-2})^3=8x^{9}y^{-6}$.",
+"Divide: coefficient $\\dfrac{8}{2}=4$; $x$: $9-(-1)=10$; $y$: $-6-5=-11$. Check numerically in Desmos with <code>(2*2^3*3^-2)^3/(2*2^-1*3^5)</code> versus <code>4*2^10*3^-11</code>.",
+"Both give the same value, confirming $4x^{10}y^{-11}$.",
+"Trap: subtracting $-1$ as if it were $+1$ gives $x^8$; adding the $y$ exponents gives $y^{-1}$; cubing only the variables gives coefficient $6/2=3$."
+],
+"opts": [
+"$4x^{8}y^{-11}$",
+"$4x^{10}y^{-1}$",
+"$3x^{10}y^{-11}$",
+"$4x^{10}y^{-11}$"
+],
+"key": 3
+},
+{
+"id": "MR-195",
+"src_q": 195,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Factoring and expanding",
+"q": "When $(2x^3-5)(3x^3+x^2-4)$ is written in standard form, what is the coefficient of $x^3$?",
+"steps": [
+"Only two products give $x^3$: $2x^3\\cdot(-4)=-8x^3$ and $(-5)\\cdot3x^3=-15x^3$.",
+"Type <code>(2x^3-5)(3x^3+x^2-4)</code> in Desmos or expand by hand: $6x^6+2x^5-23x^3-5x^2+20$.",
+"Add the two contributions: $-8+(-15)=-23$.",
+"Trap: counting only one of the two products ($-8$ or $-15$), or a sign slip giving $-8+15=7$."
+],
+"opts": [
+"$-23$",
+"$-8$",
+"$-15$",
+"$7$"
+],
+"key": 0
+},
+{
+"id": "MR-197",
+"src_q": 197,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Polynomial division and remainder",
+"q": "For $x\\ne5$, the expression $\\dfrac{2x^3-10x^2-9x+45}{x-5}$ is equivalent to a quadratic expression. What is the value of that quadratic expression when $x=-2$?",
+"steps": [
+"Factor by grouping: $2x^2(x-5)-9(x-5)=(x-5)(2x^2-9)$.",
+"Type <code>(2x^3-10x^2-9x+45)/(x-5)</code> in Desmos, or divide: the quotient is $2x^2-9$ with remainder $0$.",
+"Substitute $x=-2$: $2(4)-9=-1$.",
+"Trap: evaluating the original numerator instead gives $(-7)(-1)=7$; a sign error in the grouped factor gives $2x^2+9=17$."
+],
+"opts": [
+"$7$",
+"$-1$",
+"$17$",
+"$26$"
+],
+"key": 1
+},
+{
+"id": "MR-198",
+"src_q": 198,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Polynomial division and remainder",
+"q": "Which of the following is equivalent to $\\dfrac{27x^3-64}{3x-4}$, for $x\\ne\\dfrac{4}{3}$?",
+"steps": [
+"Recognise a difference of cubes: $27x^3-64=(3x)^3-4^3=(3x-4)(9x^2+12x+16)$.",
+"Check in Desmos: graph <code>(27x^3-64)/(3x-4)</code> and <code>9x^2+12x+16</code>; the curves coincide (the first has a hole at $x=\\dfrac{4}{3}$).",
+"Cancel the common factor $3x-4$.",
+"Trap: the middle term is $+(3x)(4)=+12x$, not $-12x$ (sum-of-cubes pattern) and not $2ab=24x$ (perfect-square pattern)."
+],
+"opts": [
+"$9x^2-12x+16$",
+"$9x^2+24x+16$",
+"$9x^2+12x+16$",
+"$3x^2+12x+16$"
+],
+"key": 2
+},
+{
+"id": "MR-199",
+"src_q": 199,
+"lv": "H",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Polynomial division and remainder",
+"q": "Which of the following is equivalent to $\\dfrac{81x^4-16}{3x+2}$, for $x\\ne-\\dfrac{2}{3}$?",
+"steps": [
+"Difference of squares: $81x^4-16=(9x^2)^2-4^2=(9x^2-4)(9x^2+4)$.",
+"Factor again: $9x^2-4=(3x-2)(3x+2)$, so the numerator is $(3x-2)(3x+2)(9x^2+4)$.",
+"Cancel $3x+2$. Check in Desmos by entering <code>(81x^4-16)/(3x+2)</code> and <code>(3x-2)(9x^2+4)</code>; they match.",
+"Trap: stopping after one factoring step leaves $9x^2-4$ and the wrong divisor; keeping $3x+2$ instead of $3x-2$ is a sign error."
+],
+"opts": [
+"$(3x+2)(9x^2+4)$",
+"$9x^2+4$",
+"$(3x-2)(9x^2-4)$",
+"$(3x-2)(9x^2+4)$"
+],
+"key": 3
+},
+{
+"id": "MR-200",
+"src_q": 200,
+"lv": "H",
+"mc": false,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "What is the value of $x$ that satisfies $\\dfrac{x}{x-3}+\\dfrac{3}{x+2}=\\dfrac{15}{x^2-x-6}$?",
+"steps": [
+"Note $x^2-x-6=(x-3)(x+2)$. Multiply both sides by it: $x(x+2)+3(x-3)=15$, so $x^2+5x-24=0$.",
+"Type <code>x^2+5x-24=0</code> in Desmos: the roots are $x=3$ and $x=-8$.",
+"Reject $x=3$: it makes $x-3=0$ in the denominators (extraneous). Check $x=-8$: $\\dfrac{8}{11}-\\dfrac12=\\dfrac{5}{22}=\\dfrac{15}{66}$.",
+"Trap: reporting both roots, or $x=3$, without checking the domain."
+],
+"key": -8,
+"disp": "-8"
+},
+{
+"id": "MR-201",
+"src_q": 201,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "The equation $\\dfrac{6}{x}+\\dfrac{x}{5}=\\dfrac{11}{5}$ has two solutions. What is the sum of the reciprocals of the two solutions?",
+"steps": [
+"Multiply both sides by $5x$: <code>30+x^2=11x</code>, so $x^2-11x+30=0$. Type <code>y=x^2-11x+30</code> and read the zeros $x=5$ and $x=6$.",
+"Reciprocals: $\\dfrac{1}{5}+\\dfrac{1}{6}$, type <code>1/5+1/6</code> and get $0.3667=\\dfrac{11}{30}$.",
+"Check: $\\dfrac{6}{5}+\\dfrac{5}{5}=\\dfrac{11}{5}$ and $\\dfrac{6}{6}+\\dfrac{6}{5}=\\dfrac{11}{5}$.",
+"Traps: 11 is the sum of the solutions; 30 is their product; $\\dfrac{1}{11}$ is the reciprocal of the sum."
+],
+"opts": [
+"$11$",
+"$\\dfrac{11}{30}$",
+"$30$",
+"$\\dfrac{1}{11}$"
+],
+"key": 1
+},
+{
+"id": "MR-202",
+"src_q": 202,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "What is the solution set of the equation $\\dfrac{2x}{x-5}-3=\\dfrac{10}{x-5}$?",
+"steps": [
+"Multiply both sides by $x-5$: <code>2x-3(x-5)=10</code>, which simplifies to $-x+15=10$, so $x=5$.",
+"Now test in the original equation: $x=5$ makes the denominator $x-5$ equal to $0$, so it is undefined and $x=5$ is extraneous.",
+"In Desmos type <code>y=2x/(x-5)-3</code> and <code>y=10/(x-5)</code>: the two curves never meet (they have the same vertical asymptote at $x=5$).",
+"Traps: $x=5$ is the extraneous root; $x=-15$ comes from forgetting to distribute the $-3$; $x=-5$ is a sign slip."
+],
+"opts": [
+"$x=5$ only",
+"$x=-15$ only",
+"The equation has no solution",
+"$x=-5$ only"
+],
+"key": 2
+},
+{
+"id": "MR-217",
+"src_q": 217,
+"lv": "M",
+"mc": false,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Linear-nonlinear and nonlinear systems",
+"q": "Let $f(x)=x^2-4x$ and $g(x)=x+6$. For how many integer values of $x$ is $g(x)>f(x)$?",
+"steps": [
+"In Desmos type <code>y=x^2-4x</code> and <code>y=x+6</code>. The graphs cross where $x^2-5x-6=0$, that is $(x-6)(x+1)=0$, so at $x=-1$ and $x=6$.",
+"The line is above the parabola between the crossings: $-1<x<6$ (strict inequality).",
+"Integers strictly between $-1$ and $6$ are $0,1,2,3,4,5$, which is 6 values. Check $x=0$: $6>0$ true; $x=6$: $12>12$ false.",
+"Trap: counting the endpoints gives 8; the inequality is strict."
+],
+"key": 6,
+"disp": "6"
+},
+{
+"id": "MR-218",
+"src_q": 218,
+"lv": "H",
+"mc": false,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Other area and volume problems",
+"q": "The graph of $y=x^2+ax+b$ crosses the $y$-axis at the point $(0,10)$ and passes through the point $(5,0)$. Triangle $T$ has as its vertices the $y$-intercept and both $x$-intercepts of the graph. What is the area of triangle $T$?",
+"steps": [
+"The $y$-intercept gives $b=10$. Plug in $(5,0)$: <code>25+5a+10=0</code> gives $a=-7$.",
+"Type <code>y=x^2-7x+10</code> in Desmos: the $x$-intercepts are $(2,0)$ and $(5,0)$, so the base on the $x$-axis is $5-2=3$.",
+"The height is the $y$-intercept distance $10$: area $=\\dfrac{1}{2}\\cdot3\\cdot10=15$.",
+"Trap: using the origin as a vertex and base $5$ gives $25$; the base must run between the two $x$-intercepts."
+],
+"key": 15,
+"disp": "15"
+},
+{
+"id": "MR-219",
+"src_q": 219,
+"lv": "H",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "What is the solution of the equation $\\sqrt{2x-11}=\\sqrt{x+10}-3$?",
+"steps": [
+"Square both sides: $2x-11=x+10-6\\sqrt{x+10}+9$, so $x-30=-6\\sqrt{x+10}$. Square again: $x^2-96x+540=0$, giving $x=6$ or $x=90$.",
+"Check in the original in Desmos: type <code>sqrt(2*6-11)</code> gives 1 and <code>sqrt(6+10)-3</code> gives 1, so $x=6$ works.",
+"For $x=90$: <code>sqrt(2*90-11)</code> is 13 but <code>sqrt(100)-3</code> is 7, so $x=90$ is extraneous.",
+"Traps: 90 is the extraneous root from squaring; 13 and 16 are values of expressions at the roots, not $x$."
+],
+"opts": [
+"$90$",
+"$6$",
+"$13$",
+"$16$"
+],
+"key": 1
+},
+{
+"id": "MR-220",
+"src_q": 220,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Exponential and other equations",
+"q": "What is the negative value of $x$ that satisfies the equation $\\left(2^{x-1}\\right)^{x+4}=8^{2}$?",
+"steps": [
+"Rewrite $8^2=\\left(2^3\\right)^2=2^6$ and multiply exponents on the left: $2^{(x-1)(x+4)}=2^6$.",
+"Equal bases give <code>(x-1)(x+4)=6</code>, so $x^2+3x-10=0$. Type <code>y=x^2+3x-10</code> and read zeros $x=-5$ and $x=2$.",
+"The negative solution is $-5$. Check: $(-6)(-1)=6$.",
+"Traps: 2 is the positive root; $-10$ is the constant term (product of roots); 5 is a sign slip."
+],
+"opts": [
+"$-10$",
+"$-2$",
+"$-5$",
+"$2$"
+],
+"key": 2
+},
+{
+"id": "MR-222",
+"src_q": 222,
+"lv": "H",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "If $\\sqrt{2x+3}+6=x$, what is the value of $\\sqrt{2x+3}$?",
+"steps": [
+"Isolate the radical: $\\sqrt{2x+3}=x-6$. Square: $2x+3=x^2-12x+36$, so $x^2-14x+33=0$ and $x=3$ or $x=11$.",
+"Test in Desmos: type <code>sqrt(2*11+3)+6</code> gives 11 (works); <code>sqrt(2*3+3)+6</code> gives 9, not 3, so $x=3$ is extraneous.",
+"The question asks for the radical, not $x$: $\\sqrt{2(11)+3}=\\sqrt{25}=5$, which also equals $x-6=5$.",
+"Traps: 11 is $x$; 14 is the sum of the roots; 3 is the extraneous root."
+],
+"opts": [
+"$11$",
+"$14$",
+"$3$",
+"$5$"
+],
+"key": 3
+},
+{
+"id": "MR-223",
+"src_q": 223,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Quadratic equations and discriminant",
+"q": "How many real values of $x$ satisfy the equation $\\left(x^2-4\\right)^2=25$?",
+"steps": [
+"Take square roots of both sides: $x^2-4=5$ or $x^2-4=-5$.",
+"First case: $x^2=9$, so $x=\\pm3$. Second case: $x^2=-1$, which has no real solution. In Desmos type <code>y=(x^2-4)^2</code> and <code>y=25</code>: they meet at 2 points.",
+"Check: $(9-4)^2=25$.",
+"Traps: answering 4 counts the case $x^2=-1$; answering 1 or 3 miscounts the signs."
+],
+"opts": [
+"$2$",
+"$4$",
+"$3$",
+"$1$"
+],
+"key": 0
+},
+{
+"id": "MR-224",
+"src_q": 224,
+"lv": "M",
+"mc": false,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Radical and rational equations",
+"q": "What is the value of $x$ that satisfies the equation $\\sqrt{x-6}=\\sqrt{x+10}-2$?",
+"steps": [
+"Square both sides: $x-6=x+10-4\\sqrt{x+10}+4$, so $4\\sqrt{x+10}=20$ and $\\sqrt{x+10}=5$.",
+"Then $x+10=25$, so $x=15$.",
+"Check in Desmos: <code>sqrt(15-6)</code> is 3 and <code>sqrt(15+10)-2</code> is 3.",
+"Trap: after the first squaring the $x$ terms cancel; do not stop there, and isolate the remaining radical before squaring again."
+],
+"key": 15,
+"disp": "15"
+},
+{
+"id": "MR-226",
+"src_q": 226,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear functions",
+"sub": "Quadratic functions and vertex form",
+"q": "A drone launches a ball upward from the roof of a stadium in Jeddah. The ball's height, in meters, $t$ seconds after launch is $h(t)=-4t^2+24t+10$. What is the maximum height, in meters, the ball reaches?",
+"opts": [
+"$3$",
+"$46$",
+"$10$",
+"$36$"
+],
+"key": 1,
+"steps": [
+"Type <code>y=-4x^2+24x+10</code> in Desmos and tap the vertex: it shows $(3,46)$.",
+"Algebra: the vertex is at $t=-\\dfrac{24}{2(-4)}=3$, and $h(3)=-36+72+10=46$.",
+"Trap: $3$ is the time of the maximum, not the height.",
+"Trap: $36$ comes from dropping the $+10$ launch height; $10$ is the starting height."
+]
+},
+{
+"id": "MR-229",
+"src_q": 229,
+"lv": "H",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear equations and systems",
+"sub": "Quadratic equations and discriminant",
+"q": "A workshop in Riyadh makes $x$ souvenir plates per day. The daily cost, in SAR, is $c(x)=x^2-4x+70$, and each plate sells for $15$ SAR. For how many whole numbers of plates per day does the workshop make a profit greater than $0$?",
+"opts": [
+"$10$",
+"$9$",
+"$8$",
+"$14$"
+],
+"key": 2,
+"steps": [
+"Type <code>y=15x</code> and <code>y=x^2-4x+70</code> in Desmos: they cross at $x=5$ and $x=14$.",
+"Algebra: $x^2-19x+70=(x-5)(x-14)=0$; revenue exceeds cost strictly between the crossings, so $x=6,7,\\ldots,13$.",
+"That is $13-6+1=8$ values.",
+"Trap: counting $5$ and $14$ as profitable (they give zero profit) yields $10$; counting one endpoint yields $9$."
+]
+},
+{
+"id": "MR-232",
+"src_q": 232,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear functions",
+"sub": "Exponential growth and decay",
+"q": "An algae colony in a Red Sea research tank doubles every $3$ hours. After $15$ hours the colony has $6400$ cells. How many hours after the start did the colony have $400$ cells?",
+"opts": [
+"$4$",
+"$12$",
+"$5$",
+"$3$"
+],
+"key": 3,
+"steps": [
+"Type <code>6400/400</code> to get $16$, and note $16=2^4$: the colony doubled $4$ times between the two sizes.",
+"Four doublings take $4\\cdot3=12$ hours, so the colony had $400$ cells $15-12=3$ hours after the start.",
+"Check in Desmos: <code>400*2^((15-3)/3)</code> returns $6400$.",
+"Trap: $4$ is the number of doublings and $12$ is the elapsed time between sizes; neither is the time since the start."
+]
+},
+{
+"id": "MR-239",
+"src_q": 239,
+"lv": "H",
+"mc": false,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Area of plane figures",
+"q": "In parallelogram $ABCD$, $AB=3x-2$ and $BC=x+5$, where both lengths are in meters, and the perimeter is $38$ meters. The perpendicular distance between sides $AD$ and $BC$ is $6$ meters. What is the area of the parallelogram, in square meters?",
+"disp": "54",
+"key": 54,
+"steps": [
+"Type <code>2(3x-2+x+5)=38</code> in Desmos and solve: $x=4$, so $AB=10$ and $BC=9$.",
+"The height $6$ is measured between $AD$ and $BC$, so the matching base is $BC=9$.",
+"Area $=9\\cdot6=54$.",
+"Trap: pairing the height with $AB$ gives $10\\cdot6=60$."
+]
+},
+{
+"id": "MR-240",
+"src_q": 240,
+"lv": "H",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Volume of solids",
+"q": "A rectangular metal sheet measures $20$ cm by $8$ cm. It is rolled, without overlap, so that the two $8$ cm edges meet, forming an open cylinder of height $8$ cm. What is the volume of the cylinder, in cubic centimeters?",
+"opts": [
+"$\\dfrac{320}{\\pi}$",
+"$\\dfrac{800}{\\pi}$",
+"$\\dfrac{3200}{\\pi}$",
+"$800\\pi$"
+],
+"key": 1,
+"steps": [
+"The $20$ cm edge becomes the circumference: <code>20/(2pi)</code> returns $\\approx3.18$ cm for the radius.",
+"Volume $=\\pi r^2h=\\pi\\left(\\dfrac{10}{\\pi}\\right)^2(8)=\\dfrac{800}{\\pi}\\approx254.6$. Check: <code>pi*(20/(2pi))^2*8</code>.",
+"Trap: using $r=\\dfrac{20}{\\pi}$ (forgetting the half) gives $\\dfrac{3200}{\\pi}$; using $r=10$ gives $800\\pi$.",
+"Trap: rolling the other way (circumference $8$, height $20$) gives $\\dfrac{320}{\\pi}$."
+]
+},
+{
+"id": "MR-241",
+"src_q": 241,
+"lv": "H",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Volume of solids",
+"q": "A foundry in Jubail melts a solid iron prism whose cross-section is a right triangle with legs $6$ cm and $8$ cm. The prism is $16$ cm long. During recasting, $25\\%$ of the iron is lost. The remaining iron is cast into solid cubes with edge length $2$ cm. How many cubes can be made?",
+"opts": [
+"$48$",
+"$72$",
+"$36$",
+"$24$"
+],
+"key": 2,
+"steps": [
+"Prism volume: <code>(1/2)*6*8*16</code> returns $384$ cubic cm.",
+"After the loss: <code>0.75*384</code> returns $288$. One cube holds $2^3=8$, so <code>288/8</code> returns $36$.",
+"Trap: forgetting the loss gives $\\dfrac{384}{8}=48$.",
+"Trap: using base times height without the factor $\\dfrac12$ gives $72$; treating the loss as $50\\%$ gives $24$."
+]
+},
+{
+"id": "MR-243",
+"src_q": 243,
+"lv": "H",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Other area and volume problems",
+"q": "A cylindrical water tank at a Makkah park has radius $4$ m and height $6$ m. The largest possible solid sphere is placed inside the tank, and the tank is then filled with water up to the top. What is the volume of water, in cubic meters, that fits in the tank around the sphere?",
+"opts": [
+"$36\\pi$",
+"$\\dfrac{32\\pi}{3}$",
+"$96\\pi$",
+"$60\\pi$"
+],
+"key": 3,
+"steps": [
+"The sphere must fit the height $6$, so its diameter is $6$ and its radius is $3$ (not $4$).",
+"Tank: <code>pi*4^2*6</code> returns $96\\pi$. Sphere: <code>(4/3)*pi*3^3</code> returns $36\\pi$.",
+"Water volume $=96\\pi-36\\pi=60\\pi$.",
+"Trap: $36\\pi$ is the sphere itself; using radius $4$ gives $\\dfrac{32\\pi}{3}$; $96\\pi$ ignores the sphere."
+]
+},
+{
+"id": "MR-244",
+"src_q": 244,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Surface area and scaling",
+"q": "The total surface area of a cube is $54k$ square units, where $k>0$. What is the volume of the cube, in cubic units?",
+"opts": [
+"$27k\\sqrt{k}$",
+"$27k$",
+"$27k^2$",
+"$9k\\sqrt{k}$"
+],
+"key": 0,
+"steps": [
+"A cube has $6$ faces, so one face has area $\\dfrac{54k}{6}=9k$ and the edge is $s=3\\sqrt{k}$.",
+"Volume $=s^3=27\\left(\\sqrt{k}\\right)^3=27k\\sqrt{k}$. Check with <code>k=4</code>: <code>(3*sqrt(4))^3</code> returns $216$ and <code>27*4*sqrt(4)</code> returns $216$.",
+"Trap: $\\left(\\sqrt{k}\\right)^3=k\\sqrt{k}$, not $k$ or $k^2$.",
+"Trap: $9k\\sqrt{k}$ comes from multiplying the face area by $\\sqrt{k}$ and forgetting the factor $3$."
+]
+},
+{
+"id": "MR-245",
+"src_q": 245,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Other area and volume problems",
+"q": "A solid sphere and a solid cylinder have equal volumes. The radius of the cylinder is twice the radius of the sphere. What is the ratio of the height of the cylinder to the radius of the cylinder?",
+"opts": [
+"$1:6$",
+"$1:3$",
+"$2:3$",
+"$3:2$"
+],
+"key": 0,
+"steps": [
+"Let the sphere radius be $r$: <code>(4/3)*pi*r^3 = pi*(2r)^2*h</code> gives $h=\\dfrac{r}{3}$.",
+"The cylinder radius is $2r$, so the ratio is $\\dfrac{r/3}{2r}=\\dfrac16$, that is $1:6$.",
+"Trap: $1:3$ compares $h$ with the sphere radius $r$, not the cylinder radius.",
+"Trap: $2:3$ comes from squaring only the $r$ and not the $2$ in $(2r)^2$."
+]
+},
+{
+"id": "MR-247",
+"src_q": 247,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Circles",
+"sub": "Circle measurements",
+"q": "Two circular fountain pools in Jeddah each have radius $13$ m. Their centers are $10$ m apart, so the circles overlap and meet at two points. What is the distance, in meters, between those two meeting points?",
+"opts": [
+"$12$",
+"$26$",
+"$24$",
+"$2\\sqrt{69}$"
+],
+"key": 2,
+"steps": [
+"The common chord is perpendicular to the line of centers and bisected by it, so each half-chord $a$ satisfies $a^2+5^2=13^2$.",
+"Type <code>sqrt(13^2-5^2)</code>: it returns $12$, so the full chord is $2\\cdot12=24$.",
+"Trap: $12$ is only half the chord; $26$ is the diameter.",
+"Trap: using the full $10$ instead of $5$ gives $2\\sqrt{169-100}=2\\sqrt{69}$."
+]
+},
+{
+"id": "MR-251",
+"src_q": 251,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "A ray starts on the positive $x$-axis at the point $(1,0)$ of a unit circle in a coordinate plane. It makes one full counterclockwise revolution and then turns a further angle that leaves it pointing into the second quadrant. Let $D$ be the total distance, in units, travelled around the circle by the point that started at $(1,0)$. Which of the following statements must be true? I. $2\\pi<D<\\dfrac{5\\pi}{2}$. II. $\\dfrac{5\\pi}{2}<D<3\\pi$. III. $-3\\pi<-D<-\\dfrac{5\\pi}{2}$.",
+"opts": [
+"II only",
+"II and III only",
+"I and III only",
+"III only"
+],
+"key": 1,
+"steps": [
+"One revolution is $2\\pi$. The extra angle ends in quadrant II, so it lies between $\\dfrac{\\pi}{2}$ and $\\pi$.",
+"Add: $2\\pi+\\dfrac{\\pi}{2}<D<2\\pi+\\pi$, that is $\\dfrac{5\\pi}{2}<D<3\\pi$. So II is true and I is false. In Desmos type <code>2pi+pi/2</code> and <code>3pi</code> to see $7.85<D<9.42$.",
+"Multiplying an inequality by $-1$ reverses it: $-3\\pi<-D<-\\dfrac{5\\pi}{2}$, so III is also true.",
+"Traps: forgetting the full revolution (picking $\\dfrac{\\pi}{2}$ to $\\pi$), and stopping after II without checking that III is just II negated."
+]
+},
+{
+"id": "MR-256",
+"src_q": 256,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Other area and volume problems",
+"q": "A rectangular LED screen at a Jeddah stadium has a perimeter of $42$ metres. Its four corners lie on a circular steel ring of radius $7.5$ metres. What is the area of the screen, in square metres?",
+"opts": [
+"$54$",
+"$110.25$",
+"$108$",
+"$216$"
+],
+"key": 2,
+"steps": [
+"The corners lie on the circle, so the diagonal is a diameter: $d=2(7.5)=15$. The perimeter gives $\\ell+w=21$.",
+"Square the sum: $\\ell^2+2\\ell w+w^2=441$, and $\\ell^2+w^2=15^2=225$ (Pythagorean theorem). In Desmos type <code>(21^2-15^2)/2</code>; it returns $108$.",
+"So $2\\ell w=216$ and $\\ell w=108$. Check: $\\ell=12$, $w=9$ satisfy both conditions.",
+"Traps: stopping at $216$ (that is $2\\ell w$), dividing by $4$ to get $54$, or assuming a square of side $10.5$ (area $110.25$)."
+]
+},
+{
+"id": "MR-258",
+"src_q": 258,
+"lv": "M",
+"mc": false,
+"domain": "Algebra",
+"skill": "Systems of linear equations",
+"sub": "Solving by substitution or elimination",
+"q": "The length of a rectangular plot in Jeddah is $5$ metres more than its width. When the length is increased by $8$ metres and the width is left unchanged, the area increases by $96$ square metres. What is the perimeter, in metres, of the original plot?",
+"key": 58,
+"disp": "58",
+"steps": [
+"Let width $w$ and length $\\ell=w+5$. The new area minus the old area is $(\\ell+8)w-\\ell w=8w$.",
+"So $8w=96$ and $w=12$. In Desmos type <code>96/8</code> to get $12$, then $\\ell=12+5=17$.",
+"Perimeter of the original plot: $2(17+12)=58$. Check: $(25)(12)-(17)(12)=96$.",
+"Trap: answering the width ($12$) or the length ($17$), or using the new length $25$ in the perimeter."
+]
+},
+{
+"id": "MR-259",
+"src_q": 259,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Area and volume",
+"sub": "Surface area and scaling",
+"q": "The side length of a square solar panel is tripled, and as a result its area increases by $288$ square centimetres. What is the perimeter, in centimetres, of the enlarged panel?",
+"opts": [
+"$72$",
+"$24$",
+"$18$",
+"$144$"
+],
+"key": 0,
+"steps": [
+"Let the original side be $s$. The new area is $(3s)^2=9s^2$, so the increase is $9s^2-s^2=8s^2=288$.",
+"Then $s^2=36$ and $s=6$. In Desmos type <code>sqrt(288/8)</code>; it returns $6$.",
+"The enlarged side is $3(6)=18$, so the perimeter is $4(18)=72$.",
+"Traps: giving the original perimeter ($24$), the new side ($18$), or taking the increase as $2s^2$ (tripling is not doubling), which gives $s=12$ and $144$."
+]
+},
+{
+"id": "MR-268",
+"src_q": 268,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Lines, angles, and triangles",
+"sub": "Congruence and special triangles",
+"q": "In triangle $ABC$, the angle at $B$ is a right angle, $\\angle C=30^\\circ$ and $AB=6$. Point $D$ lies on $AC$ so that $BD$ is perpendicular to $AC$. What is the length of $DC$?",
+"opts": [
+"$3$",
+"$9$",
+"$3\\sqrt{3}$",
+"$6\\sqrt{3}$"
+],
+"key": 1,
+"steps": [
+"In a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle, $AB=6$ is opposite $30^\\circ$, so $AC=12$ and $BC=6\\sqrt{3}$.",
+"Triangle $BDC$ is also $30^\\circ$-$60^\\circ$-$90^\\circ$ with hypotenuse $BC$, so $DC=BC\\cos 30^\\circ$. In Desmos type <code>6sqrt(3)cos(30)</code> (degree mode); it returns $9$.",
+"Check with $AD$: $AD=\\dfrac{AB^2}{AC}=3$, and $AD+DC=3+9=12=AC$.",
+"Traps: answering $AD=3$ (wrong segment), the altitude $BD=3\\sqrt{3}$ (wrong quantity), or the leg $BC=6\\sqrt{3}$."
+]
+},
+{
+"id": "MR-270",
+"src_q": 270,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "What is the value, in degrees, of $\\dfrac{5\\pi}{6}+\\dfrac{7\\pi}{4}-\\dfrac{2\\pi}{3}$ radians?",
+"opts": [
+"$585^\\circ$",
+"$690^\\circ$",
+"$345^\\circ$",
+"$195^\\circ$"
+],
+"key": 2,
+"steps": [
+"Common denominator $12$: $\\dfrac{10\\pi}{12}+\\dfrac{21\\pi}{12}-\\dfrac{8\\pi}{12}=\\dfrac{23\\pi}{12}$ radians.",
+"Convert with $\\pi$ radians $=180^\\circ$: $\\dfrac{23}{12}\\cdot 180=345$. In Desmos type <code>(5pi/6+7pi/4-2pi/3)*180/pi</code>; it returns $345$.",
+"Check term by term: $150^\\circ+315^\\circ-120^\\circ=345^\\circ$.",
+"Traps: adding the last term ($585^\\circ$), using $360^\\circ$ for $\\pi$ ($690^\\circ$), or dropping the first term ($195^\\circ$)."
+]
+},
+{
+"id": "MR-273",
+"src_q": 273,
+"lv": "H",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "Which of the following statements about the angle $\\dfrac{19\\pi}{6}$ radians is/are true? I. It is equivalent to $570^\\circ$. II. $\\tan\\dfrac{19\\pi}{6}=\\dfrac{1}{\\sqrt{3}}$. III. $\\cos\\dfrac{19\\pi}{6}$ is positive.",
+"opts": [
+"Only I",
+"Only II",
+"I and III",
+"I and II"
+],
+"key": 3,
+"steps": [
+"Convert: $\\dfrac{19}{6}\\cdot 180=570$, so I is true. In Desmos type <code>19pi/6*180/pi</code>; it returns $570$.",
+"Subtract one revolution: $570^\\circ-360^\\circ=210^\\circ$, which is in quadrant III with reference angle $30^\\circ$.",
+"In quadrant III both sine and cosine are negative, so $\\cos\\dfrac{19\\pi}{6}=-\\dfrac{\\sqrt{3}}{2}$ and III is false, while $\\tan=\\dfrac{-1/2}{-\\sqrt{3}/2}=\\dfrac{1}{\\sqrt{3}}$ makes II true.",
+"Traps: stopping at $\\dfrac{19\\pi}{6}$ without subtracting $2\\pi$, and assuming tangent must be negative or cosine positive."
+]
+},
+{
+"id": "MR-274",
+"src_q": 274,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "For an angle $\\theta$ in radians, $\\sin\\theta=-\\dfrac{\\sqrt{3}}{2}$. Which of the following statements must be true? I. The angle $\\theta$ lies in the third or fourth quadrant. II. $\\cos\\theta$ could be positive. III. $\\tan\\theta$ is positive.",
+"opts": [
+"I and II only",
+"I only",
+"II and III only",
+"III only"
+],
+"key": 0,
+"steps": [
+"Sine is negative only in quadrants III and IV, so I is true.",
+"The reference angle is $\\dfrac{\\pi}{3}$: $\\theta=\\dfrac{4\\pi}{3}$ (quadrant III) or $\\dfrac{5\\pi}{3}$ (quadrant IV). In Desmos type <code>sin(4pi/3)</code> and <code>sin(5pi/3)</code>; both return $-0.866$.",
+"Cosine is $-\\dfrac{1}{2}$ in quadrant III but $+\\dfrac{1}{2}$ in quadrant IV, so II is true. Tangent is $+\\sqrt{3}$ in III but $-\\sqrt{3}$ in IV, so III is not always true.",
+"Traps: assuming one quadrant, and treating 'could be' as 'must be' in III."
+]
+},
+{
+"id": "MR-275",
+"src_q": 275,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "A drone flies counterclockwise around a circle of radius $1$ unit centred at the origin, starting at the point $(1,0)$. It stops after covering a total arc of $\\dfrac{17\\pi}{6}$ units. What are the coordinates of the point where it stops?",
+"opts": [
+"$\\left(\\dfrac{\\sqrt{3}}{2},\\dfrac{1}{2}\\right)$",
+"$\\left(-\\dfrac{\\sqrt{3}}{2},\\dfrac{1}{2}\\right)$",
+"$\\left(-\\dfrac{1}{2},\\dfrac{\\sqrt{3}}{2}\\right)$",
+"$\\left(-\\dfrac{\\sqrt{3}}{2},-\\dfrac{1}{2}\\right)$"
+],
+"key": 1,
+"steps": [
+"On a unit circle the arc length equals the angle in radians. Remove one revolution: $\\dfrac{17\\pi}{6}-2\\pi=\\dfrac{5\\pi}{6}$.",
+"The point is $\\left(\\cos\\dfrac{5\\pi}{6},\\sin\\dfrac{5\\pi}{6}\\right)$. In Desmos type <code>(cos(17pi/6),sin(17pi/6))</code>; it returns $(-0.866,0.5)$.",
+"$\\dfrac{5\\pi}{6}$ is in quadrant II with reference angle $\\dfrac{\\pi}{6}$: $x<0$, $y>0$, giving $\\left(-\\dfrac{\\sqrt{3}}{2},\\dfrac{1}{2}\\right)$.",
+"Traps: ignoring the sign of $x$ in quadrant II, swapping $\\cos$ and $\\sin$ values, or landing in quadrant III."
+]
+},
+{
+"id": "MR-276",
+"src_q": 276,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "A Riyadh Metro inspection robot starts at the point $(1,0)$ on a circle of radius $1$ centered at the origin and travels clockwise along the circle through a total angle of $\\dfrac{5\\pi}{3}$ radians. What could be the coordinates of the point where it stops?",
+"opts": [
+"$\\left(\\dfrac{1}{2},-\\dfrac{\\sqrt{3}}{2}\\right)$",
+"$\\left(\\dfrac{1}{2},\\dfrac{\\sqrt{3}}{2}\\right)$",
+"$\\left(\\dfrac{\\sqrt{3}}{2},\\dfrac{1}{2}\\right)$",
+"$\\left(-\\dfrac{1}{2},\\dfrac{\\sqrt{3}}{2}\\right)$"
+],
+"key": 1,
+"steps": [
+"Clockwise motion means a negative angle: $\\theta=-\\dfrac{5\\pi}{3}$. In Desmos type <code>(cos(-5pi/3), sin(-5pi/3))</code>; it returns about $(0.5, 0.866)$.",
+"Algebra check: $-\\dfrac{5\\pi}{3}+2\\pi=\\dfrac{\\pi}{3}$, so the point is $\\left(\\cos\\dfrac{\\pi}{3},\\sin\\dfrac{\\pi}{3}\\right)=\\left(\\dfrac{1}{2},\\dfrac{\\sqrt{3}}{2}\\right)$.",
+"Trap: ignoring the clockwise direction gives $\\left(\\dfrac{1}{2},-\\dfrac{\\sqrt{3}}{2}\\right)$; swapping cosine and sine gives $\\left(\\dfrac{\\sqrt{3}}{2},\\dfrac{1}{2}\\right)$."
+]
+},
+{
+"id": "MR-277",
+"src_q": 277,
+"lv": "H",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "The angle $\\theta$, in radians, satisfies $\\dfrac{7\\pi}{6}\\le\\theta\\le\\dfrac{5\\pi}{4}$. Which of the following statements must be true? I. $\\cos\\theta>0$. II. $\\cos(2\\theta)>0$. III. $\\sin(2\\theta)>0$.",
+"opts": [
+"Only II",
+"Only III",
+"Both II and III",
+"Both I and II"
+],
+"key": 2,
+"steps": [
+"Bounds for $\\theta$: it lies in Quadrant III, so $\\cos\\theta<0$ and statement I is false. Test in Desmos: <code>cos(1.2*pi)</code> returns about $-0.81$.",
+"Double the bounds: $\\dfrac{7\\pi}{3}\\le2\\theta\\le\\dfrac{5\\pi}{2}$. Subtract $2\\pi$: $\\dfrac{\\pi}{3}\\le2\\theta-2\\pi\\le\\dfrac{\\pi}{2}$, which is Quadrant I.",
+"In Quadrant I both cosine and sine are positive, so II and III are true. Check <code>sin(2*1.2*pi)</code> returns about $0.95$.",
+"Trap: forgetting to subtract $2\\pi$ after doubling puts $2\\theta$ in the wrong quadrant; judging only one of II or III gives a partial answer."
+]
+},
+{
+"id": "MR-279",
+"src_q": 279,
+"lv": "M",
+"mc": true,
+"domain": "Geometry and Trigonometry",
+"skill": "Right triangles and trigonometry",
+"sub": "Other trigonometry",
+"q": "If $\\theta=210^\\circ$, which of the following statements are correct? I. $\\sin(2\\theta)$ and $\\cos(4\\theta)$ have opposite signs. II. $\\tan(2\\theta)$ and $\\cos(5\\theta)$ have the same sign. III. $\\sin(4\\theta)$ and $\\tan(5\\theta)$ have the same sign.",
+"opts": [
+"Only I",
+"Only III",
+"Both II and III",
+"Both I and II"
+],
+"key": 3,
+"steps": [
+"Compute each angle: $2\\theta=420^\\circ\\equiv60^\\circ$, $4\\theta=840^\\circ\\equiv120^\\circ$, $5\\theta=1050^\\circ\\equiv330^\\circ$. In Desmos type <code>sin(420)</code> after switching to degrees.",
+"Signs: $\\sin60^\\circ>0$, $\\cos120^\\circ<0$ so I is true. $\\tan60^\\circ>0$, $\\cos330^\\circ>0$ so II is true.",
+"$\\sin120^\\circ>0$ but $\\tan330^\\circ<0$, so III is false.",
+"Trap: reducing angles incorrectly (for example $840^\\circ-360^\\circ=480^\\circ$ and stopping) or ignoring that tangent is negative in Quadrant IV."
+]
+},
+{
+"id": "MR-290",
+"src_q": 290,
+"lv": "H",
+"mc": false,
+"domain": "Problem-Solving and Data Analysis",
+"skill": "Ratios, rates and units",
+"sub": "Other rates and units",
+"q": "Three crews clean the solar panels at a Red Sea project. Working alone, crews A, B and C can finish the whole job in $6$, $12$ and $36$ hours, respectively. They work in turns of exactly one hour each, repeating the same order of A, B, C in some arrangement, until the job is done. How many more minutes does the job take with the slowest possible order than with the fastest possible order?",
+"key": 80,
+"disp": "80",
+"steps": [
+"Rates per hour: $\\dfrac{1}{6}=\\dfrac{6}{36}$, $\\dfrac{1}{12}=\\dfrac{3}{36}$, $\\dfrac{1}{36}$. One full round does $\\dfrac{10}{36}$, so $3$ rounds ($9$ hours) do $\\dfrac{30}{36}$ and $\\dfrac{6}{36}$ remains.",
+"Fastest order starts with A: it finishes the remaining $\\dfrac{6}{36}$ in exactly $1$ hour, total $10$ hours. Desmos: <code>9+(6/36)/(6/36)</code> returns $10$.",
+"Slowest order starts with C, then B: $\\dfrac{1}{36}+\\dfrac{3}{36}=\\dfrac{4}{36}$ in $2$ hours, then A needs $\\dfrac{2}{36}\\div\\dfrac{6}{36}=\\dfrac{1}{3}$ hour. Total $11\\dfrac{1}{3}$ hours.",
+"Difference $=\\dfrac{4}{3}$ hours $=80$ minutes. Trap: answering $\\dfrac{4}{3}$ or $1.33$ (hours) instead of minutes."
+]
+},
+{
+"id": "MR-293",
+"src_q": 293,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Rational expressions",
+"q": "An empty storage tank at a Jeddah desalination plant is filled by an inlet pipe alone in $p$ hours and emptied by an outlet pipe alone in $q$ hours. With both pipes open, the tank fills completely in $t$ hours, so $\\dfrac{1}{p}-\\dfrac{1}{q}=\\dfrac{1}{t}$, where $p$, $q$ and $t$ are positive. Which of the following must be true?",
+"opts": [
+"$t<p$",
+"$p<q$",
+"$q<t$",
+"$t<q$"
+],
+"key": 1,
+"steps": [
+"Since the tank does fill, $\\dfrac{1}{t}>0$, so $\\dfrac{1}{p}>\\dfrac{1}{q}$. Taking reciprocals of positive numbers reverses the inequality: $p<q$.",
+"Test in Desmos with <code>1/(1/2-1/3)</code> returns $6$ (so $q<t$ here) and <code>1/(1/2-1/100)</code> returns about $2.04$ (so $t<q$ here).",
+"So $q<t$ and $t<q$ can each fail, while $t<p$ is impossible because $\\dfrac{1}{t}<\\dfrac{1}{p}$ gives $t>p$.",
+"Trap: forgetting that reciprocals reverse the inequality, or assuming the combined time must be the shortest."
+]
+},
+{
+"id": "MR-294",
+"src_q": 294,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Equivalent expressions",
+"sub": "Rational expressions",
+"q": "A port crew uses $6$ fast cranes and $9$ slow cranes together to unload a ship in $4$ hours. Working alone, one fast crane would take $f$ hours and one slow crane would take $s$ hours to unload the whole ship, so $\\dfrac{6}{f}+\\dfrac{9}{s}=\\dfrac{1}{4}$. What does the expression $\\dfrac{9}{s}$ represent?",
+"opts": [
+"The time, in hours, the $9$ slow cranes need to unload the ship together",
+"The portion of the ship one slow crane unloads in one hour",
+"The portion of the ship the $9$ slow cranes unload together in one hour",
+"The portion of the ship all $15$ cranes unload together in one hour"
+],
+"key": 2,
+"steps": [
+"One slow crane does $\\dfrac{1}{s}$ of the job per hour, so $9$ slow cranes do $9\\cdot\\dfrac{1}{s}=\\dfrac{9}{s}$ per hour.",
+"Desmos check: let $s=18$, then <code>9/18</code> returns $0.5$, the share per hour of $9$ cranes; their time together would be $\\dfrac{s}{9}=2$ hours, which is a different quantity.",
+"The whole sum $\\dfrac{1}{4}$ is the share of all $15$ cranes per hour.",
+"Trap: reading a rate as a time, dropping the factor of $9$, or confusing one group with the whole crew."
+]
+},
+{
+"id": "MR-297",
+"src_q": 297,
+"lv": "M",
+"mc": true,
+"domain": "Advanced Math",
+"skill": "Nonlinear functions",
+"sub": "Exponential growth and decay",
+"q": "A saving certificate of $P$ SAR grows to a balance of $P(1.025)^8$ SAR. Which of the following situations would NOT produce this balance?",
+"opts": [
+"An annual rate of $2.5\\%$, compounded yearly for $8$ years",
+"An annual rate of $5\\%$, compounded twice a year for $4$ years",
+"An annual rate of $10\\%$, compounded quarterly for $2$ years",
+"An annual rate of $5\\%$, compounded quarterly for $2$ years"
+],
+"key": 3,
+"steps": [
+"A balance after $t$ years is $P\\left(1+\\dfrac{r}{n}\\right)^{nt}$. We need $\\dfrac{r}{n}=0.025$ and $nt=8$.",
+"Desmos: <code>(1+0.10/4)^8</code> returns about $1.2184$, equal to <code>1.025^8</code>; <code>(1+0.05/2)^8</code> also returns $1.2184$.",
+"Option D gives <code>(1+0.05/4)^8</code> which is about $1.1045$, not $1.2184$.",
+"Trap: matching the rate or the number of years alone without checking both $\\dfrac{r}{n}$ and $nt$."
+]
+},
+{
+"id": "MR-300",
+"src_q": 300,
+"lv": "H",
+"mc": false,
+"domain": "Geometry and Trigonometry",
+"skill": "Lines, angles, and triangles",
+"sub": "Congruence and special triangles",
+"q": "A triangular shade sail in a Jeddah park is isosceles with a perimeter of $72$ meters. The ratio of the length of each of the two equal sides to the length of the base is $13:10$. What is the area of the sail, in square meters?",
+"key": 240,
+"disp": "240",
+"steps": [
+"Total ratio parts: $13+13+10=36$, so one part is $\\dfrac{72}{36}=2$ m. Sides are $26$, $26$ and $20$ m.",
+"Drop the altitude to the base: it splits the base into $10$ m halves, giving a right triangle with hypotenuse $26$ and leg $10$. Desmos: <code>sqrt(26^2-10^2)</code> returns $24$.",
+"Area $=\\dfrac{1}{2}\\cdot20\\cdot24=240$.",
+"Trap: using $26$ as the height, or leaving out the factor $\\dfrac{1}{2}$ (giving $480$)."
+]
+}
+]
