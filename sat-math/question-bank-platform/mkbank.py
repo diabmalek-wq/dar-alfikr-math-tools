@@ -183,6 +183,30 @@ rep("  typeset($('#app'));\n  document.querySelectorAll('.chip')","  typeset($('
 # define PROC before startExam (inside builder block) 
 rep("function startExam(){",proc+"\nfunction startExam(){")
 
+
+# ---- PLAN layer (no repeats, current topic + cumulative review)
+plan=open('plan.js').read()
+a=t.index("function makeExam(){"); b=t.index("const b64=s=>")
+t=t[:a]+plan+t[b:]
+rep("proc:true,maxLeave:3,seb:false};","proc:true,maxLeave:3,seb:false,avoid:true,layout:'std',cov:new Set(ALLKEYS.map(k=>k.split('|').slice(0,2).join('|')))};")
+rep("t:ex.title,pr:ex.pr}","t:ex.title,pr:ex.pr,nt:ex.note}")
+rep("pr:p.pr||{on:false,max:3,seb:false}}}","pr:p.pr||{on:false,max:3,seb:false},note:p.nt||''}}")
+rep("PRESETS[b.dataset.p].set();","B.layout='std';PRESETS[b.dataset.p].set();")
+rep(" topic:{label:'Topic drill'"," plan:{label:'Current topic + review',sub:'Module 1: topics you tick · Module 2: everything covered',set:()=>{B.sk=new Set();B.lv='MH';B.fmt='all';B.n=44;B.modules=2;B.mins='';B.balance=true;B.title='Current topic + cumulative review';B.proc=true;B.layout='plan'}},\n topic:{label:'Topic drill'")
+rep("B[g.dataset.g]=g.dataset.g==='modules'?+v:v;","B[g.dataset.g]=g.dataset.g==='modules'?+v:v;if(B.layout==='plan')B.modules=2;")
+rep("  <h2>Exam integrity</h2><div class=\"set\">",r"""  <h2>Exam layout</h2><div class="set">
+   <div><label>Layout</label><div class="seg" data-g="layout">${[['std','One set'],['plan','Module 1 current topic, Module 2 review']].map(([v,l])=>`<button data-v="${v}" aria-pressed="${B.layout===v}">${l}</button>`).join('')}</div></div>
+   <div><label class="chk"><input type="checkbox" id="avoid" ${B.avoid?'checked':''}> Avoid questions I have already seen <small>(including their rephrased twins; remembered on this device)</small></label><div class="small">Seen so far: <b>${SEEN.size}</b> of ${FAMN} <button class="chip" id="rstSeen">Reset history</button></div></div></div>
+  ${B.layout==='plan'?`<p class="hint"><b>Module 1</b> uses the topics ticked above (what you are studying now). <b>Module 2</b> is a comprehensive review drawn from the skills ticked here, plus the current topics.</p><div class="row" style="margin:0 0 8px"><button class="chip" id="covAll">All covered</button><button class="chip" id="covNone">Clear</button></div>${DOMS.map(d=>`<div class="covd"><b>${DOMSHORT[d]}</b><div class="covs">${Object.keys(byDom[d]||{}).map(sk=>`<label class="sk"><input type="checkbox" data-cov="${d}|${sk}" ${B.cov.has(d+'|'+sk)?'checked':''}> ${sk}</label>`).join('')}</div></div>`).join('')}`:''}
+  <h2>Exam integrity</h2><div class="set">""")
+rep("${short?`<br><span>Only ${P.length}","${B.layout==='plan'?'<br><span>Module 1: '+(ex.mods[0]||[]).length+' questions on the current topics · Module 2: '+(ex.mods[1]||[]).length+' questions of cumulative review</span>':''}${B.avoid?'<br><span>Unseen matching questions: '+new Set(P.filter(i=>!SEEN.has(FAM(i.id))).map(i=>FAM(i.id))).size+' of '+new Set(P.map(i=>FAM(i.id))).size+'</span>':''}${short?`<br><span>Only ${P.length}")
+rep("id=\"startB\" style=\"font-size:1.05rem;padding:11px 34px\" ${cn.n?'':'disabled'}>","id=\"startB\" style=\"font-size:1.05rem;padding:11px 34px\" ${cn.n&&!(B.layout==='plan'&&!P.length)?'':'disabled'}>")
+rep("  <div class=\"row\" style=\"margin-top:16px\"><button class=\"btn primary\" id=\"startB\"","  ${B.layout==='plan'&&!P.length?'<p class=\"hint\" style=\"color:#a4262c\">Tick the topic(s) you are studying now in the Topics list above to build Module 1.</p>':''}\n  <div class=\"row\" style=\"margin-top:16px\"><button class=\"btn primary\" id=\"startB\"")
+rep("  $('#proc').onchange=","  document.querySelectorAll('[data-cov]').forEach(c=>c.onchange=()=>{c.checked?B.cov.add(c.dataset.cov):B.cov.delete(c.dataset.cov);builder()});\n  const ca=$('#covAll');if(ca){ca.onclick=()=>{B.cov=new Set(ALLKEYS.map(k=>k.split('|').slice(0,2).join('|')));builder()};$('#covNone').onclick=()=>{B.cov=new Set();builder()}}\n  $('#avoid').onchange=e=>{B.avoid=e.target.checked;builder()};$('#rstSeen').onclick=()=>{SEEN=new Set();saveSeen();builder()};\n  $('#proc').onchange=")
+rep("${PROC.startHTML()}<div class=\"note\">Scores here","${EXAM.note?'<p class=\"lede\"><b>'+EXAM.note+'</b></p>':''}${PROC.startHTML()}<div class=\"note\">Scores here")
+rep("function finishModule(timeout){\n  clearInterval(S.tick);","function finishModule(timeout){\n  clearInterval(S.tick);markSeen(mods()[S.mod]);")
+rep("function results(){\n","function results(){\n  EXAM.mods.slice(0,S.mod+1).forEach(markSeen);\n")
+
 open('bank_template.html','w').write(t)
 print('ok',len(t))
 

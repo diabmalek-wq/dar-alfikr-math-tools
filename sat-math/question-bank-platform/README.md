@@ -34,3 +34,6 @@ Append items to `data/bank_all.json` (unique `id`, valid `domain|skill|sub`), ke
 
 ## Exam integrity
 Proctor mode (fullscreen, leave detection, auto-submit, copy block, integrity report) and an optional Safe Exam Browser requirement are in `proctor.js`, patched in by `mkbank.py`. See HOW_TO_PUBLISH.md.
+
+## No repeats and current-topic + review exams
+`plan.js` (patched in by `mkbank.py`): the builder remembers which questions a student has seen on that device (localStorage, by question family, so a rephrased twin counts as seen), prefers unseen questions, and never puts two twins in one exam. The "Current topic + review" layout makes Module 1 from the ticked topics and Module 2 a comprehensive review of the skills covered so far.
