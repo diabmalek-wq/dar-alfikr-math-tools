@@ -1,0 +1,122 @@
+[
+ {
+  "id": "GT-003",
+  "reason": "law of cosines / law of sines"
+ },
+ {
+  "id": "GT-003-2",
+  "reason": "law of cosines / law of sines"
+ },
+ {
+  "id": "GT-068",
+  "reason": "law of cosines / law of sines"
+ },
+ {
+  "id": "GT-068-2",
+  "reason": "law of cosines / law of sines"
+ },
+ {
+  "id": "GT-071",
+  "reason": "law of cosines / law of sines"
+ },
+ {
+  "id": "GT-071-2",
+  "reason": "law of cosines / law of sines"
+ },
+ {
+  "id": "GT-088",
+  "reason": "area from two sides and the included angle (sine formula, not on the SAT)"
+ },
+ {
+  "id": "GT-238",
+  "reason": "area from two sides and the included angle (sine formula, not on the SAT)"
+ },
+ {
+  "id": "MR-279",
+  "reason": "trigonometry of doubled or quadrupled angles"
+ },
+ {
+  "id": "MR-279-2",
+  "reason": "trigonometry of doubled or quadrupled angles"
+ },
+ {
+  "id": "AM-273",
+  "reason": "complex numbers"
+ },
+ {
+  "id": "AM-273-2",
+  "reason": "complex numbers"
+ },
+ {
+  "id": "AM-287",
+  "reason": "complex numbers"
+ },
+ {
+  "id": "AM-287-2",
+  "reason": "complex numbers"
+ },
+ {
+  "id": "AM-293",
+  "reason": "inverse function notation"
+ },
+ {
+  "id": "AM-293-2",
+  "reason": "inverse function notation"
+ },
+ {
+  "id": "AM-289",
+  "reason": "inverse function notation"
+ },
+ {
+  "id": "AM-289-2",
+  "reason": "inverse function notation"
+ },
+ {
+  "id": "GT-157",
+  "reason": "point-to-line distance formula"
+ },
+ {
+  "id": "GT-157-2",
+  "reason": "point-to-line distance formula"
+ },
+ {
+  "id": "GT-123",
+  "reason": "point-to-line distance formula"
+ },
+ {
+  "id": "GT-123-2",
+  "reason": "point-to-line distance formula"
+ },
+ {
+  "id": "GT-169",
+  "reason": "point-to-line distance formula"
+ },
+ {
+  "id": "GT-169-2",
+  "reason": "point-to-line distance formula"
+ },
+ {
+  "id": "GT-266",
+  "reason": "tangent of a non-right-triangle angle (vector method)"
+ },
+ {
+  "id": "GT-266-2",
+  "reason": "tangent of a non-right-triangle angle (vector method)"
+ },
+ {
+  "id": "GT-141",
+  "reason": "tangent of a non-right-triangle angle (vector method)"
+ },
+ {
+  "id": "GT-141-2",
+  "reason": "tangent of a non-right-triangle angle (vector method)"
+ },
+ {
+  "id": "GT-217",
+  "reason": "angle bisector theorem"
+ },
+ {
+  "id": "GT-217-2",
+  "reason": "angle bisector theorem"
+ }
+]
