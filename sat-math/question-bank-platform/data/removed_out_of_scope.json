@@ -118,5 +118,13 @@
  {
   "id": "GT-217-2",
   "reason": "angle bisector theorem"
+ },
+ {
+  "id": "GT-168",
+  "reason": "ambiguous case of SSA (two sides and a non-included angle)"
+ },
+ {
+  "id": "GT-168-2",
+  "reason": "ambiguous case of SSA (two sides and a non-included angle)"
  }
 ]
