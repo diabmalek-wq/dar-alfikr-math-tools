@@ -1,0 +1,297 @@
+{
+ "id": "L3-3w10",
+ "outName": "Lesson 3-3 Identities with Polynomials presentation",
+ "grade": "GRADE 10",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 3",
+ "lessonNo": "Lesson 3-3",
+ "titleLines": [
+  "Identities with",
+  "Polynomials"
+ ],
+ "topicTitle": "Polynomial Functions",
+ "titleMath": "(a+b)^{2}=a^{2}+2ab+b^{2}",
+ "codes": "HSA.SSE.A.2 · HSA.APR.C.4 · (+)HSA.APR.C.5",
+ "hideStd": true,
+ "eq": null,
+ "mps": null,
+ "objectives": [
+  "Understand and prove polynomial identities.",
+  "Apply polynomial identities for multiplication, factoring, and simplification.",
+  "Expand a power of a binomial by applying the binomial theorem."
+ ],
+ "vocab": [
+  "Binomial Coefficient",
+  "binomial theorem",
+  "Identity",
+  "Pascal’s triangle"
+ ],
+ "standards": [
+  {
+   "code": "HSA.SSE.A.2",
+   "text": "Use the structure of an expression to identify ways to rewrite it."
+  },
+  {
+   "code": "HSA.APR.C.4",
+   "text": "Prove polynomial identities and use them to describe numerical relationships."
+  },
+  {
+   "code": "(+)HSA.APR.C.5",
+   "text": "Know and apply the Binomial Theorem for the expansion of (x + y)n in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle."
+  }
+ ],
+ "recap": "An identity is true for every value of its variables; the square and difference-of-squares identities let us expand and factor quickly, and Pascal's triangle gives the coefficients of any power of a binomial.",
+ "diagnose": {
+  "items": [
+   "\\text{Expand }(x+6)(x+6)",
+   "\\text{Expand }(x-5)(x+5)",
+   "\\text{Is }(a+b)^{2}=a^{2}+b^{2}\\text{ true for }a=2,\\ b=3\\text{?}"
+  ],
+  "doneWhen": "All three answers are written without a calculator, and for Question 3 you have tried numbers, not just opinion.",
+  "notes": "Answers. Q1: x² + 6x + 6x + 36 = x² + 12x + 36. Q2: x² + 5x − 5x − 25 = x² − 25 (the middle terms cancel). Q3: (2 + 3)² = 25 but 2² + 3² = 13, so the statement is false for these numbers; one counter-example is enough. Verbal misconceptions: Q1 students write x² + 36 (forgetting the two middle products); Q2 students write x² − 10x − 25 or x² + 25; Q3 students say 'it works because squaring is distributive'. Adaptive routing: if >30% miss Q1, expand with a 2 by 2 area grid before slide 5; if >30% miss Q2, show the cancelling middle terms in colour and go to slide 5 slowly; if >30% accept Q3, test two more pairs of numbers aloud and go to slide 6. If all three are secure, move quickly through slide 5 and start the Investigate route early."
+ },
+ "blocks": [
+  {
+   "title": "Squares and the difference of squares",
+   "rules": [
+    "(a\\pm b)^{2}=a^{2}\\pm2ab+b^{2}",
+    "(a+b)(a-b)=a^{2}-b^{2}"
+   ],
+   "examples": [
+    {
+     "q": "(4x+5)^{2}",
+     "steps": [
+      "(4x)^{2}+2(4x)(5)+5^{2}",
+      "16x^{2}+40x+25"
+     ]
+    },
+    {
+     "q": "(3x-7)(3x+7)",
+     "steps": [
+      "(3x)^{2}-7^{2}",
+      "9x^{2}-49"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions (HSA.SSE.A.2: use the structure of an expression). An IDENTITY is an equation that is true for every value of its variables, unlike an equation such as x + 2 = 5 which is true for one. Square of a binomial: square the first term, double the product of the two terms, square the last term; the sign of the middle term follows the bracket. Example A: (4x + 5)²: (4x)² = 16x²; 2 × 4x × 5 = 40x; 5² = 25, so 16x² + 40x + 25. Check at x = 1: (4 + 5)² = 81 and 16 + 40 + 25 = 81. Example B: (3x − 7)(3x + 7): the outer and inner products cancel, leaving (3x)² − 7² = 9x² − 49. Check at x = 2: (6 − 7)(6 + 7) = −13 and 36 − 49 = −13. Link to the pre-session: the area grid for (x + 6)² has the same four parts. Verbal misconceptions: 'the square of a sum is the sum of the squares' (missing the 2ab); writing (4x)² as 4x²; the wrong sign on the middle term of a difference; a difference of squares written as (a − b)². Adaptive routing: if >30% write 4x² for (4x)², redo Example A with the area grid; if >30% miss the middle term, ask them to test x = 1 as the check; Gate Q1 routes to this slide."
+  },
+  {
+   "title": "Proving an identity",
+   "rules": [
+    "\\text{expand one side until it matches the other}",
+    "\\text{a counter-example disproves, a full expansion proves}"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Prove }(a+b)^{2}-(a-b)^{2}=4ab",
+     "steps": [
+      "(a^{2}+2ab+b^{2})-(a^{2}-2ab+b^{2})",
+      "=4ab"
+     ]
+    },
+    {
+     "q": "83^{2}-17^{2}\\ \\text{without a calculator}",
+     "steps": [
+      "(83-17)(83+17)",
+      "66\\times100=6600"
+     ]
+    }
+   ],
+   "fig": null,
+   "whatif": "What if a number such as 83² − 17² is a difference of squares? Predict the quickest route, then check it with a calculator.",
+   "whatifM": "a^{2}-b^{2}=(a-b)(a+b)",
+   "notes": "Worked solutions (HSA.APR.C.4: prove polynomial identities and use them to describe numerical relationships). To PROVE an identity, start from one side, expand carefully and show it becomes the other side for every value. Example A: expand (a + b)² = a² + 2ab + b² and (a − b)² = a² − 2ab + b². Subtract: the a² and b² terms cancel and 2ab − (−2ab) = 4ab. So the left side equals 4ab, the right side, for all a and b. Testing a few numbers is evidence, not proof. Example B uses the identity numerically: 83² − 17² = (83 − 17)(83 + 17) = 66 × 100 = 6600. Check: 6889 − 289 = 6600. What if (gold strip): 83² − 17² is exactly the difference of squares, so factor, do not square. Verbal misconceptions: 'checking one number proves the identity'; losing the minus sign when subtracting a bracket (−(a² − 2ab + b²) keeps changing every sign); using the identity but then multiplying the numbers the long way. Adaptive routing: if >30% lose the sign when subtracting the bracket, write the minus outside the bracket and distribute it line by line; if >30% say one number proves it, run a counter-example such as a² + b² = (a + b)² at a = 1, b = 1. Gate Q1 and Practice Investigate 1 link here."
+  },
+  {
+   "title": "Factoring with identities",
+   "rules": [
+    "a^{2}-b^{2}=(a-b)(a+b)",
+    "a^{2}\\pm2ab+b^{2}=(a\\pm b)^{2}"
+   ],
+   "examples": [
+    {
+     "q": "49x^{2}-36y^{2}",
+     "steps": [
+      "(7x)^{2}-(6y)^{2}",
+      "(7x-6y)(7x+6y)"
+     ]
+    },
+    {
+     "q": "9x^{2}-30x+25",
+     "steps": [
+      "(3x)^{2}-2(3x)(5)+5^{2}",
+      "(3x-5)^{2}"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Factoring runs the identities backwards. Example A: 49x² = (7x)² and 36y² = (6y)², two perfect squares with a minus between them, so (7x − 6y)(7x + 6y). Check by expanding: 49x² + 42xy − 42xy − 36y² ✓. Example B: 9x² = (3x)² and 25 = 5²; the middle term 30x equals 2 × 3x × 5, and it is negative, so the square is (3x − 5)². Check at x = 1: 9 − 30 + 25 = 4 and (3 − 5)² = 4 ✓. Test for a perfect-square trinomial: first and last terms are squares and the middle term is exactly twice the product of their roots. Verbal misconceptions: factoring a sum of squares, 49x² + 36y², as (7x + 6y)² (it does not factor over the real numbers this way); forgetting the 2 in the middle-term test; choosing (3x + 5)² when the middle term is negative. Adaptive routing: if >30% factor a sum of squares, test (x + 1)² against x² + 1 at x = 1; if >30% miss the sign, ask what the middle term of (3x − 5)² is before choosing. Gate Q2 routes to this slide."
+  },
+  {
+   "title": "Pascal's triangle and the binomial theorem",
+   "rules": [
+    "(x+y)^{n}=\\sum_{k=0}^{n}\\binom{n}{k}x^{n-k}y^{k}",
+    "\\text{row }3:\\ 1,\\ 3,\\ 3,\\ 1\\qquad\\text{row }4:\\ 1,\\ 4,\\ 6,\\ 4,\\ 1"
+   ],
+   "examples": [
+    {
+     "q": "(2x+1)^{3}",
+     "steps": [
+      "1(2x)^{3}+3(2x)^{2}(1)+3(2x)(1)^{2}+1",
+      "8x^{3}+12x^{2}+6x+1"
+     ]
+    },
+    {
+     "q": "(x-4)^{3}",
+     "steps": [
+      "x^{3}+3x^{2}(-4)+3x(-4)^{2}+(-4)^{3}",
+      "x^{3}-12x^{2}+48x-64"
+     ]
+    }
+   ],
+   "fig": null,
+   "whatif": "What if the power is 5 and the second term is 2, as in (x + 2)⁵? Predict the first two coefficients using row 5, then expand fully.",
+   "whatifM": "1,\\ 5,\\ 10,\\ 10,\\ 5,\\ 1",
+   "notes": "Worked solutions ((+)HSA.APR.C.5). Pascal's triangle: each number is the sum of the two above it; row n lists the BINOMIAL COEFFICIENTS for (x + y)ⁿ (row 0 is 1, row 1 is 1 1, row 2 is 1 2 1, row 3 is 1 3 3 1, row 4 is 1 4 6 4 1, row 5 is 1 5 10 10 5 1). The binomial theorem: the powers of x go down and the powers of y go up, and each term is coefficient × x^(n−k) × y^k. Example A: (2x + 1)³ uses row 3: (2x)³ = 8x³; 3 × (2x)² × 1 = 12x²; 3 × 2x × 1 = 6x; 1. Result 8x³ + 12x² + 6x + 1. Check at x = 1: 3³ = 27 and 8 + 12 + 6 + 1 = 27 ✓. Example B: put y = −4: the signs alternate: x³ − 12x² + 48x − 64. Check at x = 1: (−3)³ = −27 and 1 − 12 + 48 − 64 = −27 ✓. What if (gold strip): row 5 is 1 5 10 10 5 1 and y = 2: x⁵ + 10x⁴ + 40x³ + 80x² + 80x + 32. Check at x = 1: 3⁵ = 243 and 1 + 10 + 40 + 80 + 80 + 32 = 243 ✓. Verbal misconceptions: forgetting to raise the coefficient 2 in (2x) to the power; losing the alternating signs; using the wrong row (row n, not row n + 1, when counting from 0). Adaptive routing: if >30% mis-square the 2x, write (2x)² = 4x² on the board; if >30% lose the signs, put the negative number in brackets before powering. Gate Q3 routes to this slide."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "\\text{Expand }(5x-3)^{2}",
+    "\\text{Factor }4x^{2}-121"
+   ],
+   "done": "Done when: the middle term 2ab is written with the correct sign, the difference of squares has no middle term, and each answer is checked with a number."
+  },
+  "apply": {
+   "items": [
+    "\\begin{array}{c}\\text{Field of side }(x+3)\\text{ m.}\\\\ \\text{Expand its area; find it when }x=17.\\end{array}",
+    "\\text{Use an identity: }\\ 102\\times98"
+   ],
+   "done": "Done when: the identity you used is named, every step stays balanced, and each answer says what it means."
+  },
+  "investigate": {
+   "items": [
+    "\\text{Prove }(a+b)^{2}+(a-b)^{2}=2a^{2}+2b^{2}",
+    "\\begin{array}{c}\\text{Show that }n^{2}+(n+1)^{2}+(n(n+1))^{2}\\\\ \\text{is a perfect square.}\\end{array}"
+   ],
+   "done": "Done when: your argument starts from a full expansion, every sign is tracked, and the final line says why it works for all values."
+  },
+  "notes": "Answers. Practice 1: (5x − 3)² = 25x² − 30x + 9. Practice 2: 4x² − 121 = (2x − 11)(2x + 11). Apply 1 (a model football pitch for a Jeddah school, model values): area = (x + 3)² = x² + 6x + 9; at x = 17 the side is 20 m and the area is 400 m²; check 289 + 102 + 9 = 400. Apply 2: 102 × 98 = (100 + 2)(100 − 2) = 10000 − 4 = 9996. Investigate 1: (a² + 2ab + b²) + (a² − 2ab + b²) = 2a² + 2b² (the 2ab terms cancel). Investigate 2: n² + (n + 1)² + n²(n + 1)² = n² + n² + 2n + 1 + n⁴ + 2n³ + n² = n⁴ + 2n³ + 3n² + 2n + 1 = (n² + n + 1)²; check n = 2: 4 + 9 + 36 = 49 = 7². Verbal misconceptions: Practice 1 writing 25x² + 9 or the sign of 30x wrong; Practice 2 writing (2x − 11)² ; Apply 1 stopping at x² + 9; Apply 2 multiplying 102 × 98 the long way and slipping; Investigate 1 stopping after expanding without simplifying; Investigate 2 assuming it is true after one test. Adaptive routing: if >30% miss Practice 1, route to slide 5; Practice 2, slide 7; Apply 1, slide 5; Apply 2, slide 6; Investigate 1 and 2, slide 6. Students who finish Apply early move to Investigate."
+ },
+ "compare": {
+  "title": "Which route? Judge the claim",
+  "routes": [
+   {
+    "name": "MULTIPLY OUT",
+    "m": "(x+2)^{3}=x^{3}+6x^{2}+12x+8",
+    "pro": "Needs nothing new.",
+    "con": "Long and slip-prone for higher powers."
+   },
+   {
+    "name": "PASCAL'S TRIANGLE",
+    "m": "1,\\ 3,\\ 3,\\ 1",
+    "pro": "Fast for a small power.",
+    "con": "You must build the whole row first."
+   },
+   {
+    "name": "BINOMIAL THEOREM",
+    "m": "\\dbinom{3}{k}x^{3-k}2^{k}",
+    "pro": "Works for any power.",
+    "con": "Easy to lose a power of 2."
+   }
+  ],
+  "claim": "(a + b)³ = a³ + b³ for all numbers a and b.",
+  "assume": "Did you test numbers where neither a nor b is 0?",
+  "spot": {
+   "title": "steal this shortcut",
+   "text": "Row n has n + 1 numbers and reads the same backwards, so you only need to compute half of it.",
+   "m": "1,\\ 4,\\ 6,\\ 4,\\ 1"
+  },
+  "whatif": "What if the second term is negative, as in (x − 2)³? Predict which signs alternate, then test with x = 1.",
+  "whatifM": "(x-2)^{3}",
+  "notes": "Compare and judge (3 min). Worked solutions. (x + 2)³ three ways. Multiply out: (x + 2)(x² + 4x + 4) = x³ + 4x² + 4x + 2x² + 8x + 8 = x³ + 6x² + 12x + 8. Pascal row 3: 1 3 3 1 gives x³ + 3(2)x² + 3(4)x + 8 = x³ + 6x² + 12x + 8. Binomial theorem: coefficient of x^(3−k) is C(3,k) × 2^k: 1, 3 × 2 = 6, 3 × 4 = 12, 8. All agree. Claim: FALSE. Take a = b = 1: (1 + 1)³ = 8 but 1³ + 1³ = 2. One pair of numbers is enough to disprove. The missing terms are 3a²b + 3ab². Spotlight: row 4 is 1 4 6 4 1, symmetric. What if (gold box): (x − 2)³ = x³ − 6x² + 12x − 8; the signs alternate because 2 is raised to an odd or even power with a minus sign. Check at x = 1: (−1)³ = −1 and 1 − 6 + 12 − 8 = −1 ✓. Verbal misconceptions: 'a cube of a sum splits into two cubes'; 'Pascal is only for adding'; losing the sign for y = −2. Adaptive routing: if >30% mark the claim TRUE, have them evaluate at a = 2, b = 1; if teams finish early, ask which route they would use for (x + 2)⁸ and why."
+ },
+ "production": {
+  "title": "Date orchard and pond",
+  "context": "A model date-palm orchard in Al-Ahsa (model values only, not real data) is a square of side (x + 5) m. A square irrigation pond of side (x − 5) m sits in its middle, and the rest of the orchard is planted with palms.",
+  "given": [
+   "\\text{orchard side }(x+5)\\quad\\text{pond side }(x-5)",
+   "\\text{planted area}=(x+5)^{2}-(x-5)^{2}"
+  ],
+  "tasks": [
+   "Expand the area of the orchard and the area of the pond. Subtract to find the planted area as a simple polynomial.",
+   "Show the same result using the difference of squares. Find the planted area when x = 40.",
+   "The planted area is 1200 m². Find x, the orchard side and the pond side."
+  ],
+  "doneWhen": [
+   "The orchard area is x² + 10x + 25 and the pond area is x² − 10x + 25.",
+   "The planted area 20x is found two ways and is 800 m² for x = 40.",
+   "The equation 20x = 1200 gives x = 60 with units.",
+   "The orchard side 65 m and pond side 55 m are checked: 65² − 55² = 1200."
+  ],
+  "hint": "Hint for solving: (x + 5)² − (x − 5)² is a difference of squares with a = x + 5 and b = x − 5.",
+  "whatif": "What if the pond side is (x − 3) instead of (x − 5)? Predict whether the planted area is still a multiple of x, then find it.",
+  "notes": "Model values only, not real data. Task 1: (x + 5)² = x² + 10x + 25; (x − 5)² = x² − 10x + 25. Planted area = (x² + 10x + 25) − (x² − 10x + 25) = 20x. Task 2: difference of squares with a = x + 5, b = x − 5: (a − b)(a + b) = (10)(2x) = 20x. For x = 40: 20 × 40 = 800 m²; check: 45² − 35² = 2025 − 1225 = 800 ✓. Task 3: 20x = 1200 so x = 60; orchard side 65 m, pond side 55 m; check 4225 − 3025 = 1200 ✓. What if (gold box): a = x + 5, b = x − 3: a − b = 8, a + b = 2x + 2, so the area is 16x + 16, which is not a multiple of x. Verbal misconceptions: expanding (x − 5)² as x² − 25; subtracting only the first terms; forgetting the units; answering x = 60 m as the orchard side. Adaptive routing: if >30% cannot start Task 1, return to slide 5 Example A; if >30% miss Task 2, slide 6 Example B; if >30% miss Task 3, ask them to write 20x = 1200 and solve it. Early finishers: the planted area when the pond side is (x − 2)."
+ },
+ "gate": {
+  "items": [
+   "\\text{Expand }(5x-4)^{2}",
+   "\\text{Factor }81x^{2}-16",
+   "\\text{Expand }(2x-1)^{3}"
+  ],
+  "notes": "Answers. Q1: 25x² − 40x + 16. Q2: (9x − 4)(9x + 4). Q3: row 3 is 1 3 3 1: (2x)³ − 3(2x)²(1) + 3(2x)(1)² − 1 = 8x³ − 12x² + 6x − 1; check at x = 1: 1 and 8 − 12 + 6 − 1 = 1 ✓. Verbal misconceptions: Q1 giving 25x² + 16 or +40x; Q2 writing (9x − 4)²; Q3 writing 2x³ or dropping alternating signs. Adaptive routing: Q1 missed, route to slide 5; Q2 missed, slide 7; Q3 missed, slide 8. If a student misses two or more, they join the teacher group for the Smart Production create step; students who get all three correct start the create step immediately."
+ },
+ "smart": {
+  "create": [
+   "Choose two numbers a and b. Write (a + b)² and (a − b)² and compute both with numbers.",
+   "Prove (a + b)² − (a − b)² = 4ab and test it with your numbers.",
+   "Swap with a partner and check their proof. Then add a What if...? question (change a power) and test your prediction."
+  ],
+  "createDone": "Done when: your numbers and your algebra agree, your partner's proof has no missing term, and your What if...? question has a prediction and a test.",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\text{Expand }(3x-2)^{2}",
+   "\\text{Factor }25x^{2}+20x+4"
+  ],
+  "next": "Next lesson: 3-4 Dividing Polynomials.",
+  "notes": "Exit ticket solutions. Exit 1: 9x² − 12x + 4. Exit 2: 25x² = (5x)², 4 = 2², and 20x = 2 × 5x × 2, so (5x + 2)². Create step example: a = 5, b = 2: 49 and 9; difference 40 = 4 × 5 × 2 ✓. What if: changing the power to a cube, (a + b)³ − (a − b)³ = 6a²b + 2b³; at a = 5, b = 2: 343 − 27 = 316 and 6 × 25 × 2 + 16 = 316 ✓. Verbal misconceptions: Exit 1 giving 9x² + 4; Exit 2 giving (5x + 2)(5x − 2). Adaptive routing: if >30% miss Exit 1, retrieve slide 5 Example A next lesson; if >30% miss Exit 2, retrieve slide 7 Example B."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "\\text{If }(x+y)^{2}=49\\text{ and }x^{2}+y^{2}=29,",
+    "\\text{what is the value of }xy\\text{?}"
+   ],
+   "steps": [
+    "x^{2}+2xy+y^{2}=49",
+    "29+2xy=49",
+    "xy=10"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\text{Which quantity is greater?}",
+    "\\begin{array}{l}\\text{A: }63^{2}-37^{2}\\\\ \\text{B: }2500\\end{array}"
+   ],
+   "steps": [
+    "(63-37)(63+37)",
+    "26\\times100=2600",
+    "2600>2500\\Rightarrow\\text{A is greater}"
+   ]
+  },
+  "saat": {
+   "q": [
+    "x^{2}-y^{2}=40\\ \\text{and}\\ x-y=5.",
+    "\\text{Then }x+y=\\ ?"
+   ],
+   "steps": [
+    "(x-y)(x+y)=40",
+    "5(x+y)=40",
+    "x+y=8"
+   ]
+  },
+  "notes": "SAT (Advanced Math, equivalent forms): (x + y)² = x² + 2xy + y², so 49 = 29 + 2xy and xy = 10. Traps: answering 20 (2xy), 49 − 29 = 20 without halving, or 5. A student-produced-response grid answer is 10. GAT/Qudurat quantitative comparison (A is greater / B is greater / equal / cannot be determined): 63² − 37² = (63 − 37)(63 + 37) = 26 × 100 = 2600, which is more than 2500, so A is greater. Trap: estimating 63² and 37² separately. SAAT/Tahsili (four options, for example A 5, B 8, C 35, D 45): the difference of squares gives 40 = 5(x + y), so x + y = 8: B. Trap: 40 − 5 = 35 or 40 + 5 = 45. Adaptive routing: if >30% miss the SAT item, return to slide 5 Example A; the GAT item, slide 6 Example B; the SAAT item, slide 5 Example B."
+ }
+}

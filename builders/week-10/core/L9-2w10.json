@@ -1,0 +1,296 @@
+{
+ "id": "L9-2w10",
+ "outName": "Lesson 9-2 Circles presentation",
+ "grade": "GRADE 11",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 9",
+ "lessonNo": "Lesson 9-2",
+ "titleLines": [
+  "Circles"
+ ],
+ "topicTitle": "Conic Sections",
+ "titleMath": "(x-h)^{2}+(y-k)^{2}=r^{2}",
+ "codes": "HSA.SSE.B.3 · HSA.REI.C.7 · HSG.GPE.A.1",
+ "hideStd": true,
+ "eq": null,
+ "mps": null,
+ "objectives": [
+  "Derive the equation of a circle given its center and radius.",
+  "Complete the square to find the center and radius of a circle.",
+  "Determine the relative positions of a circle and a line in the plane.",
+  "Solve a system of equations with one linear equation and one equation of a circle algebraically and verify the solution by graphing."
+ ],
+ "vocab": [
+  "Center",
+  "Circle",
+  "Diameter",
+  "radius"
+ ],
+ "standards": [
+  {
+   "code": "HSA.SSE.B.3",
+   "text": "Choose and produce an equivalent form of an expression to reveal and explain properties of the quantity represented by the expression."
+  },
+  {
+   "code": "HSA.REI.C.7",
+   "text": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically."
+  },
+  {
+   "code": "HSG.GPE.A.1",
+   "text": "Derive the equation of a circle of given center and radius using the Pythagorean Theorem; complete the square to find the center and radius of a circle given by an equation."
+  }
+ ],
+ "recap": "A circle is every point at a fixed distance r from its center; its equation comes from the Pythagorean Theorem, completing the square reveals the center and radius, and substituting a line into it shows how line and circle meet.",
+ "diagnose": {
+  "items": [
+   "\\text{Find the distance between}\\ (1,\\,2)\\ \\text{and}\\ (5,\\,5)",
+   "\\text{Write }x^{2}+6x\\text{ as }(x+3)^{2}-q",
+   "\\text{Solve }x^{2}+2x-8=0"
+  ],
+  "doneWhen": "All three answers are written without a calculator, and you can say which of the three skills a circle equation needs first.",
+  "notes": "Answers. Q1: horizontal change 4, vertical change 3, distance √(16 + 9) = 5. Q2: half of 6 is 3 and 3² = 9, so x² + 6x = (x + 3)² − 9. Q3: (x + 4)(x − 2) = 0, so x = −4 or x = 2. Verbal misconceptions: Q1 students write 4 + 3 = 7 or forget the square root; Q2 students write (x + 3)² with no − 9, or (x + 6)²; Q3 students give x = 4 and x = −2 (sign flip). Adaptive routing: if >30% miss Q1, rehearse the distance formula and go to slide 5 slowly; if >30% miss Q2, spend two minutes on completing the square before slide 7; if >30% miss Q3, factor on the board before slide 8. If all three are secure, move quickly through slide 5 and start the Investigate route early."
+ },
+ "blocks": [
+  {
+   "title": "The equation from the center and radius",
+   "rules": [
+    "(x-h)^{2}+(y-k)^{2}=r^{2}",
+    "\\text{distance from the center }(h,k)\\text{ equals }r"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Center }(-3,2),\\ \\ r=5",
+     "steps": [
+      "(x+3)^{2}+(y-2)^{2}=25"
+     ]
+    },
+    {
+     "q": "\\text{Is }(1,5)\\text{ on this circle?}",
+     "steps": [
+      "(1+3)^{2}+(5-2)^{2}",
+      "16+9=25\\ \\checkmark"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions (HSG.GPE.A.1). A CIRCLE is every point at the same distance, the RADIUS r, from a fixed point, the CENTER (h, k). For a point (x, y) on the circle, the horizontal and vertical gaps from the center are x − h and y − k; the Pythagorean Theorem gives (x − h)² + (y − k)² = r². Example A: center (−3, 2), r = 5: x − (−3) = x + 3 and y − 2, so (x + 3)² + (y − 2)² = 25. Notice the sign flips inside the brackets and the number on the right is r², not r. Example B: substitute (1, 5): (1 + 3)² + (5 − 2)² = 16 + 9 = 25, equal to r², so the point is ON the circle; the gaps 4 and 3 make a 3-4-5 triangle. If the left side were less than 25 the point would be inside; if more, outside. Link to the pre-session: the distance of 5 in Diagnose Q1 is the same 3-4-5 idea. Verbal misconceptions: writing 5 on the right instead of 25; copying the signs of the center (x − 3); forgetting that r² uses the radius, not the diameter. Adaptive routing: if >30% write r instead of r², redo Example A and ask 'what is the distance squared?'; if >30% copy the signs, say 'flip the sign inside the bracket' aloud. Gate Q2 routes to this slide."
+  },
+  {
+   "title": "Reading and writing circle equations",
+   "rules": [
+    "\\text{center }(h,k)\\qquad r=\\sqrt{r^{2}}",
+    "\\text{diameter }=2r"
+   ],
+   "examples": [
+    {
+     "q": "(x-4)^{2}+(y+1)^{2}=20",
+     "steps": [
+      "\\text{center }(4,-1)",
+      "r=\\sqrt{20}=2\\sqrt{5}"
+     ]
+    },
+    {
+     "q": "\\text{Center }(2,-5),\\ \\text{diameter }14",
+     "steps": [
+      "r=7,\\ \\ r^{2}=49",
+      "(x-2)^{2}+(y+5)^{2}=49"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions. Example A: read the center with the signs flipped: x − 4 gives h = 4 and y + 1 = y − (−1) gives k = −1, so the center is (4, −1). The right-hand side is r² = 20, so r = √20 = 2√5 ≈ 4.47. Example B: the diameter 14 means r = 7, so r² = 49. Center (2, −5): (x − 2)² + (y + 5)² = 49. Check the point (9, −5): 49 + 0 = 49 ✓ (7 units to the right of the center). Verbal misconceptions: reading the center as (−4, 1); leaving the radius as 20; using the diameter 14 as r, giving 196. Adaptive routing: if >30% read the center wrongly, redo Example A with (x + 3)² + (y − 6)² = 9; if >30% use the diameter as r, ask 'half of the diameter?' before substituting. Gate Q1 routes to this slide."
+  },
+  {
+   "title": "Completing the square for a circle",
+   "rules": [
+    "x^{2}+bx\\ \\to\\ \\left(x+\\dfrac{b}{2}\\right)^{2}-\\dfrac{b^{2}}{4}",
+    "\\text{add the same numbers to both sides}"
+   ],
+   "examples": [
+    {
+     "q": "x^{2}+y^{2}+8x-2y-8=0",
+     "steps": [
+      "(x^{2}+8x+16)+(y^{2}-2y+1)=8+16+1",
+      "(x+4)^{2}+(y-1)^{2}=25,\\ \\ C(-4,1),\\ r=5"
+     ]
+    },
+    {
+     "q": "x^{2}+y^{2}-10x+6y+18=0",
+     "steps": [
+      "(x^{2}-10x+25)+(y^{2}+6y+9)=-18+25+9",
+      "(x-5)^{2}+(y+3)^{2}=16,\\ \\ C(5,-3),\\ r=4"
+     ]
+    }
+   ],
+   "fig": null,
+   "whatif": "What if the constant is 13 in x² + y² − 4x + 6y + 13 = 0? Predict the radius, then complete the square.",
+   "whatifM": "x^{2}+y^{2}-4x+6y+13=0",
+   "notes": "Worked solutions (HSA.SSE.B.3 and HSG.GPE.A.1). Method: move the constant to the right, group the x terms and the y terms, add the square of half the coefficient to BOTH sides for each letter, then factor. Example A: x² + 8x + y² − 2y = 8. Half of 8 is 4, 4² = 16; half of −2 is −1, (−1)² = 1. Add 16 and 1 to both sides: (x + 4)² + (y − 1)² = 8 + 16 + 1 = 25. Center (−4, 1), r = 5. Check: the point (1, 1) satisfies the original equation, 1 + 1 + 8 − 2 − 8 = 0, and (1 + 4)² + 0 = 25 ✓. Example B: x² − 10x + y² + 6y = −18. Add 25 and 9: (x − 5)² + (y + 3)² = −18 + 34 = 16. Center (5, −3), r = 4. What if (gold strip): x² − 4x + y² + 6y = −13; add 4 and 9: (x − 2)² + (y + 3)² = −13 + 13 = 0. The radius is 0: the graph is the single point (2, −3). If the right side were negative there would be no graph at all. Verbal misconceptions: adding 16 only on the left; reading r as 25 instead of 5; dropping the sign of the constant when moving it across. Adaptive routing: if >30% add on one side only, write the balance line 'what I add on the left I add on the right' and redo Example A; if >30% give r = 25, ask them to take the square root. Gate Q3 routes to this slide."
+  },
+  {
+   "title": "A line and a circle",
+   "rules": [
+    "\\text{substitute the line into the circle}",
+    "\\text{two, one or no solutions: cuts, touches, misses}"
+   ],
+   "examples": [
+    {
+     "q": "x^{2}+y^{2}=20,\\ \\ y=x+2",
+     "steps": [
+      "x^{2}+(x+2)^{2}=20\\ \\Rightarrow\\ x^{2}+2x-8=0",
+      "(2,4)\\ \\text{and}\\ (-4,-2)"
+     ]
+    },
+    {
+     "q": "x^{2}+y^{2}=8,\\ \\ y=x+4",
+     "steps": [
+      "x^{2}+(x+4)^{2}=8\\ \\Rightarrow\\ (x+2)^{2}=0",
+      "\\text{one point }(-2,2):\\ \\text{tangent}"
+     ]
+    }
+   ],
+   "fig": null,
+   "whatif": "What if the line is y = x + 6 with the same circle x² + y² = 8? Predict how many points, then look at the discriminant.",
+   "whatifM": "x^{2}+(x+6)^{2}=8",
+   "notes": "Worked solutions (HSA.REI.C.7: a linear equation and a quadratic equation in two variables). Substitute the line into the circle to get one quadratic in x. Example A: x² + (x + 2)² = 20 gives 2x² + 4x + 4 = 20, so 2x² + 4x − 16 = 0 and x² + 2x − 8 = 0, (x + 4)(x − 2) = 0, x = −4 or x = 2. Then y = x + 2 gives y = −2 or y = 4: the points (−4, −2) and (2, 4). Verify on the circle: 16 + 4 = 20 ✓ and 4 + 16 = 20 ✓; verify on the graph: the line cuts the circle at two points (a SECANT). Example B: x² + (x + 4)² = 8 gives 2x² + 8x + 16 = 8, so 2x² + 8x + 8 = 0, x² + 4x + 4 = 0, (x + 2)² = 0, a repeated root x = −2, y = 2. Check: 4 + 4 = 8 ✓. One point of contact: the line is TANGENT to the circle. What if (gold strip): x² + (x + 6)² = 8 gives 2x² + 12x + 28 = 0, x² + 6x + 14 = 0; the discriminant is 36 − 56 = −20, which is negative: no real solutions, the line misses the circle. Verbal misconceptions: substituting into the wrong equation; squaring (x + 2)² as x² + 4; stopping after finding x and not finding y; thinking a single repeated root is 'no answer'. Adaptive routing: if >30% mis-square the bracket, expand (x + 2)² on the board; if >30% forget y, ask 'which equation gives y?'. Gate Q3 and Exit 2 route to this slide."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "\\begin{array}{c}\\text{Center and radius:}\\\\ (x+6)^{2}+(y-2)^{2}=36\\end{array}",
+    "\\begin{array}{c}\\text{Center }(-2,7),\\ \\ r=4.\\\\ \\text{Write the equation.}\\end{array}"
+   ],
+   "done": "Done when: the center is read with the signs flipped, the right-hand side is treated as r², and the equation is checked with one point."
+  },
+  "apply": {
+   "items": [
+    "\\begin{array}{c}\\text{Model radio mast at }(3,-2),\\ \\text{range }6\\text{ km.}\\\\ \\text{Is a town at }(7,1)\\text{ covered?}\\end{array}",
+    "\\begin{array}{c}\\text{Center and radius:}\\\\ x^{2}+y^{2}+6x-4y-12=0\\end{array}"
+   ],
+   "done": "Done when: the center is placed first, the radius comes from r², and each answer says what it means in the context."
+  },
+  "investigate": {
+   "items": [
+    "\\begin{array}{c}\\text{Use the distance formula to derive}\\\\ \\text{the circle with center }(h,k)\\end{array}",
+    "\\begin{array}{c}\\text{Show }y=2x+5\\text{ is tangent to}\\\\ x^{2}+y^{2}=5\\end{array}"
+   ],
+   "done": "Done when: your argument starts from the distance formula or from one repeated solution, and every step stays balanced."
+  },
+  "notes": "Answers. Practice 1: center (−6, 2), r = 6. Practice 2: (x + 2)² + (y − 7)² = 16. Apply 1 (a model radio mast near Jeddah, model values): distance² = (7 − 3)² + (1 + 2)² = 16 + 9 = 25 and 25 < 36, so the town is inside the covered range (5 km from the mast). Apply 2: (x + 3)² + (y − 2)² = 12 + 9 + 4 = 25; center (−3, 2), r = 5. Investigate 1: the distance from (x, y) to (h, k) is r: √((x − h)² + (y − k)²) = r; square both sides: (x − h)² + (y − k)² = r². Investigate 2: x² + (2x + 5)² = 5 gives 5x² + 20x + 20 = 0, x² + 4x + 4 = 0, (x + 2)² = 0, x = −2, y = 1: one point, so tangent; check 4 + 1 = 5 ✓. Verbal misconceptions: Practice 1 giving center (6, −2); Practice 2 giving 4 on the right; Apply 1 comparing 25 with 6 instead of 36; Apply 2 adding 9 and 4 on one side only; Investigate 2 stopping at a quadratic with no conclusion. Adaptive routing: if >30% miss Practice 1 or 2, route to slide 6; Apply 1, slide 5; Apply 2, slide 7; Investigate 1, slide 5; Investigate 2, slide 8. Students who finish Apply early move to Investigate."
+ },
+ "compare": {
+  "title": "Which route? Judge the claim",
+  "routes": [
+   {
+    "name": "COMPLETE THE SQUARE",
+    "m": "(x+2)^{2}+(y-1)^{2}=9",
+    "pro": "Exact: gives center and radius together.",
+    "con": "Adding to one side only spoils it."
+   },
+   {
+    "name": "CENTER FORMULA",
+    "m": "\\left(-\\dfrac{D}{2},-\\dfrac{E}{2}\\right)=(-2,1)",
+    "pro": "Quick for the center.",
+    "con": "Radius still needs a formula."
+   },
+   {
+    "name": "GRAPH OR TECHNOLOGY",
+    "m": "\\text{read }C(-2,1),\\ r=3",
+    "pro": "Shows the whole circle.",
+    "con": "Exact values are hard to read."
+   }
+  ],
+  "claim": "A line that meets a circle at exactly one point must be horizontal or vertical.",
+  "assume": "Did you test a line that is neither horizontal nor vertical?",
+  "spot": {
+   "title": "steal this shortcut",
+   "text": "To place a point, substitute it into the left side. Smaller than r² means inside, equal means on, larger means outside.",
+   "m": "(x-h)^{2}+(y-k)^{2}\\ \\text{vs}\\ r^{2}"
+  },
+  "whatif": "What if the radius doubles and the center stays the same? Predict what happens to r² and to the area, then test with r = 3.",
+  "whatifM": "r\\to2r",
+  "notes": "Compare and judge (3 min). Worked solutions. The same circle x² + y² + 4x − 2y − 4 = 0 three ways. Complete the square: x² + 4x + y² − 2y = 4; add 4 and 1: (x + 2)² + (y − 1)² = 9, center (−2, 1), r = 3. Center formula: the center is (−D/2, −E/2) with D = 4 and E = −2, giving (−2, 1); the radius is √(h² + k² − F) = √(4 + 1 + 4) = 3, with F = −4. Graph: the picture shows the center and radius 3 if the scale is fine. Claim: FALSE. The line y = x + 4 is tangent to x² + y² = 8 (slide 8 Example B) and is neither horizontal nor vertical. Spotlight: for (3, 3) and x² + y² = 8 gives 18 > 8, so outside. What if (gold box): r becomes 2r, so r² becomes 4r² (four times), and the area πr² becomes 4πr²; for r = 3, r² = 9 becomes 36 and the radius 6. Verbal misconceptions: 'tangent lines are horizontal or vertical'; 'doubling the radius doubles r²'; 'the graph gives exact values'. Adaptive routing: if >30% mark the claim TRUE, have them test y = x + 4 against x² + y² = 8; if teams finish early, ask which route they would use for x² + y² − 6x + 4y − 3 = 0 and why."
+ },
+ "production": {
+  "title": "Observation wheel on the Waterfront",
+  "context": "A model observation wheel on the Jeddah Waterfront (model values only, not real data) has its center 35 m above the ground and a radius of 30 m. Use coordinates with the ground as y = 0 and the center at (0, 35).",
+  "given": [
+   "\\text{center }(0,35),\\ \\ r=30",
+   "x^{2}+(y-35)^{2}=900"
+  ],
+  "tasks": [
+   "Write the equation of the wheel. Find the highest and lowest heights of a cabin above the ground.",
+   "Classify the points (18, 59), (10, 40) and (30, 60) as on, inside or outside the wheel.",
+   "A boarding platform lies along y = 11. Find where it meets the wheel and the length of the chord. What happens along y = 5?"
+  ],
+  "doneWhen": [
+   "The equation x² + (y − 35)² = 900 is written, with the highest height 65 m and the lowest 5 m.",
+   "The points are classified using the left-hand side: 900 on, 125 inside, 1525 outside.",
+   "The platform y = 11 gives x = ±18 and a chord of 36 m.",
+   "The line y = 5 gives x² = 0, one point, and is explained as tangent at the lowest cabin."
+  ],
+  "hint": "Hint for solving: substitute the line into the circle and solve for x.",
+  "whatif": "What if the radius is 25 m with the same center? Predict whether the line y = 5 still touches the wheel, then test it.",
+  "notes": "Model values only, not real data. Task 1: center (0, 35), r = 30, so x² + (y − 35)² = 900. The highest point is 35 + 30 = 65 m and the lowest is 35 − 30 = 5 m. Task 2: (18, 59): 324 + 576 = 900, ON. (10, 40): 100 + 25 = 125 < 900, INSIDE. (30, 60): 900 + 625 = 1525 > 900, OUTSIDE. Task 3: y = 11: x² + (11 − 35)² = x² + 576 = 900, so x² = 324 and x = ±18. The points are (−18, 11) and (18, 11), and the chord is 36 m long. For y = 5: x² + 900 = 900, so x² = 0, x = 0: one point (0, 5), a tangent at the lowest cabin, so a platform at y = 5 would just touch the wheel. What if (gold box): r = 25, center (0, 35): x² + (y − 35)² = 625; at y = 5: x² + 900 = 625 gives x² = −275, no solution: the platform at 5 m misses the wheel (its lowest point is now 10 m). Verbal misconceptions: using 30 instead of 900; using (y + 35) for a center at 35; thinking x = ±18 is one point; forgetting units. Adaptive routing: if >30% cannot start Task 1, return to slide 5 Example A; if >30% miss Task 2, slide 5 Example B; if >30% miss Task 3, slide 8. Early finishers: the platform height at which the chord is 48 m (x = ±24, (y − 35)² = 324, y = 17)."
+ },
+ "gate": {
+  "items": [
+   "\\begin{array}{c}\\text{Center and radius:}\\\\ (x+6)^{2}+(y-2)^{2}=28\\end{array}",
+   "\\begin{array}{c}\\text{Center }(3,-4),\\ \\text{through }(6,0).\\\\ \\text{Write the equation.}\\end{array}",
+   "\\begin{array}{c}\\text{Center and radius:}\\\\ x^{2}+y^{2}-12x+4y+31=0\\end{array}"
+  ],
+  "notes": "Answers. Q1: center (−6, 2), r = √28 = 2√7. Q2: r² = (6 − 3)² + (0 + 4)² = 9 + 16 = 25, so (x − 3)² + (y + 4)² = 25. Q3: x² − 12x + y² + 4y = −31; add 36 and 4: (x − 6)² + (y + 2)² = −31 + 40 = 9; center (6, −2), r = 3. Verbal misconceptions: Q1 giving center (6, −2) or r = 28; Q2 using 5 instead of 25 or the distance formula without squaring; Q3 adding 36 and 4 on the left only, or taking r = 9. Adaptive routing: Q1 missed, route to slide 6; Q2 missed, slide 5; Q3 missed, slide 7. If a student misses two or more, they join the teacher group for the Smart Production create step; students who get all three correct start the create step immediately."
+ },
+ "smart": {
+  "create": [
+   "Choose a center (h, k) and a radius r. Write the equation, then expand it to the form x² + y² + Dx + Ey + F = 0.",
+   "Swap with a partner: complete the square on their expanded equation and check you recover the center and radius.",
+   "Add a line of your choice and find how many points it shares with the circle. Then add a What if...? question (change the radius) and test your prediction."
+  ],
+  "createDone": "Done when: your equation and expanded form agree, your partner recovers the same center and radius, and your What if...? question has a prediction and a test.",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\begin{array}{c}\\text{Center and radius:}\\\\ x^{2}+y^{2}+6x-4y-12=0\\end{array}",
+   "\\begin{array}{c}\\text{Solve }x^{2}+y^{2}=10\\\\ \\text{and }y=x-2\\end{array}"
+  ],
+  "next": "Next lesson: 9-3 Ellipses.",
+  "notes": "Exit ticket solutions. Exit 1: add 9 and 4: (x + 3)² + (y − 2)² = 12 + 9 + 4 = 25; center (−3, 2), r = 5. Exit 2: x² + (x − 2)² = 10 gives 2x² − 4x + 4 = 10, 2x² − 4x − 6 = 0, x² − 2x − 3 = 0, (x − 3)(x + 1) = 0: x = 3 or −1, giving (3, 1) and (−1, −3); check 9 + 1 = 10 and 1 + 9 = 10 ✓. Create step example: center (1, −2), r = 3: (x − 1)² + (y + 2)² = 9, expanded x² + y² − 2x + 4y − 4 = 0; the line y = 1 gives (x − 1)² + 9 = 9, x = 1: tangent at (1, 1). What if: r = 2 gives (x − 1)² + (y + 2)² = 4 and y = 1 then gives (x − 1)² = −5, no points. Verbal misconceptions: Exit 1 giving center (3, −2) or r = 25; Exit 2 expanding (x − 2)² as x² − 4. Adaptive routing: if >30% miss Exit 1, retrieve slide 7 Example A next lesson; if >30% miss Exit 2, retrieve slide 8 Example A."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "x^{2}+y^{2}+4x-10y+c=0\\ \\text{is a circle of radius }6.",
+    "\\text{What is the value of }c\\text{?}"
+   ],
+   "steps": [
+    "(x+2)^{2}+(y-5)^{2}=29-c",
+    "29-c=36",
+    "c=-7"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\text{Which quantity is greater?}",
+    "\\begin{array}{l}\\text{A: radius of }(x-1)^{2}+(y+2)^{2}=49\\\\ \\text{B: }6\\end{array}"
+   ],
+   "steps": [
+    "r^{2}=49",
+    "r=7",
+    "7>6\\Rightarrow\\text{A is greater}"
+   ]
+  },
+  "saat": {
+   "q": [
+    "\\text{The center of the circle}",
+    "x^{2}+y^{2}-8x+2y-3=0\\ \\text{is:}"
+   ],
+   "steps": [
+    "x^{2}-8x+16+y^{2}+2y+1",
+    "(x-4)^{2}+(y+1)^{2}=20",
+    "\\text{center }(4,-1)"
+   ]
+  },
+  "notes": "SAT (Advanced Math, circles): complete the square: (x² + 4x + 4) + (y² − 10y + 25) = −c + 29, so (x + 2)² + (y − 5)² = 29 − c. The radius is 6, so r² = 36 and 29 − c = 36, c = −7. Traps: setting 29 − c = 6 (using r instead of r²), giving c = 7, or 23. A student-produced-response grid answer is −7. GAT/Qudurat quantitative comparison (A is greater / B is greater / equal / cannot be determined): r² = 49, r = 7 > 6, so A is greater. Trap: taking 49 as the radius. SAAT/Tahsili (four options, for example A (−4, 1), B (4, −1), C (8, −2), D (4, 1)): D = −8, E = 2, so the center is (−D/2, −E/2) = (4, −1): B. Trap: (−4, 1) from copying the signs of the equation. Adaptive routing: if >30% miss the SAT item, return to slide 7 Example A; the GAT item, slide 6 Example A; the SAAT item, slide 7 Example A."
+ }
+}

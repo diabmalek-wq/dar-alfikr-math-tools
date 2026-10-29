@@ -1,0 +1,455 @@
+{
+ "slug": "Wk10_Gr10_T3_L3-3_Identities",
+ "mathDocIndex": "math_Wk10_Gr10_T3_L3-3_Identities/_index.json",
+ "graphIndex": "graphs_w9c/_index.json",
+ "timings": {
+  "t1": 6,
+  "t2": 18,
+  "t3": 12,
+  "t4": 12,
+  "t5": 6,
+  "t6": 6
+ },
+ "lessonTitle": "Identities with Polynomials",
+ "unit": "Topic 3 — Polynomial Functions · Lesson 3-3",
+ "gradeFull": "Grade 10 — Algebra II",
+ "week": "Week 10 · Semester 1, 2026–27",
+ "weekNum": "10",
+ "lessonLine": "Grade 10 · Algebra II · Topic 3: Polynomial Functions · Lesson 3-3 — Identities with Polynomials",
+ "codes": [
+  "HSA.SSE.A.2",
+  "HSA.APR.C.4",
+  "(+)HSA.APR.C.5"
+ ],
+ "mps": [],
+ "assessments": [
+  "“Give it a go” questions",
+  "“Time to Check”"
+ ],
+ "objectives": [
+  "Understand and prove polynomial identities.",
+  "Apply polynomial identities for multiplication, factoring, and simplification.",
+  "Expand a power of a binomial by applying the binomial theorem."
+ ],
+ "essentialQuestion": null,
+ "vocabList": "Binomial Coefficient ; binomial theorem ; Identity ; Pascal’s triangle",
+ "plan": {
+  "outcome": [
+   "Students will understand and prove a polynomial identity by expanding one side until it matches the other (objective 1; HSA.APR.C.4).",
+   "Students will apply $(a+b)^{2}$, $(a-b)^{2}$ and $(a+b)(a-b)$ to expand, factor and simplify, and use them to calculate numbers quickly (objective 2; HSA.SSE.A.2).",
+   "Students will expand a power of a binomial using Pascal's triangle and the binomial theorem (objective 3; (+)HSA.APR.C.5).",
+   "Students will use identities to describe numerical relationships, such as $99\\times101=100^{2}-1$ and Pythagorean triples (HSA.APR.C.4).",
+   "Three teaching days this week. If time runs short, cut Smart Production — never the Mastery Gate."
+  ],
+  "preclass": [
+   "Pre-session home journey (already issued, with Lesson 3-4): watch “How to Use the Binomial Theorem”, study two worked examples, answer three ungraded readiness questions. Submitted on the LMS before class.",
+   "Readiness questions: expand $(x+1)^{4}$ from row 4 of Pascal's triangle; evaluate $101^{2}-99^{2}$ with an identity; expand $(x-2)^{3}$.",
+   "Evidence: the LMS answers feed the Diagnose."
+  ],
+  "diagTool": [
+   "3-question Quizizz (≤ 4 minutes) — the slide-4 checks: expand $(x+4)(x-4)$; simplify $(3x)^{2}$; evaluate $(a+b)^{2}$ and $a^{2}+b^{2}$ for $a=3$, $b=2$.",
+   "Answers: $x^{2}-16$ ; $9x^{2}$ ; $25$ and $13$."
+  ],
+  "diagGap": [
+   "Expected gaps — Q2: $(3x)^{2}$ written as $3x^{2}$. Q3: the two values are treated as equal, which is the whole point of the lesson.",
+   "Routing: 0–1 correct → re-teach expanding two brackets and squaring a product.  2 → straight to the three square patterns.  3 → begin Investigate early."
+  ],
+  "instruction": [
+   "Slide 5 — Proving an identity (objective 1; HSA.APR.C.4). $(x+3)^{2}=x^{2}+6x+9$ is proved by expanding one side; $(x+2)^{2}=x^{2}+4$ is disproved by one value, $x=1$: $9\\ne5$.",
+   "Slide 6 — Identities for multiplication and factoring (objective 2; HSA.SSE.A.2). $(2x-5)^{2}=4x^{2}-20x+25$; $9x^{2}-49=(3x-7)(3x+7)$; $x^{3}-27=(x-3)(x^{2}+3x+9)$.",
+   "Slide 7 — Identities and numbers (HSA.APR.C.4). $48^{2}=(50-2)^{2}=2304$; $99\\times101=100^{2}-1=9999$; $x=3$, $y=2$ gives the triple $5,\\ 12,\\ 13$.",
+   "Slide 8 — Binomial theorem and Pascal's triangle (objective 3; (+)HSA.APR.C.5). $(x+2)^{4}=x^{4}+8x^{3}+24x^{2}+32x+16$; $(2x-1)^{3}=8x^{3}-12x^{2}+6x-1$; the $x^{2}$ coefficient of $(x+3)^{5}$ is $270$.",
+   "Narration focus — never lose the middle term; the powers of the first term fall while the powers of the second rise."
+  ],
+  "quickCheck": [
+   "On whiteboards, 60 seconds: expand $(2x+3)^{2}$.",
+   "Expected: $4x^{2}+12x+9$. Watch for $4x^{2}+9$ (middle term lost) and $2x^{2}+12x+9$ (only $x$ squared).",
+   "80% correct → release guided practice."
+  ],
+  "guided": [
+   "Two identical “Give it a go” problems, worked with the teacher:",
+   "(1) Expand $(x+5)^{2}$ and factor $x^{2}-64$.  (2) Use row 3 of Pascal's triangle to expand $(x+1)^{3}$.",
+   "Answers: (1) $x^{2}+10x+25$ ; $(x-8)(x+8)$.  (2) $x^{3}+3x^{2}+3x+1$.",
+   "Worked live; students self-mark and circle their OWN first error."
+  ],
+  "independent": [
+   "“Choose Your Route” sheet with live Pear Deck feedback. Routes name the task, not the student.",
+   "PRACTICE — Secure the method. Six cards: expand, factor and use a row of Pascal's triangle; then find the error in a squared bracket and prove one identity. Done when: the middle term $2ab$ is written, its sign follows the bracket, and each answer is checked with a number.",
+   "APPLY — Use it in context. A solar-panel field, an event hall, a divisibility proof and $(x-2)^{5}$. Done when: the identity used is named and each answer says what it means.",
+   "INVESTIGATE — Find out why. Prove $(a+b)^{2}-(a-b)^{2}=4ab$, build a Pythagorean triple, and explain the row sums $2^{n}$. Done when: the argument starts from a known identity or a full expansion.",
+   "Page 3: compare three expansion routes, judge three claims, test a What if...? idea. Every student sits the same Mastery Gate."
+  ],
+  "production": [
+   "Non-routine transfer task — this context has not appeared in practice (slide 11).",
+   "A model square plaza in the Wadi Hanifa restoration has side $x$ m. A uniform paved walkway $3$ m wide runs all round the outside. The model values are invented for practice.",
+   "(a) Write the side and area of the plaza with its walkway and expand. (b) Write the walkway area as a difference of squares and factor it. (c) For $x=24$ find the walkway area from the factored form and check it directly.",
+   "Answers: (a) side $x+6$, area $x^{2}+12x+36$. (b) $(x+6)^{2}-x^{2}=12x+36=12(x+3)$. (c) $12\\times27=324$ m$^{2}$; check $30^{2}-24^{2}=900-576=324$.",
+   "Students then hand their reasoning to the AI challenger."
+  ],
+  "criteria": [
+   "Minimum standard: the identity named, every step shown, the factored form used for the number, units (m, m$^{2}$).",
+   "Role of AI: challenger only — “Challenge my reasoning and point out any step I have not justified.” Never “solve this”.",
+   "Completed independently: the written justification for (a)–(c)."
+  ],
+  "evidence": [
+   "“Time to Check” — one individual task. No notes, no partner, no AI.",
+   "1. Expand $(4x-3)^{2}$.  2. Factor $49x^{2}-81$.  3. Expand $(x+1)^{5}$ with Pascal's triangle.",
+   "Answers: 1. $16x^{2}-24x+9$.  2. $(7x-9)(7x+9)$.  3. $x^{5}+5x^{4}+10x^{3}+10x^{2}+5x+1$.",
+   "Done when: question 1 keeps the middle term and question 3 uses row 5.",
+   "Scored live in Pear Deck and logged in the Impact Dashboard."
+  ],
+  "refinement": [
+   "Students revise their plaza reasoning using the AI challenger’s feedback and the teacher’s micro-conference note.",
+   "Final product (Canva one-pager, photographed solution, or 45-second voice note): the identity named, the proof, ONE non-example ($(a+b)^{2}=a^{2}+b^{2}$ disproved by a number), and why the walkway area factors as $12(x+3)$.",
+   "Graded on clarity of reasoning."
+  ],
+  "differentiation": [
+   "PRACTICE — Secure the method. Six cards, a find-the-error line and a proof box. Done when: the middle term is written and each answer is checked with a number.",
+   "APPLY — Use it in context. A solar field, a seating count, a divisibility proof and a fifth power. Done when: the identity is named.",
+   "INVESTIGATE — Find out why. A proof, a Pythagorean triple and the row sums. Done when: the argument starts from a known identity.",
+   "No student is labelled; every student sits the same Mastery Gate."
+  ],
+  "saudi": [
+   "Wadi Hanifa plaza, a solar-panel field and an event hall; invented values."
+  ],
+  "exams": [
+   "SAT — Advanced Math: if $a-b=3$ and $ab=10$, then $a^{2}+b^{2}=29$. Trap: answering $9+10=19$.",
+   "GAT (Qudurat) — $49\\times51$ versus $2500$: $49\\times51=2499$, so $2500$ is greater. Trap: assuming they are equal.",
+   "SAAT (Tahsili) — the coefficient of $x$ in $(x+3)^{4}$ is $108$. Trap: using $4\\times3=12$."
+  ],
+  "adaptive": [
+   "Entry branch — the Quizizz result routes each student to the re-teach table, straight to the new content, or the Investigate prompt.",
+   "Mid-lesson branch — Pear Deck flags error patterns during independent practice; flagged students get a 2-minute micro-conference while others continue.",
+   "Exit branch — the Mastery Gate routes each student: PASS → Enrichment & Challenge; NOT YET → Targeted Learning Clinic at the start of the next lesson.",
+   "Routing is communicated privately through the LMS, never read aloud."
+  ],
+  "publication": [
+   "Published to the class LMS portfolio; the strongest go on the Mathematics Department wall."
+  ]
+ },
+ "plan2026": {
+  "day": "Week 10 · day per timetable",
+  "section": "Grade 10 — 10A and 10C",
+  "tools": "Quizizz (diagnostic) · Pear Deck (live practice feedback) · Whiteboards · Desmos (checking an identity with two graphs) · Canva (final product) · Squared paper",
+  "resources": "Lesson presentation (15 slides) · “Choose Your Route” activity (3 pages) · Wayground kick-off",
+  "competencies": [
+   "Proving a polynomial identity and disproving a false one with a number.",
+   "Expanding $(a\\pm b)^{n}$ with Pascal's triangle and the binomial theorem."
+  ],
+  "technology": [
+   "Quizizz live diagnostic with instant gap analysis.",
+   "Desmos: graph both sides of an identity and see one curve."
+  ],
+  "reallife": [
+   "A plaza and its walkway: the area is a difference of squares.",
+   "Checking big products quickly: $99\\times101$."
+  ],
+  "values": [
+   "Accuracy — the middle term and its sign are written down before they are used.",
+   "Precision — exact answers first."
+  ],
+  "soft": [
+   "Collaboration in assigned group roles.",
+   "Explaining in words why $(a+b)^{2}$ is not $a^{2}+b^{2}$."
+  ],
+  "hard": [
+   "Proving an identity by expanding one side.",
+   "Expanding a binomial power with Pascal's triangle."
+  ],
+  "phases": [
+   "FIKR Phase 1 — Diagnose. 3-question Quizizz: difference of squares, squaring a product, comparing $(a+b)^{2}$ with $a^{2}+b^{2}$. Results read as a gap map and used to route students.",
+   "FIKR Phase 2 — Targeted Instruction. Proving an identity; the square and difference patterns; identities and numbers; Pascal's triangle and the binomial theorem.",
+   "FIKR Phase 3 — Practice. Two identical “Give it a go” problems; then students choose a route and may switch. Compare routes and judge the claim. Pear Deck feedback.",
+   "FIKR Phase 4 — Production. Wadi Hanifa plaza and walkway; AI as challenger only.",
+   "FIKR Phase 5 — Proof of Learning. “Time to Check”. No notes, no partner, no AI.",
+   "FIKR Phase 6 — Smart Production. Make a model identity, prove it, swap and test; publish to the LMS portfolio."
+  ],
+  "assessment": [
+   "Diagnostic quiz — gap map, not a grade.",
+   "Whiteboard check (80% threshold) and “Give it a go” — self-marked.",
+   "Project task sheet against its “Done when…” criteria.",
+   "“Time to Check” — Mastery Gate, scored live.",
+   "Final product graded on reasoning and clarity."
+  ],
+  "closure": "Two minutes of peer show-and-tell, then: “Which is harder — remembering the middle term, or choosing which identity to use?”",
+  "homework": "Upload the final product to the LMS portfolio. Pear Deck practice set (12 questions, choose your route). Schoology homework quiz for Lesson 3-3. Watch the flipped video for Lesson 3-4. Clinic group: bring your Time to Check paper."
+ },
+ "classwork": {
+  "subtitle": "Show all your working. Read the vertex with the signs flipped, divide 4p by 4, and measure to the focus and the directrix. A correct answer with no working is only half an answer.",
+  "sections": [
+   {
+    "h": "Part A — Focus, directrix and the equation",
+    "note": "Questions 1 to 3",
+    "lines": 1,
+    "text": [
+     "1.  A parabola has focus $(0,2)$ and directrix $y=-2$. For the point $P(4,2)$, find $PF$ and $PD$. Is $P$ on the parabola? Then derive the equation using $PF=PD$.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "2.  Derive the equation of the parabola with focus $(0,5)$ and directrix $y=-5$. State $p$.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "3.  Write the equation of the parabola with focus $(0,-4)$ and directrix $y=4$. Which way does it open?",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part B — Reading the equation and the graph",
+    "note": "Questions 4 to 6[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "4.  Find the vertex, $p$, the focus, the directrix and the axis of symmetry.",
+     "$c1.3|(x-3)^{2}=16\\,(y+2)$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "5.  Find the vertex, $p$, the focus and the directrix. Which way does it open?",
+     "$c1.3|(y+2)^{2}=-20\\,(x-1)$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "6.  The graph shows a parabola. Its vertex and focus are marked. Read them, then write the equation in standard form and the directrix.",
+     "[[img:g_q6:250]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part C — Graphing from key features",
+    "note": "Questions 7 and 8[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "7.  Graph $(x-1)^{2}=8\\,(y+1)$ on the grid. Mark the vertex, the focus and the directrix, and the two points at the height of the focus.",
+     "[[img:k_grid:262]]",
+     "[[line]]",
+     "[[line]]",
+     "8.  Graph $y^{2}=-8x$ on the grid. Mark the vertex, the focus and the directrix, and the two points at the height of the focus.",
+     "[[img:k_grid:262]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part D — Completing the square",
+    "note": "Questions 9 to 11[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "9.  Complete the square and find the vertex, the focus and the directrix.",
+     "$c1.3|x^{2}+6x-12y-3=0$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "10.  Complete the square and find the vertex, the focus and the directrix.",
+     "$c1.3|y^{2}+4y+8x-12=0$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "11.  Divide first, then complete the square. Find the vertex, the focus and the directrix.",
+     "$c1.3|3x^{2}-12x-2y+14=0$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part E — In context and in your own words",
+    "note": "Questions 12 to 14[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "12.  A model fountain jet on the Jeddah waterfront has its apex at $(0,8)$ and lands at $(\\pm12,\\,0)$ (metres, model values). Write its equation and find the focus. How high is the jet at $x=6$?",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "13.  A model satellite dish is $1.8$ m wide and $0.27$ m deep. Put the vertex at the origin, find $4p$ and say how far the receiver sits from the vertex.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "14.  Show that the width of $x^{2}=4py$ at the height of the focus is $4\\lvert p\\rvert$. Use it to find the two points of $x^{2}=20y$ at that height.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   }
+  ]
+ },
+ "diffSheet": {
+  "routes": [
+   {
+    "note": "Practice",
+    "done": "x",
+    "tasks": [
+     "1."
+    ],
+    "lines": 1
+   },
+   {
+    "note": "Apply",
+    "done": "x",
+    "tasks": [
+     "1."
+    ],
+    "lines": 1
+   },
+   {
+    "note": "Investigate",
+    "done": "x",
+    "tasks": [
+     "1."
+    ],
+    "lines": 1
+   }
+  ]
+ },
+ "pbl": {
+  "title": "Jeddah Satellite Dish Installer",
+  "minutes": 20,
+  "subtitle": "A 20-minute group project. Work in fours. Every member signs the sheet.",
+  "driving": "A Jeddah installer has four dishes and one receiver arm that is 1.1 m long. Which dishes can hold the receiver exactly at the focus, and what does the shape of the dish tell you?",
+  "situation": [
+   "A classroom model (invented for practice, not real figures): each dish is a parabola with its vertex at the origin, opening upward. Its width and depth are in the table. The receiver must sit at the focus, a distance $p$ above the vertex.",
+   "For each dish the group finds $4p$ from the rim point, writes the equation, finds $p$, and says whether a $1.1$ m arm is long enough. Then the group explains how the depth of a dish changes its focal length."
+  ],
+  "eq": "pbl_eq",
+  "data": [
+   [
+    "Dish",
+    "Width (m)",
+    "Depth (m)",
+    "Focal length p",
+    "Equation"
+   ],
+   [
+    "1",
+    "1.2",
+    "0.15",
+    "",
+    ""
+   ],
+   [
+    "2",
+    "1.8",
+    "0.27",
+    "",
+    ""
+   ],
+   [
+    "3",
+    "2.4",
+    "0.36",
+    "",
+    ""
+   ],
+   [
+    "4",
+    "3.0",
+    "0.45",
+    "",
+    ""
+   ]
+  ],
+  "steps": [
+   [
+    "1",
+    "SET UP  (4 min)",
+    "For each dish, write the rim point $(x_{1},y_{1})$: half the width across, the full depth up. Write $x^{2}=4py$ with the rim point substituted."
+   ],
+   [
+    "2",
+    "SOLVE  (6 min)",
+    "Find $4p$ and $p$ for every dish and write each equation. Fill the table."
+   ],
+   [
+    "3",
+    "DECIDE  (4 min)",
+    "Which dishes can hold the receiver at the focus with a $1.1$ m arm? Check one dish: the rim point is equally far from the focus and the directrix."
+   ],
+   [
+    "4",
+    "COMPARE  (3 min)",
+    "What happens to $p$ as the dishes get deeper for their width? Which dish is the most tightly curved?"
+   ],
+   [
+    "5",
+    "PRESENT  (3 min)",
+    "One sentence for the installer: how can you tell where the receiver goes from the width and depth alone?"
+   ]
+  ],
+  "working": [
+   [
+    "Step 1 — the four rim points and equations:",
+    2
+   ],
+   [
+    "Step 2 — the four values of 4p and p:",
+    2
+   ],
+   [
+    "Step 3 — which dishes fit the arm:",
+    1
+   ],
+   [
+    "Steps 4 and 5 — our comparison and sentence:",
+    1
+   ]
+  ],
+  "roles": [
+   "Reader — states the dishes and the question",
+   "Calculator — finds 4p and p",
+   "Checker — verifies a rim point is equally far from focus and directrix",
+   "Presenter — says the sentence"
+  ],
+  "doneWhen": [
+   "Every dish has its rim point written before any solving.",
+   "p is found by dividing 4p by 4, and each equation is in standard form.",
+   "Units (m) appear in every answer.",
+   "Your sentence makes sense to a non-mathematician."
+  ],
+  "materials": [
+   "This sheet",
+   "Squared paper",
+   "A pencil and ruler",
+   "A calculator"
+  ]
+ },
+ "display": {
+  "pbl_eq": "(a+b)^{2}=a^{2}+2ab+b^{2}"
+ },
+ "standards": [
+  [
+   "HSA.SSE.A.2",
+   "Use the structure of an expression to identify ways to rewrite it."
+  ],
+  [
+   "HSA.APR.C.4",
+   "Prove polynomial identities and use them to describe numerical relationships."
+  ],
+  [
+   "(+)HSA.APR.C.5",
+   "Know and apply the Binomial Theorem for the expansion of (x + y)n in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle."
+  ]
+ ]
+}

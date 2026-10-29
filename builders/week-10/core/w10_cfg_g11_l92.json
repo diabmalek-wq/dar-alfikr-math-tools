@@ -1,0 +1,456 @@
+{
+ "slug": "Wk10_Gr11_T9_L9-2_Circles",
+ "mathDocIndex": "math_Wk10_Gr11_T9_L9-2_Circles/_index.json",
+ "graphIndex": "graphs_w9c/_index.json",
+ "timings": {
+  "t1": 6,
+  "t2": 18,
+  "t3": 12,
+  "t4": 12,
+  "t5": 6,
+  "t6": 6
+ },
+ "lessonTitle": "Circles",
+ "unit": "Topic 9 — Conic Sections · Lesson 9-2",
+ "gradeFull": "Grade 11 — Algebra II",
+ "week": "Week 10 · Semester 1, 2026–27",
+ "weekNum": "10",
+ "lessonLine": "Grade 11 · Algebra II · Topic 9: Conic Sections · Lesson 9-2 — Circles",
+ "codes": [
+  "HSA.SSE.B.3",
+  "HSA.REI.C.7",
+  "HSG.GPE.A.1"
+ ],
+ "mps": [],
+ "assessments": [
+  "“Give it a go” questions",
+  "“Time to Check”"
+ ],
+ "objectives": [
+  "Derive the equation of a circle given its center and radius.",
+  "Complete the square to find the center and radius of a circle.",
+  "Determine the relative positions of a circle and a line in the plane.",
+  "Solve a system of equations with one linear equation and one equation of a circle algebraically and verify the solution by graphing."
+ ],
+ "essentialQuestion": null,
+ "vocabList": "Center ; Circle ; Diameter ; radius",
+ "plan": {
+  "outcome": [
+   "Students will derive the equation of a circle from its center and radius using the distance formula (objective 1; HSG.GPE.A.1).",
+   "Students will complete the square to find the center and the radius of a circle given by an equation (objective 2; HSA.SSE.B.3).",
+   "Students will determine whether a line misses, touches or cuts a circle (objective 3).",
+   "Students will solve a line-circle system algebraically and verify the solution by graphing (objective 4; HSA.REI.C.7).",
+   "Three teaching days this week. If time runs short, cut Smart Production — never the Mastery Gate."
+  ],
+  "preclass": [
+   "Pre-session home journey (already issued, four slides): watch “How To Find The Center and Radius of a Circle”, study one worked example for $x^{2}+y^{2}-6x+4y-12=0$, answer four ungraded readiness questions. Submitted on the LMS before class.",
+   "Readiness questions: the center and radius of $(x+1)^{2}+(y-4)^{2}=49$; the center and radius of $x^{2}+y^{2}+8x-2y+8=0$; the equation with center $(2,-3)$ and radius $4$; the equation with center the origin through $(3,4)$.",
+   "Evidence: the LMS answers feed the Diagnose."
+  ],
+  "diagTool": [
+   "3-question Quizizz (≤ 4 minutes) — the slide-4 checks: complete the square for $x^{2}+6x$; find the distance from $(0,0)$ to $(3,4)$; solve $x^{2}-2x-8=0$.",
+   "Answers: $(x+3)^{2}-9$ ; $5$ ; $x=4$ or $x=-2$."
+  ],
+  "diagGap": [
+   "Expected gaps — Q1: the $-9$ is left out. Q3: the roots are given with the wrong signs.",
+   "Routing: 0–1 correct → re-teach completing the square and factoring.  2 → straight to the circle equation.  3 → begin Investigate early."
+  ],
+  "instruction": [
+   "Slide 5 — The equation of a circle (objective 1; HSG.GPE.A.1). $(x-h)^{2}+(y-k)^{2}=r^{2}$ comes from the distance formula; center $(3,-2)$, $r=5$ gives $(x-3)^{2}+(y+2)^{2}=25$; center $(-4,1)$ through $(-1,5)$ has $r^{2}=25$.",
+   "Slide 6 — Completing the square (objective 2; HSA.SSE.B.3). $x^{2}+y^{2}-6x+4y-12=0$ becomes $(x-3)^{2}+(y+2)^{2}=25$; $x^{2}+y^{2}+8x-2y+8=0$ has center $(-4,1)$, $r=3$; $2x^{2}+2y^{2}-12x+8y-8=0$ has $r=\\sqrt{17}$.",
+   "Slide 7 — A line and a circle (objective 3). With $x^{2}+y^{2}=25$: $y=3$ cuts at $(\\pm4,3)$; $y=5$ touches at $(0,5)$; $y=-7$ misses. Compare the distance $d$ from the center with $r$.",
+   "Slide 8 — Solving the system (objective 4; HSA.REI.C.7). $x^{2}+y^{2}=25$ with $y=x+1$ gives $(3,4)$ and $(-4,-3)$; $(x-2)^{2}+(y+1)^{2}=8$ with $y=x-3$ gives $(0,-3)$ and $(4,1)$; $y=3x+10$ is tangent to $x^{2}+y^{2}=10$ at $(-3,1)$.",
+   "Narration focus — the number on the right is $r^{2}$; flip the signs for the center; a repeated root means a tangent."
+  ],
+  "quickCheck": [
+   "On whiteboards, 60 seconds: the circle $(x+1)^{2}+(y-2)^{2}=36$ — write the center and the radius.",
+   "Expected: center $(-1,2)$, radius $6$. Watch for $(1,-2)$ and for radius $36$.",
+   "80% correct → release guided practice."
+  ],
+  "guided": [
+   "Two identical “Give it a go” problems, worked with the teacher:",
+   "(1) Find the center and radius of $x^{2}+y^{2}-10x+6y+18=0$.  (2) Write the equation with center $(0,3)$ and radius $\\sqrt{7}$.",
+   "Answers: (1) $(x-5)^{2}+(y+3)^{2}=16$, center $(5,-3)$, $r=4$.  (2) $x^{2}+(y-3)^{2}=7$.",
+   "Worked live; students self-mark and circle their OWN first error."
+  ],
+  "independent": [
+   "“Choose Your Route” sheet with live Pear Deck feedback. Routes name the task, not the student.",
+   "PRACTICE — Secure the method. Six cards: read the center and radius, write the equation, complete the square; then find the error and sketch one circle on the grid. Done when: the center is read with the signs flipped and the right-hand side is treated as $r^{2}$.",
+   "APPLY — Use it in context. A plaza and a path, a radio tower, a lake and a path. Done when: the center is placed first and each answer says what it means.",
+   "INVESTIGATE — Find out why. Derive the equation, show a tangent by a repeated root, and prove the tangency condition $c^{2}=r^{2}(1+m^{2})$. Done when: the argument starts from the distance formula or a repeated solution.",
+   "Page 3: compare three routes, judge three claims, test a What if...? idea. Every student sits the same Mastery Gate."
+  ],
+  "production": [
+   "Non-routine transfer task — this context has not appeared in practice (slide 11).",
+   "A model circular reflecting pool in the Hira Cultural District has the equation $x^{2}+y^{2}-8x-6y=0$ (metres). The model values are invented for practice.",
+   "(a) Find the center and radius and show the pool passes through the origin. (b) A walkway along $y=x$ crosses the pool: find where it enters and leaves, and the length over water. (c) A walkway along $y=8$: does it miss, touch or cut the pool?",
+   "Answers: (a) $(x-4)^{2}+(y-3)^{2}=25$, center $(4,3)$, $r=5$. (b) $(0,0)$ and $(7,7)$, length $7\\sqrt{2}\\approx9.9$ m. (c) distance from the center $=5=r$, so it touches at $(4,8)$.",
+   "Students then hand their reasoning to the AI challenger."
+  ],
+  "criteria": [
+   "Minimum standard: standard form, center and radius, both intersection points, units (m).",
+   "Role of AI: challenger only — “Challenge my reasoning and point out any step I have not justified.” Never “solve this”.",
+   "Completed independently: the written justification for (a)–(c)."
+  ],
+  "evidence": [
+   "“Time to Check” — one individual task. No notes, no partner, no AI.",
+   "1. Write the equation with center $(-3,2)$ and radius $4$.  2. Center and radius of $x^{2}+y^{2}+6x-4y-12=0$.  3. Solve $x^{2}+y^{2}=20$ with $y=x+2$.",
+   "Answers: 1. $(x+3)^{2}+(y-2)^{2}=16$.  2. $(x+3)^{2}+(y-2)^{2}=25$: center $(-3,2)$, $r=5$.  3. $(2,4)$ and $(-4,-2)$.",
+   "Done when: question 2 shows the completing-the-square line and question 3 gives both points.",
+   "Scored live in Pear Deck and logged in the Impact Dashboard."
+  ],
+  "refinement": [
+   "Students revise their pool reasoning using the AI challenger’s feedback and the teacher’s micro-conference note.",
+   "Final product (Canva one-pager, photographed solution, or 45-second voice note): the equation in standard form, the walkway intersections, ONE non-example (radius read as $r^{2}$), and why a repeated root means a tangent.",
+   "Graded on clarity of reasoning."
+  ],
+  "differentiation": [
+   "PRACTICE — Secure the method. Six cards, a find-the-error line and a sketch. Done when: the center is read with the signs flipped.",
+   "APPLY — Use it in context. A plaza, a tower, a lake and a path. Done when: the center is placed first.",
+   "INVESTIGATE — Find out why. A derivation, a tangent and the tangency condition. Done when: the argument starts from the distance formula.",
+   "No student is labelled; every student sits the same Mastery Gate."
+  ],
+  "saudi": [
+   "Hira Cultural District plaza and pool, a radio tower and a lake; invented values."
+  ],
+  "exams": [
+   "SAT — Geometry and Trigonometry: $x^{2}+y^{2}-6x+8y=c$ is a circle of radius $7$, so $c=24$. Trap: using $c=49$.",
+   "GAT (Qudurat) — the radius of $x^{2}+y^{2}-4x+6y-3=0$ versus $3$: $r=4$, so the radius is greater. Trap: taking $r^{2}=16$ as the radius.",
+   "SAAT (Tahsili) — the line $y=x+k$ with $k>0$ is tangent to $x^{2}+y^{2}=8$ when $k=4$. Trap: $k=\\sqrt{8}$."
+  ],
+  "adaptive": [
+   "Entry branch — the Quizizz result routes each student to the re-teach table, straight to the new content, or the Investigate prompt.",
+   "Mid-lesson branch — Pear Deck flags error patterns during independent practice; flagged students get a 2-minute micro-conference while others continue.",
+   "Exit branch — the Mastery Gate routes each student: PASS → Enrichment & Challenge; NOT YET → Targeted Learning Clinic at the start of the next lesson.",
+   "Routing is communicated privately through the LMS, never read aloud."
+  ],
+  "publication": [
+   "Published to the class LMS portfolio; the strongest go on the Mathematics Department wall."
+  ]
+ },
+ "plan2026": {
+  "day": "Week 10 · day per timetable",
+  "section": "Grade 11 — 11B",
+  "tools": "Quizizz (diagnostic) · Pear Deck (live practice feedback) · Whiteboards · Graphing technology · Canva (final product) · Squared paper",
+  "resources": "Lesson presentation (15 slides) · “Choose Your Route” activity (3 pages) · Wayground kick-off",
+  "competencies": [
+   "Writing the equation of a circle and reading its center and radius, including after completing the square.",
+   "Solving a line-circle system and verifying it on a graph."
+  ],
+  "technology": [
+   "Quizizz live diagnostic with instant gap analysis.",
+   "Graphing technology to check the intersection points of a line and a circle."
+  ],
+  "reallife": [
+   "A plaza, a pool and a walkway: where does the path cross the water?",
+   "A radio tower: who is inside the covered area?"
+  ],
+  "values": [
+   "Accuracy — every sign is written down before it is used.",
+   "Precision — exact answers first, decimals only at the end."
+  ],
+  "soft": [
+   "Collaboration in assigned group roles.",
+   "Explaining in words why the right-hand side is $r^{2}$."
+  ],
+  "hard": [
+   "Deriving $(x-h)^{2}+(y-k)^{2}=r^{2}$ from the distance formula.",
+   "Using a repeated root to show a tangent."
+  ],
+  "phases": [
+   "FIKR Phase 1 — Diagnose. 3-question Quizizz: completing the square, distance, solving a quadratic. Results read as a gap map and used to route students.",
+   "FIKR Phase 2 — Targeted Instruction. The equation of a circle; completing the square; a line and a circle; solving the system.",
+   "FIKR Phase 3 — Practice. Two identical “Give it a go” problems; then students choose a route and may switch. Compare routes and judge the claim. Pear Deck feedback.",
+   "FIKR Phase 4 — Production. Hira Cultural District reflecting pool; AI as challenger only.",
+   "FIKR Phase 5 — Proof of Learning. “Time to Check”. No notes, no partner, no AI.",
+   "FIKR Phase 6 — Smart Production. Design a circle and a line, find their intersections, swap and test; publish to the LMS portfolio."
+  ],
+  "assessment": [
+   "Diagnostic quiz — gap map, not a grade.",
+   "Whiteboard check (80% threshold) and “Give it a go” — self-marked.",
+   "Project task sheet against its “Done when…” criteria.",
+   "“Time to Check” — Mastery Gate, scored live.",
+   "Final product graded on reasoning and clarity."
+  ],
+  "closure": "Two minutes of peer show-and-tell, then: “Which is harder — reading the signs in the equation, or deciding whether the line touches the circle?”",
+  "homework": "Upload the final product to the LMS portfolio. Pear Deck practice set (12 questions, choose your route). Schoology homework quiz for Lesson 9-2. Watch the flipped video for the next lesson. Clinic group: bring your Time to Check paper."
+ },
+ "classwork": {
+  "subtitle": "Show all your working. Read the vertex with the signs flipped, divide 4p by 4, and measure to the focus and the directrix. A correct answer with no working is only half an answer.",
+  "sections": [
+   {
+    "h": "Part A — Focus, directrix and the equation",
+    "note": "Questions 1 to 3",
+    "lines": 1,
+    "text": [
+     "1.  A parabola has focus $(0,2)$ and directrix $y=-2$. For the point $P(4,2)$, find $PF$ and $PD$. Is $P$ on the parabola? Then derive the equation using $PF=PD$.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "2.  Derive the equation of the parabola with focus $(0,5)$ and directrix $y=-5$. State $p$.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "3.  Write the equation of the parabola with focus $(0,-4)$ and directrix $y=4$. Which way does it open?",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part B — Reading the equation and the graph",
+    "note": "Questions 4 to 6[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "4.  Find the vertex, $p$, the focus, the directrix and the axis of symmetry.",
+     "$c1.3|(x-3)^{2}=16\\,(y+2)$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "5.  Find the vertex, $p$, the focus and the directrix. Which way does it open?",
+     "$c1.3|(y+2)^{2}=-20\\,(x-1)$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "6.  The graph shows a parabola. Its vertex and focus are marked. Read them, then write the equation in standard form and the directrix.",
+     "[[img:g_q6:250]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part C — Graphing from key features",
+    "note": "Questions 7 and 8[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "7.  Graph $(x-1)^{2}=8\\,(y+1)$ on the grid. Mark the vertex, the focus and the directrix, and the two points at the height of the focus.",
+     "[[img:k_grid:262]]",
+     "[[line]]",
+     "[[line]]",
+     "8.  Graph $y^{2}=-8x$ on the grid. Mark the vertex, the focus and the directrix, and the two points at the height of the focus.",
+     "[[img:k_grid:262]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part D — Completing the square",
+    "note": "Questions 9 to 11[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "9.  Complete the square and find the vertex, the focus and the directrix.",
+     "$c1.3|x^{2}+6x-12y-3=0$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "10.  Complete the square and find the vertex, the focus and the directrix.",
+     "$c1.3|y^{2}+4y+8x-12=0$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "11.  Divide first, then complete the square. Find the vertex, the focus and the directrix.",
+     "$c1.3|3x^{2}-12x-2y+14=0$",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   },
+   {
+    "h": "Part E — In context and in your own words",
+    "note": "Questions 12 to 14[[pbbar]]",
+    "lines": 1,
+    "text": [
+     "12.  A model fountain jet on the Jeddah waterfront has its apex at $(0,8)$ and lands at $(\\pm12,\\,0)$ (metres, model values). Write its equation and find the focus. How high is the jet at $x=6$?",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "13.  A model satellite dish is $1.8$ m wide and $0.27$ m deep. Put the vertex at the origin, find $4p$ and say how far the receiver sits from the vertex.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "14.  Show that the width of $x^{2}=4py$ at the height of the focus is $4\\lvert p\\rvert$. Use it to find the two points of $x^{2}=20y$ at that height.",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]",
+     "[[line]]"
+    ]
+   }
+  ]
+ },
+ "diffSheet": {
+  "routes": [
+   {
+    "note": "Practice",
+    "done": "x",
+    "tasks": [
+     "1."
+    ],
+    "lines": 1
+   },
+   {
+    "note": "Apply",
+    "done": "x",
+    "tasks": [
+     "1."
+    ],
+    "lines": 1
+   },
+   {
+    "note": "Investigate",
+    "done": "x",
+    "tasks": [
+     "1."
+    ],
+    "lines": 1
+   }
+  ]
+ },
+ "pbl": {
+  "title": "Jeddah Satellite Dish Installer",
+  "minutes": 20,
+  "subtitle": "A 20-minute group project. Work in fours. Every member signs the sheet.",
+  "driving": "A Jeddah installer has four dishes and one receiver arm that is 1.1 m long. Which dishes can hold the receiver exactly at the focus, and what does the shape of the dish tell you?",
+  "situation": [
+   "A classroom model (invented for practice, not real figures): each dish is a parabola with its vertex at the origin, opening upward. Its width and depth are in the table. The receiver must sit at the focus, a distance $p$ above the vertex.",
+   "For each dish the group finds $4p$ from the rim point, writes the equation, finds $p$, and says whether a $1.1$ m arm is long enough. Then the group explains how the depth of a dish changes its focal length."
+  ],
+  "eq": "pbl_eq",
+  "data": [
+   [
+    "Dish",
+    "Width (m)",
+    "Depth (m)",
+    "Focal length p",
+    "Equation"
+   ],
+   [
+    "1",
+    "1.2",
+    "0.15",
+    "",
+    ""
+   ],
+   [
+    "2",
+    "1.8",
+    "0.27",
+    "",
+    ""
+   ],
+   [
+    "3",
+    "2.4",
+    "0.36",
+    "",
+    ""
+   ],
+   [
+    "4",
+    "3.0",
+    "0.45",
+    "",
+    ""
+   ]
+  ],
+  "steps": [
+   [
+    "1",
+    "SET UP  (4 min)",
+    "For each dish, write the rim point $(x_{1},y_{1})$: half the width across, the full depth up. Write $x^{2}=4py$ with the rim point substituted."
+   ],
+   [
+    "2",
+    "SOLVE  (6 min)",
+    "Find $4p$ and $p$ for every dish and write each equation. Fill the table."
+   ],
+   [
+    "3",
+    "DECIDE  (4 min)",
+    "Which dishes can hold the receiver at the focus with a $1.1$ m arm? Check one dish: the rim point is equally far from the focus and the directrix."
+   ],
+   [
+    "4",
+    "COMPARE  (3 min)",
+    "What happens to $p$ as the dishes get deeper for their width? Which dish is the most tightly curved?"
+   ],
+   [
+    "5",
+    "PRESENT  (3 min)",
+    "One sentence for the installer: how can you tell where the receiver goes from the width and depth alone?"
+   ]
+  ],
+  "working": [
+   [
+    "Step 1 — the four rim points and equations:",
+    2
+   ],
+   [
+    "Step 2 — the four values of 4p and p:",
+    2
+   ],
+   [
+    "Step 3 — which dishes fit the arm:",
+    1
+   ],
+   [
+    "Steps 4 and 5 — our comparison and sentence:",
+    1
+   ]
+  ],
+  "roles": [
+   "Reader — states the dishes and the question",
+   "Calculator — finds 4p and p",
+   "Checker — verifies a rim point is equally far from focus and directrix",
+   "Presenter — says the sentence"
+  ],
+  "doneWhen": [
+   "Every dish has its rim point written before any solving.",
+   "p is found by dividing 4p by 4, and each equation is in standard form.",
+   "Units (m) appear in every answer.",
+   "Your sentence makes sense to a non-mathematician."
+  ],
+  "materials": [
+   "This sheet",
+   "Squared paper",
+   "A pencil and ruler",
+   "A calculator"
+  ]
+ },
+ "display": {
+  "pbl_eq": "(x-h)^{2}+(y-k)^{2}=r^{2}"
+ },
+ "standards": [
+  [
+   "HSA.SSE.B.3",
+   "Choose and produce an equivalent form of an expression to reveal and explain properties of the quantity represented by the expression."
+  ],
+  [
+   "HSA.REI.C.7",
+   "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically."
+  ],
+  [
+   "HSG.GPE.A.1",
+   "Derive the equation of a circle of given center and radius using the Pythagorean Theorem; complete the square to find the center and radius of a circle given by an equation."
+  ]
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "id": "L3-4w10",
+ "outName": "Lesson 3-4 Dividing Polynomials presentation",
+ "grade": "GRADE 10",
+ "course": "ALGEBRA II",
+ "topicNo": "TOPIC 3",
+ "lessonNo": "Lesson 3-4",
+ "titleLines": [
+  "Dividing",
+  "Polynomials"
+ ],
+ "topicTitle": "Polynomial Functions",
+ "titleMath": "p(x)=(x-a)\\,q(x)+r",
+ "codes": "HSA.APR.B.2 · HSA.APR.D.6 · HSA.SSE.A.2",
+ "hideStd": true,
+ "eq": null,
+ "mps": null,
+ "objectives": [
+  "Identify quotients and remainders upon the division of polynomials.",
+  "Apply the Remainder Theorem and the Factor Theorem.",
+  "Use synthetic division to divide a polynomial by a linear polynomial with leading coefficient 1."
+ ],
+ "vocab": [
+  "Divisor",
+  "factor",
+  "Polynomial",
+  "long division",
+  "proper rational function",
+  "Quotient",
+  "Remainder",
+  "synthetic division"
+ ],
+ "standards": [
+  {
+   "code": "HSA.APR.B.2",
+   "text": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x - a is p(a), so p(a) = 0 if and only if (x - a) is a factor of p(x)."
+  },
+  {
+   "code": "HSA.APR.D.6",
+   "text": "Rewrite simple rational expressions in different forms; write a(x)/b(x) in the form q(x) + r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the degree of r(x) less than the degree of b(x), using inspection, long division, or, for the more complicated examples, a computer algebra system."
+  },
+  {
+   "code": "HSA.SSE.A.2",
+   "text": "Use the structure of an expression to identify ways to rewrite it."
+  }
+ ],
+ "recap": "Dividing a polynomial by x − a gives a quotient and a remainder, the remainder equals p(a), and a zero remainder means x − a is a factor.",
+ "diagnose": {
+  "items": [
+   "\\text{Evaluate }p(x)=x^{2}-3x+5\\text{ at }x=2",
+   "\\text{Expand }(x+2)(x+3)+1",
+   "\\text{Write }17\\div5\\text{ as quotient and remainder}"
+  ],
+  "doneWhen": "All three answers are written without a calculator, and you can say how Question 3 and Question 2 are alike.",
+  "notes": "Answers. Q1: 4 − 6 + 5 = 3. Q2: x² + 5x + 6 + 1 = x² + 5x + 7. Q3: 17 = 3 × 5 + 2, quotient 3, remainder 2. Q2 and Q3 are alike: dividend = divisor × quotient + remainder, the idea behind polynomial division. Verbal misconceptions: Q1 students square −3x as 9x or compute 2² as 4 and then 4 − 3 + 5 slip to 6; Q2 students forget to add the 1 or write 5x² ; Q3 students write 3.4 and do not give a remainder. Adaptive routing: if >30% miss Q1, rehearse substitution with brackets before slide 7; if >30% miss Q2, expand with a grid before slide 5; if >30% miss Q3, write 17 = 5 × 3 + 2 and go to slide 5. If all three are secure, move quickly through slide 5 and start the Investigate route early."
+ },
+ "blocks": [
+  {
+   "title": "Quotient and remainder",
+   "rules": [
+    "a(x)=b(x)\\,q(x)+r(x)",
+    "\\deg r(x)<\\deg b(x)"
+   ],
+   "examples": [
+    {
+     "q": "(x^{2}+5x+7)\\div(x+2)",
+     "steps": [
+      "x^{2}+5x+7=(x+2)(x+3)+1",
+      "q=x+3,\\ \\ r=1"
+     ]
+    },
+    {
+     "q": "(2x^{2}-3x-5)\\div(x-4)",
+     "steps": [
+      "2x^{2}-3x-5=(x-4)(2x+5)+15",
+      "q=2x+5,\\ \\ r=15"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions (HSA.APR.D.6). Polynomial division mirrors 17 ÷ 5 = 3 remainder 2: the DIVIDEND equals the DIVISOR times the QUOTIENT plus the REMAINDER, and the remainder has smaller degree than the divisor. Long division: Example A: x² ÷ x = x, so the first quotient term is x; x(x + 2) = x² + 2x; subtract: 3x + 7; 3x ÷ x = 3; 3(x + 2) = 3x + 6; subtract: 1. Quotient x + 3, remainder 1. Check: (x + 2)(x + 3) + 1 = x² + 5x + 6 + 1 ✓. Example B: 2x² ÷ x = 2x; 2x(x − 4) = 2x² − 8x; subtract: 5x − 5; 5x ÷ x = 5; 5(x − 4) = 5x − 20; subtract: 15. Quotient 2x + 5, remainder 15. Check: 2x² − 8x + 5x − 20 + 15 = 2x² − 3x − 5 ✓. In rational form (a proper rational function has remainder degree less than the divisor degree): (x² + 5x + 7)/(x + 2) = x + 3 + 1/(x + 2). Verbal misconceptions: subtracting only the first term of each product (sign errors in the second term, −8x subtracted as +8x); leaving a remainder of the same degree as the divisor; forgetting to write the remainder over the divisor. Adaptive routing: if >30% slip on the subtraction, write the subtraction as 'change every sign' and redo Example B; if >30% forget the remainder, link to 17 = 3 × 5 + 2. Gate Q2 routes to slide 5 or 6."
+  },
+  {
+   "title": "Synthetic division",
+   "rules": [
+    "\\text{divide by }x-a:\\ \\text{box }a\\text{ and coefficients}",
+    "\\text{bring down, multiply by }a\\text{, add}"
+   ],
+   "examples": [
+    {
+     "q": "(x^{3}+3x^{2}-4x-5)\\div(x-1)",
+     "steps": [
+      "\\text{box }1:\\ 1,\\ 4,\\ 0,\\ -5",
+      "q=x^{2}+4x,\\ \\ r=-5"
+     ]
+    },
+    {
+     "q": "(2x^{3}-5x^{2}+x+6)\\div(x+1)",
+     "steps": [
+      "\\text{box }-1:\\ 2,\\ -7,\\ 8,\\ -2",
+      "q=2x^{2}-7x+8,\\ \\ r=-2"
+     ]
+    }
+   ],
+   "fig": null,
+   "notes": "Worked solutions (HSA.APR.B.2 and D.6). Synthetic division is a shortcut for dividing by a LINEAR divisor x − a with leading coefficient 1. Write a in the box (the opposite sign to the constant in the divisor) and the coefficients of the dividend, including zeros for missing powers. Bring down the first coefficient; multiply by a and add to the next; repeat. The last number is the remainder and the others are the quotient coefficients, one degree lower. Example A: box 1; coefficients 1, 3, −4, −5. Bring down 1; 1 × 1 = 1, 3 + 1 = 4; 4 × 1 = 4, −4 + 4 = 0; 0 × 1 = 0, −5 + 0 = −5. Quotient x² + 4x + 0, remainder −5. Check at x = 2: p(2) = 8 + 12 − 8 − 5 = 7 and (2 − 1)(4 + 8) − 5 = 7 ✓. Example B: divisor x + 1, so the box is −1. Coefficients 2, −5, 1, 6. Bring down 2; 2 × (−1) = −2, −5 − 2 = −7; −7 × (−1) = 7, 1 + 7 = 8; 8 × (−1) = −8, 6 − 8 = −2. Quotient 2x² − 7x + 8, remainder −2. Verbal misconceptions: using +1 instead of −1 for x + 1; omitting the zero for a missing power; reading the last number as part of the quotient; trying it for 2x − 3 (leading coefficient not 1). Adaptive routing: if >30% use the wrong sign in the box, write 'x − a, so the box holds a' and redo Example B; if >30% skip the zero, show x³ − 7x + 6 with 0x². Gate Q1 routes to this slide."
+  },
+  {
+   "title": "The Remainder Theorem",
+   "rules": [
+    "\\text{remainder on }\\div(x-a)\\text{ is }p(a)",
+    "p(x)=(x-a)\\,q(x)+r\\ \\Rightarrow\\ p(a)=r"
+   ],
+   "examples": [
+    {
+     "q": "p(x)=x^{3}-4x^{2}+x+9,\\ \\ \\div(x-3)",
+     "steps": [
+      "p(3)=27-36+3+9",
+      "r=3"
+     ]
+    },
+    {
+     "q": "p(x)=2x^{3}+5x^{2}-3x+1,\\ \\ \\div(x+2)",
+     "steps": [
+      "p(-2)=-16+20+6+1",
+      "r=11"
+     ]
+    }
+   ],
+   "fig": null,
+   "whatif": "What if the divisor is x − 3 and p(x) = x³ − 7x + 6? Predict the remainder from p(3), then check by synthetic division.",
+   "whatifM": "p(3)=27-21+6=12",
+   "notes": "Worked solutions (HSA.APR.B.2). Why it works: if p(x) = (x − a)q(x) + r, then substituting x = a makes the first term zero and leaves p(a) = r. So the remainder is found by substitution, with no division. Example A: p(3) = 27 − 36 + 3 + 9 = 3. Check by synthetic division, box 3: 1, −4 + 3 = −1, 1 − 3 = −2, 9 − 6 = 3 ✓. Example B: divisor x + 2 = x − (−2), so a = −2: p(−2) = 2(−8) + 5(4) − 3(−2) + 1 = −16 + 20 + 6 + 1 = 11. Check, box −2: 2, 5 − 4 = 1, −3 − 2 = −5, 1 + 10 = 11 ✓. What if (gold strip): p(3) = 27 − 21 + 6 = 12; synthetic division, box 3, coefficients 1, 0, −7, 6: 1, 3, 2, 12 ✓, so the remainder is 12. Verbal misconceptions: evaluating p(−3) for the divisor x − 3 (opposite sign); evaluating p(a) but calling it the quotient; arithmetic slips with negative cubes. Adaptive routing: if >30% use the wrong sign, ask 'what makes the divisor zero?' and redo Example B; if >30% slip with (−2)³, show (−2)³ = −8 in brackets. Gate Q2 routes to this slide."
+  },
+  {
+   "title": "The Factor Theorem",
+   "rules": [
+    "p(a)=0\\iff(x-a)\\text{ is a factor of }p(x)",
+    "\\text{divide, then factor the quotient}"
+   ],
+   "examples": [
+    {
+     "q": "\\text{Factor }x^{3}+2x^{2}-11x-12\\ (\\text{try }p(-1))",
+     "steps": [
+      "p(-1)=0,\\ \\ \\text{box }-1:\\ 1,\\ 1,\\ -12,\\ 0",
+      "(x+1)(x^{2}+x-12)=(x+1)(x+4)(x-3)"
+     ]
+    },
+    {
+     "q": "\\text{Find }k\\text{ so }x-2\\text{ divides }x^{3}+kx^{2}-x-10",
+     "steps": [
+      "p(2)=8+4k-2-10=0",
+      "k=1"
+     ]
+    }
+   ],
+   "fig": null,
+   "whatif": "What if x + 4 is tested on the same cubic? Predict p(−4) before you substitute, then use it to confirm the factorisation.",
+   "whatifM": "x^{3}+2x^{2}-11x-12",
+   "notes": "Worked solutions (HSA.APR.B.2). FACTOR THEOREM: p(a) = 0 exactly when x − a is a factor. Example A: try small integer values: p(−1) = −1 + 2 + 11 − 12 = 0, so x + 1 is a factor. Synthetic division with box −1: 1; 2 − 1 = 1; −11 − 1 = −12; −12 + 12 = 0. Quotient x² + x − 12 = (x + 4)(x − 3). So p(x) = (x + 1)(x + 4)(x − 3). Check p(3) = 27 + 18 − 33 − 12 = 0 ✓ and p(−4) = −64 + 32 + 44 − 12 = 0 ✓. Example B: p(2) = 8 + 4k − 2 − 10 = 4k − 4 = 0, so k = 1. Check: x³ + x² − x − 10 at x = 2 is 8 + 4 − 2 − 10 = 0 ✓. What if (gold strip): p(−4) = 0 as computed, which confirms that x + 4 is a factor. Verbal misconceptions: testing p(1) for the factor x + 1; stopping after finding one factor and not factoring the quotient; believing a non-zero remainder means 'no solutions'. Adaptive routing: if >30% test the wrong sign, repeat 'what number makes the factor zero?'; if >30% stop at the quadratic, ask them to factor it. Gate Q3 routes to this slide."
+  }
+ ],
+ "practice": {
+  "practice": {
+   "items": [
+    "(x^{3}-4x^{2}+5x-2)\\div(x-2)",
+    "\\text{Remainder of }x^{3}+x-9\\text{ on }\\div(x-2)"
+   ],
+   "done": "Done when: the box number has the opposite sign to the constant in the divisor, the last number is read as the remainder, and the answer is checked by substituting."
+  },
+  "apply": {
+   "items": [
+    "\\begin{array}{c}\\text{Crate volume }x^{3}+7x^{2}+14x+8,\\\\ \\text{height }(x+1).\\ \\text{Find the base area.}\\end{array}",
+    "\\text{Find }k\\text{ so }x+1\\text{ is a factor of }x^{3}+kx^{2}-4x-6"
+   ],
+   "done": "Done when: the divisor is written as x − a first, the Remainder Theorem is used when only a remainder is needed, and each answer is checked."
+  },
+  "investigate": {
+   "items": [
+    "\\begin{array}{c}\\text{Show }x-1\\text{ divides }x^{n}-1\\\\ \\text{for }n=1,2,3,\\text{ then explain why}\\end{array}",
+    "\\begin{array}{c}\\text{Remainder when }x^{50}+x+1\\\\ \\text{is divided by }x+1\\end{array}"
+   ],
+   "done": "Done when: your argument uses p(a) or the form p(x) = (x − a)q(x) + r, and the explanation says why it holds for every n."
+  },
+  "notes": "Answers. Practice 1: box 2, coefficients 1, −4, 5, −2: 1, −2, 1, 0 gives x² − 2x + 1, remainder 0 (so x − 2 is a factor). Practice 2: p(2) = 8 + 2 − 9 = 1. Apply 1 (a model freight crate for a Jeddah rail terminal, model values): box −1, coefficients 1, 7, 14, 8: 1, 6, 8, 0; the base area is x² + 6x + 8 = (x + 2)(x + 4); check: (x + 1)(x² + 6x + 8) = x³ + 7x² + 14x + 8 ✓. Apply 2: p(−1) = −1 + k + 4 − 6 = k − 3 = 0, so k = 3. Investigate 1: put x = 1 in x^n − 1: 1 − 1 = 0, so by the Factor Theorem x − 1 is a factor for every n; for n = 3 the quotient is x² + x + 1. Investigate 2: x + 1 = x − (−1), so a = −1 and the remainder is p(−1) = 1 − 1 + 1 = 1 (since (−1)^50 = 1). Verbal misconceptions: Practice 1 using −2 in the box; Practice 2 computing p(−2); Apply 1 forgetting the final 0 means no remainder; Apply 2 substituting x = 1; Investigate 2 saying (−1)^50 = −1. Adaptive routing: if >30% miss Practice 1, route to slide 6; Practice 2, slide 7; Apply 1, slide 6; Apply 2, slide 8; Investigate, slide 7 or 8. Students who finish Apply early move to Investigate."
+ },
+ "compare": {
+  "title": "Which route? Judge the claim",
+  "routes": [
+   {
+    "name": "LONG DIVISION",
+    "m": "(x^{3}+x^{2}-14x-24)\\div(x-4)",
+    "pro": "Works for any divisor.",
+    "con": "Many lines and sign slips."
+   },
+   {
+    "name": "SYNTHETIC DIVISION",
+    "m": "\\text{box }4:\\ 1,\\ 5,\\ 6,\\ 0",
+    "pro": "Short and tidy for x − a.",
+    "con": "Only for a linear divisor with leading 1."
+   },
+   {
+    "name": "REMAINDER THEOREM",
+    "m": "p(4)=0",
+    "pro": "Tests a factor in one line.",
+    "con": "Gives the remainder only, not the quotient."
+   }
+  ],
+  "claim": "Dividing by x − 3 and by x + 3 always gives the same remainder.",
+  "assume": "Did you test more than one polynomial and both signs of a?",
+  "spot": {
+   "title": "steal this shortcut",
+   "text": "To test a possible factor, substitute first. If p(a) is not zero you have just found the remainder, so no division is wasted.",
+   "m": "p(a)=r"
+  },
+  "whatif": "What if the remainder is 0? Predict what that tells you about the graph of p, then check with p(x) = x³ + x² − 14x − 24 at x = 4.",
+  "whatifM": "p(4)=64+16-56-24=0",
+  "notes": "Compare and judge (3 min). Worked solutions. Divide p(x) = x³ + x² − 14x − 24 by x − 4. Long division: x³ ÷ x = x²; x²(x − 4) = x³ − 4x²; subtract: 5x² − 14x; 5x² ÷ x = 5x; 5x(x − 4) = 5x² − 20x; subtract: 6x − 24; 6(x − 4) = 6x − 24; remainder 0. Quotient x² + 5x + 6. Synthetic: box 4: 1, 5, 6, 0. Remainder Theorem: p(4) = 64 + 16 − 56 − 24 = 0, so x − 4 is a factor, and (x − 4)(x + 2)(x + 3) is the full factorisation. Claim: FALSE. Take p(x) = x² + x: p(3) = 12 and p(−3) = 6, different remainders. (It holds for an even polynomial such as x², which is the trap.) What if (gold box): a zero remainder means p(4) = 0, so the graph crosses the x-axis at x = 4. Verbal misconceptions: 'x − 3 and x + 3 are the same factor'; 'a remainder of zero means no quotient'; 'synthetic division always works'. Adaptive routing: if >30% mark the claim TRUE, have them compute p(3) and p(−3) for x² + x; if teams finish early, ask which route they would choose for 2x − 3 as a divisor and why."
+ },
+ "production": {
+  "title": "Freight crate for the rail terminal",
+  "context": "A model freight crate for a Haramain rail terminal in Jeddah (model values only, not real data) has volume V(x) = x³ + 9x² + 26x + 24 cubic metres. Its height is (x + 2) m, and the base is a rectangle.",
+  "given": [
+   "V(x)=x^{3}+9x^{2}+26x+24",
+   "\\text{height }(x+2)\\text{ m}"
+  ],
+  "tasks": [
+   "Use synthetic division to find the base area, and factor it into the two sides of the base.",
+   "Find the three dimensions when x = 3 and check the volume.",
+   "A second crate has volume x³ + 9x² + 26x + 30 with the same height (x + 2). Find the remainder and say what it means."
+  ],
+  "doneWhen": [
+   "The box number is −2 and the base area is x² + 7x + 12.",
+   "The base factors as (x + 3)(x + 4) and the dimensions at x = 3 are 5, 6 and 7 m.",
+   "The volume 210 m³ is checked as 5 × 6 × 7.",
+   "The remainder 6 is found with p(−2) and is explained as a non-exact fit."
+  ],
+  "hint": "Hint for solving: the divisor x + 2 is x − (−2), so the box holds −2.",
+  "whatif": "What if the height is (x + 3) for the first crate? Predict whether it is also a fit, using p(−3), then find the base area.",
+  "notes": "Model values only, not real data. Task 1: box −2, coefficients 1, 9, 26, 24: 1; 9 − 2 = 7; 26 − 14 = 12; 24 − 24 = 0. Base area x² + 7x + 12 = (x + 3)(x + 4). Task 2: at x = 3 the height is 5, the base sides are 6 and 7, so the volume is 5 × 6 × 7 = 210 m³; check V(3) = 27 + 81 + 78 + 24 = 210 ✓. Task 3: p(−2) = −8 + 36 − 52 + 30 = 6, so the remainder is 6 and the height x + 2 is NOT a factor: the volume is not exactly height × base, there is 6 m³ left over. What if (gold box): p(−3) = −27 + 81 − 78 + 24 = 0, so x + 3 is also a factor; box −3: 1, 6, 8, 0, base area x² + 6x + 8 = (x + 2)(x + 4); the three factors are x + 2, x + 3, x + 4. Verbal misconceptions: using +2 in the box; forgetting that a remainder of zero is needed for an exact fit; answering Task 2 with 3, 4 and 5 (confusing x and the dimensions). Adaptive routing: if >30% cannot start Task 1, return to slide 6 Example B; if >30% miss Task 3, slide 7; if >30% miss the factorisation, slide 8. Early finishers: show that x + 4 is also a factor of V(x)."
+ },
+ "gate": {
+  "items": [
+   "(x^{3}-6x^{2}+11x-6)\\div(x-3)",
+   "\\text{Remainder of }x^{3}+3x^{2}-x+5\\text{ on }\\div(x+3)",
+   "\\text{Find }k\\text{ so }x+1\\text{ divides }x^{3}+kx^{2}-4x-6"
+  ],
+  "notes": "Answers. Q1: box 3, coefficients 1, −6, 11, −6: 1, −3, 2, 0; quotient x² − 3x + 2 and remainder 0 (so x − 3 is a factor). Q2: p(−3) = −27 + 27 + 3 + 5 = 8. Q3: p(−1) = −1 + k + 4 − 6 = k − 3 = 0, so k = 3. Verbal misconceptions: Q1 using −3 in the box, or reading the 0 as part of the quotient; Q2 evaluating p(3) = 27 + 27 − 3 + 5 = 56; Q3 substituting x = 1. Adaptive routing: Q1 missed, route to slide 6; Q2 missed, slide 7; Q3 missed, slide 8. If a student misses two or more, they join the teacher group for the Smart Production create step; students who get all three correct start the create step immediately."
+ },
+ "smart": {
+  "create": [
+   "Choose a quadratic with two integer zeros and multiply by one more factor to build a cubic p(x).",
+   "Use the Factor Theorem to show one of your factors, and divide to check the quotient.",
+   "Swap with a partner and check their work. Then add a What if...? question (change one coefficient) and test your prediction."
+  ],
+  "createDone": "Done when: your cubic expands correctly, the Factor Theorem check and the division agree, and your What if...? question has a prediction and a test.",
+  "exitIntro": "Exit ticket: write your answer on a sticky note and place it on the door.",
+  "exit": [
+   "\\text{Remainder of }x^{3}-2x+5\\text{ on }\\div(x-3)",
+   "\\text{Is }x+2\\text{ a factor of }x^{3}+x^{2}-4x-4\\text{?}"
+  ],
+  "next": "Next lesson: more on zeros of polynomial functions.",
+  "notes": "Exit ticket solutions. Exit 1: p(3) = 27 − 6 + 5 = 26. Exit 2: p(−2) = −8 + 4 + 8 − 4 = 0, so yes, x + 2 is a factor; the quotient (box −2: 1, −1, −2, 0) is x² − x − 2 = (x − 2)(x + 1). Create step example: (x − 1)(x + 3) = x² + 2x − 3; times (x − 2): x³ − 7x + 6; p(1) = 0 ✓, box 1: 1, 1, −6, 0, quotient x² + x − 6 = (x − 2)(x + 3) ✓. What if: changing the constant to 7 gives p(1) = 1, so x − 1 is no longer a factor and the remainder is 1. Verbal misconceptions: Exit 1 using p(−3); Exit 2 stopping at p(−2) = 0 without answering 'yes'. Adaptive routing: if >30% miss Exit 1, retrieve slide 7 Example A; if >30% miss Exit 2, retrieve slide 8 Example A."
+ },
+ "exam": {
+  "sat": {
+   "q": [
+    "\\text{If }x-3\\text{ is a factor of }2x^{3}-5x^{2}-kx+3,",
+    "\\text{what is the value of }k\\text{?}"
+   ],
+   "steps": [
+    "p(3)=54-45-3k+3=0",
+    "12-3k=0",
+    "k=4"
+   ]
+  },
+  "gat": {
+   "q": [
+    "\\text{Which quantity is greater?}",
+    "\\begin{array}{l}\\text{A: remainder of }x^{2}+1\\div(x-2)\\\\ \\text{B: }4\\end{array}"
+   ],
+   "steps": [
+    "p(2)=2^{2}+1",
+    "=5",
+    "5>4\\Rightarrow\\text{A is greater}"
+   ]
+  },
+  "saat": {
+   "q": [
+    "\\text{The remainder of }2x^{3}-x+4",
+    "\\text{divided by }x+1\\text{ is:}"
+   ],
+   "steps": [
+    "p(-1)=2(-1)^{3}-(-1)+4",
+    "=-2+1+4",
+    "=3"
+   ]
+  },
+  "notes": "SAT (Advanced Math, polynomial factors): x − 3 a factor means p(3) = 0. p(3) = 2(27) − 5(9) − 3k + 3 = 54 − 45 + 3 − 3k = 12 − 3k = 0, so k = 4. Traps: using x = −3 (which gives a different k), forgetting the + 3, or answering 12. A student-produced-response grid answer is 4. GAT/Qudurat quantitative comparison (A is greater / B is greater / equal / cannot be determined): the remainder is p(2) = 5, which is more than 4, so A is greater. Trap: dividing 5 by something or using p(−2) = 5 (here equal by symmetry, which still gives A greater). SAAT/Tahsili (four options, for example A 3, B 5, C −3, D 7): divisor x + 1 gives a = −1; p(−1) = −2 + 1 + 4 = 3: A. Trap: p(1) = 5. Adaptive routing: if >30% miss the SAT item, return to slide 8 Example B; the GAT item, slide 7 Example A; the SAAT item, slide 7 Example B."
+ }
+}
