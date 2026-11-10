@@ -100,3 +100,18 @@ Build notes: the compare slide, What if...? strips and `hideStd` option are in t
 ## Standing rule: Classroom Materials and Drive classwork (10 Nov 2026)
 
 Do not create, upload or attach the Wayground kick-off activity to Google Drive or Google Classroom. Each Algebra II lesson Material in Classroom carries three attachments: the presentation pptx, the Choose Your Route PDF, and one proper YouTube video (short, about 4 to 6 minutes, clear, from a reputable channel, on that lesson topic; pick it from the Classroom YouTube search, which shows duration and views). Description: "Welcome to Algebra II Lesson X-Y: name. Use the attached materials to work through this lesson. Learn: Follow the Lesson X-Y presentation and watch the video. Practice: Complete the Choose Your Route activity, then check your work." The Drive Classwork folders hold only the presentation and the Choose Your Route PDF.
+
+
+## Standing request: weekly homework (HW) on Schoology
+- One native Schoology Assessment per core lesson, titled "L3-7 Transformations of Polynomials: Homework Quiz". 12 items x 1 pt (100 pts), category HomeWork, auto-gradable only (MC, true/false, fill-in-blank), 2-3 graph/diagram questions per quiz, no "auto-marked" or AI wording.
+- Due the Saturday after the lesson week at 11:59 pm. Submissions = Enable. Create in every section of the grade (Gr10: G10A and G10C; Gr11: G11B), then link each in the Fikr weekly plan Post-class.
+- Fast method: the quiz locks once Submissions is Enabled, so create with Submissions=Disable, load questions through the Schoology iapi2 endpoints, and Enable last.
+  - POST /iapi2/test-quiz/{quizId}/questions (MC type 2, true/false type 1, fill-in type 5 with {{response}}); GET /iapi2/test-quiz/{versionId}/components; DELETE .../components/{id}.
+  - Headers: Content-Type, Accept, X-Requested-With, X-Csrf-Token, X-Csrf-Key (capture by hooking XMLHttpRequest; never print values). Pace requests ~500 ms; retry on 429.
+  - LaTeX wrapped as <span class="learnosity-math">\(...\)</span>; graphs drawn on an in-page canvas and embedded as base64 PNG in the stimulus.
+  - Copy to another section: create an empty assessment there, GET the source components, POST each definition, compare for equality.
+- Worked example, Week 12 (15-19 Nov 2026): L3-7 and L4-1 (G10A, G10C), L10-1 and L10-2 (G11B), all due Sat 21 Nov 2026.
+
+## Standing request: complete the Fikr weekly plan
+- Portal: portal.fikr.edu.sa > Weekly Plan > use the next-week arrow (deep links redirect home).
+- Pre-class = the Schoology "Week N presession" deck link for that section (same link for every session of the lesson). Post-class = the lesson's HW quiz link. Click outside the box so the link turns into a hyperlink. Note off days. No weekly exam entry unless asked.
