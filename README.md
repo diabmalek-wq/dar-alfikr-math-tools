@@ -115,3 +115,14 @@ Do not create, upload or attach the Wayground kick-off activity to Google Drive 
 ## Standing request: complete the Fikr weekly plan
 - Portal: portal.fikr.edu.sa > Weekly Plan > use the next-week arrow (deep links redirect home).
 - Pre-class = the Schoology "Week N presession" deck link for that section (same link for every session of the lesson). Post-class = the lesson's HW quiz link. Click outside the box so the link turns into a hyperlink. Note off days. No weekly exam entry unless asked.
+
+
+## Presentations: animated style (from 16 Nov 2026)
+
+The Grade 11 Lesson 10-1 Introduction to Vectors deck (Week 12) was approved as the standing style for core FIKR decks going forward: same slide order as the lesson plan and the Fikr plan, so slide references still match, but built with step-by-step animation.
+
+- Look: light page, white rounded cards, dark-green formula banners, gold "What if...?" and "Notice" strips, a dark teal title card with an animated diagram, a dark journey-map slide with numbered stations, Morph transitions after the title, and a dark recap slide. Palette teal 17A199, orange E8762C, navy 1F3864, dark green 0E4F4C, gold F0B323; Cambria titles, Calibri body; logos top left and right; standards codes, motto and "Mr Malek Thiab - n" in the footer.
+- Animation: the opening slide and the closing check-offs play by themselves; everything else builds on click, content first and the graph card with the first click; diagrams are separate transparent layers revealed step by step; speaker notes keep the worked solutions, misconceptions and routing, plus an ANIMATION CUES line per slide.
+- Rotating arrows (direction angle, angle between vectors) are built from still frames, one picture per angle appearing as the previous one disappears (about 60 ms apart). Do NOT use the PowerPoint Spin effect or embedded video autoplay: they do not work in Keynote, which is the viewer in use. Reveal, fade, wipe and Morph builds are fine. In static views the stacked frames look like a fan; that is expected.
+- Math is typeset with LaTeX (xelatex snippets rendered to transparent PNG at 300 dpi); diagrams are matplotlib layers on identical canvases so they stack exactly. Build order: math.py, figs.py, frames.py, build.js (pptxgenjs, objectName tags such as c2_fade@900_name for click 2, d1100_fr3o12_vec for automatic frame 3 of 12), animate.py (injects timing and Morph), then validate and a LibreOffice render to inspect.
+- Reference deck: Lesson 10-1 Introduction to Vectors (Grade 11, Week 12). Applies to new decks and to recolours; the AP Precalculus rule (12 slides, no exam slide) and the Mawhiba rule (8 slides) still apply.
