@@ -37,7 +37,8 @@ const ITEMS = [...require("./sim_items_a.js"), ...require("./sim_items_b.js"),
                ...require("./sim_items_l.js"),
                ...require("./sim_items_m.js"),
                ...require("./sim_items_n.js"),
-               ...require("./sim_items_o.js")];
+               ...require("./sim_items_o.js"),
+               ...require("./sim_items_p.js")];
 
 const BLUEPRINT = { "GAT-Q-ARI": 14, "GAT-Q-ALG": 7, "GAT-Q-GEO": 7,
                     "GAT-Q-DAT": 7, "GAT-Q-LOG": 5 };

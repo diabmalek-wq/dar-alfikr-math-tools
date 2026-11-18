@@ -40,7 +40,8 @@ const ITEMS = [...require("./sim_items_a.js"), ...require("./sim_items_b.js"),
                ...require("./sim_items_l.js"),
                ...require("./sim_items_m.js"),
                ...require("./sim_items_n.js"),
-               ...require("./sim_items_o.js")];
+               ...require("./sim_items_o.js"),
+               ...require("./sim_items_p.js")];
 const BY = new Map(ITEMS.map((i) => [i.sig, i]));
 
 const PER_WEEK = { "GAT-Q-ARI": 4, "GAT-Q-ALG": 2, "GAT-Q-GEO": 2,
