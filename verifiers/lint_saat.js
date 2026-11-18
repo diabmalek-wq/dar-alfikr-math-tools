@@ -1,6 +1,6 @@
 // Typographic and option-set lint for the SAAT bank — the same checks the GAT
 // bank runs, pointed at saat_items_a.js.
-const all = [...require('./saat_items_a.js'), ...require('./saat_items_b.js'), ...require('./saat_items_c.js'), ...require('./saat_items_d.js'), ...require('./saat_items_e.js'), ...require('./saat_items_f.js'), ...require('./saat_items_g.js'), ...require('./saat_items_h.js'), ...require('./saat_items_i.js'), ...require('./saat_items_j.js'), ...require('./saat_items_k.js'), ...require('./saat_items_l.js'), ...require('./saat_items_m.js'), ...require('./saat_items_o.js'), ...require('./saat_items_p.js'), ...require('./saat_items_q.js'), ...require('./saat_items_r.js')];
+const all = [...require('./saat_items_a.js'), ...require('./saat_items_b.js'), ...require('./saat_items_c.js'), ...require('./saat_items_d.js'), ...require('./saat_items_e.js'), ...require('./saat_items_f.js'), ...require('./saat_items_g.js'), ...require('./saat_items_h.js'), ...require('./saat_items_i.js'), ...require('./saat_items_j.js'), ...require('./saat_items_k.js'), ...require('./saat_items_l.js'), ...require('./saat_items_m.js'), ...require('./saat_items_o.js'), ...require('./saat_items_p.js'), ...require('./saat_items_q.js'), ...require('./saat_items_r.js'), ...require('./saat_items_s.js')];
 let n = 0;
 for (const it of all) {
   const s = it.stem, issues = [];
