@@ -1,0 +1,14 @@
+# Per-option trap notes for SAT items whose explanations did not name the traps (index = option position)
+TR={
+'AM-150':{0:'Stops at I: $\\dfrac{c}{a}<0$ also makes the product of the zeros negative, so II must be true.',1:'III is not forced: the vertex $x=-\\dfrac{b}{2a}$ can be negative, zero or positive.',2:'III is not forced: try $f(x)=-x^2-2x+3$, whose vertex is in the second quadrant.'},
+'AM-168':{0:'III is also true: $f(0)<0$ with $a<0$ makes the product positive and the sum is $12$, so both zeros are positive.',1:'I is true ($b=-12a>0$) and II is false: distinct zeros with sum $12$ have product less than $36$.',3:'II is false: distinct zeros with sum $12$ have product less than $\\left(\\dfrac{12}{2}\\right)^2=36$.'},
+'AM-247':{0:'Equivalent, but the coefficient $54$ is $C(2)$, not the maximum $C(0)$.',2:'Equivalent, but its exponent at $t=0$ is $2$, so $18$ is not $C(0)$.',3:'Equivalent, but its exponent at $t=0$ is $-1$, so $486$ is not $C(0)$.'},
+'PS-037-2':{0:'A sample percentage estimates the population value; it does not give it exactly.',2:'I claims an exact population value, which sampling variability rules out.',3:'III extends the result to other cities that were never sampled.'},
+'PS-203-2':{0:'The patients were volunteers, not a random sample, so the result cannot be generalized to all adults.',2:'Doses above $20$ milligrams were never tested; this extrapolates beyond the data.',3:'Random assignment does allow a causal conclusion for patients like these.'},
+'WB-005':{0:'Adding a value with deviation $0$ keeps the sum of squared deviations but increases the count, so the spread shrinks.',2:'A value at the mean pulls the spread down, not up.',3:'The new value equals the mean, so the mean does not change.'},
+'AM-317-2':{0:'At $m=-2$ the line passes through the vertex $(2,0)$: only one intersection point.',1:'At $m=-1$ the line is parallel to the left branch: only one intersection point.',3:'At $m=1$ the line is parallel to the right branch: only one intersection point.'},
+'GT-123':{0:'$7$ is only the horizontal difference between the points; use the distance formula.',1:'$14$ adds the horizontal and vertical differences instead of using the distance formula.',3:'No halving is needed: the distance is the full $\\sqrt{98}=7\\sqrt2$.'},
+'GT-141':{0:'Mixed up the cross and dot products of $\\vec{AC}$ and $\\vec{AD}$.',1:'Measured the angle from the wrong side of $D$.',2:'$\\dfrac{\\sqrt3}{7}$ is $\\tan\\angle BAD$, the other part of the $60^\\circ$ angle.'},
+'GT-157':{1:'$2\\sqrt{21}$ comes from using distance $2$ instead of $4$ from the centre to the line.',2:'$8=2d$ doubles the distance to the line, not the half-chord.',3:'$3$ is half the chord; the perpendicular from the centre bisects $\\overline{PQ}$.'},
+'GT-169':{0:'$-97$ is the other tangent case, the least value of $k$, not the greatest.',2:'$65$ is $|k+32|$; subtract $32$ to finish.',3:'$32$ ignores the absolute-value equation $|k+32|=65$.'},
+}
