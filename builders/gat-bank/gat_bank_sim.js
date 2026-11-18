@@ -33,7 +33,8 @@ const ITEMS = [...require("./sim_items_a.js"), ...require("./sim_items_b.js"),
                ...require("./sim_items_l.js"),
                ...require("./sim_items_m.js"),
                ...require("./sim_items_n.js"),
-               ...require("./sim_items_o.js")];
+               ...require("./sim_items_o.js"),
+               ...require("./sim_items_p.js")];
 
 const seen = new Map();
 for (const it of ITEMS) {
