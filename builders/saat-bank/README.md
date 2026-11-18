@@ -36,7 +36,7 @@ node saat_bank_sim.js          # build the department SAAT booklet
 
 `verifiers/verify_saat.py` (with its 12 per-part check modules,
 `verify_saat_b.py` … `verify_saat_m.py`, already in `verifiers/`) independently
-re-derives every answer — 582 items as of the last full run — and
+re-derives every answer — 582 items as of the last full run (parts A–M); parts O–R (103 items) self-verify through verifiers/saat_new_parts/ and are wired into saat_bank_sim.js and lint_saat.js — and
 `verifiers/lint_saat.js` runs the structural/typographic lint (stem punctuation,
 option-set sanity, figure references). Both are wired into CI
 (`.github/workflows/verify.yml`) and run on every push, staged against this
